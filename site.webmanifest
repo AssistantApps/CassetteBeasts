@@ -1,0 +1,43 @@
+{
+"name": "Assistant for Cassette Beasts",
+"short_name": "Assistant for Cassette Beasts",
+"description": "Data from the game Cassette Beasts, automatically generated",
+"lang": "en-US",
+"scope": "/",
+"start_url": "/?standalone",
+"display": "standalone",
+"icons": [
+
+{
+"src": "/assets/favicon/android-chrome-192x192.png",
+"sizes": "",
+"type": "image/png"
+}
+,
+{
+"src": "/assets/favicon/android-chrome-128x128.png",
+"sizes": "",
+"type": "image/png"
+}
+,
+{
+"src": "/assets/favicon/favicon-96x96.png",
+"sizes": "",
+"type": "image/png"
+}
+,
+{
+"src": "/assets/favicon/favicon-64x64.png",
+"sizes": "",
+"type": "image/png"
+}
+,
+{
+"src": "/assets/favicon/favicon-32x32.png",
+"sizes": "",
+"type": "image/png"
+}
+],
+"background_color": "#1b1f22",
+"theme_color": "#1b1f22"
+}
