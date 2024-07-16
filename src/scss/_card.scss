@@ -1,0 +1,236 @@
+.item-detail-card {
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  padding: 0;
+  margin: 0 0 3em 0;
+  border-radius: var(--card-border-radius);
+  background: none;
+
+  .item-detail-card-heading {
+    display: flex;
+    flex-direction: row;
+    gap: 0.75em;
+    color: var(--card-foreground);
+    background: var(--card-background);
+    font-weight: bold;
+    text-shadow: 1px 1px 5px black;
+    padding: 0.5em 0.25em 0.25em 0.75em;
+    border-top-left-radius: var(--card-border-radius);
+    border-top-right-radius: var(--card-border-radius);
+
+    &.primary {
+      background: var(--pico-primary-background);
+
+      h2,
+      h3,
+      h4 {
+        color: white;
+        text-shadow: 1px 1px 5px black;
+      }
+    }
+
+    h2 {
+      color: var(--card-foreground);
+      padding: 0;
+      margin: 0 0 0.1em 0;
+      text-shadow: 1px 1px 5px white;
+    }
+
+    h4 {
+      padding-top: 0.15em;
+      padding-right: 0.5em;
+      padding-bottom: 0;
+      margin-bottom: -1em;
+    }
+  }
+
+  .item-detail-card-body {
+    background: var(--card-background);
+    padding-bottom: 1em;
+    border-bottom-left-radius: var(--card-border-radius);
+    border-bottom-right-radius: var(--card-border-radius);
+
+    &::-webkit-scrollbar-track {
+      box-shadow: none;
+      -webkit-box-shadow: none;
+      background: var(--card-background);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 0;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    span {
+      color: var(--card-foreground);
+    }
+
+    h3.section-heading {
+      padding-top: 0.75em;
+      padding-left: 0.75em;
+      font-size: 1.25em;
+      margin-bottom: 0;
+    }
+
+    .additional-section {
+      h3 {
+        color: var(--card-foreground);
+        padding-top: 0.75em;
+        font-size: 1.25em;
+      }
+
+      td {
+        color: var(--card-foreground);
+        background: var(--card-background);
+        border-bottom-color: rgba(0, 0, 0, 0.1);
+        border-bottom-width: 2px;
+        font-size: 0.9rem;
+        transition: background-color 250ms ease-in-out;
+      }
+
+      .move {
+        color: var(--card-foreground);
+
+        &:hover {
+          td {
+            background-color: var(--card-background-hover);
+          }
+        }
+
+        .type img {
+          width: 2rem;
+          min-width: 1.5rem;
+          border-radius: 3px;
+        }
+      }
+    }
+
+    tr.no-padding td {
+      padding: 0;
+
+      a {
+        display: block;
+        text-decoration: none;
+        color: var(--card-foreground);
+
+        img {
+          margin: 0.25em;
+        }
+      }
+    }
+
+    table.first-td-padding tr td:first-child {
+      padding-left: 1em;
+    }
+
+    table.last-td-padding tr td:last-child {
+      padding-right: 1em;
+    }
+
+    .audio-section {
+      .audio {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 0.25em;
+        margin-left: 1em;
+        margin-right: 1em;
+      }
+    }
+  }
+}
+
+.audio {
+  button {
+    padding: 0.25em 0.5em 0.4em 0.5em;
+    background-color: var(--brand-primary);
+    text-shadow: 1px 1px 5px black;
+  }
+
+  h4 {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.ap-block {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  gap: 0.125em;
+  margin-top: 0.25em;
+
+  small {
+    padding-inline: 0.25em;
+    line-height: 1em;
+  }
+
+  .ap {
+    height: 1em;
+  }
+
+  &:hover {
+    .ap {
+      animation: tada;
+      animation-duration: 1s;
+    }
+  }
+}
+
+.status-card-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.3em;
+
+  .status-group {
+    border: 1px solid var(--card-foreground);
+    border-radius: 3px;
+    color: var(--card-foreground);
+    padding: 0.2em 0.4em 0.2em 0.3em;
+
+    .status {
+      width: 1.8em;
+    }
+  }
+}
+
+.wiki-section {
+  padding-top: 1em;
+
+  a {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    min-width: 300px;
+    gap: 1em;
+
+    img {
+      height: 4em;
+    }
+
+    .text {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      h6 {
+        display: inline;
+        font-weight: 400;
+        margin: 0;
+      }
+    }
+  }
+}

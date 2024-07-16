@@ -1,0 +1,32 @@
+{{#> layouts/default }}
+<div class="home-grid-center">
+	<section id="home-grid">
+		<h2 class="hidden">Home</h2>
+		{{#each data.cards}}
+		<a href="{{#if this.wip}}#{{else}}/{{@root.langCode}}{{this.url}}{{/if}}"
+			class="animate__animated animate__fadeIn {{#if this.wip}}wip{{/if}}"
+			style="animation-delay: {{multiply @index 100 600}}ms;">
+			<article>
+				{{#if this.gameUrl}}
+				<img src="{{resimage this.gameUrl}}" alt="{{lookup @root.translate title}}">
+				{{else}}
+				<img src="{{this.imageUrl}}" alt="{{lookup @root.translate title}}">
+				{{/if}}
+				<footer>
+					<h6>
+						{{#if this.uiKey}}
+						{{lookup @root.translate this.uiKey}}
+						{{else}}
+						{{this.title}}
+						{{/if}}
+					</h6>
+				</footer>
+				{{#if this.wip}}
+				<span>Work<br>in progress</span>
+				{{/if}}
+			</article>
+		</a>
+		{{/each}}
+	</section>
+</div>
+{{/layouts/default }}

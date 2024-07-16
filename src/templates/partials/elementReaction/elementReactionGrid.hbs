@@ -1,0 +1,58 @@
+{{#> layouts/default }}
+
+{{> partials/breadcrumb }}
+
+<div class="attacker">
+    <h3>{{lookup @root.translate 'TYPE_CHART_ATTACKER'}}</h3>
+    <div class="defender">
+        <h3 class="ta-center">{{lookup @root.translate 'TYPE_CHART_DEFENDER'}}</h3>
+        <section id="element-reaction-grid">
+            {{#each data.grid}}
+            {{#each this}}
+
+            <div
+                class="{{this.id}} cell x-{{@index}} y-{{@../index}} {{#if this.buffs}} hasBuffs{{/if}}{{#if this.is_buff}} buff{{/if}}{{#if this.is_debuff}} debuff{{/if}}">
+                {{#if this.iconUrl}}
+                <img src="{{resimage this.iconUrl}}" class="element" alt="image of {{this.name}}" draggable="false">
+                {{/if}}
+
+                {{#if this.buffs}}
+                <div class="buffs">
+                    {{#each this.buffs}}
+                    <div class="effect">
+                        <img src="{{resimage this.icon.path}}" class="status" alt="image of {{this.name_localised}}"
+                            draggable="false">
+                    </div>
+                    {{/each}}
+                </div>
+
+                <div
+                    class="buffs-popup{{#if this.buffs}} hasBuffs{{/if}}{{#if this.is_buff}} buff{{/if}}{{#if this.is_debuff}} debuff{{/if}}">
+                    {{#if this.is_buff}}
+                    <h3>{{lookup @root.translate 'TYPE_CHART_DEFENDER'}}</h3>
+                    {{/if}}
+                    {{#if this.is_debuff}}
+                    <h3>{{lookup @root.translate 'TYPE_CHART_DEBUFFS'}}</h3>
+                    {{/if}}
+                    {{#each this.buffs}}
+                    <div class="details">
+                        <img src="{{resimage this.icon.path}}" class="status" alt="image of {{this.name_localised}}"
+                            draggable="false">
+                        <div class="text">
+                            <h4 class="name">{{this.name_localised}}</h4>
+                            {{this.description_localised}}
+                        </div>
+                    </div>
+                    {{/each}}
+                </div>
+                {{/if}}
+            </div>
+            {{/each}}
+            {{/each}}
+        </section>
+    </div>
+</div>
+
+<script defer src="/assets/js/highlightGrid.js?v={{version}}"></script>
+
+{{/layouts/default }}

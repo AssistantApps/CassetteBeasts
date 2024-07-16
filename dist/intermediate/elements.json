@@ -1,0 +1,184 @@
+{
+  "air": {
+    "id": "air",
+    "name": "ELEMENTAL_TYPE_AIR",
+    "sort_order": 0,
+    "sparkle": false,
+    "icon": {
+      "id": 1,
+      "path": "res://ui/icons/types/element_air.png",
+      "type": "Texture"
+    },
+    "loot_table": "",
+    "name_localised": "Air"
+  },
+  "astral": {
+    "id": "astral",
+    "name": "ELEMENTAL_TYPE_ASTRAL",
+    "sort_order": 0,
+    "sparkle": false,
+    "icon": {
+      "id": 1,
+      "path": "res://ui/icons/types/element_astral.png",
+      "type": "Texture"
+    },
+    "loot_table": "",
+    "name_localised": "Astral"
+  },
+  "beast": {
+    "id": "beast",
+    "name": "ELEMENTAL_TYPE_BEAST",
+    "sort_order": -1,
+    "sparkle": false,
+    "icon": {
+      "id": 1,
+      "path": "res://ui/icons/types/element_beast.png",
+      "type": "Texture"
+    },
+    "loot_table": "",
+    "name_localised": "Beast"
+  },
+  "earth": {
+    "id": "earth",
+    "name": "ELEMENTAL_TYPE_EARTH",
+    "sort_order": 0,
+    "sparkle": false,
+    "icon": {
+      "id": 1,
+      "path": "res://ui/icons/types/element_earth.png",
+      "type": "Texture"
+    },
+    "loot_table": "",
+    "name_localised": "Earth"
+  },
+  "fire": {
+    "id": "fire",
+    "name": "ELEMENTAL_TYPE_FIRE",
+    "sort_order": 0,
+    "sparkle": false,
+    "icon": {
+      "id": 1,
+      "path": "res://ui/icons/types/element_fire.png",
+      "type": "Texture"
+    },
+    "loot_table": "",
+    "name_localised": "Fire"
+  },
+  "glass": {
+    "id": "glass",
+    "name": "ELEMENTAL_TYPE_GLASS",
+    "sort_order": 1,
+    "sparkle": false,
+    "icon": {
+      "id": 1,
+      "path": "res://ui/icons/types/element_glass.png",
+      "type": "Texture"
+    },
+    "loot_table": "",
+    "name_localised": "Glass"
+  },
+  "glitter": {
+    "id": "glitter",
+    "name": "ELEMENTAL_TYPE_GLITTER",
+    "sort_order": 2,
+    "sparkle": true,
+    "icon": {
+      "id": 1,
+      "path": "res://ui/icons/types/element_glitter.png",
+      "type": "Texture"
+    },
+    "loot_table": "",
+    "name_localised": "Glitter"
+  },
+  "ice": {
+    "id": "ice",
+    "name": "ELEMENTAL_TYPE_ICE",
+    "sort_order": 0,
+    "sparkle": false,
+    "icon": {
+      "id": 1,
+      "path": "res://ui/icons/types/element_ice.png",
+      "type": "Texture"
+    },
+    "loot_table": "",
+    "name_localised": "Ice"
+  },
+  "lightning": {
+    "id": "lightning",
+    "name": "ELEMENTAL_TYPE_LIGHTNING",
+    "sort_order": 0,
+    "sparkle": false,
+    "icon": {
+      "id": 1,
+      "path": "res://ui/icons/types/element_lightning.png",
+      "type": "Texture"
+    },
+    "loot_table": "",
+    "name_localised": "Lightning"
+  },
+  "metal": {
+    "id": "metal",
+    "name": "ELEMENTAL_TYPE_METAL",
+    "sort_order": 0,
+    "sparkle": false,
+    "icon": {
+      "id": 1,
+      "path": "res://ui/icons/types/element_metal.png",
+      "type": "Texture"
+    },
+    "loot_table": "res://data/loot_tables/battle_metal.tres",
+    "name_localised": "Metal"
+  },
+  "plant": {
+    "id": "plant",
+    "name": "ELEMENTAL_TYPE_PLANT",
+    "sort_order": 0,
+    "sparkle": false,
+    "icon": {
+      "id": 1,
+      "path": "res://ui/icons/types/element_plant.png",
+      "type": "Texture"
+    },
+    "loot_table": "res://data/loot_tables/battle_plant.tres",
+    "name_localised": "Plant"
+  },
+  "plastic": {
+    "id": "plastic",
+    "name": "ELEMENTAL_TYPE_PLASTIC",
+    "sort_order": 0,
+    "sparkle": false,
+    "icon": {
+      "id": 1,
+      "path": "res://ui/icons/types/element_plastic.png",
+      "type": "Texture"
+    },
+    "loot_table": "res://data/loot_tables/battle_plastic.tres",
+    "name_localised": "Plastic"
+  },
+  "poison": {
+    "id": "poison",
+    "name": "ELEMENTAL_TYPE_POISON",
+    "sort_order": 0,
+    "sparkle": false,
+    "icon": {
+      "id": 1,
+      "path": "res://ui/icons/types/element_poison.png",
+      "type": "Texture"
+    },
+    "loot_table": "",
+    "name_localised": "Poison"
+  },
+  "water": {
+    "id": "water",
+    "name": "ELEMENTAL_TYPE_WATER",
+    "sort_order": 0,
+    "sparkle": false,
+    "icon": {
+      "id": 1,
+      "path": "res://ui/icons/types/element_water.png",
+      "type": "Texture"
+    },
+    "loot_table": "",
+    "name_localised": "Water"
+  }
+}

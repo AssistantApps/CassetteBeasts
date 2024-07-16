@@ -1,0 +1,120 @@
+{{#> layouts/default }}
+
+{{> partials/breadcrumb }}
+
+<div class="grid move-detail-grid">
+  <article class="move-detail-card item-detail-card">
+    <div class="move-detail-card-heading item-detail-card-heading primary">
+      {{#if data.elemental_types_elements}}
+      {{#each data.elemental_types_elements}}
+      <img src="{{resimage this.icon.path}}" class="type" alt="element of {{this.name_localised}}" draggable="false">
+      {{/each}}
+      {{else}}
+      <img src="/assets/img/typeless.png" class="type" title="Typeless" alt="image of {{this.name}}" draggable="false">
+      {{/if}}
+      <h2 class="Neu5Land animate__animated animate__fadeIn">{{data.name_localised}}</h2>
+
+      <h4 class="Neu5Land animate__animated animate__fadeIn">{{data.category_name_localised}}</h4>
+    </div>
+    <div class="move-detail-card-body item-detail-card-body">
+      <div class="sub-heading">
+        <p>{{data.description_localised}}</p>
+        <div class="spacer"></div>
+        <div class="ap-block">
+          {{#repeat data.cost}}
+          <img src="/assets/img/meta/ap.png" class="ap" title="Action Point" alt="image of an action point"
+            draggable="false">
+          {{/repeat}}
+        </div>
+      </div>
+
+      <section class="additional-section animate__animated animate__fadeIn">
+        <h3 class="Neu5Land">{{ lookup @root.translate 'UI_BESTIARY_INFO_TAB_STATS' }}</h3>
+        <table class="additional animate__animated animate__fadeIn">
+          <thead>
+            <tr>
+              <td class="ta-center">{{ lookup @root.translate 'MOVE_DESCRIPTION_POWER' }}</td>
+              <td class="ta-center">{{ lookup @root.translate 'STAT_accuracy' }}</td>
+              <td class="ta-center">Cost</td>
+              <td class="ta-center">{{ lookup @root.translate 'STAT_priority_chance' }}</td>
+              <td class="ta-center">Can be copied</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="ta-center">{{data.power}}</td>
+              <td class="ta-center">
+                {{#if data.unavoidable}}
+                Unavoidable
+                {{else}}
+                {{data.accuracy}}%
+                {{/if}}
+              </td>
+              <td class="ta-center">
+                {{#if data.is_passive_only}}
+                {{ lookup @root.translate 'UI_BUTTON_MOVE_PASSIVE' }}
+                {{else}}
+                {{data.cost}}
+                {{/if}}
+              </td>
+              <td class="ta-center">{{data.priority}}</td>
+              <td class="ta-center">{{data.can_be_copied}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="additional-section animate__animated animate__fadeIn">
+        <h3 class="tags">
+          <span class="Neu5Land">Tags:</span>
+          {{#each data.tags}}<small>{{this}}<span class="{{#if @last}}hidden{{/if}}">,&nbsp;</span></small>{{/each}}
+        </h3>
+      </section>
+
+      <section class="status-card-container">
+        {{#each data.status_effects_elements}}
+        <a href="/{{@root.langCode}}{{@root.routes.statusEffect}}/{{this.id}}.html"
+          class="status-group animate__animated animate__fadeIn">
+          <img src="{{resimage this.icon.path}}" class="status" alt="status of {{this.name_localised}}"
+            draggable="false">
+          <small>{{this.name_localised}}</small>
+        </a>
+        {{/each}}
+      </section>
+
+    </div>
+  </article>
+
+  <article class="move-detail-card item-detail-card">
+    <div class="move-detail-card-heading item-detail-card-heading">
+      <h2 class="Neu5Land animate__animated animate__fadeIn">{{ lookup @root.translate 'UI_PARTY_APPLY_STICKER'
+        }}</h2>
+      <div class="spacer"></div>
+    </div>
+    <div class="move-detail-card-body item-detail-card-body">
+      <table class="additional-section highlight-row animate__animated animate__fadeIn">
+        <tbody>
+          {{#each data.monsters_that_can_learn}}
+          <tr class="no-padding">
+            <td class="sprite ta-center">
+              <a href="/{{@root.langCode}}{{@root.routes.monsters}}/{{encodeuri this.resource_name}}.html"
+                title="{{this.name_localised}}">
+                <img src="{{resimage this.icon_url}}" class="remaster-image" alt="image of {{this.name_localised}}"
+                  draggable="false">
+              </a>
+            </td>
+            <td class="name">
+              <a href="/{{@root.langCode}}{{@root.routes.monsters}}/{{encodeuri this.resource_name}}.html"
+                title="{{this.name_localised}}">
+                {{this.name_localised}}
+                (<small class="beast-id">#{{this.bestiary_index_with_padding}}</small>)
+              </a>
+            </td>
+          </tr>
+          {{/each}}
+        </tbody>
+      </table>
+    </div>
+  </article>
+</div>
+{{/layouts/default }}

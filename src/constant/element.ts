@@ -1,0 +1,16 @@
+export const elementOrder = [
+  'beast',
+  'air',
+  'astral',
+  'earth',
+  'fire',
+  'ice',
+  'lightning',
+  'metal',
+  'plant',
+  'plastic',
+  'poison',
+  'water',
+  'glass',
+  'glitter',
+];

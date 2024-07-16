@@ -1,0 +1,87 @@
+{{#> layouts/default }}
+
+{{> partials/breadcrumb }}
+
+<section id="search">
+  <fieldset role="group">
+    <input type="search" name="search" placeholder="Search for..." oninput="onSearchChange(this.value)">
+    <button id="list-mode" class="secondary project-btn no-border-right selected" data-class="list"
+      onclick="applyClassToId('move-grid', '-mode', this.id); toggleClassToId(this.id, 'selected', true); toggleClassToId('grid-mode', 'selected', false)"
+      data-tooltip="List view" alt="List view">☰</button>
+    <button id="grid-mode" class="secondary project-btn no-border-left" data-class="grid"
+      onclick="applyClassToId('move-grid', '-mode', this.id); toggleClassToId(this.id, 'selected', true); toggleClassToId('list-mode', 'selected', false)"
+      data-tooltip="Grid view" alt="Grid view">▦</button>
+  </fieldset>
+</section>
+
+<section id="move-grid" class="item-grid-list list-mode">
+  {{#each data.list}}
+  <a href="/{{@root.langCode}}{{@root.routes.moves}}/{{this.id}}.html"
+    class="grid-list-item item animate__animated animate__fadeIn" data-title="{{this.name_localised}}"
+    data-description="{{this.description_localised}}" style="animation-delay: {{multiply @index 30 600}}ms;">
+
+    <div class="header">
+      <div class="types">
+        {{#if this.elemental_types_elements}}
+        {{#each this.elemental_types_elements}}
+        <img src="{{resimage this.icon.path}}" class="type" alt="element of {{this.name_localised}}" draggable="false">
+        {{/each}}
+        {{else}}
+        <img src="/assets/img/typeless.png" class="type" title="Typeless" alt="image of {{this.name}}"
+          draggable="false">
+        {{/if}}
+      </div>
+      <div class="center-item">
+        <div class="heading">
+          <h3 class="Neu5Land">{{this.name_localised}}</h3>
+        </div>
+      </div>
+      <div class="ap-block">
+        {{#repeat this.cost}}
+        <img src="/assets/img/meta/ap.png" class="ap" title="Action Point" alt="image of an action point"
+          draggable="false">
+        {{/repeat}}
+      </div>
+    </div>
+    <section class="grid-list-item-container {{#if this.status_effects_elements_max_3}}{{else}}no-status{{/if}}">
+      <small class="description">{{this.description_localised}}</small>
+
+      <div class="extra">
+        {{#if this.power}}
+        <small><b>Power: </b>{{this.power}}</small>
+        {{/if}}
+        {{#if this.accuracy}}
+        <small><b>{{ lookup @root.translate 'STAT_accuracy' }}: </b>
+          {{#if this.unavoidable}}
+          Unavoidable
+          {{else}}
+          {{this.accuracy}}%
+          {{/if}}
+        </small>
+        {{/if}}
+      </div>
+    </section>
+
+    {{#if this.status_effects_elements_max_3}}
+    <section class="status-card-container">
+      {{#each this.status_effects_elements_max_3}}
+      <div class="status-group">
+        <img src="{{resimage this.icon.path}}" class="status" alt="status of {{this.name_localised}}" draggable="false">
+        <small>{{this.name_localised}}</small>
+      </div>
+      {{/each}}
+    </section>
+    {{/if}}
+
+    <div class="ap-block">
+      {{#repeat this.cost}}
+      <img src="/assets/img/meta/ap.png" class="ap" title="Action Point" alt="image of an action point"
+        draggable="false">
+      {{/repeat}}
+    </div>
+
+  </a>
+  {{/each}}
+</section>
+</main>
+{{/layouts/default }}

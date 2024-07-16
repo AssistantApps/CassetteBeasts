@@ -1,0 +1,53 @@
+{{#> layouts/default }}
+
+{{> partials/breadcrumb }}
+
+<section id="world-display" class="item-detail-card">
+  <div id="world-tab-container" class="tab0">
+    <div class="item-detail-card-heading primary noselect animate__animated animate__fadeIn">
+      {{#each data.list}}
+      <div class="cursor-pointer tab-button-{{@index}}"
+        onclick="applyClassToId('world-tab-container', 'tab', 'tab{{@index}}')">
+        <span>{{this.title_localised}}</span>
+      </div>
+      {{/each}}
+    </div>
+
+    <div class="item-detail-card-body">
+      <div class="map-body">
+        {{#each data.list}}
+        <div class="tab-content-{{@index}} ta-center">
+          <div class="map-grid-container">
+            <img src="{{resimage this.map_texture.path}}" class="map" alt="image of {{this.name_localised}}"
+              draggable="false">
+            <div class="map-grid" style="--num-col:{{this.numOfColumns}}; --num-row:{{this.numOfRows}};">
+              {{#each chunk_meta_data_localised}}
+              {{#each this}}
+              <div id="{{this.id}}" class="cell x-{{@index}} y-{{@../index}}">
+                <div class="popup">
+                  <h5>{{this.title_localised}}</h5>
+                  {{#each this.features_localised}}
+                  <div class="details">
+                    {{#if this.icon_url}}
+                    <img src="{{resimage this.icon_url}}" class="status" alt="image of {{this.name_localised}}"
+                      draggable="false">
+                    {{/if}}
+                    <div class="text">
+                      <h4 class="name">{{this.title_localised}}</h4>
+                    </div>
+                  </div>
+                  {{/each}}
+                </div>
+              </div>
+              {{/each}}
+              {{/each}}
+            </div>
+          </div>
+        </div>
+        {{/each}}
+      </div>
+    </div>
+
+</section>
+</main>
+{{/layouts/default }}

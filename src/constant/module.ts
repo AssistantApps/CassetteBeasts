@@ -1,0 +1,15 @@
+export enum ModuleType {
+  Localisation,
+  MonsterForms,
+  MonsterSpriteAnim,
+  Moves,
+  Characters,
+  CharacterSpriteAnim,
+  CharacterSfx,
+  Elements,
+  ElementReaction,
+  StatusEffect,
+  World,
+  Misc,
+  Version,
+}

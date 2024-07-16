@@ -1,0 +1,52 @@
+@font-face {
+  font-family: 'Neu5Land';
+  src: url('/assets/font/Neu5Land_Norm.ttf');
+  // src: url('/assets/font/regular.Neu5Land-Bold.ttf') format('truetype'),
+  //     url('/assets/font/Neu5Land_Norm') format('truetype'),
+  //     url('/assets/font/regular.Neu5Land-BoldItalic.ttf') format('truetype');
+}
+
+// @font-face {
+//     font-family: 'NotoSansKR';
+//     src: url('/assets/font/regular.NotoSansSC-Bold.otf');
+// }
+
+// @font-face {
+//     font-family: 'NotoSansKR';
+//     src: url('/assets/font/regular.NotoSansSC-Bold.otf');
+// }
+
+.Neu5Land,
+.Neu5Land * {
+  font-family: 'Neu5Land', sans-serif !important;
+  letter-spacing: 2px;
+}
+
+body.Neu5Land {
+  * {
+    --pico-font-family: 'Neu5Land', sans-serif !important;
+    font-family: 'Neu5Land', sans-serif !important;
+  }
+
+  .breadcrumb {
+    font-size: 1.2em;
+  }
+
+  .monster-card-container h2 {
+    font-size: 1.2rem;
+  }
+
+  .monster-detail-card-body {
+    // .star {
+    //   font-size: 0.8em;
+    // }
+
+    .additional-section,
+    .remasters,
+    .moves {
+      td {
+        font-size: 1.2em;
+      }
+    }
+  }
+}

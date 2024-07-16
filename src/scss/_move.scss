@@ -1,0 +1,141 @@
+#move-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 1em;
+  column-gap: 1em;
+
+  .grid-list-item {
+    border-radius: var(--card-border-radius);
+
+    .header {
+      display: flex;
+      flex-direction: row;
+      gap: 0.5em;
+
+      .types {
+        width: 1.8em;
+      }
+
+      h3 {
+        flex: 1;
+        color: var(--card-foreground);
+        margin: 0;
+      }
+
+      .ap-block {
+        margin-right: 0.25em;
+        display: flex;
+      }
+    }
+
+    .grid-list-item-container {
+      padding: 0.25em 0.5em 0 0.5em;
+
+      .description {
+        margin: 0;
+      }
+
+      .extra {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        column-gap: 0.5em;
+      }
+    }
+
+    > .ap-block {
+      display: none;
+    }
+  }
+
+  &.list-mode {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border-radius: var(--card-border-radius);
+    background-color: var(--card-background);
+
+    .grid-list-item {
+      display: grid;
+      grid-template-columns: 2fr 4fr 2fr 1fr;
+      row-gap: 1em;
+      border-radius: 0;
+      column-gap: 1em;
+      padding-top: 0.125em;
+      padding-bottom: 0.125em;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+      background-color: transparent;
+
+      &:first-child {
+        padding-top: 0.25em;
+      }
+
+      &:last-child {
+        padding-bottom: 0.25em;
+      }
+
+      .status-card-container,
+      .grid-list-item-container small {
+        margin: 0;
+      }
+
+      .status-card-container {
+        .status-group {
+          display: inline-block;
+          margin-top: auto;
+          margin-bottom: auto;
+        }
+      }
+
+      > .ap-block {
+        grid-column: 4/4;
+        display: flex;
+        margin-top: 0.5em;
+        margin-right: 0.5em;
+      }
+    }
+
+    .header {
+      padding-left: 0.25em;
+
+      .types {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: unset;
+
+        img {
+          height: 2rem;
+          width: 2rem;
+          margin: 0.25em;
+        }
+      }
+
+      .center-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        h3 {
+          flex: unset;
+        }
+      }
+
+      .ap-block {
+        display: none;
+      }
+    }
+
+    .grid-list-item-container {
+      padding-top: 0;
+
+      &.no-cost.no-status {
+        grid-column: 2/4;
+      }
+
+      // .description {
+      //   max-width: 25%;
+      // }
+    }
+  }
+}

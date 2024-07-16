@@ -1,0 +1,78 @@
+#status-effect-grid {
+  grid-template-columns: repeat(auto-fit, minmax(8em, 1fr));
+
+  .grid-list-item {
+    position: relative;
+
+    &:hover {
+      z-index: 4;
+      transform: translateY(-10px) rotate(-2deg);
+      box-shadow: 10px 10px 0px var(--brand-tertiary);
+    }
+
+    .grid-list-item-image {
+      padding: 0.5em;
+    }
+
+    .grid-list-item-container {
+      background: var(--pico-primary-background);
+
+      h2 {
+        color: white;
+        text-align: center;
+        text-shadow: 1px 1px 5px black;
+      }
+
+      small {
+        color: white;
+        text-align: center;
+        padding-inline: 0.5em;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 3; /* number of lines to show */
+        line-clamp: 3;
+        -webkit-box-orient: vertical;
+      }
+    }
+  }
+}
+
+.status-effect-detail-grid {
+  .item-detail-card-heading {
+    &:hover {
+      .icon {
+        animation: tada;
+        animation-duration: 2s;
+      }
+    }
+
+    .icon {
+      height: 2rem;
+    }
+  }
+  .item-detail-card-body {
+    padding: 0.5em 1em;
+
+    .additional-section.negative-margin {
+      margin-left: -1em;
+      margin-right: -1em;
+    }
+
+    .section-heading.custom-padding {
+      padding: 0 0 0.5em 0;
+    }
+
+    .statuses {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.25em;
+    }
+
+    code,
+    kbd,
+    pre {
+      color: var(--card-foreground);
+      background-color: darken($gameCardBackground, 10%);
+    }
+  }
+}

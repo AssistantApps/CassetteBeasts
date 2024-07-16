@@ -1,0 +1,25 @@
+.button-slanted {
+  display: inline-block;
+  color: black;
+  background-color: transparent;
+  border: 3px solid var(--brand-primary);
+  text-align: center;
+  font-size: 0.75em;
+  padding: 3px 14px;
+  margin: 5px 5px;
+  -ms-transform: skewX(-20deg);
+  -webkit-transform: skewX(-20deg);
+  transform: skewX(-20deg);
+  transition: background-color 250ms ease-in-out;
+
+  &:hover {
+    background-color: var(--brand-primary);
+  }
+}
+
+.button-slanted-content {
+  -ms-transform: skewX(20deg);
+  -webkit-transform: skewX(20deg);
+  transform: skewX(20deg);
+  display: inline-block;
+}

@@ -1,0 +1,23 @@
+header.header {
+  padding: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.125);
+
+  nav .logo {
+    img {
+      height: 3em;
+    }
+  }
+
+  #language-dropdown .role-link {
+    display: inline-block;
+    margin: calc(var(--pico-nav-link-spacing-vertical) * -1)
+      calc(var(--pico-nav-link-spacing-horizontal) * -1);
+    height: unset;
+    border: unset;
+    background-color: unset;
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+}

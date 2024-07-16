@@ -1,0 +1,126 @@
+{{#> layouts/default }}
+
+{{> partials/breadcrumb }}
+
+<div class="grid character-detail-grid">
+  <article class="character-detail-card item-detail-card">
+    <div class="item-detail-card-heading primary">
+      <h2 class="Neu5Land animate__animated animate__fadeIn">{{data.name_localised}}</h2>
+      <div class="spacer"></div>
+      {{#each data.elemental_types_elements}}
+      <img src="{{resimage this.icon.path}}" class="element-image" alt="image of {{this.name}}" draggable="false">
+      {{/each}}
+    </div>
+    <div class="item-detail-card-body">
+      <div id="sprite-tab-container">
+        <div class="grid images noselect animate__animated animate__fadeIn">
+          <div class="sprites">
+            <img src="{{resimage data.icon_url}}" class="char-image tab-content-0"
+              alt="image of {{data.name_localised}}" draggable="false">
+
+            {{#each data.animations}}
+            <img src="{{resimage this.imageUrl}}" class="char-image tab-content-{{inc @index}}"
+              alt="gif #{{this.id}} of {{data.name_localised}}" draggable="false">
+            {{/each}}
+
+          </div>
+          <div class="stats">
+            {{#with data}}
+            {{> partials/common/statHex }}
+            {{/with}}
+          </div>
+
+        </div>
+        <div class="controls noselect animate__animated animate__fadeIn">
+          <div class="button-slanted cursor-pointer tab-button-0"
+            onclick="applyClassToId('sprite-tab-container', 'tab', 'tab0')">
+            <span class="button-slanted-content">Static</span>
+          </div>
+          {{#each data.animations}}
+          <div class="button-slanted cursor-pointer tab-button-{{inc @index}}"
+            onclick="applyClassToId('sprite-tab-container', 'tab', 'tab{{inc @index}}')">
+            <span class="button-slanted-content">gif {{inc @index}}</span>
+          </div>
+          {{/each}}
+        </div>
+        {{#if data.description_localised}}
+        <span class="descrip">"{{data.description_localised}}"</span>
+        {{/if}}
+      </div>
+
+      {{#if data.audioFiles}}
+      <br>
+      <section class="audio-section additional animate__animated animate__fadeIn">
+        <h3 class="section-heading Neu5Land">Audio</h3>
+        <div id="audio-tab-container">
+          <div class="audio noselect animate__animated animate__fadeIn">
+            {{#each data.audioFiles}}
+            {{#each files}}
+            <button onclick="playAudioNode('{{../name}}-{{@index}}')">
+              <small>{{../name}} 🔉</small>
+            </button>
+            <audio id="{{../name}}-{{@index}}" class="hidden">
+              <source src="{{this}}" type="audio/wav">
+            </audio>
+            {{/each}}
+            {{/each}}
+          </div>
+        </div>
+      </section>
+      {{/if}}
+
+      <br>
+
+      <section class="wiki-section animate__animated animate__fadeIn">
+        <a href="https://wiki.cassettebeasts.com/wiki/{{data.name_localised}}" rel="noopener noreferrer" target="_blank"
+          title="view {{data.name_localised}} on the wiki" role="button" class="btn-border-hover outline secondary">
+          <img src="/assets/img/wiki.png" alt="wiki logo">
+          <div class="text">
+            <h6>View on wiki.cassettebeasts.com</h6>
+          </div>
+        </a>
+      </section>
+    </div>
+  </article>
+
+  <article class="character-detail-card item-detail-card">
+    <div class="item-detail-card-heading">
+      <h2 class="Neu5Land animate__animated animate__fadeIn">{{ lookup @root.translate 'UI_QUEST_LOG_SECTION_OTHER' }}
+      </h2>
+      <div class="spacer"></div>
+    </div>
+    <div class="item-detail-card-body">
+      <div id="portrait-tab-container" class="grid tab0">
+        <div class="images noselect animate__animated animate__fadeIn">
+          <div class="sprites">
+            {{#each data.portraits}}
+            <img src="{{resimage this}}" class="portrait-image {{@root.data.resource_name}} tab-content-{{@index}}"
+              alt="portrait #{{inc @index}} of {{@root.data.name_localised}}" draggable="false">
+            {{/each}}
+
+          </div>
+        </div>
+        <div class="controls noselect animate__animated animate__fadeIn">
+          {{#each data.portraits}}
+          <div class="button-slanted cursor-pointer tab-button-{{@index}}"
+            onclick="applyClassToId('portrait-tab-container', 'tab', 'tab{{@index}}')">
+            <span class="button-slanted-content">portrait {{inc @index}}</span>
+          </div>
+          {{/each}}
+        </div>
+      </div>
+
+      <section class="additional-section additional animate__animated animate__fadeIn">
+        <h3 class="section-heading Neu5Land">Partner Monster</h3>
+        <a href="/{{@root.langCode}}{{@root.routes.monsters}}/{{encodeuri data.partner_signature_species_monsters.resource_name}}.html"
+          title="{{data.partner_signature_species_monsters.name_localised}}">
+          <img src="{{data.partner_image_url}}" class="tape-image animate__animated tada-hover"
+            alt="tape image of {{data.partner_signature_species_monsters.name_localised}}" draggable="false">
+        </a>
+
+      </section>
+
+    </div>
+  </article>
+</div>
+{{/layouts/default }}

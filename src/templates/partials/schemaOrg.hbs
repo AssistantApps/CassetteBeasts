@@ -1,0 +1,40 @@
+{{!-- JSON-LD --}}
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org/",
+        "@type": "SoftwareApplication",
+        "name": "{{#if documentTitleUiKey}}{{ lookup @root.translate documentTitleUiKey}} - {{else if documentTitle}}{{documentTitle}} - {{/if}}{{meta.appName}}",
+        "url": "{{rootUrl}}",
+        "about": "{{meta.description}}",
+        "description": "{{meta.description}}",
+        "image": "{{images.favicon.x192}}",
+        "applicationCategory": "Application",
+        "operatingSystem": "Android Lollipop, iOS, Chrome, Firefox, Opera, Internet Explorer, Edge",
+        "softwareVersion": "{{version}}",
+        "version": "{{version}}",
+        "author": {
+            "@type": "Person",
+            "name": "{{humans.kurt.name}}",
+            "givenName": "{{humans.kurt.name}}",
+            "familyName": "{{humans.kurt.name}}",
+            "additionalName": "{{humans.kurt.additionalName}}",
+            "url": "{{humans.kurt.website}}",
+            "image": "{{humans.kurt.image}}",
+            "jobTitle": "{{humans.kurt.jobTitle}}",
+        },
+        "creator": {
+            "@type": "Person",
+            "name": "{{humans.kurt.name}}",
+            "givenName": "{{humans.kurt.name}}",
+            "familyName": "{{humans.kurt.name}}",
+            "additionalName": "{{humans.kurt.additionalName}}",
+            "url": "{{humans.kurt.website}}",
+            "image": "{{humans.kurt.image}}",
+            "jobTitle": "{{humans.kurt.jobTitle}}",
+        },
+        "inLanguage": "en",
+        "dateCreated": "{{date}}",
+        "dateModified": "{{date}}",
+        "datePublished": "{{date}}"
+    }
+</script>

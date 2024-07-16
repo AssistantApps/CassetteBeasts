@@ -1,0 +1,42 @@
+$desktopWidth: 1500px;
+$smallDesktopWidth: 992px;
+$tabletWidth: 720px;
+$phoneWidth: 467px;
+
+body {
+    @media screen and (max-width: $desktopWidth) {}
+
+    @media screen and (max-width: $smallDesktopWidth) {}
+
+    @media screen and (max-width: $tabletWidth) {
+        .grid.min-card-width {
+            grid-template-columns: 1fr;
+        }
+
+
+        .monster-detail-card .monster-detail-card-body {
+            div.images {
+
+                .char-image,
+                .stats,
+                .stats svg {
+                    height: 10em;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: $phoneWidth) {}
+}
+
+.hidden-in-desktop {
+    @media screen and (min-width: $smallDesktopWidth) {
+        display: none;
+    }
+}
+
+.hidden-in-mobile {
+    @media screen and (max-width: $smallDesktopWidth) {
+        display: none !important;
+    }
+}

@@ -1,0 +1,136 @@
+@import 'lib/animate.min';
+@import 'lib/pico.violet.min';
+
+@import 'colour';
+@import 'font';
+@import 'page';
+@import 'home';
+@import 'card';
+@import 'grid';
+@import 'tabs';
+@import 'header';
+@import 'button';
+@import 'animate';
+@import 'breadcrumb';
+@import 'responsive';
+
+@import 'move';
+@import 'moveDetail';
+@import 'monster';
+@import 'monsterDetail';
+@import 'character';
+@import 'characterDetail';
+@import 'elementReaction';
+@import 'statusEffect';
+@import 'world';
+
+:root {
+  --pico-primary-background: #{$brand-primary} !important;
+  --brand-primary: #{$brand-primary};
+  --brand-secondary: #{$brand-secondary};
+  --brand-tertiary: #{$brand-tertiary};
+
+  --card-background: #{$gameCardBackground};
+  --card-background-hover: #{darken($gameCardBackground, 10%)};
+  --card-foreground: #{$gameCardForeground};
+  --card-border-radius: 5px;
+}
+
+.mt-1 {
+  margin-top: 1em;
+}
+
+.mb-1 {
+  margin-bottom: 1em;
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently supported by Chrome and Opera */
+}
+
+img,
+br {
+  @extend .noselect;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+::selection {
+  background: $brand-tertiary;
+}
+
+::-moz-selection {
+  background: $brand-tertiary;
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+  background-color: $brand-primary-background;
+
+  @media screen and (max-width: 800px) {
+    width: 5px;
+  }
+}
+
+*::-webkit-scrollbar-track {
+  margin-top: -5px;
+  margin-bottom: -5px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: $brand-primary-background;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: $brand-secondary;
+  background-image: -webkit-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.2) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.2) 50%,
+    rgba(255, 255, 255, 0.2) 75%,
+    transparent 75%,
+    transparent
+  );
+}
+
+.hidden {
+  display: none;
+}
+
+.ta-center {
+  text-align: center;
+}
+
+.m-0 {
+  margin: 0;
+}
+
+.highlight {
+  background-color: var(--brand-tertiary);
+}
+
+.tertiary {
+  color: var(--brand-tertiary);
+}
+
+.max-lines-1 {
+  white-space: nowrap;
+  overflow: hidden;
+  display: block;
+  text-overflow: ellipsis;
+}

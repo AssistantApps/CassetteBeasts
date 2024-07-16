@@ -1,0 +1,100 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="application-name" content="{{meta.appName}}">
+    <title>
+        {{#if documentTitleUiKey}}{{ lookup @root.translate documentTitleUiKey}} -
+        {{else if documentTitle}}{{documentTitle}} - {{/if}}
+        {{meta.title}}
+    </title>
+    <link rel="index" href="{{rootUrl}}">
+    <link rel="canonical" href="{{rootUrl}}">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="author" href="/humans.txt">
+    <link rel="me" href="{{humans.kurt.email}}">
+    <link rel="me" href="{{humans.kurt.website}}" type="text/html">
+    <meta name="designer" content="{{humans.kurt.name}}">
+    <meta name="owner" content="{{humans.kurt.name}}">
+
+    <link rel="icon" type="image/x-icon" href="{{images.favicon.ico}}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{images.favicon.x16}}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{images.favicon.x32}}">
+    <link rel="icon" type="image/png" sizes="96x96" href="{{images.favicon.x96}}">
+    <link rel="icon" type="image/png" sizes="192x192" href="{{images.favicon.x192}}">
+
+    {{#each alternateUrls}}
+    <link rel="alternate" href="{{href}}" hreflang="{{lang}}">
+    {{/each}}
+
+    <meta name="url" content="{{rootUrl}}">
+    <meta name="identifier-URL" content="{{rootUrl}}">
+    <meta name="theme-color" content="{{theme.colour}}">
+    <meta name="subject" content="{{meta.description}}">
+    <meta name="description" content="{{meta.description}}">
+    <meta name="abstract" content="{{meta.description}}">
+    <meta name="copyright" content="{{meta.copyright}}">
+    <meta name="keywords" content="{{meta.keywords}}">
+    <meta name="language" content="{{langCode}}">
+    <meta name="referrer" content="no-referrer">
+    <meta name="topic" content="Gaming">
+    <meta name="robots" content="index,follow">
+    <meta name="rating" content="General">
+    <meta name="coverage" content="Worldwide">
+    <meta name="distribution" content="Global">
+    <meta name="generator" content="custom scripts using HandlebarJS">
+    <link rel="search" href="opensearch.xml" type="application/opensearchdescription+xml" title="Search Title">
+    <meta name="revised" content="{{datelong}}">
+
+    <!-- Google -->
+    <meta name="googlebot" content="index,follow">
+    <meta name="google" content="nositelinkssearchbox">
+    <meta name="mobile-web-app-capable" content="yes">
+    <!-- <meta name="google-site-verification" content="verification_token"> -->
+
+    <!-- Apple -->
+    <link rel="icon" type="image/png" sizes="76x76" href="{{images.apple.x76}}">
+    <link rel="icon" type="image/png" sizes="114x114" href="{{images.apple.x114}}">
+    <link rel="icon" type="image/png" sizes="120x120" href="{{images.apple.x120}}">
+    <link rel="icon" type="image/png" sizes="144x144" href="{{images.apple.x144}}">
+    <link rel="icon" type="image/png" sizes="152x152" href="{{images.apple.x152}}">
+    <link rel="mask-icon" href="{{images.maskIcon}}" color="{{theme.maskColour}}">
+    <meta name="apple-mobile-web-app-title" content="{{meta.appName}}">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="{{theme.appleStatusBar}}">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="{{twitter.metaImageSize}}">
+    <meta name="twitter:site" content="{{twitter.handle}}">
+    <meta name="twitter:creator" content="{{humans.kurt.twitter}}">
+    <meta name="twitter:url" content="{{rootUrl}}">
+    <meta name="twitter:title" content="{{meta.appName}}">
+    <meta name="twitter:description" content="{{meta.description}}">
+    <meta name="twitter:image" content="{{images.twitter}}">
+    <meta name="twitter:image:alt" content="{{twitter.imageAlt}}">
+
+    <!-- Facebook -->
+    <meta property="og:url" content="{{rootUrl}}">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{meta.title}}">
+    <meta property="og:image" content="{{images.facebook}}">
+    <meta property="og:image:alt" content="{{twitter.imageAlt}}">
+    <meta property="og:description" content="{{meta.description}}">
+    <meta property="og:site_name" content="{{meta.title}}">
+    <meta property="og:locale" content="en_UK">
+    <meta property="article:author" content="{{humans.kurt.name}}">
+
+    <!-- Microsoft -->
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="skype_toolbar" content="skype_toolbar_parser_compatible">
+    <meta name="msapplication-config" content="browserconfig.xml">
+    <meta name="msapplication-TileColor" content="{{theme.maskColour}}">
+    <meta name="msapplication-starturl" content="/?pwa-app">
+
+    {{#each preconnectLinks}}
+    <link rel="preconnect" href="{{this}}">
+    {{/each}}
+
+    <link rel="stylesheet" href="/assets/css/main.css?v={{version}}">
+
+    {{> partials/schemaOrg }}
+</head>

@@ -1,0 +1,55 @@
+name: Github Pages
+run-name: GithubPages
+
+on:
+  push:
+    branches: ['main']
+
+concurrency:
+  group: 'githubPages'
+  cancel-in-progress: true
+
+jobs:
+  githubPages:
+    name: Github Pages
+    environment: github-pages
+    runs-on: ubuntu-latest
+
+    permissions:
+      pull-requests: write
+      contents: write
+
+    strategy:
+      matrix:
+        node-version: [21.x]
+
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+
+      - name: Setup variables
+        run: |
+          touch .env
+          echo POSTHOG_ANALYTICS_CODE="${{ secrets.POSTHOG_ANALYTICS_CODE }}" >> .env
+          echo ENABLE_SERVICE_WORKER="${{ secrets.ENABLE_SERVICE_WORKER }}" >> .env
+
+      - name: Build TS
+        run: |
+          npm ci
+          npm run build
+
+      - name: Remove gitignore
+        run: |
+          rm -f .gitignore
+          rm -f public/.gitignore
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: public

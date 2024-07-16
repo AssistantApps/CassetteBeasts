@@ -1,0 +1,2313 @@
+[
+  {
+    "id": "abramacabra",
+    "name": "STATUS_ABRAMACABRA_NAME",
+    "description": "STATUS_ABRAMACABRA_DESCRIPTION",
+    "has_duration": true,
+    "reduce_duration_at": 0,
+    "icon": {
+      "id": 7,
+      "path": "res://ui/icons/status_effects/wall_beast.png",
+      "type": "Texture"
+    },
+    "is_removable": true,
+    "is_buff": true,
+    "is_debuff": false,
+    "is_decoy": true,
+    "always_hidden_from_display": false,
+    "tags": [],
+    "toast_on_remove": "",
+    "name_modifier": "",
+    "sprite_animation_prefix": "",
+    "sprite_animation_prefix_priority": "0",
+    "stats_affected": []
+  },
+  {
+    "id": "ap_boost",
+    "name": "STATUS_AP_BOOST_NAME",
+    "description": "STATUS_AP_BOOST_DESCRIPTION",
+    "has_duration": true,
+    "reduce_duration_at": 0,
+    "icon": {
+      "id": 1,
+      "path": "res://ui/icons/status_effects/ap_up.png",
+      "type": "Texture"
+    },
+    "is_removable": true,
+    "is_buff": true,
+    "is_debuff": false,
+    "is_decoy": false,
+    "always_hidden_from_display": false,
+    "tags": [],
+    "toast_on_remove": "",
+    "name_modifier": "",
+    "sprite_animation_prefix": "",
+    "sprite_animation_prefix_priority": "0",
+    "stats_affected": [
+      "ap_regen"
+    ],
+    "stat_offset": 1
+  },
+  {
+    "id": "ap_drain",
+    "name": "STATUS_AP_DRAIN_NAME",
+    "description": "STATUS_AP_DRAIN_DESCRIPTION",
+    "has_duration": true,
+    "reduce_duration_at": 0,
+    "icon": {
+      "id": 1,
+      "path": "res://ui/icons/status_effects/ap_down.png",
+      "type": "Texture"
+    },
+    "is_removable": true,
+    "is_buff": false,
+    "is_debuff": true,
+    "is_decoy": false,
+    "always_hidden_from_display": false,
+    "tags": [],
+    "toast_on_remove": "",
+    "name_modifier": "",
+    "sprite_animation_prefix": "",
+    "sprite_animation_prefix_priority": "0",
+    "stats_affected": [
+      "ap_regen"
+    ],
+    "stat_offset": -1
+  },
+  {
+    "id": "berserk",
+    "name": "STATUS_BERSERK_NAME",
+    "description": "STATUS_BERSERK_DESCRIPTION",
+    "has_duration": true,
+    "reduce_duration_at": 0,
+    "icon": {
+      "id": 2,
+      "path": "res://ui/icons/status_effects/berserk.png",
+      "type": "Texture"
+    },
+    "is_removable": true,
+    "is_buff": false,
+    "is_debuff": true,
+    "is_decoy": false,
+    "always_hidden_from_display": false,
+    "tags": [],
+    "toast_on_remove": "",
+    "name_modifier": "",
+    "sprite_animation_prefix": "",
+    "sprite_animation_prefix_priority": "0",
+    "stats_affected": []
+  },
+  {
+    "id": "bomb",
+    "name": "STATUS_BOMB_NAME",
+    "description": "STATUS_BOMB_DESCRIPTION",
+    "has_duration": false,
+    "reduce_duration_at": 0,
+    "icon": {
+      "id": 3,
+      "path": "res://ui/icons/status_effects/bomb.png",
+      "type": "Texture"
+    },
+    "is_removable": true,
+    "is_buff": false,
+    "is_debuff": true,
+    "is_decoy": false,
+    "always_hidden_from_display": false,
+    "tags": [
+      "bomb"
+    ],
+    "toast_on_remove": "",
+    "name_modifier": "",
+    "sprite_animation_prefix": "",
+    "sprite_animation_prefix_priority": "0",
+    "stats_affected": []
+  },
+  {
+    "id": "booby_trapped",
+    "name": "STATUS_NAME_BOOBY_TRAPPED",
+    "description": "STATUS_DESCRIPTION_BOOBY_TRAPPED",
+    "has_duration": true,
+    "reduce_duration_at": 0,
+    "icon": {
+      "id": 3,
+      "path": "res://ui/icons/status_effects/booby_trapped.png",
+      "type": "Texture"
+    },
+    "is_removable": true,
+    "is_buff": false,
+    "is_debuff": true,
+    "is_decoy": false,
+    "always_hidden_from_display": false,
+    "tags": [],
+    "toast_on_remove": "",
+    "name_modifier": "",
+    "sprite_animation_prefix": "",
+    "sprite_animation_prefix_priority": "0",
+    "stats_affected": []
+  },
+  {
+    "id": "burned",
+    "name": "STATUS_BURNED_NAME",
+    "description": "STATUS_BURNED_DESCRIPTION",
+    "has_duration": true,
+    "reduce_duration_at": 0,
+    "icon": {
+      "id": 3,
+      "path": "res://ui/icons/status_effects/health_down_fire.png",
+      "type": "Texture"
+    },
+    "is_removable": true,
+    "is_buff": false,
+    "is_debuff": true,
+    "is_decoy": false,
+    "always_hidden_from_display": false,
+    "tags": [],
+    "toast_on_remove": "",
+    "name_modifier": "",
+    "sprite_animation_prefix": "",
+    "sprite_animation_prefix_priority": "0",
+    "stats_affected": []
+  },
+  {
+    "id": "close_encounter",
+    "name": "STATUS_CLOSE_ENCOUNTER_NAME",
+    "description": "STATUS_CLOSE_ENCOUNTER_DESCRIPTION",
+    "has_duration": true,
+    "reduce_duration_at": 0,
+    "icon": {
+      "id": 3,
+      "path": "res://ui/icons/status_effects/close_encounter.png",
+      "type": "Texture"
+    },
+    "is_removable": true,
+    "is_buff": false,
+    "is_debuff": false,
+    "is_decoy": false,
+    "always_hidden_from_display": false,
+    "tags": [],
+    "toast_on_remove": "",
+    "name_modifier": "",
+    "sprite_animation_prefix": "",
+    "sprite_animation_prefix_priority": "0",
+    "stats_affected": []
+  },
+  {
+    "id": "coating_air",
+    "name": "STATUS_COATING_AIR_NAME",
+    "description": "STATUS_COATING_DESCRIPTION",
+    "has_duration": true,
+    "reduce_duration_at": 0,
+    "icon": {
+      "id": 2,
+      "path": "res://ui/icons/status_effects/coating_air.png",
+      "type": "Texture"
+    },
+    "is_removable": true,
+    "is_buff": false,
+    "is_debuff": false,
+    "is_decoy": false,
+    "always_hidden_from_display": false,
+    "tags": [
+      "coating_air"
+    ],
+    "toast_on_remove": "",
+    "name_modifier": "",
+    "sprite_animation_prefix": "",
+    "sprite_animation_prefix_priority": "0",
+    "stats_affected": []
+  },
+  {
+    "id": "coating_astral",
+    "name": "STATUS_COATING_ASTRAL_NAME",
+    "description": "STATUS_COATING_DESCRIPTION",
+    "has_duration": true,
+    "reduce_duration_at": 0,
+    "icon": {
+      "id": 2,
+      "path": "res://ui/icons/status_effects/coating_astral.png",
+      "type": "Texture"
+    },
+    "is_removable": true,
+    "is_buff": false,
+    "is_debuff": false,
+    "is_decoy": false,
+    "always_hidden_from_display": false,
+    "tags": [
+      "coating_astral"
+    ],
+    "toast_on_remove": "",
+    "name_modifier": "",
+    "sprite_animation_prefix": "",
+    "sprite_animation_prefix_priority": "0",
+    "stats_affected": []
+  },
+  {
+    "id": "coating_beast",
+    "name": "STATUS_COATING_BEAST_NAME",
+    "description": "STATUS_COATING_DESCRIPTION",
+    "has_duration": true,
+    "reduce_duration_at": 0,
+    "icon": {
+      "id": 2,
+      "path": "res://ui/icons/status_effects/coating_beast.png",
+      "type": "Texture"
+    },
+    "is_removable": true,
+    "is_buff": false,
+    "is_debuff": false,
+    "is_decoy": false,
+    "always_hidden_from_display": false,
+    "tags": [
+      "coating_beast"
+    ],
+    "toast_on_remove": "",
+    "name_modifier": "",
+    "sprite_animation_prefix": "",
+    "sprite_animation_prefix_priority": "0",
+    "stats_affected": []
+  },
+  {
+    "id": "coating_earth",
+    "name": "STATUS_COATING_EARTH_NAME",
+    "description": "STATUS_COATING_DESCRIPTION",
+    "has_duration": true,
+    "reduce_duration_at": 0,
+    "icon": {
+      "id": 2,
+      "path": "res://ui/icons/status_effects/coating_earth.png",
+      "type": "Texture"
+    },
+    "is_removable": true,
+    "is_buff": false,
+    "is_debuff": false,
+    "is_decoy": false,
+    "always_hidden_from_display": false,
+    "tags": [
+      "coating_earth"
+    ],
+    "toast_on_remove": "",
+    "name_modifier": "",
+    "sprite_animation_prefix": "",
+    "sprite_animation_prefix_priority": "0",
+    "stats_affected": []
+  },
+  {
+    "id": "coating_fire",
+    "name": "STATUS_COATING_FIRE_NAME",
+    "description": "STATUS_COATING_DESCRIPTION",
+    "has_duration": true,
+    "reduce_duration_at": 0,
+    "icon": {
+      "id": 2,
+      "path": "res://ui/icons/status_effects/coating_fire.png",
+      "type": "Texture"
+    },
+    "is_removable": true,
+    "is_buff": false,
+    "is_debuff": false,
+    "is_decoy": false,
+    "always_hidden_from_display": false,
+    "tags": [
+      "coating_fire"
+    ],
+    "toast_on_remove": "",
+    "name_modifier": "",
+    "sprite_animation_prefix": "",
+    "sprite_animation_prefix_priority": "0",
+    "stats_affected": []
+  },
+  {
+    "id": "coating_glass",
+    "name": "STATUS_COATING_GLASS_NAME",
+    "description": "STATUS_COATING_DESCRIPTION",
+    "has_duration": true,
+    "reduce_duration_at": 0,
+    "icon": {
+      "id": 2,
+      "path": "res://ui/icons/status_effects/coating_glass.png",
+      "type": "Texture"
+    },
+    "is_removable": true,
+    "is_buff": false,
+    "is_debuff": false,
+    "is_decoy": false,
+    "always_hidden_from_display": false,
+    "tags": [
+      "coating_glass"
+    ],
+    "toast_on_remove": "",
+    "name_modifier": "",
+    "sprite_animation_prefix": "",
+    "sprite_animation_prefix_priority": "0",
+    "stats_affected": []
+  },
+  {
+    "id": "coating_glitter",
+    "name": "STATUS_COATING_GLITTER_NAME",
+    "description": "STATUS_COATING_DESCRIPTION",
+    "has_duration": true,
+    "reduce_duration_at": 0,
+    "icon": {
+      "id": 2,
+      "path": "res://ui/icons/status_effects/coating_glitter.png",
+      "type": "Texture"
+    },
+    "is_removable": true,
+    "is_buff": false,
+    "is_debuff": false,
+    "is_decoy": false,
+    "always_hidden_from_display": false,
+    "tags": [
+      "coating_glitter"
+    ],
+    "toast_on_remove": "",
+    "name_modifier": "",
+    "sprite_animation_prefix": "",
+    "sprite_animation_prefix_priority": "0",
+    "stats_affected": []
+  },
+  {
+    "id": "coating_ice",
+    "name": "STATUS_COATING_ICE_NAME",
+    "description": "STATUS_COATING_DESCRIPTION",
+    "has_duration": true,
+    "reduce_duration_at": 0,
+    "icon": {
+      "id": 2,
+      "path": "res://ui/icons/status_effects/coating_ice.png",
+      "type": "Texture"
+    },
+    "is_removable": true,
+    "is_buff": false,
+    "is_debuff": false,
+    "is_decoy": false,
+    "always_hidden_from_display": false,
+    "tags": [
+      "coating_ice"
+    ],
+    "toast_on_remove": "",
+    "name_modifier": "",
+    "sprite_animation_prefix": "",
+    "sprite_animation_prefix_priority": "0",
+    "stats_affected": []
+  },
+  {
+    "id": "coating_lightning",
+    "name": "STATUS_COATING_LIGHTNING_NAME",
+    "description": "STATUS_COATING_DESCRIPTION",
+    "has_duration": true,
+    "reduce_duration_at": 0,
+    "icon": {
+      "id": 2,
+      "path": "res://ui/icons/status_effects/coating_lightning.png",
+      "type": "Texture"
+    },
+    "is_removable": true,
+    "is_buff": false,
+    "is_debuff": false,
+    "is_decoy": false,
+    "always_hidden_from_display": false,
+    "tags": [
+      "coating_lightning"
+    ],
+    "toast_on_remove": "",
+    "name_modifier": "",
+    "sprite_animation_prefix": "",
+    "sprite_animation_prefix_priority": "0",
+    "stats_affected": []
+  },
+  {
+    "id": "coating_metal",
+    "name": "STATUS_COATING_METAL_NAME",
+    "description": "STATUS_COATING_DESCRIPTION",
+    "has_duration": true,
+    "reduce_duration_at": 0,
+    "icon": {
+      "id": 2,
+      "path": "res://ui/icons/status_effects/coating_metal.png",
+      "type": "Texture"
+    },
+    "is_removable": true,
+    "is_buff": false,
+    "is_debuff": false,
+    "is_decoy": false,
+    "always_hidden_from_display": false,
+    "tags": [
+      "coating_metal"
+    ],
+    "toast_on_remove": "",
+    "name_modifier": "",
+    "sprite_animation_prefix": "",
+    "sprite_animation_prefix_priority": "0",
+    "stats_affected": []
+  },
+  {
+    "id": "coating_plant",
+    "name": "STATUS_COATING_PLANT_NAME",
+    "description": "STATUS_COATING_DESCRIPTION",
+    "has_duration": true,
+    "reduce_duration_at": 0,
+    "icon": {
+      "id": 2,
+      "path": "res://ui/icons/status_effects/coating_plant.png",
+      "type": "Texture"
+    },
+    "is_removable": true,
+    "is_buff": false,
+    "is_debuff": false,
+    "is_decoy": false,
+    "always_hidden_from_display": false,
+    "tags": [
+      "coating_plant"
+    ],
+    "toast_on_remove": "",
+    "name_modifier": "",
+    "sprite_animation_prefix": "",
+    "sprite_animation_prefix_priority": "0",
+    "stats_affected": []
+  },
+  {
+    "id": "coating_plastic",
+    "name": "STATUS_COATING_PLASTIC_NAME",
+    "description": "STATUS_COATING_DESCRIPTION",
+    "has_duration": true,
+    "reduce_duration_at": 0,
+    "icon": {
+      "id": 2,
+      "path": "res://ui/icons/status_effects/coating_plastic.png",
+      "type": "Texture"
+    },
+    "is_removable": true,
+    "is_buff": false,
+    "is_debuff": false,
+    "is_decoy": false,
+    "always_hidden_from_display": false,
+    "tags": [
+      "coating_plastic"
+    ],
+    "toast_on_remove": "",
+    "name_modifier": "",
+    "sprite_animation_prefix": "",
+    "sprite_animation_prefix_priority": "0",
+    "stats_affected": []
+  },
+  {
+    "id": "coating_poison",
+    "name": "STATUS_COATING_POISON_NAME",
+    "description": "STATUS_COATING_DESCRIPTION",
+    "has_duration": true,
+    "reduce_duration_at": 0,
+    "icon": {
+      "id": 2,
+      "path": "res://ui/icons/status_effects/coating_poison.png",
+      "type": "Texture"
+    },
+    "is_removable": true,
+    "is_buff": false,
+    "is_debuff": false,
+    "is_decoy": false,
+    "always_hidden_from_display": false,
+    "tags": [
+      "coating_poison"
+    ],
+    "toast_on_remove": "",
+    "name_modifier": "",
+    "sprite_animation_prefix": "",
+    "sprite_animation_prefix_priority": "0",
+    "stats_affected": []
+  },
+  {
+    "id": "coating_water",
+    "name": "STATUS_COATING_WATER_NAME",
+    "description": "STATUS_COATING_DESCRIPTION",
+    "has_duration": true,
+    "reduce_duration_at": 0,
+    "icon": {
+      "id": 2,
+      "path": "res://ui/icons/status_effects/coating_water.png",
+      "type": "Texture"
+    },
+    "is_removable": true,
+    "is_buff": false,
+    "is_debuff": false,
+    "is_decoy": false,
+    "always_hidden_from_display": false,
+    "tags": [
+      "coating_water"
+    ],
+    "toast_on_remove": "",
+    "name_modifier": "",
+    "sprite_animation_prefix": "",
+    "sprite_animation_prefix_priority": "0",
+    "stats_affected": []
+  },
+  {
+    "id": "conductive",
+    "name": "STATUS_CONDUCTIVE_NAME",
+    "description": "STATUS_CONDUCTIVE_DESCRIPTION",
+    "has_duration": true,
+    "reduce_duration_at": 0,
+    "icon": {
+      "id": 3,
+      "path": "res://ui/icons/status_effects/conductive.png",
+      "type": "Texture"
+    },
+    "is_removable": true,
+    "is_buff": false,
+    "is_debuff": true,
+    "is_decoy": false,
+    "always_hidden_from_display": false,
+    "tags": [],
+    "toast_on_remove": "",
+    "name_modifier": "",
+    "sprite_animation_prefix": "",
+    "sprite_animation_prefix_priority": "0",
+    "stats_affected": []
+  },
+  {
+    "id": "confused",
+    "name": "STATUS_CONFUSED_NAME",
+    "description": "STATUS_CONFUSED_DESCRIPTION",
+    "has_duration": true,
+    "reduce_duration_at": 0,
+    "icon": {
+      "id": 2,
+      "path": "res://ui/icons/status_effects/confused.png",
+      "type": "Texture"
+    },
+    "is_removable": true,
+    "is_buff": false,
+    "is_debuff": true,
+    "is_decoy": false,
+    "always_hidden_from_display": false,
+    "tags": [
+      "confused"
+    ],
+    "toast_on_remove": "",
+    "name_modifier": "",
+    "sprite_animation_prefix": "",
+    "sprite_animation_prefix_priority": "0",
+    "stats_affected": []
+  },
+  {
+    "id": "contactdmg_air",
+    "name": "STATUS_CONTACTDMG_NAME",
+    "description": "STATUS_CONTACTDMG_DESCRIPTION",
+    "has_duration": true,
+    "reduce_duration_at": 0,
+    "icon": {
+      "id": 3,
+      "path": "res://ui/icons/status_effects/damage_on_contact_air.png",
+      "type": "Texture"
+    },
+    "is_removable": true,
+    "is_buff": true,
+    "is_debuff": false,
+    "is_decoy": false,
+    "always_hidden_from_display": false,
+    "tags": [],
+    "toast_on_remove": "",
+    "name_modifier": "",
+    "sprite_animation_prefix": "",
+    "sprite_animation_prefix_priority": "0",
+    "stats_affected": []
+  },
+  {
+    "id": "contactdmg_astral",
+    "name": "STATUS_CONTACTDMG_NAME",
+    "description": "STATUS_CONTACTDMG_DESCRIPTION",
+    "has_duration": true,
+    "reduce_duration_at": 0,
+    "icon": {
+      "id": 3,
+      "path": "res://ui/icons/status_effects/damage_on_contact_astral.png",
+      "type": "Texture"
+    },
+    "is_removable": true,
+    "is_buff": true,
+    "is_debuff": false,
+    "is_decoy": false,
+    "always_hidden_from_display": false,
+    "tags": [],
+    "toast_on_remove": "",
+    "name_modifier": "",
+    "sprite_animation_prefix": "",
+    "sprite_animation_prefix_priority": "0",
+    "stats_affected": []
+  },
+  {
+    "id": "contactdmg_beast",
+    "name": "STATUS_CONTACTDMG_NAME",
+    "description": "STATUS_CONTACTDMG_DESCRIPTION",
+    "has_duration": true,
+    "reduce_duration_at": 0,
+    "icon": {
+      "id": 3,
+      "path": "res://ui/icons/status_effects/damage_on_contact_beast.png",
+      "type": "Texture"
+    },
+    "is_removable": true,
+    "is_buff": true,
+    "is_debuff": false,
+    "is_decoy": false,
+    "always_hidden_from_display": false,
+    "tags": [],
+    "toast_on_remove": "",
+    "name_modifier": "",
+    "sprite_animation_prefix": "",
+    "sprite_animation_prefix_priority": "0",
+    "stats_affected": []
+  },
+  {
+    "id": "contactdmg_earth",
+    "name": "STATUS_CONTACTDMG_NAME",
+    "description": "STATUS_CONTACTDMG_DESCRIPTION",
+    "has_duration": true,
+    "reduce_duration_at": 0,
+    "icon": {
+      "id": 3,
+      "path": "res://ui/icons/status_effects/damage_on_contact_earth.png",
+      "type": "Texture"
+    },
+    "is_removable": true,
+    "is_buff": true,
+    "is_debuff": false,
+    "is_decoy": false,
+    "always_hidden_from_display": false,
+    "tags": [],
+    "toast_on_remove": "",
+    "name_modifier": "",
+    "sprite_animation_prefix": "",
+    "sprite_animation_prefix_priority": "0",
+    "stats_affected": []
+  },
+  {
+    "id": "contactdmg_fire",
+    "name": "STATUS_CONTACTDMG_NAME",
+    "description": "STATUS_CONTACTDMG_DESCRIPTION",
+    "has_duration": true,
+    "reduce_duration_at": 0,
+    "icon": {
+      "id": 3,
+      "path": "res://ui/icons/status_effects/damage_on_contact_fire.png",
+      "type": "Texture"
+    },
+    "is_removable": true,
+    "is_buff": true,
+    "is_debuff": false,
+    "is_decoy": false,
+    "always_hidden_from_display": false,
+    "tags": [],
+    "toast_on_remove": "",
+    "name_modifier": "",
+    "sprite_animation_prefix": "",
+    "sprite_animation_prefix_priority": "0",
+    "stats_affected": []
+  },
+  {
+    "id": "contactdmg_glass",
+    "name": "STATUS_CONTACTDMG_NAME",
+    "description": "STATUS_CONTACTDMG_DESCRIPTION",
+    "has_duration": true,
+    "reduce_duration_at": 0,
+    "icon": {
+      "id": 3,
+      "path": "res://ui/icons/status_effects/damage_on_contact_glass.png",
+      "type": "Texture"
+    },
+    "is_removable": true,
+    "is_buff": true,
+    "is_debuff": false,
+    "is_decoy": false,
+    "always_hidden_from_display": false,
+    "tags": [],
+    "toast_on_remove": "",
+    "name_modifier": "",
+    "sprite_animation_prefix": "",
+    "sprite_animation_prefix_priority": "0",
+    "stats_affected": []
+  },
+  {
+    "id": "contactdmg_glitter",
+    "name": "STATUS_CONTACTDMG_NAME",
+    "description": "STATUS_CONTACTDMG_DESCRIPTION",
+    "has_duration": true,
+    "reduce_duration_at": 0,
+    "icon": {
+      "id": 3,
+      "path": "res://ui/icons/status_effects/damage_on_contact_glitter.png",
+      "type": "Texture"
+    },
+    "is_removable": true,
+    "is_buff": true,
+    "is_debuff": false,
+    "is_decoy": false,
+    "always_hidden_from_display": false,
+    "tags": [],
+    "toast_on_remove": "",
+    "name_modifier": "",
+    "sprite_animation_prefix": "",
+    "sprite_animation_prefix_priority": "0",
+    "stats_affected": []
+  },
+  {
+    "id": "contactdmg_ice",
+    "name": "STATUS_CONTACTDMG_NAME",
+    "description": "STATUS_CONTACTDMG_DESCRIPTION",
+    "has_duration": true,
+    "reduce_duration_at": 0,
+    "icon": {
+      "id": 3,
+      "path": "res://ui/icons/status_effects/damage_on_contact_ice.png",
+      "type": "Texture"
+    },
+    "is_removable": true,
+    "is_buff": true,
+    "is_debuff": false,
+    "is_decoy": false,
+    "always_hidden_from_display": false,
+    "tags": [],
+    "toast_on_remove": "",
+    "name_modifier": "",
+    "sprite_animation_prefix": "",
+    "sprite_animation_prefix_priority": "0",
+    "stats_affected": []
+  },
+  {
+    "id": "contactdmg_lightning",
+    "name": "STATUS_CONTACTDMG_NAME",
+    "description": "STATUS_CONTACTDMG_DESCRIPTION",
+    "has_duration": true,
+    "reduce_duration_at": 0,
+    "icon": {
+      "id": 3,
+      "path": "res://ui/icons/status_effects/damage_on_contact_lightning.png",
+      "type": "Texture"
+    },
+    "is_removable": true,
+    "is_buff": true,
+    "is_debuff": false,
+    "is_decoy": false,
+    "always_hidden_from_display": false,
+    "tags": [],
+    "toast_on_remove": "",
+    "name_modifier": "",
+    "sprite_animation_prefix": "",
+    "sprite_animation_prefix_priority": "0",
+    "stats_affected": []
+  },
+  {
+    "id": "contactdmg_metal",
+    "name": "STATUS_CONTACTDMG_NAME",
+    "description": "STATUS_CONTACTDMG_DESCRIPTION",
+    "has_duration": true,
+    "reduce_duration_at": 0,
+    "icon": {
+      "id": 3,
+      "path": "res://ui/icons/status_effects/damage_on_contact_metal.png",
+      "type": "Texture"
+    },
+    "is_removable": true,
+    "is_buff": true,
+    "is_debuff": false,
+    "is_decoy": false,
+    "always_hidden_from_display": false,
+    "tags": [],
+    "toast_on_remove": "",
+    "name_modifier": "",
+    "sprite_animation_prefix": "",
+    "sprite_animation_prefix_priority": "0",
+    "stats_affected": []
+  },
+  {
+    "id": "contactdmg_plant",
+    "name": "STATUS_CONTACTDMG_NAME",
+    "description": "STATUS_CONTACTDMG_DESCRIPTION",
+    "has_duration": true,
+    "reduce_duration_at": 0,
+    "icon": {
+      "id": 3,
+      "path": "res://ui/icons/status_effects/damage_on_contact_plant.png",
+      "type": "Texture"
+    },
+    "is_removable": true,
+    "is_buff": true,
+    "is_debuff": false,
+    "is_decoy": false,
+    "always_hidden_from_display": false,
+    "tags": [],
+    "toast_on_remove": "",
+    "name_modifier": "",
+    "sprite_animation_prefix": "",
+    "sprite_animation_prefix_priority": "0",
+    "stats_affected": []
+  },
+  {
+    "id": "contactdmg_plastic",
+    "name": "STATUS_CONTACTDMG_NAME",
+    "description": "STATUS_CONTACTDMG_DESCRIPTION",
+    "has_duration": true,
+    "reduce_duration_at": 0,
+    "icon": {
+      "id": 3,
+      "path": "res://ui/icons/status_effects/damage_on_contact_plastic.png",
+      "type": "Texture"
+    },
+    "is_removable": true,
+    "is_buff": true,
+    "is_debuff": false,
+    "is_decoy": false,
+    "always_hidden_from_display": false,
+    "tags": [],
+    "toast_on_remove": "",
+    "name_modifier": "",
+    "sprite_animation_prefix": "",
+    "sprite_animation_prefix_priority": "0",
+    "stats_affected": []
+  },
+  {
+    "id": "contactdmg_poison",
+    "name": "STATUS_CONTACTDMG_NAME",
+    "description": "STATUS_CONTACTDMG_DESCRIPTION",
+    "has_duration": true,
+    "reduce_duration_at": 0,
+    "icon": {
+      "id": 3,
+      "path": "res://ui/icons/status_effects/damage_on_contact_poison.png",
+      "type": "Texture"
+    },
+    "is_removable": true,
+    "is_buff": true,
+    "is_debuff": false,
+    "is_decoy": false,
+    "always_hidden_from_display": false,
+    "tags": [],
+    "toast_on_remove": "",
+    "name_modifier": "",
+    "sprite_animation_prefix": "",
+    "sprite_animation_prefix_priority": "0",
+    "stats_affected": []
+  },
+  {
+    "id": "contactdmg_water",
+    "name": "STATUS_CONTACTDMG_NAME",
+    "description": "STATUS_CONTACTDMG_DESCRIPTION",
+    "has_duration": true,
+    "reduce_duration_at": 0,
+    "icon": {
+      "id": 3,
+      "path": "res://ui/icons/status_effects/damage_on_contact_water.png",
+      "type": "Texture"
+    },
+    "is_removable": true,
+    "is_buff": true,
+    "is_debuff": false,
+    "is_decoy": false,
+    "always_hidden_from_display": false,
+    "tags": [],
+    "toast_on_remove": "",
+    "name_modifier": "",
+    "sprite_animation_prefix": "",
+    "sprite_animation_prefix_priority": "0",
+    "stats_affected": []
+  },
+  {
+    "id": "cottoned_on",
+    "name": "STATUS_COTTONED_ON_NAME",
+    "description": "STATUS_COTTONED_ON_DESCRIPTION",
+    "has_duration": true,
+    "reduce_duration_at": 0,
+    "icon": {
+      "id": 3,
+      "path": "res://ui/icons/status_effects/cottoned_on.png",
+      "type": "Texture"
+    },
+    "is_removable": true,
+    "is_buff": true,
+    "is_debuff": false,
+    "is_decoy": false,
+    "always_hidden_from_display": false,
+    "tags": [
+      "cottoned_on"
+    ],
+    "toast_on_remove": "",
+    "name_modifier": "",
+    "sprite_animation_prefix": "",
+    "sprite_animation_prefix_priority": "0",
+    "stats_affected": []
+  },
+  {
+    "id": "deflated",
+    "name": "STATUS_DEFLATED_NAME",
+    "description": "STATUS_DEFLATED_DESCRIPTION",
+    "has_duration": false,
+    "reduce_duration_at": 0,
+    "icon": {
+      "id": 4,
+      "path": "res://ui/icons/status_effects/deflated.png",
+      "type": "Texture"
+    },
+    "is_removable": true,
+    "is_buff": true,
+    "is_debuff": false,
+    "is_decoy": false,
+    "always_hidden_from_display": false,
+    "tags": [
+      "deflated"
+    ],
+    "toast_on_remove": "",
+    "name_modifier": "",
+    "sprite_animation_prefix": "",
+    "sprite_animation_prefix_priority": "0",
+    "stats_affected": []
+  },
+  {
+    "id": "effigy",
+    "name": "STATUS_EFFIGY_NAME",
+    "description": "",
+    "has_duration": false,
+    "reduce_duration_at": 0,
+    "is_removable": false,
+    "is_buff": false,
+    "is_debuff": false,
+    "is_decoy": false,
+    "always_hidden_from_display": false,
+    "tags": [
+      "effigy"
+    ],
+    "toast_on_remove": "",
+    "name_modifier": "",
+    "sprite_animation_prefix": "",
+    "sprite_animation_prefix_priority": "0",
+    "stats_affected": []
+  },
+  {
+    "id": "fair_fight",
+    "name": "STATUS_FAIR_FIGHT_NAME",
+    "description": "STATUS_FAIR_FIGHT_DESCRIPTION",
+    "has_duration": true,
+    "reduce_duration_at": 0,
+    "icon": {
+      "id": 2,
+      "path": "res://ui/icons/status_effects/fair_fight.png",
+      "type": "Texture"
+    },
+    "is_removable": true,
+    "is_buff": false,
+    "is_debuff": false,
+    "is_decoy": false,
+    "always_hidden_from_display": false,
+    "tags": [
+      "fair_fight"
+    ],
+    "toast_on_remove": "",
+    "name_modifier": "",
+    "sprite_animation_prefix": "",
+    "sprite_animation_prefix_priority": "0",
+    "stats_affected": []
+  },
+  {
+    "id": "flammable",
+    "name": "STATUS_NAME_FLAMMABLE",
+    "description": "STATUS_DESCRIPTION_FLAMMABLE",
+    "has_duration": false,
+    "reduce_duration_at": 0,
+    "icon": {
+      "id": 4,
+      "path": "res://ui/icons/status_effects/flammable.png",
+      "type": "Texture"
+    },
+    "is_removable": true,
+    "is_buff": false,
+    "is_debuff": true,
+    "is_decoy": false,
+    "always_hidden_from_display": false,
+    "tags": [
+      "flammable"
+    ],
+    "toast_on_remove": "",
+    "name_modifier": "",
+    "sprite_animation_prefix": "",
+    "sprite_animation_prefix_priority": "0",
+    "stats_affected": []
+  },
+  {
+    "id": "flinch",
+    "name": "STATUS_FLINCH_NAME",
+    "description": "STATUS_FLINCH_DESCRIPTION",
+    "has_duration": false,
+    "reduce_duration_at": 2,
+    "icon": {
+      "id": 1,
+      "path": "res://ui/icons/status_effects/flinched.png",
+      "type": "Texture"
+    },
+    "is_removable": true,
+    "is_buff": false,
+    "is_debuff": true,
+    "is_decoy": false,
+    "always_hidden_from_display": false,
+    "tags": [
+      "flinch"
+    ],
+    "toast_on_remove": "",
+    "name_modifier": "",
+    "sprite_animation_prefix": "",
+    "sprite_animation_prefix_priority": "0",
+    "stats_affected": []
+  },
+  {
+    "id": "fog",
+    "name": "STATUS_FOG_NAME",
+    "description": "STATUS_FOG_DESCRIPTION",
+    "has_duration": true,
+    "reduce_duration_at": 1,
+    "icon": {
+      "id": 5,
+      "path": "res://ui/icons/status_effects/fog.png",
+      "type": "Texture"
+    },
+    "is_removable": true,
+    "is_buff": false,
+    "is_debuff": true,
+    "is_decoy": false,
+    "always_hidden_from_display": false,
+    "tags": [],
+    "toast_on_remove": "",
+    "name_modifier": "",
+    "sprite_animation_prefix": "",
+    "sprite_animation_prefix_priority": "0",
+    "stats_affected": []
+  },
+  {
+    "id": "gambit",
+    "name": "STATUS_GAMBIT_NAME",
+    "description": "STATUS_GAMBIT_DESCRIPTION",
+    "has_duration": true,
+    "reduce_duration_at": 0,
+    "icon": {
+      "id": 3,
+      "path": "res://ui/icons/status_effects/gambit.png",
+      "type": "Texture"
+    },
+    "is_removable": true,
+    "is_buff": true,
+    "is_debuff": false,
+    "is_decoy": false,
+    "always_hidden_from_display": false,
+    "tags": [
+      "gambit"
+    ],
+    "toast_on_remove": "",
+    "name_modifier": "",
+    "sprite_animation_prefix": "",
+    "sprite_animation_prefix_priority": "0",
+    "stats_affected": [
+      "melee_attack",
+      "melee_defense",
+      "ranged_attack",
+      "ranged_defense",
+      "speed",
+      "accuracy"
+    ]
+  },
+  {
+    "id": "ghostly",
+    "name": "STATUS_GHOSTLY_NAME",
+    "description": "STATUS_GHOSTLY_DESCRIPTION",
+    "has_duration": true,
+    "reduce_duration_at": 0,
+    "icon": {
+      "id": 3,
+      "path": "res://ui/icons/status_effects/ghost.png",
+      "type": "Texture"
+    },
+    "is_removable": true,
+    "is_buff": true,
+    "is_debuff": false,
+    "is_decoy": false,
+    "always_hidden_from_display": false,
+    "tags": [
+      "ghostly"
+    ],
+    "toast_on_remove": "",
+    "name_modifier": "STATUS_GHOSTLY_NAME_MODIFIER",
+    "sprite_animation_prefix": "",
+    "sprite_animation_prefix_priority": "0",
+    "stats_affected": []
+  },
+  {
+    "id": "glass_bonds",
+    "name": "STATUS_GLASS_BONDS_NAME",
+    "description": "STATUS_GLASS_BONDS_DESCRIPTION",
+    "has_duration": true,
+    "reduce_duration_at": 2,
+    "icon": {
+      "id": 4,
+      "path": "res://ui/icons/status_effects/glass_bonds.png",
+      "type": "Texture"
+    },
+    "is_removable": true,
+    "is_buff": false,
+    "is_debuff": true,
+    "is_decoy": false,
+    "always_hidden_from_display": false,
+    "tags": [],
+    "toast_on_remove": "",
+    "name_modifier": "",
+    "sprite_animation_prefix": "",
+    "sprite_animation_prefix_priority": "0",
+    "stats_affected": []
+  },
+  {
+    "id": "glass_shards",
+    "name": "STATUS_GLASS_SHARDS_NAME",
+    "description": "STATUS_GLASS_SHARDS_DESCRIPTION",
+    "has_duration": true,
+    "reduce_duration_at": 2,
+    "icon": {
+      "id": 4,
+      "path": "res://ui/icons/status_effects/glass_shards.png",
+      "type": "Texture"
+    },
+    "is_removable": true,
+    "is_buff": false,
+    "is_debuff": false,
+    "is_decoy": false,
+    "always_hidden_from_display": false,
+    "tags": [],
+    "toast_on_remove": "",
+    "name_modifier": "",
+    "sprite_animation_prefix": "",
+    "sprite_animation_prefix_priority": "0",
+    "stats_affected": []
+  },
+  {
+    "id": "healing_leaf",
+    "name": "STATUS_HEALING_LEAF_NAME",
+    "description": "STATUS_HEALING_LEAF_DESCRIPTION",
+    "has_duration": true,
+    "reduce_duration_at": 0,
+    "icon": {
+      "id": 1,
+      "path": "res://ui/icons/status_effects/health_up_plant.png",
+      "type": "Texture"
+    },
+    "is_removable": true,
+    "is_buff": true,
+    "is_debuff": false,
+    "is_decoy": false,
+    "always_hidden_from_display": false,
+    "tags": [],
+    "toast_on_remove": "",
+    "name_modifier": "",
+    "sprite_animation_prefix": "",
+    "sprite_animation_prefix_priority": "0",
+    "stats_affected": []
+  },
+  {
+    "id": "healing_steam",
+    "name": "STATUS_HEALING_STEAM_NAME",
+    "description": "STATUS_HEALING_STEAM_DESCRIPTION",
+    "has_duration": true,
+    "reduce_duration_at": 0,
+    "icon": {
+      "id": 1,
+      "path": "res://ui/icons/status_effects/health_up_water.png",
+      "type": "Texture"
+    },
+    "is_removable": true,
+    "is_buff": true,
+    "is_debuff": false,
+    "is_decoy": false,
+    "always_hidden_from_display": false,
+    "tags": [],
+    "toast_on_remove": "",
+    "name_modifier": "",
+    "sprite_animation_prefix": "",
+    "sprite_animation_prefix_priority": "0",
+    "stats_affected": []
+  },
+  {
+    "id": "hibernating",
+    "name": "STATUS_HIBERNATING_NAME",
+    "description": "STATUS_HIBERNATING_DESCRIPTION",
+    "has_duration": false,
+    "reduce_duration_at": 0,
+    "icon": {
+      "id": 1,
+      "path": "res://ui/icons/status_effects/hibernating.png",
+      "type": "Texture"
+    },
+    "is_removable": true,
+    "is_buff": true,
+    "is_debuff": false,
+    "is_decoy": false,
+    "always_hidden_from_display": false,
+    "tags": [],
+    "toast_on_remove": "",
+    "name_modifier": "",
+    "sprite_animation_prefix": "",
+    "sprite_animation_prefix_priority": "0",
+    "stats_affected": []
+  },
+  {
+    "id": "inflated",
+    "name": "STATUS_INFLATED_NAME",
+    "description": "STATUS_INFLATED_DESCRIPTION",
+    "has_duration": false,
+    "reduce_duration_at": 0,
+    "icon": {
+      "id": 4,
+      "path": "res://ui/icons/status_effects/inflated.png",
+      "type": "Texture"
+    },
+    "is_removable": true,
+    "is_buff": true,
+    "is_debuff": false,
+    "is_decoy": false,
+    "always_hidden_from_display": false,
+    "tags": [
+      "inflated"
+    ],
+    "toast_on_remove": "",
+    "name_modifier": "",
+    "sprite_animation_prefix": "",
+    "sprite_animation_prefix_priority": "0",
+    "stats_affected": []
+  },
+  {
+    "id": "intercepting",
+    "name": "STATUS_INTERCEPTING_NAME",
+    "description": "STATUS_INTERCEPTING_DESCRIPTION",
+    "has_duration": true,
+    "reduce_duration_at": 0,
+    "icon": {
+      "id": 2,
+      "path": "res://ui/icons/status_effects/intercepting.png",
+      "type": "Texture"
+    },
+    "is_removable": true,
+    "is_buff": true,
+    "is_debuff": false,
+    "is_decoy": false,
+    "always_hidden_from_display": false,
+    "tags": [
+      "intercepting"
+    ],
+    "toast_on_remove": "",
+    "name_modifier": "",
+    "sprite_animation_prefix": "",
+    "sprite_animation_prefix_priority": "0",
+    "stats_affected": []
+  },
+  {
+    "id": "leeched",
+    "name": "STATUS_LEECHED_NAME",
+    "description": "STATUS_LEECHED_DESCRIPTION",
+    "has_duration": true,
+    "reduce_duration_at": 0,
+    "icon": {
+      "id": 4,
+      "path": "res://ui/icons/status_effects/health_down_plant.png",
+      "type": "Texture"
+    },
+    "is_removable": true,
+    "is_buff": false,
+    "is_debuff": true,
+    "is_decoy": false,
+    "always_hidden_from_display": false,
+    "tags": [],
+    "toast_on_remove": "",
+    "name_modifier": "",
+    "sprite_animation_prefix": "",
+    "sprite_animation_prefix_priority": "0",
+    "stats_affected": []
+  },
+  {
+    "id": "locked_on",
+    "name": "STATUS_LOCKED_ON_NAME",
+    "description": "STATUS_LOCKED_ON_DESCRIPTION",
+    "has_duration": true,
+    "reduce_duration_at": 0,
+    "icon": {
+      "id": 1,
+      "path": "res://ui/icons/status_effects/locked_on.png",
+      "type": "Texture"
+    },
+    "is_removable": true,
+    "is_buff": true,
+    "is_debuff": false,
+    "is_decoy": false,
+    "always_hidden_from_display": false,
+    "tags": [
+      "locked_on"
+    ],
+    "toast_on_remove": "",
+    "name_modifier": "",
+    "sprite_animation_prefix": "",
+    "sprite_animation_prefix_priority": "0",
+    "stats_affected": []
+  },
+  {
+    "id": "meditating",
+    "name": "STATUS_MEDITATING_NAME",
+    "description": "STATUS_MEDITATING_DESCRIPTION",
+    "has_duration": true,
+    "reduce_duration_at": 2,
+    "icon": {
+      "id": 1,
+      "path": "res://ui/icons/status_effects/meditating.png",
+      "type": "Texture"
+    },
+    "is_removable": true,
+    "is_buff": true,
+    "is_debuff": false,
+    "is_decoy": false,
+    "always_hidden_from_display": false,
+    "tags": [],
+    "toast_on_remove": "",
+    "name_modifier": "",
+    "sprite_animation_prefix": "",
+    "sprite_animation_prefix_priority": "0",
+    "stats_affected": [
+      "melee_attack",
+      "ranged_attack",
+      "melee_defense",
+      "ranged_defense"
+    ]
+  },
+  {
+    "id": "mind_meld",
+    "name": "STATUS_MIND_MELD_NAME",
+    "description": "STATUS_MIND_MELD_DESCRIPTION",
+    "has_duration": true,
+    "reduce_duration_at": 0,
+    "icon": {
+      "id": 3,
+      "path": "res://ui/icons/status_effects/mind_meld.png",
+      "type": "Texture"
+    },
+    "is_removable": true,
+    "is_buff": true,
+    "is_debuff": false,
+    "is_decoy": false,
+    "always_hidden_from_display": false,
+    "tags": [
+      "share_moves"
+    ],
+    "toast_on_remove": "",
+    "name_modifier": "",
+    "sprite_animation_prefix": "",
+    "sprite_animation_prefix_priority": "0",
+    "stats_affected": []
+  },
+  {
+    "id": "multistrike",
+    "name": "STATUS_MULTISTRIKE_NAME",
+    "description": "STATUS_MULTISTRIKE_DESCRIPTION",
+    "has_duration": true,
+    "reduce_duration_at": 0,
+    "icon": {
+      "id": 1,
+      "path": "res://ui/icons/status_effects/multistrike.png",
+      "type": "Texture"
+    },
+    "is_removable": true,
+    "is_buff": true,
+    "is_debuff": false,
+    "is_decoy": false,
+    "always_hidden_from_display": false,
+    "tags": [
+      "multistrike"
+    ],
+    "toast_on_remove": "",
+    "name_modifier": "",
+    "sprite_animation_prefix": "",
+    "sprite_animation_prefix_priority": "0",
+    "stats_affected": []
+  },
+  {
+    "id": "multitarget",
+    "name": "STATUS_MULTITARGET_NAME",
+    "description": "STATUS_MULTITARGET_DESCRIPTION",
+    "has_duration": true,
+    "reduce_duration_at": 0,
+    "icon": {
+      "id": 2,
+      "path": "res://ui/icons/status_effects/multitarget.png",
+      "type": "Texture"
+    },
+    "is_removable": true,
+    "is_buff": true,
+    "is_debuff": false,
+    "is_decoy": false,
+    "always_hidden_from_display": false,
+    "tags": [
+      "multitarget"
+    ],
+    "toast_on_remove": "",
+    "name_modifier": "",
+    "sprite_animation_prefix": "",
+    "sprite_animation_prefix_priority": "0",
+    "stats_affected": []
+  },
+  {
+    "id": "parry_stance",
+    "name": "STATUS_PARRY_STANCE_NAME",
+    "description": "STATUS_PARRY_STANCE_DESCRIPTION",
+    "has_duration": true,
+    "reduce_duration_at": 0,
+    "icon": {
+      "id": 1,
+      "path": "res://ui/icons/status_effects/parry.png",
+      "type": "Texture"
+    },
+    "is_removable": true,
+    "is_buff": true,
+    "is_debuff": false,
+    "is_decoy": false,
+    "always_hidden_from_display": false,
+    "tags": [],
+    "toast_on_remove": "",
+    "name_modifier": "",
+    "sprite_animation_prefix": "",
+    "sprite_animation_prefix_priority": "0",
+    "stats_affected": []
+  },
+  {
+    "id": "petrified",
+    "name": "STATUS_PETRIFIED_NAME",
+    "description": "STATUS_PETRIFIED_DESCRIPTION",
+    "has_duration": true,
+    "reduce_duration_at": 0,
+    "icon": {
+      "id": 5,
+      "path": "res://ui/icons/status_effects/petrified.png",
+      "type": "Texture"
+    },
+    "is_removable": true,
+    "is_buff": false,
+    "is_debuff": true,
+    "is_decoy": false,
+    "always_hidden_from_display": false,
+    "tags": [],
+    "toast_on_remove": "",
+    "name_modifier": "",
+    "sprite_animation_prefix": "",
+    "sprite_animation_prefix_priority": "0",
+    "stats_affected": [
+      "speed"
+    ]
+  },
+  {
+    "id": "poisoned",
+    "name": "STATUS_POISONED_NAME",
+    "description": "STATUS_POISONED_DESCRIPTION",
+    "has_duration": true,
+    "reduce_duration_at": 0,
+    "icon": {
+      "id": 3,
+      "path": "res://ui/icons/status_effects/health_down_poison.png",
+      "type": "Texture"
+    },
+    "is_removable": true,
+    "is_buff": false,
+    "is_debuff": true,
+    "is_decoy": false,
+    "always_hidden_from_display": false,
+    "tags": [],
+    "toast_on_remove": "",
+    "name_modifier": "",
+    "sprite_animation_prefix": "",
+    "sprite_animation_prefix_priority": "0",
+    "stats_affected": []
+  },
+  {
+    "id": "recorded",
+    "name": "STATUS_RECORDED_NAME",
+    "description": "",
+    "has_duration": false,
+    "reduce_duration_at": 0,
+    "is_removable": false,
+    "is_buff": false,
+    "is_debuff": false,
+    "is_decoy": false,
+    "always_hidden_from_display": true,
+    "tags": [
+      "recorded"
+    ],
+    "toast_on_remove": "",
+    "name_modifier": "",
+    "sprite_animation_prefix": "",
+    "sprite_animation_prefix_priority": "0",
+    "stats_affected": []
+  },
+  {
+    "id": "resonance",
+    "name": "STATUS_RESONANCE_NAME",
+    "description": "STATUS_RESONANCE_DESCRIPTION",
+    "has_duration": true,
+    "reduce_duration_at": 2,
+    "icon": {
+      "id": 2,
+      "path": "res://ui/icons/status_effects/resonance.png",
+      "type": "Texture"
+    },
+    "is_removable": true,
+    "is_buff": false,
+    "is_debuff": true,
+    "is_decoy": false,
+    "always_hidden_from_display": false,
+    "tags": [
+      "resonance"
+    ],
+    "toast_on_remove": "",
+    "name_modifier": "",
+    "sprite_animation_prefix": "",
+    "sprite_animation_prefix_priority": "0",
+    "stats_affected": []
+  },
+  {
+    "id": "resurrected",
+    "name": "STATUS_RESURRECTED_NAME",
+    "description": "STATUS_RESURRECTED_DESCRIPTION",
+    "has_duration": false,
+    "reduce_duration_at": 0,
+    "icon": {
+      "id": 2,
+      "path": "res://ui/icons/status_effects/resurrected.png",
+      "type": "Texture"
+    },
+    "is_removable": false,
+    "is_buff": false,
+    "is_debuff": false,
+    "is_decoy": false,
+    "always_hidden_from_display": false,
+    "tags": [
+      "resurrected"
+    ],
+    "toast_on_remove": "",
+    "name_modifier": "",
+    "sprite_animation_prefix": "",
+    "sprite_animation_prefix_priority": "0",
+    "stats_affected": []
+  },
+  {
+    "id": "shrapnel",
+    "name": "STATUS_SHRAPNEL_NAME",
+    "description": "STATUS_SHRAPNEL_DESCRIPTION",
+    "has_duration": true,
+    "reduce_duration_at": 2,
+    "icon": {
+      "id": 4,
+      "path": "res://ui/icons/status_effects/shrapnel.png",
+      "type": "Texture"
+    },
+    "is_removable": true,
+    "is_buff": false,
+    "is_debuff": true,
+    "is_decoy": false,
+    "always_hidden_from_display": false,
+    "tags": [],
+    "toast_on_remove": "",
+    "name_modifier": "",
+    "sprite_animation_prefix": "",
+    "sprite_animation_prefix_priority": "0",
+    "stats_affected": []
+  },
+  {
+    "id": "sleep",
+    "name": "STATUS_SLEEP_NAME",
+    "description": "STATUS_SLEEP_DESCRIPTION",
+    "has_duration": true,
+    "reduce_duration_at": 0,
+    "icon": {
+      "id": 1,
+      "path": "res://ui/icons/status_effects/sleep.png",
+      "type": "Texture"
+    },
+    "is_removable": true,
+    "is_buff": false,
+    "is_debuff": true,
+    "is_decoy": false,
+    "always_hidden_from_display": false,
+    "tags": [
+      "sleep"
+    ],
+    "toast_on_remove": "STATUS_SLEEP_TOAST_REMOVED",
+    "name_modifier": "",
+    "sprite_animation_prefix": "sleep_",
+    "sprite_animation_prefix_priority": "0",
+    "stats_affected": []
+  },
+  {
+    "id": "snowed_in",
+    "name": "STATUS_SNOWED_IN_NAME",
+    "description": "STATUS_SNOWED_IN_DESCRIPTION",
+    "has_duration": true,
+    "reduce_duration_at": 1,
+    "icon": {
+      "id": 2,
+      "path": "res://ui/icons/status_effects/snowed_in.png",
+      "type": "Texture"
+    },
+    "is_removable": true,
+    "is_buff": false,
+    "is_debuff": true,
+    "is_decoy": false,
+    "always_hidden_from_display": false,
+    "tags": [],
+    "toast_on_remove": "",
+    "name_modifier": "",
+    "sprite_animation_prefix": "",
+    "sprite_animation_prefix_priority": "0",
+    "stats_affected": []
+  },
+  {
+    "id": "spring_loaded",
+    "name": "STATUS_SPRING_LOADED_NAME",
+    "description": "STATUS_SPRING_LOADED_DESCRIPTION",
+    "has_duration": true,
+    "reduce_duration_at": 0,
+    "icon": {
+      "id": 2,
+      "path": "res://ui/icons/status_effects/spring_load.png",
+      "type": "Texture"
+    },
+    "is_removable": true,
+    "is_buff": false,
+    "is_debuff": false,
+    "is_decoy": false,
+    "always_hidden_from_display": false,
+    "tags": [],
+    "toast_on_remove": "",
+    "name_modifier": "",
+    "sprite_animation_prefix": "",
+    "sprite_animation_prefix_priority": "0",
+    "stats_affected": []
+  },
+  {
+    "id": "status_window",
+    "name": "STATUS_WINDOW_NAME",
+    "description": "STATUS_WINDOW_DESCRIPTION",
+    "has_duration": true,
+    "reduce_duration_at": 0,
+    "icon": {
+      "id": 3,
+      "path": "res://ui/icons/status_effects/window.png",
+      "type": "Texture"
+    },
+    "is_removable": true,
+    "is_buff": false,
+    "is_debuff": true,
+    "is_decoy": false,
+    "always_hidden_from_display": false,
+    "tags": [
+      "window"
+    ],
+    "toast_on_remove": "",
+    "name_modifier": "",
+    "sprite_animation_prefix": "",
+    "sprite_animation_prefix_priority": "0",
+    "stats_affected": []
+  },
+  {
+    "id": "stat_accuracy_down",
+    "name": "STATUS_STAT_ACCURACY_DOWN_NAME",
+    "description": "",
+    "has_duration": true,
+    "reduce_duration_at": 0,
+    "icon": {
+      "id": 1,
+      "path": "res://ui/icons/status_effects/accuracy_down.png",
+      "type": "Texture"
+    },
+    "is_removable": true,
+    "is_buff": false,
+    "is_debuff": true,
+    "is_decoy": false,
+    "always_hidden_from_display": false,
+    "tags": [],
+    "toast_on_remove": "",
+    "name_modifier": "",
+    "sprite_animation_prefix": "",
+    "sprite_animation_prefix_priority": "0",
+    "stats_affected": [
+      "accuracy"
+    ]
+  },
+  {
+    "id": "stat_accuracy_up",
+    "name": "STATUS_STAT_ACCURACY_UP_NAME",
+    "description": "",
+    "has_duration": true,
+    "reduce_duration_at": 0,
+    "icon": {
+      "id": 1,
+      "path": "res://ui/icons/status_effects/accuracy_up.png",
+      "type": "Texture"
+    },
+    "is_removable": true,
+    "is_buff": true,
+    "is_debuff": false,
+    "is_decoy": false,
+    "always_hidden_from_display": false,
+    "tags": [],
+    "toast_on_remove": "",
+    "name_modifier": "",
+    "sprite_animation_prefix": "",
+    "sprite_animation_prefix_priority": "0",
+    "stats_affected": [
+      "accuracy"
+    ]
+  },
+  {
+    "id": "stat_double_speed",
+    "name": "STATUS_STAT_DOUBLE_SPEED_NAME",
+    "description": "",
+    "has_duration": true,
+    "reduce_duration_at": 0,
+    "icon": {
+      "id": 1,
+      "path": "res://ui/icons/status_effects/speed_up_double.png",
+      "type": "Texture"
+    },
+    "is_removable": true,
+    "is_buff": true,
+    "is_debuff": false,
+    "is_decoy": false,
+    "always_hidden_from_display": false,
+    "tags": [],
+    "toast_on_remove": "",
+    "name_modifier": "",
+    "sprite_animation_prefix": "",
+    "sprite_animation_prefix_priority": "0",
+    "stats_affected": [
+      "speed"
+    ]
+  },
+  {
+    "id": "stat_evasion_down",
+    "name": "STATUS_STAT_EVASION_DOWN_NAME",
+    "description": "",
+    "has_duration": true,
+    "reduce_duration_at": 0,
+    "icon": {
+      "id": 1,
+      "path": "res://ui/icons/status_effects/evasion_down.png",
+      "type": "Texture"
+    },
+    "is_removable": true,
+    "is_buff": false,
+    "is_debuff": true,
+    "is_decoy": false,
+    "always_hidden_from_display": false,
+    "tags": [],
+    "toast_on_remove": "",
+    "name_modifier": "",
+    "sprite_animation_prefix": "",
+    "sprite_animation_prefix_priority": "0",
+    "stats_affected": [
+      "evasion"
+    ]
+  },
+  {
+    "id": "stat_evasion_nullified",
+    "name": "STATUS_STAT_EVASION_NULLIFIED_NAME",
+    "description": "STATUS_STAT_EVASION_NULLIFIED_DESCRIPTION",
+    "has_duration": true,
+    "reduce_duration_at": 0,
+    "icon": {
+      "id": 1,
+      "path": "res://ui/icons/status_effects/evasion_nullified.png",
+      "type": "Texture"
+    },
+    "is_removable": true,
+    "is_buff": false,
+    "is_debuff": true,
+    "is_decoy": false,
+    "always_hidden_from_display": false,
+    "tags": [
+      "stat_evasion_nullified"
+    ],
+    "toast_on_remove": "",
+    "name_modifier": "",
+    "sprite_animation_prefix": "",
+    "sprite_animation_prefix_priority": "0",
+    "stats_affected": [
+      "evasion"
+    ]
+  },
+  {
+    "id": "stat_evasion_up",
+    "name": "STATUS_STAT_EVASION_UP_NAME",
+    "description": "",
+    "has_duration": true,
+    "reduce_duration_at": 0,
+    "icon": {
+      "id": 1,
+      "path": "res://ui/icons/status_effects/evasion_up.png",
+      "type": "Texture"
+    },
+    "is_removable": true,
+    "is_buff": true,
+    "is_debuff": false,
+    "is_decoy": false,
+    "always_hidden_from_display": false,
+    "tags": [],
+    "toast_on_remove": "",
+    "name_modifier": "",
+    "sprite_animation_prefix": "",
+    "sprite_animation_prefix_priority": "0",
+    "stats_affected": [
+      "evasion"
+    ]
+  },
+  {
+    "id": "stat_matk_down",
+    "name": "STATUS_STAT_MATK_DOWN_NAME",
+    "description": "",
+    "has_duration": true,
+    "reduce_duration_at": 0,
+    "icon": {
+      "id": 1,
+      "path": "res://ui/icons/status_effects/attack_melee_down.png",
+      "type": "Texture"
+    },
+    "is_removable": true,
+    "is_buff": false,
+    "is_debuff": true,
+    "is_decoy": false,
+    "always_hidden_from_display": false,
+    "tags": [],
+    "toast_on_remove": "",
+    "name_modifier": "",
+    "sprite_animation_prefix": "",
+    "sprite_animation_prefix_priority": "0",
+    "stats_affected": [
+      "melee_attack"
+    ]
+  },
+  {
+    "id": "stat_matk_up",
+    "name": "STATUS_STAT_MATK_UP_NAME",
+    "description": "",
+    "has_duration": true,
+    "reduce_duration_at": 0,
+    "icon": {
+      "id": 1,
+      "path": "res://ui/icons/status_effects/attack_melee_up.png",
+      "type": "Texture"
+    },
+    "is_removable": true,
+    "is_buff": true,
+    "is_debuff": false,
+    "is_decoy": false,
+    "always_hidden_from_display": false,
+    "tags": [],
+    "toast_on_remove": "",
+    "name_modifier": "",
+    "sprite_animation_prefix": "",
+    "sprite_animation_prefix_priority": "0",
+    "stats_affected": [
+      "melee_attack"
+    ]
+  },
+  {
+    "id": "stat_mdef_down",
+    "name": "STATUS_STAT_MDEF_DOWN_NAME",
+    "description": "",
+    "has_duration": true,
+    "reduce_duration_at": 0,
+    "icon": {
+      "id": 1,
+      "path": "res://ui/icons/status_effects/defense_melee_down.png",
+      "type": "Texture"
+    },
+    "is_removable": true,
+    "is_buff": false,
+    "is_debuff": true,
+    "is_decoy": false,
+    "always_hidden_from_display": false,
+    "tags": [],
+    "toast_on_remove": "",
+    "name_modifier": "",
+    "sprite_animation_prefix": "",
+    "sprite_animation_prefix_priority": "0",
+    "stats_affected": [
+      "melee_defense"
+    ]
+  },
+  {
+    "id": "stat_mdef_up",
+    "name": "STATUS_STAT_MDEF_UP_NAME",
+    "description": "",
+    "has_duration": true,
+    "reduce_duration_at": 0,
+    "icon": {
+      "id": 1,
+      "path": "res://ui/icons/status_effects/defense_melee_up.png",
+      "type": "Texture"
+    },
+    "is_removable": true,
+    "is_buff": true,
+    "is_debuff": false,
+    "is_decoy": false,
+    "always_hidden_from_display": false,
+    "tags": [],
+    "toast_on_remove": "",
+    "name_modifier": "",
+    "sprite_animation_prefix": "",
+    "sprite_animation_prefix_priority": "0",
+    "stats_affected": [
+      "melee_defense"
+    ]
+  },
+  {
+    "id": "stat_ratk_down",
+    "name": "STATUS_STAT_RATK_DOWN_NAME",
+    "description": "",
+    "has_duration": true,
+    "reduce_duration_at": 0,
+    "icon": {
+      "id": 1,
+      "path": "res://ui/icons/status_effects/attack_ranged_down.png",
+      "type": "Texture"
+    },
+    "is_removable": true,
+    "is_buff": false,
+    "is_debuff": true,
+    "is_decoy": false,
+    "always_hidden_from_display": false,
+    "tags": [],
+    "toast_on_remove": "",
+    "name_modifier": "",
+    "sprite_animation_prefix": "",
+    "sprite_animation_prefix_priority": "0",
+    "stats_affected": [
+      "ranged_attack"
+    ]
+  },
+  {
+    "id": "stat_ratk_up",
+    "name": "STATUS_STAT_RATK_UP_NAME",
+    "description": "",
+    "has_duration": true,
+    "reduce_duration_at": 0,
+    "icon": {
+      "id": 1,
+      "path": "res://ui/icons/status_effects/attack_ranged_up.png",
+      "type": "Texture"
+    },
+    "is_removable": true,
+    "is_buff": true,
+    "is_debuff": false,
+    "is_decoy": false,
+    "always_hidden_from_display": false,
+    "tags": [],
+    "toast_on_remove": "",
+    "name_modifier": "",
+    "sprite_animation_prefix": "",
+    "sprite_animation_prefix_priority": "0",
+    "stats_affected": [
+      "ranged_attack"
+    ]
+  },
+  {
+    "id": "stat_rdef_down",
+    "name": "STATUS_STAT_RDEF_DOWN_NAME",
+    "description": "",
+    "has_duration": true,
+    "reduce_duration_at": 0,
+    "icon": {
+      "id": 1,
+      "path": "res://ui/icons/status_effects/defense_ranged_down.png",
+      "type": "Texture"
+    },
+    "is_removable": true,
+    "is_buff": false,
+    "is_debuff": true,
+    "is_decoy": false,
+    "always_hidden_from_display": false,
+    "tags": [],
+    "toast_on_remove": "",
+    "name_modifier": "",
+    "sprite_animation_prefix": "",
+    "sprite_animation_prefix_priority": "0",
+    "stats_affected": [
+      "ranged_defense"
+    ]
+  },
+  {
+    "id": "stat_rdef_up",
+    "name": "STATUS_STAT_RDEF_UP_NAME",
+    "description": "",
+    "has_duration": true,
+    "reduce_duration_at": 0,
+    "icon": {
+      "id": 1,
+      "path": "res://ui/icons/status_effects/defense_ranged_up.png",
+      "type": "Texture"
+    },
+    "is_removable": true,
+    "is_buff": true,
+    "is_debuff": false,
+    "is_decoy": false,
+    "always_hidden_from_display": false,
+    "tags": [],
+    "toast_on_remove": "",
+    "name_modifier": "",
+    "sprite_animation_prefix": "",
+    "sprite_animation_prefix_priority": "0",
+    "stats_affected": [
+      "ranged_defense"
+    ]
+  },
+  {
+    "id": "stat_speed_down",
+    "name": "STATUS_STAT_SPEED_DOWN_NAME",
+    "description": "",
+    "has_duration": true,
+    "reduce_duration_at": 0,
+    "icon": {
+      "id": 1,
+      "path": "res://ui/icons/status_effects/speed_down.png",
+      "type": "Texture"
+    },
+    "is_removable": true,
+    "is_buff": false,
+    "is_debuff": true,
+    "is_decoy": false,
+    "always_hidden_from_display": false,
+    "tags": [],
+    "toast_on_remove": "",
+    "name_modifier": "",
+    "sprite_animation_prefix": "",
+    "sprite_animation_prefix_priority": "0",
+    "stats_affected": [
+      "speed"
+    ]
+  },
+  {
+    "id": "stat_speed_up",
+    "name": "STATUS_STAT_SPEED_UP_NAME",
+    "description": "",
+    "has_duration": true,
+    "reduce_duration_at": 0,
+    "icon": {
+      "id": 1,
+      "path": "res://ui/icons/status_effects/speed_up.png",
+      "type": "Texture"
+    },
+    "is_removable": true,
+    "is_buff": true,
+    "is_debuff": false,
+    "is_decoy": false,
+    "always_hidden_from_display": false,
+    "tags": [],
+    "toast_on_remove": "",
+    "name_modifier": "",
+    "sprite_animation_prefix": "",
+    "sprite_animation_prefix_priority": "0",
+    "stats_affected": [
+      "speed"
+    ]
+  },
+  {
+    "id": "summoned",
+    "name": "STATUS_SUMMONED_NAME",
+    "description": "STATUS_SUMMONED_DESCRIPTION",
+    "has_duration": true,
+    "reduce_duration_at": 0,
+    "icon": {
+      "id": 2,
+      "path": "res://ui/icons/status_effects/summoned.png",
+      "type": "Texture"
+    },
+    "is_removable": false,
+    "is_buff": false,
+    "is_debuff": false,
+    "is_decoy": false,
+    "always_hidden_from_display": false,
+    "tags": [
+      "summoned"
+    ],
+    "toast_on_remove": "",
+    "name_modifier": "STATUS_SUMMONED_NAME_MODIFIER",
+    "sprite_animation_prefix": "",
+    "sprite_animation_prefix_priority": "0",
+    "stats_affected": []
+  },
+  {
+    "id": "tape_jam",
+    "name": "STATUS_TAPE_JAM_NAME",
+    "description": "STATUS_TAPE_JAM_DESCRIPTION",
+    "has_duration": true,
+    "reduce_duration_at": 0,
+    "icon": {
+      "id": 2,
+      "path": "res://ui/icons/status_effects/tape_jam.png",
+      "type": "Texture"
+    },
+    "is_removable": true,
+    "is_buff": false,
+    "is_debuff": true,
+    "is_decoy": false,
+    "always_hidden_from_display": false,
+    "tags": [
+      "tape_jam"
+    ],
+    "toast_on_remove": "",
+    "name_modifier": "",
+    "sprite_animation_prefix": "",
+    "sprite_animation_prefix_priority": "0",
+    "stats_affected": []
+  },
+  {
+    "id": "tower_defense",
+    "name": "STATUS_TOWER_DEFENSE_NAME",
+    "description": "STATUS_TOWER_DEFENSE_DESCRIPTION",
+    "has_duration": false,
+    "reduce_duration_at": 2,
+    "icon": {
+      "id": 3,
+      "path": "res://ui/icons/status_effects/tower_defense.png",
+      "type": "Texture"
+    },
+    "is_removable": false,
+    "is_buff": true,
+    "is_debuff": false,
+    "is_decoy": false,
+    "always_hidden_from_display": false,
+    "tags": [],
+    "toast_on_remove": "",
+    "name_modifier": "",
+    "sprite_animation_prefix": "stance_",
+    "sprite_animation_prefix_priority": "",
+    "stats_affected": [
+      "melee_defense",
+      "ranged_defense"
+    ]
+  },
+  {
+    "id": "undying",
+    "name": "STATUS_UNDYING_NAME",
+    "description": "STATUS_UNDYING_DESCRIPTION",
+    "has_duration": false,
+    "reduce_duration_at": 0,
+    "icon": {
+      "id": 4,
+      "path": "res://ui/icons/status_effects/undying.png",
+      "type": "Texture"
+    },
+    "is_removable": true,
+    "is_buff": true,
+    "is_debuff": false,
+    "is_decoy": false,
+    "always_hidden_from_display": false,
+    "tags": [
+      "undying"
+    ],
+    "toast_on_remove": "",
+    "name_modifier": "",
+    "sprite_animation_prefix": "",
+    "sprite_animation_prefix_priority": "0",
+    "stats_affected": []
+  },
+  {
+    "id": "unitarget",
+    "name": "STATUS_UNITARGET_NAME",
+    "description": "STATUS_UNITARGET_DESCRIPTION",
+    "has_duration": true,
+    "reduce_duration_at": 0,
+    "icon": {
+      "id": 2,
+      "path": "res://ui/icons/status_effects/unitarget.png",
+      "type": "Texture"
+    },
+    "is_removable": true,
+    "is_buff": false,
+    "is_debuff": true,
+    "is_decoy": false,
+    "always_hidden_from_display": false,
+    "tags": [],
+    "toast_on_remove": "",
+    "name_modifier": "",
+    "sprite_animation_prefix": "",
+    "sprite_animation_prefix_priority": "0",
+    "stats_affected": []
+  },
+  {
+    "id": "wall_air",
+    "name": "STATUS_WALL_NAME",
+    "description": "STATUS_WALL_DESCRIPTION",
+    "has_duration": true,
+    "reduce_duration_at": 0,
+    "icon": {
+      "id": 3,
+      "path": "res://ui/icons/status_effects/wall_air.png",
+      "type": "Texture"
+    },
+    "is_removable": true,
+    "is_buff": true,
+    "is_debuff": false,
+    "is_decoy": true,
+    "always_hidden_from_display": false,
+    "tags": [],
+    "toast_on_remove": "",
+    "name_modifier": "",
+    "sprite_animation_prefix": "",
+    "sprite_animation_prefix_priority": "0",
+    "stats_affected": []
+  },
+  {
+    "id": "wall_gemstone",
+    "name": "STATUS_GEMSTONE_WALL_NAME",
+    "description": "STATUS_GEMSTONE_WALL_DESCRIPTION",
+    "has_duration": true,
+    "reduce_duration_at": 0,
+    "icon": {
+      "id": 4,
+      "path": "res://ui/icons/status_effects/wall_earth.png",
+      "type": "Texture"
+    },
+    "is_removable": true,
+    "is_buff": true,
+    "is_debuff": false,
+    "is_decoy": true,
+    "always_hidden_from_display": false,
+    "tags": [],
+    "toast_on_remove": "",
+    "name_modifier": "",
+    "sprite_animation_prefix": "",
+    "sprite_animation_prefix_priority": "0",
+    "stats_affected": [
+      "ap_regen"
+    ],
+    "stat_offset": 1
+  },
+  {
+    "id": "wall_temptation",
+    "name": "STATUS_TEMPTATION_WALL_NAME",
+    "description": "STATUS_WALL_DESCRIPTION",
+    "has_duration": true,
+    "reduce_duration_at": 0,
+    "icon": {
+      "id": 4,
+      "path": "res://ui/icons/status_effects/wall_plant.png",
+      "type": "Texture"
+    },
+    "is_removable": true,
+    "is_buff": true,
+    "is_debuff": false,
+    "is_decoy": true,
+    "always_hidden_from_display": false,
+    "tags": [],
+    "toast_on_remove": "",
+    "name_modifier": "",
+    "sprite_animation_prefix": "",
+    "sprite_animation_prefix_priority": "0",
+    "stats_affected": []
+  }
+]

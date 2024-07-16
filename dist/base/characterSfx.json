@@ -1,0 +1,2444 @@
+[
+  {
+    "file": "aa_aleph",
+    "windup": [
+      {
+        "id": 2,
+        "path": "res://sfx/voices/aleph/aleph_attack_1.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 10,
+        "path": "res://sfx/voices/aleph/aleph_attack_2.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 8,
+        "path": "res://sfx/voices/aleph/aleph_attack_3.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 7,
+        "path": "res://sfx/voices/aleph/aleph_attack_4.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 9,
+        "path": "res://sfx/voices/aleph/aleph_attack_5.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "hurt": [
+      {
+        "id": 3,
+        "path": "res://sfx/voices/aleph/aleph_hurt_1.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 6,
+        "path": "res://sfx/voices/aleph/aleph_hurt_2.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 4,
+        "path": "res://sfx/voices/aleph/aleph_hurt_3.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 5,
+        "path": "res://sfx/voices/aleph/aleph_hurt_4.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "recording": [],
+    "recording_success": [],
+    "recording_failure": [],
+    "transform": [],
+    "defeat": [],
+    "greeting": [],
+    "farewell": [],
+    "thanks": [],
+    "sigh_2": [],
+    "surprise_2": [],
+    "thinking": [],
+    "audioFiles": []
+  },
+  {
+    "file": "aa_clown",
+    "windup": [
+      {
+        "id": 9,
+        "path": "res://sfx/voices/clown/clown_attack_1.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 8,
+        "path": "res://sfx/voices/clown/clown_attack_2.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 7,
+        "path": "res://sfx/voices/clown/clown_attack_3.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 2,
+        "path": "res://sfx/voices/clown/clown_attack_4.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "hurt": [
+      {
+        "id": 3,
+        "path": "res://sfx/voices/clown/clown_hurt_1.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 5,
+        "path": "res://sfx/voices/clown/clown_hurt_2.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 6,
+        "path": "res://sfx/voices/clown/clown_hurt_3.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 4,
+        "path": "res://sfx/voices/clown/clown_hurt_4.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "recording": [],
+    "recording_success": [],
+    "recording_failure": [],
+    "transform": [],
+    "defeat": [
+      {
+        "id": 10,
+        "path": "res://sfx/voices/clown/clown_defeat.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "greeting": [],
+    "farewell": [],
+    "thanks": [],
+    "sigh_2": [],
+    "surprise_2": [],
+    "thinking": [],
+    "audioFiles": []
+  },
+  {
+    "file": "aa_morgante",
+    "windup": [
+      {
+        "id": 8,
+        "path": "res://sfx/voices/morgante/morgante_attack_1.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 2,
+        "path": "res://sfx/voices/morgante/morgante_attack_2.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 5,
+        "path": "res://sfx/voices/morgante/morgante_attack_3.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "hurt": [
+      {
+        "id": 3,
+        "path": "res://sfx/voices/morgante/morgante_hurt_1.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 4,
+        "path": "res://sfx/voices/morgante/morgante_hurt_2.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 6,
+        "path": "res://sfx/voices/morgante/morgante_hurt_3.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "recording": [],
+    "recording_success": [],
+    "recording_failure": [],
+    "transform": [],
+    "defeat": [
+      {
+        "id": 7,
+        "path": "res://sfx/voices/morgante/morgante_defeat.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "greeting": [],
+    "farewell": [],
+    "thanks": [],
+    "sigh_2": [],
+    "surprise_2": [],
+    "thinking": [],
+    "audioFiles": []
+  },
+  {
+    "file": "captain_buffy",
+    "windup": [],
+    "hurt": [
+      {
+        "id": 2,
+        "path": "res://sfx/voices/buffy/buffy_hurt_1.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 3,
+        "path": "res://sfx/voices/buffy/buffy_hurt_2.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 6,
+        "path": "res://sfx/voices/buffy/buffy_hurt_3.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "recording": [],
+    "recording_success": [],
+    "recording_failure": [],
+    "transform": [
+      {
+        "id": 5,
+        "path": "res://sfx/voices/buffy/buffy_transform.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "defeat": [
+      {
+        "id": 4,
+        "path": "res://sfx/voices/buffy/buffy_defeat.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "greeting": [],
+    "farewell": [],
+    "thanks": [],
+    "sigh_2": [],
+    "surprise_2": [],
+    "thinking": [],
+    "audioFiles": []
+  },
+  {
+    "file": "captain_cleeo",
+    "windup": [],
+    "hurt": [
+      {
+        "id": 3,
+        "path": "res://sfx/voices/cleeo/cleeo_hurt_1.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 2,
+        "path": "res://sfx/voices/cleeo/cleeo_hurt_2.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "recording": [],
+    "recording_success": [],
+    "recording_failure": [],
+    "transform": [
+      {
+        "id": 5,
+        "path": "res://sfx/voices/cleeo/cleeo_transform.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "defeat": [
+      {
+        "id": 4,
+        "path": "res://sfx/voices/cleeo/cleeo_defeat.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "greeting": [],
+    "farewell": [],
+    "thanks": [],
+    "sigh_2": [],
+    "surprise_2": [],
+    "thinking": [],
+    "audioFiles": []
+  },
+  {
+    "file": "captain_codey",
+    "windup": [],
+    "hurt": [
+      {
+        "id": 4,
+        "path": "res://sfx/voices/codey/codey_hurt_1.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 5,
+        "path": "res://sfx/voices/codey/codey_hurt_2.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 2,
+        "path": "res://sfx/voices/codey/codey_hurt_3.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "recording": [],
+    "recording_success": [],
+    "recording_failure": [],
+    "transform": [
+      {
+        "id": 6,
+        "path": "res://sfx/voices/codey/codey_transform.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "defeat": [
+      {
+        "id": 3,
+        "path": "res://sfx/voices/codey/codey_defeat.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "greeting": [],
+    "farewell": [],
+    "thanks": [],
+    "sigh_2": [],
+    "surprise_2": [],
+    "thinking": [],
+    "audioFiles": []
+  },
+  {
+    "file": "captain_cybil",
+    "windup": [],
+    "hurt": [
+      {
+        "id": 5,
+        "path": "res://sfx/voices/cybil/cybil_hurt_1.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 2,
+        "path": "res://sfx/voices/cybil/cybil_hurt_2.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 4,
+        "path": "res://sfx/voices/cybil/cybil_hurt_3.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "recording": [],
+    "recording_success": [],
+    "recording_failure": [],
+    "transform": [
+      {
+        "id": 3,
+        "path": "res://sfx/voices/cybil/cybil_transform.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "defeat": [
+      {
+        "id": 6,
+        "path": "res://sfx/voices/cybil/cybil_defeat.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "greeting": [],
+    "farewell": [],
+    "thanks": [],
+    "sigh_2": [],
+    "surprise_2": [],
+    "thinking": [],
+    "audioFiles": []
+  },
+  {
+    "file": "captain_dreadful",
+    "windup": [],
+    "hurt": [
+      {
+        "id": 5,
+        "path": "res://sfx/voices/dreadful/dreadful_hurt_1.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 4,
+        "path": "res://sfx/voices/dreadful/dreadful_hurt_2.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 2,
+        "path": "res://sfx/voices/dreadful/dreadful_hurt_3.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "recording": [],
+    "recording_success": [],
+    "recording_failure": [],
+    "transform": [
+      {
+        "id": 6,
+        "path": "res://sfx/voices/dreadful/dreadful_transform.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "defeat": [
+      {
+        "id": 3,
+        "path": "res://sfx/voices/dreadful/dreadful_defeat.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "greeting": [],
+    "farewell": [],
+    "thanks": [],
+    "sigh_2": [],
+    "surprise_2": [],
+    "thinking": [],
+    "audioFiles": []
+  },
+  {
+    "file": "captain_gladiola",
+    "windup": [],
+    "hurt": [
+      {
+        "id": 4,
+        "path": "res://sfx/voices/gladiola/gladiola_hurt_1.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 3,
+        "path": "res://sfx/voices/gladiola/gladiola_hurt_2.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 5,
+        "path": "res://sfx/voices/gladiola/gladiola_hurt_3.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "recording": [],
+    "recording_success": [],
+    "recording_failure": [],
+    "transform": [
+      {
+        "id": 2,
+        "path": "res://sfx/voices/gladiola/gladiola_transform.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "defeat": [
+      {
+        "id": 6,
+        "path": "res://sfx/voices/gladiola/gladiola_defeat.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "greeting": [],
+    "farewell": [],
+    "thanks": [],
+    "sigh_2": [],
+    "surprise_2": [],
+    "thinking": [],
+    "audioFiles": []
+  },
+  {
+    "file": "captain_heather",
+    "windup": [],
+    "hurt": [
+      {
+        "id": 2,
+        "path": "res://sfx/voices/heather/heather_hurt_1.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 6,
+        "path": "res://sfx/voices/heather/heather_hurt_2.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 5,
+        "path": "res://sfx/voices/heather/heather_hurt_3.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "recording": [],
+    "recording_success": [],
+    "recording_failure": [],
+    "transform": [
+      {
+        "id": 3,
+        "path": "res://sfx/voices/heather/heather_transform.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "defeat": [
+      {
+        "id": 4,
+        "path": "res://sfx/voices/heather/heather_defeat.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "greeting": [],
+    "farewell": [],
+    "thanks": [],
+    "sigh_2": [],
+    "surprise_2": [],
+    "thinking": [],
+    "audioFiles": []
+  },
+  {
+    "file": "captain_judas",
+    "windup": [],
+    "hurt": [
+      {
+        "id": 4,
+        "path": "res://sfx/voices/judas/judas_hurt_1.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 2,
+        "path": "res://sfx/voices/judas/judas_hurt_2.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 3,
+        "path": "res://sfx/voices/judas/judas_hurt_3.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "recording": [],
+    "recording_success": [],
+    "recording_failure": [],
+    "transform": [
+      {
+        "id": 6,
+        "path": "res://sfx/voices/judas/judas_transform.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "defeat": [
+      {
+        "id": 5,
+        "path": "res://sfx/voices/judas/judas_defeat.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "greeting": [],
+    "farewell": [],
+    "thanks": [],
+    "sigh_2": [],
+    "surprise_2": [],
+    "thinking": [],
+    "audioFiles": []
+  },
+  {
+    "file": "captain_lodestein",
+    "windup": [],
+    "hurt": [
+      {
+        "id": 6,
+        "path": "res://sfx/voices/lodestein/lodestein_hurt_1.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 5,
+        "path": "res://sfx/voices/lodestein/lodestein_hurt_2.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 4,
+        "path": "res://sfx/voices/lodestein/lodestein_hurt_3.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "recording": [],
+    "recording_success": [],
+    "recording_failure": [],
+    "transform": [
+      {
+        "id": 3,
+        "path": "res://sfx/voices/lodestein/lodestein_transform.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "defeat": [
+      {
+        "id": 2,
+        "path": "res://sfx/voices/lodestein/lodestein_defeat.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "greeting": [],
+    "farewell": [],
+    "thanks": [],
+    "sigh_2": [],
+    "surprise_2": [],
+    "thinking": [],
+    "audioFiles": []
+  },
+  {
+    "file": "captain_skip",
+    "windup": [],
+    "hurt": [
+      {
+        "id": 6,
+        "path": "res://sfx/voices/skip/skip_hurt_1.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 4,
+        "path": "res://sfx/voices/skip/skip_hurt_2.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 2,
+        "path": "res://sfx/voices/skip/skip_hurt_3.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "recording": [],
+    "recording_success": [],
+    "recording_failure": [],
+    "transform": [
+      {
+        "id": 5,
+        "path": "res://sfx/voices/skip/skip_transform.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "defeat": [
+      {
+        "id": 3,
+        "path": "res://sfx/voices/skip/skip_defeat.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "greeting": [],
+    "farewell": [],
+    "thanks": [],
+    "sigh_2": [],
+    "surprise_2": [],
+    "thinking": [],
+    "audioFiles": []
+  },
+  {
+    "file": "captain_wallace",
+    "windup": [],
+    "hurt": [
+      {
+        "id": 6,
+        "path": "res://sfx/voices/wallace/wallace_hurt_1.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 5,
+        "path": "res://sfx/voices/wallace/wallace_hurt_2.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 4,
+        "path": "res://sfx/voices/wallace/wallace_hurt_3.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "recording": [],
+    "recording_success": [],
+    "recording_failure": [],
+    "transform": [
+      {
+        "id": 3,
+        "path": "res://sfx/voices/wallace/wallace_transform.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "defeat": [
+      {
+        "id": 2,
+        "path": "res://sfx/voices/wallace/wallace_defeat.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "greeting": [],
+    "farewell": [],
+    "thanks": [],
+    "sigh_2": [],
+    "surprise_2": [],
+    "thinking": [],
+    "audioFiles": []
+  },
+  {
+    "file": "captain_zedd",
+    "windup": [],
+    "hurt": [
+      {
+        "id": 3,
+        "path": "res://sfx/voices/zedd/zedd_hurt_1.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 2,
+        "path": "res://sfx/voices/zedd/zedd_hurt_2.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 5,
+        "path": "res://sfx/voices/zedd/zedd_hurt_3.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "recording": [],
+    "recording_success": [],
+    "recording_failure": [],
+    "transform": [
+      {
+        "id": 4,
+        "path": "res://sfx/voices/zedd/zedd_transform.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "defeat": [
+      {
+        "id": 6,
+        "path": "res://sfx/voices/zedd/zedd_defeat.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "greeting": [],
+    "farewell": [],
+    "thanks": [],
+    "sigh_2": [],
+    "surprise_2": [],
+    "thinking": [],
+    "audioFiles": []
+  },
+  {
+    "file": "dog",
+    "windup": [],
+    "hurt": [],
+    "recording": [],
+    "recording_success": [],
+    "recording_failure": [],
+    "transform": [],
+    "defeat": [],
+    "greeting": [],
+    "farewell": [],
+    "thanks": [],
+    "sigh_2": [],
+    "surprise_2": [],
+    "thinking": [],
+    "audioFiles": []
+  },
+  {
+    "file": "eugene",
+    "windup": [],
+    "hurt": [
+      {
+        "id": 6,
+        "path": "res://sfx/voices/eugene/eugene_hurt_1.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 4,
+        "path": "res://sfx/voices/eugene/eugene_hurt_2.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 5,
+        "path": "res://sfx/voices/eugene/eugene_hurt_3.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "recording": [
+      {
+        "id": 3,
+        "path": "res://sfx/voices/eugene/eugene_recording.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "recording_success": [
+      {
+        "id": 7,
+        "path": "res://sfx/voices/eugene/eugene_recording_success.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "recording_failure": [
+      {
+        "id": 2,
+        "path": "res://sfx/voices/eugene/eugene_recording_failure.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "transform": [],
+    "defeat": [
+      {
+        "id": 8,
+        "path": "res://sfx/voices/eugene/eugene_defeat.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "greeting": [],
+    "farewell": [],
+    "thanks": [],
+    "sigh_2": [],
+    "surprise_2": [],
+    "thinking": [],
+    "audioFiles": [
+      {
+        "name": "hurt",
+        "files": [
+          "/assets/audio/voices/eugene/eugene_hurt_1.wav",
+          "/assets/audio/voices/eugene/eugene_hurt_2.wav",
+          "/assets/audio/voices/eugene/eugene_hurt_3.wav"
+        ]
+      },
+      {
+        "name": "recording",
+        "files": [
+          "/assets/audio/voices/eugene/eugene_recording.wav"
+        ]
+      },
+      {
+        "name": "recording success",
+        "files": [
+          "/assets/audio/voices/eugene/eugene_recording_success.wav"
+        ]
+      },
+      {
+        "name": "recording failure",
+        "files": [
+          "/assets/audio/voices/eugene/eugene_recording_failure.wav"
+        ]
+      },
+      {
+        "name": "defeat",
+        "files": [
+          "/assets/audio/voices/eugene/eugene_defeat.wav"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "felix",
+    "windup": [],
+    "hurt": [
+      {
+        "id": 2,
+        "path": "res://sfx/voices/felix/felix_hurt_1.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 3,
+        "path": "res://sfx/voices/felix/felix_hurt_2.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 6,
+        "path": "res://sfx/voices/felix/felix_hurt_3.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "recording": [
+      {
+        "id": 5,
+        "path": "res://sfx/voices/felix/felix_recording.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "recording_success": [
+      {
+        "id": 7,
+        "path": "res://sfx/voices/felix/felix_recording_success.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "recording_failure": [
+      {
+        "id": 4,
+        "path": "res://sfx/voices/felix/felix_recording_failure.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "transform": [],
+    "defeat": [
+      {
+        "id": 8,
+        "path": "res://sfx/voices/felix/felix_defeat.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "greeting": [],
+    "farewell": [],
+    "thanks": [],
+    "sigh_2": [],
+    "surprise_2": [],
+    "thinking": [],
+    "audioFiles": [
+      {
+        "name": "hurt",
+        "files": [
+          "/assets/audio/voices/felix/felix_hurt_1.wav",
+          "/assets/audio/voices/felix/felix_hurt_2.wav",
+          "/assets/audio/voices/felix/felix_hurt_3.wav"
+        ]
+      },
+      {
+        "name": "recording",
+        "files": [
+          "/assets/audio/voices/felix/felix_recording.wav"
+        ]
+      },
+      {
+        "name": "recording success",
+        "files": [
+          "/assets/audio/voices/felix/felix_recording_success.wav"
+        ]
+      },
+      {
+        "name": "recording failure",
+        "files": [
+          "/assets/audio/voices/felix/felix_recording_failure.wav"
+        ]
+      },
+      {
+        "name": "defeat",
+        "files": [
+          "/assets/audio/voices/felix/felix_defeat.wav"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "female_npc_1",
+    "windup": [],
+    "hurt": [
+      {
+        "id": 5,
+        "path": "res://sfx/voices/female_npc_1/female_npc_1_hurt_1.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 4,
+        "path": "res://sfx/voices/female_npc_1/female_npc_1_hurt_2.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 2,
+        "path": "res://sfx/voices/female_npc_1/female_npc_1_hurt_3.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "recording": [],
+    "recording_success": [],
+    "recording_failure": [],
+    "transform": [],
+    "defeat": [
+      {
+        "id": 3,
+        "path": "res://sfx/voices/female_npc_1/female_npc_1_sigh_1.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "greeting": [
+      {
+        "id": 8,
+        "path": "res://sfx/voices/female_npc_1/female_npc_1_greeting.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "farewell": [
+      {
+        "id": 7,
+        "path": "res://sfx/voices/female_npc_1/female_npc_1_farewell.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "thanks": [
+      {
+        "id": 6,
+        "path": "res://sfx/voices/female_npc_1/female_npc_1_thanks.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "sigh_2": [
+      {
+        "id": 9,
+        "path": "res://sfx/voices/female_npc_1/female_npc_1_sigh_2.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "surprise_2": [
+      {
+        "id": 10,
+        "path": "res://sfx/voices/female_npc_1/female_npc_1_surprise_2.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "thinking": [
+      {
+        "id": 11,
+        "path": "res://sfx/voices/female_npc_1/female_npc_1_thinking_1.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 12,
+        "path": "res://sfx/voices/female_npc_1/female_npc_1_thinking_2.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "audioFiles": []
+  },
+  {
+    "file": "female_npc_2",
+    "windup": [],
+    "hurt": [
+      {
+        "id": 2,
+        "path": "res://sfx/voices/female_npc_2/female_npc_2_hurt_1.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 3,
+        "path": "res://sfx/voices/female_npc_2/female_npc_2_hurt_2.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 5,
+        "path": "res://sfx/voices/female_npc_2/female_npc_2_hurt_3.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "recording": [],
+    "recording_success": [],
+    "recording_failure": [],
+    "transform": [],
+    "defeat": [
+      {
+        "id": 4,
+        "path": "res://sfx/voices/female_npc_2/female_npc_2_sigh_1.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "greeting": [
+      {
+        "id": 9,
+        "path": "res://sfx/voices/female_npc_2/female_npc_2_greeting.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "farewell": [
+      {
+        "id": 12,
+        "path": "res://sfx/voices/female_npc_2/female_npc_2_farewell.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "thanks": [
+      {
+        "id": 10,
+        "path": "res://sfx/voices/female_npc_2/female_npc_2_thanks.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "sigh_2": [
+      {
+        "id": 11,
+        "path": "res://sfx/voices/female_npc_2/female_npc_2_sigh_2.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "surprise_2": [
+      {
+        "id": 8,
+        "path": "res://sfx/voices/female_npc_2/female_npc_2_surprise_2.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "thinking": [
+      {
+        "id": 7,
+        "path": "res://sfx/voices/female_npc_2/female_npc_2_thinking_1.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 6,
+        "path": "res://sfx/voices/female_npc_2/female_npc_2_thinking_2.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "audioFiles": []
+  },
+  {
+    "file": "female_npc_3",
+    "windup": [],
+    "hurt": [
+      {
+        "id": 3,
+        "path": "res://sfx/voices/female_npc_3/female_npc_3_hurt_1.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 5,
+        "path": "res://sfx/voices/female_npc_3/female_npc_3_hurt_2.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 4,
+        "path": "res://sfx/voices/female_npc_3/female_npc_3_hurt_3.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "recording": [],
+    "recording_success": [],
+    "recording_failure": [],
+    "transform": [],
+    "defeat": [
+      {
+        "id": 2,
+        "path": "res://sfx/voices/female_npc_3/female_npc_3_sigh_1.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "greeting": [
+      {
+        "id": 7,
+        "path": "res://sfx/voices/female_npc_3/female_npc_3_greeting.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "farewell": [
+      {
+        "id": 6,
+        "path": "res://sfx/voices/female_npc_3/female_npc_3_farewell.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "thanks": [
+      {
+        "id": 12,
+        "path": "res://sfx/voices/female_npc_3/female_npc_3_thanks.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "sigh_2": [
+      {
+        "id": 9,
+        "path": "res://sfx/voices/female_npc_3/female_npc_3_sigh_2.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "surprise_2": [
+      {
+        "id": 10,
+        "path": "res://sfx/voices/female_npc_3/female_npc_3_surprise_2.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "thinking": [
+      {
+        "id": 11,
+        "path": "res://sfx/voices/female_npc_3/female_npc_3_thinking_1.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 8,
+        "path": "res://sfx/voices/female_npc_3/female_npc_3_thinking_2.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "audioFiles": []
+  },
+  {
+    "file": "female_npc_4",
+    "windup": [],
+    "hurt": [
+      {
+        "id": 5,
+        "path": "res://sfx/voices/female_npc_4/female_npc_4_hurt_1.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 2,
+        "path": "res://sfx/voices/female_npc_4/female_npc_4_hurt_2.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 3,
+        "path": "res://sfx/voices/female_npc_4/female_npc_4_hurt_3.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "recording": [],
+    "recording_success": [],
+    "recording_failure": [],
+    "transform": [],
+    "defeat": [
+      {
+        "id": 4,
+        "path": "res://sfx/voices/female_npc_4/female_npc_4_sigh_1.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "greeting": [
+      {
+        "id": 8,
+        "path": "res://sfx/voices/female_npc_4/female_npc_4_greeting.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "farewell": [
+      {
+        "id": 10,
+        "path": "res://sfx/voices/female_npc_4/female_npc_4_farewell.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "thanks": [
+      {
+        "id": 7,
+        "path": "res://sfx/voices/female_npc_4/female_npc_4_thanks.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "sigh_2": [
+      {
+        "id": 6,
+        "path": "res://sfx/voices/female_npc_4/female_npc_4_sigh_2.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "surprise_2": [
+      {
+        "id": 11,
+        "path": "res://sfx/voices/female_npc_4/female_npc_4_surprise_2.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "thinking": [
+      {
+        "id": 12,
+        "path": "res://sfx/voices/female_npc_4/female_npc_4_thinking_1.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 9,
+        "path": "res://sfx/voices/female_npc_4/female_npc_4_thinking_2.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "audioFiles": []
+  },
+  {
+    "file": "female_npc_5",
+    "windup": [],
+    "hurt": [
+      {
+        "id": 4,
+        "path": "res://sfx/voices/female_npc_5/female_npc_5_hurt_1.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 3,
+        "path": "res://sfx/voices/female_npc_5/female_npc_5_hurt_2.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 5,
+        "path": "res://sfx/voices/female_npc_5/female_npc_5_hurt_3.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "recording": [],
+    "recording_success": [],
+    "recording_failure": [],
+    "transform": [],
+    "defeat": [
+      {
+        "id": 2,
+        "path": "res://sfx/voices/female_npc_5/female_npc_5_sigh_1.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "greeting": [
+      {
+        "id": 12,
+        "path": "res://sfx/voices/female_npc_5/female_npc_5_greeting.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "farewell": [
+      {
+        "id": 7,
+        "path": "res://sfx/voices/female_npc_5/female_npc_5_farewell.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "thanks": [
+      {
+        "id": 11,
+        "path": "res://sfx/voices/female_npc_5/female_npc_5_thanks.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "sigh_2": [
+      {
+        "id": 8,
+        "path": "res://sfx/voices/female_npc_5/female_npc_5_sigh_2.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "surprise_2": [
+      {
+        "id": 10,
+        "path": "res://sfx/voices/female_npc_5/female_npc_5_surprise_2.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "thinking": [
+      {
+        "id": 6,
+        "path": "res://sfx/voices/female_npc_5/female_npc_5_thinking_1.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 9,
+        "path": "res://sfx/voices/female_npc_5/female_npc_5_thinking_2.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "audioFiles": []
+  },
+  {
+    "file": "female_npc_6",
+    "windup": [],
+    "hurt": [
+      {
+        "id": 3,
+        "path": "res://sfx/voices/female_npc_6/female_npc_6_hurt_1.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 5,
+        "path": "res://sfx/voices/female_npc_6/female_npc_6_hurt_2.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 2,
+        "path": "res://sfx/voices/female_npc_6/female_npc_6_hurt_3.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "recording": [],
+    "recording_success": [],
+    "recording_failure": [],
+    "transform": [],
+    "defeat": [
+      {
+        "id": 4,
+        "path": "res://sfx/voices/female_npc_6/female_npc_6_sigh_1.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "greeting": [
+      {
+        "id": 11,
+        "path": "res://sfx/voices/female_npc_6/female_npc_6_greeting.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "farewell": [
+      {
+        "id": 10,
+        "path": "res://sfx/voices/female_npc_6/female_npc_6_farewell.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "thanks": [
+      {
+        "id": 8,
+        "path": "res://sfx/voices/female_npc_6/female_npc_6_thanks.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "sigh_2": [
+      {
+        "id": 6,
+        "path": "res://sfx/voices/female_npc_6/female_npc_6_sigh_2.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "surprise_2": [
+      {
+        "id": 9,
+        "path": "res://sfx/voices/female_npc_6/female_npc_6_surprise_2.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "thinking": [
+      {
+        "id": 12,
+        "path": "res://sfx/voices/female_npc_6/female_npc_6_thinking_1.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 7,
+        "path": "res://sfx/voices/female_npc_6/female_npc_6_thinking_2.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "audioFiles": []
+  },
+  {
+    "file": "frankie",
+    "windup": [],
+    "hurt": [
+      {
+        "id": 2,
+        "path": "res://sfx/voices/female_npc_7/female_npc_7_hurt_1.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 4,
+        "path": "res://sfx/voices/female_npc_7/female_npc_7_hurt_2.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 5,
+        "path": "res://sfx/voices/female_npc_7/female_npc_7_hurt_3.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "recording": [],
+    "recording_success": [],
+    "recording_failure": [],
+    "transform": [
+      {
+        "id": 7,
+        "path": "res://sfx/voices/female_npc_7/female_npc_7_transform_1.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 6,
+        "path": "res://sfx/voices/female_npc_7/female_npc_7_transform_2.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "defeat": [
+      {
+        "id": 3,
+        "path": "res://sfx/voices/female_npc_7/female_npc_7_defeat.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "greeting": [],
+    "farewell": [],
+    "thanks": [],
+    "sigh_2": [],
+    "surprise_2": [],
+    "thinking": [],
+    "audioFiles": []
+  },
+  {
+    "file": "ianthe",
+    "windup": [],
+    "hurt": [
+      {
+        "id": 5,
+        "path": "res://sfx/voices/ianthe/ianthe_hurt_1.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 6,
+        "path": "res://sfx/voices/ianthe/ianthe_hurt_2.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 4,
+        "path": "res://sfx/voices/ianthe/ianthe_hurt_3.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "recording": [],
+    "recording_success": [],
+    "recording_failure": [],
+    "transform": [
+      {
+        "id": 2,
+        "path": "res://sfx/voices/ianthe/ianthe_transform.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "defeat": [
+      {
+        "id": 3,
+        "path": "res://sfx/voices/ianthe/ianthe_defeat.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "greeting": [],
+    "farewell": [],
+    "thanks": [],
+    "sigh_2": [],
+    "surprise_2": [],
+    "thinking": [],
+    "audioFiles": []
+  },
+  {
+    "file": "kayleigh",
+    "windup": [],
+    "hurt": [
+      {
+        "id": 5,
+        "path": "res://sfx/voices/kayleigh/kayleigh_hurt_1.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 3,
+        "path": "res://sfx/voices/kayleigh/kayleigh_hurt_2.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 8,
+        "path": "res://sfx/voices/kayleigh/kayleigh_hurt_3.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "recording": [
+      {
+        "id": 2,
+        "path": "res://sfx/voices/kayleigh/kayleigh_recording.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "recording_success": [
+      {
+        "id": 7,
+        "path": "res://sfx/voices/kayleigh/kayleigh_recording_success.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "recording_failure": [
+      {
+        "id": 6,
+        "path": "res://sfx/voices/kayleigh/kayleigh_recording_failure.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "transform": [],
+    "defeat": [
+      {
+        "id": 1,
+        "path": "res://sfx/voices/kayleigh/kayleigh_defeat.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "greeting": [],
+    "farewell": [],
+    "thanks": [],
+    "sigh_2": [],
+    "surprise_2": [],
+    "thinking": [],
+    "audioFiles": [
+      {
+        "name": "hurt",
+        "files": [
+          "/assets/audio/voices/kayleigh/kayleigh_hurt_1.wav",
+          "/assets/audio/voices/kayleigh/kayleigh_hurt_2.wav",
+          "/assets/audio/voices/kayleigh/kayleigh_hurt_3.wav"
+        ]
+      },
+      {
+        "name": "recording",
+        "files": [
+          "/assets/audio/voices/kayleigh/kayleigh_recording.wav"
+        ]
+      },
+      {
+        "name": "recording success",
+        "files": [
+          "/assets/audio/voices/kayleigh/kayleigh_recording_success.wav"
+        ]
+      },
+      {
+        "name": "recording failure",
+        "files": [
+          "/assets/audio/voices/kayleigh/kayleigh_recording_failure.wav"
+        ]
+      },
+      {
+        "name": "defeat",
+        "files": [
+          "/assets/audio/voices/kayleigh/kayleigh_defeat.wav"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "kuneko",
+    "windup": [
+      {
+        "id": 3,
+        "path": "res://sfx/voices/kuneko/kuneko_windup_1.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 5,
+        "path": "res://sfx/voices/kuneko/kuneko_windup_2.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 4,
+        "path": "res://sfx/voices/kuneko/kuneko_windup_3.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 2,
+        "path": "res://sfx/voices/kuneko/kuneko_windup_4.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 6,
+        "path": "res://sfx/voices/kuneko/kuneko_windup_5.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "hurt": [
+      {
+        "id": 9,
+        "path": "res://sfx/voices/kuneko/kuneko_hurt_1.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 7,
+        "path": "res://sfx/voices/kuneko/kuneko_hurt_2.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 8,
+        "path": "res://sfx/voices/kuneko/kuneko_hurt_3.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 10,
+        "path": "res://sfx/voices/kuneko/kuneko_hurt_4.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "recording": [],
+    "recording_success": [],
+    "recording_failure": [],
+    "transform": [],
+    "defeat": [
+      {
+        "id": 11,
+        "path": "res://sfx/voices/kuneko/kuneko_defeat.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "greeting": [],
+    "farewell": [],
+    "thanks": [],
+    "sigh_2": [],
+    "surprise_2": [],
+    "thinking": [],
+    "audioFiles": []
+  },
+  {
+    "file": "male_npc_1",
+    "windup": [],
+    "hurt": [
+      {
+        "id": 5,
+        "path": "res://sfx/voices/male_npc_1/male_npc_1_hurt_1.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 3,
+        "path": "res://sfx/voices/male_npc_1/male_npc_1_hurt_2.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 4,
+        "path": "res://sfx/voices/male_npc_1/male_npc_1_hurt_3.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "recording": [],
+    "recording_success": [],
+    "recording_failure": [],
+    "transform": [],
+    "defeat": [
+      {
+        "id": 2,
+        "path": "res://sfx/voices/male_npc_1/male_npc_1_sigh_1.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "greeting": [
+      {
+        "id": 7,
+        "path": "res://sfx/voices/male_npc_1/male_npc_1_greeting.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "farewell": [
+      {
+        "id": 9,
+        "path": "res://sfx/voices/male_npc_1/male_npc_1_farewell.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "thanks": [
+      {
+        "id": 6,
+        "path": "res://sfx/voices/male_npc_1/male_npc_1_thanks.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "sigh_2": [
+      {
+        "id": 10,
+        "path": "res://sfx/voices/male_npc_1/male_npc_1_sigh_2.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "surprise_2": [
+      {
+        "id": 8,
+        "path": "res://sfx/voices/male_npc_1/male_npc_1_surprise_2.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "thinking": [
+      {
+        "id": 12,
+        "path": "res://sfx/voices/male_npc_1/male_npc_1_thinking_1.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 11,
+        "path": "res://sfx/voices/male_npc_1/male_npc_1_thinking_2.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "audioFiles": []
+  },
+  {
+    "file": "male_npc_2",
+    "windup": [],
+    "hurt": [
+      {
+        "id": 3,
+        "path": "res://sfx/voices/male_npc_2/male_npc_2_hurt_1.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 4,
+        "path": "res://sfx/voices/male_npc_2/male_npc_2_hurt_2.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 5,
+        "path": "res://sfx/voices/male_npc_2/male_npc_2_hurt_3.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "recording": [],
+    "recording_success": [],
+    "recording_failure": [],
+    "transform": [],
+    "defeat": [
+      {
+        "id": 2,
+        "path": "res://sfx/voices/male_npc_2/male_npc_2_sigh_1.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "greeting": [
+      {
+        "id": 12,
+        "path": "res://sfx/voices/male_npc_2/male_npc_2_greeting.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "farewell": [
+      {
+        "id": 11,
+        "path": "res://sfx/voices/male_npc_2/male_npc_2_farewell.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "thanks": [
+      {
+        "id": 8,
+        "path": "res://sfx/voices/male_npc_2/male_npc_2_thanks.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "sigh_2": [
+      {
+        "id": 9,
+        "path": "res://sfx/voices/male_npc_2/male_npc_2_sigh_2.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "surprise_2": [
+      {
+        "id": 6,
+        "path": "res://sfx/voices/male_npc_2/male_npc_2_surprise_2.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "thinking": [
+      {
+        "id": 10,
+        "path": "res://sfx/voices/male_npc_2/male_npc_2_thinking_1.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 7,
+        "path": "res://sfx/voices/male_npc_2/male_npc_2_thinking_2.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "audioFiles": []
+  },
+  {
+    "file": "male_npc_3",
+    "windup": [],
+    "hurt": [
+      {
+        "id": 5,
+        "path": "res://sfx/voices/male_npc_3/male_npc_3_hurt_1.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 2,
+        "path": "res://sfx/voices/male_npc_3/male_npc_3_hurt_2.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 3,
+        "path": "res://sfx/voices/male_npc_3/male_npc_3_hurt_3.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "recording": [],
+    "recording_success": [],
+    "recording_failure": [],
+    "transform": [],
+    "defeat": [
+      {
+        "id": 4,
+        "path": "res://sfx/voices/male_npc_3/male_npc_3_sigh_1.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "greeting": [
+      {
+        "id": 8,
+        "path": "res://sfx/voices/male_npc_3/male_npc_3_greeting.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "farewell": [
+      {
+        "id": 7,
+        "path": "res://sfx/voices/male_npc_3/male_npc_3_farewell.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "thanks": [
+      {
+        "id": 11,
+        "path": "res://sfx/voices/male_npc_3/male_npc_3_thanks.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "sigh_2": [
+      {
+        "id": 10,
+        "path": "res://sfx/voices/male_npc_3/male_npc_3_sigh_2.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "surprise_2": [
+      {
+        "id": 12,
+        "path": "res://sfx/voices/male_npc_3/male_npc_3_surprise_2.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "thinking": [
+      {
+        "id": 6,
+        "path": "res://sfx/voices/male_npc_3/male_npc_3_thinking_1.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 9,
+        "path": "res://sfx/voices/male_npc_3/male_npc_3_thinking_2.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "audioFiles": []
+  },
+  {
+    "file": "male_npc_4",
+    "windup": [],
+    "hurt": [
+      {
+        "id": 4,
+        "path": "res://sfx/voices/male_npc_4/male_npc_4_hurt_1.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 5,
+        "path": "res://sfx/voices/male_npc_4/male_npc_4_hurt_2.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 3,
+        "path": "res://sfx/voices/male_npc_4/male_npc_4_hurt_3.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "recording": [],
+    "recording_success": [],
+    "recording_failure": [],
+    "transform": [],
+    "defeat": [
+      {
+        "id": 2,
+        "path": "res://sfx/voices/male_npc_4/male_npc_4_sigh_1.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "greeting": [
+      {
+        "id": 11,
+        "path": "res://sfx/voices/male_npc_4/male_npc_4_greeting.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "farewell": [
+      {
+        "id": 7,
+        "path": "res://sfx/voices/male_npc_4/male_npc_4_farewell.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "thanks": [
+      {
+        "id": 12,
+        "path": "res://sfx/voices/male_npc_4/male_npc_4_thanks.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "sigh_2": [
+      {
+        "id": 9,
+        "path": "res://sfx/voices/male_npc_4/male_npc_4_sigh_2.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "surprise_2": [
+      {
+        "id": 8,
+        "path": "res://sfx/voices/male_npc_4/male_npc_4_surprise_2.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "thinking": [
+      {
+        "id": 10,
+        "path": "res://sfx/voices/male_npc_4/male_npc_4_thinking_1.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 6,
+        "path": "res://sfx/voices/male_npc_4/male_npc_4_thinking_2.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "audioFiles": []
+  },
+  {
+    "file": "male_npc_5",
+    "windup": [],
+    "hurt": [
+      {
+        "id": 4,
+        "path": "res://sfx/voices/male_npc_5/male_npc_5_hurt_1.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 2,
+        "path": "res://sfx/voices/male_npc_5/male_npc_5_hurt_2.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 5,
+        "path": "res://sfx/voices/male_npc_5/male_npc_5_hurt_3.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "recording": [],
+    "recording_success": [],
+    "recording_failure": [],
+    "transform": [],
+    "defeat": [
+      {
+        "id": 3,
+        "path": "res://sfx/voices/male_npc_5/male_npc_5_sigh_1.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "greeting": [
+      {
+        "id": 9,
+        "path": "res://sfx/voices/male_npc_5/male_npc_5_greeting.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "farewell": [
+      {
+        "id": 7,
+        "path": "res://sfx/voices/male_npc_5/male_npc_5_farewell.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "thanks": [
+      {
+        "id": 10,
+        "path": "res://sfx/voices/male_npc_5/male_npc_5_thanks.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "sigh_2": [
+      {
+        "id": 6,
+        "path": "res://sfx/voices/male_npc_5/male_npc_5_sigh_2.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "surprise_2": [
+      {
+        "id": 12,
+        "path": "res://sfx/voices/male_npc_5/male_npc_5_surprise_2.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "thinking": [
+      {
+        "id": 11,
+        "path": "res://sfx/voices/male_npc_5/male_npc_5_thinking_1.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 8,
+        "path": "res://sfx/voices/male_npc_5/male_npc_5_thinking_2.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "audioFiles": []
+  },
+  {
+    "file": "male_npc_6",
+    "windup": [],
+    "hurt": [
+      {
+        "id": 3,
+        "path": "res://sfx/voices/male_npc_7/male_npc_7_hurt_1.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 4,
+        "path": "res://sfx/voices/male_npc_7/male_npc_7_hurt_2.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 5,
+        "path": "res://sfx/voices/male_npc_7/male_npc_7_hurt_3.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "recording": [],
+    "recording_success": [],
+    "recording_failure": [],
+    "transform": [],
+    "defeat": [
+      {
+        "id": 2,
+        "path": "res://sfx/voices/male_npc_7/male_npc_7_sigh_1.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "greeting": [
+      {
+        "id": 11,
+        "path": "res://sfx/voices/male_npc_6/male_npc_6_greeting.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "farewell": [
+      {
+        "id": 12,
+        "path": "res://sfx/voices/male_npc_6/male_npc_6_farewell.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "thanks": [
+      {
+        "id": 10,
+        "path": "res://sfx/voices/male_npc_6/male_npc_6_thanks.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "sigh_2": [
+      {
+        "id": 7,
+        "path": "res://sfx/voices/male_npc_6/male_npc_6_sigh_2.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "surprise_2": [
+      {
+        "id": 9,
+        "path": "res://sfx/voices/male_npc_6/male_npc_6_surprise_2.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "thinking": [
+      {
+        "id": 8,
+        "path": "res://sfx/voices/male_npc_6/male_npc_6_thinking_1.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 6,
+        "path": "res://sfx/voices/male_npc_6/male_npc_6_thinking_2.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "audioFiles": []
+  },
+  {
+    "file": "meredith",
+    "windup": [],
+    "hurt": [
+      {
+        "id": 8,
+        "path": "res://sfx/voices/meredith/meredith_hurt_1.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 7,
+        "path": "res://sfx/voices/meredith/meredith_hurt_2.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 3,
+        "path": "res://sfx/voices/meredith/meredith_hurt_3.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "recording": [
+      {
+        "id": 2,
+        "path": "res://sfx/voices/meredith/meredith_recording.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "recording_success": [
+      {
+        "id": 6,
+        "path": "res://sfx/voices/meredith/meredith_recording_success.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "recording_failure": [
+      {
+        "id": 4,
+        "path": "res://sfx/voices/meredith/meredith_recording_failure.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "transform": [],
+    "defeat": [
+      {
+        "id": 5,
+        "path": "res://sfx/voices/meredith/meredith_defeat.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "greeting": [],
+    "farewell": [],
+    "thanks": [],
+    "sigh_2": [],
+    "surprise_2": [],
+    "thinking": [],
+    "audioFiles": [
+      {
+        "name": "hurt",
+        "files": [
+          "/assets/audio/voices/meredith/meredith_hurt_1.wav",
+          "/assets/audio/voices/meredith/meredith_hurt_2.wav",
+          "/assets/audio/voices/meredith/meredith_hurt_3.wav"
+        ]
+      },
+      {
+        "name": "recording",
+        "files": [
+          "/assets/audio/voices/meredith/meredith_recording.wav"
+        ]
+      },
+      {
+        "name": "recording success",
+        "files": [
+          "/assets/audio/voices/meredith/meredith_recording_success.wav"
+        ]
+      },
+      {
+        "name": "recording failure",
+        "files": [
+          "/assets/audio/voices/meredith/meredith_recording_failure.wav"
+        ]
+      },
+      {
+        "name": "defeat",
+        "files": [
+          "/assets/audio/voices/meredith/meredith_defeat.wav"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "shining_kuneko",
+    "windup": [
+      {
+        "id": 8,
+        "path": "res://sfx/voices/kuneko/shining_kuneko_windup_1.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 6,
+        "path": "res://sfx/voices/kuneko/shining_kuneko_windup_2.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 10,
+        "path": "res://sfx/voices/kuneko/shining_kuneko_windup_3.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 2,
+        "path": "res://sfx/voices/kuneko/shining_kuneko_windup_4.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 7,
+        "path": "res://sfx/voices/kuneko/shining_kuneko_windup_5.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "hurt": [
+      {
+        "id": 5,
+        "path": "res://sfx/voices/kuneko/shining_kuneko_hurt_1.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 3,
+        "path": "res://sfx/voices/kuneko/shining_kuneko_hurt_2.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 4,
+        "path": "res://sfx/voices/kuneko/shining_kuneko_hurt_3.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 9,
+        "path": "res://sfx/voices/kuneko/shining_kuneko_hurt_4.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "recording": [],
+    "recording_success": [],
+    "recording_failure": [],
+    "transform": [],
+    "defeat": [],
+    "greeting": [],
+    "farewell": [],
+    "thanks": [],
+    "sigh_2": [],
+    "surprise_2": [],
+    "thinking": [],
+    "audioFiles": []
+  },
+  {
+    "file": "vin",
+    "windup": [],
+    "hurt": [
+      {
+        "id": 3,
+        "path": "res://sfx/voices/male_npc_7/male_npc_7_hurt_1.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 5,
+        "path": "res://sfx/voices/male_npc_7/male_npc_7_hurt_2.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 4,
+        "path": "res://sfx/voices/male_npc_7/male_npc_7_hurt_3.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "recording": [],
+    "recording_success": [],
+    "recording_failure": [],
+    "transform": [
+      {
+        "id": 2,
+        "path": "res://sfx/voices/male_npc_7/male_npc_7_transform_1.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 7,
+        "path": "res://sfx/voices/male_npc_7/male_npc_7_transform_2.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "defeat": [
+      {
+        "id": 6,
+        "path": "res://sfx/voices/male_npc_7/male_npc_7_defeat.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "greeting": [],
+    "farewell": [],
+    "thanks": [],
+    "sigh_2": [],
+    "surprise_2": [],
+    "thinking": [],
+    "audioFiles": []
+  },
+  {
+    "file": "viola",
+    "windup": [],
+    "hurt": [
+      {
+        "id": 4,
+        "path": "res://sfx/voices/viola/viola_hurt_1.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 5,
+        "path": "res://sfx/voices/viola/viola_hurt_2.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 8,
+        "path": "res://sfx/voices/viola/viola_hurt_3.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "recording": [
+      {
+        "id": 6,
+        "path": "res://sfx/voices/viola/viola_recording.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "recording_success": [
+      {
+        "id": 7,
+        "path": "res://sfx/voices/viola/viola_recording_success.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "recording_failure": [
+      {
+        "id": 3,
+        "path": "res://sfx/voices/viola/viola_recording_failure.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "transform": [],
+    "defeat": [
+      {
+        "id": 2,
+        "path": "res://sfx/voices/viola/viola_defeat.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "greeting": [],
+    "farewell": [],
+    "thanks": [],
+    "sigh_2": [],
+    "surprise_2": [],
+    "thinking": [],
+    "audioFiles": [
+      {
+        "name": "hurt",
+        "files": [
+          "/assets/audio/voices/viola/viola_hurt_1.wav",
+          "/assets/audio/voices/viola/viola_hurt_2.wav",
+          "/assets/audio/voices/viola/viola_hurt_3.wav"
+        ]
+      },
+      {
+        "name": "recording",
+        "files": [
+          "/assets/audio/voices/viola/viola_recording.wav"
+        ]
+      },
+      {
+        "name": "recording success",
+        "files": [
+          "/assets/audio/voices/viola/viola_recording_success.wav"
+        ]
+      },
+      {
+        "name": "recording failure",
+        "files": [
+          "/assets/audio/voices/viola/viola_recording_failure.wav"
+        ]
+      },
+      {
+        "name": "defeat",
+        "files": [
+          "/assets/audio/voices/viola/viola_defeat.wav"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "wilma",
+    "windup": [],
+    "hurt": [],
+    "recording": [],
+    "recording_success": [],
+    "recording_failure": [],
+    "transform": [],
+    "defeat": [],
+    "greeting": [],
+    "farewell": [],
+    "thanks": [],
+    "sigh_2": [],
+    "surprise_2": [],
+    "thinking": [],
+    "audioFiles": []
+  }
+]

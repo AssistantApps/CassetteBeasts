@@ -1,0 +1,1868 @@
+[
+  {
+    "id": "overworld",
+    "title": "MAP_NAME_OVERWORLD",
+    "map_texture": {
+      "id": 1,
+      "path": "res://data/map_metadata/overworld.png",
+      "type": "Texture"
+    },
+    "map_obscure": {
+      "id": 5,
+      "path": "res://data/map_metadata/overworld_obscured.png",
+      "type": "Texture"
+    },
+    "map_background": {
+      "id": 4,
+      "path": "res://data/map_metadata/overworld_bg.png",
+      "type": "Texture"
+    },
+    "chunk_metadata_path": "res://data/map_metadata/overworld_chunk_metadata",
+    "default_chunk_metadata": {
+      "id": 1,
+      "type": "Resource",
+      "title": "MAP_NAME_OVERWORLD",
+      "resource_name": "",
+      "required_location": "",
+      "specialization": "",
+      "is_secret": false,
+      "add_slot": false,
+      "stickers": [],
+      "type_override": [],
+      "favorite": false
+    },
+    "chunk_meta_data": {
+      "-1_-1": {
+        "title": "REGION_NAME_TOWN_WEST",
+        "features": [
+          {
+            "id": 1,
+            "type": "Resource",
+            "title": "REGION_NAME_CHEMIST",
+            "resource_name": "",
+            "required_location": "",
+            "specialization": "",
+            "is_secret": false,
+            "add_slot": false,
+            "stickers": [],
+            "type_override": [],
+            "favorite": false
+          },
+          {
+            "id": 2,
+            "type": "Resource",
+            "title": "REGION_NAME_MUSEUM",
+            "resource_name": "",
+            "required_location": "",
+            "specialization": "",
+            "is_secret": false,
+            "add_slot": false,
+            "stickers": [],
+            "type_override": [],
+            "favorite": false
+          }
+        ]
+      },
+      "-1_-2": {
+        "title": "REGION_NAME_LAKE",
+        "features": [
+          {
+            "id": 1,
+            "type": "Resource",
+            "title": "MAP_FEATURE_CAVE",
+            "resource_name": "",
+            "required_location": "",
+            "specialization": "",
+            "is_secret": false,
+            "add_slot": false,
+            "stickers": [],
+            "type_override": [],
+            "favorite": false
+          }
+        ]
+      },
+      "-1_-3": {
+        "title": "REGION_NAME_LAKE",
+        "features": []
+      },
+      "-1_-4": {
+        "title": "REGION_NAME_LAKE",
+        "features": []
+      },
+      "-1_-5": {
+        "title": "REGION_NAME_LAKESIDE",
+        "features": [
+          {
+            "id": 1,
+            "type": "Resource",
+            "title": "MAP_FEATURE_CAVE",
+            "resource_name": "",
+            "required_location": "",
+            "specialization": "",
+            "is_secret": false,
+            "add_slot": false,
+            "stickers": [],
+            "type_override": [],
+            "favorite": false
+          },
+          {
+            "id": 2,
+            "type": "Resource",
+            "title": "MAP_FEATURE_CAMPSITE",
+            "icon": {
+              "id": 3,
+              "path": "res://ui/icons/map_markers/campsite_icon.png",
+              "type": "Texture"
+            },
+            "resource_name": "",
+            "required_location": "",
+            "specialization": "",
+            "is_secret": false,
+            "add_slot": false,
+            "stickers": [],
+            "type_override": [],
+            "favorite": false
+          }
+        ]
+      },
+      "-1_-6": {
+        "title": "REGION_NAME_LAKESIDE",
+        "features": [
+          {
+            "id": 1,
+            "type": "Resource",
+            "title": "MAP_FEATURE_CAVE",
+            "resource_name": "",
+            "required_location": "",
+            "specialization": "",
+            "is_secret": false,
+            "add_slot": false,
+            "stickers": [],
+            "type_override": [],
+            "favorite": false
+          }
+        ]
+      },
+      "-1_-7": {
+        "title": "REGION_NAME_HAM",
+        "features": [
+          {
+            "id": 1,
+            "type": "Resource",
+            "title": "CAPTAIN_LODESTEIN_NAME",
+            "resource_name": "",
+            "required_location": "",
+            "specialization": "",
+            "is_secret": false,
+            "add_slot": false,
+            "stickers": [],
+            "type_override": [],
+            "favorite": false
+          }
+        ]
+      },
+      "-1_0": {
+        "title": "REGION_NAME_TOWN_WEST",
+        "features": [
+          {
+            "id": 1,
+            "type": "Resource",
+            "title": "MAP_FEATURE_TOWN_BRIDGE",
+            "resource_name": "",
+            "required_location": "",
+            "specialization": "",
+            "is_secret": false,
+            "add_slot": false,
+            "stickers": [],
+            "type_override": [],
+            "favorite": false
+          }
+        ]
+      },
+      "-2_-1": {
+        "title": "REGION_NAME_TOWN_WEST",
+        "features": [
+          {
+            "id": 1,
+            "type": "Resource",
+            "title": "MAP_FEATURE_TOWN_WEST_RIVER",
+            "resource_name": "",
+            "required_location": "",
+            "specialization": "",
+            "is_secret": false,
+            "add_slot": false,
+            "stickers": [],
+            "type_override": [],
+            "favorite": false
+          }
+        ]
+      },
+      "-2_-2": {
+        "title": "REGION_NAME_LAKE",
+        "features": []
+      },
+      "-2_-3": {
+        "title": "REGION_NAME_LAKE",
+        "features": []
+      },
+      "-2_-4": {
+        "title": "REGION_NAME_LAKE",
+        "features": [
+          {
+            "id": 1,
+            "type": "Resource",
+            "title": "MAP_FEATURE_DIVEAL_ISLAND",
+            "resource_name": "",
+            "required_location": "",
+            "specialization": "",
+            "is_secret": false,
+            "add_slot": false,
+            "stickers": [],
+            "type_override": [],
+            "favorite": false
+          }
+        ]
+      },
+      "-2_-5": {
+        "title": "REGION_NAME_LAKESIDE",
+        "features": []
+      },
+      "-2_-6": {
+        "title": "REGION_NAME_MT_WIRRAL",
+        "features": [
+          {
+            "id": 1,
+            "type": "Resource",
+            "title": "CAPTAIN_CODEY_NAME",
+            "resource_name": "",
+            "required_location": "",
+            "specialization": "",
+            "is_secret": false,
+            "add_slot": false,
+            "stickers": [],
+            "type_override": [],
+            "favorite": false
+          }
+        ]
+      },
+      "-2_-7": {
+        "title": "REGION_NAME_MT_WIRRAL",
+        "features": [
+          {
+            "id": 1,
+            "type": "Resource",
+            "title": "MAP_FEATURE_CAVE",
+            "resource_name": "",
+            "required_location": "",
+            "specialization": "",
+            "is_secret": false,
+            "add_slot": false,
+            "stickers": [],
+            "type_override": [],
+            "favorite": false
+          }
+        ]
+      },
+      "-2_0": {
+        "title": "REGION_NAME_TOWN_WEST",
+        "features": [
+          {
+            "id": 1,
+            "type": "Resource",
+            "title": "CAPTAIN_SKIP_NAME",
+            "resource_name": "",
+            "required_location": "",
+            "specialization": "",
+            "is_secret": false,
+            "add_slot": false,
+            "stickers": [],
+            "type_override": [],
+            "favorite": false
+          }
+        ]
+      },
+      "-3_-1": {
+        "title": "REGION_NAME_FARM",
+        "features": [
+          {
+            "id": 1,
+            "type": "Resource",
+            "title": "MAP_FEATURE_FARM_BRIDGE",
+            "resource_name": "",
+            "required_location": "",
+            "specialization": "",
+            "is_secret": false,
+            "add_slot": false,
+            "stickers": [],
+            "type_override": [],
+            "favorite": false
+          },
+          {
+            "id": 2,
+            "type": "Resource",
+            "title": "MAP_FEATURE_FARM_PLOT",
+            "resource_name": "",
+            "required_location": "",
+            "specialization": "",
+            "is_secret": false,
+            "add_slot": false,
+            "stickers": [],
+            "type_override": [],
+            "favorite": false
+          }
+        ]
+      },
+      "-3_-2": {
+        "title": "REGION_NAME_MARSH",
+        "features": []
+      },
+      "-3_-3": {
+        "title": "REGION_NAME_MEADOW",
+        "features": []
+      },
+      "-3_-4": {
+        "title": "REGION_NAME_MEADOW",
+        "features": [
+          {
+            "id": 1,
+            "type": "Resource",
+            "title": "CAPTAIN_BUFFY_NAME",
+            "resource_name": "",
+            "required_location": "",
+            "specialization": "",
+            "is_secret": false,
+            "add_slot": false,
+            "stickers": [],
+            "type_override": [],
+            "favorite": false
+          }
+        ]
+      },
+      "-3_-5": {
+        "title": "REGION_NAME_MEADOW",
+        "features": []
+      },
+      "-3_-6": {
+        "title": "REGION_NAME_MT_WIRRAL",
+        "features": [
+          {
+            "id": 1,
+            "type": "Resource",
+            "title": "MAP_FEATURE_CAVE",
+            "resource_name": "",
+            "required_location": "",
+            "specialization": "",
+            "is_secret": false,
+            "add_slot": false,
+            "stickers": [],
+            "type_override": [],
+            "favorite": false
+          }
+        ]
+      },
+      "-3_-7": {
+        "title": "REGION_NAME_MT_WIRRAL",
+        "features": [
+          {
+            "id": 1,
+            "type": "Resource",
+            "title": "MAP_FEATURE_CAVE",
+            "resource_name": "",
+            "required_location": "",
+            "specialization": "",
+            "is_secret": false,
+            "add_slot": false,
+            "stickers": [],
+            "type_override": [],
+            "favorite": false
+          },
+          {
+            "id": 2,
+            "type": "Resource",
+            "title": "REGION_NAME_MT_WIRRAL_STATION",
+            "icon": {
+              "id": 4,
+              "path": "res://ui/icons/map_markers/station_icon_boss.png",
+              "type": "Texture"
+            },
+            "resource_name": "",
+            "required_location": "",
+            "specialization": "",
+            "is_secret": false,
+            "add_slot": false,
+            "stickers": [],
+            "type_override": [],
+            "favorite": false
+          },
+          {
+            "id": 3,
+            "type": "Resource",
+            "title": "MAP_FEATURE_CAMPSITE",
+            "icon": {
+              "id": 3,
+              "path": "res://ui/icons/map_markers/campsite_icon.png",
+              "type": "Texture"
+            },
+            "resource_name": "",
+            "required_location": "",
+            "specialization": "",
+            "is_secret": false,
+            "add_slot": false,
+            "stickers": [],
+            "type_override": [],
+            "favorite": false
+          }
+        ]
+      },
+      "-3_0": {
+        "title": "REGION_NAME_GRAVEYARD",
+        "features": []
+      },
+      "-4_-1": {
+        "title": "REGION_NAME_MARSH",
+        "features": [
+          {
+            "id": 1,
+            "type": "Resource",
+            "title": "REGION_NAME_LANDKEEPER_HQ",
+            "resource_name": "",
+            "required_location": "",
+            "specialization": "",
+            "is_secret": false,
+            "add_slot": false,
+            "stickers": [],
+            "type_override": [],
+            "favorite": false
+          }
+        ]
+      },
+      "-4_-2": {
+        "title": "REGION_NAME_MARSH",
+        "features": [
+          {
+            "id": 1,
+            "type": "Resource",
+            "title": "MAP_FEATURE_CAMPSITE",
+            "icon": {
+              "id": 3,
+              "path": "res://ui/icons/map_markers/campsite_icon.png",
+              "type": "Texture"
+            },
+            "resource_name": "",
+            "required_location": "",
+            "specialization": "",
+            "is_secret": false,
+            "add_slot": false,
+            "stickers": [],
+            "type_override": [],
+            "favorite": false
+          }
+        ]
+      },
+      "-4_-3": {
+        "title": "REGION_NAME_MEADOW",
+        "features": []
+      },
+      "-4_-4": {
+        "title": "REGION_NAME_MEADOW",
+        "features": [
+          {
+            "id": 1,
+            "type": "Resource",
+            "title": "REGION_NAME_DUNGEON_MEADOW",
+            "icon": {
+              "id": 3,
+              "path": "res://ui/icons/map_markers/station_icon_boss.png",
+              "type": "Texture"
+            },
+            "resource_name": "",
+            "required_location": "",
+            "specialization": "",
+            "is_secret": false,
+            "add_slot": false,
+            "stickers": [],
+            "type_override": [],
+            "favorite": false
+          },
+          {
+            "id": 2,
+            "type": "Resource",
+            "title": "MAP_FEATURE_CAMPSITE",
+            "icon": {
+              "id": 5,
+              "path": "res://ui/icons/map_markers/campsite_icon.png",
+              "type": "Texture"
+            },
+            "resource_name": "",
+            "required_location": "",
+            "specialization": "",
+            "is_secret": false,
+            "add_slot": false,
+            "stickers": [],
+            "type_override": [],
+            "favorite": false
+          }
+        ]
+      },
+      "-4_-5": {
+        "title": "REGION_NAME_MEADOW",
+        "features": []
+      },
+      "-4_-6": {
+        "title": "REGION_NAME_MT_WIRRAL",
+        "features": [
+          {
+            "id": 1,
+            "type": "Resource",
+            "title": "MAP_FEATURE_CAVE",
+            "resource_name": "",
+            "required_location": "",
+            "specialization": "",
+            "is_secret": false,
+            "add_slot": false,
+            "stickers": [],
+            "type_override": [],
+            "favorite": false
+          }
+        ]
+      },
+      "-4_-7": {
+        "title": "REGION_NAME_MT_WIRRAL",
+        "features": []
+      },
+      "-4_0": {
+        "title": "REGION_NAME_GRAVEYARD",
+        "features": []
+      },
+      "-5_-1": {
+        "title": "REGION_NAME_MARSH",
+        "features": [
+          {
+            "id": 1,
+            "type": "Resource",
+            "title": "MAP_FEATURE_CAVE",
+            "resource_name": "",
+            "required_location": "",
+            "specialization": "",
+            "is_secret": false,
+            "add_slot": false,
+            "stickers": [],
+            "type_override": [],
+            "favorite": false
+          }
+        ]
+      },
+      "-5_-2": {
+        "title": "REGION_NAME_MARSH",
+        "features": [
+          {
+            "id": 1,
+            "type": "Resource",
+            "title": "CAPTAIN_CYBIL_NAME",
+            "resource_name": "",
+            "required_location": "",
+            "specialization": "",
+            "is_secret": false,
+            "add_slot": false,
+            "stickers": [],
+            "type_override": [],
+            "favorite": false
+          }
+        ]
+      },
+      "-5_-3": {
+        "title": "REGION_NAME_MEADOW",
+        "features": []
+      },
+      "-5_-4": {
+        "title": "REGION_NAME_MEADOW",
+        "features": []
+      },
+      "-5_-5": {
+        "title": "REGION_NAME_MEADOW",
+        "features": [
+          {
+            "id": 1,
+            "type": "Resource",
+            "title": "REGION_NAME_MEADOW_CHURCH",
+            "resource_name": "",
+            "required_location": "",
+            "specialization": "",
+            "is_secret": false,
+            "add_slot": false,
+            "stickers": [],
+            "type_override": [],
+            "favorite": false
+          }
+        ]
+      },
+      "-5_-6": {
+        "title": "REGION_NAME_MT_WIRRAL",
+        "features": []
+      },
+      "-5_-7": {
+        "title": "REGION_NAME_MT_WIRRAL",
+        "features": []
+      },
+      "-5_0": {
+        "title": "REGION_NAME_GRAVEYARD",
+        "features": [
+          {
+            "id": 1,
+            "type": "Resource",
+            "title": "REGION_NAME_DUNGEON_GRAVEYARD",
+            "icon": {
+              "id": 3,
+              "path": "res://ui/icons/map_markers/station_icon_boss.png",
+              "type": "Texture"
+            },
+            "resource_name": "",
+            "required_location": "",
+            "specialization": "",
+            "is_secret": false,
+            "add_slot": false,
+            "stickers": [],
+            "type_override": [],
+            "favorite": false
+          }
+        ]
+      },
+      "-6_-1": {
+        "title": "REGION_NAME_MARSH",
+        "features": []
+      },
+      "-6_-2": {
+        "title": "REGION_NAME_MARSH",
+        "features": []
+      },
+      "-6_-3": {
+        "title": "REGION_NAME_MARSH",
+        "features": [
+          {
+            "id": 1,
+            "type": "Resource",
+            "title": "MAP_FEATURE_LANDKEEPER_OFFICE",
+            "resource_name": "",
+            "required_location": "",
+            "specialization": "",
+            "is_secret": false,
+            "add_slot": false,
+            "stickers": [],
+            "type_override": [],
+            "favorite": false
+          }
+        ]
+      },
+      "-6_-4": {
+        "title": "REGION_NAME_CAST_IRON_SHORE",
+        "features": []
+      },
+      "-6_-5": {
+        "title": "REGION_NAME_CAST_IRON_SHORE",
+        "features": []
+      },
+      "-6_-6": {
+        "title": "REGION_NAME_CAST_IRON_SHORE",
+        "features": [
+          {
+            "id": 1,
+            "type": "Resource",
+            "title": "REGION_NAME_SHIPWRECK_STATION",
+            "icon": {
+              "id": 3,
+              "path": "res://ui/icons/map_markers/station_icon_boss.png",
+              "type": "Texture"
+            },
+            "resource_name": "",
+            "required_location": "",
+            "specialization": "",
+            "is_secret": false,
+            "add_slot": false,
+            "stickers": [],
+            "type_override": [],
+            "favorite": false
+          },
+          {
+            "id": 2,
+            "type": "Resource",
+            "title": "REGION_NAME_DUNGEON_SHIPWRECK",
+            "resource_name": "",
+            "required_location": "",
+            "specialization": "",
+            "is_secret": false,
+            "add_slot": false,
+            "stickers": [],
+            "type_override": [],
+            "favorite": false
+          }
+        ]
+      },
+      "-6_-7": {
+        "title": "REGION_NAME_BROKENHEAD",
+        "features": []
+      },
+      "-6_0": {
+        "title": "REGION_NAME_MIRE_SEA",
+        "features": []
+      },
+      "-7_-1": {
+        "title": "REGION_NAME_MIRE_SEA",
+        "features": [
+          {
+            "id": 1,
+            "type": "Resource",
+            "title": "MAP_FEATURE_CAVE",
+            "resource_name": "",
+            "required_location": "",
+            "specialization": "",
+            "is_secret": false,
+            "add_slot": false,
+            "stickers": [],
+            "type_override": [],
+            "favorite": false
+          }
+        ]
+      },
+      "-7_-2": {
+        "title": "REGION_NAME_MIRE_SEA",
+        "features": [
+          {
+            "id": 1,
+            "type": "Resource",
+            "title": "MAP_FEATURE_CAMPSITE",
+            "icon": {
+              "id": 3,
+              "path": "res://ui/icons/map_markers/campsite_icon.png",
+              "type": "Texture"
+            },
+            "resource_name": "",
+            "required_location": "",
+            "specialization": "",
+            "is_secret": false,
+            "add_slot": false,
+            "stickers": [],
+            "type_override": [],
+            "favorite": false
+          }
+        ]
+      },
+      "-7_-3": {
+        "title": "REGION_NAME_MIRE_SEA",
+        "features": []
+      },
+      "-7_-4": {
+        "title": "REGION_NAME_MIRE_SEA",
+        "features": []
+      },
+      "-7_-5": {
+        "title": "REGION_NAME_MIRE_SEA",
+        "features": [
+          {
+            "id": 1,
+            "type": "Resource",
+            "title": "CAPTAIN_HEATHER_NAME",
+            "resource_name": "",
+            "required_location": "",
+            "specialization": "",
+            "is_secret": false,
+            "add_slot": false,
+            "stickers": [],
+            "type_override": [],
+            "favorite": false
+          }
+        ]
+      },
+      "-7_-6": {
+        "title": "REGION_NAME_MIRE_SEA",
+        "features": []
+      },
+      "-7_-7": {
+        "title": "REGION_NAME_BROKENHEAD",
+        "features": []
+      },
+      "-7_0": {
+        "title": "REGION_NAME_MIRE_SEA",
+        "features": [
+          {
+            "id": 1,
+            "type": "Resource",
+            "title": "CAPTAIN_GLADIOLA_NAME",
+            "resource_name": "",
+            "required_location": "",
+            "specialization": "",
+            "is_secret": false,
+            "add_slot": false,
+            "stickers": [],
+            "type_override": [],
+            "favorite": false
+          }
+        ]
+      },
+      "0_-1": {
+        "title": "REGION_NAME_TOWN",
+        "features": [
+          {
+            "id": 1,
+            "type": "Resource",
+            "title": "REGION_NAME_TOWN_HALL",
+            "resource_name": "",
+            "required_location": "",
+            "specialization": "",
+            "is_secret": false,
+            "add_slot": false,
+            "stickers": [],
+            "type_override": [],
+            "favorite": false
+          }
+        ]
+      },
+      "0_-2": {
+        "title": "REGION_NAME_UPPER_PATH",
+        "features": []
+      },
+      "0_-3": {
+        "title": "REGION_NAME_LAKE",
+        "features": []
+      },
+      "0_-4": {
+        "title": "REGION_NAME_LAKE",
+        "features": []
+      },
+      "0_-5": {
+        "title": "REGION_NAME_LAKESIDE",
+        "features": []
+      },
+      "0_-6": {
+        "title": "REGION_NAME_EASTHAM_WOODS",
+        "features": []
+      },
+      "0_-7": {
+        "title": "REGION_NAME_EASTHAM_WOODS",
+        "features": []
+      },
+      "0_0": {
+        "title": "REGION_NAME_TOWN",
+        "features": [
+          {
+            "id": 1,
+            "type": "Resource",
+            "title": "MAP_FEATURE_STICKER_MERCHANTS",
+            "resource_name": "",
+            "required_location": "",
+            "specialization": "",
+            "is_secret": false,
+            "add_slot": false,
+            "stickers": [],
+            "type_override": [],
+            "favorite": false
+          },
+          {
+            "id": 2,
+            "type": "Resource",
+            "title": "REGION_NAME_HOSPITAL",
+            "resource_name": "",
+            "required_location": "",
+            "specialization": "",
+            "is_secret": false,
+            "add_slot": false,
+            "stickers": [],
+            "type_override": [],
+            "favorite": false
+          }
+        ]
+      },
+      "1_-1": {
+        "title": "REGION_NAME_TOWN",
+        "features": []
+      },
+      "1_-2": {
+        "title": "REGION_NAME_UPPER_PATH",
+        "features": [
+          {
+            "id": 1,
+            "type": "Resource",
+            "title": "REGION_NAME_TOWN_STATION",
+            "icon": {
+              "id": 3,
+              "path": "res://ui/icons/map_markers/station_icon_boss.png",
+              "type": "Texture"
+            },
+            "resource_name": "",
+            "required_location": "",
+            "specialization": "",
+            "is_secret": false,
+            "add_slot": false,
+            "stickers": [],
+            "type_override": [],
+            "favorite": false
+          }
+        ]
+      },
+      "1_-3": {
+        "title": "REGION_NAME_LAKE",
+        "features": []
+      },
+      "1_-4": {
+        "title": "REGION_NAME_LAKE",
+        "features": [
+          {
+            "id": 1,
+            "type": "Resource",
+            "title": "REGION_NAME_DUNGEON_WATERLOOP",
+            "icon": {
+              "id": 3,
+              "path": "res://ui/icons/map_markers/station_icon_boss.png",
+              "type": "Texture"
+            },
+            "resource_name": "",
+            "required_location": "",
+            "specialization": "",
+            "is_secret": false,
+            "add_slot": false,
+            "stickers": [],
+            "type_override": [],
+            "favorite": false
+          }
+        ]
+      },
+      "1_-5": {
+        "title": "REGION_NAME_LAKESIDE",
+        "features": []
+      },
+      "1_-6": {
+        "title": "REGION_NAME_EASTHAM_WOODS",
+        "features": []
+      },
+      "1_-7": {
+        "title": "REGION_NAME_EASTHAM_WOODS",
+        "features": []
+      },
+      "1_0": {
+        "title": "REGION_NAME_TOWN",
+        "features": [
+          {
+            "id": 1,
+            "type": "Resource",
+            "title": "REGION_NAME_CAFE",
+            "icon": {
+              "id": 3,
+              "path": "res://ui/icons/map_markers/home_icon.png",
+              "type": "Texture"
+            },
+            "resource_name": "",
+            "required_location": "",
+            "specialization": "",
+            "is_secret": false,
+            "add_slot": false,
+            "stickers": [],
+            "type_override": [],
+            "favorite": false
+          }
+        ]
+      },
+      "2_-1": {
+        "title": "REGION_NAME_TOWN_OUTSKIRTS",
+        "features": [
+          {
+            "id": 1,
+            "type": "Resource",
+            "title": "MAP_FEATURE_WATER_PIPE",
+            "resource_name": "",
+            "required_location": "",
+            "specialization": "",
+            "is_secret": false,
+            "add_slot": false,
+            "stickers": [],
+            "type_override": [],
+            "favorite": false
+          }
+        ]
+      },
+      "2_-2": {
+        "title": "REGION_NAME_TOWN_OUTSKIRTS",
+        "features": []
+      },
+      "2_-3": {
+        "title": "REGION_NAME_NEW_WIRRAL_PARK",
+        "features": [
+          {
+            "id": 2,
+            "type": "Resource",
+            "title": "CAPTAIN_WALLACE_NAME",
+            "resource_name": "",
+            "required_location": "",
+            "specialization": "",
+            "is_secret": false,
+            "add_slot": false,
+            "stickers": [],
+            "type_override": [],
+            "favorite": false
+          }
+        ]
+      },
+      "2_-4": {
+        "title": "REGION_NAME_NEW_WIRRAL_PARK",
+        "features": [
+          {
+            "id": 1,
+            "type": "Resource",
+            "title": "REGION_NAME_RANGER_OUTPOST",
+            "icon": {
+              "id": 3,
+              "path": "res://ui/icons/map_markers/home_icon.png",
+              "type": "Texture"
+            },
+            "resource_name": "",
+            "required_location": "",
+            "specialization": "",
+            "is_secret": false,
+            "add_slot": false,
+            "stickers": [],
+            "type_override": [],
+            "favorite": false
+          }
+        ]
+      },
+      "2_-5": {
+        "title": "REGION_NAME_NEW_WIRRAL_PARK",
+        "features": []
+      },
+      "2_-6": {
+        "title": "REGION_NAME_EASTHAM_WOODS",
+        "features": []
+      },
+      "2_-7": {
+        "title": "REGION_NAME_EASTHAM_WOODS",
+        "features": [
+          {
+            "id": 1,
+            "type": "Resource",
+            "title": "MAP_FEATURE_CAVE",
+            "resource_name": "",
+            "required_location": "",
+            "specialization": "",
+            "is_secret": false,
+            "add_slot": false,
+            "stickers": [],
+            "type_override": [],
+            "favorite": false
+          }
+        ]
+      },
+      "2_0": {
+        "title": "REGION_NAME_TOWN_BEACH",
+        "features": [
+          {
+            "id": 1,
+            "type": "Resource",
+            "title": "REGION_NAME_PIER",
+            "icon": {
+              "id": 3,
+              "path": "res://ui/icons/map_markers/station_icon_boss.png",
+              "type": "Texture"
+            },
+            "resource_name": "",
+            "required_location": "",
+            "specialization": "",
+            "is_secret": false,
+            "add_slot": false,
+            "stickers": [],
+            "type_override": [],
+            "favorite": false
+          },
+          {
+            "id": 2,
+            "type": "Resource",
+            "title": "MAP_FEATURE_ROWING_BOAT",
+            "resource_name": "",
+            "required_location": "",
+            "specialization": "",
+            "is_secret": false,
+            "add_slot": false,
+            "stickers": [],
+            "type_override": [],
+            "favorite": false
+          }
+        ]
+      },
+      "3_-1": {
+        "title": "REGION_NAME_TOWN_OUTSKIRTS",
+        "features": [
+          {
+            "id": 1,
+            "type": "Resource",
+            "title": "MAP_FEATURE_CAMPSITE",
+            "icon": {
+              "id": 3,
+              "path": "res://ui/icons/map_markers/campsite_icon.png",
+              "type": "Texture"
+            },
+            "resource_name": "",
+            "required_location": "",
+            "specialization": "",
+            "is_secret": false,
+            "add_slot": false,
+            "stickers": [],
+            "type_override": [],
+            "favorite": false
+          }
+        ]
+      },
+      "3_-2": {
+        "title": "REGION_NAME_TOWN_OUTSKIRTS",
+        "features": []
+      },
+      "3_-3": {
+        "title": "REGION_NAME_NEW_WIRRAL_PARK",
+        "features": [
+          {
+            "id": 1,
+            "type": "Resource",
+            "title": "MAP_FEATURE_CAMPSITE",
+            "icon": {
+              "id": 3,
+              "path": "res://ui/icons/map_markers/campsite_icon.png",
+              "type": "Texture"
+            },
+            "resource_name": "",
+            "required_location": "",
+            "specialization": "",
+            "is_secret": false,
+            "add_slot": false,
+            "stickers": [],
+            "type_override": [],
+            "favorite": false
+          }
+        ]
+      },
+      "3_-4": {
+        "title": "REGION_NAME_NEW_WIRRAL_PARK",
+        "features": []
+      },
+      "3_-5": {
+        "title": "REGION_NAME_NEW_WIRRAL_PARK",
+        "features": [
+          {
+            "id": 1,
+            "type": "Resource",
+            "title": "MAP_FEATURE_CAVE",
+            "resource_name": "",
+            "required_location": "",
+            "specialization": "",
+            "is_secret": false,
+            "add_slot": false,
+            "stickers": [],
+            "type_override": [],
+            "favorite": false
+          }
+        ]
+      },
+      "3_-6": {
+        "title": "REGION_NAME_EASTHAM_WOODS",
+        "features": [
+          {
+            "id": 1,
+            "type": "Resource",
+            "title": "CAPTAIN_CLEEO_NAME",
+            "resource_name": "",
+            "required_location": "",
+            "specialization": "",
+            "is_secret": false,
+            "add_slot": false,
+            "stickers": [],
+            "type_override": [],
+            "favorite": false
+          }
+        ]
+      },
+      "3_-7": {
+        "title": "REGION_NAME_EASTHAM_WOODS",
+        "features": [
+          {
+            "id": 1,
+            "type": "Resource",
+            "title": "REGION_NAME_MALL",
+            "icon": {
+              "id": 5,
+              "path": "res://ui/icons/map_markers/station_icon_boss.png",
+              "type": "Texture"
+            },
+            "resource_name": "",
+            "required_location": "",
+            "specialization": "",
+            "is_secret": false,
+            "add_slot": false,
+            "stickers": [],
+            "type_override": [],
+            "favorite": false
+          },
+          {
+            "id": 2,
+            "type": "Resource",
+            "title": "MAP_FEATURE_CAMPSITE",
+            "icon": {
+              "id": 3,
+              "path": "res://ui/icons/map_markers/campsite_icon.png",
+              "type": "Texture"
+            },
+            "resource_name": "",
+            "required_location": "",
+            "specialization": "",
+            "is_secret": false,
+            "add_slot": false,
+            "stickers": [],
+            "type_override": [],
+            "favorite": false
+          }
+        ]
+      },
+      "3_0": {
+        "title": "REGION_NAME_TOWN_BEACH",
+        "features": []
+      },
+      "4_-1": {
+        "title": "REGION_NAME_TOWN_OUTSKIRTS",
+        "features": [
+          {
+            "id": 1,
+            "type": "Resource",
+            "title": "MAP_FEATURE_LANDKEEPER_OFFICE",
+            "resource_name": "",
+            "required_location": "",
+            "specialization": "",
+            "is_secret": false,
+            "add_slot": false,
+            "stickers": [],
+            "type_override": [],
+            "favorite": false
+          }
+        ]
+      },
+      "4_-2": {
+        "title": "REGION_NAME_DEADLANDS",
+        "features": [
+          {
+            "id": 1,
+            "type": "Resource",
+            "title": "MAP_FEATURE_CRATER",
+            "resource_name": "",
+            "required_location": "",
+            "specialization": "",
+            "is_secret": false,
+            "add_slot": false,
+            "stickers": [],
+            "type_override": [],
+            "favorite": false
+          }
+        ]
+      },
+      "4_-3": {
+        "title": "REGION_NAME_NEW_WIRRAL_PARK",
+        "features": []
+      },
+      "4_-4": {
+        "title": "REGION_NAME_NEW_WIRRAL_PARK",
+        "features": []
+      },
+      "4_-5": {
+        "title": "REGION_NAME_NEW_WIRRAL_PARK",
+        "features": []
+      },
+      "4_-6": {
+        "title": "REGION_NAME_EASTHAM_WOODS",
+        "features": []
+      },
+      "4_-7": {
+        "title": "REGION_NAME_EASTHAM_WOODS",
+        "features": []
+      },
+      "4_0": {
+        "title": "REGION_NAME_TOWN_BEACH",
+        "features": [
+          {
+            "id": 1,
+            "type": "Resource",
+            "title": "MAP_FEATURE_DAILY_ITEM",
+            "resource_name": "",
+            "required_location": "",
+            "specialization": "",
+            "is_secret": false,
+            "add_slot": false,
+            "stickers": [],
+            "type_override": [],
+            "favorite": false
+          }
+        ]
+      },
+      "5_-1": {
+        "title": "REGION_NAME_DEADLANDS",
+        "features": []
+      },
+      "5_-2": {
+        "title": "REGION_NAME_DEADLANDS",
+        "features": [
+          {
+            "id": 1,
+            "type": "Resource",
+            "title": "MAP_FEATURE_RUINS",
+            "resource_name": "",
+            "required_location": "",
+            "specialization": "",
+            "is_secret": false,
+            "add_slot": false,
+            "stickers": [],
+            "type_override": [],
+            "favorite": false
+          }
+        ]
+      },
+      "5_-3": {
+        "title": "REGION_NAME_NEW_WIRRAL_PARK",
+        "features": []
+      },
+      "5_-4": {
+        "title": "REGION_NAME_NEW_WIRRAL_PARK",
+        "features": [
+          {
+            "id": 1,
+            "type": "Resource",
+            "title": "REGION_NAME_DUNGEON_GLOWSHROOM",
+            "icon": {
+              "id": 4,
+              "path": "res://ui/icons/map_markers/station_icon_boss.png",
+              "type": "Texture"
+            },
+            "resource_name": "",
+            "required_location": "",
+            "specialization": "",
+            "is_secret": false,
+            "add_slot": false,
+            "stickers": [],
+            "type_override": [],
+            "favorite": false
+          }
+        ]
+      },
+      "5_-5": {
+        "title": "REGION_NAME_EASTHAM_WOODS",
+        "features": [
+          {
+            "id": 1,
+            "type": "Resource",
+            "title": "MAP_FEATURE_CAMPSITE",
+            "icon": {
+              "id": 3,
+              "path": "res://ui/icons/map_markers/campsite_icon.png",
+              "type": "Texture"
+            },
+            "resource_name": "",
+            "required_location": "",
+            "specialization": "",
+            "is_secret": false,
+            "add_slot": false,
+            "stickers": [],
+            "type_override": [],
+            "favorite": false
+          }
+        ]
+      },
+      "5_-6": {
+        "title": "REGION_NAME_EASTHAM_WOODS",
+        "features": []
+      },
+      "5_-7": {
+        "title": "REGION_NAME_EASTHAM_WOODS",
+        "features": []
+      },
+      "5_0": {
+        "title": "REGION_NAME_SOUTHERN_ISLES",
+        "features": []
+      },
+      "6_-1": {
+        "title": "REGION_NAME_DEADLANDS",
+        "features": [
+          {
+            "id": 1,
+            "type": "Resource",
+            "title": "MAP_FEATURE_CAVE",
+            "resource_name": "",
+            "required_location": "",
+            "specialization": "",
+            "is_secret": false,
+            "add_slot": false,
+            "stickers": [],
+            "type_override": [],
+            "favorite": false
+          }
+        ]
+      },
+      "6_-2": {
+        "title": "REGION_NAME_OLD_VILLAGE",
+        "features": [
+          {
+            "id": 1,
+            "type": "Resource",
+            "title": "CAPTAIN_DREADFUL_NAME",
+            "resource_name": "",
+            "required_location": "",
+            "specialization": "",
+            "is_secret": false,
+            "add_slot": false,
+            "stickers": [],
+            "type_override": [],
+            "favorite": false
+          },
+          {
+            "id": 2,
+            "type": "Resource",
+            "title": "MAP_FEATURE_RUINS",
+            "resource_name": "",
+            "required_location": "",
+            "specialization": "",
+            "is_secret": false,
+            "add_slot": false,
+            "stickers": [],
+            "type_override": [],
+            "favorite": false
+          }
+        ]
+      },
+      "6_-3": {
+        "title": "REGION_NAME_AUTUMN_HILL",
+        "features": []
+      },
+      "6_-4": {
+        "title": "REGION_NAME_AUTUMN_HILL",
+        "features": [
+          {
+            "id": 1,
+            "type": "Resource",
+            "title": "MAP_FEATURE_CAVE",
+            "resource_name": "",
+            "required_location": "",
+            "specialization": "",
+            "is_secret": false,
+            "add_slot": false,
+            "stickers": [],
+            "type_override": [],
+            "favorite": false
+          }
+        ]
+      },
+      "6_-5": {
+        "title": "REGION_NAME_AUTUMN_HILL",
+        "features": []
+      },
+      "6_-6": {
+        "title": "REGION_NAME_AUTUMN_HILL",
+        "features": []
+      },
+      "6_-7": {
+        "title": "REGION_NAME_MIRE_SEA",
+        "features": []
+      },
+      "6_0": {
+        "title": "REGION_NAME_SOUTHERN_ISLES",
+        "features": []
+      },
+      "7_-1": {
+        "title": "REGION_NAME_DEADLANDS",
+        "features": [
+          {
+            "id": 1,
+            "type": "Resource",
+            "title": "MAP_FEATURE_CAMPSITE",
+            "icon": {
+              "id": 3,
+              "path": "res://ui/icons/map_markers/campsite_icon.png",
+              "type": "Texture"
+            },
+            "resource_name": "",
+            "required_location": "",
+            "specialization": "",
+            "is_secret": false,
+            "add_slot": false,
+            "stickers": [],
+            "type_override": [],
+            "favorite": false
+          }
+        ]
+      },
+      "7_-2": {
+        "title": "REGION_NAME_DEADLANDS",
+        "features": [
+          {
+            "id": 1,
+            "type": "Resource",
+            "title": "MAP_FEATURE_RUINS",
+            "resource_name": "",
+            "required_location": "",
+            "specialization": "",
+            "is_secret": false,
+            "add_slot": false,
+            "stickers": [],
+            "type_override": [],
+            "favorite": false
+          }
+        ]
+      },
+      "7_-3": {
+        "title": "REGION_NAME_AUTUMN_HILL",
+        "features": [
+          {
+            "id": 1,
+            "type": "Resource",
+            "title": "MAP_FEATURE_LANDKEEPER_OFFICE",
+            "resource_name": "",
+            "required_location": "",
+            "specialization": "",
+            "is_secret": false,
+            "add_slot": false,
+            "stickers": [],
+            "type_override": [],
+            "favorite": false
+          }
+        ]
+      },
+      "7_-4": {
+        "title": "REGION_NAME_AUTUMN_HILL",
+        "features": [
+          {
+            "id": 1,
+            "type": "Resource",
+            "title": "MAP_FEATURE_CAMPSITE",
+            "icon": {
+              "id": 3,
+              "path": "res://ui/icons/map_markers/campsite_icon.png",
+              "type": "Texture"
+            },
+            "resource_name": "",
+            "required_location": "",
+            "specialization": "",
+            "is_secret": false,
+            "add_slot": false,
+            "stickers": [],
+            "type_override": [],
+            "favorite": false
+          }
+        ]
+      },
+      "7_-5": {
+        "title": "REGION_NAME_AUTUMN_HILL",
+        "features": [
+          {
+            "id": 1,
+            "type": "Resource",
+            "title": "REGION_NAME_COMMUNE_STATION",
+            "icon": {
+              "id": 4,
+              "path": "res://ui/icons/map_markers/station_icon_boss.png",
+              "type": "Texture"
+            },
+            "resource_name": "",
+            "required_location": "",
+            "specialization": "",
+            "is_secret": false,
+            "add_slot": false,
+            "stickers": [],
+            "type_override": [],
+            "favorite": false
+          },
+          {
+            "id": 2,
+            "type": "Resource",
+            "title": "REGION_NAME_COMMUNE",
+            "resource_name": "",
+            "required_location": "",
+            "specialization": "",
+            "is_secret": false,
+            "add_slot": false,
+            "stickers": [],
+            "type_override": [],
+            "favorite": false
+          }
+        ]
+      },
+      "7_-6": {
+        "title": "REGION_NAME_AUTUMN_HILL",
+        "features": [
+          {
+            "id": 1,
+            "type": "Resource",
+            "title": "MAP_FEATURE_CAVE",
+            "resource_name": "",
+            "required_location": "",
+            "specialization": "",
+            "is_secret": false,
+            "add_slot": false,
+            "stickers": [],
+            "type_override": [],
+            "favorite": false
+          }
+        ]
+      },
+      "7_-7": {
+        "title": "REGION_NAME_MIRE_SEA",
+        "features": [
+          {
+            "id": 1,
+            "type": "Resource",
+            "title": "MAP_FEATURE_LANDKEEPER_OFFICE",
+            "resource_name": "",
+            "required_location": "",
+            "specialization": "",
+            "is_secret": false,
+            "add_slot": false,
+            "stickers": [],
+            "type_override": [],
+            "favorite": false
+          }
+        ]
+      },
+      "7_0": {
+        "title": "REGION_NAME_SOUTHERN_ISLES",
+        "features": []
+      },
+      "8_-1": {
+        "title": "REGION_NAME_DEADLANDS",
+        "features": [
+          {
+            "id": 1,
+            "type": "Resource",
+            "title": "MAP_FEATURE_CAVE",
+            "resource_name": "",
+            "required_location": "",
+            "specialization": "",
+            "is_secret": false,
+            "add_slot": false,
+            "stickers": [],
+            "type_override": [],
+            "favorite": false
+          }
+        ]
+      },
+      "8_-2": {
+        "title": "REGION_NAME_DINO_QUARRY",
+        "features": []
+      },
+      "8_-3": {
+        "title": "REGION_NAME_AUTUMN_HILL",
+        "features": []
+      },
+      "8_-4": {
+        "title": "REGION_NAME_AUTUMN_HILL",
+        "features": [
+          {
+            "id": 1,
+            "type": "Resource",
+            "title": "CAPTAIN_ZEDD_NAME",
+            "resource_name": "",
+            "required_location": "",
+            "specialization": "",
+            "is_secret": false,
+            "add_slot": false,
+            "stickers": [],
+            "type_override": [],
+            "favorite": false
+          }
+        ]
+      },
+      "8_-5": {
+        "title": "REGION_NAME_AUTUMN_HILL",
+        "features": []
+      },
+      "8_-6": {
+        "title": "REGION_NAME_AUTUMN_HILL",
+        "features": []
+      },
+      "8_-7": {
+        "title": "REGION_NAME_MIRE_SEA",
+        "features": []
+      },
+      "8_0": {
+        "title": "REGION_NAME_SOUTHERN_ISLES",
+        "features": [
+          {
+            "id": 1,
+            "type": "Resource",
+            "title": "CAPTAIN_JUDAS_NAME",
+            "resource_name": "",
+            "required_location": "",
+            "specialization": "",
+            "is_secret": false,
+            "add_slot": false,
+            "stickers": [],
+            "type_override": [],
+            "favorite": false
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "pier_map_metadata",
+    "title": "REGION_NAME_PIER",
+    "map_texture": {
+      "id": 5,
+      "path": "res://data/map_metadata/pier/pier_map_metadata2.png",
+      "type": "Texture"
+    },
+    "map_obscure": {
+      "id": 1,
+      "path": "res://data/map_metadata/overworld_obscured.png",
+      "type": "Texture"
+    },
+    "map_background": {
+      "id": 4,
+      "path": "res://data/map_metadata/pier/pier_map_metadata_bg.png",
+      "type": "Texture"
+    },
+    "chunk_metadata_path": "res://data/map_metadata/pier/pier_chunk_metadata/",
+    "default_chunk_metadata": {
+      "id": 1,
+      "type": "Resource",
+      "title": "REGION_NAME_PIER",
+      "resource_name": "",
+      "required_location": "",
+      "specialization": "",
+      "is_secret": false,
+      "add_slot": false,
+      "stickers": [],
+      "type_override": [],
+      "favorite": false
+    },
+    "chunk_meta_data": {
+      "-1_-1": {
+        "title": "REGION_NAME_PIER",
+        "features": [
+          {
+            "id": 1,
+            "type": "Resource",
+            "title": "MAGIKRAB_NAME",
+            "icon": {
+              "id": 3,
+              "path": "res://ui/icons/map_markers/station_icon.png",
+              "type": "Texture"
+            },
+            "resource_name": "",
+            "required_location": "",
+            "specialization": "",
+            "is_secret": false,
+            "add_slot": false,
+            "stickers": [],
+            "type_override": [],
+            "favorite": false
+          }
+        ]
+      },
+      "-1_0": {
+        "title": "REGION_NAME_PIER",
+        "features": [
+          {
+            "id": 2,
+            "type": "Resource",
+            "title": "MAP_FEATURE_FUNHOUSE",
+            "resource_name": "",
+            "required_location": "",
+            "specialization": "",
+            "is_secret": false,
+            "add_slot": false,
+            "stickers": [],
+            "type_override": [],
+            "favorite": false
+          },
+          {
+            "id": 1,
+            "type": "Resource",
+            "title": "MAP_FEATURE_WAREHOUSE",
+            "resource_name": "",
+            "required_location": "",
+            "specialization": "",
+            "is_secret": false,
+            "add_slot": false,
+            "stickers": [],
+            "type_override": [],
+            "favorite": false
+          }
+        ]
+      },
+      "0_-1": {
+        "title": "REGION_NAME_PIER",
+        "features": [
+          {
+            "id": 2,
+            "type": "Resource",
+            "title": "MAP_FEATURE_HAUNTEDHOUSE",
+            "resource_name": "",
+            "required_location": "",
+            "specialization": "",
+            "is_secret": false,
+            "add_slot": false,
+            "stickers": [],
+            "type_override": [],
+            "favorite": false
+          }
+        ]
+      },
+      "0_0": {
+        "title": "REGION_NAME_PIER",
+        "features": [
+          {
+            "id": 1,
+            "type": "Resource",
+            "title": "MAP_FEATURE_CAMPSITE",
+            "icon": {
+              "id": 3,
+              "path": "res://ui/icons/map_markers/campsite_icon.png",
+              "type": "Texture"
+            },
+            "resource_name": "",
+            "required_location": "",
+            "specialization": "",
+            "is_secret": false,
+            "add_slot": false,
+            "stickers": [],
+            "type_override": [],
+            "favorite": false
+          }
+        ]
+      },
+      "0_2": {
+        "title": "REGION_NAME_PIER",
+        "features": [
+          {
+            "id": 1,
+            "type": "Resource",
+            "title": "MAP_FEATURE_ROWING_BOAT",
+            "resource_name": "",
+            "required_location": "",
+            "specialization": "",
+            "is_secret": false,
+            "add_slot": false,
+            "stickers": [],
+            "type_override": [],
+            "favorite": false
+          }
+        ]
+      },
+      "1_0": {
+        "title": "REGION_NAME_PIER",
+        "features": [
+          {
+            "id": 1,
+            "type": "Resource",
+            "title": "MAP_FEATURE_SPACEWORLD",
+            "resource_name": "",
+            "required_location": "",
+            "specialization": "",
+            "is_secret": false,
+            "add_slot": false,
+            "stickers": [],
+            "type_override": [],
+            "favorite": false
+          }
+        ]
+      }
+    }
+  }
+]

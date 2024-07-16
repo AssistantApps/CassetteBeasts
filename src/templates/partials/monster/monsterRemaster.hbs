@@ -1,0 +1,45 @@
+<tr class="remaster no-padding">
+    <td class="from-to">{{fromOrTo}}</td>
+    <td class="sprite">
+        <a href="/{{@root.langCode}}{{@root.routes.monsters}}/{{encodeuri this.resource_name}}.html"
+            title="{{this.name_localised}}">
+            <img src="{{resimage this.icon_url}}" class="remaster-image" alt="image of {{this.name_localised}}"
+                draggable="false">
+        </a>
+    </td>
+    <td class="name">
+        <a href="/{{@root.langCode}}{{@root.routes.monsters}}/{{encodeuri this.resource_name}}.html"
+            title="{{this.name_localised}}">
+            {{this.name_localised}}
+            (<small class="beast-id">#{{this.bestiary_index_with_padding}}</small>)
+        </a>
+    </td>
+    <td class="type">
+        <a href="/{{@root.langCode}}{{@root.routes.monsters}}/{{encodeuri this.resource_name}}.html"
+            title="{{this.name_localised}}">
+            {{#if this.elemental_types_elements.length}}
+
+            {{#each this.elemental_types_elements}}
+            <img src="{{resimage this.icon.path}}" class="move-image" alt="image of {{data.name_localised}}"
+                draggable="false">
+            {{/each}}
+
+            {{else}}
+
+            <img src="/assets/img/typeless.png" class="move-image" title="Typeless" alt="image of {{this.name}}"
+                draggable="false">
+
+            {{/if}}
+        </a>
+    </td>
+    <td class="specialisation">
+        <a href="/{{@root.langCode}}{{@root.routes.monsters}}/{{encodeuri this.resource_name}}.html"
+            title="{{this.name_localised}}">
+            {{#if this.specialization_localised.length}}
+            {{this.specialization_localised}}
+            {{else if this.required_move_move}}
+            {{this.required_move_move.name_localised}} sticker
+            {{/if}}
+        </a>
+    </td>
+</tr>

@@ -1,0 +1,59 @@
+{{#> layouts/default }}
+
+{{> partials/breadcrumb }}
+
+<div class="page-options">
+  <label>
+    <input id="monster-grid-checkbox" type="checkbox" role="switch" name="animated images"
+      onchange="toggleClassToId('monster-grid', 'useGif', this.checked); setSetting('useGif', this.checked)">
+    <span>Use gifs</span>
+  </label>
+  <select name="Sort by" aria-label="Sort by" required
+    onchange="orderItemsByDataAttr('monster-grid', event.target.value)">
+    <option value="title">Alphabetical</option>
+    <option value="id">Bestiary Id</option>
+  </select>
+</div>
+
+<section id="search">
+  <h2 class="hidden">Search</h2>
+  <input type="search" name="search" placeholder="Search for..." oninput="onSearchChange(this.value)">
+</section>
+
+<section id="monster-grid" class="item-grid-list">
+  <h2 class="hidden">{{lookup @root.translate 'UI_BESTIARY_LIST_MODE_VIEW_MONSTERS'}}</h2>
+  {{#each data.list}}
+  <a href="/{{@root.langCode}}{{@root.routes.monsters}}/{{this.resource_name}}.html"
+    class="grid-list-item item animate__animated animate__fadeIn" data-id="{{this.bestiary_index_with_padding}}"
+    data-title="{{this.name_localised}}" data-description="{{this.description_localised}}"
+    style="animation-delay: {{multiply @index 30 600}}ms;">
+    <div class="grid-list-item-image">
+      <img src="{{resimage this.icon_url}}" class="sprite" alt="image of {{this.name_localised}}" draggable="false">
+
+      {{#each this.animations}}
+      {{#if @first}}
+      <img src="{{resimage this.imageUrl}}" class="sprite-anim" alt="gif #{{this.id}} of {{data.name_localised}}"
+        draggable="false">
+      {{/if}}
+      {{/each}}
+
+      <img src="{{resimage this.tape_sticker_texture.path}}" class="sticker animate__animated"
+        alt="image of {{this.name_localised}}" draggable="false">
+
+      {{#each this.elemental_types_elements}}
+      <img src="{{resimage this.icon.path}}" class="type animate__animated" alt="element of {{this.name_localised}}"
+        draggable="false">
+      {{/each}}
+    </div>
+    <section class="grid-list-item-container">
+      <h2 class="Neu5Land heading">{{this.name_localised}}</h2>
+      <small class="description">{{this.description_localised}}</small>
+    </section>
+    <div class="bestiary">
+      <span>#</span>
+      <span>{{this.bestiary_index_with_padding}}</span>
+    </div>
+  </a>
+  {{/each}}
+</section>
+{{/layouts/default }}

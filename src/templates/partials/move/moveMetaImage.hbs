@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 1200 627" xmlns="http://www.w3.org/2000/svg">
+  <g transform="translate(-25, 10)">
+    <polygon points="0,80 80,0 1200,0 1200,500 1050,627 0,627" fill="#000000" stroke="#000000" />
+  </g>
+  <g transform="translate(10, -10)">
+    <polygon points="0,80 80,0 1200,0 1200,500 1050,627 0,627" fill="{{theme.gameCardBackground}}"
+      stroke="{{theme.gameCardBackground}}" />
+    <polygon points="0,80 80,0 1200,0 1200,80 0,80" fill="{{theme.brandPrimary}}" stroke="{{theme.brandPrimary}}" />
+    <text x="90" y="65" width="1140" font-size="65" fill="white">{{data.name_localised}}</text>
+
+    {{#each apEmptyArray}}
+    <image x="{{spacing 40 @index 40}}" y="115" width="40" height="40" href="{{@root.apEmptyBase64}}" />
+    {{/each}}
+    {{#each apFullArray}}
+    <image x="{{spacing 40 @index 40}}" y="115" width="40" height="40" href="{{@root.apFullBase64}}" />
+    {{/each}}
+
+    <image x="40" y="190" width="65" height="65" href="{{elementBase64}}" />
+    <text x="125" y="245" width="950" font-size="60"
+      fill="{{theme.gameCardForeground}}">{{data.category_name_localised}}</text>
+
+    {{#each descriptionLines}}
+    <text x="40" y="{{spacing 330 @index 55}}" width="1100" font-size="40"
+      fill="{{theme.gameCardForeground}}">{{this}}</text>
+    {{/each}}
+
+    {{#each additional}}
+    <text x="40" y="{{spacing 520 @index 55}}" width="1100" font-size="40"
+      fill="{{theme.gameCardForeground}}">{{this}}</text>
+    {{/each}}
+
+    <image x="850" y="455" width="150" height="150" transform="rotate(10 975 375)" href="{{elementBase64}}" />
+  </g>
+</svg>

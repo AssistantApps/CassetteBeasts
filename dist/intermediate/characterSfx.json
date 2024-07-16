@@ -1,0 +1,469 @@
+{
+  "dog": {
+    "file": "dog",
+    "windup": [],
+    "hurt": [],
+    "recording": [],
+    "recording_success": [],
+    "recording_failure": [],
+    "transform": [],
+    "defeat": [],
+    "greeting": [],
+    "farewell": [],
+    "thanks": [],
+    "sigh_2": [],
+    "surprise_2": [],
+    "thinking": [],
+    "audioFiles": []
+  },
+  "eugene": {
+    "file": "eugene",
+    "windup": [],
+    "hurt": [
+      {
+        "id": 6,
+        "path": "res://sfx/voices/eugene/eugene_hurt_1.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 4,
+        "path": "res://sfx/voices/eugene/eugene_hurt_2.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 5,
+        "path": "res://sfx/voices/eugene/eugene_hurt_3.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "recording": [
+      {
+        "id": 3,
+        "path": "res://sfx/voices/eugene/eugene_recording.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "recording_success": [
+      {
+        "id": 7,
+        "path": "res://sfx/voices/eugene/eugene_recording_success.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "recording_failure": [
+      {
+        "id": 2,
+        "path": "res://sfx/voices/eugene/eugene_recording_failure.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "transform": [],
+    "defeat": [
+      {
+        "id": 8,
+        "path": "res://sfx/voices/eugene/eugene_defeat.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "greeting": [],
+    "farewell": [],
+    "thanks": [],
+    "sigh_2": [],
+    "surprise_2": [],
+    "thinking": [],
+    "audioFiles": [
+      {
+        "name": "hurt",
+        "files": [
+          "/assets/audio/voices/eugene/eugene_hurt_1.wav",
+          "/assets/audio/voices/eugene/eugene_hurt_2.wav",
+          "/assets/audio/voices/eugene/eugene_hurt_3.wav"
+        ]
+      },
+      {
+        "name": "recording",
+        "files": [
+          "/assets/audio/voices/eugene/eugene_recording.wav"
+        ]
+      },
+      {
+        "name": "recording success",
+        "files": [
+          "/assets/audio/voices/eugene/eugene_recording_success.wav"
+        ]
+      },
+      {
+        "name": "recording failure",
+        "files": [
+          "/assets/audio/voices/eugene/eugene_recording_failure.wav"
+        ]
+      },
+      {
+        "name": "defeat",
+        "files": [
+          "/assets/audio/voices/eugene/eugene_defeat.wav"
+        ]
+      }
+    ]
+  },
+  "felix": {
+    "file": "felix",
+    "windup": [],
+    "hurt": [
+      {
+        "id": 2,
+        "path": "res://sfx/voices/felix/felix_hurt_1.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 3,
+        "path": "res://sfx/voices/felix/felix_hurt_2.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 6,
+        "path": "res://sfx/voices/felix/felix_hurt_3.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "recording": [
+      {
+        "id": 5,
+        "path": "res://sfx/voices/felix/felix_recording.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "recording_success": [
+      {
+        "id": 7,
+        "path": "res://sfx/voices/felix/felix_recording_success.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "recording_failure": [
+      {
+        "id": 4,
+        "path": "res://sfx/voices/felix/felix_recording_failure.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "transform": [],
+    "defeat": [
+      {
+        "id": 8,
+        "path": "res://sfx/voices/felix/felix_defeat.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "greeting": [],
+    "farewell": [],
+    "thanks": [],
+    "sigh_2": [],
+    "surprise_2": [],
+    "thinking": [],
+    "audioFiles": [
+      {
+        "name": "hurt",
+        "files": [
+          "/assets/audio/voices/felix/felix_hurt_1.wav",
+          "/assets/audio/voices/felix/felix_hurt_2.wav",
+          "/assets/audio/voices/felix/felix_hurt_3.wav"
+        ]
+      },
+      {
+        "name": "recording",
+        "files": [
+          "/assets/audio/voices/felix/felix_recording.wav"
+        ]
+      },
+      {
+        "name": "recording success",
+        "files": [
+          "/assets/audio/voices/felix/felix_recording_success.wav"
+        ]
+      },
+      {
+        "name": "recording failure",
+        "files": [
+          "/assets/audio/voices/felix/felix_recording_failure.wav"
+        ]
+      },
+      {
+        "name": "defeat",
+        "files": [
+          "/assets/audio/voices/felix/felix_defeat.wav"
+        ]
+      }
+    ]
+  },
+  "kayleigh": {
+    "file": "kayleigh",
+    "windup": [],
+    "hurt": [
+      {
+        "id": 5,
+        "path": "res://sfx/voices/kayleigh/kayleigh_hurt_1.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 3,
+        "path": "res://sfx/voices/kayleigh/kayleigh_hurt_2.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 8,
+        "path": "res://sfx/voices/kayleigh/kayleigh_hurt_3.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "recording": [
+      {
+        "id": 2,
+        "path": "res://sfx/voices/kayleigh/kayleigh_recording.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "recording_success": [
+      {
+        "id": 7,
+        "path": "res://sfx/voices/kayleigh/kayleigh_recording_success.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "recording_failure": [
+      {
+        "id": 6,
+        "path": "res://sfx/voices/kayleigh/kayleigh_recording_failure.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "transform": [],
+    "defeat": [
+      {
+        "id": 1,
+        "path": "res://sfx/voices/kayleigh/kayleigh_defeat.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "greeting": [],
+    "farewell": [],
+    "thanks": [],
+    "sigh_2": [],
+    "surprise_2": [],
+    "thinking": [],
+    "audioFiles": [
+      {
+        "name": "hurt",
+        "files": [
+          "/assets/audio/voices/kayleigh/kayleigh_hurt_1.wav",
+          "/assets/audio/voices/kayleigh/kayleigh_hurt_2.wav",
+          "/assets/audio/voices/kayleigh/kayleigh_hurt_3.wav"
+        ]
+      },
+      {
+        "name": "recording",
+        "files": [
+          "/assets/audio/voices/kayleigh/kayleigh_recording.wav"
+        ]
+      },
+      {
+        "name": "recording success",
+        "files": [
+          "/assets/audio/voices/kayleigh/kayleigh_recording_success.wav"
+        ]
+      },
+      {
+        "name": "recording failure",
+        "files": [
+          "/assets/audio/voices/kayleigh/kayleigh_recording_failure.wav"
+        ]
+      },
+      {
+        "name": "defeat",
+        "files": [
+          "/assets/audio/voices/kayleigh/kayleigh_defeat.wav"
+        ]
+      }
+    ]
+  },
+  "meredith": {
+    "file": "meredith",
+    "windup": [],
+    "hurt": [
+      {
+        "id": 8,
+        "path": "res://sfx/voices/meredith/meredith_hurt_1.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 7,
+        "path": "res://sfx/voices/meredith/meredith_hurt_2.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 3,
+        "path": "res://sfx/voices/meredith/meredith_hurt_3.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "recording": [
+      {
+        "id": 2,
+        "path": "res://sfx/voices/meredith/meredith_recording.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "recording_success": [
+      {
+        "id": 6,
+        "path": "res://sfx/voices/meredith/meredith_recording_success.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "recording_failure": [
+      {
+        "id": 4,
+        "path": "res://sfx/voices/meredith/meredith_recording_failure.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "transform": [],
+    "defeat": [
+      {
+        "id": 5,
+        "path": "res://sfx/voices/meredith/meredith_defeat.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "greeting": [],
+    "farewell": [],
+    "thanks": [],
+    "sigh_2": [],
+    "surprise_2": [],
+    "thinking": [],
+    "audioFiles": [
+      {
+        "name": "hurt",
+        "files": [
+          "/assets/audio/voices/meredith/meredith_hurt_1.wav",
+          "/assets/audio/voices/meredith/meredith_hurt_2.wav",
+          "/assets/audio/voices/meredith/meredith_hurt_3.wav"
+        ]
+      },
+      {
+        "name": "recording",
+        "files": [
+          "/assets/audio/voices/meredith/meredith_recording.wav"
+        ]
+      },
+      {
+        "name": "recording success",
+        "files": [
+          "/assets/audio/voices/meredith/meredith_recording_success.wav"
+        ]
+      },
+      {
+        "name": "recording failure",
+        "files": [
+          "/assets/audio/voices/meredith/meredith_recording_failure.wav"
+        ]
+      },
+      {
+        "name": "defeat",
+        "files": [
+          "/assets/audio/voices/meredith/meredith_defeat.wav"
+        ]
+      }
+    ]
+  },
+  "viola": {
+    "file": "viola",
+    "windup": [],
+    "hurt": [
+      {
+        "id": 4,
+        "path": "res://sfx/voices/viola/viola_hurt_1.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 5,
+        "path": "res://sfx/voices/viola/viola_hurt_2.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 8,
+        "path": "res://sfx/voices/viola/viola_hurt_3.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "recording": [
+      {
+        "id": 6,
+        "path": "res://sfx/voices/viola/viola_recording.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "recording_success": [
+      {
+        "id": 7,
+        "path": "res://sfx/voices/viola/viola_recording_success.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "recording_failure": [
+      {
+        "id": 3,
+        "path": "res://sfx/voices/viola/viola_recording_failure.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "transform": [],
+    "defeat": [
+      {
+        "id": 2,
+        "path": "res://sfx/voices/viola/viola_defeat.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "greeting": [],
+    "farewell": [],
+    "thanks": [],
+    "sigh_2": [],
+    "surprise_2": [],
+    "thinking": [],
+    "audioFiles": [
+      {
+        "name": "hurt",
+        "files": [
+          "/assets/audio/voices/viola/viola_hurt_1.wav",
+          "/assets/audio/voices/viola/viola_hurt_2.wav",
+          "/assets/audio/voices/viola/viola_hurt_3.wav"
+        ]
+      },
+      {
+        "name": "recording",
+        "files": [
+          "/assets/audio/voices/viola/viola_recording.wav"
+        ]
+      },
+      {
+        "name": "recording success",
+        "files": [
+          "/assets/audio/voices/viola/viola_recording_success.wav"
+        ]
+      },
+      {
+        "name": "recording failure",
+        "files": [
+          "/assets/audio/voices/viola/viola_recording_failure.wav"
+        ]
+      },
+      {
+        "name": "defeat",
+        "files": [
+          "/assets/audio/voices/viola/viola_defeat.wav"
+        ]
+      }
+    ]
+  }
+}

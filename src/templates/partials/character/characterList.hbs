@@ -1,0 +1,43 @@
+{{#> layouts/default }}
+
+{{> partials/breadcrumb }}
+
+<div class="page-options">
+  <label>
+    <input id="character-grid-checkbox" type="checkbox" role="switch" name="animated images"
+      onchange="toggleClassToId('character-grid', 'useGif', this.checked); setSetting('useGif', this.checked)">
+    <span>Use gifs</span>
+  </label>
+</div>
+
+<section id="character-grid" class="item-grid-list">
+  <h2 class="hidden">{{lookup @root.translate 'UI_BESTIARY_LIST_MODE_VIEW_MONSTERS'}}</h2>
+  {{#each data.list}}
+  <a href="/{{@root.langCode}}{{@root.routes.characters}}/{{this.resource_name}}.html"
+    class="grid-list-item animate__animated animate__fadeIn" data-title="{{this.name_localised}}"
+    data-description="{{this.description_localised}}" style="animation-delay: {{multiply @index 30 600}}ms;">
+    <div class="grid-list-item-image">
+      <img src="{{resimage this.icon_url}}" class="sprite" alt="image of {{this.name_localised}}" draggable="false">
+
+      {{#each this.animations}}
+      {{#if @first}}
+      <img src="{{resimage this.imageUrl}}" class="sprite-anim" alt="gif #{{this.id}} of {{data.name_localised}}"
+        draggable="false">
+      {{/if}}
+      {{/each}}
+
+      {{#each this.portraits}}
+      {{#if @first}}
+      <img src="{{resimage this}}" class="sticker animate__animated" alt="portrait of {{this.name_localised}}"
+        draggable="false">
+      {{/if}}
+      {{/each}}
+    </div>
+    <section class="grid-list-item-container">
+      <h2 class="Neu5Land heading">{{this.name_localised}}</h2>
+      <small class="description">{{this.description_localised}}</small>
+    </section>
+  </a>
+  {{/each}}
+</section>
+{{/layouts/default }}

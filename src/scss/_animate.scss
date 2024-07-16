@@ -1,0 +1,59 @@
+.animate__animated {
+  &.bounce-on-hover:hover {
+    animation: bounce;
+    animation-duration: 2s;
+  }
+
+  &.swing-hover:hover {
+    animation: swing;
+    animation-duration: 1s;
+  }
+
+  &.tada-hover:hover {
+    animation: tada;
+    animation-duration: 2s;
+  }
+
+  &.wobble-hover:hover {
+    animation: wobble;
+    animation-duration: 2s;
+  }
+
+  &.shakeX-hover:hover {
+    animation: shakeX;
+    animation-duration: 2s;
+  }
+
+  &.jello-hover:hover {
+    animation: jello;
+    animation-duration: 2s;
+  }
+}
+
+table {
+  &.highlight-row {
+    tbody tr:hover td {
+      background-color: var(--card-background-hover) !important;
+    }
+  }
+
+  &.highlight-cell {
+    tbody td:hover {
+      background-color: var(--card-background-hover) !important;
+    }
+  }
+}
+
+tr:hover {
+  td {
+    &.type img {
+      animation-name: wobble;
+      animation-duration: 1s;
+    }
+
+    &.sprite img {
+      animation-name: tada;
+      animation-duration: 1s;
+    }
+  }
+}

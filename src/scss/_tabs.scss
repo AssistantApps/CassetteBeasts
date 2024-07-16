@@ -1,0 +1,20 @@
+.controls {
+  margin: 0 1em;
+}
+
+img[class*='tab-content'],
+div[class*='tab-content'] {
+  display: none;
+}
+
+@for $i from 0 through 20 {
+  .tab#{$i} .tab-content-#{$i} {
+    display: block;
+  }
+
+  .tab#{$i} .tab-button-#{$i} {
+    color: white;
+    background-color: var(--brand-tertiary);
+    border: 3px solid var(--brand-tertiary);
+  }
+}
