@@ -10,6 +10,7 @@ import { IExternalResource } from 'contracts/externalResource';
 import { getExternalResourcesImagePath } from 'mapper/externalResourceMapper';
 import { getBotPath, getConfig } from 'services/internal/configService';
 import { copyFileIfNotExists, createFoldersOfDestFilePath } from './fileHelper';
+import { retryAsync } from './retryHelper';
 
 interface ICutImageWhenCopying {
   top: number;
@@ -50,30 +51,32 @@ export const cutImageFromSpriteSheet = async (props: ICutImageFromSpriteSheetPro
   const sprite = getExternalResourcesImagePath(props.spriteFilePath);
   if (sprite == null || sprite.length < 1) return;
 
-  try {
-    const srcSpriteSheet = path.join(paths().gameImagesFolder, sprite);
-    const destSprite = path.join(paths().generatedImagesFolder, sprite);
+  await retryAsync({
+    attempts: 3,
+    func: async () => {
+      const srcSpriteSheet = path.join(paths().gameImagesFolder, sprite);
+      const destSprite = path.join(paths().generatedImagesFolder, sprite);
 
-    if (fs.existsSync(destSprite)) {
-      if (props.overwrite) {
-        fs.unlinkSync(destSprite);
-      } else {
-        return;
+      if (fs.existsSync(destSprite)) {
+        if (props.overwrite) {
+          fs.unlinkSync(destSprite);
+        } else {
+          return;
+        }
       }
-    }
 
-    await sharp(srcSpriteSheet)
-      .extract({
-        left: props.boxSelection.x,
-        top: props.boxSelection.y,
-        width: props.boxSelection.width,
-        height: props.boxSelection.height,
-      })
-      .toFile(destSprite);
-    process.stdout.write('✔');
-  } catch (ex) {
-    console.error(ex);
-  }
+      await sharp(srcSpriteSheet)
+        .extract({
+          left: props.boxSelection.x,
+          top: props.boxSelection.y,
+          width: props.boxSelection.width,
+          height: props.boxSelection.height,
+        })
+        .toFile(destSprite);
+      process.stdout.write('✔');
+    },
+    onError: (ex) => console.error(ex),
+  });
 };
 
 export const copyImageToGeneratedFolder = async (

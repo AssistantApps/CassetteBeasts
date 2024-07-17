@@ -53,4 +53,9 @@ export const breadcrumb = {
     link: `/${langCode}${routes.statusEffect}/${encodeURI(item)}.html`,
     disabled: true,
   }),
+  world: (langCode: string, disabled: boolean = false): IBreadcrumb => ({
+    uiKey: UIKeys.map,
+    link: `/${langCode}${routes.map}`,
+    disabled,
+  }),
 };

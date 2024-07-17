@@ -195,7 +195,7 @@ export class WorldModule extends CommonModule<IWorld> {
   };
 
   writePages = async (langCode: string, localeModule: LocalisationModule) => {
-    const mainBreadcrumb = breadcrumb.character(langCode);
+    const mainBreadcrumb = breadcrumb.world(langCode);
     const relativePath = `${langCode}${routes.map}/index.html`;
 
     await getHandlebar().compileTemplateToFile({

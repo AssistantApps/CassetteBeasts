@@ -45,6 +45,7 @@ export const UIKeys = {
   noReaction: 'TYPE_CHART_NO_REACTION', // No Reaction
   buffs: 'TYPE_CHART_BUFFS', // Buff(s)
   debuffs: 'TYPE_CHART_DEBUFFS', // Debuff(s)
+  map: 'UI_PAUSE_MAP_BTN', // Map
 } as const;
 
 export const UIKeysRemoveTrailingColon = [

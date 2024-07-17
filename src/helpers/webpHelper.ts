@@ -13,6 +13,7 @@ import {
   getFolderFromFilePath,
 } from './fileHelper';
 import { uuidv4 } from './guidHelper';
+import { retryAsync } from './retryHelper';
 
 interface IProps {
   overwrite: boolean;
@@ -48,38 +49,41 @@ export const createWebpFromISpriteAnim = async (props: IProps) => {
       continue;
     }
 
-    const createdFiles: Array<string> = [];
-    try {
-      let frameDelay = (animation.length * 1000) / animation.frames.length;
-      if (isNaN(frameDelay)) frameDelay = 100;
-      const frameInstructions: Array<IFrameInstructions> = [];
-      for (const frame of animation.frames) {
-        const frameOutputFilePath = path.join(tempImageFolder, `${uuidv4()}.webp`);
-        await sharp(filePath)
-          .extract({
-            left: frame.x,
-            top: frame.y,
-            width: frame.width,
-            height: frame.height,
-          })
-          .webp({
-            lossless: true,
-          })
-          .toFile(frameOutputFilePath);
-        createdFiles.push(frameOutputFilePath);
-        frameInstructions.push({
-          path: frameOutputFilePath,
-          opts: `+${frameDelay}+0+0+0-b`,
-        });
-      }
+    const createdFilesFromRetry = await retryAsync({
+      attempts: 3,
+      func: async () => {
+        const createdFiles: Array<string> = [];
+        let frameDelay = (animation.length * 1000) / animation.frames.length;
+        if (isNaN(frameDelay)) frameDelay = 100;
+        const frameInstructions: Array<IFrameInstructions> = [];
+        for (const frame of animation.frames) {
+          const frameOutputFilePath = path.join(tempImageFolder, `${uuidv4()}.webp`);
+          await sharp(filePath)
+            .extract({
+              left: frame.x,
+              top: frame.y,
+              width: frame.width,
+              height: frame.height,
+            })
+            .webp({
+              lossless: true,
+            })
+            .toFile(frameOutputFilePath);
+          createdFiles.push(frameOutputFilePath);
+          frameInstructions.push({
+            path: frameOutputFilePath,
+            opts: `+${frameDelay}+0+0+0-b`,
+          });
+        }
 
-      await animateWebp({ frameInstructions, outputFilePath });
-      process.stdout.write('✔');
-    } catch (ex) {
-      console.error(ex);
-    }
+        await animateWebp({ frameInstructions, outputFilePath });
+        process.stdout.write('✔');
+        return createdFiles;
+      },
+      onError: (ex) => console.error(ex),
+    });
 
-    for (const createdFile of createdFiles) {
+    for (const createdFile of createdFilesFromRetry) {
       fs.unlinkSync(createdFile);
     }
   }
