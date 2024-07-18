@@ -1,6 +1,5 @@
 import { IExternalResource } from 'contracts/externalResource';
 import { IMonsterForm, IMonsterFormEnhanced } from 'contracts/monsterForm';
-import { IMove } from 'contracts/move';
 import { ISubAnimationResource } from 'contracts/subAnimationResource';
 import { ISubResource, ISubResourceMonsterEnhanced } from 'contracts/subResource';
 import { tryParseInt } from 'helpers/mathHelper';
@@ -12,7 +11,7 @@ import {
 } from 'helpers/stringHelper';
 import { getExternalResource, getExternalResources } from 'mapper/externalResourceMapper';
 import { getResources } from 'mapper/resourceMapper';
-import { CommonModule } from 'modules/commonModule';
+import { MovesModule } from 'modules/moves/movesModule';
 
 export const monsterFormMapFromDetailList =
   (folder: string) =>
@@ -89,7 +88,7 @@ export const monsterFormMapFromDetailList =
 export const getEvolutionMonster = (
   language: Record<string, string>,
   resource: ISubResource,
-  moveModule: CommonModule<IMove>,
+  moveModule: MovesModule,
   monsterDetails: IMonsterFormEnhanced,
 ): ISubResourceMonsterEnhanced => {
   if (monsterDetails == null) return null;

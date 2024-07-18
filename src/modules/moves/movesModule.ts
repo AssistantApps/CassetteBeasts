@@ -56,7 +56,7 @@ export class MovesModule extends CommonModule<IMove> {
       });
       this._baseDetails.push(detail);
     }
-    console.log(`\t${this._baseDetails.length} moves loaded.`);
+    return `${this._baseDetails.length} moves`;
   };
 
   enrichData = async (langCode: string, modules: Array<CommonModule<unknown>>) => {
@@ -164,8 +164,13 @@ export class MovesModule extends CommonModule<IMove> {
     }
   };
 
-  writePages = async (langCode: string, localeModule: LocalisationModule) => {
+  writePages = async (langCode: string, modules: Array<CommonModule<unknown>>) => {
+    const localeModule = this.getModuleOfType<ILocalisation>(
+      modules,
+      ModuleType.Localisation,
+    ) as LocalisationModule;
     const language: ILocalisation = localeModule.get(langCode);
+
     const mainBreadcrumb = breadcrumb.move(langCode);
     const list: Array<IMoveEnhanced> = [];
     for (const mapKey of Object.keys(this._itemDetailMap)) {

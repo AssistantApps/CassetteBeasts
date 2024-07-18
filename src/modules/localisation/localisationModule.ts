@@ -119,12 +119,10 @@ export class LocalisationModule extends CommonModule<ILocalisation> {
       }
     }
 
-    console.log(
-      `\t${Object.keys(this._itemDetailMap).length} languages loaded, with ${
-        Object.keys(this._itemDetailMap?.[defaultLocale]?.messages ?? {}).length
-      } keys per language.`,
-    );
     this.isReady = true;
+    return `${Object.keys(this._itemDetailMap).length} languages loaded, with ${
+      Object.keys(this._itemDetailMap?.[defaultLocale]?.messages ?? {}).length
+    } keys per language.`;
   };
 
   getLanguageCodes = () =>

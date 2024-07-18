@@ -68,7 +68,8 @@ export class CharacterModule extends CommonModule<ICharacter> {
         .map((file) => `res://sprites/portraits/${file}`);
       this._baseDetails.push(detail);
     }
-    console.log(`\t${this._baseDetails.length} characters loaded.`);
+
+    return `${this._baseDetails.length} characters`;
   };
 
   enrichData = async (langCode: string, modules: Array<CommonModule<unknown>>) => {
@@ -203,7 +204,12 @@ export class CharacterModule extends CommonModule<ICharacter> {
     }
   };
 
-  writePages = async (langCode: string, localeModule: LocalisationModule) => {
+  writePages = async (langCode: string, modules: Array<CommonModule<unknown>>) => {
+    const localeModule = this.getModuleOfType<ILocalisation>(
+      modules,
+      ModuleType.Localisation,
+    ) as LocalisationModule;
+
     const mainBreadcrumb = breadcrumb.character(langCode);
     const list: Array<ICharacterEnhanced> = [];
     for (const mapKey of Object.keys(this._itemDetailMap)) {

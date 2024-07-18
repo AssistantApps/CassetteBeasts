@@ -57,6 +57,7 @@ export const cutImageFromSpriteSheet = async (props: ICutImageFromSpriteSheetPro
       const srcSpriteSheet = path.join(paths().gameImagesFolder, sprite);
       const destSprite = path.join(paths().generatedImagesFolder, sprite);
 
+      createFoldersOfDestFilePath(destSprite);
       if (fs.existsSync(destSprite)) {
         if (props.overwrite) {
           fs.unlinkSync(destSprite);

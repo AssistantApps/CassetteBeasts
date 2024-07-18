@@ -9,6 +9,8 @@ export enum ModuleType {
   Elements,
   ElementReaction,
   StatusEffect,
+  Fusion,
+  FusionSpriteAnim,
   World,
   Misc,
   Version,

@@ -76,7 +76,12 @@ export class MiscModule extends CommonModule<ILocalisation> {
   initFromIntermediate = async () => {}; // no intermediate file
   writeIntermediate = () => {}; // no intermediate file
 
-  writePages = async (langCode: string, localeModule: LocalisationModule) => {
+  writePages = async (langCode: string, modules: Array<CommonModule<unknown>>) => {
+    const localeModule = this.getModuleOfType<ILocalisation>(
+      modules,
+      ModuleType.Localisation,
+    ) as LocalisationModule;
+
     const outputFiles = [`${langCode}/index.html`];
     if (langCode == defaultLocale) {
       outputFiles.push('index.html');

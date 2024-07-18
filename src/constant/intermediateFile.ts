@@ -9,6 +9,8 @@ export const IntermediateFile = {
   elements: 'elements.json',
   elementReactions: 'elementReactions.json',
   statusEffects: 'statusEffects.json',
+  fusion: 'fusion.json',
+  fusionSpriteAnim: 'fusionSpriteAnim.json',
   world: 'world.json',
   version: 'version.json',
   misc: 'misc.json',

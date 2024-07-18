@@ -16,6 +16,7 @@ export const handlebarTemplate = {
   statusEffectDetail: 'partials/statusEffect/statusEffectDetail.hbs',
   statusEffectMeta: 'partials/statusEffect/statusEffectMetaImage.hbs',
   worldTabs: 'partials/world/worldTabs.hbs',
+  fusionDetail: 'partials/fusion/fusionDetail.hbs',
 
   // misc
   analytics: 'misc/analytics.js.hbs',

@@ -10,7 +10,7 @@ export const retryAsync = async <T>(props: IRetryProps<T>): Promise<T | undefine
       const result = await props.func();
       return result;
     } catch (ex) {
-      if (attemptNum < props.attempts) continue;
+      if (attemptNum + 1 < props.attempts) continue;
       props.onError?.(ex);
     }
   }

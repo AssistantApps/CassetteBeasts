@@ -49,7 +49,7 @@ export class StatusEffectModule extends CommonModule<IStatusEffect> {
       });
       this._baseDetails.push(detail);
     }
-    console.log(`\t${this._baseDetails.length} status effects loaded.`);
+    return `${this._baseDetails.length} status effects`;
   };
 
   enrichData = async (langCode: string, modules: Array<CommonModule<unknown>>) => {
@@ -119,7 +119,12 @@ export class StatusEffectModule extends CommonModule<IStatusEffect> {
     }
   };
 
-  writePages = async (langCode: string, localeModule: LocalisationModule) => {
+  writePages = async (langCode: string, modules: Array<CommonModule<unknown>>) => {
+    const localeModule = this.getModuleOfType<ILocalisation>(
+      modules,
+      ModuleType.Localisation,
+    ) as LocalisationModule;
+
     const mainBreadcrumb = breadcrumb.statusEffect(langCode);
     const list: Array<IStatusEffectEnhanced> = [];
     for (const mapKey of Object.keys(this._itemDetailMap)) {

@@ -45,7 +45,7 @@ export class ElementReactionModule extends CommonModule<IElementReaction> {
       });
       this._baseDetails.push(detail);
     }
-    console.log(`\t${this._baseDetails.length} element reactions loaded.`);
+    return `${this._baseDetails.length} element reactions`;
   };
 
   enrichData = async (langCode: string, modules: Array<CommonModule<unknown>>) => {
@@ -130,7 +130,12 @@ export class ElementReactionModule extends CommonModule<IElementReaction> {
 
   get = getItemFromMapByIntId(this._itemDetailMap);
 
-  writePages = async (langCode: string, localeModule: LocalisationModule) => {
+  writePages = async (langCode: string, modules: Array<CommonModule<unknown>>) => {
+    const localeModule = this.getModuleOfType<ILocalisation>(
+      modules,
+      ModuleType.Localisation,
+    ) as LocalisationModule;
+
     const mainBreadcrumb = breadcrumb.element(langCode);
     const list: Array<IElementReaction> = [];
     for (const mapKey of Object.keys(this._itemDetailMap)) {

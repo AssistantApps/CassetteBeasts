@@ -7,4 +7,5 @@ export const routes = {
   statusEffect: '/statusEffect',
   elementReactions: '/elementReactions',
   map: '/map',
+  fusion: '/fusion',
 };

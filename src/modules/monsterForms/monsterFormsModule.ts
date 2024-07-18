@@ -83,14 +83,18 @@ export class MonsterFormsModule extends CommonModule<IMonsterForm> {
         }
       }
     }
-    console.log(`\t${this._baseDetails.length} monsters loaded.`);
+
+    return `${this._baseDetails.length} monsters`;
   };
 
   enrichData = async (langCode: string, modules: Array<CommonModule<unknown>>) => {
     const localeModule = this.getModuleOfType<ILocalisation>(modules, ModuleType.Localisation);
     const language = localeModule.get(langCode).messages;
     const elementModule = this.getModuleOfType<IElement>(modules, ModuleType.Elements);
-    const moveModule = this.getModuleOfType<IMove>(modules, ModuleType.Moves) as MovesModule;
+    const moveModule = this.getModuleOfType<IMove>(
+      modules,
+      ModuleType.Moves,
+    ) as unknown as MovesModule;
     const spriteAnimModule = this.getModuleOfType<ISpriteAnim>(
       modules,
       ModuleType.MonsterSpriteAnim,
@@ -246,7 +250,12 @@ export class MonsterFormsModule extends CommonModule<IMonsterForm> {
     }
   };
 
-  writePages = async (langCode: string, localeModule: LocalisationModule) => {
+  writePages = async (langCode: string, modules: Array<CommonModule<unknown>>) => {
+    const localeModule = this.getModuleOfType<ILocalisation>(
+      modules,
+      ModuleType.Localisation,
+    ) as LocalisationModule;
+
     const mainBreadcrumb = breadcrumb.monster(langCode);
     const list: Array<IMonsterFormEnhanced> = [];
     for (const mapKey of Object.keys(this._itemDetailMap)) {

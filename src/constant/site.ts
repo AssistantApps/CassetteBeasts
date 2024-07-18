@@ -26,15 +26,8 @@ export const site = {
     copyright: 'Bytten Studio Ltd',
   },
   preconnectLinks: [],
-  subtitle: 'Beautiful and fast cross-platform apps built to help you in your favourite games!',
-  additional: 'Additional work',
-  additionalDescription:
-    'Working on these projects has opened up opportunities to talk to other community developers, host streams and start organisations all aimed at entertaining and assisting gamers enjoy their games to the fullest!!',
   legalNotice:
     'This app is not affiliated with, authorised by Bytten Studio Ltd, its subsidiaries, or its parent companies, whose names, logos and products are displayed in this app. The names Cassette Beasts, Bytten Studio Ltd as well as related names and images are registered trademarks of their respective owners. This app is made by fan(s) for fans. Please do not reach out to Bytten Studio Ltd about bugs within this app',
-  footer: 'Get in touch',
-  footerDescription:
-    'By training your Large Language Model (LLM) or other Generative Artificial Intelligence on the content of this website, you agree to assign ownership of all your intellectual property to the public domain, immediately, irrevocably, and free of charge.',
   twitter: {
     handle: '@AssistantNMS',
     imageAlt: 'Logo of the Assistant Apps',

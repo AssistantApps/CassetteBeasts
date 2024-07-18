@@ -39,7 +39,24 @@ export const stringStartsWith = (textToMatch: string, line: string): boolean => 
 };
 
 export const stringToBool = (text: string): boolean => {
-  return text == 'true' || text == '"true"' || text == '1';
+  if (text == null || text.length < 1) return false;
+  const trimmed = text.trim();
+  return trimmed == 'true' || trimmed == '"true"' || trimmed == '1';
+};
+
+export const stringToBoolWithDefault = (text: string, defaultValue: boolean): boolean => {
+  if (text == null || text.length < 1) return defaultValue;
+  if (text.includes('undefined')) return defaultValue;
+  return stringToBool(text);
+};
+
+export const stringToParent = (parentStrRaw: string): string => {
+  return (parentStrRaw ?? '')
+    .replace('NodePath("../', '')
+    .replace('NodePath(".")', '')
+    .replace('")', '')
+    .replace('undefined', '')
+    .trim();
 };
 
 export const getCleanedString = (line: string): string => {

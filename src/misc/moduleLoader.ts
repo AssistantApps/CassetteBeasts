@@ -9,7 +9,7 @@ export const smartLoadingModules = async (props: {
   reInitialise?: boolean;
   loadFromJson?: boolean;
 }) => {
-  const initTasks: Array<Promise<void>> = [];
+  const initTasks: Array<Promise<string | void>> = [];
   for (const module of props.modules) {
     if (props.reInitialise == true) {
       module.isReady = false;
@@ -21,9 +21,13 @@ export const smartLoadingModules = async (props: {
       initTasks.push(module.init());
     }
   }
-  await Promise.all(initTasks);
+  console.log('');
+  const initMessages = await Promise.all(initTasks);
+  for (const message of initMessages) {
+    if (message) console.log(`\t${message}`);
+  }
 
-  console.log('Modules initialised');
+  console.log('\nModules initialised');
   const modulesLoaded: Array<ModuleType> = [];
   for (const module of props.modules) {
     if (module.isReady) {
@@ -34,7 +38,7 @@ export const smartLoadingModules = async (props: {
   if (debugModuleLoading)
     console.log(`Modules already ready: ${modulesLoaded.map((m) => ModuleType[m]).join(', ')}`);
 
-  console.log('Enriching data');
+  console.log('Enriching data\n');
   let loadingAttemptCount = 0;
   let moduleNeedsLoading = false;
   do {

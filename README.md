@@ -13,7 +13,7 @@
   ![gitmoji](https://github.com/AssistantApps/.github/blob/main/badges/gitmoji.svg?raw=true)<br />
   ![Profile views](https://komarev.com/ghpvc/?username=AssistantApps&color=green&style=for-the-badge)
 
-[![Follow on Twitter](https://img.shields.io/twitter/follow/AssistantApps?color=%231d9bf0&style=for-the-badge)][assistantAppsTwitter]
+[![Follow on Twitter](https://img.shields.io/badge/follow-%40AssistantApps-1d9bf0?logo=twitter&style=for-the-badge)][assistantAppsTwitter]
 [![Discord](https://img.shields.io/discord/625007826913198080?style=for-the-badge)][discord]
 
   <br /> 

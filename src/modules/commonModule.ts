@@ -50,7 +50,7 @@ export class CommonModule<T> {
     }
   };
 
-  init = async () => {};
+  init = async (): Promise<string | void> => undefined;
   enrichData = (langCode: string, modules: Array<CommonModule<unknown>>) => {};
   combineData = (langCode: string, modules: Array<CommonModule<unknown>>) => {};
   getImagesFromGameFiles = async (overwrite: boolean) => promiseFromResult(anyObject);
@@ -145,5 +145,5 @@ export class CommonModule<T> {
     fs.writeFileSync(destBaseFile, JSON.stringify(this._baseDetails, null, 2), 'utf-8');
   };
 
-  writePages = async (langCode: string, localeModule: LocalisationModule) => {};
+  writePages = async (langCode: string, modules: Array<CommonModule<unknown>>) => {};
 }

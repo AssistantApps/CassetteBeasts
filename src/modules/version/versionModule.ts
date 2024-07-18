@@ -27,9 +27,8 @@ export class VersionModule extends CommonModule<IVersion> {
       folder: path.join(getConfig().getUnpackedDir(), 'res'),
       mapFromDetailList: VersionMapFromDetailList,
     });
-
-    console.log(`\tVersion details loaded.`);
     this.isReady = true;
+    return `Version details\n`;
   };
 
   get = (_: string) => this._itemDetailMap[this._fileName];

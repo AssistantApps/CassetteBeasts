@@ -33,7 +33,8 @@ export class ElementsModule extends CommonModule<IElement> {
       });
       this._baseDetails.push(detail);
     }
-    console.log(`\t${this._baseDetails.length} elements loaded.`);
+
+    return `${this._baseDetails.length} elements`;
   };
 
   enrichData = async (langCode: string, modules: Array<CommonModule<unknown>>) => {

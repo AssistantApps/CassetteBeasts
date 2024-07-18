@@ -76,7 +76,7 @@ export class WorldModule extends CommonModule<IWorld> {
     const map_chunk_metas = this._baseDetails.flatMap((map) =>
       Object.keys(map.chunk_meta_data),
     ).length;
-    console.log(`\t${this._baseDetails.length} world files loaded with ${map_chunk_metas} chunks.`);
+    return `${this._baseDetails.length} world files loaded with ${map_chunk_metas} chunks.`;
   };
 
   enrichData = async (langCode: string, modules: Array<CommonModule<unknown>>) => {
@@ -194,7 +194,12 @@ export class WorldModule extends CommonModule<IWorld> {
     // }
   };
 
-  writePages = async (langCode: string, localeModule: LocalisationModule) => {
+  writePages = async (langCode: string, modules: Array<CommonModule<unknown>>) => {
+    const localeModule = this.getModuleOfType<ILocalisation>(
+      modules,
+      ModuleType.Localisation,
+    ) as LocalisationModule;
+
     const mainBreadcrumb = breadcrumb.world(langCode);
     const relativePath = `${langCode}${routes.map}/index.html`;
 

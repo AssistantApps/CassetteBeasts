@@ -25,4 +25,7 @@ export const FolderPathHelper = {
   world: () => dataPath('map_metadata'),
   worldPier: () => path.join(dataPath('map_metadata'), 'pier'),
   worldMeta: (metaDataPath) => path.join(getConfig().getUnpackedDir(), 'res', metaDataPath),
+  fusions: () => dataPath('fusions'),
+  fusionSpriteAnim: () => spritePath('fusions'),
+  fusionSpriteAnimSubFolder: (subFolder: string) => path.join(spritePath('fusions'), subFolder),
 };

@@ -22,3 +22,6 @@ Use [Godot RE Tools](https://github.com/bruvzg/gdsdecomp/releases) to convert so
 - All json files in `sprites/characters/battle`
   - _A cheaty way to do this easily, is to select all files and let the Godot RE Tools report errors on most of the selected files 😅_
   - This will create `.txt` files
+- All json files in each folder in `sprites/fusions`
+  - _A cheaty way to do this easily, is to select all files and let the Godot RE Tools report errors on most of the selected files 😅_
+  - This will create `.txt` files

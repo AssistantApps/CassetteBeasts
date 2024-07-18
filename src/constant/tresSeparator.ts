@@ -3,4 +3,5 @@ export const tresSeparator = {
   subResource: '[sub_resource',
   subAnimResource: '[sub_resource type="Animation"',
   resource: '[resource',
+  node: '[node name=',
 } as const;

@@ -36,7 +36,8 @@ export class CharacterSfxModule extends CommonModule<ICharacterSfx> {
       });
       this._baseDetails.push(detail);
     }
-    console.log(`\t${this._baseDetails.length} characterSfx loaded.`);
+
+    return `${this._baseDetails.length} characterSfx`;
   };
 
   enrichData = async (langCode: string, modules: Array<CommonModule<unknown>>) => {
