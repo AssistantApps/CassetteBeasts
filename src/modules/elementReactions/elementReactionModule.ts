@@ -54,6 +54,7 @@ export class ElementReactionModule extends CommonModule<IElementReaction> {
     const elementModule = this.getModuleOfType<IElement>(modules, ModuleType.Elements);
     const statusModule = this.getModuleOfType<IStatusEffect>(modules, ModuleType.StatusEffect);
 
+    this._effectGrid = [];
     const pathToId = (path: string) =>
       path.replace('res://data/elemental_types/', '').replace('.tres', '');
 
@@ -131,11 +132,6 @@ export class ElementReactionModule extends CommonModule<IElementReaction> {
   get = getItemFromMapByIntId(this._itemDetailMap);
 
   writePages = async (langCode: string, modules: Array<CommonModule<unknown>>) => {
-    const localeModule = this.getModuleOfType<ILocalisation>(
-      modules,
-      ModuleType.Localisation,
-    ) as LocalisationModule;
-
     const mainBreadcrumb = breadcrumb.element(langCode);
     const list: Array<IElementReaction> = [];
     for (const mapKey of Object.keys(this._itemDetailMap)) {
@@ -163,7 +159,7 @@ export class ElementReactionModule extends CommonModule<IElementReaction> {
     await getHandlebar().compileTemplateToFile({
       data: this.getBasicPageData({
         langCode,
-        localeModule,
+        modules,
         documentTitleUiKey: mainBreadcrumb.uiKey,
         breadcrumbs: [mainBreadcrumb],
         data: { grid: this._effectGrid },

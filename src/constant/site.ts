@@ -78,11 +78,14 @@ export const site = {
     twitter: AppImage.meta,
     facebook: AppImage.meta,
   },
+  google: {
+    verificationKey: '',
+  },
   github: {
     repo: 'https://github.com/AssistantApps/CassetteBeasts',
   },
   assistantApps: {
-    appGuid: '82e3ee0e-ad76-40b3-cfc7-08dc33b02b7f',
+    appGuid: '343224c4-4d40-4ce1-68ad-08dcab0020d7',
     name: 'AssistantApps',
     email: 'mailto:support@assistantapps.com',
     website: 'https://assistantapps.com',
@@ -104,10 +107,6 @@ export const site = {
       twitter: '@KhaozTopsy',
       discord: '@KhaozTopsy',
     },
-  },
-  navigation: {
-    privacyPolicy: '/privacy_policy.html',
-    termsAndConditions: '/terms_and_conditions.html',
   },
   projectStartDate: '2024-07-12',
   contactEmail: 'support@assistantapps.com',

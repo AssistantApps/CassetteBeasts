@@ -195,18 +195,13 @@ export class WorldModule extends CommonModule<IWorld> {
   };
 
   writePages = async (langCode: string, modules: Array<CommonModule<unknown>>) => {
-    const localeModule = this.getModuleOfType<ILocalisation>(
-      modules,
-      ModuleType.Localisation,
-    ) as LocalisationModule;
-
     const mainBreadcrumb = breadcrumb.world(langCode);
     const relativePath = `${langCode}${routes.map}/index.html`;
 
     await getHandlebar().compileTemplateToFile({
       data: this.getBasicPageData({
         langCode,
-        localeModule,
+        modules,
         documentTitleUiKey: mainBreadcrumb.uiKey,
         breadcrumbs: [mainBreadcrumb],
         data: { list: Object.values(this._itemDetailMap) },

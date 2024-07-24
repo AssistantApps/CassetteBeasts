@@ -16,12 +16,6 @@
     <meta name="designer" content="{{humans.kurt.name}}">
     <meta name="owner" content="{{humans.kurt.name}}">
 
-    <link rel="icon" type="image/x-icon" href="{{images.favicon.ico}}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{images.favicon.x16}}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{images.favicon.x32}}">
-    <link rel="icon" type="image/png" sizes="96x96" href="{{images.favicon.x96}}">
-    <link rel="icon" type="image/png" sizes="192x192" href="{{images.favicon.x192}}">
-
     {{#each alternateUrls}}
     <link rel="alternate" href="{{href}}" hreflang="{{lang}}">
     {{/each}}
@@ -45,21 +39,16 @@
     <link rel="search" href="opensearch.xml" type="application/opensearchdescription+xml" title="Search Title">
     <meta name="revised" content="{{datelong}}">
 
+    {{> partials/favicon}}
+
     <!-- Google -->
     <meta name="googlebot" content="index,follow">
     <meta name="google" content="nositelinkssearchbox">
-    <meta name="mobile-web-app-capable" content="yes">
-    <!-- <meta name="google-site-verification" content="verification_token"> -->
+    <!-- <meta name="google-site-verification" content="{{google.verificationKey}}"> -->
 
     <!-- Apple -->
-    <link rel="icon" type="image/png" sizes="76x76" href="{{images.apple.x76}}">
-    <link rel="icon" type="image/png" sizes="114x114" href="{{images.apple.x114}}">
-    <link rel="icon" type="image/png" sizes="120x120" href="{{images.apple.x120}}">
-    <link rel="icon" type="image/png" sizes="144x144" href="{{images.apple.x144}}">
-    <link rel="icon" type="image/png" sizes="152x152" href="{{images.apple.x152}}">
     <link rel="mask-icon" href="{{images.maskIcon}}" color="{{theme.maskColour}}">
     <meta name="apple-mobile-web-app-title" content="{{meta.appName}}">
-    <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="{{theme.appleStatusBar}}">
 
     <!-- Twitter -->

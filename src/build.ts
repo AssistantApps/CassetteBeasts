@@ -4,6 +4,7 @@ import path from 'path';
 import Container from 'typedi';
 import url from 'url';
 
+import { generateFavicons } from 'misc/favicon';
 import { smartLoadingModules } from 'misc/moduleLoader';
 import { setupDirectories } from 'misc/setup';
 import { getModules } from 'modules';
@@ -26,6 +27,7 @@ const main = async () => {
   getHandlebar().registerPartialsAndHelpers();
 
   console.log(`Generating images`);
+  await generateFavicons();
   for (const module of modules) {
     await module.generateImages(true, modules);
   }
@@ -42,12 +44,11 @@ const main = async () => {
       loadFromJson: true,
     });
     for (const module of modules) {
-      // await module.generateImages(false, modules);
-      await module.writePages(langCode, localisationModule);
+      await module.writePages(langCode, modules);
     }
 
     for (const module of modules) {
-      // await module.generateMetaImages(langCode, localisationModule, false);
+      await module.generateMetaImages(langCode, localisationModule, false);
     }
     console.log('');
   }

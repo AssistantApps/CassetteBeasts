@@ -14,4 +14,5 @@ export enum ModuleType {
   World,
   Misc,
   Version,
+  AssistantApps,
 }

@@ -28,7 +28,7 @@ export class FusionModule extends CommonModule<IFusion> {
     super({
       type: ModuleType.Fusion,
       intermediateFile: IntermediateFile.fusion,
-      dependsOn: [ModuleType.MonsterForms, ModuleType.FusionSpriteAnim],
+      dependsOn: [ModuleType.Localisation, ModuleType.MonsterForms, ModuleType.FusionSpriteAnim],
     });
   }
 
@@ -110,6 +110,7 @@ export class FusionModule extends CommonModule<IFusion> {
       modules,
       ModuleType.Localisation,
     ) as LocalisationModule;
+    const language = localeModule.getTranslationMapForLocal(langCode).messages;
     const monsterModule = this.getModuleOfType<IMonsterForm>(modules, ModuleType.MonsterForms);
 
     const mainBreadcrumb = breadcrumb.fusion(langCode);
@@ -118,7 +119,7 @@ export class FusionModule extends CommonModule<IFusion> {
     const monsterIdB = 'springheel';
     const monsterA = monsterModule.get(monsterIdA);
     const monsterB = monsterModule.get(monsterIdB);
-    const fusionKey = monsterA.fusion_name_prefix + monsterB.fusion_name_suffix;
+    const fusionKey = language[monsterA.fusion_name_prefix] + language[monsterB.fusion_name_suffix];
 
     const monsterFusionA: IFusionEnhanced = this._itemDetailMap[monsterIdA];
     const monsterFusionB: IFusionEnhanced = this._itemDetailMap[monsterIdB];
@@ -130,7 +131,7 @@ export class FusionModule extends CommonModule<IFusion> {
     const relativePath = `${langCode}${routes.fusion}/${encodeURI(fusionKey)}.html`;
     const detailPageData = this.getBasicPageData({
       langCode,
-      localeModule,
+      modules,
       documentTitle: fusionKey,
       breadcrumbs: [mainBreadcrumb, breadcrumb.fusionDetail(langCode, fusionKey)],
       data: {

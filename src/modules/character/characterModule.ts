@@ -205,11 +205,6 @@ export class CharacterModule extends CommonModule<ICharacter> {
   };
 
   writePages = async (langCode: string, modules: Array<CommonModule<unknown>>) => {
-    const localeModule = this.getModuleOfType<ILocalisation>(
-      modules,
-      ModuleType.Localisation,
-    ) as LocalisationModule;
-
     const mainBreadcrumb = breadcrumb.character(langCode);
     const list: Array<ICharacterEnhanced> = [];
     for (const mapKey of Object.keys(this._itemDetailMap)) {
@@ -218,7 +213,7 @@ export class CharacterModule extends CommonModule<ICharacter> {
       const relativePath = `${langCode}${routes.characters}/${encodeURI(mapKey)}.html`;
       const detailPageData = this.getBasicPageData({
         langCode,
-        localeModule,
+        modules,
         documentTitle: details.name_localised,
         breadcrumbs: [mainBreadcrumb, breadcrumb.characterDetail(langCode, details.name_localised)],
         data: details,
@@ -237,7 +232,7 @@ export class CharacterModule extends CommonModule<ICharacter> {
     await getHandlebar().compileTemplateToFile({
       data: this.getBasicPageData({
         langCode,
-        localeModule,
+        modules,
         documentTitleUiKey: mainBreadcrumb.uiKey,
         breadcrumbs: [mainBreadcrumb],
         data: { list: sortedList },

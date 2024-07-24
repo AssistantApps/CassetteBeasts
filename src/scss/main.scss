@@ -34,6 +34,10 @@
   --card-background-hover: #{darken($gameCardBackground, 10%)};
   --card-foreground: #{$gameCardForeground};
   --card-border-radius: 5px;
+
+  // --assistantapps-font-family: 'Neu5Land', Helvetica, Arial, sans-serif;
+  --assistantapps-team-member-link-text-colour: #{$brand-tertiary};
+  --assistantapps-font-weight: 'light';
 }
 
 .mt-1 {
@@ -42,6 +46,10 @@
 
 .mb-1 {
   margin-bottom: 1em;
+}
+
+.ml-1 {
+  margin-left: 1em;
 }
 
 .noselect {
@@ -57,15 +65,6 @@
   /* Internet Explorer/Edge */
   user-select: none;
   /* Non-prefixed version, currently supported by Chrome and Opera */
-}
-
-img,
-br {
-  @extend .noselect;
-}
-
-.cursor-pointer {
-  cursor: pointer;
 }
 
 ::selection {
@@ -108,6 +107,15 @@ br {
   );
 }
 
+img,
+br {
+  @extend .noselect;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
 .hidden {
   display: none;
 }
@@ -133,4 +141,8 @@ br {
   overflow: hidden;
   display: block;
   text-overflow: ellipsis;
+}
+
+[data-tooltip]:not(a, button, input) {
+  border-bottom: none;
 }

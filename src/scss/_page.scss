@@ -92,13 +92,47 @@ body.overflow-x-hidden {
   grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
 }
 
+.header {
+  a {
+    --pico-color: white;
+    text-decoration: none;
+  }
+  .branding {
+    &:hover {
+      .logo {
+        animation: tada;
+        animation-duration: 2s;
+      }
+      .title span {
+        animation: waive;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-delay: calc(0.1s * var(--i));
+      }
+    }
+    .title span {
+      display: inline-block;
+    }
+  }
+}
+
 main {
-  min-height: calc(100vh - 10em);
+  min-height: calc(100vh - 11em);
 }
 
 footer {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   --pico-block-spacing-vertical: 0.8rem;
+
+  .legal {
+    font-size: 0.75rem;
+    margin-bottom: 0.5em;
+  }
+
+  small {
+    display: inline-block;
+    padding-inline: 1em;
+  }
 }
 
 .btn-border-hover {

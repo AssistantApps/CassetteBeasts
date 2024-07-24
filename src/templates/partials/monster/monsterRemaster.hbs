@@ -33,13 +33,16 @@
         </a>
     </td>
     <td class="specialisation">
+        {{#if this.specialization_localised.length}}
         <a href="/{{@root.langCode}}{{@root.routes.monsters}}/{{encodeuri this.resource_name}}.html"
-            title="{{this.name_localised}}">
-            {{#if this.specialization_localised.length}}
+            title="{{this.name_localised}}" class="ml-1">
             {{this.specialization_localised}}
-            {{else if this.required_move_move}}
-            {{this.required_move_move.name_localised}} sticker
-            {{/if}}
         </a>
+        {{else if this.required_move_move}}
+        <a href="/{{@root.langCode}}{{@root.routes.monsters}}/{{encodeuri this.required_move_move.id}}"
+            title="{{this.required_move_move.name_localised}}" class="ml-1">
+            {{this.required_move_move.name_localised}}
+        </a>
+        {{/if}}
     </td>
 </tr>

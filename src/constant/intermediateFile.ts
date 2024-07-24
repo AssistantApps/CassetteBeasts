@@ -13,5 +13,7 @@ export const IntermediateFile = {
   fusionSpriteAnim: 'fusionSpriteAnim.json',
   world: 'world.json',
   version: 'version.json',
+
   misc: 'misc.json',
+  assistantAppsLanguage: 'assistantApps.lang.json',
 };

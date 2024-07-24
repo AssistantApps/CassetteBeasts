@@ -6,12 +6,12 @@
   <label>
     <input id="monster-grid-checkbox" type="checkbox" role="switch" name="animated images"
       onchange="toggleClassToId('monster-grid', 'useGif', this.checked); setSetting('useGif', this.checked)">
-    <span>Use gifs</span>
+    <span>{{lookup @root.translate 'useGifs'}}</span>
   </label>
   <select name="Sort by" aria-label="Sort by" required
     onchange="orderItemsByDataAttr('monster-grid', event.target.value)">
-    <option value="title">Alphabetical</option>
-    <option value="id">Bestiary Id</option>
+    <option value="title">{{lookup @root.translate 'alphabetical'}}</option>
+    <option value="id">{{lookup @root.translate 'bestiaryId'}}</option>
   </select>
 </div>
 

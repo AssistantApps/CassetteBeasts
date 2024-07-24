@@ -18,6 +18,7 @@ import { ILocalisation } from 'contracts/localisation';
 import { FolderPathHelper } from 'helpers/folderPathHelper';
 import { stringStartsWith } from 'helpers/stringHelper';
 import { CommonModule } from 'modules/commonModule';
+import { paths } from 'constant/paths';
 
 const excludeLangCodes = ['eo'];
 
@@ -125,16 +126,37 @@ export class LocalisationModule extends CommonModule<ILocalisation> {
     } keys per language.`;
   };
 
+  loadAssistantAppsLanguage = () => {
+    const aaSrcFile = path.join(paths().intermediateFolder, IntermediateFile.assistantAppsLanguage);
+    const jsonString = fs.readFileSync(aaSrcFile, 'utf-8');
+    const langExportMap = JSON.parse(jsonString);
+    for (const langExportKey of Object.keys(langExportMap)) {
+      if (this._itemDetailMap[langExportKey]?.messages == null) {
+        console.error(
+          `Language "${langExportKey}" does not exist in LocalisationModule._itemDetailMap`,
+        );
+        continue;
+      }
+
+      const langMap = langExportMap[langExportKey];
+      for (const langMapKey of Object.keys(langMap)) {
+        const value = langMap[langMapKey];
+        this._itemDetailMap[langExportKey].messages[langMapKey] = value;
+      }
+    }
+  };
+
   getLanguageCodes = () =>
     Object.keys(this._itemDetailMap).filter((lang) => !excludeLangCodes.includes(lang));
 
-  getTranslationMapForLocal = (locale: string) => {
+  getTranslationMapForLocal = (locale: string): ILocalisation => {
     if (this._itemDetailMap[locale] == null) {
       console.error(`Locale '${locale}' does not exist`);
       return this._itemDetailMap[defaultLocale];
     }
     return this._itemDetailMap[locale];
   };
+
   getUITranslations = (locale: string): Record<string, string> => {
     let localLocal = locale;
     if (this._itemDetailMap[locale] == null) {

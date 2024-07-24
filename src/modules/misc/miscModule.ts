@@ -54,7 +54,7 @@ export class MiscModule extends CommonModule<ILocalisation> {
         imageUrl: AppImage.moves,
       },
       {
-        title: 'Characters',
+        uiKey: 'characters',
         url: routes.characters,
         gameUrl: characterModule.get('kayleigh').portraits[0],
       },
@@ -77,27 +77,12 @@ export class MiscModule extends CommonModule<ILocalisation> {
   writeIntermediate = () => {}; // no intermediate file
 
   writePages = async (langCode: string, modules: Array<CommonModule<unknown>>) => {
-    const localeModule = this.getModuleOfType<ILocalisation>(
-      modules,
-      ModuleType.Localisation,
-    ) as LocalisationModule;
+    await Promise.all([
+      this.writeMiscPage(langCode, routes.home, handlebarTemplate.home, modules),
+      this.writeMiscPage(langCode, routes.about, handlebarTemplate.about, modules),
+    ]);
 
-    const outputFiles = [`${langCode}/index.html`];
-    if (langCode == defaultLocale) {
-      outputFiles.push('index.html');
-    }
-
-    await getHandlebar().compileTemplateToFile({
-      data: this.getBasicPageData({
-        langCode,
-        localeModule,
-        breadcrumbs: [],
-        data: { cards: this._cards },
-      }),
-      outputFiles,
-      templateFile: handlebarTemplate.home,
-    });
-
+    if (langCode != defaultLocale) return;
     const miscFiles: Array<{ src: string; dest?: string }> = [
       { src: handlebarTemplate.cname, dest: 'CNAME' },
       { src: handlebarTemplate.colour, dest: '../src/scss/_colour.scss' },
@@ -108,18 +93,18 @@ export class MiscModule extends CommonModule<ILocalisation> {
       { src: handlebarTemplate.sitemap },
       { src: handlebarTemplate.humans },
       { src: handlebarTemplate.robots },
-      { src: handlebarTemplate.site },
     ];
 
     const enableServiceWorker = getConfig().getEnableServiceWorker();
     if (enableServiceWorker === true) {
       miscFiles.push({ src: handlebarTemplate.serviceWorker });
     }
+
     for (const miscFile of miscFiles) {
       await getHandlebar().compileTemplateToFile({
         data: this.getBasicPageData({
           langCode,
-          localeModule,
+          modules,
           breadcrumbs: [],
           data: {},
         }),
@@ -127,5 +112,28 @@ export class MiscModule extends CommonModule<ILocalisation> {
         templateFile: miscFile.src,
       });
     }
+  };
+
+  private writeMiscPage = async (
+    langCode: string,
+    outputFile: string,
+    handleBarTemplate: string,
+    modules: Array<CommonModule<unknown>>,
+  ) => {
+    const outputFiles = [`${langCode}${outputFile}`];
+    if (langCode == defaultLocale) {
+      outputFiles.push(outputFile);
+    }
+
+    await getHandlebar().compileTemplateToFile({
+      data: this.getBasicPageData({
+        langCode,
+        modules,
+        breadcrumbs: [],
+        data: { cards: this._cards },
+      }),
+      outputFiles,
+      templateFile: handleBarTemplate,
+    });
   };
 }

@@ -189,7 +189,7 @@ export class MovesModule extends CommonModule<IMove> {
 
       const detailPageData = this.getBasicPageData({
         langCode,
-        localeModule,
+        modules,
         documentTitle: details.name_localised,
         description: limitLengthWithEllipse(details.description_localised, 125),
         breadcrumbs: [mainBreadcrumb, breadcrumb.moveDetail(langCode, details.name_localised)],
@@ -208,7 +208,7 @@ export class MovesModule extends CommonModule<IMove> {
     await getHandlebar().compileTemplateToFile({
       data: this.getBasicPageData({
         langCode,
-        localeModule,
+        modules,
         documentTitleUiKey: mainBreadcrumb.uiKey,
         breadcrumbs: [mainBreadcrumb],
         data: { list: sortedList },

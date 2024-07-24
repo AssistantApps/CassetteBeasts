@@ -116,7 +116,9 @@ export class MonsterFormsModule extends CommonModule<IMonsterForm> {
         bestiary_index_with_padding:
           detail.bestiary_index >= 0 ? pad(detail.bestiary_index, 3) : '???',
         name_localised: language[detail.name],
-        description_localised: language[detail.description],
+        description_localised: language[detail.description]
+          .replaceAll("\\'", "'")
+          .replaceAll('\\"', '"'),
         icon_url,
         sprite_sheet_path: detail.battle_sprite_path.replace('.json', '.sheet.png'),
         evolution_specialization_question_localised:
@@ -251,11 +253,6 @@ export class MonsterFormsModule extends CommonModule<IMonsterForm> {
   };
 
   writePages = async (langCode: string, modules: Array<CommonModule<unknown>>) => {
-    const localeModule = this.getModuleOfType<ILocalisation>(
-      modules,
-      ModuleType.Localisation,
-    ) as LocalisationModule;
-
     const mainBreadcrumb = breadcrumb.monster(langCode);
     const list: Array<IMonsterFormEnhanced> = [];
     for (const mapKey of Object.keys(this._itemDetailMap)) {
@@ -265,7 +262,7 @@ export class MonsterFormsModule extends CommonModule<IMonsterForm> {
       const relativePath = `${langCode}${routes.monsters}/${encodeURI(mapKey)}.html`;
       const detailPageData = this.getBasicPageData({
         langCode,
-        localeModule,
+        modules,
         documentTitle: details.name_localised,
         description: limitLengthWithEllipse(details.bestiary_bios_localised.join(' '), 125),
         breadcrumbs: [mainBreadcrumb, breadcrumb.monsterDetail(langCode, details.name_localised)],
@@ -286,7 +283,7 @@ export class MonsterFormsModule extends CommonModule<IMonsterForm> {
     await getHandlebar().compileTemplateToFile({
       data: this.getBasicPageData({
         langCode,
-        localeModule,
+        modules,
         documentTitleUiKey: mainBreadcrumb.uiKey,
         breadcrumbs: [mainBreadcrumb],
         data: { list: sortedList },

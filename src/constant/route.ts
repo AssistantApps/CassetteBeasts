@@ -8,4 +8,8 @@ export const routes = {
   elementReactions: '/elementReactions',
   map: '/map',
   fusion: '/fusion',
+
+  //
+  home: '/index.html',
+  about: '/about.html',
 };

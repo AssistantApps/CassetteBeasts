@@ -13,6 +13,8 @@ import { sortByStringProperty } from 'helpers/sortHelper';
 import { getConfig } from 'services/internal/configService';
 import { anyObject, promiseFromResult } from 'helpers/typescriptHacks';
 import { defaultLocale } from 'constant/localisation';
+import { ILocalisation } from 'contracts/localisation';
+import { AssistantAppsModule } from './assistantApps/assistantAppsModule';
 
 export class CommonModule<T> {
   type: ModuleType;
@@ -67,7 +69,7 @@ export class CommonModule<T> {
 
   getBasicPageData = <TK>(props: {
     langCode: string;
-    localeModule: LocalisationModule;
+    modules: Array<CommonModule<unknown>>;
     breadcrumbs: Array<IBreadcrumb>;
     documentTitleUiKey?: string;
     documentTitle?: string;
@@ -75,7 +77,19 @@ export class CommonModule<T> {
     relativePath?: string;
     data: TK;
   }): PageData<TK> => {
-    const language = props.localeModule.get(props.langCode).messages;
+    const localeModule = this.getModuleOfType<ILocalisation>(
+      props.modules,
+      ModuleType.Localisation,
+      true,
+    ) as LocalisationModule;
+    const assistantAppsModule = this.getModuleOfType<ILocalisation>(
+      props.modules,
+      ModuleType.AssistantApps,
+      true,
+    ) as AssistantAppsModule;
+    const language = localeModule.get(props.langCode).messages;
+    const translationRecords = localeModule.getUITranslations(props.langCode);
+    const aaTranslationRecords = assistantAppsModule.getUITranslations(props.langCode);
 
     const humansArray = Object.keys(site.humans).map((h) => site.humans[h]);
     const version = getConfig().packageVersion();
@@ -83,7 +97,7 @@ export class CommonModule<T> {
 
     const alternateUrls = [];
     if (props.relativePath != null) {
-      for (const lang of props.localeModule.getLanguageCodes()) {
+      for (const lang of localeModule.getLanguageCodes()) {
         const langSpecificRelPath = props.relativePath.replace(props.langCode, lang);
         const indexOfDivider = lang.indexOf('_');
         alternateUrls.push({
@@ -96,6 +110,11 @@ export class CommonModule<T> {
         lang: 'x-default',
       });
     }
+
+    const combinedTranslationRecords = {
+      ...translationRecords,
+      ...aaTranslationRecords,
+    };
 
     return {
       ...site,
@@ -113,8 +132,8 @@ export class CommonModule<T> {
       documentTitle: props.documentTitle,
       documentTitleUiKey: props.documentTitleUiKey,
       breadcrumbs: [breadcrumb.home(props.langCode), ...props.breadcrumbs],
-      translate: props.localeModule.getUITranslations(props.langCode),
-      availableLanguages: props.localeModule
+      translate: combinedTranslationRecords,
+      availableLanguages: localeModule
         .getLanguageCodes()
         .map((lang) => ({
           id: lang,

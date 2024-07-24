@@ -35,9 +35,9 @@
             <tr>
               <td class="ta-center">{{ lookup @root.translate 'MOVE_DESCRIPTION_POWER' }}</td>
               <td class="ta-center">{{ lookup @root.translate 'STAT_accuracy' }}</td>
-              <td class="ta-center">Cost</td>
+              <td class="ta-center">{{ lookup @root.translate 'cost' }}</td>
               <td class="ta-center">{{ lookup @root.translate 'STAT_priority_chance' }}</td>
-              <td class="ta-center">Can be copied</td>
+              <td class="ta-center">{{ lookup @root.translate 'canBeCopied' }}</td>
             </tr>
           </thead>
           <tbody>
@@ -45,7 +45,7 @@
               <td class="ta-center">{{data.power}}</td>
               <td class="ta-center">
                 {{#if data.unavoidable}}
-                Unavoidable
+                {{ lookup @root.translate 'unavoidable' }}
                 {{else}}
                 {{data.accuracy}}%
                 {{/if}}

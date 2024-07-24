@@ -48,12 +48,12 @@
 
       <div class="extra">
         {{#if this.power}}
-        <small><b>Power: </b>{{this.power}}</small>
+        <small><b>{{lookup @root.translate 'MOVE_DESCRIPTION_POWER'}}: </b>{{this.power}}</small>
         {{/if}}
         {{#if this.accuracy}}
         <small><b>{{ lookup @root.translate 'STAT_accuracy' }}: </b>
           {{#if this.unavoidable}}
-          Unavoidable
+          {{lookup @root.translate 'unavoidable'}}
           {{else}}
           {{this.accuracy}}%
           {{/if}}

@@ -1,3 +1,4 @@
+import { AssistantAppsModule } from 'modules/assistantApps/assistantAppsModule';
 import { CharacterModule } from 'modules/character/characterModule';
 import { CharacterSfxModule } from 'modules/characterSfx/characterSfxModule';
 import { CharacterSpriteAnimModule } from 'modules/characterSpriteAnim/characterSpriteAnimModule';
@@ -29,6 +30,7 @@ export const getModules = async (props: {
     new MiscModule(),
     new WorldModule(),
     new VersionModule(),
+    new AssistantAppsModule(),
 
     // Element
     new ElementsModule(),

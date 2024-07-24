@@ -1,22 +1,29 @@
 <footer class="ta-center">
-    <small>This app is not affiliated with, authorised by <span class="tertiary">Bytten Studio Ltd</span>, its
-        subsidiaries, or its parent companies,
-        whose names, logos and products are displayed in this app.</small>
+    <small class="legal">{{{translatewithformat @root.translate 'legalNotice' '<span class="tertiary">Bytten Studio
+            Ltd</span>'
+        'Cassette Beasts'}}}.</small>
     <br>
     <small class="assistantApps ta-center">
         <span>© Assistant Apps. All rights reserved.</span>
         <span>&nbsp;|&nbsp;</span>
         <span>
-            <a href="/privacy_policy.html" target="_blank" rel="noopener noreferrer" title="Privacy Policy">Privacy
-                Policy</a>
+            <a href="{{@root.routes.about}}" title="{{lookup @root.translate 'about'}}">{{lookup @root.translate
+                'about'}}</a>
+        </span>
+        <span>&nbsp;|&nbsp;</span>
+        <span>
+            <a href="/privacy_policy.html" target="_blank" rel="noopener noreferrer"
+                title="{{lookup @root.translate 'privacyPolicy'}}">
+                {{lookup @root.translate 'privacyPolicy'}}
+            </a>
         </span>
         <span>&nbsp;|&nbsp;</span>
         <span>
             <a href="/terms_and_conditions.html" target="_blank" rel="noopener noreferrer"
-                title="Terms and Conditions">Terms &amp;
-                Conditions</a>
+                title="{{lookup @root.translate 'termsAndConditions'}}">
+                {{lookup @root.translate 'termsAndConditions'}}</a>
         </span>
         <span>&nbsp;|&nbsp;</span>
-        <small>v{{version}}</small>
+        <span>v{{version}}</span>
     </small>
 </footer>

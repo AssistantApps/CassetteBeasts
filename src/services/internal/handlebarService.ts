@@ -35,25 +35,21 @@ export class HandlebarService {
       },
     );
 
-    forEachFileInDirRecursive(
-      path.join(paths().templatesFolder, 'layouts'),
-      (fileName: string, filePath: string) => {
-        if (!fileName.endsWith('.hbs')) return;
-        const name = `layouts/${fileName.replace('.hbs', '')}`;
-        Handlebars.registerPartial(name, fs.readFileSync(filePath, 'utf-8'));
-        this._registeredPartials.push(name);
-      },
-    );
+    const registerPartialsForFolder = (folder: string) => {
+      forEachFileInDirRecursive(
+        path.join(paths().templatesFolder, folder),
+        (fileName: string, filePath: string) => {
+          if (!fileName.endsWith('.hbs')) return;
+          const name = `${folder}/${fileName.replace('.hbs', '')}`;
+          Handlebars.registerPartial(name, fs.readFileSync(filePath, 'utf-8'));
+          this._registeredPartials.push(name);
+        },
+      );
+    };
 
-    forEachFileInDirRecursive(
-      path.join(paths().templatesFolder, 'partials'),
-      (fileName: string, filePath: string) => {
-        if (!fileName.endsWith('.hbs')) return;
-        const name = `partials/${fileName.replace('.hbs', '')}`;
-        Handlebars.registerPartial(name, fs.readFileSync(filePath, 'utf-8'));
-        this._registeredPartials.push(name);
-      },
-    );
+    registerPartialsForFolder('layouts');
+    registerPartialsForFolder('partials');
+    registerPartialsForFolder('pages');
   };
 
   unregisterPartialsAndHelpers = () => {
@@ -130,7 +126,7 @@ export class HandlebarService {
       fs.writeFileSync(
         destFullFilePath,
         Object.keys(gitIgnoreFiles)
-          .map((f) => `/${f}`)
+          .map((f) => `/${f}`.replace('//', '/'))
           .join('\n'),
         'utf8',
       );

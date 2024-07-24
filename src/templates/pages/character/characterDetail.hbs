@@ -34,12 +34,12 @@
         <div class="controls noselect animate__animated animate__fadeIn">
           <div class="button-slanted cursor-pointer tab-button-0"
             onclick="applyClassToId('sprite-tab-container', 'tab', 'tab0')">
-            <span class="button-slanted-content">Static</span>
+            <span class="button-slanted-content">{{lookup @root.translate 'static'}}</span>
           </div>
           {{#each data.animations}}
           <div class="button-slanted cursor-pointer tab-button-{{inc @index}}"
             onclick="applyClassToId('sprite-tab-container', 'tab', 'tab{{inc @index}}')">
-            <span class="button-slanted-content">gif {{inc @index}}</span>
+            <span class="button-slanted-content">{{translatewithformat @root.translate 'gifNum' (inc @index)}}</span>
           </div>
           {{/each}}
         </div>
@@ -76,7 +76,7 @@
           title="view {{data.name_localised}} on the wiki" role="button" class="btn-border-hover outline secondary">
           <img src="/assets/img/wiki.png" alt="wiki logo">
           <div class="text">
-            <h6>View on wiki.cassettebeasts.com</h6>
+            <h6>{{translatewithformat @root.translate 'viewOn' 'wiki.cassettebeasts.com'}}</h6>
           </div>
         </a>
       </section>
@@ -104,14 +104,15 @@
           {{#each data.portraits}}
           <div class="button-slanted cursor-pointer tab-button-{{@index}}"
             onclick="applyClassToId('portrait-tab-container', 'tab', 'tab{{@index}}')">
-            <span class="button-slanted-content">portrait {{inc @index}}</span>
+            <span class="button-slanted-content">{{translatewithformat @root.translate 'portraitNum' (inc
+              @index)}}</span>
           </div>
           {{/each}}
         </div>
       </div>
 
       <section class="additional-section additional animate__animated animate__fadeIn">
-        <h3 class="section-heading Neu5Land">Partner Monster</h3>
+        <h3 class="section-heading Neu5Land">{{lookup @root.translate 'partnerMonster'}}</h3>
         <a href="/{{@root.langCode}}{{@root.routes.monsters}}/{{encodeuri data.partner_signature_species_monsters.resource_name}}.html"
           title="{{data.partner_signature_species_monsters.name_localised}}">
           <img src="{{data.partner_image_url}}" class="tape-image animate__animated tada-hover"

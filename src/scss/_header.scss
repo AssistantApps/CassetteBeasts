@@ -20,4 +20,8 @@ header.header {
       box-shadow: none;
     }
   }
+
+  #language-dropdown.dropdown summary + ul {
+    z-index: 100;
+  }
 }

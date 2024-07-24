@@ -120,11 +120,6 @@ export class StatusEffectModule extends CommonModule<IStatusEffect> {
   };
 
   writePages = async (langCode: string, modules: Array<CommonModule<unknown>>) => {
-    const localeModule = this.getModuleOfType<ILocalisation>(
-      modules,
-      ModuleType.Localisation,
-    ) as LocalisationModule;
-
     const mainBreadcrumb = breadcrumb.statusEffect(langCode);
     const list: Array<IStatusEffectEnhanced> = [];
     for (const mapKey of Object.keys(this._itemDetailMap)) {
@@ -134,7 +129,7 @@ export class StatusEffectModule extends CommonModule<IStatusEffect> {
       const relativePath = `${langCode}${routes.statusEffect}/${encodeURI(mapKey)}.html`;
       const detailPageData = this.getBasicPageData({
         langCode,
-        localeModule,
+        modules,
         documentTitle: details.name_localised,
         breadcrumbs: [
           mainBreadcrumb,
@@ -156,7 +151,7 @@ export class StatusEffectModule extends CommonModule<IStatusEffect> {
     await getHandlebar().compileTemplateToFile({
       data: this.getBasicPageData({
         langCode,
-        localeModule,
+        modules,
         documentTitleUiKey: mainBreadcrumb.uiKey,
         breadcrumbs: [mainBreadcrumb],
         data: { list: sortedList },

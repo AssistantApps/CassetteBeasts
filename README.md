@@ -1,7 +1,7 @@
 <div align="center">
   
   # Cassette Beasts data extraction
-  _A basic website for info about the game [Cassette Beast][cassetteBeastWebsite]._
+  _A basic website for info about the game [Cassette Beasts][cassetteBeastWebsite]._
   
   <br />  
   

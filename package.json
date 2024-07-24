@@ -9,11 +9,13 @@
   "author": "Kurt Lourens",
   "license": "GPL-3.0-only",
   "dependencies": {
+    "@assistantapps/assistantapps.api.client": "^0.0.26",
     "@resvg/resvg-js": "^2.6.2",
     "@types/node": "^20.14.9",
     "alive-server": "^1.3.0",
     "canvas": "^2.11.2",
     "dotenv-cli": "^7.4.2",
+    "favicons": "^7.2.0",
     "gif-encoder-2": "^1.0.5",
     "handlebars": "^4.7.8",
     "node-watch": "^0.7.4",

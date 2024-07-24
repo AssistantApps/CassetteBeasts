@@ -1,0 +1,56 @@
+{{#> layouts/default }}
+
+<section id="about-grid" class="mb-1">
+    <h1 class="ta-center">{{lookup @root.translate 'about'}}</h1>
+
+    <article class="mb-1">
+        <div class="grid about">
+            <div class="content">
+                This website is a "quick" passion project for <a href="{{urlref humans.kurt.website}}"
+                    title="{{humans.kurt.name}}">me ({{humans.kurt.additionalName}})</a>. It was born out of a desire to
+                keep enjoying the game even though i was nearing the end of <a
+                    href="{{urlref 'https://www.cassettebeasts.com'}}" title="Cassette Beasts website"
+                    rel="noopener noreferrer" target="_blank">Cassette Beasts</a>, almost completing all the missions
+                and the bestiary.
+
+                <br><br>
+
+                I have a range of apps that I make available under the <a href="{{urlref assistantApps.website}}"
+                    title="{{assistantApps.name}}">{{assistantApps.name}}</a> name. This small website will be
+                considered as one of the apps, although I suspect it will always be smaller than the other games. But I
+                am happy for that assumption to be proven wrong! 😂
+
+                <br><br>
+
+                <span class="hidden-in-mobile">On the right hand side</span><span class="hidden-in-desktop">Below</span>
+                are the members of <a href="{{urlref assistantApps.website}}"
+                    title="{{assistantApps.name}}">{{assistantApps.name}}</a>. Their roles are different per app, but I
+                could not have gotten to where I am without them 💖.
+
+                <br><br>
+
+                Get in contact with us in the following ways:
+                <ul>
+                    <li>
+                        <a href="{{urlref assistantApps.discord}}" title="{{assistantApps.name}}">Our Discord server</a>
+                    </li>
+                    <li>
+                        Email us at <a href="mailto:go-away-bot-scraper@fake.com" title="click to reveal email"
+                            data-email="{{email assistantApps.email}}" onclick="revealEmail(this, event)">"Click to
+                            reveal"</a>
+                    </li>
+                </ul>
+                <i>We try to be as responsive as possible, but your message might fall through the cracks.</i>
+            </div>
+            <assistant-apps-team-list></assistant-apps-team-list>
+        </div>
+    </article>
+</section>
+
+<section class="mb-1">
+    <h1 class="mt-1 ta-center">{{lookup @root.translate 'patrons'}}</h1>
+
+    <assistant-apps-patreon-list></assistant-apps-patreon-list>
+</section>
+
+{{/layouts/default }}

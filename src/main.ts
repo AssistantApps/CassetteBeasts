@@ -4,6 +4,8 @@ import path from 'path';
 import Container from 'typedi';
 import url from 'url';
 
+import { TemplateGenerationSpeed } from 'constant/handlebar';
+import { generateFavicons } from 'misc/favicon';
 import { smartLoadingModules } from 'misc/moduleLoader';
 import { validateModules } from 'misc/moduleValidator';
 import {
@@ -17,7 +19,6 @@ import { watchDevFiles } from 'misc/watchDevFiles';
 import { getModules } from 'modules';
 import { BOT_PATH } from 'services/internal/configService';
 import { getHandlebar } from 'services/internal/handlebarService';
-import { TemplateGenerationSpeed } from 'constant/handlebar';
 
 const currentFileName = url.fileURLToPath(import.meta.url);
 const directory = path.dirname(currentFileName);
@@ -40,21 +41,8 @@ const main = async () => {
   console.log('✔ Done\r\n');
 
   let repeatMenuOptions = true;
-  const menuLookup: { [key: string]: () => Promise<void> } = {
-    changeLanguage: async () => {
-      const newLang = await languagePrompt(availableLanguages);
-      if (newLang == null) return;
-      langCode = newLang;
-      console.log('Re-Initialising modules');
-      await smartLoadingModules({ langCode, modules });
-      console.log('✔ Done\r\n');
-    },
-    createIntermediateFiles: async () => {
-      setupDirectories({ delete: true });
-      for (const module of modules) {
-        await module.writeIntermediate();
-      }
-    },
+
+  const imageMenuLookup: { [key: string]: () => Promise<void> } = {
     copyImagesFromGameFiles: async () => {
       getHandlebar().unregisterPartialsAndHelpers();
       getHandlebar().registerPartialsAndHelpers();
@@ -71,6 +59,7 @@ const main = async () => {
         await module.generateMetaImages(langCode, localisationModule, false);
       }
     },
+    generateFavicons,
     generateAllImages: async () => {
       getHandlebar().unregisterPartialsAndHelpers();
       getHandlebar().registerPartialsAndHelpers();
@@ -101,11 +90,31 @@ const main = async () => {
         await module.copyWav(overwrite);
       }
     },
+    exit: async () => {},
+  };
+  const menuLookup: { [key: string]: () => Promise<void> } = {
+    changeLanguage: async () => {
+      const newLang = await languagePrompt(availableLanguages);
+      if (newLang == null) return;
+      langCode = newLang;
+      console.log('Re-Initialising modules');
+      await smartLoadingModules({ langCode, modules });
+      console.log('✔ Done\r\n');
+    },
+    createIntermediateFiles: async () => {
+      setupDirectories({ delete: true });
+      for (const module of modules) {
+        await module.writeIntermediate();
+      }
+    },
+    manageAssets: async () => {
+      await mainMenu(imageMenuLookup, () => {});
+    },
     createPages: async () => {
       getHandlebar().unregisterPartialsAndHelpers();
       getHandlebar().registerPartialsAndHelpers();
       for (const module of modules) {
-        await module.writePages(langCode, localisationModule);
+        await module.writePages(langCode, modules);
       }
     },
     watchPagesExit: async () => {
@@ -122,7 +131,7 @@ const main = async () => {
           getHandlebar().unregisterPartialsAndHelpers();
           getHandlebar().registerPartialsAndHelpers();
           for (const module of modules) {
-            module.writePages(langCode, localisationModule);
+            module.writePages(langCode, modules);
           }
         },
       });
