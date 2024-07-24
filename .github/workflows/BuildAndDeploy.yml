@@ -39,9 +39,10 @@ jobs:
           echo POSTHOG_ANALYTICS_CODE="${{ secrets.POSTHOG_ANALYTICS_CODE }}" >> .env
           echo ENABLE_SERVICE_WORKER="${{ secrets.ENABLE_SERVICE_WORKER }}" >> .env
 
-      - name: chown workspace
+      - name: Allow webpmux to execute
         run: |
-          sudo chown -R $(whoami):$(whoami) $GITHUB_WORKSPACE
+          chmod +x ./lib/webpmux
+          chmod +x ./lib/webpmux.exe
 
       - name: Build TS
         run: |
