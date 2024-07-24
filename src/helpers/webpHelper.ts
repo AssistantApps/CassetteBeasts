@@ -25,7 +25,7 @@ export const createWebpFromISpriteAnim = async (props: IProps) => {
   const sprite = getExternalResourcesImagePath(props.spriteFilePath);
   if (sprite == null || sprite.length < 1) return;
 
-  const filePath = path.join(getConfig().getUnpackedDir(), 'res', sprite);
+  const srcSpriteSheet = path.join(paths().gameImagesFolder, sprite);
   const generatedFolder = path.join(getBotPath(), 'public', 'assets', 'img', 'generated');
   const destSprite = path.join(generatedFolder, sprite);
   const destFolder = getFolderFromFilePath(destSprite);
@@ -44,7 +44,7 @@ export const createWebpFromISpriteAnim = async (props: IProps) => {
       }
     }
 
-    if (!fs.existsSync(filePath)) {
+    if (!fs.existsSync(srcSpriteSheet)) {
       process.stdout.write('❌');
       continue;
     }
@@ -58,7 +58,7 @@ export const createWebpFromISpriteAnim = async (props: IProps) => {
         const frameInstructions: Array<IFrameInstructions> = [];
         for (const frame of animation.frames) {
           const frameOutputFilePath = path.join(tempImageFolder, `${uuidv4()}.webp`);
-          await sharp(filePath)
+          await sharp(srcSpriteSheet)
             .extract({
               left: frame.x,
               top: frame.y,
