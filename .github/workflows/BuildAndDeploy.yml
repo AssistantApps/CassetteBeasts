@@ -39,6 +39,10 @@ jobs:
           echo POSTHOG_ANALYTICS_CODE="${{ secrets.POSTHOG_ANALYTICS_CODE }}" >> .env
           echo ENABLE_SERVICE_WORKER="${{ secrets.ENABLE_SERVICE_WORKER }}" >> .env
 
+      - name: chown workspace
+        run: |
+          sudo chown -R $(whoami):$(whoami) $GITHUB_WORKSPACE
+
       - name: Build TS
         run: |
           npm ci
