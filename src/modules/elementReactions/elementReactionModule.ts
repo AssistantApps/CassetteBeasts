@@ -34,6 +34,8 @@ export class ElementReactionModule extends CommonModule<IElementReaction> {
   }
 
   init = async () => {
+    this._baseDetails = [];
+    this._itemDetailMap = {};
     if (this.isReady) return;
     const list = fs.readdirSync(this._folder);
 

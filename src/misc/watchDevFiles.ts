@@ -1,10 +1,9 @@
 import aliveServer from 'alive-server';
-import fs from 'fs';
 import watch from 'node-watch';
 import path from 'path';
-import sass from 'sass';
 
 import { paths } from 'constant/paths';
+import { generateMainCss } from './sass';
 
 interface IWatchDevFiles {
   onSassChange?: () => void;
@@ -21,11 +20,7 @@ export const watchDevFiles = (props: IWatchDevFiles) => {
 
   watch(paths().scssFolder, { recursive: true }, () => {
     try {
-      const cssContent = sass.compile('src/scss/main.scss');
-      fs.writeFileSync('public/assets/css/main.css', cssContent.css);
-      if (cssContent.sourceMap != null) {
-        fs.writeFileSync('public/assets/css/main.css.map', JSON.stringify(cssContent.sourceMap));
-      }
+      generateMainCss();
       props.onSassChange?.();
     } catch (ex) {
       console.error(ex);

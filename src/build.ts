@@ -6,6 +6,7 @@ import url from 'url';
 
 import { generateFavicons } from 'misc/favicon';
 import { smartLoadingModules } from 'misc/moduleLoader';
+import { generateMainCss } from 'misc/sass';
 import { setupDirectories } from 'misc/setup';
 import { getModules } from 'modules';
 import { BOT_PATH } from 'services/internal/configService';
@@ -27,6 +28,7 @@ const main = async () => {
   getHandlebar().registerPartialsAndHelpers();
 
   await generateFavicons();
+  generateMainCss();
 
   const availableLanguages = localisationModule.getLanguageCodes();
   let langCode = availableLanguages[0];

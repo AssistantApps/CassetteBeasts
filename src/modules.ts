@@ -5,8 +5,6 @@ import { CharacterSpriteAnimModule } from 'modules/characterSpriteAnim/character
 import { CommonModule } from 'modules/commonModule';
 import { ElementReactionModule } from 'modules/elementReactions/elementReactionModule';
 import { ElementsModule } from 'modules/elements/elementsModule';
-import { FusionModule } from 'modules/fusion/fusionModule';
-import { FusionSpriteAnimModule } from 'modules/fusionSpriteAnim/fusionSpriteAnimModule';
 import { LocalisationModule } from 'modules/localisation/localisationModule';
 import { MiscModule } from 'modules/misc/miscModule';
 import { MonsterFormsModule } from 'modules/monsterForms/monsterFormsModule';
@@ -48,8 +46,8 @@ export const getModules = async (props: {
     new CharacterSfxModule(),
 
     // Fusions
-    new FusionModule(),
-    new FusionSpriteAnimModule(),
+    // new FusionModule(),
+    // new FusionSpriteAnimModule(),
   ];
   return [localisationModule, modules];
 };
