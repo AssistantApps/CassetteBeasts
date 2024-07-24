@@ -19,12 +19,6 @@
     <meta name="designer" content="Kurt Lourens">
     <meta name="owner" content="Kurt Lourens">
 
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon/android-chrome-192x192.png">
-
 
     <meta name="url" content="https://cassettebeasts.assistantapps.com/">
     <meta name="identifier-URL" content="https://cassettebeasts.assistantapps.com/">
@@ -43,23 +37,38 @@
     <meta name="distribution" content="Global">
     <meta name="generator" content="custom scripts using HandlebarJS">
     <link rel="search" href="opensearch.xml" type="application/opensearchdescription+xml" title="Search Title">
-    <meta name="revised" content="Wed Jul 17 2024">
+    <meta name="revised" content="Wed Jul 24 2024">
 
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon/favicon-48x48.png">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="manifest" href="/manifest.webmanifest">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicon/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicon/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/assets/favicon/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/assets/favicon/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/assets/favicon/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/assets/favicon/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/assets/favicon/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/assets/favicon/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="/assets/favicon/apple-touch-icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="1024x1024" href="/assets/favicon/apple-touch-icon-1024x1024.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Assistant for Cassette Beasts">
     <!-- Google -->
     <meta name="googlebot" content="index,follow">
     <meta name="google" content="nositelinkssearchbox">
-    <meta name="mobile-web-app-capable" content="yes">
-    <!-- <meta name="google-site-verification" content="verification_token"> -->
+    <!-- <meta name="google-site-verification" content=""> -->
 
     <!-- Apple -->
-    <link rel="icon" type="image/png" sizes="76x76" href="/assets/favicon/apple-76.png">
-    <link rel="icon" type="image/png" sizes="114x114" href="/assets/favicon/apple-114.png">
-    <link rel="icon" type="image/png" sizes="120x120" href="/assets/favicon/apple-120.png">
-    <link rel="icon" type="image/png" sizes="144x144" href="/assets/favicon/apple-144.png">
-    <link rel="icon" type="image/png" sizes="152x152" href="/assets/favicon/apple-152.png">
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#1b1f22">
     <meta name="apple-mobile-web-app-title" content="Assistant for Cassette Beasts">
-    <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="#1b1f22">
 
     <!-- Twitter -->
@@ -127,9 +136,9 @@
                 "jobTitle": "Senior Software Engineer",
             },
             "inLanguage": "en",
-            "dateCreated": "2024-07-17",
-            "dateModified": "2024-07-17",
-            "datePublished": "2024-07-17"
+            "dateCreated": "2024-07-24",
+            "dateModified": "2024-07-24",
+            "datePublished": "2024-07-24"
         }
     </script></head>
 <body class="overflow-x-hidden">
@@ -137,24 +146,27 @@
     <header class="header">
         <div class="container noselect">
             <nav>
-                <ul>
-                    <li>
-                        <div class="logo">
-                            <img src="/assets/img/logo.png" alt="splash">
-                        </div>
-                    </li>
-                    <li>
-                        Assistant for <b>Cassette Beasts</b>
-                    </li>
-                </ul>
-    
+                <a aria-label="Home" href="/index.html">
+                    <ul class="branding">
+                        <li>
+                            <div class="logo animate__animated">
+                                <img src="/assets/img/logo.png" alt="splash">
+                            </div>
+                        </li>
+                        <li class="title">
+                            <span style="--i:1">Assistant </span>
+                            <span style="--i:2">for </span>
+                            <span style="--i:3"><b>Cassette Beasts</b></span>
+                        </li>
+                    </ul>
+                </a>
     
                 <ul>
                 </ul>
     
     
                 <ul class="icons">
-                    <li>
+                    <li data-tooltip="언어" data-placement="bottom">
                         <details id="language-dropdown" class="dropdown">
                             <summary class="role-link">
                                 <img src="/assets/img/language.png"
@@ -184,9 +196,22 @@
                             </ul>
                         </details>
                     </li>
-                    <li>
+                    <li data-tooltip="About" data-placement="bottom">
+                        <a class="contrast" aria-label="About" href="/about.html">
+                            <svg fill="#000000" height="24" width="24" viewBox="0 0 128 128" version="1.1"
+                                xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <path
+                                    d="M64,1C29.3,1,1,29.3,1,64s28.3,63,63,63s63-28.3,63-63S98.7,1,64,1z M64,119C33.7,119,9,94.3,9,64S33.7,9,64,9   s55,24.7,55,55S94.3,119,64,119z"
+                                    stroke="white" fill="white" />
+                                <rect height="40" width="8" x="60" y="54.5" stroke="white" fill="white" />
+                                <rect height="8" width="8" x="60" y="35.5" stroke="white" fill="white" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li data-tooltip="Github repository" data-placement="bottom">
                         <a rel="noopener noreferrer" class="contrast" aria-label="GitHub repository"
-                            href="https://github.com/AssistantApps/CassetteBeasts" target="_blank">
+                            href="https://github.com/AssistantApps/CassetteBeasts?ref&#x3D;assistantCBS" target="_blank">
                             <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24.25" viewBox="0 0 496 512"
                                 class="icon-github">
                                 <path
@@ -195,7 +220,7 @@
                             </svg>
                         </a>
                     </li>
-                    <li>
+                    <li data-tooltip="AssistantApps" data-placement="bottom">
                         <a class="contrast" aria-label="Turn off dark mode" href="https://assistantapps.com">
                             <img src="/assets/img/assistantApps-32.png" height="24" width="24" alt="assistant apps logo">
                         </a>
@@ -205,6 +230,9 @@
         </div>
     </header>
     <main class="container page-container">
+
+        <assistant-apps-app-notice-list appguid="343224c4-4d40-4ce1-68ad-08dcab0020d7"
+            langcode="ko_KR"></assistant-apps-app-notice-list>
 
         
         <ul class="breadcrumb noselect">
@@ -262,7 +290,7 @@
               <small class="description">대상 하나를 공격한다. 무작위 디버프를 부여한다.</small>
         
               <div class="extra">
-                <small><b>Power: </b>90</small>
+                <small><b>공격력: </b>90</small>
                 <small><b>명중률: </b>
                   100%
                 </small>
@@ -335,7 +363,7 @@
         
               <div class="extra">
                 <small><b>명중률: </b>
-                  Unavoidable
+                  피하기 어려운
                 </small>
               </div>
             </section>
@@ -369,7 +397,7 @@
         
               <div class="extra">
                 <small><b>명중률: </b>
-                  Unavoidable
+                  피하기 어려운
                 </small>
               </div>
             </section>
@@ -551,7 +579,7 @@
               <small class="description">대상 하나를 공격한다.</small>
         
               <div class="extra">
-                <small><b>Power: </b>60</small>
+                <small><b>공격력: </b>60</small>
                 <small><b>명중률: </b>
                   100%
                 </small>
@@ -591,7 +619,7 @@
         
               <div class="extra">
                 <small><b>명중률: </b>
-                  Unavoidable
+                  피하기 어려운
                 </small>
               </div>
             </section>
@@ -653,7 +681,7 @@
         
               <div class="extra">
                 <small><b>명중률: </b>
-                  Unavoidable
+                  피하기 어려운
                 </small>
               </div>
             </section>
@@ -698,7 +726,7 @@
               <small class="description">대상 하나를 공격한다.</small>
         
               <div class="extra">
-                <small><b>Power: </b>60</small>
+                <small><b>공격력: </b>60</small>
                 <small><b>명중률: </b>
                   100%
                 </small>
@@ -784,7 +812,7 @@
               <small class="description">일정 확률로 적이 움찔하게 만든다.</small>
         
               <div class="extra">
-                <small><b>Power: </b>30</small>
+                <small><b>공격력: </b>30</small>
                 <small><b>명중률: </b>
                   100%
                 </small>
@@ -826,7 +854,7 @@
               <small class="description">한 팀의 각 팀원을 여러 번 공격한다.</small>
         
               <div class="extra">
-                <small><b>Power: </b>40</small>
+                <small><b>공격력: </b>40</small>
                 <small><b>명중률: </b>
                   100%
                 </small>
@@ -870,7 +898,7 @@
               <small class="description">대상 하나를 공격한다. 사용자의 원거리 공격이 아닌 속도에 비례한다.</small>
         
               <div class="extra">
-                <small><b>Power: </b>70</small>
+                <small><b>공격력: </b>70</small>
                 <small><b>명중률: </b>
                   85%
                 </small>
@@ -914,7 +942,7 @@
               <small class="description">팀 전체를 공격한다.</small>
         
               <div class="extra">
-                <small><b>Power: </b>60</small>
+                <small><b>공격력: </b>60</small>
                 <small><b>명중률: </b>
                   100%
                 </small>
@@ -1154,7 +1182,7 @@
         
               <div class="extra">
                 <small><b>명중률: </b>
-                  Unavoidable
+                  피하기 어려운
                 </small>
               </div>
             </section>
@@ -1200,7 +1228,7 @@
               <small class="description">대상 하나를 공격한다. 유리 및 금속 타입 대상에게 공진을 적용한다.</small>
         
               <div class="extra">
-                <small><b>Power: </b>60</small>
+                <small><b>공격력: </b>60</small>
                 <small><b>명중률: </b>
                   100%
                 </small>
@@ -1249,7 +1277,7 @@
               <small class="description">대상 하나를 여러 차례 공격한다.</small>
         
               <div class="extra">
-                <small><b>Power: </b>60</small>
+                <small><b>공격력: </b>60</small>
                 <small><b>명중률: </b>
                   100%
                 </small>
@@ -1740,7 +1768,7 @@
               <small class="description">대상 하나를 공격한다. 잠시 후 사용자를 회복시킨다.</small>
         
               <div class="extra">
-                <small><b>Power: </b>80</small>
+                <small><b>공격력: </b>80</small>
                 <small><b>명중률: </b>
                   100%
                 </small>
@@ -1875,7 +1903,7 @@
               <small class="description">대상 하나를 공격한다. 일정 확률로 대상에게 화상을 입힌다.</small>
         
               <div class="extra">
-                <small><b>Power: </b>90</small>
+                <small><b>공격력: </b>90</small>
                 <small><b>명중률: </b>
                   100%
                 </small>
@@ -1919,7 +1947,7 @@
               <small class="description">대상 하나를 여러 차례 공격한다.</small>
         
               <div class="extra">
-                <small><b>Power: </b>40</small>
+                <small><b>공격력: </b>40</small>
                 <small><b>명중률: </b>
                   100%
                 </small>
@@ -1957,9 +1985,9 @@
               <small class="description">근접 접촉 시 일정 확률로 상대 1명에게 자동으로 피해를 준다. 피해량은 사용자의 근접 방어에 비례한다.</small>
         
               <div class="extra">
-                <small><b>Power: </b>15</small>
+                <small><b>공격력: </b>15</small>
                 <small><b>명중률: </b>
-                  Unavoidable
+                  피하기 어려운
                 </small>
               </div>
             </section>
@@ -1989,7 +2017,7 @@
               <small class="description">사용자의 AP를 전부 소모한다. 이 기술의 공격력은 소비한 AP 양에 15를 곱한 만큼 증가한다. 이 공격의 타입과 추가 상태 효과는 현재 날씨에 따라 달라진다.</small>
         
               <div class="extra">
-                <small><b>Power: </b>30</small>
+                <small><b>공격력: </b>30</small>
                 <small><b>명중률: </b>
                   100%
                 </small>
@@ -2029,7 +2057,7 @@
               <small class="description">대상 하나를 공격한다. 대상이 이번 턴에 이미 피해를 받은 경우 치명타가 된다.</small>
         
               <div class="extra">
-                <small><b>Power: </b>60</small>
+                <small><b>공격력: </b>60</small>
                 <small><b>명중률: </b>
                   100%
                 </small>
@@ -2196,7 +2224,7 @@
               <small class="description">대상 하나를 여러 차례 공격한다.</small>
         
               <div class="extra">
-                <small><b>Power: </b>90</small>
+                <small><b>공격력: </b>90</small>
                 <small><b>명중률: </b>
                   100%
                 </small>
@@ -2248,7 +2276,7 @@
               <small class="description">대상 하나를 공격한다. 대상의 속도를 감소시킨다.</small>
         
               <div class="extra">
-                <small><b>Power: </b>60</small>
+                <small><b>공격력: </b>60</small>
                 <small><b>명중률: </b>
                   100%
                 </small>
@@ -2296,7 +2324,7 @@
               <small class="description">팀 전체를 공격한다. 대상의 명중률이 감소한다.</small>
         
               <div class="extra">
-                <small><b>Power: </b>60</small>
+                <small><b>공격력: </b>60</small>
                 <small><b>명중률: </b>
                   100%
                 </small>
@@ -2448,7 +2476,7 @@
               <small class="description">원거리 공격에 맞을 때 일정 확률로 자동으로 사용된다.</small>
         
               <div class="extra">
-                <small><b>Power: </b>15</small>
+                <small><b>공격력: </b>15</small>
                 <small><b>명중률: </b>
                   100%
                 </small>
@@ -2637,7 +2665,7 @@
               <small class="description">사용자가 코팅의 영향을 받고 있을 시에만 사용할 수 있다. 대상 하나를 공격하고, 코팅을 대상에게 옮긴다. 항상 마지막으로 발동된다.</small>
         
               <div class="extra">
-                <small><b>Power: </b>90</small>
+                <small><b>공격력: </b>90</small>
                 <small><b>명중률: </b>
                   100%
                 </small>
@@ -2872,7 +2900,7 @@
               <small class="description">대상 하나를 공격한다.</small>
         
               <div class="extra">
-                <small><b>Power: </b>100</small>
+                <small><b>공격력: </b>100</small>
                 <small><b>명중률: </b>
                   75%
                 </small>
@@ -3033,7 +3061,7 @@
               <small class="description">대상 하나를 공격한다. 대상을 중독시킨다.</small>
         
               <div class="extra">
-                <small><b>Power: </b>90</small>
+                <small><b>공격력: </b>90</small>
                 <small><b>명중률: </b>
                   100%
                 </small>
@@ -3247,7 +3275,7 @@
               <small class="description">한 팀의 각 팀원을 여러 번 공격한다.</small>
         
               <div class="extra">
-                <small><b>Power: </b>30</small>
+                <small><b>공격력: </b>30</small>
                 <small><b>명중률: </b>
                   100%
                 </small>
@@ -3292,7 +3320,7 @@
               <small class="description">대상 하나를 여러 차례 공격한다.</small>
         
               <div class="extra">
-                <small><b>Power: </b>30</small>
+                <small><b>공격력: </b>30</small>
                 <small><b>명중률: </b>
                   100%
                 </small>
@@ -3411,7 +3439,7 @@
               <small class="description">대상 하나를 공격한다. 대상의 원거리 방어를 감소시킨다.</small>
         
               <div class="extra">
-                <small><b>Power: </b>70</small>
+                <small><b>공격력: </b>70</small>
                 <small><b>명중률: </b>
                   100%
                 </small>
@@ -3455,7 +3483,7 @@
               <small class="description">팀 전체를 공격한다. 금속 타입 테이프에 장착할 경우 공기 타입 공격이 된다.</small>
         
               <div class="extra">
-                <small><b>Power: </b>60</small>
+                <small><b>공격력: </b>60</small>
                 <small><b>명중률: </b>
                   100%
                 </small>
@@ -3552,7 +3580,7 @@
               <small class="description">팀 전체를 공격한다. 대상이 보유한 상태 효과의 남은 지속 시간을 1 단축시킨다.</small>
         
               <div class="extra">
-                <small><b>Power: </b>60</small>
+                <small><b>공격력: </b>60</small>
                 <small><b>명중률: </b>
                   100%
                 </small>
@@ -3591,7 +3619,7 @@
               <small class="description">대상 하나를 공격한다.</small>
         
               <div class="extra">
-                <small><b>Power: </b>120</small>
+                <small><b>공격력: </b>120</small>
                 <small><b>명중률: </b>
                   1%
                 </small>
@@ -3744,7 +3772,7 @@
               <small class="description">대상 하나를 공격한다. 대상에게 혼란 상태를 부여한다.</small>
         
               <div class="extra">
-                <small><b>Power: </b>30</small>
+                <small><b>공격력: </b>30</small>
                 <small><b>명중률: </b>
                   100%
                 </small>
@@ -3905,7 +3933,7 @@
               <small class="description">대상 하나를 공격한다. 사용자의 근접 공격이 아닌 속도에 비례한다.</small>
         
               <div class="extra">
-                <small><b>Power: </b>90</small>
+                <small><b>공격력: </b>90</small>
                 <small><b>명중률: </b>
                   85%
                 </small>
@@ -3972,7 +4000,7 @@
               <small class="description">대상 하나를 공격한다.</small>
         
               <div class="extra">
-                <small><b>Power: </b>30</small>
+                <small><b>공격력: </b>30</small>
                 <small><b>명중률: </b>
                   100%
                 </small>
@@ -4047,7 +4075,7 @@
         
               <div class="extra">
                 <small><b>명중률: </b>
-                  Unavoidable
+                  피하기 어려운
                 </small>
               </div>
             </section>
@@ -4091,7 +4119,7 @@
               <small class="description">한 팀의 각 팀원을 여러 번 공격한다.</small>
         
               <div class="extra">
-                <small><b>Power: </b>20</small>
+                <small><b>공격력: </b>20</small>
                 <small><b>명중률: </b>
                   100%
                 </small>
@@ -4255,7 +4283,7 @@
               <small class="description">대상 하나를 공격한다. 사용자의 근접 공격이 아닌 근접 방어에 비례한다.</small>
         
               <div class="extra">
-                <small><b>Power: </b>90</small>
+                <small><b>공격력: </b>90</small>
                 <small><b>명중률: </b>
                   100%
                 </small>
@@ -4341,7 +4369,7 @@
               <small class="description">대상 하나를 2번 공격한다. 충전을 사용한 다음 사용하면 치명타가 된다.</small>
         
               <div class="extra">
-                <small><b>Power: </b>40</small>
+                <small><b>공격력: </b>40</small>
                 <small><b>명중률: </b>
                   100%
                 </small>
@@ -4505,7 +4533,7 @@
               <small class="description">팀 전체를 공격한다.</small>
         
               <div class="extra">
-                <small><b>Power: </b>30</small>
+                <small><b>공격력: </b>30</small>
                 <small><b>명중률: </b>
                   100%
                 </small>
@@ -4545,7 +4573,7 @@
               <small class="description">대상 하나를 공격한다.</small>
         
               <div class="extra">
-                <small><b>Power: </b>90</small>
+                <small><b>공격력: </b>90</small>
                 <small><b>명중률: </b>
                   100%
                 </small>
@@ -4591,7 +4619,7 @@
               <small class="description">한 팀의 각 팀원을 여러 번 공격한다.</small>
         
               <div class="extra">
-                <small><b>Power: </b>40</small>
+                <small><b>공격력: </b>40</small>
                 <small><b>명중률: </b>
                   100%
                 </small>
@@ -4635,7 +4663,7 @@
               <small class="description">대상 하나를 공격한다.</small>
         
               <div class="extra">
-                <small><b>Power: </b>60</small>
+                <small><b>공격력: </b>60</small>
                 <small><b>명중률: </b>
                   100%
                 </small>
@@ -4711,7 +4739,7 @@
               <small class="description">근접 공격에 맞을 때 일정 확률로 자동으로 사용된다.</small>
         
               <div class="extra">
-                <small><b>Power: </b>15</small>
+                <small><b>공격력: </b>15</small>
                 <small><b>명중률: </b>
                   100%
                 </small>
@@ -4797,7 +4825,7 @@
         
               <div class="extra">
                 <small><b>명중률: </b>
-                  Unavoidable
+                  피하기 어려운
                 </small>
               </div>
             </section>
@@ -4881,7 +4909,7 @@
               <small class="description">사용자에게 피해를 준다.</small>
         
               <div class="extra">
-                <small><b>Power: </b>30</small>
+                <small><b>공격력: </b>30</small>
                 <small><b>명중률: </b>
                   100%
                 </small>
@@ -4916,7 +4944,7 @@
               <small class="description">팀 전체를 공격한다.</small>
         
               <div class="extra">
-                <small><b>Power: </b>30</small>
+                <small><b>공격력: </b>30</small>
                 <small><b>명중률: </b>
                   100%
                 </small>
@@ -5257,7 +5285,7 @@
               <small class="description">대상 하나를 공격한다. 다른 기술보다 먼저 사용된다.</small>
         
               <div class="extra">
-                <small><b>Power: </b>30</small>
+                <small><b>공격력: </b>30</small>
                 <small><b>명중률: </b>
                   100%
                 </small>
@@ -5297,7 +5325,7 @@
               <small class="description">대상 하나를 여러 차례 공격한다.</small>
         
               <div class="extra">
-                <small><b>Power: </b>40</small>
+                <small><b>공격력: </b>40</small>
                 <small><b>명중률: </b>
                   100%
                 </small>
@@ -5336,9 +5364,9 @@
               <small class="description">근접 공격이 사용자를 빗나가면 자동으로 피해를 준다.</small>
         
               <div class="extra">
-                <small><b>Power: </b>40</small>
+                <small><b>공격력: </b>40</small>
                 <small><b>명중률: </b>
-                  Unavoidable
+                  피하기 어려운
                 </small>
               </div>
             </section>
@@ -5389,7 +5417,7 @@
               <small class="description">대상 하나를 공격한다.</small>
         
               <div class="extra">
-                <small><b>Power: </b>200</small>
+                <small><b>공격력: </b>200</small>
                 <small><b>명중률: </b>
                   100%
                 </small>
@@ -5448,7 +5476,7 @@
               <small class="description">대상 하나를 공격한다. 대상의 회피를 감소시킨다.</small>
         
               <div class="extra">
-                <small><b>Power: </b>70</small>
+                <small><b>공격력: </b>70</small>
                 <small><b>명중률: </b>
                   85%
                 </small>
@@ -5490,7 +5518,7 @@
               <small class="description">대상 하나를 공격한다.</small>
         
               <div class="extra">
-                <small><b>Power: </b>60</small>
+                <small><b>공격력: </b>60</small>
                 <small><b>명중률: </b>
                   100%
                 </small>
@@ -5531,7 +5559,7 @@
         
               <div class="extra">
                 <small><b>명중률: </b>
-                  Unavoidable
+                  피하기 어려운
                 </small>
               </div>
             </section>
@@ -5584,7 +5612,7 @@
         
               <div class="extra">
                 <small><b>명중률: </b>
-                  Unavoidable
+                  피하기 어려운
                 </small>
               </div>
             </section>
@@ -5625,7 +5653,7 @@
         
               <div class="extra">
                 <small><b>명중률: </b>
-                  Unavoidable
+                  피하기 어려운
                 </small>
               </div>
             </section>
@@ -5699,7 +5727,7 @@
         
               <div class="extra">
                 <small><b>명중률: </b>
-                  Unavoidable
+                  피하기 어려운
                 </small>
               </div>
             </section>
@@ -5737,7 +5765,7 @@
               <small class="description">준 피해만큼 HP를 회복한다.</small>
         
               <div class="extra">
-                <small><b>Power: </b>30</small>
+                <small><b>공격력: </b>30</small>
                 <small><b>명중률: </b>
                   100%
                 </small>
@@ -5773,7 +5801,7 @@
               <small class="description">대상 하나를 공격한다. 대상에게 화상을 입힌다.</small>
         
               <div class="extra">
-                <small><b>Power: </b>30</small>
+                <small><b>공격력: </b>30</small>
                 <small><b>명중률: </b>
                   100%
                 </small>
@@ -5808,7 +5836,7 @@
               <small class="description">전투 시작 시 자동으로 상대 1명을 공격한다.</small>
         
               <div class="extra">
-                <small><b>Power: </b>30</small>
+                <small><b>공격력: </b>30</small>
                 <small><b>명중률: </b>
                   100%
                 </small>
@@ -5846,7 +5874,7 @@
               <small class="description">대상 하나를 여러 차례 공격한다.</small>
         
               <div class="extra">
-                <small><b>Power: </b>40</small>
+                <small><b>공격력: </b>40</small>
                 <small><b>명중률: </b>
                   100%
                 </small>
@@ -5890,7 +5918,7 @@
               <small class="description">팀 전체를 공격한다.</small>
         
               <div class="extra">
-                <small><b>Power: </b>60</small>
+                <small><b>공격력: </b>60</small>
                 <small><b>명중률: </b>
                   100%
                 </small>
@@ -5938,7 +5966,7 @@
               <small class="description">대상 하나를 여러 차례 공격한다. 다른 기술보다 먼저 사용된다.</small>
         
               <div class="extra">
-                <small><b>Power: </b>30</small>
+                <small><b>공격력: </b>30</small>
                 <small><b>명중률: </b>
                   100%
                 </small>
@@ -6070,7 +6098,7 @@
               <small class="description">대상 하나를 공격한다.</small>
         
               <div class="extra">
-                <small><b>Power: </b>60</small>
+                <small><b>공격력: </b>60</small>
                 <small><b>명중률: </b>
                   100%
                 </small>
@@ -6345,7 +6373,7 @@
               <small class="description">대상 하나를 공격한다.</small>
         
               <div class="extra">
-                <small><b>Power: </b>60</small>
+                <small><b>공격력: </b>60</small>
                 <small><b>명중률: </b>
                   100%
                 </small>
@@ -6429,7 +6457,7 @@
         
               <div class="extra">
                 <small><b>명중률: </b>
-                  Unavoidable
+                  피하기 어려운
                 </small>
               </div>
             </section>
@@ -6465,7 +6493,7 @@
               <small class="description">사용자의 팀에 있는 쓰레기봇당 한 번씩 대상 하나를 공격한다.</small>
         
               <div class="extra">
-                <small><b>Power: </b>30</small>
+                <small><b>공격력: </b>30</small>
                 <small><b>명중률: </b>
                   100%
                 </small>
@@ -6680,7 +6708,7 @@
         
               <div class="extra">
                 <small><b>명중률: </b>
-                  Unavoidable
+                  피하기 어려운
                 </small>
               </div>
             </section>
@@ -6957,7 +6985,7 @@
               <small class="description">대상 하나를 공격한다. 대상의 명중률을 감소시킨다.</small>
         
               <div class="extra">
-                <small><b>Power: </b>70</small>
+                <small><b>공격력: </b>70</small>
                 <small><b>명중률: </b>
                   85%
                 </small>
@@ -6996,7 +7024,7 @@
               <small class="description">대상 하나를 공격한다.</small>
         
               <div class="extra">
-                <small><b>Power: </b>100</small>
+                <small><b>공격력: </b>100</small>
                 <small><b>명중률: </b>
                   10%
                 </small>
@@ -7031,7 +7059,7 @@
         
               <div class="extra">
                 <small><b>명중률: </b>
-                  Unavoidable
+                  피하기 어려운
                 </small>
               </div>
             </section>
@@ -7081,7 +7109,7 @@
               <small class="description">대상 하나를 공격한다. 대상의 속도를 감소시킨다.</small>
         
               <div class="extra">
-                <small><b>Power: </b>90</small>
+                <small><b>공격력: </b>90</small>
                 <small><b>명중률: </b>
                   100%
                 </small>
@@ -7280,7 +7308,7 @@
               <small class="description">대상 하나를 공격한다.</small>
         
               <div class="extra">
-                <small><b>Power: </b>60</small>
+                <small><b>공격력: </b>60</small>
                 <small><b>명중률: </b>
                   100%
                 </small>
@@ -7323,7 +7351,7 @@
               <small class="description">팀 전체를 공격한다.</small>
         
               <div class="extra">
-                <small><b>Power: </b>60</small>
+                <small><b>공격력: </b>60</small>
                 <small><b>명중률: </b>
                   100%
                 </small>
@@ -7365,7 +7393,7 @@
               <small class="description">이 기술 전에 마지막으로 행동한 대상을 공격한다.</small>
         
               <div class="extra">
-                <small><b>Power: </b>90</small>
+                <small><b>공격력: </b>90</small>
                 <small><b>명중률: </b>
                   100%
                 </small>
@@ -7447,7 +7475,7 @@
               <small class="description">대상 하나를 여러 차례 공격한다.</small>
         
               <div class="extra">
-                <small><b>Power: </b>20</small>
+                <small><b>공격력: </b>20</small>
                 <small><b>명중률: </b>
                   100%
                 </small>
@@ -7492,7 +7520,7 @@
               <small class="description">대상 하나를 여러 차례 공격한다.</small>
         
               <div class="extra">
-                <small><b>Power: </b>20</small>
+                <small><b>공격력: </b>20</small>
                 <small><b>명중률: </b>
                   100%
                 </small>
@@ -7537,7 +7565,7 @@
               <small class="description">대상 하나를 공격한다.</small>
         
               <div class="extra">
-                <small><b>Power: </b>90</small>
+                <small><b>공격력: </b>90</small>
                 <small><b>명중률: </b>
                   100%
                 </small>
@@ -7576,7 +7604,7 @@
         
               <div class="extra">
                 <small><b>명중률: </b>
-                  Unavoidable
+                  피하기 어려운
                 </small>
               </div>
             </section>
@@ -7702,7 +7730,7 @@
         
               <div class="extra">
                 <small><b>명중률: </b>
-                  Unavoidable
+                  피하기 어려운
                 </small>
               </div>
             </section>
@@ -7740,7 +7768,7 @@
               <small class="description">대상 하나를 공격한다. 다른 기술보다 먼저 사용된다.</small>
         
               <div class="extra">
-                <small><b>Power: </b>30</small>
+                <small><b>공격력: </b>30</small>
                 <small><b>명중률: </b>
                   100%
                 </small>
@@ -7782,9 +7810,9 @@
               <small class="description">대상 하나를 공격한다. 회피할 수 없다.</small>
         
               <div class="extra">
-                <small><b>Power: </b>90</small>
+                <small><b>공격력: </b>90</small>
                 <small><b>명중률: </b>
-                  Unavoidable
+                  피하기 어려운
                 </small>
               </div>
             </section>
@@ -7996,7 +8024,7 @@
               <small class="description">팀 전체를 공격한다. 방벽을 파괴한다.</small>
         
               <div class="extra">
-                <small><b>Power: </b>150</small>
+                <small><b>공격력: </b>150</small>
                 <small><b>명중률: </b>
                   100%
                 </small>
@@ -8139,7 +8167,7 @@
               <small class="description">한 팀의 각 팀원을 여러 번 공격한다.</small>
         
               <div class="extra">
-                <small><b>Power: </b>60</small>
+                <small><b>공격력: </b>60</small>
                 <small><b>명중률: </b>
                   100%
                 </small>
@@ -8351,7 +8379,7 @@
               <small class="description">대상 하나를 공격한다. 사용자에게도 피해를 약간 준다.</small>
         
               <div class="extra">
-                <small><b>Power: </b>120</small>
+                <small><b>공격력: </b>120</small>
                 <small><b>명중률: </b>
                   100%
                 </small>
@@ -8551,7 +8579,7 @@
               <small class="description">대상 하나를 여러 차례 공격한다.</small>
         
               <div class="extra">
-                <small><b>Power: </b>40</small>
+                <small><b>공격력: </b>40</small>
                 <small><b>명중률: </b>
                   100%
                 </small>
@@ -8597,7 +8625,7 @@
               <small class="description">한 팀의 각 팀원을 여러 번 공격한다.</small>
         
               <div class="extra">
-                <small><b>Power: </b>20</small>
+                <small><b>공격력: </b>20</small>
                 <small><b>명중률: </b>
                   100%
                 </small>
@@ -8776,7 +8804,7 @@
               <small class="description">현재 융합에 따라 특별한 효과를 지닌다.</small>
         
               <div class="extra">
-                <small><b>Power: </b>200</small>
+                <small><b>공격력: </b>200</small>
                 <small><b>명중률: </b>
                   100%
                 </small>
@@ -8834,7 +8862,7 @@
         
               <div class="extra">
                 <small><b>명중률: </b>
-                  Unavoidable
+                  피하기 어려운
                 </small>
               </div>
             </section>
@@ -8870,7 +8898,7 @@
         
               <div class="extra">
                 <small><b>명중률: </b>
-                  Unavoidable
+                  피하기 어려운
                 </small>
               </div>
             </section>
@@ -9357,7 +9385,7 @@
               <small class="description">사용자의 HP가 낮을수록 더 큰 피해를 준다.</small>
         
               <div class="extra">
-                <small><b>Power: </b>20</small>
+                <small><b>공격력: </b>20</small>
                 <small><b>명중률: </b>
                   100%
                 </small>
@@ -9391,7 +9419,7 @@
               <small class="description">사용자가 패배 시 폭발하여 주변에 있는 모두에게 피해를 준다.</small>
         
               <div class="extra">
-                <small><b>Power: </b>60</small>
+                <small><b>공격력: </b>60</small>
                 <small><b>명중률: </b>
                   100%
                 </small>
@@ -9465,7 +9493,7 @@
               <small class="description">대상 하나를 공격한다.</small>
         
               <div class="extra">
-                <small><b>Power: </b>120</small>
+                <small><b>공격력: </b>120</small>
                 <small><b>명중률: </b>
                   1%
                 </small>
@@ -9555,7 +9583,7 @@
               <small class="description">대상 하나를 공격한다.</small>
         
               <div class="extra">
-                <small><b>Power: </b>60</small>
+                <small><b>공격력: </b>60</small>
                 <small><b>명중률: </b>
                   100%
                 </small>
@@ -9592,7 +9620,7 @@
         
               <div class="extra">
                 <small><b>명중률: </b>
-                  Unavoidable
+                  피하기 어려운
                 </small>
               </div>
             </section>
@@ -9664,7 +9692,7 @@
         
               <div class="extra">
                 <small><b>명중률: </b>
-                  Unavoidable
+                  피하기 어려운
                 </small>
               </div>
             </section>
@@ -9772,7 +9800,7 @@
         
               <div class="extra">
                 <small><b>명중률: </b>
-                  Unavoidable
+                  피하기 어려운
                 </small>
               </div>
             </section>
@@ -9817,7 +9845,7 @@
         
               <div class="extra">
                 <small><b>명중률: </b>
-                  Unavoidable
+                  피하기 어려운
                 </small>
               </div>
             </section>
@@ -9936,7 +9964,7 @@
         
               <div class="extra">
                 <small><b>명중률: </b>
-                  Unavoidable
+                  피하기 어려운
                 </small>
               </div>
             </section>
@@ -10027,7 +10055,7 @@
               <small class="description">대상 하나를 공격한다. 대상이 30의 공기 타입 피해를 추가로 받는다.</small>
         
               <div class="extra">
-                <small><b>Power: </b>60</small>
+                <small><b>공격력: </b>60</small>
                 <small><b>명중률: </b>
                   100%
                 </small>
@@ -10069,9 +10097,9 @@
               <small class="description">모든 방벽을 파괴하고, 각 대상에게 자신의 방벽의 남은 지속 시간에 비례한 피해를 준다.</small>
         
               <div class="extra">
-                <small><b>Power: </b>30</small>
+                <small><b>공격력: </b>30</small>
                 <small><b>명중률: </b>
-                  Unavoidable
+                  피하기 어려운
                 </small>
               </div>
             </section>
@@ -10109,7 +10137,7 @@
               <small class="description">대상 하나를 공격한다.</small>
         
               <div class="extra">
-                <small><b>Power: </b>60</small>
+                <small><b>공격력: </b>60</small>
                 <small><b>명중률: </b>
                   100%
                 </small>
@@ -10230,7 +10258,7 @@
               <small class="description">대상 하나를 공격한다. 사용자의 근접 공격이 아닌 근접 방어에 비례한다. 사용자에게도 피해를 준다.</small>
         
               <div class="extra">
-                <small><b>Power: </b>120</small>
+                <small><b>공격력: </b>120</small>
                 <small><b>명중률: </b>
                   100%
                 </small>
@@ -10274,7 +10302,7 @@
               <small class="description">대상 하나를 공격한다.</small>
         
               <div class="extra">
-                <small><b>Power: </b>60</small>
+                <small><b>공격력: </b>60</small>
                 <small><b>명중률: </b>
                   100%
                 </small>
@@ -10318,7 +10346,7 @@
               <small class="description">대상 하나를 공격한다. 대상에게 혼란 상태를 부여한다.</small>
         
               <div class="extra">
-                <small><b>Power: </b>90</small>
+                <small><b>공격력: </b>90</small>
                 <small><b>명중률: </b>
                   100%
                 </small>
@@ -10391,7 +10419,7 @@
               <small class="description">대상 하나를 공격한다.</small>
         
               <div class="extra">
-                <small><b>Power: </b>30</small>
+                <small><b>공격력: </b>30</small>
                 <small><b>명중률: </b>
                   100%
                 </small>
@@ -10578,7 +10606,7 @@
               <small class="description">대상 하나를 공격한다. 대상의 근접 방어가 감소한다.</small>
         
               <div class="extra">
-                <small><b>Power: </b>90</small>
+                <small><b>공격력: </b>90</small>
                 <small><b>명중률: </b>
                   100%
                 </small>
@@ -10628,7 +10656,7 @@
               <small class="description">대상 하나를 공격한다.</small>
         
               <div class="extra">
-                <small><b>Power: </b>120</small>
+                <small><b>공격력: </b>120</small>
                 <small><b>명중률: </b>
                   100%
                 </small>
@@ -10690,7 +10718,7 @@
               <small class="description">대상 하나를 여러 차례 공격한다. 다른 기술보다 늦게 사용된다.</small>
         
               <div class="extra">
-                <small><b>Power: </b>50</small>
+                <small><b>공격력: </b>50</small>
                 <small><b>명중률: </b>
                   100%
                 </small>
@@ -10751,7 +10779,7 @@
         
               <div class="extra">
                 <small><b>명중률: </b>
-                  Unavoidable
+                  피하기 어려운
                 </small>
               </div>
             </section>
@@ -10796,7 +10824,7 @@
               <small class="description">방벽을 투사체로 사용한다. 남은 지속 시간에 비례하는 피해를 준다.</small>
         
               <div class="extra">
-                <small><b>Power: </b>50</small>
+                <small><b>공격력: </b>50</small>
                 <small><b>명중률: </b>
                   100%
                 </small>
@@ -10989,7 +11017,7 @@
               <small class="description">팀 전체를 공격한다.</small>
         
               <div class="extra">
-                <small><b>Power: </b>60</small>
+                <small><b>공격력: </b>60</small>
                 <small><b>명중률: </b>
                   100%
                 </small>
@@ -11197,7 +11225,7 @@
               <small class="description">대상 하나를 여러 차례 공격한다.</small>
         
               <div class="extra">
-                <small><b>Power: </b>40</small>
+                <small><b>공격력: </b>40</small>
                 <small><b>명중률: </b>
                   100%
                 </small>
@@ -11275,7 +11303,7 @@
         
               <div class="extra">
                 <small><b>명중률: </b>
-                  Unavoidable
+                  피하기 어려운
                 </small>
               </div>
             </section>
@@ -11322,7 +11350,7 @@
               <small class="description">사용자가 20면 주사위를 굴려 주사위 눈 개수에 비례한 피해를 준다. 1 또는 20이 나올 시 특별한 효과가 적용된다.</small>
         
               <div class="extra">
-                <small><b>Power: </b>9</small>
+                <small><b>공격력: </b>9</small>
                 <small><b>명중률: </b>
                   100%
                 </small>
@@ -11362,7 +11390,7 @@
               <small class="description">대상 하나를 공격한다. 대상의 회피를 감소시킨다.</small>
         
               <div class="extra">
-                <small><b>Power: </b>40</small>
+                <small><b>공격력: </b>40</small>
                 <small><b>명중률: </b>
                   75%
                 </small>
@@ -11438,7 +11466,7 @@
               <small class="description">팀 전체를 공격한다. 방벽을 파괴한다.</small>
         
               <div class="extra">
-                <small><b>Power: </b>90</small>
+                <small><b>공격력: </b>90</small>
                 <small><b>명중률: </b>
                   100%
                 </small>
@@ -11485,7 +11513,7 @@
         
               <div class="extra">
                 <small><b>명중률: </b>
-                  Unavoidable
+                  피하기 어려운
                 </small>
               </div>
             </section>
@@ -11540,7 +11568,7 @@
               <small class="description">대상 하나를 공격한다.</small>
         
               <div class="extra">
-                <small><b>Power: </b>200</small>
+                <small><b>공격력: </b>200</small>
                 <small><b>명중률: </b>
                   100%
                 </small>
@@ -11597,7 +11625,7 @@
         
               <div class="extra">
                 <small><b>명중률: </b>
-                  Unavoidable
+                  피하기 어려운
                 </small>
               </div>
             </section>
@@ -11682,7 +11710,7 @@
               <small class="description">사용자를 제외하고 전장의 모든 대상을 공격한다.</small>
         
               <div class="extra">
-                <small><b>Power: </b>100</small>
+                <small><b>공격력: </b>100</small>
                 <small><b>명중률: </b>
                   90%
                 </small>
@@ -11868,7 +11896,7 @@
               <small class="description">대상 하나를 공격한다.</small>
         
               <div class="extra">
-                <small><b>Power: </b>30</small>
+                <small><b>공격력: </b>30</small>
                 <small><b>명중률: </b>
                   100%
                 </small>
@@ -11988,7 +12016,7 @@
               <small class="description">대상 하나를 공격한다.</small>
         
               <div class="extra">
-                <small><b>Power: </b>120</small>
+                <small><b>공격력: </b>120</small>
                 <small><b>명중률: </b>
                   75%
                 </small>
@@ -12086,28 +12114,36 @@
     </main>
 
     <footer class="ta-center">
-        <small>This app is not affiliated with, authorised by <span class="tertiary">Bytten Studio Ltd</span>, its
-            subsidiaries, or its parent companies,
-            whose names, logos and products are displayed in this app.</small>
+        <small class="legal">This app is not affiliated with, authorised by <span class="tertiary">Bytten Studio
+                Ltd</span>, its subsidiaries, or its parent companies, whose names, logos and products are displayed in this app. The names Cassette Beasts, <span class="tertiary">Bytten Studio
+                Ltd</span> as well as related names and images are registered trademarks of their respective owners. This app is made by fan(s) for fans. Please do not reach out to <span class="tertiary">Bytten Studio
+                Ltd</span> about bugs within this app.</small>
         <br>
         <small class="assistantApps ta-center">
             <span>© Assistant Apps. All rights reserved.</span>
             <span>&nbsp;|&nbsp;</span>
             <span>
-                <a href="/privacy_policy.html" target="_blank" rel="noopener noreferrer" title="Privacy Policy">Privacy
-                    Policy</a>
+                <a href="/about.html" title="개발자 정보">개발자 정보</a>
+            </span>
+            <span>&nbsp;|&nbsp;</span>
+            <span>
+                <a href="/privacy_policy.html" target="_blank" rel="noopener noreferrer"
+                    title="개인 정보 정책">
+                    개인 정보 정책
+                </a>
             </span>
             <span>&nbsp;|&nbsp;</span>
             <span>
                 <a href="/terms_and_conditions.html" target="_blank" rel="noopener noreferrer"
-                    title="Terms and Conditions">Terms &amp;
-                    Conditions</a>
+                    title="이용약관">
+                    이용약관</a>
             </span>
             <span>&nbsp;|&nbsp;</span>
-            <small>v1.0.0</small>
+            <span>v1.0.0</span>
         </small>
     </footer>    <script defer src="/assets/js/main.js?v=1.0.0"></script>
     <script defer src="/assets/js/analytics.js?v=1.0.0"></script>
+    <script defer src="https://webcomp.assistantapps.com/build/bundle.js"></script>
 </body>
 
 </html>

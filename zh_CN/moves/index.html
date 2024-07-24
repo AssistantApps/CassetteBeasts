@@ -19,12 +19,6 @@
     <meta name="designer" content="Kurt Lourens">
     <meta name="owner" content="Kurt Lourens">
 
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon/android-chrome-192x192.png">
-
 
     <meta name="url" content="https://cassettebeasts.assistantapps.com/">
     <meta name="identifier-URL" content="https://cassettebeasts.assistantapps.com/">
@@ -43,23 +37,38 @@
     <meta name="distribution" content="Global">
     <meta name="generator" content="custom scripts using HandlebarJS">
     <link rel="search" href="opensearch.xml" type="application/opensearchdescription+xml" title="Search Title">
-    <meta name="revised" content="Wed Jul 17 2024">
+    <meta name="revised" content="Wed Jul 24 2024">
 
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon/favicon-48x48.png">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="manifest" href="/manifest.webmanifest">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicon/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicon/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/assets/favicon/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/assets/favicon/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/assets/favicon/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/assets/favicon/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/assets/favicon/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/assets/favicon/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="/assets/favicon/apple-touch-icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="1024x1024" href="/assets/favicon/apple-touch-icon-1024x1024.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Assistant for Cassette Beasts">
     <!-- Google -->
     <meta name="googlebot" content="index,follow">
     <meta name="google" content="nositelinkssearchbox">
-    <meta name="mobile-web-app-capable" content="yes">
-    <!-- <meta name="google-site-verification" content="verification_token"> -->
+    <!-- <meta name="google-site-verification" content=""> -->
 
     <!-- Apple -->
-    <link rel="icon" type="image/png" sizes="76x76" href="/assets/favicon/apple-76.png">
-    <link rel="icon" type="image/png" sizes="114x114" href="/assets/favicon/apple-114.png">
-    <link rel="icon" type="image/png" sizes="120x120" href="/assets/favicon/apple-120.png">
-    <link rel="icon" type="image/png" sizes="144x144" href="/assets/favicon/apple-144.png">
-    <link rel="icon" type="image/png" sizes="152x152" href="/assets/favicon/apple-152.png">
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#1b1f22">
     <meta name="apple-mobile-web-app-title" content="Assistant for Cassette Beasts">
-    <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="#1b1f22">
 
     <!-- Twitter -->
@@ -127,9 +136,9 @@
                 "jobTitle": "Senior Software Engineer",
             },
             "inLanguage": "en",
-            "dateCreated": "2024-07-17",
-            "dateModified": "2024-07-17",
-            "datePublished": "2024-07-17"
+            "dateCreated": "2024-07-24",
+            "dateModified": "2024-07-24",
+            "datePublished": "2024-07-24"
         }
     </script></head>
 <body class="overflow-x-hidden">
@@ -137,24 +146,27 @@
     <header class="header">
         <div class="container noselect">
             <nav>
-                <ul>
-                    <li>
-                        <div class="logo">
-                            <img src="/assets/img/logo.png" alt="splash">
-                        </div>
-                    </li>
-                    <li>
-                        Assistant for <b>Cassette Beasts</b>
-                    </li>
-                </ul>
-    
+                <a aria-label="Home" href="/index.html">
+                    <ul class="branding">
+                        <li>
+                            <div class="logo animate__animated">
+                                <img src="/assets/img/logo.png" alt="splash">
+                            </div>
+                        </li>
+                        <li class="title">
+                            <span style="--i:1">Assistant </span>
+                            <span style="--i:2">for </span>
+                            <span style="--i:3"><b>Cassette Beasts</b></span>
+                        </li>
+                    </ul>
+                </a>
     
                 <ul>
                 </ul>
     
     
                 <ul class="icons">
-                    <li>
+                    <li data-tooltip="语言" data-placement="bottom">
                         <details id="language-dropdown" class="dropdown">
                             <summary class="role-link">
                                 <img src="/assets/img/language.png"
@@ -184,9 +196,22 @@
                             </ul>
                         </details>
                     </li>
-                    <li>
+                    <li data-tooltip="About" data-placement="bottom">
+                        <a class="contrast" aria-label="About" href="/about.html">
+                            <svg fill="#000000" height="24" width="24" viewBox="0 0 128 128" version="1.1"
+                                xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <path
+                                    d="M64,1C29.3,1,1,29.3,1,64s28.3,63,63,63s63-28.3,63-63S98.7,1,64,1z M64,119C33.7,119,9,94.3,9,64S33.7,9,64,9   s55,24.7,55,55S94.3,119,64,119z"
+                                    stroke="white" fill="white" />
+                                <rect height="40" width="8" x="60" y="54.5" stroke="white" fill="white" />
+                                <rect height="8" width="8" x="60" y="35.5" stroke="white" fill="white" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li data-tooltip="Github repository" data-placement="bottom">
                         <a rel="noopener noreferrer" class="contrast" aria-label="GitHub repository"
-                            href="https://github.com/AssistantApps/CassetteBeasts" target="_blank">
+                            href="https://github.com/AssistantApps/CassetteBeasts?ref&#x3D;assistantCBS" target="_blank">
                             <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24.25" viewBox="0 0 496 512"
                                 class="icon-github">
                                 <path
@@ -195,7 +220,7 @@
                             </svg>
                         </a>
                     </li>
-                    <li>
+                    <li data-tooltip="AssistantApps" data-placement="bottom">
                         <a class="contrast" aria-label="Turn off dark mode" href="https://assistantapps.com">
                             <img src="/assets/img/assistantApps-32.png" height="24" width="24" alt="assistant apps logo">
                         </a>
@@ -205,6 +230,9 @@
         </div>
     </header>
     <main class="container page-container">
+
+        <assistant-apps-app-notice-list appguid="343224c4-4d40-4ce1-68ad-08dcab0020d7"
+            langcode="zh_CN"></assistant-apps-app-notice-list>
 
         
         <ul class="breadcrumb noselect">
@@ -297,7 +325,7 @@
         
               <div class="extra">
                 <small><b>命中率: </b>
-                  Unavoidable
+                  不可避免
                 </small>
               </div>
             </section>
@@ -331,7 +359,7 @@
         
               <div class="extra">
                 <small><b>命中率: </b>
-                  Unavoidable
+                  不可避免
                 </small>
               </div>
             </section>
@@ -570,7 +598,7 @@
               <small class="description">击中一个目标，施加一个随机负面效果。</small>
         
               <div class="extra">
-                <small><b>Power: </b>90</small>
+                <small><b>威力: </b>90</small>
                 <small><b>命中率: </b>
                   100%
                 </small>
@@ -661,7 +689,7 @@
               <small class="description">多次击中一个目标。</small>
         
               <div class="extra">
-                <small><b>Power: </b>40</small>
+                <small><b>威力: </b>40</small>
                 <small><b>命中率: </b>
                   100%
                 </small>
@@ -746,7 +774,7 @@
         
               <div class="extra">
                 <small><b>命中率: </b>
-                  Unavoidable
+                  不可避免
                 </small>
               </div>
             </section>
@@ -815,7 +843,7 @@
               <small class="description">击中一个目标。</small>
         
               <div class="extra">
-                <small><b>Power: </b>200</small>
+                <small><b>威力: </b>200</small>
                 <small><b>命中率: </b>
                   100%
                 </small>
@@ -962,7 +990,7 @@
               <small class="description">多次击中队伍中的每一名成员。</small>
         
               <div class="extra">
-                <small><b>Power: </b>60</small>
+                <small><b>威力: </b>60</small>
                 <small><b>命中率: </b>
                   100%
                 </small>
@@ -1011,7 +1039,7 @@
               <small class="description">击中整支队伍。</small>
         
               <div class="extra">
-                <small><b>Power: </b>60</small>
+                <small><b>威力: </b>60</small>
                 <small><b>命中率: </b>
                   100%
                 </small>
@@ -1130,7 +1158,7 @@
         
               <div class="extra">
                 <small><b>命中率: </b>
-                  Unavoidable
+                  不可避免
                 </small>
               </div>
             </section>
@@ -1201,7 +1229,7 @@
               <small class="description">击中一个目标。</small>
         
               <div class="extra">
-                <small><b>Power: </b>30</small>
+                <small><b>威力: </b>30</small>
                 <small><b>命中率: </b>
                   100%
                 </small>
@@ -1300,7 +1328,7 @@
               <small class="description">多次击中一个目标。</small>
         
               <div class="extra">
-                <small><b>Power: </b>40</small>
+                <small><b>威力: </b>40</small>
                 <small><b>命中率: </b>
                   100%
                 </small>
@@ -1345,7 +1373,7 @@
               <small class="description">使用者掷一枚20面骰子，掷出的点数即为造成伤害的倍数。掷出1点或20点时，会有特殊效果。</small>
         
               <div class="extra">
-                <small><b>Power: </b>9</small>
+                <small><b>威力: </b>9</small>
                 <small><b>命中率: </b>
                   100%
                 </small>
@@ -1485,7 +1513,7 @@
               <small class="description">击中战场上除使用者外的每一个角色。</small>
         
               <div class="extra">
-                <small><b>Power: </b>100</small>
+                <small><b>威力: </b>100</small>
                 <small><b>命中率: </b>
                   90%
                 </small>
@@ -1529,7 +1557,7 @@
         
               <div class="extra">
                 <small><b>命中率: </b>
-                  Unavoidable
+                  不可避免
                 </small>
               </div>
             </section>
@@ -1698,7 +1726,7 @@
               <small class="description">击中一个目标。</small>
         
               <div class="extra">
-                <small><b>Power: </b>60</small>
+                <small><b>威力: </b>60</small>
                 <small><b>命中率: </b>
                   100%
                 </small>
@@ -1735,7 +1763,7 @@
               <small class="description">战斗开始时，自动击中一名对手。</small>
         
               <div class="extra">
-                <small><b>Power: </b>30</small>
+                <small><b>威力: </b>30</small>
                 <small><b>命中率: </b>
                   100%
                 </small>
@@ -1772,7 +1800,7 @@
         
               <div class="extra">
                 <small><b>命中率: </b>
-                  Unavoidable
+                  不可避免
                 </small>
               </div>
             </section>
@@ -1819,7 +1847,7 @@
               <small class="description">击中一个目标，降低目标的命中率。</small>
         
               <div class="extra">
-                <small><b>Power: </b>70</small>
+                <small><b>威力: </b>70</small>
                 <small><b>命中率: </b>
                   85%
                 </small>
@@ -2076,7 +2104,7 @@
         
               <div class="extra">
                 <small><b>命中率: </b>
-                  Unavoidable
+                  不可避免
                 </small>
               </div>
             </section>
@@ -2237,7 +2265,7 @@
               <small class="description">击中一个目标。伤害值不再根据使用者的远程攻击能力值来决定，而是根据速度能力值来决定。</small>
         
               <div class="extra">
-                <small><b>Power: </b>70</small>
+                <small><b>威力: </b>70</small>
                 <small><b>命中率: </b>
                   85%
                 </small>
@@ -2316,7 +2344,7 @@
         
               <div class="extra">
                 <small><b>命中率: </b>
-                  Unavoidable
+                  不可避免
                 </small>
               </div>
             </section>
@@ -2348,7 +2376,7 @@
         
               <div class="extra">
                 <small><b>命中率: </b>
-                  Unavoidable
+                  不可避免
                 </small>
               </div>
             </section>
@@ -2435,7 +2463,7 @@
               <small class="description">击中一个目标，令目标中毒。</small>
         
               <div class="extra">
-                <small><b>Power: </b>90</small>
+                <small><b>威力: </b>90</small>
                 <small><b>命中率: </b>
                   100%
                 </small>
@@ -2520,7 +2548,7 @@
               <small class="description">击中整支队伍。</small>
         
               <div class="extra">
-                <small><b>Power: </b>30</small>
+                <small><b>威力: </b>30</small>
                 <small><b>命中率: </b>
                   100%
                 </small>
@@ -2662,7 +2690,7 @@
         
               <div class="extra">
                 <small><b>命中率: </b>
-                  Unavoidable
+                  不可避免
                 </small>
               </div>
             </section>
@@ -2761,7 +2789,7 @@
               <small class="description">多次击中队伍中的每一名成员。</small>
         
               <div class="extra">
-                <small><b>Power: </b>30</small>
+                <small><b>威力: </b>30</small>
                 <small><b>命中率: </b>
                   100%
                 </small>
@@ -2806,7 +2834,7 @@
               <small class="description">多次击中一个目标。</small>
         
               <div class="extra">
-                <small><b>Power: </b>30</small>
+                <small><b>威力: </b>30</small>
                 <small><b>命中率: </b>
                   100%
                 </small>
@@ -2843,7 +2871,7 @@
         
               <div class="extra">
                 <small><b>命中率: </b>
-                  Unavoidable
+                  不可避免
                 </small>
               </div>
             </section>
@@ -2889,7 +2917,7 @@
               <small class="description">击中一个目标。</small>
         
               <div class="extra">
-                <small><b>Power: </b>120</small>
+                <small><b>威力: </b>120</small>
                 <small><b>命中率: </b>
                   100%
                 </small>
@@ -3044,7 +3072,7 @@
               <small class="description">有几率导致目标畏缩。</small>
         
               <div class="extra">
-                <small><b>Power: </b>30</small>
+                <small><b>威力: </b>30</small>
                 <small><b>命中率: </b>
                   100%
                 </small>
@@ -3125,7 +3153,7 @@
               <small class="description">击中一个目标。</small>
         
               <div class="extra">
-                <small><b>Power: </b>120</small>
+                <small><b>威力: </b>120</small>
                 <small><b>命中率: </b>
                   75%
                 </small>
@@ -3233,7 +3261,7 @@
               <small class="description">击中一个目标，之后为使用者恢复一点点生命值。</small>
         
               <div class="extra">
-                <small><b>Power: </b>80</small>
+                <small><b>威力: </b>80</small>
                 <small><b>命中率: </b>
                   100%
                 </small>
@@ -3272,7 +3300,7 @@
               <small class="description">击中一个目标。</small>
         
               <div class="extra">
-                <small><b>Power: </b>30</small>
+                <small><b>威力: </b>30</small>
                 <small><b>命中率: </b>
                   100%
                 </small>
@@ -3356,7 +3384,7 @@
               <small class="description">击中整支队伍。</small>
         
               <div class="extra">
-                <small><b>Power: </b>30</small>
+                <small><b>威力: </b>30</small>
                 <small><b>命中率: </b>
                   100%
                 </small>
@@ -3391,7 +3419,7 @@
         
               <div class="extra">
                 <small><b>命中率: </b>
-                  Unavoidable
+                  不可避免
                 </small>
               </div>
             </section>
@@ -3480,7 +3508,7 @@
               <small class="description">击中在该招式前一回合发动攻击的角色。</small>
         
               <div class="extra">
-                <small><b>Power: </b>90</small>
+                <small><b>威力: </b>90</small>
                 <small><b>命中率: </b>
                   100%
                 </small>
@@ -3709,7 +3737,7 @@
               <small class="description">击中一个目标。若目标此回合已受过伤害，则造成暴击。</small>
         
               <div class="extra">
-                <small><b>Power: </b>60</small>
+                <small><b>威力: </b>60</small>
                 <small><b>命中率: </b>
                   100%
                 </small>
@@ -3769,7 +3797,7 @@
               <small class="description">多次击中一个目标。优先级低于其他招式。</small>
         
               <div class="extra">
-                <small><b>Power: </b>50</small>
+                <small><b>威力: </b>50</small>
                 <small><b>命中率: </b>
                   100%
                 </small>
@@ -3858,7 +3886,7 @@
               <small class="description">多次击中一个目标。</small>
         
               <div class="extra">
-                <small><b>Power: </b>40</small>
+                <small><b>威力: </b>40</small>
                 <small><b>命中率: </b>
                   100%
                 </small>
@@ -4088,7 +4116,7 @@
               <small class="description">被近战攻击命中时，有几率自动使用该招式。</small>
         
               <div class="extra">
-                <small><b>Power: </b>15</small>
+                <small><b>威力: </b>15</small>
                 <small><b>命中率: </b>
                   100%
                 </small>
@@ -4208,7 +4236,7 @@
               <small class="description">多次击中一个目标。</small>
         
               <div class="extra">
-                <small><b>Power: </b>20</small>
+                <small><b>威力: </b>20</small>
                 <small><b>命中率: </b>
                   100%
                 </small>
@@ -4253,7 +4281,7 @@
               <small class="description">多次击中一个目标。</small>
         
               <div class="extra">
-                <small><b>Power: </b>20</small>
+                <small><b>威力: </b>20</small>
                 <small><b>命中率: </b>
                   100%
                 </small>
@@ -4324,7 +4352,7 @@
               <small class="description">击中一个目标，对目标施加混乱状态。</small>
         
               <div class="extra">
-                <small><b>Power: </b>30</small>
+                <small><b>威力: </b>30</small>
                 <small><b>命中率: </b>
                   100%
                 </small>
@@ -4364,7 +4392,7 @@
               <small class="description">击中一个目标，降低目标的速度。</small>
         
               <div class="extra">
-                <small><b>Power: </b>60</small>
+                <small><b>威力: </b>60</small>
                 <small><b>命中率: </b>
                   100%
                 </small>
@@ -4466,7 +4494,7 @@
               <small class="description">击中整支队伍，且摧毁墙。</small>
         
               <div class="extra">
-                <small><b>Power: </b>150</small>
+                <small><b>威力: </b>150</small>
                 <small><b>命中率: </b>
                   100%
                 </small>
@@ -4763,7 +4791,7 @@
         
               <div class="extra">
                 <small><b>命中率: </b>
-                  Unavoidable
+                  不可避免
                 </small>
               </div>
             </section>
@@ -4804,7 +4832,7 @@
         
               <div class="extra">
                 <small><b>命中率: </b>
-                  Unavoidable
+                  不可避免
                 </small>
               </div>
             </section>
@@ -4847,7 +4875,7 @@
               <small class="description">击中一个目标。优先于其他招式使用。</small>
         
               <div class="extra">
-                <small><b>Power: </b>30</small>
+                <small><b>威力: </b>30</small>
                 <small><b>命中率: </b>
                   100%
                 </small>
@@ -4889,7 +4917,7 @@
               <small class="description">多次击中队伍中的每一名成员。</small>
         
               <div class="extra">
-                <small><b>Power: </b>40</small>
+                <small><b>威力: </b>40</small>
                 <small><b>命中率: </b>
                   100%
                 </small>
@@ -4939,7 +4967,7 @@
               <small class="description">多次击中一个目标。优先于其他招式使用。</small>
         
               <div class="extra">
-                <small><b>Power: </b>30</small>
+                <small><b>威力: </b>30</small>
                 <small><b>命中率: </b>
                   100%
                 </small>
@@ -4987,7 +5015,7 @@
               <small class="description">击中一个目标，击中次数等同于使用者队伍中的戴垃克数量。</small>
         
               <div class="extra">
-                <small><b>Power: </b>30</small>
+                <small><b>威力: </b>30</small>
                 <small><b>命中率: </b>
                   100%
                 </small>
@@ -5026,7 +5054,7 @@
               <small class="description">把墙作为投射物发射出去。造成的伤害会以剩余回合数为倍数。</small>
         
               <div class="extra">
-                <small><b>Power: </b>50</small>
+                <small><b>威力: </b>50</small>
                 <small><b>命中率: </b>
                   100%
                 </small>
@@ -5143,7 +5171,7 @@
         
               <div class="extra">
                 <small><b>命中率: </b>
-                  Unavoidable
+                  不可避免
                 </small>
               </div>
             </section>
@@ -5186,7 +5214,7 @@
               <small class="description">只有在使用者有涂层的情况下才能使用。击中一个目标，并将涂层转移到该目标上。该招式总是最后发动。</small>
         
               <div class="extra">
-                <small><b>Power: </b>90</small>
+                <small><b>威力: </b>90</small>
                 <small><b>命中率: </b>
                   100%
                 </small>
@@ -5348,7 +5376,7 @@
         
               <div class="extra">
                 <small><b>命中率: </b>
-                  Unavoidable
+                  不可避免
                 </small>
               </div>
             </section>
@@ -5437,7 +5465,7 @@
               <small class="description">击中一个目标。</small>
         
               <div class="extra">
-                <small><b>Power: </b>30</small>
+                <small><b>威力: </b>30</small>
                 <small><b>命中率: </b>
                   100%
                 </small>
@@ -5514,7 +5542,7 @@
               <small class="description">多次击中一个目标。</small>
         
               <div class="extra">
-                <small><b>Power: </b>90</small>
+                <small><b>威力: </b>90</small>
                 <small><b>命中率: </b>
                   100%
                 </small>
@@ -5561,7 +5589,7 @@
               <small class="description">对使用者造成伤害。</small>
         
               <div class="extra">
-                <small><b>Power: </b>30</small>
+                <small><b>威力: </b>30</small>
                 <small><b>命中率: </b>
                   100%
                 </small>
@@ -5600,7 +5628,7 @@
         
               <div class="extra">
                 <small><b>命中率: </b>
-                  Unavoidable
+                  不可避免
                 </small>
               </div>
             </section>
@@ -6057,7 +6085,7 @@
               <small class="description">击中一个目标。</small>
         
               <div class="extra">
-                <small><b>Power: </b>120</small>
+                <small><b>威力: </b>120</small>
                 <small><b>命中率: </b>
                   1%
                 </small>
@@ -6090,7 +6118,7 @@
               <small class="description">击中一个目标。</small>
         
               <div class="extra">
-                <small><b>Power: </b>120</small>
+                <small><b>威力: </b>120</small>
                 <small><b>命中率: </b>
                   1%
                 </small>
@@ -6129,7 +6157,7 @@
               <small class="description">击中一个目标，降低目标的闪避。</small>
         
               <div class="extra">
-                <small><b>Power: </b>70</small>
+                <small><b>威力: </b>70</small>
                 <small><b>命中率: </b>
                   85%
                 </small>
@@ -6168,7 +6196,7 @@
         
               <div class="extra">
                 <small><b>命中率: </b>
-                  Unavoidable
+                  不可避免
                 </small>
               </div>
             </section>
@@ -6376,7 +6404,7 @@
               <small class="description">击中一个目标。</small>
         
               <div class="extra">
-                <small><b>Power: </b>100</small>
+                <small><b>威力: </b>100</small>
                 <small><b>命中率: </b>
                   75%
                 </small>
@@ -6603,7 +6631,7 @@
               <small class="description">击中一个目标。伤害值不再根据使用者的近战攻击能力值来决定，而是根据速度能力值来决定。</small>
         
               <div class="extra">
-                <small><b>Power: </b>90</small>
+                <small><b>威力: </b>90</small>
                 <small><b>命中率: </b>
                   85%
                 </small>
@@ -6682,7 +6710,7 @@
               <small class="description">击中一个目标。</small>
         
               <div class="extra">
-                <small><b>Power: </b>60</small>
+                <small><b>威力: </b>60</small>
                 <small><b>命中率: </b>
                   100%
                 </small>
@@ -6808,7 +6836,7 @@
               <small class="description">击中整支队伍，令各目标身上状态效果的持续回合数减1。</small>
         
               <div class="extra">
-                <small><b>Power: </b>60</small>
+                <small><b>威力: </b>60</small>
                 <small><b>命中率: </b>
                   100%
                 </small>
@@ -6852,7 +6880,7 @@
               <small class="description">击中一个目标，有几率烧伤目标。</small>
         
               <div class="extra">
-                <small><b>Power: </b>90</small>
+                <small><b>威力: </b>90</small>
                 <small><b>命中率: </b>
                   100%
                 </small>
@@ -6898,7 +6926,7 @@
               <small class="description">击中一个目标，降低目标的近战防御。</small>
         
               <div class="extra">
-                <small><b>Power: </b>90</small>
+                <small><b>威力: </b>90</small>
                 <small><b>命中率: </b>
                   100%
                 </small>
@@ -6983,7 +7011,7 @@
               <small class="description">击中一个目标。</small>
         
               <div class="extra">
-                <small><b>Power: </b>60</small>
+                <small><b>威力: </b>60</small>
                 <small><b>命中率: </b>
                   100%
                 </small>
@@ -7027,7 +7055,7 @@
               <small class="description">多次击中队伍中的每一名成员。</small>
         
               <div class="extra">
-                <small><b>Power: </b>20</small>
+                <small><b>威力: </b>20</small>
                 <small><b>命中率: </b>
                   100%
                 </small>
@@ -7076,7 +7104,7 @@
         
               <div class="extra">
                 <small><b>命中率: </b>
-                  Unavoidable
+                  不可避免
                 </small>
               </div>
             </section>
@@ -7403,7 +7431,7 @@
         
               <div class="extra">
                 <small><b>命中率: </b>
-                  Unavoidable
+                  不可避免
                 </small>
               </div>
             </section>
@@ -7539,7 +7567,7 @@
               <small class="description">多次击中一个目标。</small>
         
               <div class="extra">
-                <small><b>Power: </b>40</small>
+                <small><b>威力: </b>40</small>
                 <small><b>命中率: </b>
                   100%
                 </small>
@@ -7579,7 +7607,7 @@
               <small class="description">击中一个目标，对目标施加烧伤状态。</small>
         
               <div class="extra">
-                <small><b>Power: </b>30</small>
+                <small><b>威力: </b>30</small>
                 <small><b>命中率: </b>
                   100%
                 </small>
@@ -7618,7 +7646,7 @@
         
               <div class="extra">
                 <small><b>命中率: </b>
-                  Unavoidable
+                  不可避免
                 </small>
               </div>
             </section>
@@ -7697,7 +7725,7 @@
               <small class="description">击中一个目标。</small>
         
               <div class="extra">
-                <small><b>Power: </b>60</small>
+                <small><b>威力: </b>60</small>
                 <small><b>命中率: </b>
                   100%
                 </small>
@@ -7754,7 +7782,7 @@
               <small class="description">击中一个目标。</small>
         
               <div class="extra">
-                <small><b>Power: </b>200</small>
+                <small><b>威力: </b>200</small>
                 <small><b>命中率: </b>
                   100%
                 </small>
@@ -7936,7 +7964,7 @@
               <small class="description">多次击中一个目标。</small>
         
               <div class="extra">
-                <small><b>Power: </b>60</small>
+                <small><b>威力: </b>60</small>
                 <small><b>命中率: </b>
                   100%
                 </small>
@@ -7980,7 +8008,7 @@
               <small class="description">击中一个目标。优先于其他招式使用。</small>
         
               <div class="extra">
-                <small><b>Power: </b>30</small>
+                <small><b>威力: </b>30</small>
                 <small><b>命中率: </b>
                   100%
                 </small>
@@ -8019,7 +8047,7 @@
         
               <div class="extra">
                 <small><b>命中率: </b>
-                  Unavoidable
+                  不可避免
                 </small>
               </div>
             </section>
@@ -8057,7 +8085,7 @@
               <small class="description">击中一个目标。</small>
         
               <div class="extra">
-                <small><b>Power: </b>60</small>
+                <small><b>威力: </b>60</small>
                 <small><b>命中率: </b>
                   100%
                 </small>
@@ -8101,7 +8129,7 @@
               <small class="description">击中一个目标，同时对使用者造成一点点伤害。</small>
         
               <div class="extra">
-                <small><b>Power: </b>120</small>
+                <small><b>威力: </b>120</small>
                 <small><b>命中率: </b>
                   100%
                 </small>
@@ -8344,9 +8372,9 @@
               <small class="description">摧毁每一面墙，对每一名有墙的对手施加伤害，伤害值与各自的墙的剩余回合数成正比。</small>
         
               <div class="extra">
-                <small><b>Power: </b>30</small>
+                <small><b>威力: </b>30</small>
                 <small><b>命中率: </b>
-                  Unavoidable
+                  不可避免
                 </small>
               </div>
             </section>
@@ -8382,7 +8410,7 @@
               <small class="description">恢复生命值，数值等同于所造成的伤害值。</small>
         
               <div class="extra">
-                <small><b>Power: </b>30</small>
+                <small><b>威力: </b>30</small>
                 <small><b>命中率: </b>
                   100%
                 </small>
@@ -8470,7 +8498,7 @@
               <small class="description">击中一个目标。</small>
         
               <div class="extra">
-                <small><b>Power: </b>60</small>
+                <small><b>威力: </b>60</small>
                 <small><b>命中率: </b>
                   100%
                 </small>
@@ -8507,7 +8535,7 @@
               <small class="description">击中一个目标。</small>
         
               <div class="extra">
-                <small><b>Power: </b>100</small>
+                <small><b>威力: </b>100</small>
                 <small><b>命中率: </b>
                   10%
                 </small>
@@ -8576,7 +8604,7 @@
               <small class="description">击中一个目标。伤害值不再根据使用者的近战攻击能力值来决定，而是根据近战防御能力值来决定。</small>
         
               <div class="extra">
-                <small><b>Power: </b>90</small>
+                <small><b>威力: </b>90</small>
                 <small><b>命中率: </b>
                   100%
                 </small>
@@ -8709,7 +8737,7 @@
               <small class="description">多次击中队伍中的每一名成员。</small>
         
               <div class="extra">
-                <small><b>Power: </b>40</small>
+                <small><b>威力: </b>40</small>
                 <small><b>命中率: </b>
                   100%
                 </small>
@@ -8757,7 +8785,7 @@
               <small class="description">击中一个目标，降低目标的速度。</small>
         
               <div class="extra">
-                <small><b>Power: </b>90</small>
+                <small><b>威力: </b>90</small>
                 <small><b>命中率: </b>
                   100%
                 </small>
@@ -8801,7 +8829,7 @@
               <small class="description">击中一个目标。</small>
         
               <div class="extra">
-                <small><b>Power: </b>60</small>
+                <small><b>威力: </b>60</small>
                 <small><b>命中率: </b>
                   100%
                 </small>
@@ -8837,9 +8865,9 @@
               <small class="description">近战接触时，有几率自动伤害对手。伤害值会根据使用者的近战防御值决定。</small>
         
               <div class="extra">
-                <small><b>Power: </b>15</small>
+                <small><b>威力: </b>15</small>
                 <small><b>命中率: </b>
-                  Unavoidable
+                  不可避免
                 </small>
               </div>
             </section>
@@ -8918,7 +8946,7 @@
               <small class="description">击中一个目标，对目标施加混乱状态。</small>
         
               <div class="extra">
-                <small><b>Power: </b>90</small>
+                <small><b>威力: </b>90</small>
                 <small><b>命中率: </b>
                   100%
                 </small>
@@ -9272,7 +9300,7 @@
         
               <div class="extra">
                 <small><b>命中率: </b>
-                  Unavoidable
+                  不可避免
                 </small>
               </div>
             </section>
@@ -9358,7 +9386,7 @@
               <small class="description">击中一个目标。</small>
         
               <div class="extra">
-                <small><b>Power: </b>60</small>
+                <small><b>威力: </b>60</small>
                 <small><b>命中率: </b>
                   100%
                 </small>
@@ -9401,7 +9429,7 @@
               <small class="description">击中整支队伍。</small>
         
               <div class="extra">
-                <small><b>Power: </b>60</small>
+                <small><b>威力: </b>60</small>
                 <small><b>命中率: </b>
                   100%
                 </small>
@@ -9447,7 +9475,7 @@
               <small class="description">击中整支队伍。</small>
         
               <div class="extra">
-                <small><b>Power: </b>60</small>
+                <small><b>威力: </b>60</small>
                 <small><b>命中率: </b>
                   100%
                 </small>
@@ -9583,7 +9611,7 @@
               <small class="description">令使用者在被打倒时爆炸，伤害周围所有角色。</small>
         
               <div class="extra">
-                <small><b>Power: </b>60</small>
+                <small><b>威力: </b>60</small>
                 <small><b>命中率: </b>
                   100%
                 </small>
@@ -9623,7 +9651,7 @@
               <small class="description">击中一个目标。伤害值不再根据使用者的近战攻击能力值来决定，而是根据近战防御能力值来决定。同时对使用者造成伤害。</small>
         
               <div class="extra">
-                <small><b>Power: </b>120</small>
+                <small><b>威力: </b>120</small>
                 <small><b>命中率: </b>
                   100%
                 </small>
@@ -9665,7 +9693,7 @@
               <small class="description">击中一个目标，降低目标的闪避。</small>
         
               <div class="extra">
-                <small><b>Power: </b>40</small>
+                <small><b>威力: </b>40</small>
                 <small><b>命中率: </b>
                   75%
                 </small>
@@ -9706,7 +9734,7 @@
               <small class="description">击中一个目标。</small>
         
               <div class="extra">
-                <small><b>Power: </b>90</small>
+                <small><b>威力: </b>90</small>
                 <small><b>命中率: </b>
                   100%
                 </small>
@@ -9750,7 +9778,7 @@
               <small class="description">击中一个目标两次。若在充电后使用，则造成暴击。</small>
         
               <div class="extra">
-                <small><b>Power: </b>40</small>
+                <small><b>威力: </b>40</small>
                 <small><b>命中率: </b>
                   100%
                 </small>
@@ -9825,7 +9853,7 @@
               <small class="description">消耗使用者的所有AP。本次攻击威力的提升量为所耗AP点数的15倍。攻击的属性及额外状态效果则由当前天气决定。</small>
         
               <div class="extra">
-                <small><b>Power: </b>30</small>
+                <small><b>威力: </b>30</small>
                 <small><b>命中率: </b>
                   100%
                 </small>
@@ -9878,7 +9906,7 @@
               <small class="description">具有该融合组合所特有的效果。</small>
         
               <div class="extra">
-                <small><b>Power: </b>200</small>
+                <small><b>威力: </b>200</small>
                 <small><b>命中率: </b>
                   100%
                 </small>
@@ -10004,7 +10032,7 @@
         
               <div class="extra">
                 <small><b>命中率: </b>
-                  Unavoidable
+                  不可避免
                 </small>
               </div>
             </section>
@@ -10052,7 +10080,7 @@
               <small class="description">击中一个目标。</small>
         
               <div class="extra">
-                <small><b>Power: </b>60</small>
+                <small><b>威力: </b>60</small>
                 <small><b>命中率: </b>
                   100%
                 </small>
@@ -10267,7 +10295,7 @@
               <small class="description">使用者生命值低时，可造成更高伤害。</small>
         
               <div class="extra">
-                <small><b>Power: </b>20</small>
+                <small><b>威力: </b>20</small>
                 <small><b>命中率: </b>
                   100%
                 </small>
@@ -10418,7 +10446,7 @@
         
               <div class="extra">
                 <small><b>命中率: </b>
-                  Unavoidable
+                  不可避免
                 </small>
               </div>
             </section>
@@ -10462,7 +10490,7 @@
               <small class="description">多次击中队伍中的每一名成员。</small>
         
               <div class="extra">
-                <small><b>Power: </b>20</small>
+                <small><b>威力: </b>20</small>
                 <small><b>命中率: </b>
                   100%
                 </small>
@@ -10506,7 +10534,7 @@
               <small class="description">击中一个目标。</small>
         
               <div class="extra">
-                <small><b>Power: </b>60</small>
+                <small><b>威力: </b>60</small>
                 <small><b>命中率: </b>
                   100%
                 </small>
@@ -10543,7 +10571,7 @@
               <small class="description">被远程攻击命中时，有几率自动使用该招式。</small>
         
               <div class="extra">
-                <small><b>Power: </b>15</small>
+                <small><b>威力: </b>15</small>
                 <small><b>命中率: </b>
                   100%
                 </small>
@@ -10836,7 +10864,7 @@
               <small class="description">击中整支队伍。若该招式装备在金属系磁带上，则变为空气系攻击。</small>
         
               <div class="extra">
-                <small><b>Power: </b>60</small>
+                <small><b>威力: </b>60</small>
                 <small><b>命中率: </b>
                   100%
                 </small>
@@ -11003,7 +11031,7 @@
               <small class="description">击中一个目标，对玻璃和金属系目标施加共振效果。</small>
         
               <div class="extra">
-                <small><b>Power: </b>60</small>
+                <small><b>威力: </b>60</small>
                 <small><b>命中率: </b>
                   100%
                 </small>
@@ -11049,9 +11077,9 @@
               <small class="description">击中一个目标。此招式无法躲避。</small>
         
               <div class="extra">
-                <small><b>Power: </b>90</small>
+                <small><b>威力: </b>90</small>
                 <small><b>命中率: </b>
-                  Unavoidable
+                  不可避免
                 </small>
               </div>
             </section>
@@ -11130,9 +11158,9 @@
               <small class="description">近战攻击未击中使用者时，自动对对方造成伤害。</small>
         
               <div class="extra">
-                <small><b>Power: </b>40</small>
+                <small><b>威力: </b>40</small>
                 <small><b>命中率: </b>
-                  Unavoidable
+                  不可避免
                 </small>
               </div>
             </section>
@@ -11207,7 +11235,7 @@
               <small class="description">击中一个目标。</small>
         
               <div class="extra">
-                <small><b>Power: </b>90</small>
+                <small><b>威力: </b>90</small>
                 <small><b>命中率: </b>
                   100%
                 </small>
@@ -11637,7 +11665,7 @@
         
               <div class="extra">
                 <small><b>命中率: </b>
-                  Unavoidable
+                  不可避免
                 </small>
               </div>
             </section>
@@ -11687,7 +11715,7 @@
               <small class="description">击中整支队伍，降低各目标的命中率。</small>
         
               <div class="extra">
-                <small><b>Power: </b>60</small>
+                <small><b>威力: </b>60</small>
                 <small><b>命中率: </b>
                   100%
                 </small>
@@ -11735,7 +11763,7 @@
               <small class="description">击中一个目标，令目标额外受到30点空气系伤害。</small>
         
               <div class="extra">
-                <small><b>Power: </b>60</small>
+                <small><b>威力: </b>60</small>
                 <small><b>命中率: </b>
                   100%
                 </small>
@@ -11779,7 +11807,7 @@
               <small class="description">击中整支队伍。</small>
         
               <div class="extra">
-                <small><b>Power: </b>60</small>
+                <small><b>威力: </b>60</small>
                 <small><b>命中率: </b>
                   100%
                 </small>
@@ -11868,7 +11896,7 @@
               <small class="description">击中整支队伍，且摧毁墙。</small>
         
               <div class="extra">
-                <small><b>Power: </b>90</small>
+                <small><b>威力: </b>90</small>
                 <small><b>命中率: </b>
                   100%
                 </small>
@@ -11919,7 +11947,7 @@
         
               <div class="extra">
                 <small><b>命中率: </b>
-                  Unavoidable
+                  不可避免
                 </small>
               </div>
             </section>
@@ -11969,7 +11997,7 @@
               <small class="description">多次击中一个目标。</small>
         
               <div class="extra">
-                <small><b>Power: </b>40</small>
+                <small><b>威力: </b>40</small>
                 <small><b>命中率: </b>
                   100%
                 </small>
@@ -12013,7 +12041,7 @@
               <small class="description">击中一个目标，降低目标的远程防御。</small>
         
               <div class="extra">
-                <small><b>Power: </b>70</small>
+                <small><b>威力: </b>70</small>
                 <small><b>命中率: </b>
                   100%
                 </small>
@@ -12086,28 +12114,36 @@
     </main>
 
     <footer class="ta-center">
-        <small>This app is not affiliated with, authorised by <span class="tertiary">Bytten Studio Ltd</span>, its
-            subsidiaries, or its parent companies,
-            whose names, logos and products are displayed in this app.</small>
+        <small class="legal">This app is not affiliated with, authorised by <span class="tertiary">Bytten Studio
+                Ltd</span>, its subsidiaries, or its parent companies, whose names, logos and products are displayed in this app. The names Cassette Beasts, <span class="tertiary">Bytten Studio
+                Ltd</span> as well as related names and images are registered trademarks of their respective owners. This app is made by fan(s) for fans. Please do not reach out to <span class="tertiary">Bytten Studio
+                Ltd</span> about bugs within this app.</small>
         <br>
         <small class="assistantApps ta-center">
             <span>© Assistant Apps. All rights reserved.</span>
             <span>&nbsp;|&nbsp;</span>
             <span>
-                <a href="/privacy_policy.html" target="_blank" rel="noopener noreferrer" title="Privacy Policy">Privacy
-                    Policy</a>
+                <a href="/about.html" title="关于">关于</a>
+            </span>
+            <span>&nbsp;|&nbsp;</span>
+            <span>
+                <a href="/privacy_policy.html" target="_blank" rel="noopener noreferrer"
+                    title="隐私政策">
+                    隐私政策
+                </a>
             </span>
             <span>&nbsp;|&nbsp;</span>
             <span>
                 <a href="/terms_and_conditions.html" target="_blank" rel="noopener noreferrer"
-                    title="Terms and Conditions">Terms &amp;
-                    Conditions</a>
+                    title="条款和条件">
+                    条款和条件</a>
             </span>
             <span>&nbsp;|&nbsp;</span>
-            <small>v1.0.0</small>
+            <span>v1.0.0</span>
         </small>
     </footer>    <script defer src="/assets/js/main.js?v=1.0.0"></script>
     <script defer src="/assets/js/analytics.js?v=1.0.0"></script>
+    <script defer src="https://webcomp.assistantapps.com/build/bundle.js"></script>
 </body>
 
 </html>

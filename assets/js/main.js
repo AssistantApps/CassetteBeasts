@@ -31,8 +31,8 @@ function onPageLoad() {
   if (spriteContainerNode != null) spriteContainerNode.classList.add(tabContentId);
 }
 
-// onPageLoad()
-document.addEventListener("DOMContentLoaded", onPageLoad);
+//document.addEventListener("DOMContentLoaded", onPageLoad);
+onPageLoad()
 
 function setSetting(name, value) {
   window.assistantApps[name] = value;
@@ -148,4 +148,20 @@ const playAudioNode = (id) => {
   if (node == null) return;
 
   node.play();
+};
+
+const revealEmail = (elem, event) => {
+  event?.preventDefault?.();
+  const obfuscated = atob(decodeURI(elem.dataset['email']));
+  let realValue = '';
+  for (let index = 0; index < obfuscated.split('').length; index++) {
+    const char = obfuscated[(index * 3) + 1];
+    if (char == null) break;
+    realValue = realValue + char;
+  }
+
+  elem.href = realValue;
+  elem.title = realValue.replace('mailto:', '');
+  elem.innerText = realValue.replace('mailto:', '');
+  elem.removeAttribute('onclick');
 };
