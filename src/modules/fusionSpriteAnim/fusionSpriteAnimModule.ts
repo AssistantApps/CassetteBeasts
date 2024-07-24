@@ -9,9 +9,7 @@ import { CommonModule } from 'modules/commonModule';
 import { spriteAnimMapFromDetailList } from '../../misc/spriteAnimMapFromDetailList';
 
 export class FusionSpriteAnimModule extends CommonModule<ISpriteAnim> {
-  private _folders = fs
-    .readdirSync(FolderPathHelper.fusionSpriteAnim())
-    .map(FolderPathHelper.fusionSpriteAnimSubFolder);
+  private _folder = FolderPathHelper.fusionSpriteAnim();
 
   constructor() {
     super({
@@ -24,7 +22,10 @@ export class FusionSpriteAnimModule extends CommonModule<ISpriteAnim> {
   init = async () => {
     if (this.isReady) return;
 
-    for (const folder of this._folders) {
+    const folders = fs
+      .readdirSync(this._folder) //
+      .map(FolderPathHelper.fusionSpriteAnimSubFolder);
+    for (const folder of folders) {
       const list = fs.readdirSync(folder);
 
       for (const file of list) {
