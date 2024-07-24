@@ -8,8 +8,8 @@ import { paths } from 'constant/paths';
 import { IBoxSelection } from 'contracts/boxSelection';
 import { IExternalResource } from 'contracts/externalResource';
 import { getExternalResourcesImagePath } from 'mapper/externalResourceMapper';
-import { getBotPath, getConfig } from 'services/internal/configService';
-import { copyFileIfNotExists, createFoldersOfDestFilePath } from './fileHelper';
+import { getConfig } from 'services/internal/configService';
+import { createFoldersOfDestFilePath } from './fileHelper';
 import { retryAsync } from './retryHelper';
 
 interface ICutImageWhenCopying {

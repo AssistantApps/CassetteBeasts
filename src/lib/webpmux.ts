@@ -29,10 +29,8 @@ export const animateWebp = (props: IAnimateWebpPromiseProps): Promise<string> =>
     queryOpts.push('-o');
     queryOpts.push(props.outputFilePath);
 
-    // TODO handle other OS versions
-
     execFile(
-      path.join(paths().libFolder, 'webpmux.exe'), //
+      path.join(paths().libFolder, getWebpMuxBinaryFile()), //
       queryOpts,
       (error, _, __) => {
         if (error) {
@@ -43,4 +41,14 @@ export const animateWebp = (props: IAnimateWebpPromiseProps): Promise<string> =>
       },
     );
   });
+};
+
+const getWebpMuxBinaryFile = (): string => {
+  if (process.platform === 'linux') {
+    return 'webpmux';
+  } else if (process.platform === 'win32') {
+    return 'webpmux.exe';
+  }
+
+  return 'webpmux';
 };
