@@ -26,11 +26,7 @@ const main = async () => {
   getHandlebar().unregisterPartialsAndHelpers();
   getHandlebar().registerPartialsAndHelpers();
 
-  console.log(`Generating images`);
   await generateFavicons();
-  for (const module of modules) {
-    await module.generateImages(true, modules);
-  }
 
   const availableLanguages = localisationModule.getLanguageCodes();
   let langCode = availableLanguages[0];
@@ -43,6 +39,11 @@ const main = async () => {
       reInitialise: true,
       loadFromJson: true,
     });
+
+    for (const module of modules) {
+      await module.generateImages(true, modules);
+    }
+
     for (const module of modules) {
       await module.writePages(langCode, modules);
     }
