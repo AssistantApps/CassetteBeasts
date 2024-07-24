@@ -90,7 +90,6 @@ export class MiscModule extends CommonModule<ILocalisation> {
       { src: handlebarTemplate.termsAndConditions },
       { src: handlebarTemplate.privacyPolicy },
       { src: handlebarTemplate.openSearch },
-      { src: handlebarTemplate.sitemap },
       { src: handlebarTemplate.humans },
       { src: handlebarTemplate.robots },
     ];

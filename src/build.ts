@@ -57,6 +57,7 @@ const main = async () => {
   }
 
   getHandlebar().generateGitIgnore();
+  getHandlebar().generateSiteMap();
   console.log('✔ Done\r\n');
 };
 

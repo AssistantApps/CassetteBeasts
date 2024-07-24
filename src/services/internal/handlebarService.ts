@@ -6,6 +6,7 @@ import { Container, Service } from 'typedi';
 import { paths } from 'constant/paths';
 import { PageData } from 'contracts/pageData';
 import { createFoldersOfDestFilePath, getIndexOfFolderSlash } from 'helpers/fileHelper';
+import { handlebarTemplate } from 'constant/handlebar';
 
 interface IProps<T> {
   data: PageData<T>;
@@ -15,7 +16,7 @@ interface IProps<T> {
 
 @Service()
 export class HandlebarService {
-  private _generatedGitIgnoreFiles: Record<string, string> = {};
+  private _generatedFiles: Record<string, string> = {};
   private _registeredPartials: Array<string> = [];
   private _registeredHelpers: Array<string> = [];
   private _allowedTemplatesToCompile: Array<string> = [];
@@ -92,7 +93,7 @@ export class HandlebarService {
       const compiledTemplate = this.getCompiledTemplate(props.templateFile, props.data);
 
       for (const actualOutputFile of actualOutputFiles) {
-        this._generatedGitIgnoreFiles[actualOutputFile] = actualOutputFile;
+        this._generatedFiles[actualOutputFile] = actualOutputFile;
         const destFullFilePath = path.join(paths().destinationFolder, actualOutputFile);
         createFoldersOfDestFilePath(destFullFilePath);
         fs.writeFileSync(destFullFilePath, compiledTemplate, 'utf8');
@@ -106,14 +107,14 @@ export class HandlebarService {
     (this._allowedTemplatesToCompile = allowedFiles);
 
   clearGitIgnore = () => {
-    this._generatedGitIgnoreFiles = { 'serviceWorker.js': '-' };
+    this._generatedFiles = { 'serviceWorker.js': '-' };
   };
   generateGitIgnore = () => {
     try {
       const destFullFilePath = path.join(paths().destinationFolder, '.gitignore');
       createFoldersOfDestFilePath(destFullFilePath);
       const gitIgnoreFiles: Record<string, string> = {};
-      for (const objKey of Object.keys(this._generatedGitIgnoreFiles)) {
+      for (const objKey of Object.keys(this._generatedFiles)) {
         if (objKey.includes('scss')) continue;
         const indexOfSlash = getIndexOfFolderSlash(objKey);
         if (indexOfSlash < 1) {
@@ -132,6 +133,22 @@ export class HandlebarService {
       );
     } catch (e) {
       console.error(`Failed to generate .gitignore`, e);
+    }
+  };
+
+  generateSiteMap = () => {
+    try {
+      const destFullFilePath = path.join(paths().destinationFolder, 'sitemap.xml');
+      const sitePaths: Array<string> = [];
+      for (const objKey of Object.keys(this._generatedFiles)) {
+        if (objKey.includes('scss')) continue;
+        const indexOfSlash = getIndexOfFolderSlash(objKey);
+      }
+
+      const content = this.getCompiledTemplate(handlebarTemplate.sitemap, { sitePaths });
+      fs.writeFileSync(destFullFilePath, content, 'utf8');
+    } catch (e) {
+      console.error(`Failed to generate sitemap.xml`, e);
     }
   };
 }
