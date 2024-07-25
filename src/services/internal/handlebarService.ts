@@ -6,7 +6,6 @@ import { Container, Service } from 'typedi';
 import { paths } from 'constant/paths';
 import { PageData } from 'contracts/pageData';
 import { createFoldersOfDestFilePath, getIndexOfFolderSlash } from 'helpers/fileHelper';
-import { handlebarTemplate } from 'constant/handlebar';
 
 interface IProps<T> {
   data: PageData<T>;
@@ -107,7 +106,7 @@ export class HandlebarService {
     (this._allowedTemplatesToCompile = allowedFiles);
 
   clearGitIgnore = () => {
-    this._generatedFiles = { 'serviceWorker.js': '-' };
+    this._generatedFiles = {};
   };
   generateGitIgnore = () => {
     try {
@@ -133,22 +132,6 @@ export class HandlebarService {
       );
     } catch (e) {
       console.error(`Failed to generate .gitignore`, e);
-    }
-  };
-
-  generateSiteMap = () => {
-    try {
-      const destFullFilePath = path.join(paths().destinationFolder, 'sitemap.xml');
-      const sitePaths: Array<string> = [];
-      for (const objKey of Object.keys(this._generatedFiles)) {
-        if (objKey.includes('scss')) continue;
-        const indexOfSlash = getIndexOfFolderSlash(objKey);
-      }
-
-      const content = this.getCompiledTemplate(handlebarTemplate.sitemap, { sitePaths });
-      fs.writeFileSync(destFullFilePath, content, 'utf8');
-    } catch (e) {
-      console.error(`Failed to generate sitemap.xml`, e);
     }
   };
 }

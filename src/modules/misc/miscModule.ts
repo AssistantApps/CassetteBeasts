@@ -92,11 +92,6 @@ export class MiscModule extends CommonModule<ILocalisation> {
       { src: handlebarTemplate.robots },
     ];
 
-    const enableServiceWorker = getConfig().getEnableServiceWorker();
-    if (enableServiceWorker === true) {
-      miscFiles.push({ src: handlebarTemplate.serviceWorker });
-    }
-
     for (const miscFile of miscFiles) {
       await getHandlebar().compileTemplateToFile({
         data: this.getBasicPageData({

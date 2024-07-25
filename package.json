@@ -4,7 +4,8 @@
   "description": "Website generated from data & images extracted from the Cassette Beasts",
   "scripts": {
     "start": "dotenv -- tsx src/main.ts",
-    "build": "dotenv -- tsx src/build.ts"
+    "build": "dotenv -- tsx src/build.ts",
+    "service-worker": "npx workbox-cli generateSW ./workbox-config.js"
   },
   "author": "Kurt Lourens",
   "license": "GPL-3.0-only",

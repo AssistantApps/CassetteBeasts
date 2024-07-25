@@ -22,3 +22,7 @@ public/assets/img/meta/ja_JP
 public/assets/img/meta/ko_KR
 public/assets/img/meta/pt_BR
 public/assets/img/meta/zh_CN
+public/sw.js
+public/sw.js.map
+public/workbox-*.js
+public/workbox-*.js.map

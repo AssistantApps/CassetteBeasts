@@ -49,6 +49,7 @@ jobs:
         run: |
           npm ci
           npm run build
+          npm run service-worker
 
       - name: Remove gitignore
         run: |
