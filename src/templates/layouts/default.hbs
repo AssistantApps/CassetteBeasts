@@ -9,8 +9,10 @@
 
     <main class="container page-container">
 
-        <assistant-apps-app-notice-list appguid="{{@root.assistantApps.appGuid}}"
-            langcode="{{@root.langCode}}"></assistant-apps-app-notice-list>
+        <div class="full-page-app-notice">
+            <assistant-apps-app-notice-list appguid="{{@root.assistantApps.appGuid}}"
+                langcode="{{@root.langCode}}"></assistant-apps-app-notice-list>
+        </div>
 
         {{> @partial-block }}
 

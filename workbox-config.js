@@ -1,12 +1,28 @@
 module.exports = {
-	globDirectory: 'public/',
-	globPatterns: [
-		'**/*.{html,wav,css,png,ico,webp,jpg,js,xml,txt,json}'
-	],
-	swDest: 'public/sw.js',
-	ignoreURLParametersMatching: [
-		/^utm_/,
-		/^fbclid$/,
-		/^standalone/
-	]
+  globDirectory: 'public/',
+  globPatterns: ['**/*.{html,css,png,ico,webp,jpg}'],
+  globIgnores: [
+    '**/node_modules/**/*',
+    '**/*.js',
+    '**/assets/audio/**/*',
+    '**/assets/favicon/android*.*',
+    '**/assets/favicon/apple*.*',
+    '**/assets/font/**/*',
+    '**/assets/img/game/**/*',
+    '**/assets/img/generated/**/*',
+    '**/assets/img/inspiration/**/*',
+    '**/assets/img/meta/**/*',
+    '**/de_DE/**/*',
+    '**/en/**/*',
+    '**/es_ES/**/*',
+    '**/es_MX/**/*',
+    '**/fr_FR/**/*',
+    '**/it_IT/**/*',
+    '**/ja_JP/**/*',
+    '**/ko_KR/**/*',
+    '**/pt_BR/**/*',
+    '**/zh_CN/**/*',
+  ],
+  swDest: 'public/sw.js',
+  ignoreURLParametersMatching: [/^utm_/, /^fbclid$/, /^standalone/],
 };

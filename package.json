@@ -1,6 +1,6 @@
 {
   "name": "cassette-beasts-extract",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Website generated from data & images extracted from the Cassette Beasts",
   "scripts": {
     "start": "dotenv -- tsx src/main.ts",
