@@ -7098,6 +7098,12 @@ tr:hover td.sprite img {
   }
 }
 
+.full-page-app-notice {
+  --aa-app-notice-grid-columns: 1;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
 #move-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
