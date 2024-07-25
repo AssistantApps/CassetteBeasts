@@ -46,6 +46,7 @@ export const UIKeys = {
   buffs: 'TYPE_CHART_BUFFS', // Buff(s)
   debuffs: 'TYPE_CHART_DEBUFFS', // Debuff(s)
   map: 'UI_PAUSE_MAP_BTN', // Map
+  typeless: 'UI_INVENTORY_FILTER_TYPE_TYPELESS', // Typeless
 } as const;
 
 export const UIKeysRemoveTrailingColon = [

@@ -59,9 +59,9 @@ export class StatusEffectModule extends CommonModule<IStatusEffect> {
 
     for (const detail of this._baseDetails) {
       let name_localised = language[detail.name];
-      if (name_localised.includes('{type')) {
+      if (name_localised.includes('{type}')) {
         const element = elementModule.get('air') as IElementEnhanced;
-        name_localised.replace('{type', element.name_localised);
+        name_localised = name_localised.replace('{type}', element.name_localised);
       }
       const detailEnhanced: IStatusEffectEnhanced = {
         ...detail,

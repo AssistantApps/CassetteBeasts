@@ -55,6 +55,6 @@ export class AssistantAppsModule extends CommonModule<ILocalisation> {
       console.error(`Locale '${locale}' does not exist`);
       localLocal = defaultLocale;
     }
-    return this._itemDetailMap[localLocal];
+    return this._itemDetailMap[localLocal].messages;
   };
 }

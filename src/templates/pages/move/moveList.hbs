@@ -4,17 +4,18 @@
 
 <section id="search">
   <fieldset role="group">
-    <input type="search" name="search" placeholder="Search for..." oninput="onSearchChange(this.value)">
-    <button id="list-mode" class="secondary project-btn no-border-right selected" data-class="list"
+    <input type="search" name="search" placeholder="Search for..." class="search-input-border-radius"
+      oninput="onSearchChange(this.value)">
+    <button id="list-mode" class="secondary project-btn no-border-right hidden-in-mobile" data-class="list"
       onclick="applyClassToId('move-grid', '-mode', this.id); toggleClassToId(this.id, 'selected', true); toggleClassToId('grid-mode', 'selected', false)"
       data-tooltip="List view" alt="List view">☰</button>
-    <button id="grid-mode" class="secondary project-btn no-border-left" data-class="grid"
+    <button id="grid-mode" class="secondary project-btn no-border-left hidden-in-mobile selected" data-class="grid"
       onclick="applyClassToId('move-grid', '-mode', this.id); toggleClassToId(this.id, 'selected', true); toggleClassToId('list-mode', 'selected', false)"
       data-tooltip="Grid view" alt="Grid view">▦</button>
   </fieldset>
 </section>
 
-<section id="move-grid" class="item-grid-list list-mode">
+<section id="move-grid" class="item-grid-list grid-mode mb-3">
   {{#each data.list}}
   <a href="/{{@root.langCode}}{{@root.routes.moves}}/{{this.id}}.html"
     class="grid-list-item item animate__animated animate__fadeIn" data-title="{{this.name_localised}}"

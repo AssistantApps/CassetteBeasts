@@ -2,56 +2,170 @@
 
 {{> partials/breadcrumb }}
 
-<div class="attacker">
-    <h3>{{lookup @root.translate 'TYPE_CHART_ATTACKER'}}</h3>
-    <div class="defender">
-        <h3 class="ta-center">{{lookup @root.translate 'TYPE_CHART_DEFENDER'}}</h3>
-        <section id="element-reaction-grid">
-            {{#each data.grid}}
-            {{#each this}}
-
-            <div
-                class="{{this.id}} cell x-{{@index}} y-{{@../index}} {{#if this.buffs}} hasBuffs{{/if}}{{#if this.is_buff}} buff{{/if}}{{#if this.is_debuff}} debuff{{/if}}">
-                {{#if this.iconUrl}}
-                <img src="{{resimage this.iconUrl}}" class="element" alt="image of {{this.name}}" draggable="false">
-                {{/if}}
-
-                {{#if this.buffs}}
-                <div class="buffs">
-                    {{#each this.buffs}}
-                    <div class="effect">
-                        <img src="{{resimage this.icon.path}}" class="status" alt="image of {{this.name_localised}}"
-                            draggable="false">
-                    </div>
-                    {{/each}}
-                </div>
+<div class="hidden-in-mobile mb-3">
+    <div class="attacker">
+        <h3>{{lookup @root.translate 'TYPE_CHART_ATTACKER'}}</h3>
+        <div class="defender">
+            <h3 class="ta-center">{{lookup @root.translate 'TYPE_CHART_DEFENDER'}}</h3>
+            <section id="element-reaction-grid">
+                {{#each data.grid}}
+                {{#each this}}
 
                 <div
-                    class="buffs-popup{{#if this.buffs}} hasBuffs{{/if}}{{#if this.is_buff}} buff{{/if}}{{#if this.is_debuff}} debuff{{/if}}">
-                    {{#if this.is_buff}}
-                    <h3>{{lookup @root.translate 'TYPE_CHART_DEFENDER'}}</h3>
+                    class="{{this.id}} cell x-{{@index}} y-{{@../index}} {{#if this.buffs}} hasBuffs{{/if}}{{#if this.is_buff}} buff{{/if}}{{#if this.is_debuff}} debuff{{/if}}">
+                    {{#if this.iconUrl}}
+                    <img src="{{resimage this.iconUrl}}" class="element" alt="image of {{this.name}}" draggable="false">
                     {{/if}}
-                    {{#if this.is_debuff}}
-                    <h3>{{lookup @root.translate 'TYPE_CHART_DEBUFFS'}}</h3>
-                    {{/if}}
-                    {{#each this.buffs}}
-                    <div class="details">
-                        <img src="{{resimage this.icon.path}}" class="status" alt="image of {{this.name_localised}}"
-                            draggable="false">
-                        <div class="text">
-                            <h4 class="name">{{this.name_localised}}</h4>
-                            {{this.description_localised}}
+
+                    {{#if this.buffs}}
+                    <div class="buffs">
+                        {{#each this.buffs}}
+                        <div class="effect">
+                            <img src="{{resimage this.icon.path}}" class="status" alt="image of {{this.name_localised}}"
+                                draggable="false">
                         </div>
+                        {{/each}}
                     </div>
-                    {{/each}}
+
+                    <div
+                        class="buffs-popup buff-details{{#if this.buffs}} hasBuffs{{/if}}{{#if this.is_buff}} buff{{/if}}{{#if this.is_debuff}} debuff{{/if}}">
+                        {{#if this.is_buff}}
+                        <h3>{{lookup @root.translate 'TYPE_CHART_DEFENDER'}}</h3>
+                        {{/if}}
+                        {{#if this.is_debuff}}
+                        <h3>{{lookup @root.translate 'TYPE_CHART_DEBUFFS'}}</h3>
+                        {{/if}}
+                        {{#each this.buffs}}
+                        <div class="details">
+                            <img src="{{resimage this.icon.path}}" class="status" alt="image of {{this.name_localised}}"
+                                draggable="false">
+                            <div class="text">
+                                <h4 class="name">{{this.name_localised}}</h4>
+                                {{this.description_localised}}
+                            </div>
+                        </div>
+                        {{/each}}
+                    </div>
+                    {{/if}}
                 </div>
-                {{/if}}
-            </div>
-            {{/each}}
-            {{/each}}
-        </section>
+                {{/each}}
+                {{/each}}
+            </section>
+        </div>
     </div>
 </div>
+
+<section id="element-reaction-list" class="hidden-in-desktop mb-3">
+    <br>
+    <h3 class="ta-center">{{lookup @root.translate 'TYPE_CHART_ATTACKER'}}</h3>
+    <details id="attacker" class="dropdown">
+        <summary class="role-link">
+            <li class="effect-option cursor-pointer">
+                <img src="/assets/img/typeless.png" class="type"
+                    title="{{lookup @root.translate 'UI_INVENTORY_FILTER_TYPE_TYPELESS'}}"
+                    alt="{{lookup @root.translate 'UI_INVENTORY_FILTER_TYPE_TYPELESS'}}" draggable="false">
+                <div class="text">{{lookup @root.translate 'UI_INVENTORY_FILTER_TYPE_TYPELESS'}}</div>
+            </li>
+        </summary>
+        <ul class="dropdown-list">
+            <li data-id="" class="effect-option cursor-pointer"
+                onclick="onElementSelect(this, 'element-reaction-list')">
+                <img src="/assets/img/typeless.png" class="type"
+                    title="{{lookup @root.translate 'UI_INVENTORY_FILTER_TYPE_TYPELESS'}}"
+                    alt="{{lookup @root.translate 'UI_INVENTORY_FILTER_TYPE_TYPELESS'}}" draggable="false">
+                <div class="text">{{lookup @root.translate 'UI_INVENTORY_FILTER_TYPE_TYPELESS'}}</div>
+            </li>
+            {{#each data.effectOptions}}
+            <li data-id="{{this.id}}" class="effect-option cursor-pointer"
+                onclick="onElementSelect(this, 'element-reaction-list')">
+                <img src="{{resimage this.iconUrl}}" alt="{{this.name}}" />
+                <div class="text">
+                    {{this.name}}
+                </div>
+            </li>
+            {{/each}}
+        </ul>
+    </details>
+
+    <br>
+
+    <h3 class="ta-center">{{lookup @root.translate 'TYPE_CHART_DEFENDER'}}</h3>
+    <details id="defender" class="dropdown">
+        <summary class="role-link">
+            <li class="effect-option cursor-pointer">
+                <img src="/assets/img/typeless.png" class="type"
+                    title="{{lookup @root.translate 'UI_INVENTORY_FILTER_TYPE_TYPELESS'}}"
+                    alt="{{lookup @root.translate 'UI_INVENTORY_FILTER_TYPE_TYPELESS'}}" draggable="false">
+                <div class="text">{{lookup @root.translate 'UI_INVENTORY_FILTER_TYPE_TYPELESS'}}</div>
+            </li>
+        </summary>
+        <ul class="dropdown-list">
+            <li data-id="" class="effect-option cursor-pointer"
+                onclick="onElementSelect(this, 'element-reaction-list')">
+                <img src="/assets/img/typeless.png" class="type"
+                    title="{{lookup @root.translate 'UI_INVENTORY_FILTER_TYPE_TYPELESS'}}"
+                    alt="{{lookup @root.translate 'UI_INVENTORY_FILTER_TYPE_TYPELESS'}}" draggable="false">
+                <div class="text">{{lookup @root.translate 'UI_INVENTORY_FILTER_TYPE_TYPELESS'}}</div>
+            </li>
+            {{#each data.effectOptions}}
+            <li data-id="{{this.id}}" class="effect-option cursor-pointer"
+                onclick="onElementSelect(this, 'element-reaction-list')">
+                <img src="{{resimage this.iconUrl}}" alt="{{this.name}}" />
+                <div class="text">
+                    {{this.name}}
+                </div>
+            </li>
+            {{/each}}
+        </ul>
+    </details>
+
+    <br>
+
+    {{#each data.grid}}
+    {{#each this}}
+
+    {{#if this.buffs}}
+    <div
+        class="buff-details {{this.id}}{{#if this.buffs}} hasBuffs{{/if}}{{#if this.is_buff}} buff{{/if}}{{#if this.is_debuff}} debuff{{/if}}">
+        <div class="extended">
+            <div class="mobile-detail-row">
+                <div class="attacker"></div>
+                <div class="action"></div>
+                <div class="defender"></div>
+            </div>
+            <div class="content">
+                {{#if this.is_buff}}
+                <h3>{{lookup @root.translate 'TYPE_CHART_DEFENDER'}}</h3>
+                {{/if}}
+                {{#if this.is_debuff}}
+                <h3>{{lookup @root.translate 'TYPE_CHART_DEBUFFS'}}</h3>
+                {{/if}}
+                {{#each this.buffs}}
+                <div class="details">
+                    <img src="{{resimage this.icon.path}}" class="status" alt="image of {{this.name_localised}}"
+                        draggable="false">
+                    <div class="text">
+                        <h4 class="name">{{this.name_localised}}</h4>
+                        {{this.description_localised}}
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+    {{/if}}
+    {{/each}}
+    {{/each}}
+
+    <br>
+
+    <div class="no-effect ta-center">
+        <div class="card hasBuffs">
+            <h5>No effect</h5>
+        </div>
+    </div>
+    </div>
+</section>
 
 <script defer src="/assets/js/highlightGrid.js?v={{version}}"></script>
 

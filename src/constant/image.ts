@@ -2,6 +2,7 @@ export const AppImage = {
   logoSplash: '/assets/img/evo_splash_04.png',
   moreStatusEffects: '/assets/img/passive_quest_icon.png',
   moves: '/assets/img/moves.png',
+  characters: '/assets/img/characters.png',
 
   meta: '/assets/img/meta/meta_tape_default.png',
   metaTapeBg: '/assets/img/meta/meta_tape_bg.png',

@@ -23,5 +23,8 @@ header.header {
 
   #language-dropdown.dropdown summary + ul {
     z-index: 100;
+    left: unset;
+    right: 0;
+    transform: translateX(50%);
   }
 }

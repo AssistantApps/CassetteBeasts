@@ -1,7 +1,9 @@
 #character-grid {
+  margin-top: 1em;
   grid-template-columns: repeat(auto-fit, minmax(8em, 1fr));
 
   .grid-list-item {
+    background: transparent;
 
     &:hover {
       z-index: 4;
@@ -31,6 +33,7 @@
     .grid-list-item-image {
       height: 8em;
       padding-bottom: 0.5em;
+      background: var(--card-background);
     }
 
     img.sprite,
