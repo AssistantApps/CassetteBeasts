@@ -47,7 +47,7 @@
     <meta name="distribution" content="Global">
     <meta name="generator" content="custom scripts using HandlebarJS">
     <link rel="search" href="opensearch.xml" type="application/opensearchdescription+xml" title="Search Title">
-    <meta name="revised" content="Wed Jul 24 2024">
+    <meta name="revised" content="Thu Jul 25 2024">
 
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
@@ -110,7 +110,7 @@
     <meta name="msapplication-starturl" content="/?pwa-app">
 
 
-    <link rel="stylesheet" href="/assets/css/main.css?v=1.0.0">
+    <link rel="stylesheet" href="/assets/css/main.css?v=1.1.0">
 
     <script type="application/ld+json">
         {
@@ -123,8 +123,8 @@
             "image": "/assets/favicon/android-chrome-192x192.png",
             "applicationCategory": "Application",
             "operatingSystem": "Android Lollipop, iOS, Chrome, Firefox, Opera, Internet Explorer, Edge",
-            "softwareVersion": "1.0.0",
-            "version": "1.0.0",
+            "softwareVersion": "1.1.0",
+            "version": "1.1.0",
             "author": {
                 "@type": "Person",
                 "name": "Kurt Lourens",
@@ -146,9 +146,9 @@
                 "jobTitle": "Senior Software Engineer",
             },
             "inLanguage": "en",
-            "dateCreated": "2024-07-24",
-            "dateModified": "2024-07-24",
-            "datePublished": "2024-07-24"
+            "dateCreated": "2024-07-25",
+            "dateModified": "2024-07-25",
+            "datePublished": "2024-07-25"
         }
     </script></head>
 <body class="overflow-x-hidden">
@@ -163,17 +163,13 @@
                                 <img src="/assets/img/logo.png" alt="splash">
                             </div>
                         </li>
-                        <li class="title">
+                        <li class="title hidden-in-mobile">
                             <span style="--i:1">Assistant </span>
                             <span style="--i:2">for </span>
                             <span style="--i:3"><b>Cassette Beasts</b></span>
                         </li>
                     </ul>
                 </a>
-    
-                <ul>
-                </ul>
-    
     
                 <ul class="icons">
                     <li data-tooltip="言語" data-placement="bottom">
@@ -265,7 +261,7 @@
                 </span>
             </li>
         </ul>
-        <div class="grid status-effect-detail-grid">
+        <div class="grid status-effect-detail-grid mb-3">
           <article class="item-detail-card">
             <div class="item-detail-card-heading primary">
               <img src="/assets/img/generated/ui/icons/status_effects/wall_beast.png" class="icon" alt="icon of アブラマカブラ" draggable="false">
@@ -281,32 +277,34 @@
         
               <section class="additional-section negative-margin additional animate__animated animate__fadeIn">
                 <h3 class="section-heading Neu5Land">追加統計</h3>
-                <table class="additional highlight-cell animate__animated animate__fadeIn">
-                  <thead>
-                    <tr>
-                      <td class="ta-center">
-                        <code>is_removable</code>
-                      </td>
-                      <td class="ta-center">
-                        <code>is_buff</code>
-                      </td>
-                      <td class="ta-center">
-                        <code>is_debuff</code>
-                      </td>
-                      <td class="ta-center">
-                        <code>is_decoy</code>
-                      </td>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td class="ta-center">✔️</td>
-                      <td class="ta-center">✔️</td>
-                      <td class="ta-center">❌</td>
-                      <td class="ta-center">✔️</td>
-                    </tr>
-                  </tbody>
-                </table>
+                <div class="table-container">
+                  <table class="additional highlight-cell animate__animated animate__fadeIn">
+                    <thead>
+                      <tr>
+                        <td class="ta-center">
+                          <code>is_removable</code>
+                        </td>
+                        <td class="ta-center">
+                          <code>is_buff</code>
+                        </td>
+                        <td class="ta-center">
+                          <code>is_debuff</code>
+                        </td>
+                        <td class="ta-center">
+                          <code>is_decoy</code>
+                        </td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="ta-center">✔️</td>
+                        <td class="ta-center">✔️</td>
+                        <td class="ta-center">❌</td>
+                        <td class="ta-center">✔️</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </section>
         
         
@@ -345,11 +343,18 @@
                     利用規約</a>
             </span>
             <span>&nbsp;|&nbsp;</span>
-            <span>v1.0.0</span>
+            <span>v1.1.0</span>
         </small>
-    </footer>    <script defer src="/assets/js/main.js?v=1.0.0"></script>
-    <script defer src="/assets/js/analytics.js?v=1.0.0"></script>
+    </footer>    <script async src="/assets/js/main.js?v=1.1.0"></script>
+    <script defer src="/assets/js/analytics.js?v=1.1.0"></script>
     <script defer src="https://webcomp.assistantapps.com/build/bundle.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js');
+            });
+        }
+    </script>
 </body>
 
 </html>

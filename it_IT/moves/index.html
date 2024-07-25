@@ -37,7 +37,7 @@
     <meta name="distribution" content="Global">
     <meta name="generator" content="custom scripts using HandlebarJS">
     <link rel="search" href="opensearch.xml" type="application/opensearchdescription+xml" title="Search Title">
-    <meta name="revised" content="Wed Jul 24 2024">
+    <meta name="revised" content="Thu Jul 25 2024">
 
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
@@ -100,7 +100,7 @@
     <meta name="msapplication-starturl" content="/?pwa-app">
 
 
-    <link rel="stylesheet" href="/assets/css/main.css?v=1.0.0">
+    <link rel="stylesheet" href="/assets/css/main.css?v=1.1.0">
 
     <script type="application/ld+json">
         {
@@ -113,8 +113,8 @@
             "image": "/assets/favicon/android-chrome-192x192.png",
             "applicationCategory": "Application",
             "operatingSystem": "Android Lollipop, iOS, Chrome, Firefox, Opera, Internet Explorer, Edge",
-            "softwareVersion": "1.0.0",
-            "version": "1.0.0",
+            "softwareVersion": "1.1.0",
+            "version": "1.1.0",
             "author": {
                 "@type": "Person",
                 "name": "Kurt Lourens",
@@ -136,9 +136,9 @@
                 "jobTitle": "Senior Software Engineer",
             },
             "inLanguage": "en",
-            "dateCreated": "2024-07-24",
-            "dateModified": "2024-07-24",
-            "datePublished": "2024-07-24"
+            "dateCreated": "2024-07-25",
+            "dateModified": "2024-07-25",
+            "datePublished": "2024-07-25"
         }
     </script></head>
 <body class="overflow-x-hidden">
@@ -153,17 +153,13 @@
                                 <img src="/assets/img/logo.png" alt="splash">
                             </div>
                         </li>
-                        <li class="title">
+                        <li class="title hidden-in-mobile">
                             <span style="--i:1">Assistant </span>
                             <span style="--i:2">for </span>
                             <span style="--i:3"><b>Cassette Beasts</b></span>
                         </li>
                     </ul>
                 </a>
-    
-                <ul>
-                </ul>
-    
     
                 <ul class="icons">
                     <li data-tooltip="Lingua" data-placement="bottom">
@@ -251,17 +247,18 @@
         </ul>
         <section id="search">
           <fieldset role="group">
-            <input type="search" name="search" placeholder="Search for..." oninput="onSearchChange(this.value)">
-            <button id="list-mode" class="secondary project-btn no-border-right selected" data-class="list"
+            <input type="search" name="search" placeholder="Search for..." class="search-input-border-radius"
+              oninput="onSearchChange(this.value)">
+            <button id="list-mode" class="secondary project-btn no-border-right hidden-in-mobile" data-class="list"
               onclick="applyClassToId('move-grid', '-mode', this.id); toggleClassToId(this.id, 'selected', true); toggleClassToId('grid-mode', 'selected', false)"
               data-tooltip="List view" alt="List view">☰</button>
-            <button id="grid-mode" class="secondary project-btn no-border-left" data-class="grid"
+            <button id="grid-mode" class="secondary project-btn no-border-left hidden-in-mobile selected" data-class="grid"
               onclick="applyClassToId('move-grid', '-mode', this.id); toggleClassToId(this.id, 'selected', true); toggleClassToId('list-mode', 'selected', false)"
               data-tooltip="Grid view" alt="Grid view">▦</button>
           </fieldset>
         </section>
         
-        <section id="move-grid" class="item-grid-list list-mode">
+        <section id="move-grid" class="item-grid-list grid-mode mb-3">
           <a href="/it_IT/moves/bolt_from_the_blue.html"
             class="grid-list-item item animate__animated animate__fadeIn" data-title="A ciel sereno"
             data-description="Evoca un alleato Lampopiteco temporaneo." style="animation-delay: 0ms;">
@@ -12139,11 +12136,18 @@
                     Termini e Condizioni</a>
             </span>
             <span>&nbsp;|&nbsp;</span>
-            <span>v1.0.0</span>
+            <span>v1.1.0</span>
         </small>
-    </footer>    <script defer src="/assets/js/main.js?v=1.0.0"></script>
-    <script defer src="/assets/js/analytics.js?v=1.0.0"></script>
+    </footer>    <script async src="/assets/js/main.js?v=1.1.0"></script>
+    <script defer src="/assets/js/analytics.js?v=1.1.0"></script>
     <script defer src="https://webcomp.assistantapps.com/build/bundle.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js');
+            });
+        }
+    </script>
 </body>
 
 </html>

@@ -48,7 +48,7 @@
     <meta name="distribution" content="Global">
     <meta name="generator" content="custom scripts using HandlebarJS">
     <link rel="search" href="opensearch.xml" type="application/opensearchdescription+xml" title="Search Title">
-    <meta name="revised" content="Wed Jul 24 2024">
+    <meta name="revised" content="Thu Jul 25 2024">
 
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
@@ -111,7 +111,7 @@
     <meta name="msapplication-starturl" content="/?pwa-app">
 
 
-    <link rel="stylesheet" href="/assets/css/main.css?v=1.0.0">
+    <link rel="stylesheet" href="/assets/css/main.css?v=1.1.0">
 
     <script type="application/ld+json">
         {
@@ -124,8 +124,8 @@
             "image": "/assets/favicon/android-chrome-192x192.png",
             "applicationCategory": "Application",
             "operatingSystem": "Android Lollipop, iOS, Chrome, Firefox, Opera, Internet Explorer, Edge",
-            "softwareVersion": "1.0.0",
-            "version": "1.0.0",
+            "softwareVersion": "1.1.0",
+            "version": "1.1.0",
             "author": {
                 "@type": "Person",
                 "name": "Kurt Lourens",
@@ -147,9 +147,9 @@
                 "jobTitle": "Senior Software Engineer",
             },
             "inLanguage": "en",
-            "dateCreated": "2024-07-24",
-            "dateModified": "2024-07-24",
-            "datePublished": "2024-07-24"
+            "dateCreated": "2024-07-25",
+            "dateModified": "2024-07-25",
+            "datePublished": "2024-07-25"
         }
     </script></head>
 <body class="overflow-x-hidden">
@@ -164,17 +164,13 @@
                                 <img src="/assets/img/logo.png" alt="splash">
                             </div>
                         </li>
-                        <li class="title">
+                        <li class="title hidden-in-mobile">
                             <span style="--i:1">Assistant </span>
                             <span style="--i:2">for </span>
                             <span style="--i:3"><b>Cassette Beasts</b></span>
                         </li>
                     </ul>
                 </a>
-    
-                <ul>
-                </ul>
-    
     
                 <ul class="icons">
                     <li data-tooltip="言語" data-placement="bottom">
@@ -265,7 +261,7 @@
           <input type="search" name="search" placeholder="Search for..." oninput="onSearchChange(this.value)">
         </section>
         
-        <section id="status-effect-grid" class="item-grid-list">
+        <section id="status-effect-grid" class="item-grid-list mb-3">
           <a href="/ja_JP/statusEffect/ap_drain.html"
             class="grid-list-item item animate__animated animate__fadeIn" data-title="APドレイン"
             data-description="APドレイン中は、ターンごとにAPが１減る。" style="animation-delay: 0ms;">
@@ -292,22 +288,9 @@
               </small>
             </section>
           </a>
-          <a href="/ja_JP/statusEffect/wall_air.html"
-            class="grid-list-item item animate__animated animate__fadeIn" data-title="{type}ウォール"
-            data-description="ウォールが攻撃を数回防いでくれる。効果ばつぐんの攻撃は、ウォールを一撃で破壊する。" style="animation-delay: 60ms;">
-            <div class="grid-list-item-image">
-              <img src="/assets/img/generated/ui/icons/status_effects/wall_air.png" alt="icon of {type}ウォール" draggable="false">
-            </div>
-            <section class="grid-list-item-container">
-              <h2 class="Neu5Land heading">{type}ウォール</h2>
-              <small class="description">
-                ウォールが攻撃を数回防いでくれる。効果ばつぐんの攻撃は、ウォールを一撃で破壊する。
-              </small>
-            </section>
-          </a>
           <a href="/ja_JP/statusEffect/mind_meld.html"
             class="grid-list-item item animate__animated animate__fadeIn" data-title="いっしんどうたい"
-            data-description="いっしんどうたい状態のあいだは、わざを味方と共有する。" style="animation-delay: 90ms;">
+            data-description="いっしんどうたい状態のあいだは、わざを味方と共有する。" style="animation-delay: 60ms;">
             <div class="grid-list-item-image">
               <img src="/assets/img/generated/ui/icons/status_effects/mind_meld.png" alt="icon of いっしんどうたい" draggable="false">
             </div>
@@ -320,7 +303,7 @@
           </a>
           <a href="/ja_JP/statusEffect/healing_leaf.html"
             class="grid-list-item item animate__animated animate__fadeIn" data-title="いやしのはっぱ"
-            data-description="いやしのはっぱ状態のあいだは、ターンのはじめにHPが\n少し回復する。" style="animation-delay: 120ms;">
+            data-description="いやしのはっぱ状態のあいだは、ターンのはじめにHPが\n少し回復する。" style="animation-delay: 90ms;">
             <div class="grid-list-item-image">
               <img src="/assets/img/generated/ui/icons/status_effects/health_up_plant.png" alt="icon of いやしのはっぱ" draggable="false">
             </div>
@@ -333,7 +316,7 @@
           </a>
           <a href="/ja_JP/statusEffect/summoned.html"
             class="grid-list-item item animate__animated animate__fadeIn" data-title="およばれ"
-            data-description="およばれされたモンスターは、数ターンたつとバトルからいなくなる。" style="animation-delay: 150ms;">
+            data-description="およばれされたモンスターは、数ターンたつとバトルからいなくなる。" style="animation-delay: 120ms;">
             <div class="grid-list-item-image">
               <img src="/assets/img/generated/ui/icons/status_effects/summoned.png" alt="icon of およばれ" draggable="false">
             </div>
@@ -346,7 +329,7 @@
           </a>
           <a href="/ja_JP/statusEffect/stat_evasion_nullified.html"
             class="grid-list-item item animate__animated animate__fadeIn" data-title="かいひふのう"
-            data-description="かいひふのう状態になると、回避率が１%に下がる。" style="animation-delay: 180ms;">
+            data-description="かいひふのう状態になると、回避率が１%に下がる。" style="animation-delay: 150ms;">
             <div class="grid-list-item-image">
               <img src="/assets/img/generated/ui/icons/status_effects/evasion_nullified.png" alt="icon of かいひふのう" draggable="false">
             </div>
@@ -359,7 +342,7 @@
           </a>
           <a href="/ja_JP/statusEffect/conductive.html"
             class="grid-list-item item animate__animated animate__fadeIn" data-title="かんでん"
-            data-description="かんでん状態のあいだは、でんきタイプの攻撃がフィールドで\n使われるたびにダメージを受ける。" style="animation-delay: 210ms;">
+            data-description="かんでん状態のあいだは、でんきタイプの攻撃がフィールドで\n使われるたびにダメージを受ける。" style="animation-delay: 180ms;">
             <div class="grid-list-item-image">
               <img src="/assets/img/generated/ui/icons/status_effects/conductive.png" alt="icon of かんでん" draggable="false">
             </div>
@@ -372,7 +355,7 @@
           </a>
           <a href="/ja_JP/statusEffect/hibernating.html"
             class="grid-list-item item animate__animated animate__fadeIn" data-title="きゅうみん"
-            data-description="きゅうみん状態で眠っているあいだは、毎ターンHPが\n回復する。" style="animation-delay: 240ms;">
+            data-description="きゅうみん状態で眠っているあいだは、毎ターンHPが\n回復する。" style="animation-delay: 210ms;">
             <div class="grid-list-item-image">
               <img src="/assets/img/generated/ui/icons/status_effects/hibernating.png" alt="icon of きゅうみん" draggable="false">
             </div>
@@ -385,7 +368,7 @@
           </a>
           <a href="/ja_JP/statusEffect/resonance.html"
             class="grid-list-item item animate__animated animate__fadeIn" data-title="きょうしん"
-            data-description="きょうしん状態になると、そのたびにきょうしんカウンターが\n増えていく。カウンターが３になると、バラバラにくだけて\nたおれてしまう。" style="animation-delay: 270ms;">
+            data-description="きょうしん状態になると、そのたびにきょうしんカウンターが\n増えていく。カウンターが３になると、バラバラにくだけて\nたおれてしまう。" style="animation-delay: 240ms;">
             <div class="grid-list-item-image">
               <img src="/assets/img/generated/ui/icons/status_effects/resonance.png" alt="icon of きょうしん" draggable="false">
             </div>
@@ -393,6 +376,19 @@
               <h2 class="Neu5Land heading">きょうしん</h2>
               <small class="description">
                 きょうしん状態になると、そのたびにきょうしんカウンターが\n増えていく。カウンターが３になると、バラバラにくだけて\nたおれてしまう。
+              </small>
+            </section>
+          </a>
+          <a href="/ja_JP/statusEffect/wall_air.html"
+            class="grid-list-item item animate__animated animate__fadeIn" data-title="くうきウォール"
+            data-description="ウォールが攻撃を数回防いでくれる。効果ばつぐんの攻撃は、ウォールを一撃で破壊する。" style="animation-delay: 270ms;">
+            <div class="grid-list-item-image">
+              <img src="/assets/img/generated/ui/icons/status_effects/wall_air.png" alt="icon of くうきウォール" draggable="false">
+            </div>
+            <section class="grid-list-item-container">
+              <h2 class="Neu5Land heading">くうきウォール</h2>
+              <small class="description">
+                ウォールが攻撃を数回防いでくれる。効果ばつぐんの攻撃は、ウォールを一撃で破壊する。
               </small>
             </section>
           </a>
@@ -1506,11 +1502,18 @@
                     利用規約</a>
             </span>
             <span>&nbsp;|&nbsp;</span>
-            <span>v1.0.0</span>
+            <span>v1.1.0</span>
         </small>
-    </footer>    <script defer src="/assets/js/main.js?v=1.0.0"></script>
-    <script defer src="/assets/js/analytics.js?v=1.0.0"></script>
+    </footer>    <script async src="/assets/js/main.js?v=1.1.0"></script>
+    <script defer src="/assets/js/analytics.js?v=1.1.0"></script>
     <script defer src="https://webcomp.assistantapps.com/build/bundle.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js');
+            });
+        }
+    </script>
 </body>
 
 </html>

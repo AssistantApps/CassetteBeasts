@@ -47,7 +47,7 @@
     <meta name="distribution" content="Global">
     <meta name="generator" content="custom scripts using HandlebarJS">
     <link rel="search" href="opensearch.xml" type="application/opensearchdescription+xml" title="Search Title">
-    <meta name="revised" content="Wed Jul 24 2024">
+    <meta name="revised" content="Thu Jul 25 2024">
 
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
@@ -110,7 +110,7 @@
     <meta name="msapplication-starturl" content="/?pwa-app">
 
 
-    <link rel="stylesheet" href="/assets/css/main.css?v=1.0.0">
+    <link rel="stylesheet" href="/assets/css/main.css?v=1.1.0">
 
     <script type="application/ld+json">
         {
@@ -123,8 +123,8 @@
             "image": "/assets/favicon/android-chrome-192x192.png",
             "applicationCategory": "Application",
             "operatingSystem": "Android Lollipop, iOS, Chrome, Firefox, Opera, Internet Explorer, Edge",
-            "softwareVersion": "1.0.0",
-            "version": "1.0.0",
+            "softwareVersion": "1.1.0",
+            "version": "1.1.0",
             "author": {
                 "@type": "Person",
                 "name": "Kurt Lourens",
@@ -146,9 +146,9 @@
                 "jobTitle": "Senior Software Engineer",
             },
             "inLanguage": "en",
-            "dateCreated": "2024-07-24",
-            "dateModified": "2024-07-24",
-            "datePublished": "2024-07-24"
+            "dateCreated": "2024-07-25",
+            "dateModified": "2024-07-25",
+            "datePublished": "2024-07-25"
         }
     </script></head>
 <body class="overflow-x-hidden">
@@ -163,17 +163,13 @@
                                 <img src="/assets/img/logo.png" alt="splash">
                             </div>
                         </li>
-                        <li class="title">
+                        <li class="title hidden-in-mobile">
                             <span style="--i:1">Assistant </span>
                             <span style="--i:2">for </span>
                             <span style="--i:3"><b>Cassette Beasts</b></span>
                         </li>
                     </ul>
                 </a>
-    
-                <ul>
-                </ul>
-    
     
                 <ul class="icons">
                     <li data-tooltip="语言" data-placement="bottom">
@@ -265,7 +261,7 @@
                 </span>
             </li>
         </ul>
-        <div class="grid min-card-width">
+        <div class="grid min-card-width mb-3">
           <article class="monster-detail-card item-detail-card">
             <div class="monster-detail-card-heading item-detail-card-heading primary">
               <h2 class="Neu5Land animate__animated animate__fadeIn">小红猫</h2>
@@ -415,26 +411,28 @@
         
               <section class="additional-section additional animate__animated animate__fadeIn">
                 <h3 class="section-heading Neu5Land">附加统计数据</h3>
-                <table class="additional highlight-cell animate__animated animate__fadeIn">
-                  <thead>
-                    <tr>
-                      <td class="ta-center">闪避</td>
-                      <td class="ta-center">AP上限</td>
-                      <td class="ta-center">招式栏位</td>
-                      <td class="ta-center">正在录制</td>
-                      <td class="ta-center">经验值</td>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td class="ta-center">100</td>
-                      <td class="ta-center">5</td>
-                      <td class="ta-center">4</td>
-                      <td class="ta-center">40%</td>
-                      <td class="ta-center">0</td>
-                    </tr>
-                  </tbody>
-                </table>
+                <div class="table-container">
+                  <table class="additional highlight-cell animate__animated animate__fadeIn">
+                    <thead>
+                      <tr>
+                        <td class="ta-center">闪避</td>
+                        <td class="ta-center">AP上限</td>
+                        <td class="ta-center">招式栏位</td>
+                        <td class="ta-center">正在录制</td>
+                        <td class="ta-center">经验值</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="ta-center">100</td>
+                        <td class="ta-center">5</td>
+                        <td class="ta-center">4</td>
+                        <td class="ta-center">40%</td>
+                        <td class="ta-center">0</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </section>
         
               <div class="grid">
@@ -574,307 +572,309 @@
               <div class="spacer"></div>
             </div>
         
-            <div class="monster-detail-tape-container animate__animated noselect">
+            <div class="monster-detail-tape-container animate__animated hidden-in-mobile noselect">
               <div class="animate__animated swing-hover Neu5Land">
                 <img src="/assets/img/meta/tape.png" alt="monster tape">
                 <p>小红猫</p>
               </div>
             </div>
         
-            <div class="monster-detail-card-body item-detail-card-body">
-              <table class="moves last-td-padding highlight-row animate__animated animate__fadeIn">
-                <thead>
-                  <tr class="no-padding">
-                    <td class="star"></td>
-                    <td class="type"></td>
-                    <td class="name">名称</td>
-                    <td class="category">类别</td>
-                    <td class="power">威力</td>
-                    <td class="accuracy">命中率</td>
-                    <td class="ap">点AP</td>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr class="move no-padding">
-                    <td class="star ta-center">初始</td>
-                    <td class="type">
-                      <a href="/zh_CN/moves/smack.html" title="掌掴">
-                  
-                        <img src="/assets/img/typeless.png" class="move-image" title="Typeless" alt="image of typeless" draggable="false">
-                  
-                      </a>
-                    </td>
-                    <td class="name">
-                      <a href="/zh_CN/moves/smack.html" title="掌掴">
-                        掌掴
-                      </a>
-                    </td>
-                    <td class="category">
-                      <a href="/zh_CN/moves/smack.html" title="掌掴">
-                        近战攻击
-                      </a>
-                    </td>
-                    <td class="power">
-                      <a href="/zh_CN/moves/smack.html" title="掌掴">
-                        30
-                      </a>
-                    </td>
-                    <td class="accuracy">
-                      <a href="/zh_CN/moves/smack.html" title="掌掴">
-                        100%
-                      </a>
-                    </td>
-                    <td class="ap">
-                      <a href="/zh_CN/moves/smack.html" title="掌掴">
-                        0
-                      </a>
-                    </td>
-                  </tr>          <tr class="move no-padding">
-                    <td class="star ta-center">初始</td>
-                    <td class="type">
-                      <a href="/zh_CN/moves/carnivore.html" title="无肉不欢">
-                  
-                        <img src="/assets/img/generated/ui/icons/types/element_beast.png" class="move-image" alt="image of 野兽"
-                          draggable="false">
-                  
-                      </a>
-                    </td>
-                    <td class="name">
-                      <a href="/zh_CN/moves/carnivore.html" title="无肉不欢">
-                        无肉不欢
-                      </a>
-                    </td>
-                    <td class="category">
-                      <a href="/zh_CN/moves/carnivore.html" title="无肉不欢">
-                        其他
-                      </a>
-                    </td>
-                    <td class="power">
-                      <a href="/zh_CN/moves/carnivore.html" title="无肉不欢">
-                        -
-                      </a>
-                    </td>
-                    <td class="accuracy">
-                      <a href="/zh_CN/moves/carnivore.html" title="无肉不欢">
-                        100%
-                      </a>
-                    </td>
-                    <td class="ap">
-                      <a href="/zh_CN/moves/carnivore.html" title="无肉不欢">
-                        0
-                      </a>
-                    </td>
-                  </tr>          <tr class="move no-padding">
-                    <td class="star ta-center">初始</td>
-                    <td class="type">
-                      <a href="/zh_CN/moves/bite.html" title="啃咬">
-                  
-                        <img src="/assets/img/generated/ui/icons/types/element_beast.png" class="move-image" alt="image of 野兽"
-                          draggable="false">
-                  
-                      </a>
-                    </td>
-                    <td class="name">
-                      <a href="/zh_CN/moves/bite.html" title="啃咬">
-                        啃咬
-                      </a>
-                    </td>
-                    <td class="category">
-                      <a href="/zh_CN/moves/bite.html" title="啃咬">
-                        近战攻击
-                      </a>
-                    </td>
-                    <td class="power">
-                      <a href="/zh_CN/moves/bite.html" title="啃咬">
-                        80
-                      </a>
-                    </td>
-                    <td class="accuracy">
-                      <a href="/zh_CN/moves/bite.html" title="啃咬">
-                        100%
-                      </a>
-                    </td>
-                    <td class="ap">
-                      <a href="/zh_CN/moves/bite.html" title="啃咬">
-                        3
-                      </a>
-                    </td>
-                  </tr>
-                  <tr class="move no-padding">
-                    <td class="star ta-center">★</td>
-                    <td class="type">
-                      <a href="/zh_CN/moves/call_for_help.html" title="请求援助">
-                  
-                        <img src="/assets/img/typeless.png" class="move-image" title="Typeless" alt="image of typeless" draggable="false">
-                  
-                      </a>
-                    </td>
-                    <td class="name">
-                      <a href="/zh_CN/moves/call_for_help.html" title="请求援助">
-                        请求援助
-                      </a>
-                    </td>
-                    <td class="category">
-                      <a href="/zh_CN/moves/call_for_help.html" title="请求援助">
-                        其他
-                      </a>
-                    </td>
-                    <td class="power">
-                      <a href="/zh_CN/moves/call_for_help.html" title="请求援助">
-                        -
-                      </a>
-                    </td>
-                    <td class="accuracy">
-                      <a href="/zh_CN/moves/call_for_help.html" title="请求援助">
-                        50%
-                      </a>
-                    </td>
-                    <td class="ap">
-                      <a href="/zh_CN/moves/call_for_help.html" title="请求援助">
-                        2
-                      </a>
-                    </td>
-                  </tr>          <tr class="move no-padding">
-                    <td class="star ta-center">★★</td>
-                    <td class="type">
-                      <a href="/zh_CN/moves/berserker.html" title="狂战士">
-                  
-                        <img src="/assets/img/generated/ui/icons/types/element_beast.png" class="move-image" alt="image of 野兽"
-                          draggable="false">
-                  
-                      </a>
-                    </td>
-                    <td class="name">
-                      <a href="/zh_CN/moves/berserker.html" title="狂战士">
-                        狂战士
-                      </a>
-                    </td>
-                    <td class="category">
-                      <a href="/zh_CN/moves/berserker.html" title="狂战士">
-                        状态效果
-                      </a>
-                    </td>
-                    <td class="power">
-                      <a href="/zh_CN/moves/berserker.html" title="狂战士">
-                        -
-                      </a>
-                    </td>
-                    <td class="accuracy">
-                      <a href="/zh_CN/moves/berserker.html" title="狂战士">
-                        100%
-                      </a>
-                    </td>
-                    <td class="ap">
-                      <a href="/zh_CN/moves/berserker.html" title="狂战士">
-                        0
-                      </a>
-                    </td>
-                  </tr>          <tr class="move no-padding">
-                    <td class="star ta-center">★★★</td>
-                    <td class="type">
-                      <a href="/zh_CN/moves/zoomies.html" title="猪突猛进">
-                  
-                        <img src="/assets/img/generated/ui/icons/types/element_beast.png" class="move-image" alt="image of 野兽"
-                          draggable="false">
-                  
-                      </a>
-                    </td>
-                    <td class="name">
-                      <a href="/zh_CN/moves/zoomies.html" title="猪突猛进">
-                        猪突猛进
-                      </a>
-                    </td>
-                    <td class="category">
-                      <a href="/zh_CN/moves/zoomies.html" title="猪突猛进">
-                        近战攻击
-                      </a>
-                    </td>
-                    <td class="power">
-                      <a href="/zh_CN/moves/zoomies.html" title="猪突猛进">
-                        30
-                      </a>
-                    </td>
-                    <td class="accuracy">
-                      <a href="/zh_CN/moves/zoomies.html" title="猪突猛进">
-                        100%
-                      </a>
-                    </td>
-                    <td class="ap">
-                      <a href="/zh_CN/moves/zoomies.html" title="猪突猛进">
-                        1
-                      </a>
-                    </td>
-                  </tr>          <tr class="move no-padding">
-                    <td class="star ta-center">★★★★</td>
-                    <td class="type">
-                      <a href="/zh_CN/moves/dodge.html" title="闪避">
-                  
-                        <img src="/assets/img/typeless.png" class="move-image" title="Typeless" alt="image of typeless" draggable="false">
-                  
-                      </a>
-                    </td>
-                    <td class="name">
-                      <a href="/zh_CN/moves/dodge.html" title="闪避">
-                        闪避
-                      </a>
-                    </td>
-                    <td class="category">
-                      <a href="/zh_CN/moves/dodge.html" title="闪避">
-                        状态效果
-                      </a>
-                    </td>
-                    <td class="power">
-                      <a href="/zh_CN/moves/dodge.html" title="闪避">
-                        -
-                      </a>
-                    </td>
-                    <td class="accuracy">
-                      <a href="/zh_CN/moves/dodge.html" title="闪避">
-                        100%
-                      </a>
-                    </td>
-                    <td class="ap">
-                      <a href="/zh_CN/moves/dodge.html" title="闪避">
-                        1
-                      </a>
-                    </td>
-                  </tr>          <tr class="move no-padding">
-                    <td class="star ta-center">★★★★★</td>
-                    <td class="type">
-                      <a href="/zh_CN/moves/copycat.html" title="抄袭狗">
-                  
-                        <img src="/assets/img/generated/ui/icons/types/element_beast.png" class="move-image" alt="image of 野兽"
-                          draggable="false">
-                  
-                      </a>
-                    </td>
-                    <td class="name">
-                      <a href="/zh_CN/moves/copycat.html" title="抄袭狗">
-                        抄袭狗
-                      </a>
-                    </td>
-                    <td class="category">
-                      <a href="/zh_CN/moves/copycat.html" title="抄袭狗">
-                        其他
-                      </a>
-                    </td>
-                    <td class="power">
-                      <a href="/zh_CN/moves/copycat.html" title="抄袭狗">
-                        -
-                      </a>
-                    </td>
-                    <td class="accuracy">
-                      <a href="/zh_CN/moves/copycat.html" title="抄袭狗">
-                        100%
-                      </a>
-                    </td>
-                    <td class="ap">
-                      <a href="/zh_CN/moves/copycat.html" title="抄袭狗">
-                        0
-                      </a>
-                    </td>
-                  </tr>        </tbody>
-              </table>
+            <div class="monster-detail-card-body item-detail-card-body table-container">
+              <div class="table-container">
+                <table class="moves last-td-padding highlight-row animate__animated animate__fadeIn">
+                  <thead>
+                    <tr class="no-padding">
+                      <td class="star"></td>
+                      <td class="type"></td>
+                      <td class="name">名称</td>
+                      <td class="category">类别</td>
+                      <td class="power">威力</td>
+                      <td class="accuracy">命中率</td>
+                      <td class="ap">点AP</td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="move no-padding">
+                      <td class="star ta-center">初始</td>
+                      <td class="type">
+                        <a href="/zh_CN/moves/smack.html" title="掌掴">
+                    
+                          <img src="/assets/img/typeless.png" class="move-image" title="Typeless" alt="image of typeless" draggable="false">
+                    
+                        </a>
+                      </td>
+                      <td class="name">
+                        <a href="/zh_CN/moves/smack.html" title="掌掴">
+                          掌掴
+                        </a>
+                      </td>
+                      <td class="category">
+                        <a href="/zh_CN/moves/smack.html" title="掌掴">
+                          近战攻击
+                        </a>
+                      </td>
+                      <td class="power">
+                        <a href="/zh_CN/moves/smack.html" title="掌掴">
+                          30
+                        </a>
+                      </td>
+                      <td class="accuracy">
+                        <a href="/zh_CN/moves/smack.html" title="掌掴">
+                          100%
+                        </a>
+                      </td>
+                      <td class="ap">
+                        <a href="/zh_CN/moves/smack.html" title="掌掴">
+                          0
+                        </a>
+                      </td>
+                    </tr>            <tr class="move no-padding">
+                      <td class="star ta-center">初始</td>
+                      <td class="type">
+                        <a href="/zh_CN/moves/carnivore.html" title="无肉不欢">
+                    
+                          <img src="/assets/img/generated/ui/icons/types/element_beast.png" class="move-image" alt="image of 野兽"
+                            draggable="false">
+                    
+                        </a>
+                      </td>
+                      <td class="name">
+                        <a href="/zh_CN/moves/carnivore.html" title="无肉不欢">
+                          无肉不欢
+                        </a>
+                      </td>
+                      <td class="category">
+                        <a href="/zh_CN/moves/carnivore.html" title="无肉不欢">
+                          其他
+                        </a>
+                      </td>
+                      <td class="power">
+                        <a href="/zh_CN/moves/carnivore.html" title="无肉不欢">
+                          -
+                        </a>
+                      </td>
+                      <td class="accuracy">
+                        <a href="/zh_CN/moves/carnivore.html" title="无肉不欢">
+                          100%
+                        </a>
+                      </td>
+                      <td class="ap">
+                        <a href="/zh_CN/moves/carnivore.html" title="无肉不欢">
+                          0
+                        </a>
+                      </td>
+                    </tr>            <tr class="move no-padding">
+                      <td class="star ta-center">初始</td>
+                      <td class="type">
+                        <a href="/zh_CN/moves/bite.html" title="啃咬">
+                    
+                          <img src="/assets/img/generated/ui/icons/types/element_beast.png" class="move-image" alt="image of 野兽"
+                            draggable="false">
+                    
+                        </a>
+                      </td>
+                      <td class="name">
+                        <a href="/zh_CN/moves/bite.html" title="啃咬">
+                          啃咬
+                        </a>
+                      </td>
+                      <td class="category">
+                        <a href="/zh_CN/moves/bite.html" title="啃咬">
+                          近战攻击
+                        </a>
+                      </td>
+                      <td class="power">
+                        <a href="/zh_CN/moves/bite.html" title="啃咬">
+                          80
+                        </a>
+                      </td>
+                      <td class="accuracy">
+                        <a href="/zh_CN/moves/bite.html" title="啃咬">
+                          100%
+                        </a>
+                      </td>
+                      <td class="ap">
+                        <a href="/zh_CN/moves/bite.html" title="啃咬">
+                          3
+                        </a>
+                      </td>
+                    </tr>
+                    <tr class="move no-padding">
+                      <td class="star ta-center">★</td>
+                      <td class="type">
+                        <a href="/zh_CN/moves/call_for_help.html" title="请求援助">
+                    
+                          <img src="/assets/img/typeless.png" class="move-image" title="Typeless" alt="image of typeless" draggable="false">
+                    
+                        </a>
+                      </td>
+                      <td class="name">
+                        <a href="/zh_CN/moves/call_for_help.html" title="请求援助">
+                          请求援助
+                        </a>
+                      </td>
+                      <td class="category">
+                        <a href="/zh_CN/moves/call_for_help.html" title="请求援助">
+                          其他
+                        </a>
+                      </td>
+                      <td class="power">
+                        <a href="/zh_CN/moves/call_for_help.html" title="请求援助">
+                          -
+                        </a>
+                      </td>
+                      <td class="accuracy">
+                        <a href="/zh_CN/moves/call_for_help.html" title="请求援助">
+                          50%
+                        </a>
+                      </td>
+                      <td class="ap">
+                        <a href="/zh_CN/moves/call_for_help.html" title="请求援助">
+                          2
+                        </a>
+                      </td>
+                    </tr>            <tr class="move no-padding">
+                      <td class="star ta-center">★★</td>
+                      <td class="type">
+                        <a href="/zh_CN/moves/berserker.html" title="狂战士">
+                    
+                          <img src="/assets/img/generated/ui/icons/types/element_beast.png" class="move-image" alt="image of 野兽"
+                            draggable="false">
+                    
+                        </a>
+                      </td>
+                      <td class="name">
+                        <a href="/zh_CN/moves/berserker.html" title="狂战士">
+                          狂战士
+                        </a>
+                      </td>
+                      <td class="category">
+                        <a href="/zh_CN/moves/berserker.html" title="狂战士">
+                          状态效果
+                        </a>
+                      </td>
+                      <td class="power">
+                        <a href="/zh_CN/moves/berserker.html" title="狂战士">
+                          -
+                        </a>
+                      </td>
+                      <td class="accuracy">
+                        <a href="/zh_CN/moves/berserker.html" title="狂战士">
+                          100%
+                        </a>
+                      </td>
+                      <td class="ap">
+                        <a href="/zh_CN/moves/berserker.html" title="狂战士">
+                          0
+                        </a>
+                      </td>
+                    </tr>            <tr class="move no-padding">
+                      <td class="star ta-center">★★★</td>
+                      <td class="type">
+                        <a href="/zh_CN/moves/zoomies.html" title="猪突猛进">
+                    
+                          <img src="/assets/img/generated/ui/icons/types/element_beast.png" class="move-image" alt="image of 野兽"
+                            draggable="false">
+                    
+                        </a>
+                      </td>
+                      <td class="name">
+                        <a href="/zh_CN/moves/zoomies.html" title="猪突猛进">
+                          猪突猛进
+                        </a>
+                      </td>
+                      <td class="category">
+                        <a href="/zh_CN/moves/zoomies.html" title="猪突猛进">
+                          近战攻击
+                        </a>
+                      </td>
+                      <td class="power">
+                        <a href="/zh_CN/moves/zoomies.html" title="猪突猛进">
+                          30
+                        </a>
+                      </td>
+                      <td class="accuracy">
+                        <a href="/zh_CN/moves/zoomies.html" title="猪突猛进">
+                          100%
+                        </a>
+                      </td>
+                      <td class="ap">
+                        <a href="/zh_CN/moves/zoomies.html" title="猪突猛进">
+                          1
+                        </a>
+                      </td>
+                    </tr>            <tr class="move no-padding">
+                      <td class="star ta-center">★★★★</td>
+                      <td class="type">
+                        <a href="/zh_CN/moves/dodge.html" title="闪避">
+                    
+                          <img src="/assets/img/typeless.png" class="move-image" title="Typeless" alt="image of typeless" draggable="false">
+                    
+                        </a>
+                      </td>
+                      <td class="name">
+                        <a href="/zh_CN/moves/dodge.html" title="闪避">
+                          闪避
+                        </a>
+                      </td>
+                      <td class="category">
+                        <a href="/zh_CN/moves/dodge.html" title="闪避">
+                          状态效果
+                        </a>
+                      </td>
+                      <td class="power">
+                        <a href="/zh_CN/moves/dodge.html" title="闪避">
+                          -
+                        </a>
+                      </td>
+                      <td class="accuracy">
+                        <a href="/zh_CN/moves/dodge.html" title="闪避">
+                          100%
+                        </a>
+                      </td>
+                      <td class="ap">
+                        <a href="/zh_CN/moves/dodge.html" title="闪避">
+                          1
+                        </a>
+                      </td>
+                    </tr>            <tr class="move no-padding">
+                      <td class="star ta-center">★★★★★</td>
+                      <td class="type">
+                        <a href="/zh_CN/moves/copycat.html" title="抄袭狗">
+                    
+                          <img src="/assets/img/generated/ui/icons/types/element_beast.png" class="move-image" alt="image of 野兽"
+                            draggable="false">
+                    
+                        </a>
+                      </td>
+                      <td class="name">
+                        <a href="/zh_CN/moves/copycat.html" title="抄袭狗">
+                          抄袭狗
+                        </a>
+                      </td>
+                      <td class="category">
+                        <a href="/zh_CN/moves/copycat.html" title="抄袭狗">
+                          其他
+                        </a>
+                      </td>
+                      <td class="power">
+                        <a href="/zh_CN/moves/copycat.html" title="抄袭狗">
+                          -
+                        </a>
+                      </td>
+                      <td class="accuracy">
+                        <a href="/zh_CN/moves/copycat.html" title="抄袭狗">
+                          100%
+                        </a>
+                      </td>
+                      <td class="ap">
+                        <a href="/zh_CN/moves/copycat.html" title="抄袭狗">
+                          0
+                        </a>
+                      </td>
+                    </tr>          </tbody>
+                </table>
+              </div>
             </div>
           </article>
         </div>
@@ -907,11 +907,18 @@
                     条款和条件</a>
             </span>
             <span>&nbsp;|&nbsp;</span>
-            <span>v1.0.0</span>
+            <span>v1.1.0</span>
         </small>
-    </footer>    <script defer src="/assets/js/main.js?v=1.0.0"></script>
-    <script defer src="/assets/js/analytics.js?v=1.0.0"></script>
+    </footer>    <script async src="/assets/js/main.js?v=1.1.0"></script>
+    <script defer src="/assets/js/analytics.js?v=1.1.0"></script>
     <script defer src="https://webcomp.assistantapps.com/build/bundle.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js');
+            });
+        }
+    </script>
 </body>
 
 </html>

@@ -48,7 +48,7 @@
     <meta name="distribution" content="Global">
     <meta name="generator" content="custom scripts using HandlebarJS">
     <link rel="search" href="opensearch.xml" type="application/opensearchdescription+xml" title="Search Title">
-    <meta name="revised" content="Wed Jul 24 2024">
+    <meta name="revised" content="Thu Jul 25 2024">
 
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
@@ -111,7 +111,7 @@
     <meta name="msapplication-starturl" content="/?pwa-app">
 
 
-    <link rel="stylesheet" href="/assets/css/main.css?v=1.0.0">
+    <link rel="stylesheet" href="/assets/css/main.css?v=1.1.0">
 
     <script type="application/ld+json">
         {
@@ -124,8 +124,8 @@
             "image": "/assets/favicon/android-chrome-192x192.png",
             "applicationCategory": "Application",
             "operatingSystem": "Android Lollipop, iOS, Chrome, Firefox, Opera, Internet Explorer, Edge",
-            "softwareVersion": "1.0.0",
-            "version": "1.0.0",
+            "softwareVersion": "1.1.0",
+            "version": "1.1.0",
             "author": {
                 "@type": "Person",
                 "name": "Kurt Lourens",
@@ -147,9 +147,9 @@
                 "jobTitle": "Senior Software Engineer",
             },
             "inLanguage": "en",
-            "dateCreated": "2024-07-24",
-            "dateModified": "2024-07-24",
-            "datePublished": "2024-07-24"
+            "dateCreated": "2024-07-25",
+            "dateModified": "2024-07-25",
+            "datePublished": "2024-07-25"
         }
     </script></head>
 <body class="overflow-x-hidden">
@@ -164,17 +164,13 @@
                                 <img src="/assets/img/logo.png" alt="splash">
                             </div>
                         </li>
-                        <li class="title">
+                        <li class="title hidden-in-mobile">
                             <span style="--i:1">Assistant </span>
                             <span style="--i:2">for </span>
                             <span style="--i:3"><b>Cassette Beasts</b></span>
                         </li>
                     </ul>
                 </a>
-    
-                <ul>
-                </ul>
-    
     
                 <ul class="icons">
                     <li data-tooltip="언어" data-placement="bottom">
@@ -265,7 +261,7 @@
           <input type="search" name="search" placeholder="Search for..." oninput="onSearchChange(this.value)">
         </section>
         
-        <section id="status-effect-grid" class="item-grid-list">
+        <section id="status-effect-grid" class="item-grid-list mb-3">
           <a href="/ko_KR/statusEffect/ap_boost.html"
             class="grid-list-item item animate__animated animate__fadeIn" data-title="AP 부스트"
             data-description="AP 부스트를 보유한 캐릭터는 라운드마다 추가 AP를 1 획득한다." style="animation-delay: 0ms;">
@@ -292,22 +288,9 @@
               </small>
             </section>
           </a>
-          <a href="/ko_KR/statusEffect/wall_air.html"
-            class="grid-list-item item animate__animated animate__fadeIn" data-title="{type} 방벽"
-            data-description="방벽은 받는 공격을 일정 횟수 흡수해준다. 타입 상성상 우위인 공격은 즉시 방벽을 파괴한다." style="animation-delay: 60ms;">
-            <div class="grid-list-item-image">
-              <img src="/assets/img/generated/ui/icons/status_effects/wall_air.png" alt="icon of {type} 방벽" draggable="false">
-            </div>
-            <section class="grid-list-item-container">
-              <h2 class="Neu5Land heading">{type} 방벽</h2>
-              <small class="description">
-                방벽은 받는 공격을 일정 횟수 흡수해준다. 타입 상성상 우위인 공격은 즉시 방벽을 파괴한다.
-              </small>
-            </section>
-          </a>
           <a href="/ko_KR/statusEffect/flammable.html"
             class="grid-list-item item animate__animated animate__fadeIn" data-title="가연성"
-            data-description="가연성 캐릭터는 불 타입 공격에 맞을 때마다 화상 상태가 된다. 또한 화상으로 받는 피해가 증가한다." style="animation-delay: 90ms;">
+            data-description="가연성 캐릭터는 불 타입 공격에 맞을 때마다 화상 상태가 된다. 또한 화상으로 받는 피해가 증가한다." style="animation-delay: 60ms;">
             <div class="grid-list-item-image">
               <img src="/assets/img/generated/ui/icons/status_effects/flammable.png" alt="icon of 가연성" draggable="false">
             </div>
@@ -315,6 +298,19 @@
               <h2 class="Neu5Land heading">가연성</h2>
               <small class="description">
                 가연성 캐릭터는 불 타입 공격에 맞을 때마다 화상 상태가 된다. 또한 화상으로 받는 피해가 증가한다.
+              </small>
+            </section>
+          </a>
+          <a href="/ko_KR/statusEffect/wall_air.html"
+            class="grid-list-item item animate__animated animate__fadeIn" data-title="공기 방벽"
+            data-description="방벽은 받는 공격을 일정 횟수 흡수해준다. 타입 상성상 우위인 공격은 즉시 방벽을 파괴한다." style="animation-delay: 90ms;">
+            <div class="grid-list-item-image">
+              <img src="/assets/img/generated/ui/icons/status_effects/wall_air.png" alt="icon of 공기 방벽" draggable="false">
+            </div>
+            <section class="grid-list-item-container">
+              <h2 class="Neu5Land heading">공기 방벽</h2>
+              <small class="description">
+                방벽은 받는 공격을 일정 횟수 흡수해준다. 타입 상성상 우위인 공격은 즉시 방벽을 파괴한다.
               </small>
             </section>
           </a>
@@ -1506,11 +1502,18 @@
                     이용약관</a>
             </span>
             <span>&nbsp;|&nbsp;</span>
-            <span>v1.0.0</span>
+            <span>v1.1.0</span>
         </small>
-    </footer>    <script defer src="/assets/js/main.js?v=1.0.0"></script>
-    <script defer src="/assets/js/analytics.js?v=1.0.0"></script>
+    </footer>    <script async src="/assets/js/main.js?v=1.1.0"></script>
+    <script defer src="/assets/js/analytics.js?v=1.1.0"></script>
     <script defer src="https://webcomp.assistantapps.com/build/bundle.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js');
+            });
+        }
+    </script>
 </body>
 
 </html>

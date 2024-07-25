@@ -47,7 +47,7 @@
     <meta name="distribution" content="Global">
     <meta name="generator" content="custom scripts using HandlebarJS">
     <link rel="search" href="opensearch.xml" type="application/opensearchdescription+xml" title="Search Title">
-    <meta name="revised" content="Wed Jul 24 2024">
+    <meta name="revised" content="Thu Jul 25 2024">
 
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
@@ -110,7 +110,7 @@
     <meta name="msapplication-starturl" content="/?pwa-app">
 
 
-    <link rel="stylesheet" href="/assets/css/main.css?v=1.0.0">
+    <link rel="stylesheet" href="/assets/css/main.css?v=1.1.0">
 
     <script type="application/ld+json">
         {
@@ -123,8 +123,8 @@
             "image": "/assets/favicon/android-chrome-192x192.png",
             "applicationCategory": "Application",
             "operatingSystem": "Android Lollipop, iOS, Chrome, Firefox, Opera, Internet Explorer, Edge",
-            "softwareVersion": "1.0.0",
-            "version": "1.0.0",
+            "softwareVersion": "1.1.0",
+            "version": "1.1.0",
             "author": {
                 "@type": "Person",
                 "name": "Kurt Lourens",
@@ -146,9 +146,9 @@
                 "jobTitle": "Senior Software Engineer",
             },
             "inLanguage": "en",
-            "dateCreated": "2024-07-24",
-            "dateModified": "2024-07-24",
-            "datePublished": "2024-07-24"
+            "dateCreated": "2024-07-25",
+            "dateModified": "2024-07-25",
+            "datePublished": "2024-07-25"
         }
     </script></head>
 <body class="overflow-x-hidden">
@@ -163,17 +163,13 @@
                                 <img src="/assets/img/logo.png" alt="splash">
                             </div>
                         </li>
-                        <li class="title">
+                        <li class="title hidden-in-mobile">
                             <span style="--i:1">Assistant </span>
                             <span style="--i:2">for </span>
                             <span style="--i:3"><b>Cassette Beasts</b></span>
                         </li>
                     </ul>
                 </a>
-    
-                <ul>
-                </ul>
-    
     
                 <ul class="icons">
                     <li data-tooltip="Sprache" data-placement="bottom">
@@ -265,7 +261,7 @@
                 </span>
             </li>
         </ul>
-        <div class="grid min-card-width">
+        <div class="grid min-card-width mb-3">
           <article class="monster-detail-card item-detail-card">
             <div class="monster-detail-card-heading item-detail-card-heading primary">
               <h2 class="Neu5Land animate__animated animate__fadeIn">Düsterflügler</h2>
@@ -415,26 +411,28 @@
         
               <section class="additional-section additional animate__animated animate__fadeIn">
                 <h3 class="section-heading Neu5Land">Zusätzliche Statistiken</h3>
-                <table class="additional highlight-cell animate__animated animate__fadeIn">
-                  <thead>
-                    <tr>
-                      <td class="ta-center">Ausweichen</td>
-                      <td class="ta-center">Max. AP</td>
-                      <td class="ta-center">Aktionsplätze</td>
-                      <td class="ta-center">Aufnahme</td>
-                      <td class="ta-center">Erf.-Punkte</td>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td class="ta-center">100</td>
-                      <td class="ta-center">7</td>
-                      <td class="ta-center">5</td>
-                      <td class="ta-center">25%</td>
-                      <td class="ta-center">14</td>
-                    </tr>
-                  </tbody>
-                </table>
+                <div class="table-container">
+                  <table class="additional highlight-cell animate__animated animate__fadeIn">
+                    <thead>
+                      <tr>
+                        <td class="ta-center">Ausweichen</td>
+                        <td class="ta-center">Max. AP</td>
+                        <td class="ta-center">Aktionsplätze</td>
+                        <td class="ta-center">Aufnahme</td>
+                        <td class="ta-center">Erf.-Punkte</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="ta-center">100</td>
+                        <td class="ta-center">7</td>
+                        <td class="ta-center">5</td>
+                        <td class="ta-center">25%</td>
+                        <td class="ta-center">14</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </section>
         
               <div class="grid">
@@ -534,377 +532,379 @@
               <div class="spacer"></div>
             </div>
         
-            <div class="monster-detail-tape-container animate__animated noselect">
+            <div class="monster-detail-tape-container animate__animated hidden-in-mobile noselect">
               <div class="animate__animated swing-hover Neu5Land">
                 <img src="/assets/img/meta/tape.png" alt="monster tape">
                 <p>Düsterflügler</p>
               </div>
             </div>
         
-            <div class="monster-detail-card-body item-detail-card-body">
-              <table class="moves last-td-padding highlight-row animate__animated animate__fadeIn">
-                <thead>
-                  <tr class="no-padding">
-                    <td class="star"></td>
-                    <td class="type"></td>
-                    <td class="name">Name</td>
-                    <td class="category">Kategorie</td>
-                    <td class="power">Kraft</td>
-                    <td class="accuracy">Präzision</td>
-                    <td class="ap">AP</td>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr class="move no-padding">
-                    <td class="star ta-center">Anfänglich</td>
-                    <td class="type">
-                      <a href="/de_DE/moves/smack.html" title="Klaps">
-                  
-                        <img src="/assets/img/typeless.png" class="move-image" title="Typeless" alt="image of typeless" draggable="false">
-                  
-                      </a>
-                    </td>
-                    <td class="name">
-                      <a href="/de_DE/moves/smack.html" title="Klaps">
-                        Klaps
-                      </a>
-                    </td>
-                    <td class="category">
-                      <a href="/de_DE/moves/smack.html" title="Klaps">
-                        Nahkampfangriff
-                      </a>
-                    </td>
-                    <td class="power">
-                      <a href="/de_DE/moves/smack.html" title="Klaps">
-                        30
-                      </a>
-                    </td>
-                    <td class="accuracy">
-                      <a href="/de_DE/moves/smack.html" title="Klaps">
-                        100%
-                      </a>
-                    </td>
-                    <td class="ap">
-                      <a href="/de_DE/moves/smack.html" title="Klaps">
-                        0
-                      </a>
-                    </td>
-                  </tr>          <tr class="move no-padding">
-                    <td class="star ta-center">Anfänglich</td>
-                    <td class="type">
-                      <a href="/de_DE/moves/zephyr.html" title="Zephyr">
-                  
-                        <img src="/assets/img/generated/ui/icons/types/element_air.png" class="move-image" alt="image of Luft"
-                          draggable="false">
-                  
-                      </a>
-                    </td>
-                    <td class="name">
-                      <a href="/de_DE/moves/zephyr.html" title="Zephyr">
-                        Zephyr
-                      </a>
-                    </td>
-                    <td class="category">
-                      <a href="/de_DE/moves/zephyr.html" title="Zephyr">
-                        Fernkampfangriff
-                      </a>
-                    </td>
-                    <td class="power">
-                      <a href="/de_DE/moves/zephyr.html" title="Zephyr">
-                        60
-                      </a>
-                    </td>
-                    <td class="accuracy">
-                      <a href="/de_DE/moves/zephyr.html" title="Zephyr">
-                        100%
-                      </a>
-                    </td>
-                    <td class="ap">
-                      <a href="/de_DE/moves/zephyr.html" title="Zephyr">
-                        2
-                      </a>
-                    </td>
-                  </tr>          <tr class="move no-padding">
-                    <td class="star ta-center">Anfänglich</td>
-                    <td class="type">
-                      <a href="/de_DE/moves/taunt.html" title="Verspotten">
-                  
-                        <img src="/assets/img/generated/ui/icons/types/element_poison.png" class="move-image" alt="image of Gift"
-                          draggable="false">
-                  
-                      </a>
-                    </td>
-                    <td class="name">
-                      <a href="/de_DE/moves/taunt.html" title="Verspotten">
-                        Verspotten
-                      </a>
-                    </td>
-                    <td class="category">
-                      <a href="/de_DE/moves/taunt.html" title="Verspotten">
-                        Statuseffekt
-                      </a>
-                    </td>
-                    <td class="power">
-                      <a href="/de_DE/moves/taunt.html" title="Verspotten">
-                        -
-                      </a>
-                    </td>
-                    <td class="accuracy">
-                      <a href="/de_DE/moves/taunt.html" title="Verspotten">
-                        100%
-                      </a>
-                    </td>
-                    <td class="ap">
-                      <a href="/de_DE/moves/taunt.html" title="Verspotten">
-                        1
-                      </a>
-                    </td>
-                  </tr>          <tr class="move no-padding">
-                    <td class="star ta-center">Anfänglich</td>
-                    <td class="type">
-                      <a href="/de_DE/moves/dodge.html" title="Ausweichen">
-                  
-                        <img src="/assets/img/typeless.png" class="move-image" title="Typeless" alt="image of typeless" draggable="false">
-                  
-                      </a>
-                    </td>
-                    <td class="name">
-                      <a href="/de_DE/moves/dodge.html" title="Ausweichen">
-                        Ausweichen
-                      </a>
-                    </td>
-                    <td class="category">
-                      <a href="/de_DE/moves/dodge.html" title="Ausweichen">
-                        Statuseffekt
-                      </a>
-                    </td>
-                    <td class="power">
-                      <a href="/de_DE/moves/dodge.html" title="Ausweichen">
-                        -
-                      </a>
-                    </td>
-                    <td class="accuracy">
-                      <a href="/de_DE/moves/dodge.html" title="Ausweichen">
-                        100%
-                      </a>
-                    </td>
-                    <td class="ap">
-                      <a href="/de_DE/moves/dodge.html" title="Ausweichen">
-                        1
-                      </a>
-                    </td>
-                  </tr>          <tr class="move no-padding">
-                    <td class="star ta-center">Anfänglich</td>
-                    <td class="type">
-                      <a href="/de_DE/moves/air_wall.html" title="Luftwall">
-                  
-                        <img src="/assets/img/generated/ui/icons/types/element_air.png" class="move-image" alt="image of Luft"
-                          draggable="false">
-                  
-                      </a>
-                    </td>
-                    <td class="name">
-                      <a href="/de_DE/moves/air_wall.html" title="Luftwall">
-                        Luftwall
-                      </a>
-                    </td>
-                    <td class="category">
-                      <a href="/de_DE/moves/air_wall.html" title="Luftwall">
-                        Statuseffekt
-                      </a>
-                    </td>
-                    <td class="power">
-                      <a href="/de_DE/moves/air_wall.html" title="Luftwall">
-                        -
-                      </a>
-                    </td>
-                    <td class="accuracy">
-                      <a href="/de_DE/moves/air_wall.html" title="Luftwall">
-                        100%
-                      </a>
-                    </td>
-                    <td class="ap">
-                      <a href="/de_DE/moves/air_wall.html" title="Luftwall">
-                        2
-                      </a>
-                    </td>
-                  </tr>
-                  <tr class="move no-padding">
-                    <td class="star ta-center">★</td>
-                    <td class="type">
-                      <a href="/de_DE/moves/thunder_blast.html" title="Donnerexplosion">
-                  
-                        <img src="/assets/img/generated/ui/icons/types/element_lightning.png" class="move-image" alt="image of Blitz"
-                          draggable="false">
-                  
-                      </a>
-                    </td>
-                    <td class="name">
-                      <a href="/de_DE/moves/thunder_blast.html" title="Donnerexplosion">
-                        Donnerexplosion
-                      </a>
-                    </td>
-                    <td class="category">
-                      <a href="/de_DE/moves/thunder_blast.html" title="Donnerexplosion">
-                        Fernkampfangriff
-                      </a>
-                    </td>
-                    <td class="power">
-                      <a href="/de_DE/moves/thunder_blast.html" title="Donnerexplosion">
-                        60
-                      </a>
-                    </td>
-                    <td class="accuracy">
-                      <a href="/de_DE/moves/thunder_blast.html" title="Donnerexplosion">
-                        100%
-                      </a>
-                    </td>
-                    <td class="ap">
-                      <a href="/de_DE/moves/thunder_blast.html" title="Donnerexplosion">
-                        3
-                      </a>
-                    </td>
-                  </tr>          <tr class="move no-padding">
-                    <td class="star ta-center">★★</td>
-                    <td class="type">
-                      <a href="/de_DE/moves/coating_air.html" title="Luftbeschichtung">
-                  
-                        <img src="/assets/img/generated/ui/icons/types/element_air.png" class="move-image" alt="image of Luft"
-                          draggable="false">
-                  
-                      </a>
-                    </td>
-                    <td class="name">
-                      <a href="/de_DE/moves/coating_air.html" title="Luftbeschichtung">
-                        Luftbeschichtung
-                      </a>
-                    </td>
-                    <td class="category">
-                      <a href="/de_DE/moves/coating_air.html" title="Luftbeschichtung">
-                        Statuseffekt
-                      </a>
-                    </td>
-                    <td class="power">
-                      <a href="/de_DE/moves/coating_air.html" title="Luftbeschichtung">
-                        -
-                      </a>
-                    </td>
-                    <td class="accuracy">
-                      <a href="/de_DE/moves/coating_air.html" title="Luftbeschichtung">
-                        100%
-                      </a>
-                    </td>
-                    <td class="ap">
-                      <a href="/de_DE/moves/coating_air.html" title="Luftbeschichtung">
-                        2
-                      </a>
-                    </td>
-                  </tr>          <tr class="move no-padding">
-                    <td class="star ta-center">★★★</td>
-                    <td class="type">
-                      <a href="/de_DE/moves/energy_shot.html" title="Energieschuss">
-                  
-                        <img src="/assets/img/typeless.png" class="move-image" title="Typeless" alt="image of typeless" draggable="false">
-                  
-                      </a>
-                    </td>
-                    <td class="name">
-                      <a href="/de_DE/moves/energy_shot.html" title="Energieschuss">
-                        Energieschuss
-                      </a>
-                    </td>
-                    <td class="category">
-                      <a href="/de_DE/moves/energy_shot.html" title="Energieschuss">
-                        Fernkampfangriff
-                      </a>
-                    </td>
-                    <td class="power">
-                      <a href="/de_DE/moves/energy_shot.html" title="Energieschuss">
-                        60
-                      </a>
-                    </td>
-                    <td class="accuracy">
-                      <a href="/de_DE/moves/energy_shot.html" title="Energieschuss">
-                        100%
-                      </a>
-                    </td>
-                    <td class="ap">
-                      <a href="/de_DE/moves/energy_shot.html" title="Energieschuss">
-                        2
-                      </a>
-                    </td>
-                  </tr>          <tr class="move no-padding">
-                    <td class="star ta-center">★★★★</td>
-                    <td class="type">
-                      <a href="/de_DE/moves/fog.html" title="Nebel">
-                  
-                        <img src="/assets/img/generated/ui/icons/types/element_water.png" class="move-image" alt="image of Wasser"
-                          draggable="false">
-                  
-                      </a>
-                    </td>
-                    <td class="name">
-                      <a href="/de_DE/moves/fog.html" title="Nebel">
-                        Nebel
-                      </a>
-                    </td>
-                    <td class="category">
-                      <a href="/de_DE/moves/fog.html" title="Nebel">
-                        Statuseffekt
-                      </a>
-                    </td>
-                    <td class="power">
-                      <a href="/de_DE/moves/fog.html" title="Nebel">
-                        -
-                      </a>
-                    </td>
-                    <td class="accuracy">
-                      <a href="/de_DE/moves/fog.html" title="Nebel">
-                        100%
-                      </a>
-                    </td>
-                    <td class="ap">
-                      <a href="/de_DE/moves/fog.html" title="Nebel">
-                        4
-                      </a>
-                    </td>
-                  </tr>          <tr class="move no-padding">
-                    <td class="star ta-center">★★★★★</td>
-                    <td class="type">
-                      <a href="/de_DE/moves/broadcast.html" title="Multitalent">
-                  
-                        <img src="/assets/img/generated/ui/icons/types/element_air.png" class="move-image" alt="image of Luft"
-                          draggable="false">
-                  
-                      </a>
-                    </td>
-                    <td class="name">
-                      <a href="/de_DE/moves/broadcast.html" title="Multitalent">
-                        Multitalent
-                      </a>
-                    </td>
-                    <td class="category">
-                      <a href="/de_DE/moves/broadcast.html" title="Multitalent">
-                        Statuseffekt
-                      </a>
-                    </td>
-                    <td class="power">
-                      <a href="/de_DE/moves/broadcast.html" title="Multitalent">
-                        -
-                      </a>
-                    </td>
-                    <td class="accuracy">
-                      <a href="/de_DE/moves/broadcast.html" title="Multitalent">
-                        100%
-                      </a>
-                    </td>
-                    <td class="ap">
-                      <a href="/de_DE/moves/broadcast.html" title="Multitalent">
-                        2
-                      </a>
-                    </td>
-                  </tr>        </tbody>
-              </table>
+            <div class="monster-detail-card-body item-detail-card-body table-container">
+              <div class="table-container">
+                <table class="moves last-td-padding highlight-row animate__animated animate__fadeIn">
+                  <thead>
+                    <tr class="no-padding">
+                      <td class="star"></td>
+                      <td class="type"></td>
+                      <td class="name">Name</td>
+                      <td class="category">Kategorie</td>
+                      <td class="power">Kraft</td>
+                      <td class="accuracy">Präzision</td>
+                      <td class="ap">AP</td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="move no-padding">
+                      <td class="star ta-center">Anfänglich</td>
+                      <td class="type">
+                        <a href="/de_DE/moves/smack.html" title="Klaps">
+                    
+                          <img src="/assets/img/typeless.png" class="move-image" title="Typeless" alt="image of typeless" draggable="false">
+                    
+                        </a>
+                      </td>
+                      <td class="name">
+                        <a href="/de_DE/moves/smack.html" title="Klaps">
+                          Klaps
+                        </a>
+                      </td>
+                      <td class="category">
+                        <a href="/de_DE/moves/smack.html" title="Klaps">
+                          Nahkampfangriff
+                        </a>
+                      </td>
+                      <td class="power">
+                        <a href="/de_DE/moves/smack.html" title="Klaps">
+                          30
+                        </a>
+                      </td>
+                      <td class="accuracy">
+                        <a href="/de_DE/moves/smack.html" title="Klaps">
+                          100%
+                        </a>
+                      </td>
+                      <td class="ap">
+                        <a href="/de_DE/moves/smack.html" title="Klaps">
+                          0
+                        </a>
+                      </td>
+                    </tr>            <tr class="move no-padding">
+                      <td class="star ta-center">Anfänglich</td>
+                      <td class="type">
+                        <a href="/de_DE/moves/zephyr.html" title="Zephyr">
+                    
+                          <img src="/assets/img/generated/ui/icons/types/element_air.png" class="move-image" alt="image of Luft"
+                            draggable="false">
+                    
+                        </a>
+                      </td>
+                      <td class="name">
+                        <a href="/de_DE/moves/zephyr.html" title="Zephyr">
+                          Zephyr
+                        </a>
+                      </td>
+                      <td class="category">
+                        <a href="/de_DE/moves/zephyr.html" title="Zephyr">
+                          Fernkampfangriff
+                        </a>
+                      </td>
+                      <td class="power">
+                        <a href="/de_DE/moves/zephyr.html" title="Zephyr">
+                          60
+                        </a>
+                      </td>
+                      <td class="accuracy">
+                        <a href="/de_DE/moves/zephyr.html" title="Zephyr">
+                          100%
+                        </a>
+                      </td>
+                      <td class="ap">
+                        <a href="/de_DE/moves/zephyr.html" title="Zephyr">
+                          2
+                        </a>
+                      </td>
+                    </tr>            <tr class="move no-padding">
+                      <td class="star ta-center">Anfänglich</td>
+                      <td class="type">
+                        <a href="/de_DE/moves/taunt.html" title="Verspotten">
+                    
+                          <img src="/assets/img/generated/ui/icons/types/element_poison.png" class="move-image" alt="image of Gift"
+                            draggable="false">
+                    
+                        </a>
+                      </td>
+                      <td class="name">
+                        <a href="/de_DE/moves/taunt.html" title="Verspotten">
+                          Verspotten
+                        </a>
+                      </td>
+                      <td class="category">
+                        <a href="/de_DE/moves/taunt.html" title="Verspotten">
+                          Statuseffekt
+                        </a>
+                      </td>
+                      <td class="power">
+                        <a href="/de_DE/moves/taunt.html" title="Verspotten">
+                          -
+                        </a>
+                      </td>
+                      <td class="accuracy">
+                        <a href="/de_DE/moves/taunt.html" title="Verspotten">
+                          100%
+                        </a>
+                      </td>
+                      <td class="ap">
+                        <a href="/de_DE/moves/taunt.html" title="Verspotten">
+                          1
+                        </a>
+                      </td>
+                    </tr>            <tr class="move no-padding">
+                      <td class="star ta-center">Anfänglich</td>
+                      <td class="type">
+                        <a href="/de_DE/moves/dodge.html" title="Ausweichen">
+                    
+                          <img src="/assets/img/typeless.png" class="move-image" title="Typeless" alt="image of typeless" draggable="false">
+                    
+                        </a>
+                      </td>
+                      <td class="name">
+                        <a href="/de_DE/moves/dodge.html" title="Ausweichen">
+                          Ausweichen
+                        </a>
+                      </td>
+                      <td class="category">
+                        <a href="/de_DE/moves/dodge.html" title="Ausweichen">
+                          Statuseffekt
+                        </a>
+                      </td>
+                      <td class="power">
+                        <a href="/de_DE/moves/dodge.html" title="Ausweichen">
+                          -
+                        </a>
+                      </td>
+                      <td class="accuracy">
+                        <a href="/de_DE/moves/dodge.html" title="Ausweichen">
+                          100%
+                        </a>
+                      </td>
+                      <td class="ap">
+                        <a href="/de_DE/moves/dodge.html" title="Ausweichen">
+                          1
+                        </a>
+                      </td>
+                    </tr>            <tr class="move no-padding">
+                      <td class="star ta-center">Anfänglich</td>
+                      <td class="type">
+                        <a href="/de_DE/moves/air_wall.html" title="Luftwall">
+                    
+                          <img src="/assets/img/generated/ui/icons/types/element_air.png" class="move-image" alt="image of Luft"
+                            draggable="false">
+                    
+                        </a>
+                      </td>
+                      <td class="name">
+                        <a href="/de_DE/moves/air_wall.html" title="Luftwall">
+                          Luftwall
+                        </a>
+                      </td>
+                      <td class="category">
+                        <a href="/de_DE/moves/air_wall.html" title="Luftwall">
+                          Statuseffekt
+                        </a>
+                      </td>
+                      <td class="power">
+                        <a href="/de_DE/moves/air_wall.html" title="Luftwall">
+                          -
+                        </a>
+                      </td>
+                      <td class="accuracy">
+                        <a href="/de_DE/moves/air_wall.html" title="Luftwall">
+                          100%
+                        </a>
+                      </td>
+                      <td class="ap">
+                        <a href="/de_DE/moves/air_wall.html" title="Luftwall">
+                          2
+                        </a>
+                      </td>
+                    </tr>
+                    <tr class="move no-padding">
+                      <td class="star ta-center">★</td>
+                      <td class="type">
+                        <a href="/de_DE/moves/thunder_blast.html" title="Donnerexplosion">
+                    
+                          <img src="/assets/img/generated/ui/icons/types/element_lightning.png" class="move-image" alt="image of Blitz"
+                            draggable="false">
+                    
+                        </a>
+                      </td>
+                      <td class="name">
+                        <a href="/de_DE/moves/thunder_blast.html" title="Donnerexplosion">
+                          Donnerexplosion
+                        </a>
+                      </td>
+                      <td class="category">
+                        <a href="/de_DE/moves/thunder_blast.html" title="Donnerexplosion">
+                          Fernkampfangriff
+                        </a>
+                      </td>
+                      <td class="power">
+                        <a href="/de_DE/moves/thunder_blast.html" title="Donnerexplosion">
+                          60
+                        </a>
+                      </td>
+                      <td class="accuracy">
+                        <a href="/de_DE/moves/thunder_blast.html" title="Donnerexplosion">
+                          100%
+                        </a>
+                      </td>
+                      <td class="ap">
+                        <a href="/de_DE/moves/thunder_blast.html" title="Donnerexplosion">
+                          3
+                        </a>
+                      </td>
+                    </tr>            <tr class="move no-padding">
+                      <td class="star ta-center">★★</td>
+                      <td class="type">
+                        <a href="/de_DE/moves/coating_air.html" title="Luftbeschichtung">
+                    
+                          <img src="/assets/img/generated/ui/icons/types/element_air.png" class="move-image" alt="image of Luft"
+                            draggable="false">
+                    
+                        </a>
+                      </td>
+                      <td class="name">
+                        <a href="/de_DE/moves/coating_air.html" title="Luftbeschichtung">
+                          Luftbeschichtung
+                        </a>
+                      </td>
+                      <td class="category">
+                        <a href="/de_DE/moves/coating_air.html" title="Luftbeschichtung">
+                          Statuseffekt
+                        </a>
+                      </td>
+                      <td class="power">
+                        <a href="/de_DE/moves/coating_air.html" title="Luftbeschichtung">
+                          -
+                        </a>
+                      </td>
+                      <td class="accuracy">
+                        <a href="/de_DE/moves/coating_air.html" title="Luftbeschichtung">
+                          100%
+                        </a>
+                      </td>
+                      <td class="ap">
+                        <a href="/de_DE/moves/coating_air.html" title="Luftbeschichtung">
+                          2
+                        </a>
+                      </td>
+                    </tr>            <tr class="move no-padding">
+                      <td class="star ta-center">★★★</td>
+                      <td class="type">
+                        <a href="/de_DE/moves/energy_shot.html" title="Energieschuss">
+                    
+                          <img src="/assets/img/typeless.png" class="move-image" title="Typeless" alt="image of typeless" draggable="false">
+                    
+                        </a>
+                      </td>
+                      <td class="name">
+                        <a href="/de_DE/moves/energy_shot.html" title="Energieschuss">
+                          Energieschuss
+                        </a>
+                      </td>
+                      <td class="category">
+                        <a href="/de_DE/moves/energy_shot.html" title="Energieschuss">
+                          Fernkampfangriff
+                        </a>
+                      </td>
+                      <td class="power">
+                        <a href="/de_DE/moves/energy_shot.html" title="Energieschuss">
+                          60
+                        </a>
+                      </td>
+                      <td class="accuracy">
+                        <a href="/de_DE/moves/energy_shot.html" title="Energieschuss">
+                          100%
+                        </a>
+                      </td>
+                      <td class="ap">
+                        <a href="/de_DE/moves/energy_shot.html" title="Energieschuss">
+                          2
+                        </a>
+                      </td>
+                    </tr>            <tr class="move no-padding">
+                      <td class="star ta-center">★★★★</td>
+                      <td class="type">
+                        <a href="/de_DE/moves/fog.html" title="Nebel">
+                    
+                          <img src="/assets/img/generated/ui/icons/types/element_water.png" class="move-image" alt="image of Wasser"
+                            draggable="false">
+                    
+                        </a>
+                      </td>
+                      <td class="name">
+                        <a href="/de_DE/moves/fog.html" title="Nebel">
+                          Nebel
+                        </a>
+                      </td>
+                      <td class="category">
+                        <a href="/de_DE/moves/fog.html" title="Nebel">
+                          Statuseffekt
+                        </a>
+                      </td>
+                      <td class="power">
+                        <a href="/de_DE/moves/fog.html" title="Nebel">
+                          -
+                        </a>
+                      </td>
+                      <td class="accuracy">
+                        <a href="/de_DE/moves/fog.html" title="Nebel">
+                          100%
+                        </a>
+                      </td>
+                      <td class="ap">
+                        <a href="/de_DE/moves/fog.html" title="Nebel">
+                          4
+                        </a>
+                      </td>
+                    </tr>            <tr class="move no-padding">
+                      <td class="star ta-center">★★★★★</td>
+                      <td class="type">
+                        <a href="/de_DE/moves/broadcast.html" title="Multitalent">
+                    
+                          <img src="/assets/img/generated/ui/icons/types/element_air.png" class="move-image" alt="image of Luft"
+                            draggable="false">
+                    
+                        </a>
+                      </td>
+                      <td class="name">
+                        <a href="/de_DE/moves/broadcast.html" title="Multitalent">
+                          Multitalent
+                        </a>
+                      </td>
+                      <td class="category">
+                        <a href="/de_DE/moves/broadcast.html" title="Multitalent">
+                          Statuseffekt
+                        </a>
+                      </td>
+                      <td class="power">
+                        <a href="/de_DE/moves/broadcast.html" title="Multitalent">
+                          -
+                        </a>
+                      </td>
+                      <td class="accuracy">
+                        <a href="/de_DE/moves/broadcast.html" title="Multitalent">
+                          100%
+                        </a>
+                      </td>
+                      <td class="ap">
+                        <a href="/de_DE/moves/broadcast.html" title="Multitalent">
+                          2
+                        </a>
+                      </td>
+                    </tr>          </tbody>
+                </table>
+              </div>
             </div>
           </article>
         </div>
@@ -937,11 +937,18 @@
                     Allgemeine Geschäftsbedingungen</a>
             </span>
             <span>&nbsp;|&nbsp;</span>
-            <span>v1.0.0</span>
+            <span>v1.1.0</span>
         </small>
-    </footer>    <script defer src="/assets/js/main.js?v=1.0.0"></script>
-    <script defer src="/assets/js/analytics.js?v=1.0.0"></script>
+    </footer>    <script async src="/assets/js/main.js?v=1.1.0"></script>
+    <script defer src="/assets/js/analytics.js?v=1.1.0"></script>
     <script defer src="https://webcomp.assistantapps.com/build/bundle.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js');
+            });
+        }
+    </script>
 </body>
 
 </html>

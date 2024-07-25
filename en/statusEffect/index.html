@@ -48,7 +48,7 @@
     <meta name="distribution" content="Global">
     <meta name="generator" content="custom scripts using HandlebarJS">
     <link rel="search" href="opensearch.xml" type="application/opensearchdescription+xml" title="Search Title">
-    <meta name="revised" content="Wed Jul 24 2024">
+    <meta name="revised" content="Thu Jul 25 2024">
 
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
@@ -111,7 +111,7 @@
     <meta name="msapplication-starturl" content="/?pwa-app">
 
 
-    <link rel="stylesheet" href="/assets/css/main.css?v=1.0.0">
+    <link rel="stylesheet" href="/assets/css/main.css?v=1.1.0">
 
     <script type="application/ld+json">
         {
@@ -124,8 +124,8 @@
             "image": "/assets/favicon/android-chrome-192x192.png",
             "applicationCategory": "Application",
             "operatingSystem": "Android Lollipop, iOS, Chrome, Firefox, Opera, Internet Explorer, Edge",
-            "softwareVersion": "1.0.0",
-            "version": "1.0.0",
+            "softwareVersion": "1.1.0",
+            "version": "1.1.0",
             "author": {
                 "@type": "Person",
                 "name": "Kurt Lourens",
@@ -147,9 +147,9 @@
                 "jobTitle": "Senior Software Engineer",
             },
             "inLanguage": "en",
-            "dateCreated": "2024-07-24",
-            "dateModified": "2024-07-24",
-            "datePublished": "2024-07-24"
+            "dateCreated": "2024-07-25",
+            "dateModified": "2024-07-25",
+            "datePublished": "2024-07-25"
         }
     </script></head>
 <body class="overflow-x-hidden">
@@ -164,17 +164,13 @@
                                 <img src="/assets/img/logo.png" alt="splash">
                             </div>
                         </li>
-                        <li class="title">
+                        <li class="title hidden-in-mobile">
                             <span style="--i:1">Assistant </span>
                             <span style="--i:2">for </span>
                             <span style="--i:3"><b>Cassette Beasts</b></span>
                         </li>
                     </ul>
                 </a>
-    
-                <ul>
-                </ul>
-    
     
                 <ul class="icons">
                     <li data-tooltip="Language" data-placement="bottom">
@@ -265,7 +261,7 @@
           <input type="search" name="search" placeholder="Search for..." oninput="onSearchChange(this.value)">
         </section>
         
-        <section id="status-effect-grid" class="item-grid-list">
+        <section id="status-effect-grid" class="item-grid-list mb-3">
           <a href="/en/statusEffect/ap_boost.html"
             class="grid-list-item item animate__animated animate__fadeIn" data-title="AP Boost"
             data-description="Characters with AP Boost gain 1 extra AP each round." style="animation-delay: 0ms;">
@@ -344,9 +340,22 @@
               </small>
             </section>
           </a>
+          <a href="/en/statusEffect/wall_air.html"
+            class="grid-list-item item animate__animated animate__fadeIn" data-title="Air Wall"
+            data-description="Walls absorb a certain number of incoming hits. Type-advantaged attacks immediately break walls." style="animation-delay: 180ms;">
+            <div class="grid-list-item-image">
+              <img src="/assets/img/generated/ui/icons/status_effects/wall_air.png" alt="icon of Air Wall" draggable="false">
+            </div>
+            <section class="grid-list-item-container">
+              <h2 class="Neu5Land heading">Air Wall</h2>
+              <small class="description">
+                Walls absorb a certain number of incoming hits. Type-advantaged attacks immediately break walls.
+              </small>
+            </section>
+          </a>
           <a href="/en/statusEffect/wall_temptation.html"
             class="grid-list-item item animate__animated animate__fadeIn" data-title="Apple Tree"
-            data-description="Walls absorb a certain number of incoming hits. Type-advantaged attacks immediately break walls." style="animation-delay: 180ms;">
+            data-description="Walls absorb a certain number of incoming hits. Type-advantaged attacks immediately break walls." style="animation-delay: 210ms;">
             <div class="grid-list-item-image">
               <img src="/assets/img/generated/ui/icons/status_effects/wall_plant.png" alt="icon of Apple Tree" draggable="false">
             </div>
@@ -359,7 +368,7 @@
           </a>
           <a href="/en/statusEffect/coating_astral.html"
             class="grid-list-item item animate__animated animate__fadeIn" data-title="Astral Coating"
-            data-description="Coatings change the elemental type of a character for a certain number of turns." style="animation-delay: 210ms;">
+            data-description="Coatings change the elemental type of a character for a certain number of turns." style="animation-delay: 240ms;">
             <div class="grid-list-item-image">
               <img src="/assets/img/generated/ui/icons/status_effects/coating_astral.png" alt="icon of Astral Coating" draggable="false">
             </div>
@@ -372,7 +381,7 @@
           </a>
           <a href="/en/statusEffect/coating_beast.html"
             class="grid-list-item item animate__animated animate__fadeIn" data-title="Beast Coating"
-            data-description="Coatings change the elemental type of a character for a certain number of turns." style="animation-delay: 240ms;">
+            data-description="Coatings change the elemental type of a character for a certain number of turns." style="animation-delay: 270ms;">
             <div class="grid-list-item-image">
               <img src="/assets/img/generated/ui/icons/status_effects/coating_beast.png" alt="icon of Beast Coating" draggable="false">
             </div>
@@ -385,7 +394,7 @@
           </a>
           <a href="/en/statusEffect/berserk.html"
             class="grid-list-item item animate__animated animate__fadeIn" data-title="Berserk"
-            data-description="Characters with Berserk can only use damaging moves." style="animation-delay: 270ms;">
+            data-description="Characters with Berserk can only use damaging moves." style="animation-delay: 300ms;">
             <div class="grid-list-item-image">
               <img src="/assets/img/generated/ui/icons/status_effects/berserk.png" alt="icon of Berserk" draggable="false">
             </div>
@@ -398,7 +407,7 @@
           </a>
           <a href="/en/statusEffect/bomb.html"
             class="grid-list-item item animate__animated animate__fadeIn" data-title="Bomb"
-            data-description="A character with Bomb will blow up at the end of their next turn if it’s not passed on by a melee attack." style="animation-delay: 300ms;">
+            data-description="A character with Bomb will blow up at the end of their next turn if it’s not passed on by a melee attack." style="animation-delay: 330ms;">
             <div class="grid-list-item-image">
               <img src="/assets/img/generated/ui/icons/status_effects/bomb.png" alt="icon of Bomb" draggable="false">
             </div>
@@ -411,7 +420,7 @@
           </a>
           <a href="/en/statusEffect/booby_trapped.html"
             class="grid-list-item item animate__animated animate__fadeIn" data-title="Booby Trapped"
-            data-description="Characters with Booby Trapped have some of their moves replaced." style="animation-delay: 330ms;">
+            data-description="Characters with Booby Trapped have some of their moves replaced." style="animation-delay: 360ms;">
             <div class="grid-list-item-image">
               <img src="/assets/img/generated/ui/icons/status_effects/booby_trapped.png" alt="icon of Booby Trapped" draggable="false">
             </div>
@@ -424,7 +433,7 @@
           </a>
           <a href="/en/statusEffect/burned.html"
             class="grid-list-item item animate__animated animate__fadeIn" data-title="Burned"
-            data-description="Burned characters take damage at the end of their turn." style="animation-delay: 360ms;">
+            data-description="Burned characters take damage at the end of their turn." style="animation-delay: 390ms;">
             <div class="grid-list-item-image">
               <img src="/assets/img/generated/ui/icons/status_effects/health_down_fire.png" alt="icon of Burned" draggable="false">
             </div>
@@ -437,7 +446,7 @@
           </a>
           <a href="/en/statusEffect/close_encounter.html"
             class="grid-list-item item animate__animated animate__fadeIn" data-title="Close Encounter"
-            data-description="Close Encounter reduces the range of a character’s ranged attacks, turning them into melee attacks." style="animation-delay: 390ms;">
+            data-description="Close Encounter reduces the range of a character’s ranged attacks, turning them into melee attacks." style="animation-delay: 420ms;">
             <div class="grid-list-item-image">
               <img src="/assets/img/generated/ui/icons/status_effects/close_encounter.png" alt="icon of Close Encounter" draggable="false">
             </div>
@@ -450,7 +459,7 @@
           </a>
           <a href="/en/statusEffect/conductive.html"
             class="grid-list-item item animate__animated animate__fadeIn" data-title="Conductive"
-            data-description="Conductive characters take damage whenever any Lightning-type attack is used." style="animation-delay: 420ms;">
+            data-description="Conductive characters take damage whenever any Lightning-type attack is used." style="animation-delay: 450ms;">
             <div class="grid-list-item-image">
               <img src="/assets/img/generated/ui/icons/status_effects/conductive.png" alt="icon of Conductive" draggable="false">
             </div>
@@ -463,7 +472,7 @@
           </a>
           <a href="/en/statusEffect/confused.html"
             class="grid-list-item item animate__animated animate__fadeIn" data-title="Confused"
-            data-description="Confused characters may use the wrong move or target the wrong character." style="animation-delay: 450ms;">
+            data-description="Confused characters may use the wrong move or target the wrong character." style="animation-delay: 480ms;">
             <div class="grid-list-item-image">
               <img src="/assets/img/generated/ui/icons/status_effects/confused.png" alt="icon of Confused" draggable="false">
             </div>
@@ -476,7 +485,7 @@
           </a>
           <a href="/en/statusEffect/contactdmg_air.html"
             class="grid-list-item item animate__animated animate__fadeIn" data-title="Contact Dmg"
-            data-description="Characters with Contact Damage deal a bit of elemental damage whenever they land or receive a melee attack." style="animation-delay: 480ms;">
+            data-description="Characters with Contact Damage deal a bit of elemental damage whenever they land or receive a melee attack." style="animation-delay: 510ms;">
             <div class="grid-list-item-image">
               <img src="/assets/img/generated/ui/icons/status_effects/damage_on_contact_air.png" alt="icon of Contact Dmg" draggable="false">
             </div>
@@ -489,7 +498,7 @@
           </a>
           <a href="/en/statusEffect/contactdmg_astral.html"
             class="grid-list-item item animate__animated animate__fadeIn" data-title="Contact Dmg"
-            data-description="Characters with Contact Damage deal a bit of elemental damage whenever they land or receive a melee attack." style="animation-delay: 510ms;">
+            data-description="Characters with Contact Damage deal a bit of elemental damage whenever they land or receive a melee attack." style="animation-delay: 540ms;">
             <div class="grid-list-item-image">
               <img src="/assets/img/generated/ui/icons/status_effects/damage_on_contact_astral.png" alt="icon of Contact Dmg" draggable="false">
             </div>
@@ -502,7 +511,7 @@
           </a>
           <a href="/en/statusEffect/contactdmg_beast.html"
             class="grid-list-item item animate__animated animate__fadeIn" data-title="Contact Dmg"
-            data-description="Characters with Contact Damage deal a bit of elemental damage whenever they land or receive a melee attack." style="animation-delay: 540ms;">
+            data-description="Characters with Contact Damage deal a bit of elemental damage whenever they land or receive a melee attack." style="animation-delay: 570ms;">
             <div class="grid-list-item-image">
               <img src="/assets/img/generated/ui/icons/status_effects/damage_on_contact_beast.png" alt="icon of Contact Dmg" draggable="false">
             </div>
@@ -515,7 +524,7 @@
           </a>
           <a href="/en/statusEffect/contactdmg_earth.html"
             class="grid-list-item item animate__animated animate__fadeIn" data-title="Contact Dmg"
-            data-description="Characters with Contact Damage deal a bit of elemental damage whenever they land or receive a melee attack." style="animation-delay: 570ms;">
+            data-description="Characters with Contact Damage deal a bit of elemental damage whenever they land or receive a melee attack." style="animation-delay: 600ms;">
             <div class="grid-list-item-image">
               <img src="/assets/img/generated/ui/icons/status_effects/damage_on_contact_earth.png" alt="icon of Contact Dmg" draggable="false">
             </div>
@@ -1462,19 +1471,6 @@
               </small>
             </section>
           </a>
-          <a href="/en/statusEffect/wall_air.html"
-            class="grid-list-item item animate__animated animate__fadeIn" data-title="{type} Wall"
-            data-description="Walls absorb a certain number of incoming hits. Type-advantaged attacks immediately break walls." style="animation-delay: 600ms;">
-            <div class="grid-list-item-image">
-              <img src="/assets/img/generated/ui/icons/status_effects/wall_air.png" alt="icon of {type} Wall" draggable="false">
-            </div>
-            <section class="grid-list-item-container">
-              <h2 class="Neu5Land heading">{type} Wall</h2>
-              <small class="description">
-                Walls absorb a certain number of incoming hits. Type-advantaged attacks immediately break walls.
-              </small>
-            </section>
-          </a>
         </section>
         </main>
 
@@ -1506,11 +1502,18 @@
                     Terms and Conditions</a>
             </span>
             <span>&nbsp;|&nbsp;</span>
-            <span>v1.0.0</span>
+            <span>v1.1.0</span>
         </small>
-    </footer>    <script defer src="/assets/js/main.js?v=1.0.0"></script>
-    <script defer src="/assets/js/analytics.js?v=1.0.0"></script>
+    </footer>    <script async src="/assets/js/main.js?v=1.1.0"></script>
+    <script defer src="/assets/js/analytics.js?v=1.1.0"></script>
     <script defer src="https://webcomp.assistantapps.com/build/bundle.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js');
+            });
+        }
+    </script>
 </body>
 
 </html>

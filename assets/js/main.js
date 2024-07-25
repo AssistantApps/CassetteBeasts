@@ -2,12 +2,12 @@ function loadSettingsFromStorage() {
   try {
     const contentString = localStorage.getItem('assistantApps');
     const contentObj = JSON.parse(contentString);
-    if (contentObj == null) throw 'nothing in localStorage'
+    if (contentObj == null) throw 'nothing in localStorage';
     window.assistantApps = contentObj;
   } catch {
     window.assistantApps = {
-      useGif: true
-    }
+      useGif: true,
+    };
   }
 }
 
@@ -32,7 +32,7 @@ function onPageLoad() {
 }
 
 //document.addEventListener("DOMContentLoaded", onPageLoad);
-onPageLoad()
+onPageLoad();
 
 function setSetting(name, value) {
   window.assistantApps[name] = value;
@@ -41,8 +41,8 @@ function setSetting(name, value) {
 
 function changeLanguage(newLangCode) {
   const pathName = window.location.pathname.substring(1);
-  const slashIndex = pathName.indexOf('/')
-  const trailingPath = pathName.substring(slashIndex)
+  const slashIndex = pathName.indexOf('/');
+  const trailingPath = pathName.substring(slashIndex);
 
   window.location.href = `/${newLangCode}${trailingPath}`;
 }
@@ -53,10 +53,10 @@ function applyClassToId(id, classToRemove, className) {
 
   for (const nodeClass of node.classList) {
     if (nodeClass.includes(classToRemove)) {
-      node.classList.remove(nodeClass)
+      node.classList.remove(nodeClass);
     }
   }
-  node.classList.add(className)
+  node.classList.add(className);
 }
 
 function toggleClassToId(id, className, enabled) {
@@ -65,13 +65,14 @@ function toggleClassToId(id, className, enabled) {
 
   for (const nodeClass of node.classList) {
     if (nodeClass.includes(className)) {
-      node.classList.remove(nodeClass)
+      node.classList.remove(nodeClass);
     }
   }
 
-  if (enabled) { node.classList.add(className) }
+  if (enabled) {
+    node.classList.add(className);
+  }
 }
-
 
 const onSearchChange = (searchString) => {
   document.querySelectorAll('.item').forEach((node) => {
@@ -116,7 +117,6 @@ const highlight = (node, text, searchString) => {
   }
 };
 
-
 const orderItemsByDataAttr = (parentId, attrToOrderBy) => {
   const parentNode = document.getElementById(parentId);
   if (parentNode == null) return;
@@ -139,7 +139,7 @@ const orderItemsByDataAttr = (parentId, attrToOrderBy) => {
   parentNode.innerHTML = '';
   for (const node of sortedNodes) {
     node.style['animation-delay'] = '0ms';
-    parentNode.appendChild(node)
+    parentNode.appendChild(node);
   }
 };
 
@@ -155,7 +155,7 @@ const revealEmail = (elem, event) => {
   const obfuscated = atob(decodeURI(elem.dataset['email']));
   let realValue = '';
   for (let index = 0; index < obfuscated.split('').length; index++) {
-    const char = obfuscated[(index * 3) + 1];
+    const char = obfuscated[index * 3 + 1];
     if (char == null) break;
     realValue = realValue + char;
   }

@@ -6,7 +6,7 @@ Discord: @KhaozTopsy
 From: the Netherlands
 
 /* SITE */
-Last update: 2024-07-24
+Last update: 2024-07-25
 Language: English
 Doctype: HTML5
 IDE: Visual Studio Code

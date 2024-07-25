@@ -36,7 +36,7 @@
     <meta name="distribution" content="Global">
     <meta name="generator" content="custom scripts using HandlebarJS">
     <link rel="search" href="opensearch.xml" type="application/opensearchdescription+xml" title="Search Title">
-    <meta name="revised" content="Wed Jul 24 2024">
+    <meta name="revised" content="Thu Jul 25 2024">
 
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
@@ -99,7 +99,7 @@
     <meta name="msapplication-starturl" content="/?pwa-app">
 
 
-    <link rel="stylesheet" href="/assets/css/main.css?v=1.0.0">
+    <link rel="stylesheet" href="/assets/css/main.css?v=1.1.0">
 
     <script type="application/ld+json">
         {
@@ -112,8 +112,8 @@
             "image": "/assets/favicon/android-chrome-192x192.png",
             "applicationCategory": "Application",
             "operatingSystem": "Android Lollipop, iOS, Chrome, Firefox, Opera, Internet Explorer, Edge",
-            "softwareVersion": "1.0.0",
-            "version": "1.0.0",
+            "softwareVersion": "1.1.0",
+            "version": "1.1.0",
             "author": {
                 "@type": "Person",
                 "name": "Kurt Lourens",
@@ -135,9 +135,9 @@
                 "jobTitle": "Senior Software Engineer",
             },
             "inLanguage": "en",
-            "dateCreated": "2024-07-24",
-            "dateModified": "2024-07-24",
-            "datePublished": "2024-07-24"
+            "dateCreated": "2024-07-25",
+            "dateModified": "2024-07-25",
+            "datePublished": "2024-07-25"
         }
     </script></head>
 <body class="overflow-x-hidden">
@@ -152,17 +152,13 @@
                                 <img src="/assets/img/logo.png" alt="splash">
                             </div>
                         </li>
-                        <li class="title">
+                        <li class="title hidden-in-mobile">
                             <span style="--i:1">Assistant </span>
                             <span style="--i:2">for </span>
                             <span style="--i:3"><b>Cassette Beasts</b></span>
                         </li>
                     </ul>
                 </a>
-    
-                <ul>
-                </ul>
-    
     
                 <ul class="icons">
                     <li data-tooltip="Lingua" data-placement="bottom">
@@ -240,7 +236,9 @@
         			class="animate__animated animate__fadeIn "
         			style="animation-delay: 0ms;">
         			<article>
-        				<img src="/assets/img/generated/ui/monster_stickers/kittelly.png" alt="">
+        				<div class="img-container">
+        					<img src="/assets/img/generated/ui/monster_stickers/kittelly.png" alt="">
+        				</div>
         				<footer>
         					<h6>
         						Mostra mostri
@@ -252,7 +250,9 @@
         			class="animate__animated animate__fadeIn "
         			style="animation-delay: 100ms;">
         			<article>
-        				<img src="/assets/img/moves.png" alt="">
+        				<div class="img-container">
+        					<img src="/assets/img/moves.png" alt="">
+        				</div>
         				<footer>
         					<h6>
         						Mostra adesivi
@@ -264,7 +264,9 @@
         			class="animate__animated animate__fadeIn "
         			style="animation-delay: 200ms;">
         			<article>
-        				<img src="/assets/img/generated/sprites/portraits/kayleigh.png" alt="">
+        				<div class="img-container">
+        					<img src="/assets/img/characters.png" alt="">
+        				</div>
         				<footer>
         					<h6>
         						Caratteri
@@ -276,7 +278,9 @@
         			class="animate__animated animate__fadeIn "
         			style="animation-delay: 300ms;">
         			<article>
-        				<img src="/assets/img/generated/ui/icons/types/element_astral.png" alt="">
+        				<div class="img-container">
+        					<img src="/assets/img/generated/ui/icons/types/element_astral.png" alt="">
+        				</div>
         				<footer>
         					<h6>
         						Diagramma dei tipi elementali
@@ -288,7 +292,9 @@
         			class="animate__animated animate__fadeIn "
         			style="animation-delay: 400ms;">
         			<article>
-        				<img src="/assets/img/generated/ui/icons/status_effects/gambit.png" alt="">
+        				<div class="img-container">
+        					<img src="/assets/img/generated/ui/icons/status_effects/gambit.png" alt="">
+        				</div>
         				<footer>
         					<h6>
         						Effetto di stato
@@ -327,11 +333,18 @@
                     Termini e Condizioni</a>
             </span>
             <span>&nbsp;|&nbsp;</span>
-            <span>v1.0.0</span>
+            <span>v1.1.0</span>
         </small>
-    </footer>    <script defer src="/assets/js/main.js?v=1.0.0"></script>
-    <script defer src="/assets/js/analytics.js?v=1.0.0"></script>
+    </footer>    <script async src="/assets/js/main.js?v=1.1.0"></script>
+    <script defer src="/assets/js/analytics.js?v=1.1.0"></script>
     <script defer src="https://webcomp.assistantapps.com/build/bundle.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js');
+            });
+        }
+    </script>
 </body>
 
 </html>

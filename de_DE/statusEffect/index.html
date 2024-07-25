@@ -48,7 +48,7 @@
     <meta name="distribution" content="Global">
     <meta name="generator" content="custom scripts using HandlebarJS">
     <link rel="search" href="opensearch.xml" type="application/opensearchdescription+xml" title="Search Title">
-    <meta name="revised" content="Wed Jul 24 2024">
+    <meta name="revised" content="Thu Jul 25 2024">
 
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
@@ -111,7 +111,7 @@
     <meta name="msapplication-starturl" content="/?pwa-app">
 
 
-    <link rel="stylesheet" href="/assets/css/main.css?v=1.0.0">
+    <link rel="stylesheet" href="/assets/css/main.css?v=1.1.0">
 
     <script type="application/ld+json">
         {
@@ -124,8 +124,8 @@
             "image": "/assets/favicon/android-chrome-192x192.png",
             "applicationCategory": "Application",
             "operatingSystem": "Android Lollipop, iOS, Chrome, Firefox, Opera, Internet Explorer, Edge",
-            "softwareVersion": "1.0.0",
-            "version": "1.0.0",
+            "softwareVersion": "1.1.0",
+            "version": "1.1.0",
             "author": {
                 "@type": "Person",
                 "name": "Kurt Lourens",
@@ -147,9 +147,9 @@
                 "jobTitle": "Senior Software Engineer",
             },
             "inLanguage": "en",
-            "dateCreated": "2024-07-24",
-            "dateModified": "2024-07-24",
-            "datePublished": "2024-07-24"
+            "dateCreated": "2024-07-25",
+            "dateModified": "2024-07-25",
+            "datePublished": "2024-07-25"
         }
     </script></head>
 <body class="overflow-x-hidden">
@@ -164,17 +164,13 @@
                                 <img src="/assets/img/logo.png" alt="splash">
                             </div>
                         </li>
-                        <li class="title">
+                        <li class="title hidden-in-mobile">
                             <span style="--i:1">Assistant </span>
                             <span style="--i:2">for </span>
                             <span style="--i:3"><b>Cassette Beasts</b></span>
                         </li>
                     </ul>
                 </a>
-    
-                <ul>
-                </ul>
-    
     
                 <ul class="icons">
                     <li data-tooltip="Sprache" data-placement="bottom">
@@ -265,7 +261,7 @@
           <input type="search" name="search" placeholder="Search for..." oninput="onSearchChange(this.value)">
         </section>
         
-        <section id="status-effect-grid" class="item-grid-list">
+        <section id="status-effect-grid" class="item-grid-list mb-3">
           <a href="/de_DE/statusEffect/ap_drain.html"
             class="grid-list-item item animate__animated animate__fadeIn" data-title="AP-Abzug"
             data-description="Charaktere mit AP-Abzug erhalten pro Runde 1 AP weniger." style="animation-delay: 0ms;">
@@ -1098,6 +1094,19 @@
               </small>
             </section>
           </a>
+          <a href="/de_DE/statusEffect/wall_air.html"
+            class="grid-list-item item animate__animated animate__fadeIn" data-title="Luftwall"
+            data-description="Wälle absorbieren eine bestimmte Anzahl eingehender Treffer und werden durch Angriffe mit Typenvorteil sofort zerstört." style="animation-delay: 600ms;">
+            <div class="grid-list-item-image">
+              <img src="/assets/img/generated/ui/icons/status_effects/wall_air.png" alt="icon of Luftwall" draggable="false">
+            </div>
+            <section class="grid-list-item-container">
+              <h2 class="Neu5Land heading">Luftwall</h2>
+              <small class="description">
+                Wälle absorbieren eine bestimmte Anzahl eingehender Treffer und werden durch Angriffe mit Typenvorteil sofort zerstört.
+              </small>
+            </section>
+          </a>
           <a href="/de_DE/statusEffect/meditating.html"
             class="grid-list-item item animate__animated animate__fadeIn" data-title="Meditierend"
             data-description="Meditierende Charaktere erhöhen ihre Werte in jeder Runde, in der sie schlafen." style="animation-delay: 600ms;">
@@ -1462,19 +1471,6 @@
               </small>
             </section>
           </a>
-          <a href="/de_DE/statusEffect/wall_air.html"
-            class="grid-list-item item animate__animated animate__fadeIn" data-title="{type}wall"
-            data-description="Wälle absorbieren eine bestimmte Anzahl eingehender Treffer und werden durch Angriffe mit Typenvorteil sofort zerstört." style="animation-delay: 600ms;">
-            <div class="grid-list-item-image">
-              <img src="/assets/img/generated/ui/icons/status_effects/wall_air.png" alt="icon of {type}wall" draggable="false">
-            </div>
-            <section class="grid-list-item-container">
-              <h2 class="Neu5Land heading">{type}wall</h2>
-              <small class="description">
-                Wälle absorbieren eine bestimmte Anzahl eingehender Treffer und werden durch Angriffe mit Typenvorteil sofort zerstört.
-              </small>
-            </section>
-          </a>
         </section>
         </main>
 
@@ -1506,11 +1502,18 @@
                     Allgemeine Geschäftsbedingungen</a>
             </span>
             <span>&nbsp;|&nbsp;</span>
-            <span>v1.0.0</span>
+            <span>v1.1.0</span>
         </small>
-    </footer>    <script defer src="/assets/js/main.js?v=1.0.0"></script>
-    <script defer src="/assets/js/analytics.js?v=1.0.0"></script>
+    </footer>    <script async src="/assets/js/main.js?v=1.1.0"></script>
+    <script defer src="/assets/js/analytics.js?v=1.1.0"></script>
     <script defer src="https://webcomp.assistantapps.com/build/bundle.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js');
+            });
+        }
+    </script>
 </body>
 
 </html>

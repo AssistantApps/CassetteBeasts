@@ -47,7 +47,7 @@
     <meta name="distribution" content="Global">
     <meta name="generator" content="custom scripts using HandlebarJS">
     <link rel="search" href="opensearch.xml" type="application/opensearchdescription+xml" title="Search Title">
-    <meta name="revised" content="Wed Jul 24 2024">
+    <meta name="revised" content="Thu Jul 25 2024">
 
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
@@ -110,7 +110,7 @@
     <meta name="msapplication-starturl" content="/?pwa-app">
 
 
-    <link rel="stylesheet" href="/assets/css/main.css?v=1.0.0">
+    <link rel="stylesheet" href="/assets/css/main.css?v=1.1.0">
 
     <script type="application/ld+json">
         {
@@ -123,8 +123,8 @@
             "image": "/assets/favicon/android-chrome-192x192.png",
             "applicationCategory": "Application",
             "operatingSystem": "Android Lollipop, iOS, Chrome, Firefox, Opera, Internet Explorer, Edge",
-            "softwareVersion": "1.0.0",
-            "version": "1.0.0",
+            "softwareVersion": "1.1.0",
+            "version": "1.1.0",
             "author": {
                 "@type": "Person",
                 "name": "Kurt Lourens",
@@ -146,9 +146,9 @@
                 "jobTitle": "Senior Software Engineer",
             },
             "inLanguage": "en",
-            "dateCreated": "2024-07-24",
-            "dateModified": "2024-07-24",
-            "datePublished": "2024-07-24"
+            "dateCreated": "2024-07-25",
+            "dateModified": "2024-07-25",
+            "datePublished": "2024-07-25"
         }
     </script></head>
 <body class="overflow-x-hidden">
@@ -163,17 +163,13 @@
                                 <img src="/assets/img/logo.png" alt="splash">
                             </div>
                         </li>
-                        <li class="title">
+                        <li class="title hidden-in-mobile">
                             <span style="--i:1">Assistant </span>
                             <span style="--i:2">for </span>
                             <span style="--i:3"><b>Cassette Beasts</b></span>
                         </li>
                     </ul>
                 </a>
-    
-                <ul>
-                </ul>
-    
     
                 <ul class="icons">
                     <li data-tooltip="言語" data-placement="bottom">
@@ -265,7 +261,7 @@
                 </span>
             </li>
         </ul>
-        <div class="grid min-card-width">
+        <div class="grid min-card-width mb-3">
           <article class="monster-detail-card item-detail-card">
             <div class="monster-detail-card-heading item-detail-card-heading primary">
               <h2 class="Neu5Land animate__animated animate__fadeIn">バニッテリー</h2>
@@ -415,26 +411,28 @@
         
               <section class="additional-section additional animate__animated animate__fadeIn">
                 <h3 class="section-heading Neu5Land">追加統計</h3>
-                <table class="additional highlight-cell animate__animated animate__fadeIn">
-                  <thead>
-                    <tr>
-                      <td class="ta-center">回避率</td>
-                      <td class="ta-center">最大AP</td>
-                      <td class="ta-center">わざスロット</td>
-                      <td class="ta-center">きろくちゅう</td>
-                      <td class="ta-center">経験値プラス</td>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td class="ta-center">100</td>
-                      <td class="ta-center">5</td>
-                      <td class="ta-center">4</td>
-                      <td class="ta-center">50%</td>
-                      <td class="ta-center">0</td>
-                    </tr>
-                  </tbody>
-                </table>
+                <div class="table-container">
+                  <table class="additional highlight-cell animate__animated animate__fadeIn">
+                    <thead>
+                      <tr>
+                        <td class="ta-center">回避率</td>
+                        <td class="ta-center">最大AP</td>
+                        <td class="ta-center">わざスロット</td>
+                        <td class="ta-center">きろくちゅう</td>
+                        <td class="ta-center">経験値プラス</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="ta-center">100</td>
+                        <td class="ta-center">5</td>
+                        <td class="ta-center">4</td>
+                        <td class="ta-center">50%</td>
+                        <td class="ta-center">0</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </section>
         
               <div class="grid">
@@ -543,273 +541,275 @@
               <div class="spacer"></div>
             </div>
         
-            <div class="monster-detail-tape-container animate__animated noselect">
+            <div class="monster-detail-tape-container animate__animated hidden-in-mobile noselect">
               <div class="animate__animated swing-hover Neu5Land">
                 <img src="/assets/img/meta/tape.png" alt="monster tape">
                 <p>バニッテリー</p>
               </div>
             </div>
         
-            <div class="monster-detail-card-body item-detail-card-body">
-              <table class="moves last-td-padding highlight-row animate__animated animate__fadeIn">
-                <thead>
-                  <tr class="no-padding">
-                    <td class="star"></td>
-                    <td class="type"></td>
-                    <td class="name">名前</td>
-                    <td class="category">カテゴリー</td>
-                    <td class="power">威力</td>
-                    <td class="accuracy">命中率</td>
-                    <td class="ap">AP</td>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr class="move no-padding">
-                    <td class="star ta-center">初期</td>
-                    <td class="type">
-                      <a href="/ja_JP/moves/smack.html" title="たたく">
-                  
-                        <img src="/assets/img/typeless.png" class="move-image" title="Typeless" alt="image of typeless" draggable="false">
-                  
-                      </a>
-                    </td>
-                    <td class="name">
-                      <a href="/ja_JP/moves/smack.html" title="たたく">
-                        たたく
-                      </a>
-                    </td>
-                    <td class="category">
-                      <a href="/ja_JP/moves/smack.html" title="たたく">
-                        近接
-                      </a>
-                    </td>
-                    <td class="power">
-                      <a href="/ja_JP/moves/smack.html" title="たたく">
-                        30
-                      </a>
-                    </td>
-                    <td class="accuracy">
-                      <a href="/ja_JP/moves/smack.html" title="たたく">
-                        100%
-                      </a>
-                    </td>
-                    <td class="ap">
-                      <a href="/ja_JP/moves/smack.html" title="たたく">
-                        0
-                      </a>
-                    </td>
-                  </tr>          <tr class="move no-padding">
-                    <td class="star ta-center">初期</td>
-                    <td class="type">
-                      <a href="/ja_JP/moves/ionised_air.html" title="イオンのくうき">
-                  
-                        <img src="/assets/img/generated/ui/icons/types/element_lightning.png" class="move-image" alt="image of でんき"
-                          draggable="false">
-                  
-                      </a>
-                    </td>
-                    <td class="name">
-                      <a href="/ja_JP/moves/ionised_air.html" title="イオンのくうき">
-                        イオンのくうき
-                      </a>
-                    </td>
-                    <td class="category">
-                      <a href="/ja_JP/moves/ionised_air.html" title="イオンのくうき">
-                        変化
-                      </a>
-                    </td>
-                    <td class="power">
-                      <a href="/ja_JP/moves/ionised_air.html" title="イオンのくうき">
-                        -
-                      </a>
-                    </td>
-                    <td class="accuracy">
-                      <a href="/ja_JP/moves/ionised_air.html" title="イオンのくうき">
-                        100%
-                      </a>
-                    </td>
-                    <td class="ap">
-                      <a href="/ja_JP/moves/ionised_air.html" title="イオンのくうき">
-                        3
-                      </a>
-                    </td>
-                  </tr>
-                  <tr class="move no-padding">
-                    <td class="star ta-center">★</td>
-                    <td class="type">
-                      <a href="/ja_JP/moves/energy_reserves.html" title="よびエネルギー">
-                  
-                        <img src="/assets/img/generated/ui/icons/types/element_lightning.png" class="move-image" alt="image of でんき"
-                          draggable="false">
-                  
-                      </a>
-                    </td>
-                    <td class="name">
-                      <a href="/ja_JP/moves/energy_reserves.html" title="よびエネルギー">
-                        よびエネルギー
-                      </a>
-                    </td>
-                    <td class="category">
-                      <a href="/ja_JP/moves/energy_reserves.html" title="よびエネルギー">
-                        その他
-                      </a>
-                    </td>
-                    <td class="power">
-                      <a href="/ja_JP/moves/energy_reserves.html" title="よびエネルギー">
-                        -
-                      </a>
-                    </td>
-                    <td class="accuracy">
-                      <a href="/ja_JP/moves/energy_reserves.html" title="よびエネルギー">
-                        100%
-                      </a>
-                    </td>
-                    <td class="ap">
-                      <a href="/ja_JP/moves/energy_reserves.html" title="よびエネルギー">
-                        0
-                      </a>
-                    </td>
-                  </tr>          <tr class="move no-padding">
-                    <td class="star ta-center">★★</td>
-                    <td class="type">
-                      <a href="/ja_JP/moves/lightning_wall.html" title="エレキウォール">
-                  
-                        <img src="/assets/img/generated/ui/icons/types/element_lightning.png" class="move-image" alt="image of でんき"
-                          draggable="false">
-                  
-                      </a>
-                    </td>
-                    <td class="name">
-                      <a href="/ja_JP/moves/lightning_wall.html" title="エレキウォール">
-                        エレキウォール
-                      </a>
-                    </td>
-                    <td class="category">
-                      <a href="/ja_JP/moves/lightning_wall.html" title="エレキウォール">
-                        変化
-                      </a>
-                    </td>
-                    <td class="power">
-                      <a href="/ja_JP/moves/lightning_wall.html" title="エレキウォール">
-                        -
-                      </a>
-                    </td>
-                    <td class="accuracy">
-                      <a href="/ja_JP/moves/lightning_wall.html" title="エレキウォール">
-                        100%
-                      </a>
-                    </td>
-                    <td class="ap">
-                      <a href="/ja_JP/moves/lightning_wall.html" title="エレキウォール">
-                        2
-                      </a>
-                    </td>
-                  </tr>          <tr class="move no-padding">
-                    <td class="star ta-center">★★★</td>
-                    <td class="type">
-                      <a href="/ja_JP/moves/zoomies.html" title="はしゃぎまわる">
-                  
-                        <img src="/assets/img/generated/ui/icons/types/element_beast.png" class="move-image" alt="image of ビースト"
-                          draggable="false">
-                  
-                      </a>
-                    </td>
-                    <td class="name">
-                      <a href="/ja_JP/moves/zoomies.html" title="はしゃぎまわる">
-                        はしゃぎまわる
-                      </a>
-                    </td>
-                    <td class="category">
-                      <a href="/ja_JP/moves/zoomies.html" title="はしゃぎまわる">
-                        近接
-                      </a>
-                    </td>
-                    <td class="power">
-                      <a href="/ja_JP/moves/zoomies.html" title="はしゃぎまわる">
-                        30
-                      </a>
-                    </td>
-                    <td class="accuracy">
-                      <a href="/ja_JP/moves/zoomies.html" title="はしゃぎまわる">
-                        100%
-                      </a>
-                    </td>
-                    <td class="ap">
-                      <a href="/ja_JP/moves/zoomies.html" title="はしゃぎまわる">
-                        1
-                      </a>
-                    </td>
-                  </tr>          <tr class="move no-padding">
-                    <td class="star ta-center">★★★★</td>
-                    <td class="type">
-                      <a href="/ja_JP/moves/call_for_help.html" title="たすけをよぶ">
-                  
-                        <img src="/assets/img/typeless.png" class="move-image" title="Typeless" alt="image of typeless" draggable="false">
-                  
-                      </a>
-                    </td>
-                    <td class="name">
-                      <a href="/ja_JP/moves/call_for_help.html" title="たすけをよぶ">
-                        たすけをよぶ
-                      </a>
-                    </td>
-                    <td class="category">
-                      <a href="/ja_JP/moves/call_for_help.html" title="たすけをよぶ">
-                        その他
-                      </a>
-                    </td>
-                    <td class="power">
-                      <a href="/ja_JP/moves/call_for_help.html" title="たすけをよぶ">
-                        -
-                      </a>
-                    </td>
-                    <td class="accuracy">
-                      <a href="/ja_JP/moves/call_for_help.html" title="たすけをよぶ">
-                        50%
-                      </a>
-                    </td>
-                    <td class="ap">
-                      <a href="/ja_JP/moves/call_for_help.html" title="たすけをよぶ">
-                        2
-                      </a>
-                    </td>
-                  </tr>          <tr class="move no-padding">
-                    <td class="star ta-center">★★★★★</td>
-                    <td class="type">
-                      <a href="/ja_JP/moves/magnet.html" title="マグネット">
-                  
-                        <img src="/assets/img/generated/ui/icons/types/element_metal.png" class="move-image" alt="image of メタル"
-                          draggable="false">
-                  
-                      </a>
-                    </td>
-                    <td class="name">
-                      <a href="/ja_JP/moves/magnet.html" title="マグネット">
-                        マグネット
-                      </a>
-                    </td>
-                    <td class="category">
-                      <a href="/ja_JP/moves/magnet.html" title="マグネット">
-                        変化
-                      </a>
-                    </td>
-                    <td class="power">
-                      <a href="/ja_JP/moves/magnet.html" title="マグネット">
-                        -
-                      </a>
-                    </td>
-                    <td class="accuracy">
-                      <a href="/ja_JP/moves/magnet.html" title="マグネット">
-                        100%
-                      </a>
-                    </td>
-                    <td class="ap">
-                      <a href="/ja_JP/moves/magnet.html" title="マグネット">
-                        1
-                      </a>
-                    </td>
-                  </tr>        </tbody>
-              </table>
+            <div class="monster-detail-card-body item-detail-card-body table-container">
+              <div class="table-container">
+                <table class="moves last-td-padding highlight-row animate__animated animate__fadeIn">
+                  <thead>
+                    <tr class="no-padding">
+                      <td class="star"></td>
+                      <td class="type"></td>
+                      <td class="name">名前</td>
+                      <td class="category">カテゴリー</td>
+                      <td class="power">威力</td>
+                      <td class="accuracy">命中率</td>
+                      <td class="ap">AP</td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="move no-padding">
+                      <td class="star ta-center">初期</td>
+                      <td class="type">
+                        <a href="/ja_JP/moves/smack.html" title="たたく">
+                    
+                          <img src="/assets/img/typeless.png" class="move-image" title="Typeless" alt="image of typeless" draggable="false">
+                    
+                        </a>
+                      </td>
+                      <td class="name">
+                        <a href="/ja_JP/moves/smack.html" title="たたく">
+                          たたく
+                        </a>
+                      </td>
+                      <td class="category">
+                        <a href="/ja_JP/moves/smack.html" title="たたく">
+                          近接
+                        </a>
+                      </td>
+                      <td class="power">
+                        <a href="/ja_JP/moves/smack.html" title="たたく">
+                          30
+                        </a>
+                      </td>
+                      <td class="accuracy">
+                        <a href="/ja_JP/moves/smack.html" title="たたく">
+                          100%
+                        </a>
+                      </td>
+                      <td class="ap">
+                        <a href="/ja_JP/moves/smack.html" title="たたく">
+                          0
+                        </a>
+                      </td>
+                    </tr>            <tr class="move no-padding">
+                      <td class="star ta-center">初期</td>
+                      <td class="type">
+                        <a href="/ja_JP/moves/ionised_air.html" title="イオンのくうき">
+                    
+                          <img src="/assets/img/generated/ui/icons/types/element_lightning.png" class="move-image" alt="image of でんき"
+                            draggable="false">
+                    
+                        </a>
+                      </td>
+                      <td class="name">
+                        <a href="/ja_JP/moves/ionised_air.html" title="イオンのくうき">
+                          イオンのくうき
+                        </a>
+                      </td>
+                      <td class="category">
+                        <a href="/ja_JP/moves/ionised_air.html" title="イオンのくうき">
+                          変化
+                        </a>
+                      </td>
+                      <td class="power">
+                        <a href="/ja_JP/moves/ionised_air.html" title="イオンのくうき">
+                          -
+                        </a>
+                      </td>
+                      <td class="accuracy">
+                        <a href="/ja_JP/moves/ionised_air.html" title="イオンのくうき">
+                          100%
+                        </a>
+                      </td>
+                      <td class="ap">
+                        <a href="/ja_JP/moves/ionised_air.html" title="イオンのくうき">
+                          3
+                        </a>
+                      </td>
+                    </tr>
+                    <tr class="move no-padding">
+                      <td class="star ta-center">★</td>
+                      <td class="type">
+                        <a href="/ja_JP/moves/energy_reserves.html" title="よびエネルギー">
+                    
+                          <img src="/assets/img/generated/ui/icons/types/element_lightning.png" class="move-image" alt="image of でんき"
+                            draggable="false">
+                    
+                        </a>
+                      </td>
+                      <td class="name">
+                        <a href="/ja_JP/moves/energy_reserves.html" title="よびエネルギー">
+                          よびエネルギー
+                        </a>
+                      </td>
+                      <td class="category">
+                        <a href="/ja_JP/moves/energy_reserves.html" title="よびエネルギー">
+                          その他
+                        </a>
+                      </td>
+                      <td class="power">
+                        <a href="/ja_JP/moves/energy_reserves.html" title="よびエネルギー">
+                          -
+                        </a>
+                      </td>
+                      <td class="accuracy">
+                        <a href="/ja_JP/moves/energy_reserves.html" title="よびエネルギー">
+                          100%
+                        </a>
+                      </td>
+                      <td class="ap">
+                        <a href="/ja_JP/moves/energy_reserves.html" title="よびエネルギー">
+                          0
+                        </a>
+                      </td>
+                    </tr>            <tr class="move no-padding">
+                      <td class="star ta-center">★★</td>
+                      <td class="type">
+                        <a href="/ja_JP/moves/lightning_wall.html" title="エレキウォール">
+                    
+                          <img src="/assets/img/generated/ui/icons/types/element_lightning.png" class="move-image" alt="image of でんき"
+                            draggable="false">
+                    
+                        </a>
+                      </td>
+                      <td class="name">
+                        <a href="/ja_JP/moves/lightning_wall.html" title="エレキウォール">
+                          エレキウォール
+                        </a>
+                      </td>
+                      <td class="category">
+                        <a href="/ja_JP/moves/lightning_wall.html" title="エレキウォール">
+                          変化
+                        </a>
+                      </td>
+                      <td class="power">
+                        <a href="/ja_JP/moves/lightning_wall.html" title="エレキウォール">
+                          -
+                        </a>
+                      </td>
+                      <td class="accuracy">
+                        <a href="/ja_JP/moves/lightning_wall.html" title="エレキウォール">
+                          100%
+                        </a>
+                      </td>
+                      <td class="ap">
+                        <a href="/ja_JP/moves/lightning_wall.html" title="エレキウォール">
+                          2
+                        </a>
+                      </td>
+                    </tr>            <tr class="move no-padding">
+                      <td class="star ta-center">★★★</td>
+                      <td class="type">
+                        <a href="/ja_JP/moves/zoomies.html" title="はしゃぎまわる">
+                    
+                          <img src="/assets/img/generated/ui/icons/types/element_beast.png" class="move-image" alt="image of ビースト"
+                            draggable="false">
+                    
+                        </a>
+                      </td>
+                      <td class="name">
+                        <a href="/ja_JP/moves/zoomies.html" title="はしゃぎまわる">
+                          はしゃぎまわる
+                        </a>
+                      </td>
+                      <td class="category">
+                        <a href="/ja_JP/moves/zoomies.html" title="はしゃぎまわる">
+                          近接
+                        </a>
+                      </td>
+                      <td class="power">
+                        <a href="/ja_JP/moves/zoomies.html" title="はしゃぎまわる">
+                          30
+                        </a>
+                      </td>
+                      <td class="accuracy">
+                        <a href="/ja_JP/moves/zoomies.html" title="はしゃぎまわる">
+                          100%
+                        </a>
+                      </td>
+                      <td class="ap">
+                        <a href="/ja_JP/moves/zoomies.html" title="はしゃぎまわる">
+                          1
+                        </a>
+                      </td>
+                    </tr>            <tr class="move no-padding">
+                      <td class="star ta-center">★★★★</td>
+                      <td class="type">
+                        <a href="/ja_JP/moves/call_for_help.html" title="たすけをよぶ">
+                    
+                          <img src="/assets/img/typeless.png" class="move-image" title="Typeless" alt="image of typeless" draggable="false">
+                    
+                        </a>
+                      </td>
+                      <td class="name">
+                        <a href="/ja_JP/moves/call_for_help.html" title="たすけをよぶ">
+                          たすけをよぶ
+                        </a>
+                      </td>
+                      <td class="category">
+                        <a href="/ja_JP/moves/call_for_help.html" title="たすけをよぶ">
+                          その他
+                        </a>
+                      </td>
+                      <td class="power">
+                        <a href="/ja_JP/moves/call_for_help.html" title="たすけをよぶ">
+                          -
+                        </a>
+                      </td>
+                      <td class="accuracy">
+                        <a href="/ja_JP/moves/call_for_help.html" title="たすけをよぶ">
+                          50%
+                        </a>
+                      </td>
+                      <td class="ap">
+                        <a href="/ja_JP/moves/call_for_help.html" title="たすけをよぶ">
+                          2
+                        </a>
+                      </td>
+                    </tr>            <tr class="move no-padding">
+                      <td class="star ta-center">★★★★★</td>
+                      <td class="type">
+                        <a href="/ja_JP/moves/magnet.html" title="マグネット">
+                    
+                          <img src="/assets/img/generated/ui/icons/types/element_metal.png" class="move-image" alt="image of メタル"
+                            draggable="false">
+                    
+                        </a>
+                      </td>
+                      <td class="name">
+                        <a href="/ja_JP/moves/magnet.html" title="マグネット">
+                          マグネット
+                        </a>
+                      </td>
+                      <td class="category">
+                        <a href="/ja_JP/moves/magnet.html" title="マグネット">
+                          変化
+                        </a>
+                      </td>
+                      <td class="power">
+                        <a href="/ja_JP/moves/magnet.html" title="マグネット">
+                          -
+                        </a>
+                      </td>
+                      <td class="accuracy">
+                        <a href="/ja_JP/moves/magnet.html" title="マグネット">
+                          100%
+                        </a>
+                      </td>
+                      <td class="ap">
+                        <a href="/ja_JP/moves/magnet.html" title="マグネット">
+                          1
+                        </a>
+                      </td>
+                    </tr>          </tbody>
+                </table>
+              </div>
             </div>
           </article>
         </div>
@@ -842,11 +842,18 @@
                     利用規約</a>
             </span>
             <span>&nbsp;|&nbsp;</span>
-            <span>v1.0.0</span>
+            <span>v1.1.0</span>
         </small>
-    </footer>    <script defer src="/assets/js/main.js?v=1.0.0"></script>
-    <script defer src="/assets/js/analytics.js?v=1.0.0"></script>
+    </footer>    <script async src="/assets/js/main.js?v=1.1.0"></script>
+    <script defer src="/assets/js/analytics.js?v=1.1.0"></script>
     <script defer src="https://webcomp.assistantapps.com/build/bundle.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js');
+            });
+        }
+    </script>
 </body>
 
 </html>
