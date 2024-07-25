@@ -20,7 +20,7 @@
   <input type="search" name="search" placeholder="Search for..." oninput="onSearchChange(this.value)">
 </section>
 
-<section id="monster-grid" class="item-grid-list">
+<section id="monster-grid" class="item-grid-list mb-3">
   <h2 class="hidden">{{lookup @root.translate 'UI_BESTIARY_LIST_MODE_VIEW_MONSTERS'}}</h2>
   {{#each data.list}}
   <a href="/{{@root.langCode}}{{@root.routes.monsters}}/{{this.resource_name}}.html"

@@ -24,6 +24,7 @@ import { IStatusEffect, IStatusEffectEnhanced } from 'contracts/statusEffect';
 export class ElementReactionModule extends CommonModule<IElementReaction> {
   private _folder = FolderPathHelper.elementReactions();
   private _effectGrid: Array<Array<IElementGridCell>> = [];
+  private _effectOptions: Array<IElementGridCell> = [];
 
   constructor() {
     super({
@@ -57,6 +58,7 @@ export class ElementReactionModule extends CommonModule<IElementReaction> {
     const statusModule = this.getModuleOfType<IStatusEffect>(modules, ModuleType.StatusEffect);
 
     this._effectGrid = [];
+    this._effectOptions = [];
     const pathToId = (path: string) =>
       path.replace('res://data/elemental_types/', '').replace('.tres', '');
 
@@ -79,14 +81,16 @@ export class ElementReactionModule extends CommonModule<IElementReaction> {
     ];
     for (const elementId of elementOrder) {
       const element = elementModule.get(elementId) as IElementEnhanced;
-      headingRow.push({
+      const elementItem = {
         id: elementId,
         iconUrl: element.icon.path,
         name: element.name_localised,
         is_buff: false,
         is_debuff: false,
         buffs: [],
-      });
+      };
+      headingRow.push(elementItem);
+      this._effectOptions.push(elementItem);
     }
     this._effectGrid.push(headingRow);
 
@@ -164,7 +168,7 @@ export class ElementReactionModule extends CommonModule<IElementReaction> {
         modules,
         documentTitleUiKey: mainBreadcrumb.uiKey,
         breadcrumbs: [mainBreadcrumb],
-        data: { grid: this._effectGrid },
+        data: { grid: this._effectGrid, effectOptions: this._effectOptions },
         relativePath,
       }),
       outputFiles: [relativePath],

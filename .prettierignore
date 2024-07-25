@@ -15,7 +15,10 @@ node_modules
 
 # Ignore assets
 docs
-public
+public/audio
+public/css
+public/favicon
+public/img
 scripts
 
 # file types

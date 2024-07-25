@@ -1,7 +1,7 @@
 $cardPadding: 0.5em;
 
 .home-grid-center {
-  min-height: 70vh;
+  min-height: 60vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -9,21 +9,29 @@ $cardPadding: 0.5em;
 
 #home-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1em;
-  row-gap: 0;
+  row-gap: 1em;
   margin-bottom: 0;
 
   a {
     text-decoration: none;
 
     article {
-      text-align: center;
-      position: relative;
-      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
 
-      img {
-        max-height: 20vh;
+      .img-container {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        img {
+          max-width: 192px;
+          margin: 0 auto;
+        }
       }
 
       h6 {

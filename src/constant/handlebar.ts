@@ -29,7 +29,6 @@ export const handlebarTemplate = {
   openSearch: 'misc/opensearch.xml.hbs',
   privacyPolicy: 'misc/privacy_policy.html.hbs',
   robots: 'misc/robots.txt.hbs',
-  serviceWorker: 'misc/serviceWorker.js.hbs',
   sitemap: 'misc/sitemap.xml.hbs',
   termsAndConditions: 'misc/terms_and_conditions.html.hbs',
 } as const;

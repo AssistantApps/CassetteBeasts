@@ -4,39 +4,112 @@ $tabletWidth: 720px;
 $phoneWidth: 467px;
 
 body {
-    @media screen and (max-width: $desktopWidth) {}
+  @media screen and (max-width: $desktopWidth) {
+  }
 
-    @media screen and (max-width: $smallDesktopWidth) {}
-
-    @media screen and (max-width: $tabletWidth) {
-        .grid.min-card-width {
-            grid-template-columns: 1fr;
-        }
-
-
-        .monster-detail-card .monster-detail-card-body {
-            div.images {
-
-                .char-image,
-                .stats,
-                .stats svg {
-                    height: 10em;
-                }
-            }
-        }
+  @media screen and (max-width: $smallDesktopWidth) {
+    .search-input-border-radius {
+      border-radius: var(--pico-border-radius) !important;
     }
 
-    @media screen and (max-width: $phoneWidth) {}
+    .move-detail-grid,
+    .character-detail-grid,
+    .status-effect-detail-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media screen and (max-width: $tabletWidth) {
+    header.header {
+      [data-tooltip][data-placement='bottom']::after,
+      [data-tooltip][data-placement='bottom']::before {
+        transform: translate(-100%, 0.25rem);
+      }
+    }
+
+    .grid.min-card-width {
+      grid-template-columns: 1fr;
+    }
+
+    .monster-detail-card .monster-detail-card-body {
+      div.images {
+        .char-image,
+        .stats,
+        .stats svg {
+          height: 10em;
+        }
+      }
+    }
+    .move-detail-grid,
+    .character-detail-grid,
+    .status-effect-detail-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .page-options {
+      position: relative;
+      top: 0;
+      left: 0;
+      justify-content: left;
+      flex-direction: column;
+      gap: 0.5em;
+
+      > * {
+        max-width: unset;
+        min-width: 100%;
+      }
+    }
+
+    #portrait-tab-container {
+      grid-template-columns: 1fr;
+    }
+
+    .table-container {
+      max-width: 100%;
+      overflow-x: auto;
+
+      table {
+        td {
+          padding: 0 0.75em !important;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: $phoneWidth) {
+    header.header {
+      [data-tooltip][data-placement='bottom']::after,
+      [data-tooltip][data-placement='bottom']::before {
+        content: unset;
+      }
+    }
+
+    .wiki-section {
+      [role='button'] {
+        flex-direction: column;
+        width: unset;
+
+        img {
+          width: 4em;
+          margin: 0 auto;
+        }
+      }
+      a {
+        min-width: unset;
+        margin: 0 1em;
+      }
+    }
+  }
 }
 
 .hidden-in-desktop {
-    @media screen and (min-width: $smallDesktopWidth) {
-        display: none;
-    }
+  @media screen and (min-width: $smallDesktopWidth) {
+    display: none;
+  }
 }
 
 .hidden-in-mobile {
-    @media screen and (max-width: $smallDesktopWidth) {
-        display: none !important;
-    }
+  @media screen and (max-width: $smallDesktopWidth) {
+    display: none !important;
+  }
 }

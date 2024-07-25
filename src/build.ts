@@ -11,6 +11,7 @@ import { setupDirectories } from 'misc/setup';
 import { getModules } from 'modules';
 import { BOT_PATH } from 'services/internal/configService';
 import { getHandlebar } from 'services/internal/handlebarService';
+import { generateSiteMap } from 'misc/sitemap';
 
 const currentFileName = url.fileURLToPath(import.meta.url);
 const directory = path.dirname(currentFileName);
@@ -56,6 +57,8 @@ const main = async () => {
     console.log('');
   }
 
+  console.log('Generating sitemap');
+  await generateSiteMap();
   getHandlebar().generateGitIgnore();
   console.log('✔ Done\r\n');
 };

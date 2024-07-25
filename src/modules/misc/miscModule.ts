@@ -27,7 +27,6 @@ export class MiscModule extends CommonModule<ILocalisation> {
         ModuleType.Localisation,
         ModuleType.MonsterForms,
         ModuleType.StatusEffect,
-        ModuleType.Characters,
         ModuleType.Elements,
       ],
     });
@@ -35,7 +34,6 @@ export class MiscModule extends CommonModule<ILocalisation> {
 
   enrichData = async (langCode: string, modules: Array<CommonModule<unknown>>) => {
     const monsterModule = this.getModuleOfType<IMonsterForm>(modules, ModuleType.MonsterForms);
-    const characterModule = this.getModuleOfType<ICharacter>(modules, ModuleType.Characters);
     const elementModule = this.getModuleOfType<IElementEnhanced>(modules, ModuleType.Elements);
     const statusEffectModule = this.getModuleOfType<IStatusEffect>(
       modules,
@@ -56,7 +54,7 @@ export class MiscModule extends CommonModule<ILocalisation> {
       {
         uiKey: 'characters',
         url: routes.characters,
-        gameUrl: characterModule.get('kayleigh').portraits[0],
+        imageUrl: AppImage.characters,
       },
       {
         uiKey: UIKeys.elementalTypeChart,
@@ -90,15 +88,9 @@ export class MiscModule extends CommonModule<ILocalisation> {
       { src: handlebarTemplate.termsAndConditions },
       { src: handlebarTemplate.privacyPolicy },
       { src: handlebarTemplate.openSearch },
-      { src: handlebarTemplate.sitemap },
       { src: handlebarTemplate.humans },
       { src: handlebarTemplate.robots },
     ];
-
-    const enableServiceWorker = getConfig().getEnableServiceWorker();
-    if (enableServiceWorker === true) {
-      miscFiles.push({ src: handlebarTemplate.serviceWorker });
-    }
 
     for (const miscFile of miscFiles) {
       await getHandlebar().compileTemplateToFile({

@@ -2,7 +2,7 @@
 
 {{> partials/breadcrumb }}
 
-<div class="grid move-detail-grid">
+<div class="grid move-detail-grid mb-3">
   <article class="move-detail-card item-detail-card">
     <div class="move-detail-card-heading item-detail-card-heading primary">
       {{#if data.elemental_types_elements}}
@@ -30,38 +30,40 @@
 
       <section class="additional-section animate__animated animate__fadeIn">
         <h3 class="Neu5Land">{{ lookup @root.translate 'UI_BESTIARY_INFO_TAB_STATS' }}</h3>
-        <table class="additional animate__animated animate__fadeIn">
-          <thead>
-            <tr>
-              <td class="ta-center">{{ lookup @root.translate 'MOVE_DESCRIPTION_POWER' }}</td>
-              <td class="ta-center">{{ lookup @root.translate 'STAT_accuracy' }}</td>
-              <td class="ta-center">{{ lookup @root.translate 'cost' }}</td>
-              <td class="ta-center">{{ lookup @root.translate 'STAT_priority_chance' }}</td>
-              <td class="ta-center">{{ lookup @root.translate 'canBeCopied' }}</td>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="ta-center">{{data.power}}</td>
-              <td class="ta-center">
-                {{#if data.unavoidable}}
-                {{ lookup @root.translate 'unavoidable' }}
-                {{else}}
-                {{data.accuracy}}%
-                {{/if}}
-              </td>
-              <td class="ta-center">
-                {{#if data.is_passive_only}}
-                {{ lookup @root.translate 'UI_BUTTON_MOVE_PASSIVE' }}
-                {{else}}
-                {{data.cost}}
-                {{/if}}
-              </td>
-              <td class="ta-center">{{data.priority}}</td>
-              <td class="ta-center">{{data.can_be_copied}}</td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="table-container">
+          <table class="additional animate__animated animate__fadeIn">
+            <thead>
+              <tr>
+                <td class="ta-center">{{ lookup @root.translate 'MOVE_DESCRIPTION_POWER' }}</td>
+                <td class="ta-center">{{ lookup @root.translate 'STAT_accuracy' }}</td>
+                <td class="ta-center">{{ lookup @root.translate 'cost' }}</td>
+                <td class="ta-center">{{ lookup @root.translate 'STAT_priority_chance' }}</td>
+                <td class="ta-center">{{ lookup @root.translate 'canBeCopied' }}</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="ta-center">{{data.power}}</td>
+                <td class="ta-center">
+                  {{#if data.unavoidable}}
+                  {{ lookup @root.translate 'unavoidable' }}
+                  {{else}}
+                  {{data.accuracy}}%
+                  {{/if}}
+                </td>
+                <td class="ta-center">
+                  {{#if data.is_passive_only}}
+                  {{ lookup @root.translate 'UI_BUTTON_MOVE_PASSIVE' }}
+                  {{else}}
+                  {{data.cost}}
+                  {{/if}}
+                </td>
+                <td class="ta-center">{{data.priority}}</td>
+                <td class="ta-center">{{data.can_be_copied}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </section>
 
       <section class="additional-section animate__animated animate__fadeIn">
@@ -92,28 +94,30 @@
       <div class="spacer"></div>
     </div>
     <div class="move-detail-card-body item-detail-card-body">
-      <table class="additional-section highlight-row animate__animated animate__fadeIn">
-        <tbody>
-          {{#each data.monsters_that_can_learn}}
-          <tr class="no-padding">
-            <td class="sprite ta-center">
-              <a href="/{{@root.langCode}}{{@root.routes.monsters}}/{{encodeuri this.resource_name}}.html"
-                title="{{this.name_localised}}">
-                <img src="{{resimage this.icon_url}}" class="remaster-image" alt="image of {{this.name_localised}}"
-                  draggable="false">
-              </a>
-            </td>
-            <td class="name">
-              <a href="/{{@root.langCode}}{{@root.routes.monsters}}/{{encodeuri this.resource_name}}.html"
-                title="{{this.name_localised}}">
-                {{this.name_localised}}
-                (<small class="beast-id">#{{this.bestiary_index_with_padding}}</small>)
-              </a>
-            </td>
-          </tr>
-          {{/each}}
-        </tbody>
-      </table>
+      <div class="table-container">
+        <table class="additional-section highlight-row animate__animated animate__fadeIn">
+          <tbody>
+            {{#each data.monsters_that_can_learn}}
+            <tr class="no-padding">
+              <td class="sprite ta-center">
+                <a href="/{{@root.langCode}}{{@root.routes.monsters}}/{{encodeuri this.resource_name}}.html"
+                  title="{{this.name_localised}}">
+                  <img src="{{resimage this.icon_url}}" class="remaster-image" alt="image of {{this.name_localised}}"
+                    draggable="false">
+                </a>
+              </td>
+              <td class="name">
+                <a href="/{{@root.langCode}}{{@root.routes.monsters}}/{{encodeuri this.resource_name}}.html"
+                  title="{{this.name_localised}}">
+                  {{this.name_localised}}
+                  (<small class="beast-id">#{{this.bestiary_index_with_padding}}</small>)
+                </a>
+              </td>
+            </tr>
+            {{/each}}
+          </tbody>
+        </table>
+      </div>
     </div>
   </article>
 </div>

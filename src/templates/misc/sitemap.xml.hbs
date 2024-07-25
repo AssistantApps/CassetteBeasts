@@ -8,4 +8,12 @@
         <lastmod>{{date}}</lastmod>
         <priority>1.00</priority>
     </url>
+
+    {{#each sitePaths}}
+    <url>
+        <loc>{{../rootUrl}}{{this}}</loc>
+        <lastmod>{{date}}</lastmod>
+        <priority>0.5</priority>
+    </url>
+    {{/each}}
 </urlset>

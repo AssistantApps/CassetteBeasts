@@ -2,7 +2,7 @@
 
 {{> partials/breadcrumb }}
 
-<div class="grid status-effect-detail-grid">
+<div class="grid status-effect-detail-grid mb-3">
   <article class="item-detail-card">
     <div class="item-detail-card-heading primary">
       <img src="{{resimage data.icon.path}}" class="icon" alt="icon of {{data.name_localised}}" draggable="false">
@@ -26,32 +26,34 @@
 
       <section class="additional-section negative-margin additional animate__animated animate__fadeIn">
         <h3 class="section-heading Neu5Land">{{lookup @root.translate 'additionalStats' }}</h3>
-        <table class="additional highlight-cell animate__animated animate__fadeIn">
-          <thead>
-            <tr>
-              <td class="ta-center">
-                <code>is_removable</code>
-              </td>
-              <td class="ta-center">
-                <code>is_buff</code>
-              </td>
-              <td class="ta-center">
-                <code>is_debuff</code>
-              </td>
-              <td class="ta-center">
-                <code>is_decoy</code>
-              </td>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="ta-center">{{#if data.is_removable}}✔️{{else}}❌{{/if}}</td>
-              <td class="ta-center">{{#if data.is_buff}}✔️{{else}}❌{{/if}}</td>
-              <td class="ta-center">{{#if data.is_debuff}}✔️{{else}}❌{{/if}}</td>
-              <td class="ta-center">{{#if data.is_decoy}}✔️{{else}}❌{{/if}}</td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="table-container">
+          <table class="additional highlight-cell animate__animated animate__fadeIn">
+            <thead>
+              <tr>
+                <td class="ta-center">
+                  <code>is_removable</code>
+                </td>
+                <td class="ta-center">
+                  <code>is_buff</code>
+                </td>
+                <td class="ta-center">
+                  <code>is_debuff</code>
+                </td>
+                <td class="ta-center">
+                  <code>is_decoy</code>
+                </td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="ta-center">{{#if data.is_removable}}✔️{{else}}❌{{/if}}</td>
+                <td class="ta-center">{{#if data.is_buff}}✔️{{else}}❌{{/if}}</td>
+                <td class="ta-center">{{#if data.is_debuff}}✔️{{else}}❌{{/if}}</td>
+                <td class="ta-center">{{#if data.is_decoy}}✔️{{else}}❌{{/if}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </section>
 
       {{#if data.stats_affected}}

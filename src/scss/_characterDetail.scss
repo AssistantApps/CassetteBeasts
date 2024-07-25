@@ -1,12 +1,12 @@
 .character-detail-grid {
-  grid-template-columns: minmax(500px, 2fr) minmax(500px, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 
   .character-detail-card {
+    background: var(--card-background);
 
     // .item-detail-card-heading {}
 
     .item-detail-card-body {
-
       div.images {
         position: relative;
         padding: 1em;
@@ -61,6 +61,7 @@
       .tape-image {
         margin: 0.5em 2.5em 0 2.5em;
         width: calc(100% - 5em);
+        max-width: 300px;
       }
 
       .audio-section h3 {

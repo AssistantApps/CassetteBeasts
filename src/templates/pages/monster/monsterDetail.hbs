@@ -2,7 +2,7 @@
 
 {{> partials/breadcrumb }}
 
-<div class="grid min-card-width">
+<div class="grid min-card-width mb-3">
   <article class="monster-detail-card item-detail-card">
     <div class="monster-detail-card-heading item-detail-card-heading primary">
       <h2 class="Neu5Land animate__animated animate__fadeIn">{{data.name_localised}}</h2>
@@ -79,26 +79,28 @@
 
       <section class="additional-section additional animate__animated animate__fadeIn">
         <h3 class="section-heading Neu5Land">{{lookup @root.translate 'additionalStats'}}</h3>
-        <table class="additional highlight-cell animate__animated animate__fadeIn">
-          <thead>
-            <tr>
-              <td class="ta-center">{{ lookup @root.translate 'STAT_evasion' }}</td>
-              <td class="ta-center">{{ lookup @root.translate 'STAT_max_ap' }}</td>
-              <td class="ta-center">{{ lookup @root.translate 'STAT_move_slots' }}</td>
-              <td class="ta-center">{{ lookup @root.translate 'STATUS_RECORDING_NAME' }}</td>
-              <td class="ta-center">{{ lookup @root.translate 'STAT_exp' }}</td>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="ta-center">{{data.evasion}}</td>
-              <td class="ta-center">{{data.max_ap}}</td>
-              <td class="ta-center">{{data.move_slots}}</td>
-              <td class="ta-center">{{data.capture_rate}}%</td>
-              <td class="ta-center">{{data.exp_base_level}}</td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="table-container">
+          <table class="additional highlight-cell animate__animated animate__fadeIn">
+            <thead>
+              <tr>
+                <td class="ta-center">{{ lookup @root.translate 'STAT_evasion' }}</td>
+                <td class="ta-center">{{ lookup @root.translate 'STAT_max_ap' }}</td>
+                <td class="ta-center">{{ lookup @root.translate 'STAT_move_slots' }}</td>
+                <td class="ta-center">{{ lookup @root.translate 'STATUS_RECORDING_NAME' }}</td>
+                <td class="ta-center">{{ lookup @root.translate 'STAT_exp' }}</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="ta-center">{{data.evasion}}</td>
+                <td class="ta-center">{{data.max_ap}}</td>
+                <td class="ta-center">{{data.move_slots}}</td>
+                <td class="ta-center">{{data.capture_rate}}%</td>
+                <td class="ta-center">{{data.exp_base_level}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </section>
 
       <div class="grid">
@@ -193,36 +195,38 @@
       <div class="spacer"></div>
     </div>
 
-    <div class="monster-detail-tape-container animate__animated noselect">
+    <div class="monster-detail-tape-container animate__animated hidden-in-mobile noselect">
       <div class="animate__animated swing-hover Neu5Land">
         <img src="/assets/img/meta/tape.png" alt="monster tape">
         <p>{{data.name_localised}}</p>
       </div>
     </div>
 
-    <div class="monster-detail-card-body item-detail-card-body">
-      <table class="moves last-td-padding highlight-row animate__animated animate__fadeIn">
-        <thead>
-          <tr class="no-padding">
-            <td class="star"></td>
-            <td class="type"></td>
-            <td class="name">{{ lookup @root.translate 'UI_INVENTORY_FILTER_NAME' }}</td>
-            <td class="category">{{ lookup @root.translate 'UI_INVENTORY_FILTER_CATEGORY' }}</td>
-            <td class="power">{{ lookup @root.translate 'MOVE_DESCRIPTION_POWER' }}</td>
-            <td class="accuracy">{{ lookup @root.translate 'STAT_accuracy' }}</td>
-            <td class="ap">{{ lookup @root.translate 'BATTLE_TOAST_AP' }}</td>
-          </tr>
-        </thead>
-        <tbody>
-          {{#each data.initial_moves_moves}}
-          {{> partials/monster/monsterMoveRow source=(lookup @root.translate 'initial') }}
-          {{/each}}
+    <div class="monster-detail-card-body item-detail-card-body table-container">
+      <div class="table-container">
+        <table class="moves last-td-padding highlight-row animate__animated animate__fadeIn">
+          <thead>
+            <tr class="no-padding">
+              <td class="star"></td>
+              <td class="type"></td>
+              <td class="name">{{ lookup @root.translate 'UI_INVENTORY_FILTER_NAME' }}</td>
+              <td class="category">{{ lookup @root.translate 'UI_INVENTORY_FILTER_CATEGORY' }}</td>
+              <td class="power">{{ lookup @root.translate 'MOVE_DESCRIPTION_POWER' }}</td>
+              <td class="accuracy">{{ lookup @root.translate 'STAT_accuracy' }}</td>
+              <td class="ap">{{ lookup @root.translate 'BATTLE_TOAST_AP' }}</td>
+            </tr>
+          </thead>
+          <tbody>
+            {{#each data.initial_moves_moves}}
+            {{> partials/monster/monsterMoveRow source=(lookup @root.translate 'initial') }}
+            {{/each}}
 
-          {{#each data.tape_upgrades_moves}}
-          {{> partials/monster/monsterMoveRow source=(star @index) }}
-          {{/each}}
-        </tbody>
-      </table>
+            {{#each data.tape_upgrades_moves}}
+            {{> partials/monster/monsterMoveRow source=(star @index) }}
+            {{/each}}
+          </tbody>
+        </table>
+      </div>
     </div>
   </article>
 </div>

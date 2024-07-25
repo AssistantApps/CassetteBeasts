@@ -26,6 +26,15 @@ body.overflow-x-hidden {
   }
 }
 
+.dropdown-list {
+  max-height: 50vh;
+  overflow-y: auto;
+  &::-webkit-scrollbar-track {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
 .spacer {
   flex: 1;
 }
@@ -44,7 +53,7 @@ body.overflow-x-hidden {
   --pico-switch-checked-background-color: var(--brand-tertiary) !important;
 
   > * {
-    max-width: 200px;
+    max-width: 250px;
     z-index: 1;
   }
 
