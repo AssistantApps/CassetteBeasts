@@ -19,6 +19,7 @@ import { FolderPathHelper } from 'helpers/folderPathHelper';
 import { generateMetaImage } from 'helpers/imageHelper';
 import { sortByStringProperty } from 'helpers/sortHelper';
 import { limitLengthWithEllipse, resAndTresTrim } from 'helpers/stringHelper';
+import { monsterToSimplified } from 'mapper/monsterMapper';
 import { readItemDetail } from 'modules/baseModule';
 import { CommonModule } from 'modules/commonModule';
 import { LocalisationModule } from 'modules/localisation/localisationModule';
@@ -121,11 +122,8 @@ export class MovesModule extends CommonModule<IMove> {
           const monster = monsterModule.get(monsterFromSrc.monster_id);
           const monsterDetail = monster as IMonsterFormEnhanced;
           monsters_that_can_learn.push({
-            name_localised: monsterDetail.name_localised,
-            resource_name: monsterDetail.resource_name,
-            icon_url: monsterDetail.icon_url,
+            ...monsterToSimplified(monsterDetail),
             source: monsterFromSrc.source,
-            bestiary_index_with_padding: monsterDetail.bestiary_index_with_padding,
           });
         }
       }

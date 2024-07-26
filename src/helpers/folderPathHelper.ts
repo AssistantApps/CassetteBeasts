@@ -12,6 +12,7 @@ export const FolderPathHelper = {
   monsterFormsSecret: () => dataPath('monster_forms_secret'),
   monsterFormsUnlisted: () => dataPath('monster_forms_unlisted'),
   monsterSpriteAnim: () => spritePath('monsters'),
+  monsterSpawn: () => dataPath('monster_spawn_profiles'),
   // monsterWorldSpriteAnim: () => path.join(spritePath('monsters'), 'world'),
   characters: () => dataPath('characters'),
   characterSpriteAnimBattle: () => path.join(spritePath('characters'), 'battle'),

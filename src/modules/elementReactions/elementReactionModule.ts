@@ -48,7 +48,7 @@ export class ElementReactionModule extends CommonModule<IElementReaction> {
       });
       this._baseDetails.push(detail);
     }
-    return `${this._baseDetails.length} element reactions`;
+    return `${this._baseDetails.length}  element reactions`;
   };
 
   enrichData = async (langCode: string, modules: Array<CommonModule<unknown>>) => {

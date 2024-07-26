@@ -69,7 +69,7 @@ export class CharacterModule extends CommonModule<ICharacter> {
       this._baseDetails.push(detail);
     }
 
-    return `${this._baseDetails.length} characters`;
+    return `${this._baseDetails.length}  characters`;
   };
 
   enrichData = async (langCode: string, modules: Array<CommonModule<unknown>>) => {

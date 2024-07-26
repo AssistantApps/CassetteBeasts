@@ -76,7 +76,7 @@ export class WorldModule extends CommonModule<IWorld> {
     const map_chunk_metas = this._baseDetails.flatMap((map) =>
       Object.keys(map.chunk_meta_data),
     ).length;
-    return `${this._baseDetails.length} world files loaded with ${map_chunk_metas} chunks.`;
+    return `${this._baseDetails.length}  world files loaded with ${map_chunk_metas} chunks.`;
   };
 
   enrichData = async (langCode: string, modules: Array<CommonModule<unknown>>) => {

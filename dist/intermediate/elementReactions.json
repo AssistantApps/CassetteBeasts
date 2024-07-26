@@ -1707,7 +1707,7 @@
         "sprite_animation_prefix": "",
         "sprite_animation_prefix_priority": "0",
         "stats_affected": [],
-        "name_localised": "Air} Wall",
+        "name_localised": "Air Wall",
         "description_localised": "Walls absorb a certain number of incoming hits. Type-advantaged attacks immediately break walls.",
         "meta_image_url": "/assets/img/meta/en/statusEffect/wall_air.png"
       }

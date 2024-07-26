@@ -37,6 +37,6 @@ export class MonsterSpriteAnimModule extends CommonModule<ISpriteAnim> {
     }
     this.isReady = true;
 
-    return `${this._baseDetails.length} monsterSprites`;
+    return `${this._baseDetails.length} monster sprites`;
   };
 }

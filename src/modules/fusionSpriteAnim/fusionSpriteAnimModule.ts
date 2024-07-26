@@ -42,6 +42,6 @@ export class FusionSpriteAnimModule extends CommonModule<ISpriteAnim> {
     }
     this.isReady = true;
 
-    return `${this._baseDetails.length} fusion sprites`;
+    return `${this._baseDetails.length}  fusion sprites`;
   };
 }

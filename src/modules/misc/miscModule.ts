@@ -4,15 +4,12 @@ import { IntermediateFile } from 'constant/intermediateFile';
 import { UIKeys, defaultLocale } from 'constant/localisation';
 import { ModuleType } from 'constant/module';
 import { routes } from 'constant/route';
-import { ICharacter } from 'contracts/character';
 import { IElementEnhanced } from 'contracts/element';
 import { IHomePageCard } from 'contracts/homePageCard';
 import { ILocalisation } from 'contracts/localisation';
 import { IMonsterForm } from 'contracts/monsterForm';
 import { IStatusEffect } from 'contracts/statusEffect';
 import { CommonModule } from 'modules/commonModule';
-import { LocalisationModule } from 'modules/localisation/localisationModule';
-import { getConfig } from 'services/internal/configService';
 import { getHandlebar } from 'services/internal/handlebarService';
 
 export class MiscModule extends CommonModule<ILocalisation> {

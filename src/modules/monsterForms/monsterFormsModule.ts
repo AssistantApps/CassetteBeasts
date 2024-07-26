@@ -130,12 +130,15 @@ export class MonsterFormsModule extends CommonModule<IMonsterForm> {
           '{ability}',
           detail.unlock_ability,
         ),
+        elemental_types: undefined,
         elemental_types_elements: detail.elemental_types.map((et) =>
           elementModule.get(resAndTresTrim(et.path)),
         ),
+        initial_moves: undefined,
         initial_moves_moves: detail.initial_moves.map((im) =>
           moveModule.get(resAndTresTrim(im.path)),
         ),
+        tape_upgrades: undefined,
         tape_upgrades_moves: detail.tape_upgrades.map((tu) => {
           let path = (tu as IExternalResource)?.path;
           if (path == null) {
@@ -194,6 +197,30 @@ export class MonsterFormsModule extends CommonModule<IMonsterForm> {
         (this._itemDetailMap[mapKey].evolution_from_monster != null ? 1 : 0);
     }
     this.isReady = true;
+  };
+
+  combineData = async (langCode: string, modules: Array<CommonModule<unknown>>) => {
+    // const monsterModule = this.getModuleOfType<IMonsterForm>(
+    //   modules,
+    //   ModuleType.MonsterForms,
+    //   true,
+    // ) as MonsterFormsModule;
+    // const moveToMonsterIdMap = monsterModule.getMoveToMonsterIdMap();
+    // for (const detail of this._baseDetails) {
+    //   const monsters_that_can_learn: Array<IMonsterFormSimplified> = [];
+    //   for (const tag of detail.tags) {
+    //     const monsterFromSrcLists = moveToMonsterIdMap?.[tag] ?? [];
+    //     for (const monsterFromSrc of monsterFromSrcLists) {
+    //       const monster = monsterModule.get(monsterFromSrc.monster_id);
+    //       const monsterDetail = monster as IMonsterFormEnhanced;
+    //       monsters_that_can_learn.push({
+    //         ...monsterToSimplified(monsterDetail),
+    //         source: monsterFromSrc.source,
+    //       });
+    //     }
+    //   }
+    //   this._itemDetailMap[detail.id].monsters_that_can_learn = monsters_that_can_learn;
+    // }
   };
 
   copyWav = async (overwrite: boolean) => {
@@ -319,17 +346,19 @@ export class MonsterFormsModule extends CommonModule<IMonsterForm> {
       }
     }
 
-    for (const initialMove of detail.initial_moves) {
-      const move = resAndTresTrim(initialMove.path);
+    for (const initialMove of detail.initial_moves_moves) {
       const newEntry: IMonsterFormMoveSource = {
         monster_id: mapKey,
         source: '',
       };
-      const existingMove = this._moveToMonsterIdsMap[move];
+      const existingMove = this._moveToMonsterIdsMap[initialMove.id];
       if (existingMove) {
-        this._moveToMonsterIdsMap[move] = [...this._moveToMonsterIdsMap[move], newEntry];
+        this._moveToMonsterIdsMap[initialMove.id] = [
+          ...this._moveToMonsterIdsMap[initialMove.id],
+          newEntry,
+        ];
       } else {
-        this._moveToMonsterIdsMap[move] = [newEntry];
+        this._moveToMonsterIdsMap[initialMove.id] = [newEntry];
       }
     }
 

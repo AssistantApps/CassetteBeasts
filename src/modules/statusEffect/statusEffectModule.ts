@@ -49,7 +49,7 @@ export class StatusEffectModule extends CommonModule<IStatusEffect> {
       });
       this._baseDetails.push(detail);
     }
-    return `${this._baseDetails.length} status effects`;
+    return `${this._baseDetails.length}  status effects`;
   };
 
   enrichData = async (langCode: string, modules: Array<CommonModule<unknown>>) => {

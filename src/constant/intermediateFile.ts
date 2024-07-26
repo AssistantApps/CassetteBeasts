@@ -2,6 +2,7 @@ export const IntermediateFile = {
   language: 'language.json',
   monsterForms: 'monsterForms.json',
   monsterSpriteAnim: 'monsterSpriteAnim.json',
+  monsterSpawn: 'monsterSpawn.json',
   moves: 'moves.json',
   characters: 'characters.json',
   characterSpriteAnim: 'characterSpriteAnim.json',

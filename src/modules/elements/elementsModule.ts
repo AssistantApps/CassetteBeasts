@@ -34,7 +34,7 @@ export class ElementsModule extends CommonModule<IElement> {
       this._baseDetails.push(detail);
     }
 
-    return `${this._baseDetails.length} elements`;
+    return `${this._baseDetails.length}  elements`;
   };
 
   enrichData = async (langCode: string, modules: Array<CommonModule<unknown>>) => {
