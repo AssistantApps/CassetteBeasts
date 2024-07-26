@@ -84,7 +84,6 @@ export class MiscModule extends CommonModule<ILocalisation> {
     const miscFiles: Array<{ src: string; dest?: string }> = [
       { src: handlebarTemplate.cname, dest: 'CNAME' },
       { src: handlebarTemplate.colour, dest: '../src/scss/_colour.scss' },
-      { src: handlebarTemplate.analytics, dest: 'assets/js/analytics.js' },
       { src: handlebarTemplate.termsAndConditions },
       { src: handlebarTemplate.privacyPolicy },
       { src: handlebarTemplate.openSearch },

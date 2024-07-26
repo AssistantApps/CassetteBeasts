@@ -156,6 +156,7 @@ export class MonsterFormsModule extends CommonModule<IMonsterForm> {
         })),
         meta_image_url: `/assets/img/meta/${langCode}${routes.monsters}/${encodeURI(mapKey)}.png`,
         battle_cry_audio_url: detail.battle_cry?.path?.replace('res://sfx/', '/assets/audio/'),
+        isSecret: detail.folder == 'monster_forms_secret',
 
         // initialised the following later
         evolutions_monster: [],
@@ -279,7 +280,13 @@ export class MonsterFormsModule extends CommonModule<IMonsterForm> {
     }
 
     const relativePath = `${langCode}${routes.monsters}/index.html`;
-    const sortedList = list.sort(sortByStringProperty((l) => l.name_localised));
+    const sortedList = list.sort((a, b) => {
+      return (
+        +a.isSecret - +b.isSecret ||
+        (a.bestiary_index < 0 ? 500 : a.bestiary_index) -
+          (b.bestiary_index < 0 ? 500 : b.bestiary_index)
+      );
+    });
     await getHandlebar().compileTemplateToFile({
       data: this.getBasicPageData({
         langCode,

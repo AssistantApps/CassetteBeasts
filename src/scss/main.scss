@@ -133,6 +133,10 @@ br {
   margin: 0;
 }
 
+img {
+  pointer-events: none;
+}
+
 .highlight {
   background-color: var(--brand-tertiary);
 }

@@ -10,8 +10,8 @@
   </label>
   <select name="Sort by" aria-label="Sort by" required
     onchange="orderItemsByDataAttr('monster-grid', event.target.value)">
-    <option value="title">{{lookup @root.translate 'alphabetical'}}</option>
     <option value="id">{{lookup @root.translate 'bestiaryId'}}</option>
+    <option value="title">{{lookup @root.translate 'alphabetical'}}</option>
   </select>
 </div>
 
@@ -24,9 +24,9 @@
   <h2 class="hidden">{{lookup @root.translate 'UI_BESTIARY_LIST_MODE_VIEW_MONSTERS'}}</h2>
   {{#each data.list}}
   <a href="/{{@root.langCode}}{{@root.routes.monsters}}/{{this.resource_name}}.html"
-    class="grid-list-item item animate__animated animate__fadeIn" data-id="{{this.bestiary_index_with_padding}}"
-    data-title="{{this.name_localised}}" data-description="{{this.description_localised}}"
-    style="animation-delay: {{multiply @index 30 600}}ms;">
+    class="grid-list-item item {{#if this.isSecret}}secret {{/if}}animate__animated animate__fadeIn"
+    data-id="{{this.bestiary_index_with_padding}}" data-title="{{this.name_localised}}"
+    data-description="{{this.description_localised}}" style="animation-delay: {{multiply @index 30 600}}ms;">
     <div class="grid-list-item-image">
       <img src="{{resimage this.icon_url}}" class="sprite" alt="image of {{this.name_localised}}" draggable="false">
 

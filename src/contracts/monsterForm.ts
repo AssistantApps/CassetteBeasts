@@ -71,6 +71,7 @@ export interface IMonsterFormEnhanced extends IMonsterForm {
   learnable_moves: Array<IMoveSimplified>;
   unlock_ability_localised: string;
   battle_cry_audio_url: string;
+  isSecret: boolean;
 }
 
 export interface IMonsterFormSimplified {

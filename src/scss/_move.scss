@@ -7,6 +7,22 @@
   .grid-list-item {
     border-radius: var(--card-border-radius);
 
+    &:hover {
+      .type {
+        animation: tada;
+        animation-duration: 2s;
+      }
+
+      .ap {
+        animation: tada;
+        animation-duration: 1s;
+      }
+    }
+
+    .type {
+      border-radius: var(--card-border-radius);
+    }
+
     .header {
       display: flex;
       flex-direction: row;
@@ -64,14 +80,23 @@
       padding-top: 0.125em;
       padding-bottom: 0.125em;
       border-bottom: 1px solid rgba(0, 0, 0, 0.125);
-      background-color: transparent;
+      background-color: var(--card-background);
+      transition: background-color 150ms ease-in-out;
 
       &:first-child {
         padding-top: 0.25em;
+        border-top-left-radius: var(--card-border-radius);
+        border-top-right-radius: var(--card-border-radius);
       }
 
       &:last-child {
         padding-bottom: 0.25em;
+        border-bottom-left-radius: var(--card-border-radius);
+        border-bottom-right-radius: var(--card-border-radius);
+      }
+
+      &:hover {
+        background-color: var(--card-background-hover);
       }
 
       .status-card-container,
@@ -136,6 +161,15 @@
       // .description {
       //   max-width: 25%;
       // }
+    }
+  }
+
+  &.grid-mode {
+    .grid-list-item {
+      &:hover {
+        transform: translateY(-10px) rotate(-2deg);
+        box-shadow: 10px 10px 0px var(--brand-primary);
+      }
     }
   }
 }

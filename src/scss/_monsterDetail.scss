@@ -1,5 +1,4 @@
 .monster-detail-card {
-
   .monster-detail-sticker-container {
     position: absolute;
     top: 5em;
@@ -26,7 +25,6 @@
   }
 
   .monster-detail-card-heading {
-
     &:hover {
       .element-image {
         animation: tada;
@@ -60,6 +58,7 @@
         object-fit: contain;
         image-rendering: pixelated;
         transition: transform 250ms ease-in-out;
+        pointer-events: unset;
 
         &:hover {
           transform: scale(1.2);
@@ -205,7 +204,6 @@
 // animation delays
 .monster-detail-card {
   .monster-detail-card-body {
-
     .id,
     .descrip,
     .images {

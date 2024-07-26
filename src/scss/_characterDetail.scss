@@ -16,6 +16,7 @@
           object-fit: contain;
           image-rendering: pixelated;
           transition: transform 250ms ease-in-out;
+          pointer-events: unset;
 
           &:hover {
             transform: scale(1.2);
@@ -27,6 +28,7 @@
           margin: 0 auto;
           object-fit: contain;
           transition: transform 250ms ease-in-out;
+          pointer-events: unset;
 
           &:hover {
             transform: scale(1.2);
@@ -62,6 +64,7 @@
         margin: 0.5em 2.5em 0 2.5em;
         width: calc(100% - 5em);
         max-width: 300px;
+        pointer-events: unset;
       }
 
       .audio-section h3 {

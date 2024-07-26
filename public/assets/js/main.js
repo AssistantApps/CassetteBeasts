@@ -42,7 +42,10 @@ function setSetting(name, value) {
 function changeLanguage(newLangCode) {
   const pathName = window.location.pathname.substring(1);
   const slashIndex = pathName.indexOf('/');
-  const trailingPath = pathName.substring(slashIndex);
+  let trailingPath = pathName.substring(slashIndex);
+  if (slashIndex < 0) {
+    trailingPath = '/' + trailingPath;
+  }
 
   window.location.href = `/${newLangCode}${trailingPath}`;
 }

@@ -8,5 +8,9 @@
   li {
     list-style: none;
     z-index: 1;
+
+    &:not(:first-child) {
+      margin-top: 0.125em;
+    }
   }
 }
