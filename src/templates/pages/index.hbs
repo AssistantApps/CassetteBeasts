@@ -1,17 +1,21 @@
 {{#> layouts/default }}
 <div class="home-grid-center">
 	<section id="home-grid">
-		<h2 class="hidden">Home</h2>
+		<div class="meta">
+			<h1>{{lookup @root.translate 'MAIN_CREDITS_TITLE'}}</h1>
+			<p>{{lookup @root.translate 'TUTORIAL_REMASTER'}}</p>
+			<p>{{lookup @root.translate 'TUTORIAL_RUMORS_DESCRIPTION1'}}</p>
+		</div>
 		{{#each data.cards}}
 		<a href="{{#if this.wip}}#{{else}}/{{@root.langCode}}{{this.url}}{{/if}}"
-			class="animate__animated animate__fadeIn {{#if this.wip}}wip{{/if}}"
+			class="{{#if this.hideInMobile}}hidden-in-mobile{{/if}} animate__animated animate__fadeIn {{#if this.wip}}wip{{/if}}"
 			style="animation-delay: {{multiply @index 100 600}}ms;">
 			<article>
 				<div class="img-container">
 					{{#if this.gameUrl}}
-					<img src="{{resimage this.gameUrl}}" alt="{{lookup @root.translate title}}">
+					<img src="{{resimage this.gameUrl}}" alt="{{lookup @root.translate uiKey}}">
 					{{else}}
-					<img src="{{this.imageUrl}}" alt="{{lookup @root.translate title}}">
+					<img src="{{this.imageUrl}}" alt="{{lookup @root.translate uiKey}}">
 					{{/if}}
 				</div>
 				<footer>

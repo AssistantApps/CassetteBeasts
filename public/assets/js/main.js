@@ -29,6 +29,17 @@ function onPageLoad() {
   const tabContentId = `tab${window.assistantApps.useGif ? 1 : 0}`;
   const spriteContainerNode = document.getElementById('sprite-tab-container');
   if (spriteContainerNode != null) spriteContainerNode.classList.add(tabContentId);
+
+  const audios = document.querySelectorAll('audio.autoplay');
+  if (audios?.length > 0) {
+    audios[0].volume = 0.3;
+    const resetVolume = () => {
+      audios[0].volume = 1;
+      audios[0].removeEventListener('ended', resetVolume, false);
+    }
+    audios[0].addEventListener('ended', resetVolume, false);
+    audios[0].play();
+  }
 }
 
 //document.addEventListener("DOMContentLoaded", onPageLoad);

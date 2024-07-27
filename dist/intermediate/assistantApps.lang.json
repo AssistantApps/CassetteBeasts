@@ -10,6 +10,7 @@
       "termsAndConditions": "Allgemeine Geschäftsbedingungen",
       "legalNotice": "Diese App ist nicht mit {0}, dessen Tochtergesellschaften oder Muttergesellschaften, deren Namen, Logos und Produkten, die in dieser App angezeigt werden, verbunden oder von ihnen autorisiert. Die Namen {1}, {0} sowie verwandte Namen und Bilder sind eingetragene Warenzeichen ihrer jeweiligen Eigentümer. Diese App wird von Fans für Fans gemacht. Bitte wende dich nicht an {0} wegen Fehlern in dieser App.",
       "patrons": "Sponsoren",
+      "habitat": "Lebensraum",
       "useGifs": "Gifs anzeigen",
       "alphabetical": "Alphabetisch",
       "bestiaryId": "Bestiarium-ID",
@@ -24,7 +25,11 @@
       "characters": "Figuren",
       "partnerMonster": "Partner Monster",
       "portraitNum": "Porträt {0}",
-      "hashCode": "CE01319BAF2476934673CF1F8A743D12"
+      "tags": "Etikett",
+      "overworld": "Oberwelt",
+      "percentTitle": "Prozent",
+      "backup": "Sicherung",
+      "hashCode": "0C95B36340605DB36834D3255B2EF237"
     }
   },
   "en": {
@@ -38,6 +43,7 @@
       "termsAndConditions": "Terms and Conditions",
       "legalNotice": "This app is not affiliated with, authorised by {0}, its subsidiaries, or its parent companies, whose names, logos and products are displayed in this app. The names {1}, {0} as well as related names and images are registered trademarks of their respective owners. This app is made by fan(s) for fans. Please do not reach out to {0} about bugs within this app",
       "patrons": "Patrons",
+      "habitat": "Habitat",
       "useGifs": "Use Gifs",
       "alphabetical": "Alphabetical",
       "bestiaryId": "Bestiary Id",
@@ -52,7 +58,11 @@
       "characters": "Characters",
       "partnerMonster": "Partner Monster",
       "portraitNum": "Portrait {0}",
-      "hashCode": "E72BB9682B11CF58EA96B5FBFA245A46"
+      "tags": "Tags",
+      "overworld": "Overworld",
+      "percentTitle": "Percent",
+      "backup": "Backup",
+      "hashCode": "DD60E6122DAFA520C0A44C8495C03D1B"
     }
   },
   "es_ES": {
@@ -66,6 +76,7 @@
       "termsAndConditions": "Términos y Condiciones",
       "legalNotice": "Esta aplicación no está afiliada ni autorizada por {0}, sus subsidiarias ni sus empresas matrices, cuyos nombres, logotipos y productos se muestran en esta aplicación. Los nombres {1}, {0} así como los nombres e imágenes relacionados son marcas comerciales registradas de sus respectivos propietarios. Esta aplicación está hecha por fans para fans. No contactes a {0} sobre errores dentro de esta aplicación.",
       "patrons": "Patrones",
+      "habitat": "Hábitat",
       "useGifs": "Usar gifs",
       "alphabetical": "Alfabético",
       "bestiaryId": "Identificación del bestiario",
@@ -80,7 +91,11 @@
       "characters": "Caracteres",
       "partnerMonster": "Monstruo compañero",
       "portraitNum": "Retrato {0}",
-      "hashCode": "DA909CA4DD72EB607E6EF4F704AD5E88"
+      "tags": "Etiquetas",
+      "overworld": "Supramundo",
+      "percentTitle": "Porcentaje",
+      "backup": "Copia de seguridad",
+      "hashCode": "5C6996CD9FCEB11E3E7D06F2389357F7"
     }
   },
   "es_MX": {
@@ -94,6 +109,7 @@
       "termsAndConditions": "Términos y Condiciones",
       "legalNotice": "Esta aplicación no está afiliada ni autorizada por {0}, sus subsidiarias ni sus empresas matrices, cuyos nombres, logotipos y productos se muestran en esta aplicación. Los nombres {1}, {0} así como los nombres e imágenes relacionados son marcas comerciales registradas de sus respectivos propietarios. Esta aplicación está hecha por fans para fans. No contactes a {0} sobre errores dentro de esta aplicación.",
       "patrons": "Patrones",
+      "habitat": "Hábitat",
       "useGifs": "Usar gifs",
       "alphabetical": "Alfabético",
       "bestiaryId": "Identificación del bestiario",
@@ -108,7 +124,11 @@
       "characters": "Caracteres",
       "partnerMonster": "Monstruo compañero",
       "portraitNum": "Retrato {0}",
-      "hashCode": "DA909CA4DD72EB607E6EF4F704AD5E88"
+      "tags": "Etiquetas",
+      "overworld": "Supramundo",
+      "percentTitle": "Porcentaje",
+      "backup": "Copia de seguridad",
+      "hashCode": "5C6996CD9FCEB11E3E7D06F2389357F7"
     }
   },
   "fr_FR": {
@@ -122,6 +142,7 @@
       "termsAndConditions": "Conditions d'utilisations",
       "legalNotice": "This app is not affiliated with, authorised by {0}, its subsidiaries, or its parent companies, whose names, logos and products are displayed in this app. The names {1}, {0} as well as related names and images are registered trademarks of their respective owners. This app is made by fan(s) for fans. Please do not reach out to {0} about bugs within this app",
       "patrons": "Patreons",
+      "habitat": "Habitat",
       "useGifs": "Utiliser des GIF",
       "alphabetical": "Alphabétique",
       "bestiaryId": "Identifiant du bestiaire",
@@ -136,7 +157,11 @@
       "characters": "Personnages",
       "partnerMonster": "Monstre partenaire",
       "portraitNum": "Portrait {0}",
-      "hashCode": "E76B88BA005CF4CCAEE3FCE7F1D2E6EC"
+      "tags": "Mots-clés",
+      "overworld": "Overworld",
+      "percentTitle": "Pourcentage",
+      "backup": "Sauvegarde",
+      "hashCode": "4BE58511701A2930419507B38BC52D14"
     }
   },
   "it_IT": {
@@ -150,6 +175,7 @@
       "termsAndConditions": "Termini e Condizioni",
       "legalNotice": "Questa app non è affiliata, autorizzata da {0}, le sue filiali, o le sue società madri, i cui nomi, loghi e prodotti vengono visualizzati in questa app. I nomi {1}, {0} così come i nomi e le immagini correlati sono marchi registrati dei rispettivi proprietari. Questa app è creata dai fan per i fan. Non contattare {0} in merito ai bug presenti in questa app",
       "patrons": "Sostenitori su Patreon",
+      "habitat": "Habitat",
       "useGifs": "Usa Gif",
       "alphabetical": "Alfabetico",
       "bestiaryId": "Id. Bestiario",
@@ -164,7 +190,11 @@
       "characters": "Caratteri",
       "partnerMonster": "Mostro compagno",
       "portraitNum": "Ritratto {0}",
-      "hashCode": "A69EEE1F75554B64809BDFED17BCF2D7"
+      "tags": "Tag",
+      "overworld": "Overworld",
+      "percentTitle": "Percentuale",
+      "backup": "Backup",
+      "hashCode": "31D4BD83C31D6F96D8CEA3C839924C5B"
     }
   },
   "ja_JP": {
@@ -178,6 +208,7 @@
       "termsAndConditions": "利用規約",
       "legalNotice": "This app is not affiliated with, authorised by {0}, its subsidiaries, or its parent companies, whose names, logos and products are displayed in this app. The names {1}, {0} as well as related names and images are registered trademarks of their respective owners. This app is made by fan(s) for fans. Please do not reach out to {0} about bugs within this app",
       "patrons": "パトロン",
+      "habitat": "Habitat",
       "useGifs": "GIF を使用",
       "alphabetical": "アルファベット順",
       "bestiaryId": "ベストイアリ ID",
@@ -192,7 +223,11 @@
       "characters": "キャラクター",
       "partnerMonster": "パートナー モンスター",
       "portraitNum": "ポートレート {0}",
-      "hashCode": "18D640ABB6E20B6E09B1DC02537CB54F"
+      "tags": "タグ",
+      "overworld": "オーバーワールド",
+      "percentTitle": "パーセント",
+      "backup": "バックアップ",
+      "hashCode": "4F6CD74946B3D26F34171A7829C43F9C"
     }
   },
   "ko_KR": {
@@ -206,6 +241,7 @@
       "termsAndConditions": "이용약관",
       "legalNotice": "This app is not affiliated with, authorised by {0}, its subsidiaries, or its parent companies, whose names, logos and products are displayed in this app. The names {1}, {0} as well as related names and images are registered trademarks of their respective owners. This app is made by fan(s) for fans. Please do not reach out to {0} about bugs within this app",
       "patrons": "후원자",
+      "habitat": "서식지",
       "useGifs": "GIF 사용",
       "alphabetical": "알파벳순",
       "bestiaryId": "우화집 ID",
@@ -220,7 +256,11 @@
       "characters": "캐릭터",
       "partnerMonster": "파트너 몬스터",
       "portraitNum": "초상화 {0}",
-      "hashCode": "23E0F523D085CD7C453EA71A8C7F2755"
+      "tags": "태그",
+      "overworld": "오버월드",
+      "percentTitle": "퍼센트",
+      "backup": "백업",
+      "hashCode": "B63C5F819931B972025865D8E4FA8CE5"
     }
   },
   "pt_BR": {
@@ -234,6 +274,7 @@
       "termsAndConditions": "Termos e Condições",
       "legalNotice": "This app is not affiliated with, authorised by {0}, its subsidiaries, or its parent companies, whose names, logos and products are displayed in this app. The names {1}, {0} as well as related names and images are registered trademarks of their respective owners. This app is made by fan(s) for fans. Please do not reach out to {0} about bugs within this app",
       "patrons": "Patronos",
+      "habitat": "Habitat",
       "useGifs": "Usar Gifs",
       "alphabetical": "Alfabético",
       "bestiaryId": "ID do bestiário",
@@ -248,7 +289,11 @@
       "characters": "Personagens",
       "partnerMonster": "Monstro Parceiro",
       "portraitNum": "Retrato {0}",
-      "hashCode": "14727E972BAB2CB35D14DA8400411805"
+      "tags": "Tags",
+      "overworld": "Overworld",
+      "percentTitle": "Porcentagem",
+      "backup": "Backup",
+      "hashCode": "EA38365536FC349E3779D72957104430"
     }
   },
   "zh_CN": {
@@ -262,6 +307,7 @@
       "termsAndConditions": "条款和条件",
       "legalNotice": "This app is not affiliated with, authorised by {0}, its subsidiaries, or its parent companies, whose names, logos and products are displayed in this app. The names {1}, {0} as well as related names and images are registered trademarks of their respective owners. This app is made by fan(s) for fans. Please do not reach out to {0} about bugs within this app",
       "patrons": "赞助者",
+      "habitat": "栖息地",
       "useGifs": "使用 Gif",
       "alphabetical": "按字母顺序排列",
       "bestiaryId": "动物寓言集 ID",
@@ -276,7 +322,11 @@
       "characters": "角色",
       "partnerMonster": "伙伴怪物",
       "portraitNum": "肖像 {0}",
-      "hashCode": "97390884F5A853C5B3F67B8B324EA2AE"
+      "tags": "标签",
+      "overworld": "世界大事",
+      "percentTitle": "百分比",
+      "backup": "备份",
+      "hashCode": "5EA56B7AAAC697C0B082711C71E273F4"
     }
   }
 }

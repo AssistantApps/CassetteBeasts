@@ -1,18 +1,20 @@
 {{#> layouts/default }}
 
-{{> partials/breadcrumb }}
+<div class="page-options-with-breadcrumbs">
+  {{> partials/breadcrumb }}
 
-<div class="page-options">
-  <label>
-    <input id="monster-grid-checkbox" type="checkbox" role="switch" name="animated images"
-      onchange="toggleClassToId('monster-grid', 'useGif', this.checked); setSetting('useGif', this.checked)">
-    <span>{{lookup @root.translate 'useGifs'}}</span>
-  </label>
-  <select name="Sort by" aria-label="Sort by" required
-    onchange="orderItemsByDataAttr('monster-grid', event.target.value)">
-    <option value="id">{{lookup @root.translate 'bestiaryId'}}</option>
-    <option value="title">{{lookup @root.translate 'alphabetical'}}</option>
-  </select>
+  <div class="page-options">
+    <label>
+      <input id="monster-grid-checkbox" type="checkbox" role="switch" name="animated images"
+        onchange="toggleClassToId('monster-grid', 'useGif', this.checked); setSetting('useGif', this.checked)">
+      <span>{{lookup @root.translate 'useGifs'}}</span>
+    </label>
+    <select name="Sort by" aria-label="Sort by" required
+      onchange="orderItemsByDataAttr('monster-grid', event.target.value)">
+      <option value="id">{{lookup @root.translate 'bestiaryId'}}</option>
+      <option value="title">{{lookup @root.translate 'alphabetical'}}</option>
+    </select>
+  </div>
 </div>
 
 <section id="search">
@@ -21,7 +23,9 @@
 </section>
 
 <section id="monster-grid" class="item-grid-list mb-3">
-  <h2 class="hidden">{{lookup @root.translate 'UI_BESTIARY_LIST_MODE_VIEW_MONSTERS'}}</h2>
+  <div class="meta">
+    <h1>{{lookup @root.translate 'UI_BESTIARY_LIST_MODE_VIEW_MONSTERS'}}</h1>
+  </div>
   {{#each data.list}}
   <a href="/{{@root.langCode}}{{@root.routes.monsters}}/{{this.resource_name}}.html"
     class="grid-list-item item {{#if this.isSecret}}secret {{/if}}animate__animated animate__fadeIn"

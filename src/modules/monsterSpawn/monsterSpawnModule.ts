@@ -12,7 +12,6 @@ import { FolderPathHelper } from 'helpers/folderPathHelper';
 import { readItemDetail } from 'modules/baseModule';
 import { CommonModule } from 'modules/commonModule';
 import { monsterSpawnMapFromDetailList } from './monsterSpawnFormMapDetailList';
-import { IVector2D } from 'contracts/vector';
 
 export class MonsterSpawnModule extends CommonModule<IMonsterSpawn> {
   private _folder = FolderPathHelper.monsterSpawn();
@@ -90,7 +89,7 @@ export class MonsterSpawnModule extends CommonModule<IMonsterSpawn> {
           percentStr: percentMonster.toFixed(2),
           available_specific_time: isAllDay ? undefined : true,
         };
-        if (worldMonsterKey.length < 1) {
+        if (worldMonsterKey.length > 0) {
           const percentWorld = (spec.weight / totalOverworldWeight) * 100;
           species_enhanced.push({
             ...baseItem,

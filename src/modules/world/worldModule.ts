@@ -1,30 +1,24 @@
 import fs from 'fs';
 
+import { breadcrumb } from 'constant/breadcrumb';
+import { handlebarTemplate } from 'constant/handlebar';
 import { IntermediateFile } from 'constant/intermediateFile';
 import { ModuleType } from 'constant/module';
+import { routes } from 'constant/route';
 import { ILocalisation } from 'contracts/localisation';
+import { IMonsterForm, IMonsterFormEnhanced, IMonsterFormSimplified } from 'contracts/monsterForm';
+import { IMonsterSpawn } from 'contracts/monsterSpawn';
 import { IWorld, IWorldEnhanced, IWorldMetaDataEnhanced } from 'contracts/world';
 import { FolderPathHelper } from 'helpers/folderPathHelper';
 import { copyImageFromRes, copyImageToGeneratedFolder } from 'helpers/imageHelper';
+import { getExternalResourcesImagePath } from 'mapper/externalResourceMapper';
+import { monsterToSimplified } from 'mapper/monsterMapper';
 import { readItemDetail } from 'modules/baseModule';
 import { CommonModule } from 'modules/commonModule';
 import { LocalisationModule } from 'modules/localisation/localisationModule';
-import { worldMapFromDetailList, worldMetaDataMapFromDetailList } from './worldMapFromDetailList';
-import { getExternalResourcesImagePath } from 'mapper/externalResourceMapper';
-import { tryParseInt } from 'helpers/mathHelper';
-import { breadcrumb } from 'constant/breadcrumb';
-import { handlebarTemplate } from 'constant/handlebar';
-import { routes } from 'constant/route';
-import { getHandlebar } from 'services/internal/handlebarService';
-import { anyObject } from 'helpers/typescriptHacks';
-import {
-  IMonsterSpawn,
-  IMonsterSpawnDetailsEnhanced,
-  IMonsterSpawnHabitatDetails,
-} from 'contracts/monsterSpawn';
-import { IMonsterForm, IMonsterFormEnhanced, IMonsterFormSimplified } from 'contracts/monsterForm';
 import { MonsterSpawnModule } from 'modules/monsterSpawn/monsterSpawnModule';
-import { monsterToSimplified } from 'mapper/monsterMapper';
+import { getHandlebar } from 'services/internal/handlebarService';
+import { worldMapFromDetailList, worldMetaDataMapFromDetailList } from './worldMapFromDetailList';
 
 export class WorldModule extends CommonModule<IWorld> {
   private _folders = [

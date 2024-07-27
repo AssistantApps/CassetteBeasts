@@ -1,5 +1,6 @@
 .page-container {
   position: relative;
+  padding-top: 0;
 }
 
 body.overflow-x-hidden {
@@ -40,11 +41,27 @@ body.overflow-x-hidden {
   flex: 1;
 }
 
+.page-options-with-breadcrumbs {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 1em;
+
+  .breadcrumb {
+    margin: 0;
+    height: unset;
+  }
+
+  .page-options {
+
+    >label,
+    >select {
+      margin: 0;
+    }
+  }
+}
+
 .page-options {
-  position: absolute;
-  top: 1em;
-  right: 0;
-  width: 100%;
+  flex: 1;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -62,7 +79,6 @@ body.overflow-x-hidden {
     display: flex;
     flex-direction: row;
     padding: 0.25em 0.75em;
-    height: 100%;
     border: var(--pico-border-width) solid var(--pico-form-element-border-color);
     border-radius: var(--pico-border-radius);
     outline: 0;

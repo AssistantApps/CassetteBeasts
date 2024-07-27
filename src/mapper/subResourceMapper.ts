@@ -1,8 +1,8 @@
 import { IExternalResource } from 'contracts/externalResource';
 import { ISubResource } from 'contracts/subResource';
 import { tryParseInt } from 'helpers/mathHelper';
-import { getExternalResource, getExternalResources } from './externalResourceMapper';
 import { getCleanedString, stringToBool } from 'helpers/stringHelper';
+import { getExternalResource, getExternalResources } from './externalResourceMapper';
 
 export const subResourceMapper = (line: string): ISubResource | undefined => {
   const regex = /\stype=\"(.+?)\"\sid=(\d+)/;

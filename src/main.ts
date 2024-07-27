@@ -15,11 +15,11 @@ import {
   templateGenerationSpeedPrompt,
   yesOrNoPrompt,
 } from 'misc/setup';
+import { generateSiteMap } from 'misc/sitemap';
 import { watchDevFiles } from 'misc/watchDevFiles';
 import { getModules } from 'modules';
 import { BOT_PATH } from 'services/internal/configService';
 import { getHandlebar } from 'services/internal/handlebarService';
-import { generateSiteMap } from 'misc/sitemap';
 
 const currentFileName = url.fileURLToPath(import.meta.url);
 const directory = path.dirname(currentFileName);

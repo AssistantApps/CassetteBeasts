@@ -1,30 +1,33 @@
 import fs from 'fs';
+import path from 'path';
 
+import { breadcrumb } from 'constant/breadcrumb';
+import { handlebarTemplate } from 'constant/handlebar';
 import { IntermediateFile } from 'constant/intermediateFile';
 import { ModuleType } from 'constant/module';
+import { paths } from 'constant/paths';
+import { routes } from 'constant/route';
+import { site } from 'constant/site';
+import { IElement, IElementEnhanced } from 'contracts/element';
 import { ILocalisation } from 'contracts/localisation';
+import { IMove, IMoveEnhanced, IMoveSimplified } from 'contracts/move';
 import { IStatusEffect, IStatusEffectEnhanced } from 'contracts/statusEffect';
+import { scaffoldFolderAndDelFileIfOverwrite } from 'helpers/fileHelper';
 import { FolderPathHelper } from 'helpers/folderPathHelper';
 import {
   copyImageFromRes,
   copyImageToGeneratedFolder,
   generateMetaImage,
 } from 'helpers/imageHelper';
+import { sortByStringProperty } from 'helpers/sortHelper';
+import { moveToSimplified } from 'mapper/moveMapper';
 import { readItemDetail } from 'modules/baseModule';
 import { CommonModule } from 'modules/commonModule';
-import { statusEffectMapFromDetailList } from './statusEffectMapFromDetailList';
 import { LocalisationModule } from 'modules/localisation/localisationModule';
-import { breadcrumb } from 'constant/breadcrumb';
-import { routes } from 'constant/route';
+import { MovesModule } from 'modules/moves/movesModule';
 import { getHandlebar } from 'services/internal/handlebarService';
-import { sortByStringProperty } from 'helpers/sortHelper';
-import { handlebarTemplate } from 'constant/handlebar';
-import { IElement, IElementEnhanced } from 'contracts/element';
-import path from 'path';
-import { paths } from 'constant/paths';
-import { scaffoldFolderAndDelFileIfOverwrite } from 'helpers/fileHelper';
+import { statusEffectMapFromDetailList } from './statusEffectMapFromDetailList';
 import { getStatusMetaImage } from './statusEffectMeta';
-import { site } from 'constant/site';
 
 export class StatusEffectModule extends CommonModule<IStatusEffect> {
   private _folder = FolderPathHelper.statusEffects();
@@ -33,7 +36,10 @@ export class StatusEffectModule extends CommonModule<IStatusEffect> {
     super({
       type: ModuleType.StatusEffect,
       intermediateFile: IntermediateFile.statusEffects,
-      dependsOn: [ModuleType.Localisation, ModuleType.Elements],
+      dependsOn: [
+        ModuleType.Localisation, //
+        ModuleType.Elements,
+      ],
     });
   }
 
@@ -72,11 +78,30 @@ export class StatusEffectModule extends CommonModule<IStatusEffect> {
         meta_image_url: `/assets/img/meta/${langCode}${routes.statusEffect}/${encodeURI(
           detail.id,
         )}.png`,
+
+        // initialise the following later
+        moves_that_cause_this_effect: [],
       };
 
       this._itemDetailMap[detailEnhanced.id] = detailEnhanced;
     }
     this.isReady = true;
+  };
+
+  combineData = async (langCode: string, modules: Array<CommonModule<unknown>>) => {
+    const moveModule = this.getModuleOfType<IMove>(modules, ModuleType.Moves, true) as MovesModule;
+    const statusEffectToMovesIdMap = moveModule.getStatusEffectToMovesIdMap();
+
+    for (const statusKey of Object.keys(this._itemDetailMap)) {
+      const moveIds = statusEffectToMovesIdMap[statusKey] ?? [];
+
+      const moves_that_cause_this_effect: Array<IMoveSimplified> = [];
+      for (const moveId of moveIds) {
+        const moveEnhanced = moveModule.get(moveId) as IMoveEnhanced;
+        moves_that_cause_this_effect.push(moveToSimplified(moveEnhanced));
+      }
+      this._itemDetailMap[statusKey].moves_that_cause_this_effect = moves_that_cause_this_effect;
+    }
   };
 
   getImagesFromGameFiles = async (overwrite: boolean) => {

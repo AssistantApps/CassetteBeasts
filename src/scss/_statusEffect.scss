@@ -29,7 +29,8 @@
         padding-inline: 0.5em;
         overflow: hidden;
         display: -webkit-box;
-        -webkit-line-clamp: 3; /* number of lines to show */
+        -webkit-line-clamp: 3;
+        /* number of lines to show */
         line-clamp: 3;
         -webkit-box-orient: vertical;
       }
@@ -52,6 +53,7 @@
       height: 2rem;
     }
   }
+
   .item-detail-card-body {
     padding: 0.5em 1em;
 
@@ -75,6 +77,35 @@
     pre {
       color: var(--card-foreground);
       background-color: darken($gameCardBackground, 10%);
+    }
+
+    .reverse-padding {
+      margin-inline: -1em;
+    }
+
+    .moves {
+      .type img {
+        margin-left: 1em;
+      }
+
+      td {
+        color: var(--card-foreground);
+        background: var(--card-background);
+        border-bottom-color: rgba(0, 0, 0, 0.1);
+        border-bottom-width: 2px;
+        font-size: 0.9rem;
+        transition: background-color 250ms ease-in-out;
+      }
+
+      .move {
+        color: var(--card-foreground);
+
+        .type img {
+          width: 2rem;
+          min-width: 1.5rem;
+          border-radius: 3px;
+        }
+      }
     }
   }
 }

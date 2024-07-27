@@ -1,6 +1,6 @@
 import { IBreadcrumb } from 'contracts/breadcrumb';
-import { routes } from './route';
 import { UIKeys } from './localisation';
+import { routes } from './route';
 
 export const breadcrumb = {
   home: (langCode: string, disabled: boolean = false): IBreadcrumb => ({

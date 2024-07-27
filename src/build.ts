@@ -8,10 +8,10 @@ import { generateFavicons } from 'misc/favicon';
 import { smartLoadingModules } from 'misc/moduleLoader';
 import { generateMainCss } from 'misc/sass';
 import { setupDirectories } from 'misc/setup';
+import { generateSiteMap } from 'misc/sitemap';
 import { getModules } from 'modules';
 import { BOT_PATH } from 'services/internal/configService';
 import { getHandlebar } from 'services/internal/handlebarService';
-import { generateSiteMap } from 'misc/sitemap';
 
 const currentFileName = url.fileURLToPath(import.meta.url);
 const directory = path.dirname(currentFileName);
@@ -44,7 +44,7 @@ const main = async () => {
     });
 
     for (const module of modules) {
-      await module.generateImages(true, modules);
+      await module.generateImages(false, modules);
     }
 
     for (const module of modules) {

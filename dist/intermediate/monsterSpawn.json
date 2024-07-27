@@ -21,9 +21,21 @@
     "habitat_name_localised": "Autumn Hill Caves",
     "species_enhanced": [
       {
+        "overworldMonsterId": "masquerattle",
+        "monsterId": "masquerattle",
+        "percent": 26.88172043010753,
+        "percentStr": "26.88"
+      },
+      {
         "monsterId": "masquerattle",
         "percent": 13.966480446927374,
         "percentStr": "13.97"
+      },
+      {
+        "overworldMonsterId": "masquerattle",
+        "monsterId": "jormungold",
+        "percent": 9.67741935483871,
+        "percentStr": "9.68"
       },
       {
         "monsterId": "jormungold",
@@ -31,9 +43,21 @@
         "percentStr": "5.03"
       },
       {
+        "overworldMonsterId": "allseer",
+        "monsterId": "allseer",
+        "percent": 26.88172043010753,
+        "percentStr": "26.88"
+      },
+      {
         "monsterId": "allseer",
         "percent": 13.966480446927374,
         "percentStr": "13.97"
+      },
+      {
+        "overworldMonsterId": "allseer",
+        "monsterId": "triphinx",
+        "percent": 9.67741935483871,
+        "percentStr": "9.68"
       },
       {
         "monsterId": "triphinx",
@@ -41,21 +65,9 @@
         "percentStr": "5.03"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "thwackalope",
-        "percent": 26.88172043010753,
-        "percentStr": "26.88"
-      },
-      {
         "monsterId": "thwackalope",
         "percent": 13.966480446927374,
         "percentStr": "13.97"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "macabra",
-        "percent": 9.67741935483871,
-        "percentStr": "9.68"
       },
       {
         "monsterId": "macabra",
@@ -63,32 +75,14 @@
         "percentStr": "5.03"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "folklord",
-        "percent": 9.67741935483871,
-        "percentStr": "9.68"
-      },
-      {
         "monsterId": "folklord",
         "percent": 5.027932960893853,
         "percentStr": "5.03"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "stardigrade",
-        "percent": 9.67741935483871,
-        "percentStr": "9.68"
-      },
-      {
         "monsterId": "stardigrade",
         "percent": 5.027932960893853,
         "percentStr": "5.03"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "muskrateer",
-        "percent": 26.88172043010753,
-        "percentStr": "26.88"
       },
       {
         "monsterId": "muskrateer",
@@ -96,15 +90,15 @@
         "percentStr": "13.97"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "salamagus",
-        "percent": 9.67741935483871,
-        "percentStr": "9.68"
-      },
-      {
         "monsterId": "salamagus",
         "percent": 5.027932960893853,
         "percentStr": "5.03"
+      },
+      {
+        "overworldMonsterId": "terracooka",
+        "monsterId": "terracooka",
+        "percent": 26.88172043010753,
+        "percentStr": "26.88"
       },
       {
         "monsterId": "terracooka",
@@ -159,9 +153,21 @@
     "habitat_name_localised": "Autumn Hill",
     "species_enhanced": [
       {
+        "overworldMonsterId": "masquerattle",
+        "monsterId": "masquerattle",
+        "percent": 33.33333333333333,
+        "percentStr": "33.33"
+      },
+      {
         "monsterId": "masquerattle",
         "percent": 20.703933747412005,
         "percentStr": "20.70"
+      },
+      {
+        "overworldMonsterId": "masquerattle",
+        "monsterId": "jormungold",
+        "percent": 16.666666666666664,
+        "percentStr": "16.67"
       },
       {
         "monsterId": "jormungold",
@@ -169,9 +175,21 @@
         "percentStr": "10.35"
       },
       {
+        "overworldMonsterId": "allseer",
+        "monsterId": "allseer",
+        "percent": 33.33333333333333,
+        "percentStr": "33.33"
+      },
+      {
         "monsterId": "allseer",
         "percent": 20.703933747412005,
         "percentStr": "20.70"
+      },
+      {
+        "overworldMonsterId": "allseer",
+        "monsterId": "triphinx",
+        "percent": 16.666666666666664,
+        "percentStr": "16.67"
       },
       {
         "monsterId": "triphinx",
@@ -179,21 +197,9 @@
         "percentStr": "10.35"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "thwackalope",
-        "percent": 33.33333333333333,
-        "percentStr": "33.33"
-      },
-      {
         "monsterId": "thwackalope",
         "percent": 20.703933747412005,
         "percentStr": "20.70"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "macabra",
-        "percent": 11,
-        "percentStr": "11.00"
       },
       {
         "monsterId": "macabra",
@@ -201,21 +207,9 @@
         "percentStr": "6.83"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "folklord",
-        "percent": 8.333333333333332,
-        "percentStr": "8.33"
-      },
-      {
         "monsterId": "folklord",
         "percent": 5.175983436853001,
         "percentStr": "5.18"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "stardigrade",
-        "percent": 8.333333333333332,
-        "percentStr": "8.33"
       },
       {
         "monsterId": "stardigrade",
@@ -249,9 +243,21 @@
     "habitat_name_localised": "Autumn Hill",
     "species_enhanced": [
       {
+        "overworldMonsterId": "bulletino",
+        "monsterId": "bulletino",
+        "percent": 66.66666666666666,
+        "percentStr": "66.67"
+      },
+      {
         "monsterId": "bulletino",
         "percent": 15.822784810126581,
         "percentStr": "15.82"
+      },
+      {
+        "overworldMonsterId": "bulletino",
+        "monsterId": "velocirifle",
+        "percent": 33.33333333333333,
+        "percentStr": "33.33"
       },
       {
         "monsterId": "velocirifle",
@@ -259,21 +265,9 @@
         "percentStr": "7.91"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "masquerattle",
-        "percent": 66.66666666666666,
-        "percentStr": "66.67"
-      },
-      {
         "monsterId": "masquerattle",
         "percent": 15.822784810126581,
         "percentStr": "15.82"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "jormungold",
-        "percent": 33.33333333333333,
-        "percentStr": "33.33"
       },
       {
         "monsterId": "jormungold",
@@ -281,21 +275,9 @@
         "percentStr": "7.91"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "allseer",
-        "percent": 66.66666666666666,
-        "percentStr": "66.67"
-      },
-      {
         "monsterId": "allseer",
         "percent": 15.822784810126581,
         "percentStr": "15.82"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "triphinx",
-        "percent": 22,
-        "percentStr": "22.00"
       },
       {
         "monsterId": "triphinx",
@@ -303,43 +285,19 @@
         "percentStr": "5.22"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "thwackalope",
-        "percent": 66.66666666666666,
-        "percentStr": "66.67"
-      },
-      {
         "monsterId": "thwackalope",
         "percent": 15.822784810126581,
         "percentStr": "15.82"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "macabra",
-        "percent": 22,
-        "percentStr": "22.00"
-      },
-      {
         "monsterId": "macabra",
         "percent": 5.2215189873417724,
         "percentStr": "5.22"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "folklord",
-        "percent": 22,
-        "percentStr": "22.00"
-      },
-      {
         "monsterId": "folklord",
         "percent": 5.2215189873417724,
         "percentStr": "5.22"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "stardigrade",
-        "percent": 22,
-        "percentStr": "22.00"
       },
       {
         "monsterId": "stardigrade",
@@ -378,9 +336,21 @@
     "habitat_name_localised": "Autumn Hill",
     "species_enhanced": [
       {
+        "overworldMonsterId": "masquerattle",
+        "monsterId": "masquerattle",
+        "percent": 50,
+        "percentStr": "50.00"
+      },
+      {
         "monsterId": "masquerattle",
         "percent": 29.411764705882348,
         "percentStr": "29.41"
+      },
+      {
+        "overworldMonsterId": "allseer",
+        "monsterId": "allseer",
+        "percent": 50,
+        "percentStr": "50.00"
       },
       {
         "monsterId": "allseer",
@@ -388,32 +358,14 @@
         "percentStr": "29.41"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "thwackalope",
-        "percent": 50,
-        "percentStr": "50.00"
-      },
-      {
         "monsterId": "thwackalope",
         "percent": 29.411764705882348,
         "percentStr": "29.41"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "macabra",
-        "percent": 10,
-        "percentStr": "10.00"
-      },
-      {
         "monsterId": "macabra",
         "percent": 5.88235294117647,
         "percentStr": "5.88"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "stardigrade",
-        "percent": 10,
-        "percentStr": "10.00"
       },
       {
         "monsterId": "stardigrade",
@@ -449,26 +401,20 @@
     "habitat_name_localised": "Autumn Hill",
     "species_enhanced": [
       {
+        "overworldMonsterId": "bulletino",
+        "monsterId": "bulletino",
+        "percent": 100,
+        "percentStr": "100.00"
+      },
+      {
         "monsterId": "bulletino",
         "percent": 44.91017964071857,
         "percentStr": "44.91"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "masquerattle",
-        "percent": 33.33333333333333,
-        "percentStr": "33.33"
-      },
-      {
         "monsterId": "masquerattle",
         "percent": 14.970059880239523,
         "percentStr": "14.97"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "allseer",
-        "percent": 33.33333333333333,
-        "percentStr": "33.33"
       },
       {
         "monsterId": "allseer",
@@ -476,32 +422,14 @@
         "percentStr": "14.97"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "thwackalope",
-        "percent": 33.33333333333333,
-        "percentStr": "33.33"
-      },
-      {
         "monsterId": "thwackalope",
         "percent": 14.970059880239523,
         "percentStr": "14.97"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "macabra",
-        "percent": 11.333333333333334,
-        "percentStr": "11.33"
       },
       {
         "monsterId": "macabra",
         "percent": 5.089820359281438,
         "percentStr": "5.09"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "stardigrade",
-        "percent": 11.333333333333334,
-        "percentStr": "11.33"
       },
       {
         "monsterId": "stardigrade",
@@ -541,31 +469,31 @@
     "habitat_name_localised": "Mire Sea",
     "species_enhanced": [
       {
+        "overworldMonsterId": "diveal",
+        "monsterId": "diveal",
+        "percent": 88.88888888888889,
+        "percentStr": "88.89"
+      },
+      {
         "monsterId": "diveal",
         "percent": 44.44444444444444,
         "percentStr": "44.44"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "allseer",
-        "percent": 88.88888888888889,
-        "percentStr": "88.89"
-      },
-      {
         "monsterId": "allseer",
         "percent": 44.44444444444444,
         "percentStr": "44.44"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "triphinx",
-        "percent": 11.11111111111111,
-        "percentStr": "11.11"
-      },
-      {
         "monsterId": "triphinx",
         "percent": 5.555555555555555,
         "percentStr": "5.56"
+      },
+      {
+        "overworldMonsterId": "icepeck",
+        "monsterId": "icepeck",
+        "percent": 11.11111111111111,
+        "percentStr": "11.11"
       },
       {
         "monsterId": "icepeck",
@@ -601,9 +529,21 @@
     "habitat_name_localised": "Autumn Hill",
     "species_enhanced": [
       {
+        "overworldMonsterId": "springheel",
+        "monsterId": "snoopin",
+        "percent": 50,
+        "percentStr": "50.00"
+      },
+      {
         "monsterId": "snoopin",
         "percent": 17.857142857142858,
         "percentStr": "17.86"
+      },
+      {
+        "overworldMonsterId": "springheel",
+        "monsterId": "hopskin",
+        "percent": 50,
+        "percentStr": "50.00"
       },
       {
         "monsterId": "hopskin",
@@ -611,21 +551,9 @@
         "percentStr": "17.86"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "masquerattle",
-        "percent": 50,
-        "percentStr": "50.00"
-      },
-      {
         "monsterId": "masquerattle",
         "percent": 17.857142857142858,
         "percentStr": "17.86"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "allseer",
-        "percent": 50,
-        "percentStr": "50.00"
       },
       {
         "monsterId": "allseer",
@@ -633,32 +561,14 @@
         "percentStr": "17.86"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "thwackalope",
-        "percent": 50,
-        "percentStr": "50.00"
-      },
-      {
         "monsterId": "thwackalope",
         "percent": 17.857142857142858,
         "percentStr": "17.86"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "macabra",
-        "percent": 15,
-        "percentStr": "15.00"
       },
       {
         "monsterId": "macabra",
         "percent": 5.357142857142858,
         "percentStr": "5.36"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "stardigrade",
-        "percent": 15,
-        "percentStr": "15.00"
       },
       {
         "monsterId": "stardigrade",
@@ -698,43 +608,19 @@
     "habitat_name_localised": "Mire Sea",
     "species_enhanced": [
       {
-        "overworldMonsterId": "",
-        "monsterId": "diveal",
-        "percent": null,
-        "percentStr": "Infinity"
-      },
-      {
         "monsterId": "diveal",
         "percent": 44.44444444444444,
         "percentStr": "44.44"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "allseer",
-        "percent": null,
-        "percentStr": "Infinity"
-      },
-      {
         "monsterId": "allseer",
         "percent": 44.44444444444444,
         "percentStr": "44.44"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "triphinx",
-        "percent": null,
-        "percentStr": "Infinity"
       },
       {
         "monsterId": "triphinx",
         "percent": 5.555555555555555,
         "percentStr": "5.56"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "stardigrade",
-        "percent": null,
-        "percentStr": "Infinity"
       },
       {
         "monsterId": "stardigrade",
@@ -770,9 +656,21 @@
     "habitat_name_localised": "Brokenhead",
     "species_enhanced": [
       {
+        "overworldMonsterId": "elfless",
+        "monsterId": "elfless",
+        "percent": 50,
+        "percentStr": "50.00"
+      },
+      {
         "monsterId": "elfless",
         "percent": 14.285714285714285,
         "percentStr": "14.29"
+      },
+      {
+        "overworldMonsterId": "pombomb",
+        "monsterId": "pombomb",
+        "percent": 50,
+        "percentStr": "50.00"
       },
       {
         "monsterId": "pombomb",
@@ -780,21 +678,9 @@
         "percentStr": "14.29"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "kittelly",
-        "percent": 50,
-        "percentStr": "50.00"
-      },
-      {
         "monsterId": "kittelly",
         "percent": 14.285714285714285,
         "percentStr": "14.29"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "clocksley",
-        "percent": 50,
-        "percentStr": "50.00"
       },
       {
         "monsterId": "clocksley",
@@ -802,32 +688,14 @@
         "percentStr": "14.29"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "brushroom",
-        "percent": 50,
-        "percentStr": "50.00"
-      },
-      {
         "monsterId": "brushroom",
         "percent": 14.285714285714285,
         "percentStr": "14.29"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "sirenade",
-        "percent": 50,
-        "percentStr": "50.00"
-      },
-      {
         "monsterId": "sirenade",
         "percent": 14.285714285714285,
         "percentStr": "14.29"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "spirouette",
-        "percent": 50,
-        "percentStr": "50.00"
       },
       {
         "monsterId": "spirouette",
@@ -867,6 +735,12 @@
     "habitat_name_localised": "Cast Iron Shore",
     "species_enhanced": [
       {
+        "overworldMonsterId": "undyintentacle",
+        "monsterId": "undyin",
+        "percent": 100,
+        "percentStr": "100.00"
+      },
+      {
         "monsterId": "undyin",
         "percent": 100,
         "percentStr": "100.00"
@@ -888,15 +762,15 @@
     "num_species": 11,
     "species_enhanced": [
       {
+        "overworldMonsterId": "twirligig",
+        "monsterId": "twirligig",
+        "percent": 38.095238095238095,
+        "percentStr": "38.10"
+      },
+      {
         "monsterId": "twirligig",
         "percent": 15.503875968992247,
         "percentStr": "15.50"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "blossomaw",
-        "percent": 19.047619047619047,
-        "percentStr": "19.05"
       },
       {
         "monsterId": "blossomaw",
@@ -904,9 +778,21 @@
         "percentStr": "7.75"
       },
       {
+        "overworldMonsterId": "elfless",
+        "monsterId": "elfless",
+        "percent": 12.380952380952381,
+        "percentStr": "12.38"
+      },
+      {
         "monsterId": "elfless",
         "percent": 5.038759689922481,
         "percentStr": "5.04"
+      },
+      {
+        "overworldMonsterId": "dominoth",
+        "monsterId": "dominoth",
+        "percent": 12.380952380952381,
+        "percentStr": "12.38"
       },
       {
         "monsterId": "dominoth",
@@ -914,14 +800,35 @@
         "percentStr": "5.04"
       },
       {
+        "overworldMonsterId": "dominoth",
+        "monsterId": "wingloom",
+        "percent": 12.380952380952381,
+        "percentStr": "12.38"
+      },
+      {
         "monsterId": "wingloom",
         "percent": 5.038759689922481,
         "percentStr": "5.04"
       },
       {
+        "overworldMonsterId": "dominoth",
+        "monsterId": "mothmanic",
+        "percent": 12.380952380952381,
+        "percentStr": "12.38"
+      },
+      {
         "monsterId": "mothmanic",
         "percent": 5.038759689922481,
         "percentStr": "5.04"
+      },
+      {
+        "overworldMonsterId": "puppercut",
+        "hour_min": 18,
+        "hour_max": 6,
+        "monsterId": "puppercut",
+        "percent": 12.380952380952381,
+        "percentStr": "12.38",
+        "available_specific_time": true
       },
       {
         "hour_min": 18,
@@ -932,21 +839,9 @@
         "available_specific_time": true
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "dandylion",
-        "percent": 38.095238095238095,
-        "percentStr": "38.10"
-      },
-      {
         "monsterId": "dandylion",
         "percent": 15.503875968992247,
         "percentStr": "15.50"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "frillypad",
-        "percent": 19.047619047619047,
-        "percentStr": "19.05"
       },
       {
         "monsterId": "frillypad",
@@ -954,21 +849,9 @@
         "percentStr": "7.75"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "liligator",
-        "percent": 12.380952380952381,
-        "percentStr": "12.38"
-      },
-      {
         "monsterId": "liligator",
         "percent": 5.038759689922481,
         "percentStr": "5.04"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "glaistain",
-        "percent": 57.14285714285714,
-        "percentStr": "57.14"
       },
       {
         "monsterId": "glaistain",
@@ -1030,9 +913,21 @@
     "habitat_name_localised": "The Deadlands",
     "species_enhanced": [
       {
+        "overworldMonsterId": "nevermort",
+        "monsterId": "nevermort",
+        "percent": 40,
+        "percentStr": "40.00"
+      },
+      {
         "monsterId": "nevermort",
         "percent": 31.57894736842105,
         "percentStr": "31.58"
+      },
+      {
+        "overworldMonsterId": "squirey",
+        "monsterId": "squirey",
+        "percent": 26.666666666666668,
+        "percentStr": "26.67"
       },
       {
         "monsterId": "squirey",
@@ -1040,20 +935,26 @@
         "percentStr": "21.05"
       },
       {
+        "overworldMonsterId": "squirey",
+        "monsterId": "manispear",
+        "percent": 6.666666666666667,
+        "percentStr": "6.67"
+      },
+      {
         "monsterId": "manispear",
         "percent": 5.263157894736842,
         "percentStr": "5.26"
       },
       {
+        "overworldMonsterId": "traffikrab",
+        "monsterId": "traffikrab",
+        "percent": 26.666666666666668,
+        "percentStr": "26.67"
+      },
+      {
         "monsterId": "traffikrab",
         "percent": 21.052631578947366,
         "percentStr": "21.05"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "carniviper",
-        "percent": 26.666666666666668,
-        "percentStr": "26.67"
       },
       {
         "monsterId": "carniviper",
@@ -1094,9 +995,21 @@
     "habitat_name_localised": "Deadlands Caves",
     "species_enhanced": [
       {
+        "overworldMonsterId": "carniviper",
+        "monsterId": "carniviper",
+        "percent": 22.22222222222222,
+        "percentStr": "22.22"
+      },
+      {
         "monsterId": "carniviper",
         "percent": 15.384615384615385,
         "percentStr": "15.38"
+      },
+      {
+        "overworldMonsterId": "squirey",
+        "monsterId": "squirey",
+        "percent": 22.22222222222222,
+        "percentStr": "22.22"
       },
       {
         "monsterId": "squirey",
@@ -1104,9 +1017,21 @@
         "percentStr": "15.38"
       },
       {
+        "overworldMonsterId": "squirey",
+        "monsterId": "manispear",
+        "percent": 11.11111111111111,
+        "percentStr": "11.11"
+      },
+      {
         "monsterId": "manispear",
         "percent": 7.6923076923076925,
         "percentStr": "7.69"
+      },
+      {
+        "overworldMonsterId": "nevermort",
+        "monsterId": "nevermort",
+        "percent": 22.22222222222222,
+        "percentStr": "22.22"
       },
       {
         "monsterId": "nevermort",
@@ -1114,26 +1039,20 @@
         "percentStr": "15.38"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "springheel",
-        "percent": 22.22222222222222,
-        "percentStr": "22.22"
-      },
-      {
         "monsterId": "springheel",
         "percent": 15.384615384615385,
         "percentStr": "15.38"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "muskrateer",
-        "percent": 22.22222222222222,
-        "percentStr": "22.22"
-      },
-      {
         "monsterId": "muskrateer",
         "percent": 15.384615384615385,
         "percentStr": "15.38"
+      },
+      {
+        "overworldMonsterId": "terracooka",
+        "monsterId": "terracooka",
+        "percent": 22.22222222222222,
+        "percentStr": "22.22"
       },
       {
         "monsterId": "terracooka",
@@ -1163,13 +1082,13 @@
     "habitat_name_localised": "Dino Quarry, The Deadlands",
     "species_enhanced": [
       {
+        "overworldMonsterId": "bulletino",
         "monsterId": "bulletino",
-        "percent": 50,
-        "percentStr": "50.00"
+        "percent": 100,
+        "percentStr": "100.00"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "nevermort",
+        "monsterId": "bulletino",
         "percent": 50,
         "percentStr": "50.00"
       },
@@ -1177,12 +1096,6 @@
         "monsterId": "nevermort",
         "percent": 25,
         "percentStr": "25.00"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "squirey",
-        "percent": 50,
-        "percentStr": "50.00"
       },
       {
         "monsterId": "squirey",
@@ -1216,9 +1129,21 @@
     "habitat_name_localised": "The Deadlands",
     "species_enhanced": [
       {
+        "overworldMonsterId": "springheel",
+        "monsterId": "springheel",
+        "percent": 66.66666666666666,
+        "percentStr": "66.67"
+      },
+      {
         "monsterId": "springheel",
         "percent": 27.027027027027025,
         "percentStr": "27.03"
+      },
+      {
+        "overworldMonsterId": "springheel",
+        "monsterId": "hopskin",
+        "percent": 33.33333333333333,
+        "percentStr": "33.33"
       },
       {
         "monsterId": "hopskin",
@@ -1226,32 +1151,14 @@
         "percentStr": "13.51"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "nevermort",
-        "percent": 66.66666666666666,
-        "percentStr": "66.67"
-      },
-      {
         "monsterId": "nevermort",
         "percent": 27.027027027027025,
         "percentStr": "27.03"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "squirey",
-        "percent": 66.66666666666666,
-        "percentStr": "66.67"
-      },
-      {
         "monsterId": "squirey",
         "percent": 27.027027027027025,
         "percentStr": "27.03"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "manispear",
-        "percent": 13.333333333333334,
-        "percentStr": "13.33"
       },
       {
         "monsterId": "manispear",
@@ -1291,15 +1198,15 @@
     "habitat_name_localised": "New London, The Deadlands",
     "species_enhanced": [
       {
-        "overworldMonsterId": "",
-        "monsterId": "carniviper",
-        "percent": 23.094688221709006,
-        "percentStr": "23.09"
-      },
-      {
         "monsterId": "carniviper",
         "percent": 15.797788309636651,
         "percentStr": "15.80"
+      },
+      {
+        "overworldMonsterId": "nevermort",
+        "monsterId": "nevermort",
+        "percent": 23.094688221709006,
+        "percentStr": "23.09"
       },
       {
         "monsterId": "nevermort",
@@ -1307,9 +1214,21 @@
         "percentStr": "15.80"
       },
       {
+        "overworldMonsterId": "springheel",
+        "monsterId": "hopskin",
+        "percent": 23.094688221709006,
+        "percentStr": "23.09"
+      },
+      {
         "monsterId": "hopskin",
         "percent": 15.797788309636651,
         "percentStr": "15.80"
+      },
+      {
+        "overworldMonsterId": "springheel",
+        "monsterId": "snoopin",
+        "percent": 23.094688221709006,
+        "percentStr": "23.09"
       },
       {
         "monsterId": "snoopin",
@@ -1317,20 +1236,26 @@
         "percentStr": "15.80"
       },
       {
+        "overworldMonsterId": "springheel",
+        "monsterId": "ripterra",
+        "percent": 7.621247113163973,
+        "percentStr": "7.62"
+      },
+      {
         "monsterId": "ripterra",
         "percent": 5.213270142180095,
         "percentStr": "5.21"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "djinn_entonic",
-        "percent": 23.094688221709006,
-        "percentStr": "23.09"
-      },
-      {
         "monsterId": "djinn_entonic",
         "percent": 15.797788309636651,
         "percentStr": "15.80"
+      },
+      {
+        "overworldMonsterId": "sanzatime",
+        "monsterId": "sanzatime",
+        "percent": 23.094688221709006,
+        "percentStr": "23.09"
       },
       {
         "monsterId": "sanzatime",
@@ -1354,26 +1279,20 @@
     "num_species": 3,
     "species_enhanced": [
       {
+        "overworldMonsterId": "traffikrab",
+        "monsterId": "traffikrab",
+        "percent": 100,
+        "percentStr": "100.00"
+      },
+      {
         "monsterId": "traffikrab",
         "percent": 44.44444444444444,
         "percentStr": "44.44"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "burnace",
-        "percent": 100,
-        "percentStr": "100.00"
-      },
-      {
         "monsterId": "burnace",
         "percent": 44.44444444444444,
         "percentStr": "44.44"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "smogmagog",
-        "percent": 25,
-        "percentStr": "25.00"
       },
       {
         "monsterId": "smogmagog",
@@ -1393,9 +1312,21 @@
     "num_species": 4,
     "species_enhanced": [
       {
+        "overworldMonsterId": "queenyx",
+        "monsterId": "queenyx",
+        "percent": 50,
+        "percentStr": "50.00"
+      },
+      {
         "monsterId": "queenyx",
         "percent": 25,
         "percentStr": "25.00"
+      },
+      {
+        "overworldMonsterId": "faucetear",
+        "monsterId": "fountess",
+        "percent": 50,
+        "percentStr": "50.00"
       },
       {
         "monsterId": "fountess",
@@ -1403,21 +1334,9 @@
         "percentStr": "25.00"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "smogmagog",
-        "percent": 50,
-        "percentStr": "50.00"
-      },
-      {
         "monsterId": "smogmagog",
         "percent": 25,
         "percentStr": "25.00"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "djinn_entonic",
-        "percent": 50,
-        "percentStr": "50.00"
       },
       {
         "monsterId": "djinn_entonic",
@@ -1444,9 +1363,21 @@
     "habitat_name_localised": "Glowcester Road Station",
     "species_enhanced": [
       {
+        "overworldMonsterId": "carniviper",
+        "monsterId": "carniviper",
+        "percent": 33.33333333333333,
+        "percentStr": "33.33"
+      },
+      {
         "monsterId": "carniviper",
         "percent": 31.25,
         "percentStr": "31.25"
+      },
+      {
+        "overworldMonsterId": "terracooka",
+        "monsterId": "terracooka",
+        "percent": 33.33333333333333,
+        "percentStr": "33.33"
       },
       {
         "monsterId": "terracooka",
@@ -1454,15 +1385,15 @@
         "percentStr": "31.25"
       },
       {
+        "overworldMonsterId": "faucetear",
+        "monsterId": "faucetear",
+        "percent": 33.33333333333333,
+        "percentStr": "33.33"
+      },
+      {
         "monsterId": "faucetear",
         "percent": 31.25,
         "percentStr": "31.25"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "burnace",
-        "percent": 6.666666666666667,
-        "percentStr": "6.67"
       },
       {
         "monsterId": "burnace",
@@ -1491,9 +1422,21 @@
     "habitat_name_localised": "Aldgrave Tomb Station",
     "species_enhanced": [
       {
+        "overworldMonsterId": "jellyton",
+        "monsterId": "jellyton",
+        "percent": 26.666666666666668,
+        "percentStr": "26.67"
+      },
+      {
         "monsterId": "jellyton",
         "percent": 21.052631578947366,
         "percentStr": "21.05"
+      },
+      {
+        "overworldMonsterId": "pawndead",
+        "monsterId": "pawndead",
+        "percent": 26.666666666666668,
+        "percentStr": "26.67"
       },
       {
         "monsterId": "pawndead",
@@ -1501,9 +1444,21 @@
         "percentStr": "21.05"
       },
       {
+        "overworldMonsterId": "pawndead",
+        "monsterId": "skelevangelist",
+        "percent": 26.666666666666668,
+        "percentStr": "26.67"
+      },
+      {
         "monsterId": "skelevangelist",
         "percent": 21.052631578947366,
         "percentStr": "21.05"
+      },
+      {
+        "overworldMonsterId": "queenyx",
+        "monsterId": "queenyx",
+        "percent": 6.666666666666667,
+        "percentStr": "6.67"
       },
       {
         "monsterId": "queenyx",
@@ -1511,15 +1466,15 @@
         "percentStr": "5.26"
       },
       {
+        "overworldMonsterId": "pawndead",
+        "monsterId": "kingrave",
+        "percent": 13.333333333333334,
+        "percentStr": "13.33"
+      },
+      {
         "monsterId": "kingrave",
         "percent": 10.526315789473683,
         "percentStr": "10.53"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "scampire",
-        "percent": 26.666666666666668,
-        "percentStr": "26.67"
       },
       {
         "monsterId": "scampire",
@@ -1541,7 +1496,19 @@
     "num_species": 6,
     "species_enhanced": [
       {
+        "overworldMonsterId": "pawndead",
         "monsterId": "pawndead",
+        "percent": 16.666666666666664,
+        "percentStr": "16.67"
+      },
+      {
+        "monsterId": "pawndead",
+        "percent": 16.666666666666664,
+        "percentStr": "16.67"
+      },
+      {
+        "overworldMonsterId": "springheel",
+        "monsterId": "springheel",
         "percent": 16.666666666666664,
         "percentStr": "16.67"
       },
@@ -1551,7 +1518,19 @@
         "percentStr": "16.67"
       },
       {
+        "overworldMonsterId": "springheel",
         "monsterId": "hopskin",
+        "percent": 16.666666666666664,
+        "percentStr": "16.67"
+      },
+      {
+        "monsterId": "hopskin",
+        "percent": 16.666666666666664,
+        "percentStr": "16.67"
+      },
+      {
+        "overworldMonsterId": "springheel",
+        "monsterId": "ripterra",
         "percent": 16.666666666666664,
         "percentStr": "16.67"
       },
@@ -1561,7 +1540,19 @@
         "percentStr": "16.67"
       },
       {
+        "overworldMonsterId": "springheel",
         "monsterId": "snoopin",
+        "percent": 16.666666666666664,
+        "percentStr": "16.67"
+      },
+      {
+        "monsterId": "snoopin",
+        "percent": 16.666666666666664,
+        "percentStr": "16.67"
+      },
+      {
+        "overworldMonsterId": "springheel",
+        "monsterId": "scampire",
         "percent": 16.666666666666664,
         "percentStr": "16.67"
       },
@@ -1590,9 +1581,21 @@
     "habitat_name_localised": "Cherry Cross Station",
     "species_enhanced": [
       {
+        "overworldMonsterId": "dominoth",
+        "monsterId": "dominoth",
+        "percent": 33.33333333333333,
+        "percentStr": "33.33"
+      },
+      {
         "monsterId": "dominoth",
         "percent": 25,
         "percentStr": "25.00"
+      },
+      {
+        "overworldMonsterId": "dominoth",
+        "monsterId": "wingloom",
+        "percent": 33.33333333333333,
+        "percentStr": "33.33"
       },
       {
         "monsterId": "wingloom",
@@ -1600,15 +1603,15 @@
         "percentStr": "25.00"
       },
       {
+        "overworldMonsterId": "dominoth",
+        "monsterId": "mothmanic",
+        "percent": 33.33333333333333,
+        "percentStr": "33.33"
+      },
+      {
         "monsterId": "mothmanic",
         "percent": 25,
         "percentStr": "25.00"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "elfless",
-        "percent": 33.33333333333333,
-        "percentStr": "33.33"
       },
       {
         "monsterId": "elfless",
@@ -1637,6 +1640,12 @@
     "habitat_name_localised": "Cherry Cross Station",
     "species_enhanced": [
       {
+        "overworldMonsterId": "elfless",
+        "monsterId": "elfless",
+        "percent": 100,
+        "percentStr": "100.00"
+      },
+      {
         "monsterId": "elfless",
         "percent": 100,
         "percentStr": "100.00"
@@ -1656,20 +1665,26 @@
     "num_species": 3,
     "species_enhanced": [
       {
-        "overworldMonsterId": "",
-        "monsterId": "thwackalope",
-        "percent": 50,
-        "percentStr": "50.00"
-      },
-      {
         "monsterId": "thwackalope",
         "percent": 33.33333333333333,
         "percentStr": "33.33"
+      },
+      {
+        "overworldMonsterId": "springheel",
+        "monsterId": "scampire",
+        "percent": 50,
+        "percentStr": "50.00"
       },
       {
         "monsterId": "scampire",
         "percent": 33.33333333333333,
         "percentStr": "33.33"
+      },
+      {
+        "overworldMonsterId": "queenyx",
+        "monsterId": "queenyx",
+        "percent": 50,
+        "percentStr": "50.00"
       },
       {
         "monsterId": "queenyx",
@@ -1696,21 +1711,9 @@
     "habitat_name_localised": "Cherry Cross Station",
     "species_enhanced": [
       {
-        "overworldMonsterId": "",
-        "monsterId": "dominoth",
-        "percent": 33.33333333333333,
-        "percentStr": "33.33"
-      },
-      {
         "monsterId": "dominoth",
         "percent": 14.285714285714285,
         "percentStr": "14.29"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "wingloom",
-        "percent": 33.33333333333333,
-        "percentStr": "33.33"
       },
       {
         "monsterId": "wingloom",
@@ -1718,15 +1721,15 @@
         "percentStr": "14.29"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "mothmanic",
-        "percent": 33.33333333333333,
-        "percentStr": "33.33"
-      },
-      {
         "monsterId": "mothmanic",
         "percent": 14.285714285714285,
         "percentStr": "14.29"
+      },
+      {
+        "overworldMonsterId": "springheel",
+        "monsterId": "springheel",
+        "percent": 33.33333333333333,
+        "percentStr": "33.33"
       },
       {
         "monsterId": "springheel",
@@ -1734,20 +1737,26 @@
         "percentStr": "14.29"
       },
       {
+        "overworldMonsterId": "springheel",
+        "monsterId": "snoopin",
+        "percent": 33.33333333333333,
+        "percentStr": "33.33"
+      },
+      {
         "monsterId": "snoopin",
         "percent": 14.285714285714285,
         "percentStr": "14.29"
       },
       {
+        "overworldMonsterId": "springheel",
+        "monsterId": "hopskin",
+        "percent": 33.33333333333333,
+        "percentStr": "33.33"
+      },
+      {
         "monsterId": "hopskin",
         "percent": 14.285714285714285,
         "percentStr": "14.29"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "elfless",
-        "percent": 33.33333333333333,
-        "percentStr": "33.33"
       },
       {
         "monsterId": "elfless",
@@ -1776,20 +1785,26 @@
     "habitat_name_localised": "Icelington Station",
     "species_enhanced": [
       {
+        "overworldMonsterId": "icepeck",
+        "monsterId": "cryoshear",
+        "percent": 50,
+        "percentStr": "50.00"
+      },
+      {
         "monsterId": "cryoshear",
         "percent": 16.666666666666664,
         "percentStr": "16.67"
       },
       {
+        "overworldMonsterId": "spookionna",
+        "monsterId": "spooki-onna",
+        "percent": 50,
+        "percentStr": "50.00"
+      },
+      {
         "monsterId": "spooki-onna",
         "percent": 16.666666666666664,
         "percentStr": "16.67"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "smogmagog",
-        "percent": 200,
-        "percentStr": "200.00"
       },
       {
         "monsterId": "smogmagog",
@@ -1818,26 +1833,20 @@
     "habitat_name_localised": "Power Station",
     "species_enhanced": [
       {
-        "overworldMonsterId": "",
-        "monsterId": "anathema",
-        "percent": 800,
-        "percentStr": "800.00"
-      },
-      {
         "monsterId": "anathema",
         "percent": 47.05882352941176,
         "percentStr": "47.06"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "khepri",
-        "percent": 800,
-        "percentStr": "800.00"
-      },
-      {
         "monsterId": "khepri",
         "percent": 47.05882352941176,
         "percentStr": "47.06"
+      },
+      {
+        "overworldMonsterId": "faucetear",
+        "monsterId": "fountess",
+        "percent": 100,
+        "percentStr": "100.00"
       },
       {
         "monsterId": "fountess",
@@ -1866,31 +1875,31 @@
     "habitat_name_localised": "The “Titania” Shipwreck",
     "species_enhanced": [
       {
+        "overworldMonsterId": "traffikrab",
+        "monsterId": "traffikrab",
+        "percent": 50,
+        "percentStr": "50.00"
+      },
+      {
         "monsterId": "traffikrab",
         "percent": 25,
         "percentStr": "25.00"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "burnace",
-        "percent": 50,
-        "percentStr": "50.00"
-      },
-      {
         "monsterId": "burnace",
         "percent": 25,
         "percentStr": "25.00"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "undyin",
-        "percent": 50,
-        "percentStr": "50.00"
-      },
-      {
         "monsterId": "undyin",
         "percent": 25,
         "percentStr": "25.00"
+      },
+      {
+        "overworldMonsterId": "faucetear",
+        "monsterId": "fountess",
+        "percent": 50,
+        "percentStr": "50.00"
       },
       {
         "monsterId": "fountess",
@@ -1919,9 +1928,21 @@
     "habitat_name_localised": "Waterloop Station",
     "species_enhanced": [
       {
+        "overworldMonsterId": "traffikrab",
+        "monsterId": "lobstacle",
+        "percent": 30.76923076923077,
+        "percentStr": "30.77"
+      },
+      {
         "monsterId": "lobstacle",
         "percent": 21.052631578947366,
         "percentStr": "21.05"
+      },
+      {
+        "overworldMonsterId": "traffikrab",
+        "monsterId": "weevilite",
+        "percent": 30.76923076923077,
+        "percentStr": "30.77"
       },
       {
         "monsterId": "weevilite",
@@ -1929,9 +1950,21 @@
         "percentStr": "21.05"
       },
       {
+        "overworldMonsterId": "faucetear",
+        "monsterId": "faucetear",
+        "percent": 30.76923076923077,
+        "percentStr": "30.77"
+      },
+      {
         "monsterId": "faucetear",
         "percent": 21.052631578947366,
         "percentStr": "21.05"
+      },
+      {
+        "overworldMonsterId": "faucetear",
+        "monsterId": "fountess",
+        "percent": 7.6923076923076925,
+        "percentStr": "7.69"
       },
       {
         "monsterId": "fountess",
@@ -1939,32 +1972,14 @@
         "percentStr": "5.26"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "salamagus",
-        "percent": 7.6923076923076925,
-        "percentStr": "7.69"
-      },
-      {
         "monsterId": "salamagus",
         "percent": 5.263157894736842,
         "percentStr": "5.26"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "burnace",
-        "percent": 7.6923076923076925,
-        "percentStr": "7.69"
-      },
-      {
         "monsterId": "burnace",
         "percent": 5.263157894736842,
         "percentStr": "5.26"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "pondwalker",
-        "percent": 30.76923076923077,
-        "percentStr": "30.77"
       },
       {
         "monsterId": "pondwalker",
@@ -1993,15 +2008,15 @@
     "habitat_name_localised": "Eastham Woods Caves",
     "species_enhanced": [
       {
-        "overworldMonsterId": "",
-        "monsterId": "elfless",
-        "percent": 7.6923076923076925,
-        "percentStr": "7.69"
-      },
-      {
         "monsterId": "elfless",
         "percent": 5,
         "percentStr": "5.00"
+      },
+      {
+        "overworldMonsterId": "boltam",
+        "monsterId": "boltam",
+        "percent": 30.76923076923077,
+        "percentStr": "30.77"
       },
       {
         "monsterId": "boltam",
@@ -2009,21 +2024,9 @@
         "percentStr": "20.00"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "plasmantler",
-        "percent": 7.6923076923076925,
-        "percentStr": "7.69"
-      },
-      {
         "monsterId": "plasmantler",
         "percent": 5,
         "percentStr": "5.00"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "braxsuit",
-        "percent": 30.76923076923077,
-        "percentStr": "30.77"
       },
       {
         "monsterId": "braxsuit",
@@ -2031,15 +2034,18 @@
         "percentStr": "20.00"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "flapwoods",
-        "percent": 7.6923076923076925,
-        "percentStr": "7.69"
-      },
-      {
         "monsterId": "flapwoods",
         "percent": 5,
         "percentStr": "5.00"
+      },
+      {
+        "overworldMonsterId": "allseer",
+        "hour_min": 18,
+        "hour_max": 6,
+        "monsterId": "allseer",
+        "percent": 30.76923076923077,
+        "percentStr": "30.77",
+        "available_specific_time": true
       },
       {
         "hour_min": 18,
@@ -2050,12 +2056,27 @@
         "available_specific_time": true
       },
       {
+        "overworldMonsterId": "allseer",
+        "hour_min": 18,
+        "hour_max": 6,
+        "monsterId": "triphinx",
+        "percent": 7.6923076923076925,
+        "percentStr": "7.69",
+        "available_specific_time": true
+      },
+      {
         "hour_min": 18,
         "hour_max": 6,
         "monsterId": "triphinx",
         "percent": 5,
         "percentStr": "5.00",
         "available_specific_time": true
+      },
+      {
+        "overworldMonsterId": "terracooka",
+        "monsterId": "terracooka",
+        "percent": 30.76923076923077,
+        "percentStr": "30.77"
       },
       {
         "monsterId": "terracooka",
@@ -2089,9 +2110,21 @@
     "habitat_name_localised": "Eastham Woods",
     "species_enhanced": [
       {
+        "overworldMonsterId": "springheel",
+        "monsterId": "snoopin",
+        "percent": 50,
+        "percentStr": "50.00"
+      },
+      {
         "monsterId": "snoopin",
         "percent": 22.22222222222222,
         "percentStr": "22.22"
+      },
+      {
+        "overworldMonsterId": "springheel",
+        "monsterId": "hopskin",
+        "percent": 50,
+        "percentStr": "50.00"
       },
       {
         "monsterId": "hopskin",
@@ -2099,21 +2132,9 @@
         "percentStr": "22.22"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "boltam",
-        "percent": 50,
-        "percentStr": "50.00"
-      },
-      {
         "monsterId": "boltam",
         "percent": 22.22222222222222,
         "percentStr": "22.22"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "plasmantler",
-        "percent": 12.5,
-        "percentStr": "12.50"
       },
       {
         "monsterId": "plasmantler",
@@ -2121,21 +2142,9 @@
         "percentStr": "5.56"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "busheye",
-        "percent": 50,
-        "percentStr": "50.00"
-      },
-      {
         "monsterId": "busheye",
         "percent": 22.22222222222222,
         "percentStr": "22.22"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "huntorch",
-        "percent": 12.5,
-        "percentStr": "12.50"
       },
       {
         "monsterId": "huntorch",
@@ -2210,20 +2219,26 @@
     "habitat_name_localised": "Eastham Woods",
     "species_enhanced": [
       {
+        "overworldMonsterId": "boltam",
+        "monsterId": "boltam",
+        "percent": 33.33333333333333,
+        "percentStr": "33.33"
+      },
+      {
         "monsterId": "boltam",
         "percent": 20,
         "percentStr": "20.00"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "plasmantler",
-        "percent": 8.333333333333332,
-        "percentStr": "8.33"
-      },
-      {
         "monsterId": "plasmantler",
         "percent": 5,
         "percentStr": "5.00"
+      },
+      {
+        "overworldMonsterId": "busheye",
+        "monsterId": "busheye",
+        "percent": 33.33333333333333,
+        "percentStr": "33.33"
       },
       {
         "monsterId": "busheye",
@@ -2231,21 +2246,9 @@
         "percentStr": "20.00"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "huntorch",
-        "percent": 8.333333333333332,
-        "percentStr": "8.33"
-      },
-      {
         "monsterId": "huntorch",
         "percent": 5,
         "percentStr": "5.00"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "braxsuit",
-        "percent": 33.33333333333333,
-        "percentStr": "33.33"
       },
       {
         "monsterId": "braxsuit",
@@ -2253,26 +2256,23 @@
         "percentStr": "20.00"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "flapwoods",
-        "percent": 8.333333333333332,
-        "percentStr": "8.33"
-      },
-      {
         "monsterId": "flapwoods",
         "percent": 5,
         "percentStr": "5.00"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "elfless",
-        "percent": 8.333333333333332,
-        "percentStr": "8.33"
-      },
-      {
         "monsterId": "elfless",
         "percent": 5,
         "percentStr": "5.00"
+      },
+      {
+        "overworldMonsterId": "allseer",
+        "hour_min": 18,
+        "hour_max": 6,
+        "monsterId": "allseer",
+        "percent": 33.33333333333333,
+        "percentStr": "33.33",
+        "available_specific_time": true
       },
       {
         "hour_min": 18,
@@ -2323,9 +2323,21 @@
     "habitat_name_localised": "Eastham Woods",
     "species_enhanced": [
       {
+        "overworldMonsterId": "dominoth",
+        "monsterId": "dominoth",
+        "percent": 28.57142857142857,
+        "percentStr": "28.57"
+      },
+      {
         "monsterId": "dominoth",
         "percent": 23.52941176470588,
         "percentStr": "23.53"
+      },
+      {
+        "overworldMonsterId": "dominoth",
+        "monsterId": "wingloom",
+        "percent": 14.285714285714285,
+        "percentStr": "14.29"
       },
       {
         "monsterId": "wingloom",
@@ -2333,9 +2345,24 @@
         "percentStr": "11.76"
       },
       {
+        "overworldMonsterId": "busheye",
+        "monsterId": "busheye",
+        "percent": 28.57142857142857,
+        "percentStr": "28.57"
+      },
+      {
         "monsterId": "busheye",
         "percent": 23.52941176470588,
         "percentStr": "23.53"
+      },
+      {
+        "overworldMonsterId": "allseer",
+        "hour_min": 18,
+        "hour_max": 6,
+        "monsterId": "allseer",
+        "percent": 28.57142857142857,
+        "percentStr": "28.57",
+        "available_specific_time": true
       },
       {
         "hour_min": 18,
@@ -2346,21 +2373,9 @@
         "available_specific_time": true
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "braxsuit",
-        "percent": 14.285714285714285,
-        "percentStr": "14.29"
-      },
-      {
         "monsterId": "braxsuit",
         "percent": 11.76470588235294,
         "percentStr": "11.76"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "elfless",
-        "percent": 7.142857142857142,
-        "percentStr": "7.14"
       },
       {
         "monsterId": "elfless",
@@ -2384,32 +2399,14 @@
     "num_species": 3,
     "species_enhanced": [
       {
-        "overworldMonsterId": "",
-        "monsterId": "dominoth",
-        "percent": null,
-        "percentStr": "Infinity"
-      },
-      {
         "monsterId": "dominoth",
         "percent": 33.33333333333333,
         "percentStr": "33.33"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "tokusect",
-        "percent": null,
-        "percentStr": "Infinity"
-      },
-      {
         "monsterId": "tokusect",
         "percent": 33.33333333333333,
         "percentStr": "33.33"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "braxsuit",
-        "percent": null,
-        "percentStr": "Infinity"
       },
       {
         "monsterId": "braxsuit",
@@ -2429,32 +2426,14 @@
     "num_species": 3,
     "species_enhanced": [
       {
-        "overworldMonsterId": "",
-        "monsterId": "busheye",
-        "percent": null,
-        "percentStr": "Infinity"
-      },
-      {
         "monsterId": "busheye",
         "percent": 33.33333333333333,
         "percentStr": "33.33"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "blossomaw",
-        "percent": null,
-        "percentStr": "Infinity"
-      },
-      {
         "monsterId": "blossomaw",
         "percent": 33.33333333333333,
         "percentStr": "33.33"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "huntorch",
-        "percent": null,
-        "percentStr": "Infinity"
       },
       {
         "monsterId": "huntorch",
@@ -2474,32 +2453,14 @@
     "num_species": 3,
     "species_enhanced": [
       {
-        "overworldMonsterId": "",
-        "monsterId": "bulletino",
-        "percent": null,
-        "percentStr": "Infinity"
-      },
-      {
         "monsterId": "bulletino",
         "percent": 33.33333333333333,
         "percentStr": "33.33"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "velocirifle",
-        "percent": null,
-        "percentStr": "Infinity"
-      },
-      {
         "monsterId": "velocirifle",
         "percent": 33.33333333333333,
         "percentStr": "33.33"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "salamagus",
-        "percent": null,
-        "percentStr": "Infinity"
       },
       {
         "monsterId": "salamagus",
@@ -2519,21 +2480,9 @@
     "num_species": 2,
     "species_enhanced": [
       {
-        "overworldMonsterId": "",
-        "monsterId": "diveal",
-        "percent": null,
-        "percentStr": "Infinity"
-      },
-      {
         "monsterId": "diveal",
         "percent": 50,
         "percentStr": "50.00"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "scubalrus",
-        "percent": null,
-        "percentStr": "Infinity"
       },
       {
         "monsterId": "scubalrus",
@@ -2560,15 +2509,15 @@
     "habitat_name_localised": "Piper Farm",
     "species_enhanced": [
       {
-        "overworldMonsterId": "",
-        "monsterId": "nevermort",
-        "percent": 50,
-        "percentStr": "50.00"
-      },
-      {
         "monsterId": "nevermort",
         "percent": 33.33333333333333,
         "percentStr": "33.33"
+      },
+      {
+        "overworldMonsterId": "cluckabilly",
+        "monsterId": "cluckabilly",
+        "percent": 100,
+        "percentStr": "100.00"
       },
       {
         "monsterId": "cluckabilly",
@@ -2597,15 +2546,15 @@
     "habitat_name_localised": "Piper Farm",
     "species_enhanced": [
       {
+        "overworldMonsterId": "nevermort",
+        "monsterId": "nevermort",
+        "percent": 100,
+        "percentStr": "100.00"
+      },
+      {
         "monsterId": "nevermort",
         "percent": 33.33333333333333,
         "percentStr": "33.33"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "cluckabilly",
-        "percent": 200,
-        "percentStr": "200.00"
       },
       {
         "monsterId": "cluckabilly",
@@ -2634,26 +2583,20 @@
     "habitat_name_localised": "Piper Farm",
     "species_enhanced": [
       {
+        "overworldMonsterId": "jumpkin",
+        "monsterId": "jumpkin",
+        "percent": 100,
+        "percentStr": "100.00"
+      },
+      {
         "monsterId": "jumpkin",
         "percent": 11.11111111111111,
         "percentStr": "11.11"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "nevermort",
-        "percent": 400,
-        "percentStr": "400.00"
-      },
-      {
         "monsterId": "nevermort",
         "percent": 44.44444444444444,
         "percentStr": "44.44"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "cluckabilly",
-        "percent": 400,
-        "percentStr": "400.00"
       },
       {
         "monsterId": "cluckabilly",
@@ -2676,31 +2619,31 @@
     "habitat_name_localised": "Piper Farm",
     "species_enhanced": [
       {
+        "overworldMonsterId": "jellyton",
+        "monsterId": "jellyton",
+        "percent": 50,
+        "percentStr": "50.00"
+      },
+      {
         "monsterId": "jellyton",
         "percent": 25,
         "percentStr": "25.00"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "jumpkin",
-        "percent": 50,
-        "percentStr": "50.00"
-      },
-      {
         "monsterId": "jumpkin",
         "percent": 25,
         "percentStr": "25.00"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "nevermort",
-        "percent": 50,
-        "percentStr": "50.00"
-      },
-      {
         "monsterId": "nevermort",
         "percent": 25,
         "percentStr": "25.00"
+      },
+      {
+        "overworldMonsterId": "cluckabilly",
+        "monsterId": "cluckabilly",
+        "percent": 50,
+        "percentStr": "50.00"
       },
       {
         "monsterId": "cluckabilly",
@@ -2720,9 +2663,21 @@
     "num_species": 8,
     "species_enhanced": [
       {
+        "overworldMonsterId": "bulletino",
+        "monsterId": "bulletino",
+        "percent": 16.666666666666664,
+        "percentStr": "16.67"
+      },
+      {
         "monsterId": "bulletino",
         "percent": 12.5,
         "percentStr": "12.50"
+      },
+      {
+        "overworldMonsterId": "bulletino",
+        "monsterId": "velocirifle",
+        "percent": 16.666666666666664,
+        "percentStr": "16.67"
       },
       {
         "monsterId": "velocirifle",
@@ -2730,31 +2685,31 @@
         "percentStr": "12.50"
       },
       {
+        "overworldMonsterId": "bulletino",
+        "monsterId": "artillerex",
+        "percent": 16.666666666666664,
+        "percentStr": "16.67"
+      },
+      {
         "monsterId": "artillerex",
         "percent": 12.5,
         "percentStr": "12.50"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "salamagus",
-        "percent": 16.666666666666664,
-        "percentStr": "16.67"
-      },
-      {
         "monsterId": "salamagus",
         "percent": 12.5,
         "percentStr": "12.50"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "pyromeleon",
-        "percent": 16.666666666666664,
-        "percentStr": "16.67"
-      },
-      {
         "monsterId": "pyromeleon",
         "percent": 12.5,
         "percentStr": "12.50"
+      },
+      {
+        "overworldMonsterId": "terracooka",
+        "monsterId": "terracooka",
+        "percent": 16.666666666666664,
+        "percentStr": "16.67"
       },
       {
         "monsterId": "terracooka",
@@ -2762,9 +2717,21 @@
         "percentStr": "12.50"
       },
       {
+        "overworldMonsterId": "terracooka",
+        "monsterId": "coaldron",
+        "percent": 16.666666666666664,
+        "percentStr": "16.67"
+      },
+      {
         "monsterId": "coaldron",
         "percent": 12.5,
         "percentStr": "12.50"
+      },
+      {
+        "overworldMonsterId": "pombomb",
+        "monsterId": "pombomb",
+        "percent": 16.666666666666664,
+        "percentStr": "16.67"
       },
       {
         "monsterId": "pombomb",
@@ -2784,9 +2751,21 @@
     "num_species": 7,
     "species_enhanced": [
       {
+        "overworldMonsterId": "carniviper",
+        "monsterId": "carniviper",
+        "percent": 25,
+        "percentStr": "25.00"
+      },
+      {
         "monsterId": "carniviper",
         "percent": 14.285714285714285,
         "percentStr": "14.29"
+      },
+      {
+        "overworldMonsterId": "masquerattle",
+        "monsterId": "masquerattle",
+        "percent": 25,
+        "percentStr": "25.00"
       },
       {
         "monsterId": "masquerattle",
@@ -2794,20 +2773,26 @@
         "percentStr": "14.29"
       },
       {
+        "overworldMonsterId": "masquerattle",
+        "monsterId": "jormungold",
+        "percent": 25,
+        "percentStr": "25.00"
+      },
+      {
         "monsterId": "jormungold",
         "percent": 14.285714285714285,
         "percentStr": "14.29"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "mardiusa",
-        "percent": 25,
-        "percentStr": "25.00"
-      },
-      {
         "monsterId": "mardiusa",
         "percent": 14.285714285714285,
         "percentStr": "14.29"
+      },
+      {
+        "overworldMonsterId": "nevermort",
+        "monsterId": "nevermort",
+        "percent": 25,
+        "percentStr": "25.00"
       },
       {
         "monsterId": "nevermort",
@@ -2815,21 +2800,9 @@
         "percentStr": "14.29"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "apocrowlypse",
-        "percent": 25,
-        "percentStr": "25.00"
-      },
-      {
         "monsterId": "apocrowlypse",
         "percent": 14.285714285714285,
         "percentStr": "14.29"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "jellyton",
-        "percent": 25,
-        "percentStr": "25.00"
       },
       {
         "monsterId": "jellyton",
@@ -2849,9 +2822,21 @@
     "num_species": 9,
     "species_enhanced": [
       {
+        "overworldMonsterId": "diveal",
+        "monsterId": "diveal",
+        "percent": 25,
+        "percentStr": "25.00"
+      },
+      {
         "monsterId": "diveal",
         "percent": 11.11111111111111,
         "percentStr": "11.11"
+      },
+      {
+        "overworldMonsterId": "diveal",
+        "monsterId": "scubalrus",
+        "percent": 25,
+        "percentStr": "25.00"
       },
       {
         "monsterId": "scubalrus",
@@ -2859,21 +2844,9 @@
         "percentStr": "11.11"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "padpole",
-        "percent": 25,
-        "percentStr": "25.00"
-      },
-      {
         "monsterId": "padpole",
         "percent": 11.11111111111111,
         "percentStr": "11.11"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "frillypad",
-        "percent": 25,
-        "percentStr": "25.00"
       },
       {
         "monsterId": "frillypad",
@@ -2881,15 +2854,15 @@
         "percentStr": "11.11"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "liligator",
-        "percent": 25,
-        "percentStr": "25.00"
-      },
-      {
         "monsterId": "liligator",
         "percent": 11.11111111111111,
         "percentStr": "11.11"
+      },
+      {
+        "overworldMonsterId": "faucetear",
+        "monsterId": "faucetear",
+        "percent": 25,
+        "percentStr": "25.00"
       },
       {
         "monsterId": "faucetear",
@@ -2897,26 +2870,20 @@
         "percentStr": "11.11"
       },
       {
+        "overworldMonsterId": "faucetear",
+        "monsterId": "fountess",
+        "percent": 25,
+        "percentStr": "25.00"
+      },
+      {
         "monsterId": "fountess",
         "percent": 11.11111111111111,
         "percentStr": "11.11"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "pondwalker",
-        "percent": 25,
-        "percentStr": "25.00"
-      },
-      {
         "monsterId": "pondwalker",
         "percent": 11.11111111111111,
         "percentStr": "11.11"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "sharktanker",
-        "percent": 25,
-        "percentStr": "25.00"
       },
       {
         "monsterId": "sharktanker",
@@ -2948,9 +2915,21 @@
     "habitat_name_localised": "Lost Hearts Graveyard",
     "species_enhanced": [
       {
+        "overworldMonsterId": "jellyton",
+        "monsterId": "jellyton",
+        "percent": 21.276595744680854,
+        "percentStr": "21.28"
+      },
+      {
         "monsterId": "jellyton",
         "percent": 12.987012987012985,
         "percentStr": "12.99"
+      },
+      {
+        "overworldMonsterId": "pawndead",
+        "monsterId": "pawndead",
+        "percent": 21.276595744680854,
+        "percentStr": "21.28"
       },
       {
         "monsterId": "pawndead",
@@ -2958,15 +2937,15 @@
         "percentStr": "12.99"
       },
       {
+        "overworldMonsterId": "pawndead",
+        "monsterId": "skelevangelist",
+        "percent": 10.638297872340427,
+        "percentStr": "10.64"
+      },
+      {
         "monsterId": "skelevangelist",
         "percent": 6.493506493506493,
         "percentStr": "6.49"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "dandylion",
-        "percent": 42.55319148936171,
-        "percentStr": "42.55"
       },
       {
         "monsterId": "dandylion",
@@ -2974,11 +2953,29 @@
         "percentStr": "25.97"
       },
       {
+        "overworldMonsterId": "puppercut",
+        "hour_min": 18,
+        "hour_max": 6,
+        "monsterId": "puppercut",
+        "percent": 17.021276595744684,
+        "percentStr": "17.02",
+        "available_specific_time": true
+      },
+      {
         "hour_min": 18,
         "hour_max": 6,
         "monsterId": "puppercut",
         "percent": 10.38961038961039,
         "percentStr": "10.39",
+        "available_specific_time": true
+      },
+      {
+        "overworldMonsterId": "puppercut",
+        "hour_min": 18,
+        "hour_max": 6,
+        "monsterId": "southpaw",
+        "percent": 8.510638297872342,
+        "percentStr": "8.51",
         "available_specific_time": true
       },
       {
@@ -2990,20 +2987,20 @@
         "available_specific_time": true
       },
       {
-        "overworldMonsterId": "",
-        "hour_min": 18,
-        "hour_max": 6,
-        "monsterId": "scampire",
-        "percent": 21.276595744680854,
-        "percentStr": "21.28",
-        "available_specific_time": true
-      },
-      {
         "hour_min": 18,
         "hour_max": 6,
         "monsterId": "scampire",
         "percent": 12.987012987012985,
         "percentStr": "12.99",
+        "available_specific_time": true
+      },
+      {
+        "overworldMonsterId": "sanzatime",
+        "hour_min": 6,
+        "hour_max": 18,
+        "monsterId": "sanzatime",
+        "percent": 21.276595744680854,
+        "percentStr": "21.28",
         "available_specific_time": true
       },
       {
@@ -3030,9 +3027,21 @@
     "num_species": 9,
     "species_enhanced": [
       {
+        "overworldMonsterId": "jellyton",
+        "monsterId": "jellyton",
+        "percent": 22.22222222222222,
+        "percentStr": "22.22"
+      },
+      {
         "monsterId": "jellyton",
         "percent": 11.76470588235294,
         "percentStr": "11.76"
+      },
+      {
+        "overworldMonsterId": "pawndead",
+        "monsterId": "pawndead",
+        "percent": 22.22222222222222,
+        "percentStr": "22.22"
       },
       {
         "monsterId": "pawndead",
@@ -3040,15 +3049,15 @@
         "percentStr": "11.76"
       },
       {
+        "overworldMonsterId": "pawndead",
+        "monsterId": "skelevangelist",
+        "percent": 11.11111111111111,
+        "percentStr": "11.11"
+      },
+      {
         "monsterId": "skelevangelist",
         "percent": 5.88235294117647,
         "percentStr": "5.88"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "dandylion",
-        "percent": 44.44444444444444,
-        "percentStr": "44.44"
       },
       {
         "monsterId": "dandylion",
@@ -3056,11 +3065,29 @@
         "percentStr": "23.53"
       },
       {
+        "overworldMonsterId": "puppercut",
+        "hour_min": 18,
+        "hour_max": 6,
+        "monsterId": "puppercut",
+        "percent": 11.11111111111111,
+        "percentStr": "11.11",
+        "available_specific_time": true
+      },
+      {
         "hour_min": 18,
         "hour_max": 6,
         "monsterId": "puppercut",
         "percent": 5.88235294117647,
         "percentStr": "5.88",
+        "available_specific_time": true
+      },
+      {
+        "overworldMonsterId": "puppercut",
+        "hour_min": 18,
+        "hour_max": 6,
+        "monsterId": "southpaw",
+        "percent": 11.11111111111111,
+        "percentStr": "11.11",
         "available_specific_time": true
       },
       {
@@ -3072,20 +3099,20 @@
         "available_specific_time": true
       },
       {
-        "overworldMonsterId": "",
-        "hour_min": 18,
-        "hour_max": 6,
-        "monsterId": "scampire",
-        "percent": 22.22222222222222,
-        "percentStr": "22.22",
-        "available_specific_time": true
-      },
-      {
         "hour_min": 18,
         "hour_max": 6,
         "monsterId": "scampire",
         "percent": 11.76470588235294,
         "percentStr": "11.76",
+        "available_specific_time": true
+      },
+      {
+        "overworldMonsterId": "sanzatime",
+        "hour_min": 6,
+        "hour_max": 18,
+        "monsterId": "sanzatime",
+        "percent": 22.22222222222222,
+        "percentStr": "22.22",
         "available_specific_time": true
       },
       {
@@ -3095,12 +3122,6 @@
         "percent": 11.76470588235294,
         "percentStr": "11.76",
         "available_specific_time": true
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "bansheep",
-        "percent": 22.22222222222222,
-        "percentStr": "22.22"
       },
       {
         "monsterId": "bansheep",
@@ -3127,7 +3148,19 @@
     "habitat_name_localised": "Lost Hearts Graveyard",
     "species_enhanced": [
       {
+        "overworldMonsterId": "jellyton",
         "monsterId": "jellyton",
+        "percent": 23.52941176470588,
+        "percentStr": "23.53"
+      },
+      {
+        "monsterId": "jellyton",
+        "percent": 23.52941176470588,
+        "percentStr": "23.53"
+      },
+      {
+        "overworldMonsterId": "pawndead",
+        "monsterId": "pawndead",
         "percent": 23.52941176470588,
         "percentStr": "23.53"
       },
@@ -3137,11 +3170,18 @@
         "percentStr": "23.53"
       },
       {
+        "overworldMonsterId": "pawndead",
         "monsterId": "skelevangelist",
         "percent": 11.76470588235294,
         "percentStr": "11.76"
       },
       {
+        "monsterId": "skelevangelist",
+        "percent": 11.76470588235294,
+        "percentStr": "11.76"
+      },
+      {
+        "overworldMonsterId": "puppercut",
         "hour_min": 18,
         "hour_max": 6,
         "monsterId": "puppercut",
@@ -3152,9 +3192,35 @@
       {
         "hour_min": 18,
         "hour_max": 6,
+        "monsterId": "puppercut",
+        "percent": 11.76470588235294,
+        "percentStr": "11.76",
+        "available_specific_time": true
+      },
+      {
+        "overworldMonsterId": "puppercut",
+        "hour_min": 18,
+        "hour_max": 6,
         "monsterId": "southpaw",
         "percent": 5.88235294117647,
         "percentStr": "5.88",
+        "available_specific_time": true
+      },
+      {
+        "hour_min": 18,
+        "hour_max": 6,
+        "monsterId": "southpaw",
+        "percent": 5.88235294117647,
+        "percentStr": "5.88",
+        "available_specific_time": true
+      },
+      {
+        "overworldMonsterId": "sanzatime",
+        "hour_min": 6,
+        "hour_max": 18,
+        "monsterId": "sanzatime",
+        "percent": 23.52941176470588,
+        "percentStr": "23.53",
         "available_specific_time": true
       },
       {
@@ -3192,15 +3258,15 @@
     "habitat_name_localised": "Lost Hearts Graveyard",
     "species_enhanced": [
       {
-        "overworldMonsterId": "",
-        "monsterId": "jellyton",
-        "percent": 66.66666666666666,
-        "percentStr": "66.67"
-      },
-      {
         "monsterId": "jellyton",
         "percent": 13.513513513513512,
         "percentStr": "13.51"
+      },
+      {
+        "overworldMonsterId": "pawndead",
+        "monsterId": "pawndead",
+        "percent": 66.66666666666666,
+        "percentStr": "66.67"
       },
       {
         "monsterId": "pawndead",
@@ -3208,15 +3274,15 @@
         "percentStr": "13.51"
       },
       {
+        "overworldMonsterId": "pawndead",
+        "monsterId": "skelevangelist",
+        "percent": 33.33333333333333,
+        "percentStr": "33.33"
+      },
+      {
         "monsterId": "skelevangelist",
         "percent": 6.756756756756756,
         "percentStr": "6.76"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "dandylion",
-        "percent": 133.33333333333331,
-        "percentStr": "133.33"
       },
       {
         "monsterId": "dandylion",
@@ -3224,29 +3290,11 @@
         "percentStr": "27.03"
       },
       {
-        "overworldMonsterId": "",
-        "hour_min": 18,
-        "hour_max": 6,
-        "monsterId": "puppercut",
-        "percent": 33.33333333333333,
-        "percentStr": "33.33",
-        "available_specific_time": true
-      },
-      {
         "hour_min": 18,
         "hour_max": 6,
         "monsterId": "puppercut",
         "percent": 6.756756756756756,
         "percentStr": "6.76",
-        "available_specific_time": true
-      },
-      {
-        "overworldMonsterId": "",
-        "hour_min": 18,
-        "hour_max": 6,
-        "monsterId": "southpaw",
-        "percent": 26.666666666666668,
-        "percentStr": "26.67",
         "available_specific_time": true
       },
       {
@@ -3258,29 +3306,11 @@
         "available_specific_time": true
       },
       {
-        "overworldMonsterId": "",
-        "hour_min": 18,
-        "hour_max": 6,
-        "monsterId": "scampire",
-        "percent": 66.66666666666666,
-        "percentStr": "66.67",
-        "available_specific_time": true
-      },
-      {
         "hour_min": 18,
         "hour_max": 6,
         "monsterId": "scampire",
         "percent": 13.513513513513512,
         "percentStr": "13.51",
-        "available_specific_time": true
-      },
-      {
-        "overworldMonsterId": "",
-        "hour_min": 6,
-        "hour_max": 18,
-        "monsterId": "sanzatime",
-        "percent": 66.66666666666666,
-        "percentStr": "66.67",
         "available_specific_time": true
       },
       {
@@ -3314,32 +3344,14 @@
     "habitat_name_localised": "Lost Hearts Graveyard",
     "species_enhanced": [
       {
-        "overworldMonsterId": "",
-        "monsterId": "jellyton",
-        "percent": 33.33333333333333,
-        "percentStr": "33.33"
-      },
-      {
         "monsterId": "jellyton",
         "percent": 10.526315789473683,
         "percentStr": "10.53"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "pawndead",
-        "percent": 33.33333333333333,
-        "percentStr": "33.33"
-      },
-      {
         "monsterId": "pawndead",
         "percent": 10.526315789473683,
         "percentStr": "10.53"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "skelevangelist",
-        "percent": 16.666666666666664,
-        "percentStr": "16.67"
       },
       {
         "monsterId": "skelevangelist",
@@ -3347,26 +3359,11 @@
         "percentStr": "5.26"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "dandylion",
-        "percent": 66.66666666666666,
-        "percentStr": "66.67"
-      },
-      {
         "monsterId": "dandylion",
         "percent": 21.052631578947366,
         "percentStr": "21.05"
       },
       {
-        "overworldMonsterId": "",
-        "hour_min": 18,
-        "hour_max": 6,
-        "monsterId": "puppercut",
-        "percent": 16.666666666666664,
-        "percentStr": "16.67",
-        "available_specific_time": true
-      },
-      {
         "hour_min": 18,
         "hour_max": 6,
         "monsterId": "puppercut",
@@ -3375,20 +3372,20 @@
         "available_specific_time": true
       },
       {
-        "overworldMonsterId": "",
-        "hour_min": 18,
-        "hour_max": 6,
-        "monsterId": "southpaw",
-        "percent": 16.666666666666664,
-        "percentStr": "16.67",
-        "available_specific_time": true
-      },
-      {
         "hour_min": 18,
         "hour_max": 6,
         "monsterId": "southpaw",
         "percent": 5.263157894736842,
         "percentStr": "5.26",
+        "available_specific_time": true
+      },
+      {
+        "overworldMonsterId": "springheel",
+        "hour_min": 18,
+        "hour_max": 6,
+        "monsterId": "scampire",
+        "percent": 33.33333333333333,
+        "percentStr": "33.33",
         "available_specific_time": true
       },
       {
@@ -3400,20 +3397,20 @@
         "available_specific_time": true
       },
       {
-        "overworldMonsterId": "",
-        "hour_min": 6,
-        "hour_max": 18,
-        "monsterId": "sanzatime",
-        "percent": 33.33333333333333,
-        "percentStr": "33.33",
-        "available_specific_time": true
-      },
-      {
         "hour_min": 6,
         "hour_max": 18,
         "monsterId": "sanzatime",
         "percent": 10.526315789473683,
         "percentStr": "10.53",
+        "available_specific_time": true
+      },
+      {
+        "overworldMonsterId": "springheel",
+        "hour_min": 6,
+        "hour_max": 18,
+        "monsterId": "hopskin",
+        "percent": 33.33333333333333,
+        "percentStr": "33.33",
         "available_specific_time": true
       },
       {
@@ -3422,6 +3419,15 @@
         "monsterId": "hopskin",
         "percent": 10.526315789473683,
         "percentStr": "10.53",
+        "available_specific_time": true
+      },
+      {
+        "overworldMonsterId": "springheel",
+        "hour_min": 6,
+        "hour_max": 18,
+        "monsterId": "snoopin",
+        "percent": 33.33333333333333,
+        "percentStr": "33.33",
         "available_specific_time": true
       },
       {
@@ -3454,9 +3460,21 @@
     "habitat_name_localised": "“Ham”",
     "species_enhanced": [
       {
+        "overworldMonsterId": "squirey",
+        "monsterId": "squirey",
+        "percent": 25,
+        "percentStr": "25.00"
+      },
+      {
         "monsterId": "squirey",
         "percent": 21.052631578947366,
         "percentStr": "21.05"
+      },
+      {
+        "overworldMonsterId": "squirey",
+        "monsterId": "manispear",
+        "percent": 25,
+        "percentStr": "25.00"
       },
       {
         "monsterId": "manispear",
@@ -3464,21 +3482,9 @@
         "percentStr": "21.05"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "macabra",
-        "percent": 12.5,
-        "percentStr": "12.50"
-      },
-      {
         "monsterId": "macabra",
         "percent": 10.526315789473683,
         "percentStr": "10.53"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "folklord",
-        "percent": 6.25,
-        "percentStr": "6.25"
       },
       {
         "monsterId": "folklord",
@@ -3486,14 +3492,35 @@
         "percentStr": "5.26"
       },
       {
+        "overworldMonsterId": "dominoth",
+        "monsterId": "dominoth",
+        "percent": 25,
+        "percentStr": "25.00"
+      },
+      {
         "monsterId": "dominoth",
         "percent": 21.052631578947366,
         "percentStr": "21.05"
       },
       {
+        "overworldMonsterId": "dominoth",
+        "monsterId": "wingloom",
+        "percent": 12.5,
+        "percentStr": "12.50"
+      },
+      {
         "monsterId": "wingloom",
         "percent": 10.526315789473683,
         "percentStr": "10.53"
+      },
+      {
+        "overworldMonsterId": "puppercut",
+        "hour_min": 18,
+        "hour_max": 6,
+        "monsterId": "puppercut",
+        "percent": 12.5,
+        "percentStr": "12.50",
+        "available_specific_time": true
       },
       {
         "hour_min": 18,
@@ -3540,26 +3567,20 @@
     "habitat_name_localised": "Harbourtown Beach",
     "species_enhanced": [
       {
+        "overworldMonsterId": "traffikrab",
+        "monsterId": "traffikrab",
+        "percent": 100,
+        "percentStr": "100.00"
+      },
+      {
         "monsterId": "traffikrab",
         "percent": 33.33333333333333,
         "percentStr": "33.33"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "springheel",
-        "percent": 100,
-        "percentStr": "100.00"
-      },
-      {
         "monsterId": "springheel",
         "percent": 33.33333333333333,
         "percentStr": "33.33"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "carniviper",
-        "percent": 100,
-        "percentStr": "100.00"
       },
       {
         "monsterId": "carniviper",
@@ -3584,26 +3605,20 @@
     "num_species": 21,
     "species_enhanced": [
       {
+        "overworldMonsterId": "traffikrab",
+        "monsterId": "traffikrab",
+        "percent": 100,
+        "percentStr": "100.00"
+      },
+      {
         "monsterId": "traffikrab",
         "percent": 4.761904761904762,
         "percentStr": "4.76"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "springheel",
-        "percent": 100,
-        "percentStr": "100.00"
-      },
-      {
         "monsterId": "springheel",
         "percent": 4.761904761904762,
         "percentStr": "4.76"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "carniviper",
-        "percent": 100,
-        "percentStr": "100.00"
       },
       {
         "monsterId": "carniviper",
@@ -3611,21 +3626,9 @@
         "percentStr": "4.76"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "dandylion",
-        "percent": 100,
-        "percentStr": "100.00"
-      },
-      {
         "monsterId": "dandylion",
         "percent": 4.761904761904762,
         "percentStr": "4.76"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "dominoth",
-        "percent": 100,
-        "percentStr": "100.00"
       },
       {
         "monsterId": "dominoth",
@@ -3633,21 +3636,9 @@
         "percentStr": "4.76"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "squirey",
-        "percent": 100,
-        "percentStr": "100.00"
-      },
-      {
         "monsterId": "squirey",
         "percent": 4.761904761904762,
         "percentStr": "4.76"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "allseer",
-        "percent": 100,
-        "percentStr": "100.00"
       },
       {
         "monsterId": "allseer",
@@ -3655,21 +3646,9 @@
         "percentStr": "4.76"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "braxsuit",
-        "percent": 100,
-        "percentStr": "100.00"
-      },
-      {
         "monsterId": "braxsuit",
         "percent": 4.761904761904762,
         "percentStr": "4.76"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "sanzatime",
-        "percent": 100,
-        "percentStr": "100.00"
       },
       {
         "monsterId": "sanzatime",
@@ -3677,21 +3656,9 @@
         "percentStr": "4.76"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "salamagus",
-        "percent": 100,
-        "percentStr": "100.00"
-      },
-      {
         "monsterId": "salamagus",
         "percent": 4.761904761904762,
         "percentStr": "4.76"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "muskrateer",
-        "percent": 100,
-        "percentStr": "100.00"
       },
       {
         "monsterId": "muskrateer",
@@ -3699,21 +3666,9 @@
         "percentStr": "4.76"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "padpole",
-        "percent": 100,
-        "percentStr": "100.00"
-      },
-      {
         "monsterId": "padpole",
         "percent": 4.761904761904762,
         "percentStr": "4.76"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "busheye",
-        "percent": 100,
-        "percentStr": "100.00"
       },
       {
         "monsterId": "busheye",
@@ -3721,21 +3676,9 @@
         "percentStr": "4.76"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "terracooka",
-        "percent": 100,
-        "percentStr": "100.00"
-      },
-      {
         "monsterId": "terracooka",
         "percent": 4.761904761904762,
         "percentStr": "4.76"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "pawndead",
-        "percent": 100,
-        "percentStr": "100.00"
       },
       {
         "monsterId": "pawndead",
@@ -3743,21 +3686,9 @@
         "percentStr": "4.76"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "burnace",
-        "percent": 100,
-        "percentStr": "100.00"
-      },
-      {
         "monsterId": "burnace",
         "percent": 4.761904761904762,
         "percentStr": "4.76"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "faucetear",
-        "percent": 100,
-        "percentStr": "100.00"
       },
       {
         "monsterId": "faucetear",
@@ -3765,21 +3696,9 @@
         "percentStr": "4.76"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "pondwalker",
-        "percent": 100,
-        "percentStr": "100.00"
-      },
-      {
         "monsterId": "pondwalker",
         "percent": 4.761904761904762,
         "percentStr": "4.76"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "pombomb",
-        "percent": 100,
-        "percentStr": "100.00"
       },
       {
         "monsterId": "pombomb",
@@ -3787,21 +3706,9 @@
         "percentStr": "4.76"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "icepeck",
-        "percent": 100,
-        "percentStr": "100.00"
-      },
-      {
         "monsterId": "icepeck",
         "percent": 4.761904761904762,
         "percentStr": "4.76"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "sparktan",
-        "percent": 100,
-        "percentStr": "100.00"
       },
       {
         "monsterId": "sparktan",
@@ -3848,9 +3755,21 @@
     "habitat_name_localised": "Harbourtown Outskirts",
     "species_enhanced": [
       {
+        "overworldMonsterId": "traffikrab",
+        "monsterId": "traffikrab",
+        "percent": 45.45454545454545,
+        "percentStr": "45.45"
+      },
+      {
         "monsterId": "traffikrab",
         "percent": 29.411764705882348,
         "percentStr": "29.41"
+      },
+      {
+        "overworldMonsterId": "carniviper",
+        "monsterId": "carniviper",
+        "percent": 45.45454545454545,
+        "percentStr": "45.45"
       },
       {
         "monsterId": "carniviper",
@@ -3858,26 +3777,20 @@
         "percentStr": "29.41"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "springheel",
-        "percent": 45.45454545454545,
-        "percentStr": "45.45"
-      },
-      {
         "monsterId": "springheel",
         "percent": 29.411764705882348,
         "percentStr": "29.41"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "squirey",
-        "percent": 9.090909090909092,
-        "percentStr": "9.09"
-      },
-      {
         "monsterId": "squirey",
         "percent": 5.88235294117647,
         "percentStr": "5.88"
+      },
+      {
+        "overworldMonsterId": "pombomb",
+        "monsterId": "pombomb",
+        "percent": 9.090909090909092,
+        "percentStr": "9.09"
       },
       {
         "monsterId": "pombomb",
@@ -3910,9 +3823,21 @@
     "habitat_name_localised": "Harbourtown Outskirts Caves",
     "species_enhanced": [
       {
+        "overworldMonsterId": "carniviper",
+        "monsterId": "carniviper",
+        "percent": 33.33333333333333,
+        "percentStr": "33.33"
+      },
+      {
         "monsterId": "carniviper",
         "percent": 20,
         "percentStr": "20.00"
+      },
+      {
+        "overworldMonsterId": "traffikrab",
+        "monsterId": "traffikrab",
+        "percent": 33.33333333333333,
+        "percentStr": "33.33"
       },
       {
         "monsterId": "traffikrab",
@@ -3920,26 +3845,20 @@
         "percentStr": "20.00"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "springheel",
-        "percent": 33.33333333333333,
-        "percentStr": "33.33"
-      },
-      {
         "monsterId": "springheel",
         "percent": 20,
         "percentStr": "20.00"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "muskrateer",
-        "percent": 33.33333333333333,
-        "percentStr": "33.33"
-      },
-      {
         "monsterId": "muskrateer",
         "percent": 20,
         "percentStr": "20.00"
+      },
+      {
+        "overworldMonsterId": "terracooka",
+        "monsterId": "terracooka",
+        "percent": 33.33333333333333,
+        "percentStr": "33.33"
       },
       {
         "monsterId": "terracooka",
@@ -3961,20 +3880,26 @@
     "num_species": 3,
     "species_enhanced": [
       {
-        "overworldMonsterId": "",
-        "monsterId": "dandylion",
-        "percent": 50000,
-        "percentStr": "50000.00"
-      },
-      {
         "monsterId": "dandylion",
         "percent": 99.8003992015968,
         "percentStr": "99.80"
       },
       {
+        "overworldMonsterId": "traffikrab",
+        "monsterId": "traffikrab",
+        "percent": 50,
+        "percentStr": "50.00"
+      },
+      {
         "monsterId": "traffikrab",
         "percent": 0.09980039920159679,
         "percentStr": "0.10"
+      },
+      {
+        "overworldMonsterId": "carniviper",
+        "monsterId": "carniviper",
+        "percent": 50,
+        "percentStr": "50.00"
       },
       {
         "monsterId": "carniviper",
@@ -4006,48 +3931,30 @@
     "habitat_name_localised": "Harbourtown Outskirts",
     "species_enhanced": [
       {
+        "overworldMonsterId": "springheel",
+        "monsterId": "springheel",
+        "percent": 100,
+        "percentStr": "100.00"
+      },
+      {
         "monsterId": "springheel",
         "percent": 29.411764705882348,
         "percentStr": "29.41"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "traffikrab",
-        "percent": 100,
-        "percentStr": "100.00"
-      },
-      {
         "monsterId": "traffikrab",
         "percent": 29.411764705882348,
         "percentStr": "29.41"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "carniviper",
-        "percent": 100,
-        "percentStr": "100.00"
-      },
-      {
         "monsterId": "carniviper",
         "percent": 29.411764705882348,
         "percentStr": "29.41"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "squirey",
-        "percent": 20,
-        "percentStr": "20.00"
       },
       {
         "monsterId": "squirey",
         "percent": 5.88235294117647,
         "percentStr": "5.88"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "pombomb",
-        "percent": 20,
-        "percentStr": "20.00"
       },
       {
         "monsterId": "pombomb",
@@ -4092,9 +3999,21 @@
     "habitat_name_localised": "Lakeside",
     "species_enhanced": [
       {
+        "overworldMonsterId": "squirey",
+        "monsterId": "squirey",
+        "percent": 31.25,
+        "percentStr": "31.25"
+      },
+      {
         "monsterId": "squirey",
         "percent": 29.411764705882348,
         "percentStr": "29.41"
+      },
+      {
+        "overworldMonsterId": "squirey",
+        "monsterId": "manispear",
+        "percent": 15.625,
+        "percentStr": "15.63"
       },
       {
         "monsterId": "manispear",
@@ -4102,9 +4021,21 @@
         "percentStr": "14.71"
       },
       {
+        "overworldMonsterId": "dominoth",
+        "monsterId": "dominoth",
+        "percent": 31.25,
+        "percentStr": "31.25"
+      },
+      {
         "monsterId": "dominoth",
         "percent": 29.411764705882348,
         "percentStr": "29.41"
+      },
+      {
+        "overworldMonsterId": "dominoth",
+        "monsterId": "wingloom",
+        "percent": 6.25,
+        "percentStr": "6.25"
       },
       {
         "monsterId": "wingloom",
@@ -4112,15 +4043,18 @@
         "percentStr": "5.88"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "macabra",
-        "percent": 6.25,
-        "percentStr": "6.25"
-      },
-      {
         "monsterId": "macabra",
         "percent": 5.88235294117647,
         "percentStr": "5.88"
+      },
+      {
+        "overworldMonsterId": "puppercut",
+        "hour_min": 18,
+        "hour_max": 6,
+        "monsterId": "puppercut",
+        "percent": 15.625,
+        "percentStr": "15.63",
+        "available_specific_time": true
       },
       {
         "hour_min": 18,
@@ -4160,9 +4094,21 @@
     "habitat_name_localised": "Lakeside Caves",
     "species_enhanced": [
       {
+        "overworldMonsterId": "squirey",
+        "monsterId": "squirey",
+        "percent": 28.57142857142857,
+        "percentStr": "28.57"
+      },
+      {
         "monsterId": "squirey",
         "percent": 18.867924528301888,
         "percentStr": "18.87"
+      },
+      {
+        "overworldMonsterId": "squirey",
+        "monsterId": "manispear",
+        "percent": 14.285714285714285,
+        "percentStr": "14.29"
       },
       {
         "monsterId": "manispear",
@@ -4170,26 +4116,20 @@
         "percentStr": "9.43"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "macabra",
-        "percent": 8.571428571428571,
-        "percentStr": "8.57"
-      },
-      {
         "monsterId": "macabra",
         "percent": 5.660377358490567,
         "percentStr": "5.66"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "muskrateer",
-        "percent": 28.57142857142857,
-        "percentStr": "28.57"
-      },
-      {
         "monsterId": "muskrateer",
         "percent": 18.867924528301888,
         "percentStr": "18.87"
+      },
+      {
+        "overworldMonsterId": "masquerattle",
+        "monsterId": "masquerattle",
+        "percent": 28.57142857142857,
+        "percentStr": "28.57"
       },
       {
         "monsterId": "masquerattle",
@@ -4197,15 +4137,15 @@
         "percentStr": "18.87"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "salamagus",
-        "percent": 14.285714285714285,
-        "percentStr": "14.29"
-      },
-      {
         "monsterId": "salamagus",
         "percent": 9.433962264150944,
         "percentStr": "9.43"
+      },
+      {
+        "overworldMonsterId": "terracooka",
+        "monsterId": "terracooka",
+        "percent": 28.57142857142857,
+        "percentStr": "28.57"
       },
       {
         "monsterId": "terracooka",
@@ -4235,9 +4175,21 @@
     "habitat_name_localised": "Lakeside Caves",
     "species_enhanced": [
       {
+        "overworldMonsterId": "squirey",
+        "monsterId": "squirey",
+        "percent": 28.57142857142857,
+        "percentStr": "28.57"
+      },
+      {
         "monsterId": "squirey",
         "percent": 18.867924528301888,
         "percentStr": "18.87"
+      },
+      {
+        "overworldMonsterId": "squirey",
+        "monsterId": "manispear",
+        "percent": 14.285714285714285,
+        "percentStr": "14.29"
       },
       {
         "monsterId": "manispear",
@@ -4245,26 +4197,20 @@
         "percentStr": "9.43"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "macabra",
-        "percent": 8.571428571428571,
-        "percentStr": "8.57"
-      },
-      {
         "monsterId": "macabra",
         "percent": 5.660377358490567,
         "percentStr": "5.66"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "muskrateer",
-        "percent": 28.57142857142857,
-        "percentStr": "28.57"
-      },
-      {
         "monsterId": "muskrateer",
         "percent": 18.867924528301888,
         "percentStr": "18.87"
+      },
+      {
+        "overworldMonsterId": "masquerattle",
+        "monsterId": "masquerattle",
+        "percent": 28.57142857142857,
+        "percentStr": "28.57"
       },
       {
         "monsterId": "masquerattle",
@@ -4272,15 +4218,15 @@
         "percentStr": "18.87"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "salamagus",
-        "percent": 14.285714285714285,
-        "percentStr": "14.29"
-      },
-      {
         "monsterId": "salamagus",
         "percent": 9.433962264150944,
         "percentStr": "9.43"
+      },
+      {
+        "overworldMonsterId": "terracooka",
+        "monsterId": "terracooka",
+        "percent": 28.57142857142857,
+        "percentStr": "28.57"
       },
       {
         "monsterId": "terracooka",
@@ -4309,9 +4255,21 @@
     "habitat_name_localised": "Lakeside",
     "species_enhanced": [
       {
+        "overworldMonsterId": "bulletino",
+        "monsterId": "bulletino",
+        "percent": 80,
+        "percentStr": "80.00"
+      },
+      {
         "monsterId": "bulletino",
         "percent": 22.22222222222222,
         "percentStr": "22.22"
+      },
+      {
+        "overworldMonsterId": "bulletino",
+        "monsterId": "velocirifle",
+        "percent": 20,
+        "percentStr": "20.00"
       },
       {
         "monsterId": "velocirifle",
@@ -4319,21 +4277,9 @@
         "percentStr": "5.56"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "squirey",
-        "percent": 80,
-        "percentStr": "80.00"
-      },
-      {
         "monsterId": "squirey",
         "percent": 22.22222222222222,
         "percentStr": "22.22"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "macabra",
-        "percent": 20,
-        "percentStr": "20.00"
       },
       {
         "monsterId": "macabra",
@@ -4341,21 +4287,9 @@
         "percentStr": "5.56"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "manispear",
-        "percent": 20,
-        "percentStr": "20.00"
-      },
-      {
         "monsterId": "manispear",
         "percent": 5.555555555555555,
         "percentStr": "5.56"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "dominoth",
-        "percent": 80,
-        "percentStr": "80.00"
       },
       {
         "monsterId": "dominoth",
@@ -4363,24 +4297,9 @@
         "percentStr": "22.22"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "wingloom",
-        "percent": 20,
-        "percentStr": "20.00"
-      },
-      {
         "monsterId": "wingloom",
         "percent": 5.555555555555555,
         "percentStr": "5.56"
-      },
-      {
-        "overworldMonsterId": "",
-        "hour_min": 18,
-        "hour_max": 6,
-        "monsterId": "puppercut",
-        "percent": 40,
-        "percentStr": "40.00",
-        "available_specific_time": true
       },
       {
         "hour_min": 18,
@@ -4412,9 +4331,21 @@
     "habitat_name_localised": "Thirstaton Lake Caves",
     "species_enhanced": [
       {
+        "overworldMonsterId": "diveal",
+        "monsterId": "diveal",
+        "percent": 40,
+        "percentStr": "40.00"
+      },
+      {
         "monsterId": "diveal",
         "percent": 10,
         "percentStr": "10.00"
+      },
+      {
+        "overworldMonsterId": "diveal",
+        "monsterId": "scubalrus",
+        "percent": 20,
+        "percentStr": "20.00"
       },
       {
         "monsterId": "scubalrus",
@@ -4422,21 +4353,9 @@
         "percentStr": "5.00"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "muskrateer",
-        "percent": 40,
-        "percentStr": "40.00"
-      },
-      {
         "monsterId": "muskrateer",
         "percent": 10,
         "percentStr": "10.00"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "dominoth",
-        "percent": 40,
-        "percentStr": "40.00"
       },
       {
         "monsterId": "dominoth",
@@ -4444,21 +4363,9 @@
         "percentStr": "10.00"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "wingloom",
-        "percent": 20,
-        "percentStr": "20.00"
-      },
-      {
         "monsterId": "wingloom",
         "percent": 5,
         "percentStr": "5.00"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "lobstacle",
-        "percent": 40,
-        "percentStr": "40.00"
       },
       {
         "monsterId": "lobstacle",
@@ -4466,24 +4373,9 @@
         "percentStr": "10.00"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "stardigrade",
-        "percent": 20,
-        "percentStr": "20.00"
-      },
-      {
         "monsterId": "stardigrade",
         "percent": 5,
         "percentStr": "5.00"
-      },
-      {
-        "overworldMonsterId": "",
-        "hour_min": 18,
-        "hour_max": 6,
-        "monsterId": "allseer",
-        "percent": 40,
-        "percentStr": "40.00",
-        "available_specific_time": true
       },
       {
         "hour_min": 18,
@@ -4491,15 +4383,6 @@
         "monsterId": "allseer",
         "percent": 10,
         "percentStr": "10.00",
-        "available_specific_time": true
-      },
-      {
-        "overworldMonsterId": "",
-        "hour_min": 18,
-        "hour_max": 6,
-        "monsterId": "triphinx",
-        "percent": 20,
-        "percentStr": "20.00",
         "available_specific_time": true
       },
       {
@@ -4511,26 +4394,20 @@
         "available_specific_time": true
       },
       {
+        "overworldMonsterId": "terracooka",
+        "monsterId": "terracooka",
+        "percent": 40,
+        "percentStr": "40.00"
+      },
+      {
         "monsterId": "terracooka",
         "percent": 10,
         "percentStr": "10.00"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "frillypad",
-        "percent": 40,
-        "percentStr": "40.00"
-      },
-      {
         "monsterId": "frillypad",
         "percent": 10,
         "percentStr": "10.00"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "pondwalker",
-        "percent": 40,
-        "percentStr": "40.00"
       },
       {
         "monsterId": "pondwalker",
@@ -4558,6 +4435,12 @@
     "num_species": 1,
     "habitat_name_localised": "Thirstaton Lake",
     "species_enhanced": [
+      {
+        "overworldMonsterId": "diveal",
+        "monsterId": "diveal",
+        "percent": 100,
+        "percentStr": "100.00"
+      },
       {
         "monsterId": "diveal",
         "percent": 100,
@@ -4595,9 +4478,24 @@
     "habitat_name_localised": "Thirstaton Lake",
     "species_enhanced": [
       {
+        "overworldMonsterId": "diveal",
+        "monsterId": "diveal",
+        "percent": 30.303030303030305,
+        "percentStr": "30.30"
+      },
+      {
         "monsterId": "diveal",
         "percent": 16.949152542372882,
         "percentStr": "16.95"
+      },
+      {
+        "overworldMonsterId": "allseer",
+        "hour_min": 18,
+        "hour_max": 6,
+        "monsterId": "allseer",
+        "percent": 30.303030303030305,
+        "percentStr": "30.30",
+        "available_specific_time": true
       },
       {
         "hour_min": 18,
@@ -4605,6 +4503,15 @@
         "monsterId": "allseer",
         "percent": 16.949152542372882,
         "percentStr": "16.95",
+        "available_specific_time": true
+      },
+      {
+        "overworldMonsterId": "allseer",
+        "hour_min": 18,
+        "hour_max": 6,
+        "monsterId": "triphinx",
+        "percent": 9.090909090909092,
+        "percentStr": "9.09",
         "available_specific_time": true
       },
       {
@@ -4616,26 +4523,20 @@
         "available_specific_time": true
       },
       {
+        "overworldMonsterId": "traffikrab",
+        "monsterId": "lobstacle",
+        "percent": 30.303030303030305,
+        "percentStr": "30.30"
+      },
+      {
         "monsterId": "lobstacle",
         "percent": 16.949152542372882,
         "percentStr": "16.95"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "stardigrade",
-        "percent": 9.090909090909092,
-        "percentStr": "9.09"
-      },
-      {
         "monsterId": "stardigrade",
         "percent": 5.084745762711865,
         "percentStr": "5.08"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "padpole",
-        "percent": 30.303030303030305,
-        "percentStr": "30.30"
       },
       {
         "monsterId": "padpole",
@@ -4643,21 +4544,9 @@
         "percentStr": "16.95"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "frillypad",
-        "percent": 9.090909090909092,
-        "percentStr": "9.09"
-      },
-      {
         "monsterId": "frillypad",
         "percent": 5.084745762711865,
         "percentStr": "5.08"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "pondwalker",
-        "percent": 30.303030303030305,
-        "percentStr": "30.30"
       },
       {
         "monsterId": "pondwalker",
@@ -4681,15 +4570,15 @@
     "num_species": 2,
     "species_enhanced": [
       {
+        "overworldMonsterId": "traffikrab",
+        "monsterId": "lobstacle",
+        "percent": 100,
+        "percentStr": "100.00"
+      },
+      {
         "monsterId": "lobstacle",
         "percent": 0.0999000999000999,
         "percentStr": "0.10"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "dandylion",
-        "percent": 100000,
-        "percentStr": "100000.00"
       },
       {
         "monsterId": "dandylion",
@@ -4751,21 +4640,9 @@
     "habitat_name_localised": "Thirstaton Lake",
     "species_enhanced": [
       {
-        "overworldMonsterId": "",
-        "monsterId": "diveal",
-        "percent": null,
-        "percentStr": "Infinity"
-      },
-      {
         "monsterId": "diveal",
         "percent": 15.822784810126581,
         "percentStr": "15.82"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "scubalrus",
-        "percent": null,
-        "percentStr": "Infinity"
       },
       {
         "monsterId": "scubalrus",
@@ -4773,29 +4650,11 @@
         "percentStr": "5.22"
       },
       {
-        "overworldMonsterId": "",
-        "hour_min": 18,
-        "hour_max": 6,
-        "monsterId": "allseer",
-        "percent": null,
-        "percentStr": "Infinity",
-        "available_specific_time": true
-      },
-      {
         "hour_min": 18,
         "hour_max": 6,
         "monsterId": "allseer",
         "percent": 15.822784810126581,
         "percentStr": "15.82",
-        "available_specific_time": true
-      },
-      {
-        "overworldMonsterId": "",
-        "hour_min": 18,
-        "hour_max": 6,
-        "monsterId": "triphinx",
-        "percent": null,
-        "percentStr": "Infinity",
         "available_specific_time": true
       },
       {
@@ -4807,21 +4666,9 @@
         "available_specific_time": true
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "stardigrade",
-        "percent": null,
-        "percentStr": "Infinity"
-      },
-      {
         "monsterId": "stardigrade",
         "percent": 5.2215189873417724,
         "percentStr": "5.22"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "lobstacle",
-        "percent": null,
-        "percentStr": "Infinity"
       },
       {
         "monsterId": "lobstacle",
@@ -4829,32 +4676,14 @@
         "percentStr": "15.82"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "padpole",
-        "percent": null,
-        "percentStr": "Infinity"
-      },
-      {
         "monsterId": "padpole",
         "percent": 15.822784810126581,
         "percentStr": "15.82"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "frillypad",
-        "percent": null,
-        "percentStr": "Infinity"
-      },
-      {
         "monsterId": "frillypad",
         "percent": 5.2215189873417724,
         "percentStr": "5.22"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "pondwalker",
-        "percent": null,
-        "percentStr": "Infinity"
       },
       {
         "monsterId": "pondwalker",
@@ -4883,32 +4712,14 @@
     "num_species": 3,
     "species_enhanced": [
       {
-        "overworldMonsterId": "",
-        "monsterId": "jumpkin",
-        "percent": null,
-        "percentStr": "Infinity"
-      },
-      {
         "monsterId": "jumpkin",
         "percent": 33.33333333333333,
         "percentStr": "33.33"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "scampire",
-        "percent": null,
-        "percentStr": "Infinity"
-      },
-      {
         "monsterId": "scampire",
         "percent": 33.33333333333333,
         "percentStr": "33.33"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "cluckabilly",
-        "percent": null,
-        "percentStr": "Infinity"
       },
       {
         "monsterId": "cluckabilly",
@@ -4935,9 +4746,21 @@
     "habitat_name_localised": "Falldown Mall",
     "species_enhanced": [
       {
+        "overworldMonsterId": "dominoth",
+        "monsterId": "dominoth",
+        "percent": 10.344827586206897,
+        "percentStr": "10.34"
+      },
+      {
         "monsterId": "dominoth",
         "percent": 5.4945054945054945,
         "percentStr": "5.49"
+      },
+      {
+        "overworldMonsterId": "dominoth",
+        "monsterId": "wingloom",
+        "percent": 10.344827586206897,
+        "percentStr": "10.34"
       },
       {
         "monsterId": "wingloom",
@@ -4945,9 +4768,21 @@
         "percentStr": "5.49"
       },
       {
+        "overworldMonsterId": "dominoth",
+        "monsterId": "mothmanic",
+        "percent": 10.344827586206897,
+        "percentStr": "10.34"
+      },
+      {
         "monsterId": "mothmanic",
         "percent": 5.4945054945054945,
         "percentStr": "5.49"
+      },
+      {
+        "overworldMonsterId": "mascotoy",
+        "monsterId": "mascotoy",
+        "percent": 34.48275862068966,
+        "percentStr": "34.48"
       },
       {
         "monsterId": "mascotoy",
@@ -4955,32 +4790,14 @@
         "percentStr": "18.32"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "binvader",
-        "percent": 34.48275862068966,
-        "percentStr": "34.48"
-      },
-      {
         "monsterId": "binvader",
         "percent": 18.315018315018314,
         "percentStr": "18.32"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "muskrateer",
-        "percent": 34.48275862068966,
-        "percentStr": "34.48"
-      },
-      {
         "monsterId": "muskrateer",
         "percent": 18.315018315018314,
         "percentStr": "18.32"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "ratcousel",
-        "percent": 9.655172413793105,
-        "percentStr": "9.66"
       },
       {
         "monsterId": "ratcousel",
@@ -4988,15 +4805,15 @@
         "percentStr": "5.13"
       },
       {
+        "overworldMonsterId": "faucetear",
+        "monsterId": "faucetear",
+        "percent": 34.48275862068966,
+        "percentStr": "34.48"
+      },
+      {
         "monsterId": "faucetear",
         "percent": 18.315018315018314,
         "percentStr": "18.32"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "arkidd",
-        "percent": 9.655172413793105,
-        "percentStr": "9.66"
       },
       {
         "monsterId": "arkidd",
@@ -5018,9 +4835,21 @@
     "num_species": 10,
     "species_enhanced": [
       {
+        "overworldMonsterId": "dominoth",
+        "monsterId": "dominoth",
+        "percent": 14.285714285714285,
+        "percentStr": "14.29"
+      },
+      {
         "monsterId": "dominoth",
         "percent": 5.88235294117647,
         "percentStr": "5.88"
+      },
+      {
+        "overworldMonsterId": "dominoth",
+        "monsterId": "wingloom",
+        "percent": 14.285714285714285,
+        "percentStr": "14.29"
       },
       {
         "monsterId": "wingloom",
@@ -5028,9 +4857,21 @@
         "percentStr": "5.88"
       },
       {
+        "overworldMonsterId": "dominoth",
+        "monsterId": "mothmanic",
+        "percent": 14.285714285714285,
+        "percentStr": "14.29"
+      },
+      {
         "monsterId": "mothmanic",
         "percent": 5.88235294117647,
         "percentStr": "5.88"
+      },
+      {
+        "overworldMonsterId": "mascotoy",
+        "monsterId": "mascotoy",
+        "percent": 28.57142857142857,
+        "percentStr": "28.57"
       },
       {
         "monsterId": "mascotoy",
@@ -5038,21 +4879,9 @@
         "percentStr": "11.76"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "binvader",
-        "percent": 28.57142857142857,
-        "percentStr": "28.57"
-      },
-      {
         "monsterId": "binvader",
         "percent": 11.76470588235294,
         "percentStr": "11.76"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "muskrateer",
-        "percent": 28.57142857142857,
-        "percentStr": "28.57"
       },
       {
         "monsterId": "muskrateer",
@@ -5060,15 +4889,15 @@
         "percentStr": "11.76"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "ratcousel",
-        "percent": 28.57142857142857,
-        "percentStr": "28.57"
-      },
-      {
         "monsterId": "ratcousel",
         "percent": 11.76470588235294,
         "percentStr": "11.76"
+      },
+      {
+        "overworldMonsterId": "faucetear",
+        "monsterId": "faucetear",
+        "percent": 28.57142857142857,
+        "percentStr": "28.57"
       },
       {
         "monsterId": "faucetear",
@@ -5076,21 +4905,9 @@
         "percentStr": "11.76"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "arkidd",
-        "percent": 28.57142857142857,
-        "percentStr": "28.57"
-      },
-      {
         "monsterId": "arkidd",
         "percent": 11.76470588235294,
         "percentStr": "11.76"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "candevil",
-        "percent": 28.57142857142857,
-        "percentStr": "28.57"
       },
       {
         "monsterId": "candevil",
@@ -5117,9 +4934,21 @@
     "habitat_name_localised": "Falldown Mall",
     "species_enhanced": [
       {
+        "overworldMonsterId": "dominoth",
+        "monsterId": "dominoth",
+        "percent": 10.344827586206897,
+        "percentStr": "10.34"
+      },
+      {
         "monsterId": "dominoth",
         "percent": 5.263157894736842,
         "percentStr": "5.26"
+      },
+      {
+        "overworldMonsterId": "dominoth",
+        "monsterId": "wingloom",
+        "percent": 10.344827586206897,
+        "percentStr": "10.34"
       },
       {
         "monsterId": "wingloom",
@@ -5127,9 +4956,21 @@
         "percentStr": "5.26"
       },
       {
+        "overworldMonsterId": "dominoth",
+        "monsterId": "mothmanic",
+        "percent": 10.344827586206897,
+        "percentStr": "10.34"
+      },
+      {
         "monsterId": "mothmanic",
         "percent": 5.263157894736842,
         "percentStr": "5.26"
+      },
+      {
+        "overworldMonsterId": "mascotoy",
+        "monsterId": "mascotoy",
+        "percent": 34.48275862068966,
+        "percentStr": "34.48"
       },
       {
         "monsterId": "mascotoy",
@@ -5137,32 +4978,14 @@
         "percentStr": "17.54"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "binvader",
-        "percent": 34.48275862068966,
-        "percentStr": "34.48"
-      },
-      {
         "monsterId": "binvader",
         "percent": 17.543859649122805,
         "percentStr": "17.54"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "muskrateer",
-        "percent": 34.48275862068966,
-        "percentStr": "34.48"
-      },
-      {
         "monsterId": "muskrateer",
         "percent": 17.543859649122805,
         "percentStr": "17.54"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "ratcousel",
-        "percent": 10.344827586206897,
-        "percentStr": "10.34"
       },
       {
         "monsterId": "ratcousel",
@@ -5170,15 +4993,15 @@
         "percentStr": "5.26"
       },
       {
+        "overworldMonsterId": "faucetear",
+        "monsterId": "faucetear",
+        "percent": 34.48275862068966,
+        "percentStr": "34.48"
+      },
+      {
         "monsterId": "faucetear",
         "percent": 17.543859649122805,
         "percentStr": "17.54"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "arkidd",
-        "percent": 17.24137931034483,
-        "percentStr": "17.24"
       },
       {
         "monsterId": "arkidd",
@@ -5242,9 +5065,21 @@
     "habitat_name_localised": "The Marshes",
     "species_enhanced": [
       {
+        "overworldMonsterId": "trapwurm",
+        "monsterId": "trapwurm",
+        "percent": 15.384615384615385,
+        "percentStr": "15.38"
+      },
+      {
         "monsterId": "trapwurm",
         "percent": 11.76470588235294,
         "percentStr": "11.76"
+      },
+      {
+        "overworldMonsterId": "masquerattle",
+        "monsterId": "masquerattle",
+        "percent": 15.384615384615385,
+        "percentStr": "15.38"
       },
       {
         "monsterId": "masquerattle",
@@ -5252,9 +5087,24 @@
         "percentStr": "11.76"
       },
       {
+        "overworldMonsterId": "masquerattle",
+        "monsterId": "jormungold",
+        "percent": 15.384615384615385,
+        "percentStr": "15.38"
+      },
+      {
         "monsterId": "jormungold",
         "percent": 11.76470588235294,
         "percentStr": "11.76"
+      },
+      {
+        "overworldMonsterId": "puppercut",
+        "hour_min": 18,
+        "hour_max": 6,
+        "monsterId": "puppercut",
+        "percent": 7.6923076923076925,
+        "percentStr": "7.69",
+        "available_specific_time": true
       },
       {
         "hour_min": 18,
@@ -5265,26 +5115,20 @@
         "available_specific_time": true
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "macabra",
-        "percent": 15.384615384615385,
-        "percentStr": "15.38"
-      },
-      {
         "monsterId": "macabra",
         "percent": 11.76470588235294,
         "percentStr": "11.76"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "folklord",
-        "percent": 15.384615384615385,
-        "percentStr": "15.38"
-      },
-      {
         "monsterId": "folklord",
         "percent": 11.76470588235294,
         "percentStr": "11.76"
+      },
+      {
+        "overworldMonsterId": "jellyton",
+        "monsterId": "jellyton",
+        "percent": 46.15384615384615,
+        "percentStr": "46.15"
       },
       {
         "monsterId": "jellyton",
@@ -5320,9 +5164,21 @@
     "habitat_name_localised": "The Marshes",
     "species_enhanced": [
       {
+        "overworldMonsterId": "diveal",
+        "monsterId": "diveal",
+        "percent": 33.33333333333333,
+        "percentStr": "33.33"
+      },
+      {
         "monsterId": "diveal",
         "percent": 25,
         "percentStr": "25.00"
+      },
+      {
+        "overworldMonsterId": "diveal",
+        "monsterId": "scubalrus",
+        "percent": 33.33333333333333,
+        "percentStr": "33.33"
       },
       {
         "monsterId": "scubalrus",
@@ -5330,15 +5186,15 @@
         "percentStr": "25.00"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "jellyton",
-        "percent": 33.33333333333333,
-        "percentStr": "33.33"
-      },
-      {
         "monsterId": "jellyton",
         "percent": 25,
         "percentStr": "25.00"
+      },
+      {
+        "overworldMonsterId": "sanzatime",
+        "monsterId": "sanzatime",
+        "percent": 33.33333333333333,
+        "percentStr": "33.33"
       },
       {
         "monsterId": "sanzatime",
@@ -5367,9 +5223,21 @@
     "habitat_name_localised": "Marshland Caves",
     "species_enhanced": [
       {
+        "overworldMonsterId": "trapwurm",
+        "monsterId": "trapwurm",
+        "percent": 13.333333333333334,
+        "percentStr": "13.33"
+      },
+      {
         "monsterId": "trapwurm",
         "percent": 10.526315789473683,
         "percentStr": "10.53"
+      },
+      {
+        "overworldMonsterId": "masquerattle",
+        "monsterId": "masquerattle",
+        "percent": 13.333333333333334,
+        "percentStr": "13.33"
       },
       {
         "monsterId": "masquerattle",
@@ -5377,9 +5245,24 @@
         "percentStr": "10.53"
       },
       {
+        "overworldMonsterId": "masquerattle",
+        "monsterId": "jormungold",
+        "percent": 13.333333333333334,
+        "percentStr": "13.33"
+      },
+      {
         "monsterId": "jormungold",
         "percent": 10.526315789473683,
         "percentStr": "10.53"
+      },
+      {
+        "overworldMonsterId": "puppercut",
+        "hour_min": 18,
+        "hour_max": 6,
+        "monsterId": "puppercut",
+        "percent": 6.666666666666667,
+        "percentStr": "6.67",
+        "available_specific_time": true
       },
       {
         "hour_min": 18,
@@ -5390,31 +5273,31 @@
         "available_specific_time": true
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "macabra",
-        "percent": 13.333333333333334,
-        "percentStr": "13.33"
-      },
-      {
         "monsterId": "macabra",
         "percent": 10.526315789473683,
         "percentStr": "10.53"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "folklord",
-        "percent": 13.333333333333334,
-        "percentStr": "13.33"
-      },
-      {
         "monsterId": "folklord",
         "percent": 10.526315789473683,
         "percentStr": "10.53"
+      },
+      {
+        "overworldMonsterId": "jellyton",
+        "monsterId": "jellyton",
+        "percent": 40,
+        "percentStr": "40.00"
       },
       {
         "monsterId": "jellyton",
         "percent": 31.57894736842105,
         "percentStr": "31.58"
+      },
+      {
+        "overworldMonsterId": "terracooka",
+        "monsterId": "terracooka",
+        "percent": 13.333333333333334,
+        "percentStr": "13.33"
       },
       {
         "monsterId": "terracooka",
@@ -5443,21 +5326,9 @@
     "habitat_name_localised": "The Marshes",
     "species_enhanced": [
       {
-        "overworldMonsterId": "",
-        "monsterId": "trapwurm",
-        "percent": 50,
-        "percentStr": "50.00"
-      },
-      {
         "monsterId": "trapwurm",
         "percent": 11.76470588235294,
         "percentStr": "11.76"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "masquerattle",
-        "percent": 50,
-        "percentStr": "50.00"
       },
       {
         "monsterId": "masquerattle",
@@ -5465,24 +5336,9 @@
         "percentStr": "11.76"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "jormungold",
-        "percent": 50,
-        "percentStr": "50.00"
-      },
-      {
         "monsterId": "jormungold",
         "percent": 11.76470588235294,
         "percentStr": "11.76"
-      },
-      {
-        "overworldMonsterId": "",
-        "hour_min": 18,
-        "hour_max": 6,
-        "monsterId": "puppercut",
-        "percent": 25,
-        "percentStr": "25.00",
-        "available_specific_time": true
       },
       {
         "hour_min": 18,
@@ -5493,21 +5349,9 @@
         "available_specific_time": true
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "macabra",
-        "percent": 50,
-        "percentStr": "50.00"
-      },
-      {
         "monsterId": "macabra",
         "percent": 11.76470588235294,
         "percentStr": "11.76"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "folklord",
-        "percent": 50,
-        "percentStr": "50.00"
       },
       {
         "monsterId": "folklord",
@@ -5515,20 +5359,26 @@
         "percentStr": "11.76"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "jellyton",
-        "percent": 50,
-        "percentStr": "50.00"
-      },
-      {
         "monsterId": "jellyton",
         "percent": 11.76470588235294,
         "percentStr": "11.76"
+      },
+      {
+        "overworldMonsterId": "springheel",
+        "monsterId": "snoopin",
+        "percent": 50,
+        "percentStr": "50.00"
       },
       {
         "monsterId": "snoopin",
         "percent": 11.76470588235294,
         "percentStr": "11.76"
+      },
+      {
+        "overworldMonsterId": "springheel",
+        "monsterId": "hopskin",
+        "percent": 50,
+        "percentStr": "50.00"
       },
       {
         "monsterId": "hopskin",
@@ -5592,15 +5442,15 @@
     "habitat_name_localised": "Cherry Meadow",
     "species_enhanced": [
       {
+        "overworldMonsterId": "twirligig",
+        "monsterId": "twirligig",
+        "percent": 48.07692307692307,
+        "percentStr": "48.08"
+      },
+      {
         "monsterId": "twirligig",
         "percent": 30.81664098613251,
         "percentStr": "30.82"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "blossomaw",
-        "percent": 24.038461538461537,
-        "percentStr": "24.04"
       },
       {
         "monsterId": "blossomaw",
@@ -5608,9 +5458,21 @@
         "percentStr": "15.41"
       },
       {
+        "overworldMonsterId": "elfless",
+        "monsterId": "elfless",
+        "percent": 7.9326923076923075,
+        "percentStr": "7.93"
+      },
+      {
         "monsterId": "elfless",
         "percent": 5.084745762711865,
         "percentStr": "5.08"
+      },
+      {
+        "overworldMonsterId": "dominoth",
+        "monsterId": "dominoth",
+        "percent": 12.019230769230768,
+        "percentStr": "12.02"
       },
       {
         "monsterId": "dominoth",
@@ -5618,14 +5480,35 @@
         "percentStr": "7.70"
       },
       {
+        "overworldMonsterId": "dominoth",
+        "monsterId": "wingloom",
+        "percent": 12.019230769230768,
+        "percentStr": "12.02"
+      },
+      {
         "monsterId": "wingloom",
         "percent": 7.704160246533127,
         "percentStr": "7.70"
       },
       {
+        "overworldMonsterId": "dominoth",
+        "monsterId": "mothmanic",
+        "percent": 12.019230769230768,
+        "percentStr": "12.02"
+      },
+      {
         "monsterId": "mothmanic",
         "percent": 7.704160246533127,
         "percentStr": "7.70"
+      },
+      {
+        "overworldMonsterId": "puppercut",
+        "hour_min": 18,
+        "hour_max": 6,
+        "monsterId": "puppercut",
+        "percent": 7.9326923076923075,
+        "percentStr": "7.93",
+        "available_specific_time": true
       },
       {
         "hour_min": 18,
@@ -5636,21 +5519,9 @@
         "available_specific_time": true
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "frillypad",
-        "percent": 24.038461538461537,
-        "percentStr": "24.04"
-      },
-      {
         "monsterId": "frillypad",
         "percent": 15.408320493066254,
         "percentStr": "15.41"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "liligator",
-        "percent": 7.9326923076923075,
-        "percentStr": "7.93"
       },
       {
         "monsterId": "liligator",
@@ -5686,9 +5557,21 @@
     "habitat_name_localised": "Cherry Meadow Caves",
     "species_enhanced": [
       {
+        "overworldMonsterId": "carniviper",
+        "monsterId": "carniviper",
+        "percent": 17.123287671232877,
+        "percentStr": "17.12"
+      },
+      {
         "monsterId": "carniviper",
         "percent": 12.224938875305625,
         "percentStr": "12.22"
+      },
+      {
+        "overworldMonsterId": "twirligig",
+        "monsterId": "twirligig",
+        "percent": 17.123287671232877,
+        "percentStr": "17.12"
       },
       {
         "monsterId": "twirligig",
@@ -5696,15 +5579,15 @@
         "percentStr": "12.22"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "elfless",
-        "percent": 7.191780821917808,
-        "percentStr": "7.19"
-      },
-      {
         "monsterId": "elfless",
         "percent": 5.134474327628362,
         "percentStr": "5.13"
+      },
+      {
+        "overworldMonsterId": "dominoth",
+        "monsterId": "dominoth",
+        "percent": 7.191780821917808,
+        "percentStr": "7.19"
       },
       {
         "monsterId": "dominoth",
@@ -5712,9 +5595,21 @@
         "percentStr": "5.13"
       },
       {
+        "overworldMonsterId": "dominoth",
+        "monsterId": "wingloom",
+        "percent": 7.191780821917808,
+        "percentStr": "7.19"
+      },
+      {
         "monsterId": "wingloom",
         "percent": 5.134474327628362,
         "percentStr": "5.13"
+      },
+      {
+        "overworldMonsterId": "dominoth",
+        "monsterId": "mothmanic",
+        "percent": 17.123287671232877,
+        "percentStr": "17.12"
       },
       {
         "monsterId": "mothmanic",
@@ -5722,15 +5617,15 @@
         "percentStr": "12.22"
       },
       {
+        "overworldMonsterId": "pawndead",
+        "monsterId": "pawndead",
+        "percent": 17.123287671232877,
+        "percentStr": "17.12"
+      },
+      {
         "monsterId": "pawndead",
         "percent": 12.224938875305625,
         "percentStr": "12.22"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "blossomaw",
-        "percent": 7.191780821917808,
-        "percentStr": "7.19"
       },
       {
         "monsterId": "blossomaw",
@@ -5738,26 +5633,20 @@
         "percentStr": "5.13"
       },
       {
+        "overworldMonsterId": "terracooka",
+        "monsterId": "terracooka",
+        "percent": 17.123287671232877,
+        "percentStr": "17.12"
+      },
+      {
         "monsterId": "terracooka",
         "percent": 12.224938875305625,
         "percentStr": "12.22"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "frillypad",
-        "percent": 17.123287671232877,
-        "percentStr": "17.12"
-      },
-      {
         "monsterId": "frillypad",
         "percent": 12.224938875305625,
         "percentStr": "12.22"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "liligator",
-        "percent": 8.561643835616438,
-        "percentStr": "8.56"
       },
       {
         "monsterId": "liligator",
@@ -5779,15 +5668,15 @@
     "num_species": 10,
     "species_enhanced": [
       {
+        "overworldMonsterId": "twirligig",
+        "monsterId": "twirligig",
+        "percent": 51.28205128205128,
+        "percentStr": "51.28"
+      },
+      {
         "monsterId": "twirligig",
         "percent": 0.19881703862020977,
         "percentStr": "0.20"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "blossomaw",
-        "percent": 25.64102564102564,
-        "percentStr": "25.64"
       },
       {
         "monsterId": "blossomaw",
@@ -5795,9 +5684,21 @@
         "percentStr": "0.10"
       },
       {
+        "overworldMonsterId": "elfless",
+        "monsterId": "elfless",
+        "percent": 5.128205128205128,
+        "percentStr": "5.13"
+      },
+      {
         "monsterId": "elfless",
         "percent": 0.019881703862020976,
         "percentStr": "0.02"
+      },
+      {
+        "overworldMonsterId": "dominoth",
+        "monsterId": "dominoth",
+        "percent": 12.82051282051282,
+        "percentStr": "12.82"
       },
       {
         "monsterId": "dominoth",
@@ -5805,14 +5706,35 @@
         "percentStr": "0.05"
       },
       {
+        "overworldMonsterId": "dominoth",
+        "monsterId": "wingloom",
+        "percent": 12.82051282051282,
+        "percentStr": "12.82"
+      },
+      {
         "monsterId": "wingloom",
         "percent": 0.049704259655052443,
         "percentStr": "0.05"
       },
       {
+        "overworldMonsterId": "dominoth",
+        "monsterId": "mothmanic",
+        "percent": 12.82051282051282,
+        "percentStr": "12.82"
+      },
+      {
         "monsterId": "mothmanic",
         "percent": 0.049704259655052443,
         "percentStr": "0.05"
+      },
+      {
+        "overworldMonsterId": "puppercut",
+        "hour_min": 18,
+        "hour_max": 6,
+        "monsterId": "puppercut",
+        "percent": 5.128205128205128,
+        "percentStr": "5.13",
+        "available_specific_time": true
       },
       {
         "hour_min": 18,
@@ -5823,32 +5745,14 @@
         "available_specific_time": true
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "dandylion",
-        "percent": 25641.02564102564,
-        "percentStr": "25641.03"
-      },
-      {
         "monsterId": "dandylion",
         "percent": 99.40851931010488,
         "percentStr": "99.41"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "frillypad",
-        "percent": 25.64102564102564,
-        "percentStr": "25.64"
-      },
-      {
         "monsterId": "frillypad",
         "percent": 0.09940851931010489,
         "percentStr": "0.10"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "liligator",
-        "percent": 1.282051282051282,
-        "percentStr": "1.28"
       },
       {
         "monsterId": "liligator",
@@ -5880,21 +5784,9 @@
     "habitat_name_localised": "Cherry Meadow",
     "species_enhanced": [
       {
-        "overworldMonsterId": "",
-        "monsterId": "twirligig",
-        "percent": 100,
-        "percentStr": "100.00"
-      },
-      {
         "monsterId": "twirligig",
         "percent": 22.22222222222222,
         "percentStr": "22.22"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "blossomaw",
-        "percent": 50,
-        "percentStr": "50.00"
       },
       {
         "monsterId": "blossomaw",
@@ -5902,21 +5794,9 @@
         "percentStr": "11.11"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "elfless",
-        "percent": 25,
-        "percentStr": "25.00"
-      },
-      {
         "monsterId": "elfless",
         "percent": 5.555555555555555,
         "percentStr": "5.56"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "dominoth",
-        "percent": 25,
-        "percentStr": "25.00"
       },
       {
         "monsterId": "dominoth",
@@ -5924,35 +5804,14 @@
         "percentStr": "5.56"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "wingloom",
-        "percent": 25,
-        "percentStr": "25.00"
-      },
-      {
         "monsterId": "wingloom",
         "percent": 5.555555555555555,
         "percentStr": "5.56"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "mothmanic",
-        "percent": 25,
-        "percentStr": "25.00"
-      },
-      {
         "monsterId": "mothmanic",
         "percent": 5.555555555555555,
         "percentStr": "5.56"
-      },
-      {
-        "overworldMonsterId": "",
-        "hour_min": 18,
-        "hour_max": 6,
-        "monsterId": "puppercut",
-        "percent": 25,
-        "percentStr": "25.00",
-        "available_specific_time": true
       },
       {
         "hour_min": 18,
@@ -5963,21 +5822,9 @@
         "available_specific_time": true
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "frillypad",
-        "percent": 50,
-        "percentStr": "50.00"
-      },
-      {
         "monsterId": "frillypad",
         "percent": 11.11111111111111,
         "percentStr": "11.11"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "liligator",
-        "percent": 25,
-        "percentStr": "25.00"
       },
       {
         "monsterId": "liligator",
@@ -5985,9 +5832,21 @@
         "percentStr": "5.56"
       },
       {
+        "overworldMonsterId": "springheel",
+        "monsterId": "hopskin",
+        "percent": 50,
+        "percentStr": "50.00"
+      },
+      {
         "monsterId": "hopskin",
         "percent": 11.11111111111111,
         "percentStr": "11.11"
+      },
+      {
+        "overworldMonsterId": "springheel",
+        "monsterId": "snoopin",
+        "percent": 50,
+        "percentStr": "50.00"
       },
       {
         "monsterId": "snoopin",
@@ -6017,9 +5876,21 @@
     "habitat_name_localised": "Mire Sea",
     "species_enhanced": [
       {
+        "overworldMonsterId": "traffikrab",
+        "monsterId": "traffikrab",
+        "percent": 45.45454545454545,
+        "percentStr": "45.45"
+      },
+      {
         "monsterId": "traffikrab",
         "percent": 29.411764705882348,
         "percentStr": "29.41"
+      },
+      {
+        "overworldMonsterId": "traffikrab",
+        "monsterId": "weevilite",
+        "percent": 45.45454545454545,
+        "percentStr": "45.45"
       },
       {
         "monsterId": "weevilite",
@@ -6027,26 +5898,20 @@
         "percentStr": "29.41"
       },
       {
+        "overworldMonsterId": "icepeck",
+        "monsterId": "icepeck",
+        "percent": 9.090909090909092,
+        "percentStr": "9.09"
+      },
+      {
         "monsterId": "icepeck",
         "percent": 5.88235294117647,
         "percentStr": "5.88"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "stardigrade",
-        "percent": 9.090909090909092,
-        "percentStr": "9.09"
-      },
-      {
         "monsterId": "stardigrade",
         "percent": 5.88235294117647,
         "percentStr": "5.88"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "sharktanker",
-        "percent": 45.45454545454545,
-        "percentStr": "45.45"
       },
       {
         "monsterId": "sharktanker",
@@ -6110,43 +5975,19 @@
     "habitat_name_localised": "Mire Sea",
     "species_enhanced": [
       {
-        "overworldMonsterId": "",
-        "monsterId": "traffikrab",
-        "percent": null,
-        "percentStr": "Infinity"
-      },
-      {
         "monsterId": "traffikrab",
         "percent": 20,
         "percentStr": "20.00"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "weevilite",
-        "percent": null,
-        "percentStr": "Infinity"
-      },
-      {
         "monsterId": "weevilite",
         "percent": 20,
         "percentStr": "20.00"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "icepeck",
-        "percent": null,
-        "percentStr": "Infinity"
       },
       {
         "monsterId": "icepeck",
         "percent": 5,
         "percentStr": "5.00"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "diveal",
-        "percent": null,
-        "percentStr": "Infinity"
       },
       {
         "monsterId": "diveal",
@@ -6154,32 +5995,14 @@
         "percentStr": "10.00"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "scubalrus",
-        "percent": null,
-        "percentStr": "Infinity"
-      },
-      {
         "monsterId": "scubalrus",
         "percent": 20,
         "percentStr": "20.00"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "stardigrade",
-        "percent": null,
-        "percentStr": "Infinity"
-      },
-      {
         "monsterId": "stardigrade",
         "percent": 5,
         "percentStr": "5.00"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "sharktanker",
-        "percent": null,
-        "percentStr": "Infinity"
       },
       {
         "monsterId": "sharktanker",
@@ -6250,15 +6073,15 @@
     "habitat_name_localised": "Mt. Wirral",
     "species_enhanced": [
       {
-        "overworldMonsterId": "",
-        "monsterId": "grampus",
-        "percent": 6.25,
-        "percentStr": "6.25"
-      },
-      {
         "monsterId": "grampus",
         "percent": 5.2631578947368425,
         "percentStr": "5.26"
+      },
+      {
+        "overworldMonsterId": "spookionna",
+        "monsterId": "spooki-onna",
+        "percent": 41.66666666666667,
+        "percentStr": "41.67"
       },
       {
         "monsterId": "spooki-onna",
@@ -6266,20 +6089,26 @@
         "percentStr": "35.09"
       },
       {
+        "overworldMonsterId": "sparktan",
+        "monsterId": "sparktan",
+        "percent": 10.416666666666668,
+        "percentStr": "10.42"
+      },
+      {
         "monsterId": "sparktan",
         "percent": 8.771929824561404,
         "percentStr": "8.77"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "zeustrike",
-        "percent": 6.25,
-        "percentStr": "6.25"
-      },
-      {
         "monsterId": "zeustrike",
         "percent": 5.2631578947368425,
         "percentStr": "5.26"
+      },
+      {
+        "overworldMonsterId": "icepeck",
+        "monsterId": "icepeck",
+        "percent": 41.66666666666667,
+        "percentStr": "41.67"
       },
       {
         "monsterId": "icepeck",
@@ -6287,15 +6116,15 @@
         "percentStr": "35.09"
       },
       {
+        "overworldMonsterId": "icepeck",
+        "monsterId": "cryoshear",
+        "percent": 6.25,
+        "percentStr": "6.25"
+      },
+      {
         "monsterId": "cryoshear",
         "percent": 5.2631578947368425,
         "percentStr": "5.26"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "plasmantler",
-        "percent": 6.25,
-        "percentStr": "6.25"
       },
       {
         "monsterId": "plasmantler",
@@ -6341,15 +6170,15 @@
     "habitat_name_localised": "Mt. Wirral Caves",
     "species_enhanced": [
       {
-        "overworldMonsterId": "",
-        "monsterId": "grampus",
-        "percent": 8.403361344537814,
-        "percentStr": "8.40"
-      },
-      {
         "monsterId": "grampus",
         "percent": 5.6818181818181825,
         "percentStr": "5.68"
+      },
+      {
+        "overworldMonsterId": "spookionna",
+        "monsterId": "spooki-onna",
+        "percent": 16.806722689075627,
+        "percentStr": "16.81"
       },
       {
         "monsterId": "spooki-onna",
@@ -6357,20 +6186,26 @@
         "percentStr": "11.36"
       },
       {
+        "overworldMonsterId": "sparktan",
+        "monsterId": "sparktan",
+        "percent": 8.403361344537814,
+        "percentStr": "8.40"
+      },
+      {
         "monsterId": "sparktan",
         "percent": 5.6818181818181825,
         "percentStr": "5.68"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "zeustrike",
-        "percent": 7.563025210084033,
-        "percentStr": "7.56"
-      },
-      {
         "monsterId": "zeustrike",
         "percent": 5.113636363636365,
         "percentStr": "5.11"
+      },
+      {
+        "overworldMonsterId": "icepeck",
+        "monsterId": "icepeck",
+        "percent": 16.806722689075627,
+        "percentStr": "16.81"
       },
       {
         "monsterId": "icepeck",
@@ -6378,20 +6213,26 @@
         "percentStr": "11.36"
       },
       {
+        "overworldMonsterId": "icepeck",
+        "monsterId": "cryoshear",
+        "percent": 16.806722689075627,
+        "percentStr": "16.81"
+      },
+      {
         "monsterId": "cryoshear",
         "percent": 11.363636363636365,
         "percentStr": "11.36"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "plasmantler",
-        "percent": 7.563025210084033,
-        "percentStr": "7.56"
-      },
-      {
         "monsterId": "plasmantler",
         "percent": 5.113636363636365,
         "percentStr": "5.11"
+      },
+      {
+        "overworldMonsterId": "dominoth",
+        "monsterId": "mothmanic",
+        "percent": 16.806722689075627,
+        "percentStr": "16.81"
       },
       {
         "monsterId": "mothmanic",
@@ -6399,15 +6240,15 @@
         "percentStr": "11.36"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "ratcousel",
-        "percent": 16.806722689075627,
-        "percentStr": "16.81"
-      },
-      {
         "monsterId": "ratcousel",
         "percent": 11.363636363636365,
         "percentStr": "11.36"
+      },
+      {
+        "overworldMonsterId": "terracooka",
+        "monsterId": "terracooka",
+        "percent": 16.806722689075627,
+        "percentStr": "16.81"
       },
       {
         "monsterId": "terracooka",
@@ -6415,15 +6256,15 @@
         "percentStr": "11.36"
       },
       {
+        "overworldMonsterId": "terracooka",
+        "monsterId": "coaldron",
+        "percent": 7.563025210084033,
+        "percentStr": "7.56"
+      },
+      {
         "monsterId": "coaldron",
         "percent": 5.113636363636365,
         "percentStr": "5.11"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "khepri",
-        "percent": 7.563025210084033,
-        "percentStr": "7.56"
       },
       {
         "monsterId": "khepri",
@@ -6447,15 +6288,15 @@
     "num_species": 8,
     "species_enhanced": [
       {
-        "overworldMonsterId": "",
-        "monsterId": "grampus",
-        "percent": 4.62962962962963,
-        "percentStr": "4.63"
-      },
-      {
         "monsterId": "grampus",
         "percent": 0.009976455564866914,
         "percentStr": "0.01"
+      },
+      {
+        "overworldMonsterId": "spookionna",
+        "monsterId": "spooki-onna",
+        "percent": 46.29629629629629,
+        "percentStr": "46.30"
       },
       {
         "monsterId": "spooki-onna",
@@ -6463,9 +6304,21 @@
         "percentStr": "0.10"
       },
       {
+        "overworldMonsterId": "sparktan",
+        "monsterId": "sparktan",
+        "percent": 2.314814814814815,
+        "percentStr": "2.31"
+      },
+      {
         "monsterId": "sparktan",
         "percent": 0.004988227782433457,
         "percentStr": "0.00"
+      },
+      {
+        "overworldMonsterId": "sparktan",
+        "monsterId": "zeustrike",
+        "percent": 0.4629629629629629,
+        "percentStr": "0.46"
       },
       {
         "monsterId": "zeustrike",
@@ -6473,9 +6326,21 @@
         "percentStr": "0.00"
       },
       {
+        "overworldMonsterId": "icepeck",
+        "monsterId": "icepeck",
+        "percent": 46.29629629629629,
+        "percentStr": "46.30"
+      },
+      {
         "monsterId": "icepeck",
         "percent": 0.09976455564866915,
         "percentStr": "0.10"
+      },
+      {
+        "overworldMonsterId": "icepeck",
+        "monsterId": "cryoshear",
+        "percent": 4.62962962962963,
+        "percentStr": "4.63"
       },
       {
         "monsterId": "cryoshear",
@@ -6483,21 +6348,9 @@
         "percentStr": "0.01"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "plasmantler",
-        "percent": 4.62962962962963,
-        "percentStr": "4.63"
-      },
-      {
         "monsterId": "plasmantler",
         "percent": 0.009976455564866914,
         "percentStr": "0.01"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "dandylion",
-        "percent": 46296.29629629629,
-        "percentStr": "46296.30"
       },
       {
         "monsterId": "dandylion",
@@ -6524,32 +6377,14 @@
     "habitat_name_localised": "Mt. Wirral",
     "species_enhanced": [
       {
-        "overworldMonsterId": "",
-        "monsterId": "grampus",
-        "percent": 15,
-        "percentStr": "15.00"
-      },
-      {
         "monsterId": "grampus",
         "percent": 5.2631578947368425,
         "percentStr": "5.26"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "spooki-onna",
-        "percent": 50,
-        "percentStr": "50.00"
-      },
-      {
         "monsterId": "spooki-onna",
         "percent": 17.54385964912281,
         "percentStr": "17.54"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "sparktan",
-        "percent": 25,
-        "percentStr": "25.00"
       },
       {
         "monsterId": "sparktan",
@@ -6557,21 +6392,9 @@
         "percentStr": "8.77"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "zeustrike",
-        "percent": 15,
-        "percentStr": "15.00"
-      },
-      {
         "monsterId": "zeustrike",
         "percent": 5.2631578947368425,
         "percentStr": "5.26"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "icepeck",
-        "percent": 50,
-        "percentStr": "50.00"
       },
       {
         "monsterId": "icepeck",
@@ -6579,31 +6402,31 @@
         "percentStr": "17.54"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "cryoshear",
-        "percent": 15,
-        "percentStr": "15.00"
-      },
-      {
         "monsterId": "cryoshear",
         "percent": 5.2631578947368425,
         "percentStr": "5.26"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "plasmantler",
-        "percent": 15,
-        "percentStr": "15.00"
-      },
-      {
         "monsterId": "plasmantler",
         "percent": 5.2631578947368425,
         "percentStr": "5.26"
+      },
+      {
+        "overworldMonsterId": "springheel",
+        "monsterId": "scampire",
+        "percent": 50,
+        "percentStr": "50.00"
       },
       {
         "monsterId": "scampire",
         "percent": 17.54385964912281,
         "percentStr": "17.54"
+      },
+      {
+        "overworldMonsterId": "springheel",
+        "monsterId": "ripterra",
+        "percent": 50,
+        "percentStr": "50.00"
       },
       {
         "monsterId": "ripterra",
@@ -6682,9 +6505,21 @@
     "habitat_name_localised": "New Wirral Park",
     "species_enhanced": [
       {
+        "overworldMonsterId": "carniviper",
+        "monsterId": "carniviper",
+        "percent": 41.666666666666664,
+        "percentStr": "41.67"
+      },
+      {
         "monsterId": "carniviper",
         "percent": 33.33333333333333,
         "percentStr": "33.33"
+      },
+      {
+        "overworldMonsterId": "dominoth",
+        "monsterId": "dominoth",
+        "percent": 41.666666666666664,
+        "percentStr": "41.67"
       },
       {
         "monsterId": "dominoth",
@@ -6692,15 +6527,15 @@
         "percentStr": "33.33"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "macabra",
-        "percent": 8.333333333333332,
-        "percentStr": "8.33"
-      },
-      {
         "monsterId": "macabra",
         "percent": 6.666666666666665,
         "percentStr": "6.67"
+      },
+      {
+        "overworldMonsterId": "squirey",
+        "monsterId": "squirey",
+        "percent": 8.333333333333332,
+        "percentStr": "8.33"
       },
       {
         "monsterId": "squirey",
@@ -6708,26 +6543,23 @@
         "percentStr": "6.67"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "stardigrade",
-        "percent": 8.333333333333332,
-        "percentStr": "8.33"
-      },
-      {
         "monsterId": "stardigrade",
         "percent": 6.666666666666665,
         "percentStr": "6.67"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "elfless",
-        "percent": 8.333333333333332,
-        "percentStr": "8.33"
-      },
-      {
         "monsterId": "elfless",
         "percent": 6.666666666666665,
         "percentStr": "6.67"
+      },
+      {
+        "overworldMonsterId": "puppercut",
+        "hour_min": 18,
+        "hour_max": 6,
+        "monsterId": "puppercut",
+        "percent": 8.333333333333332,
+        "percentStr": "8.33",
+        "available_specific_time": true
       },
       {
         "hour_min": 18,
@@ -6769,9 +6601,21 @@
     "habitat_name_localised": "New Wirral Park Caves",
     "species_enhanced": [
       {
+        "overworldMonsterId": "carniviper",
+        "monsterId": "carniviper",
+        "percent": 25,
+        "percentStr": "25.00"
+      },
+      {
         "monsterId": "carniviper",
         "percent": 16.949152542372882,
         "percentStr": "16.95"
+      },
+      {
+        "overworldMonsterId": "dominoth",
+        "monsterId": "dominoth",
+        "percent": 25,
+        "percentStr": "25.00"
       },
       {
         "monsterId": "dominoth",
@@ -6779,15 +6623,15 @@
         "percentStr": "16.95"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "macabra",
-        "percent": 7.5,
-        "percentStr": "7.50"
-      },
-      {
         "monsterId": "macabra",
         "percent": 5.084745762711865,
         "percentStr": "5.08"
+      },
+      {
+        "overworldMonsterId": "squirey",
+        "monsterId": "squirey",
+        "percent": 25,
+        "percentStr": "25.00"
       },
       {
         "monsterId": "squirey",
@@ -6795,37 +6639,25 @@
         "percentStr": "16.95"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "stardigrade",
-        "percent": 7.5,
-        "percentStr": "7.50"
-      },
-      {
         "monsterId": "stardigrade",
         "percent": 5.084745762711865,
         "percentStr": "5.08"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "elfless",
-        "percent": 7.5,
-        "percentStr": "7.50"
-      },
-      {
         "monsterId": "elfless",
         "percent": 5.084745762711865,
         "percentStr": "5.08"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "muskrateer",
-        "percent": 25,
-        "percentStr": "25.00"
       },
       {
         "monsterId": "muskrateer",
         "percent": 16.949152542372882,
         "percentStr": "16.95"
+      },
+      {
+        "overworldMonsterId": "terracooka",
+        "monsterId": "terracooka",
+        "percent": 25,
+        "percentStr": "25.00"
       },
       {
         "monsterId": "terracooka",
@@ -6847,20 +6679,26 @@
     "num_species": 3,
     "species_enhanced": [
       {
+        "overworldMonsterId": "carniviper",
+        "monsterId": "carniviper",
+        "percent": 50,
+        "percentStr": "50.00"
+      },
+      {
         "monsterId": "carniviper",
         "percent": 0.09980039920159679,
         "percentStr": "0.10"
       },
       {
+        "overworldMonsterId": "dominoth",
+        "monsterId": "dominoth",
+        "percent": 50,
+        "percentStr": "50.00"
+      },
+      {
         "monsterId": "dominoth",
         "percent": 0.09980039920159679,
         "percentStr": "0.10"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "dandylion",
-        "percent": 50000,
-        "percentStr": "50000.00"
       },
       {
         "monsterId": "dandylion",
@@ -6887,9 +6725,21 @@
     "habitat_name_localised": "New Wirral Park",
     "species_enhanced": [
       {
+        "overworldMonsterId": "springheel",
+        "monsterId": "springheel",
+        "percent": 80,
+        "percentStr": "80.00"
+      },
+      {
         "monsterId": "springheel",
         "percent": 22.727272727272727,
         "percentStr": "22.73"
+      },
+      {
+        "overworldMonsterId": "springheel",
+        "monsterId": "hopskin",
+        "percent": 20,
+        "percentStr": "20.00"
       },
       {
         "monsterId": "hopskin",
@@ -6897,21 +6747,9 @@
         "percentStr": "5.68"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "carniviper",
-        "percent": 80,
-        "percentStr": "80.00"
-      },
-      {
         "monsterId": "carniviper",
         "percent": 22.727272727272727,
         "percentStr": "22.73"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "macabra",
-        "percent": 20,
-        "percentStr": "20.00"
       },
       {
         "monsterId": "macabra",
@@ -6919,43 +6757,19 @@
         "percentStr": "5.68"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "dominoth",
-        "percent": 80,
-        "percentStr": "80.00"
-      },
-      {
         "monsterId": "dominoth",
         "percent": 22.727272727272727,
         "percentStr": "22.73"
       },
       {
-        "overworldMonsterId": "",
-        "monsterId": "stardigrade",
-        "percent": 20,
-        "percentStr": "20.00"
-      },
-      {
         "monsterId": "stardigrade",
         "percent": 5.681818181818182,
         "percentStr": "5.68"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "squirey",
-        "percent": 32,
-        "percentStr": "32.00"
       },
       {
         "monsterId": "squirey",
         "percent": 9.090909090909092,
         "percentStr": "9.09"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "elfless",
-        "percent": 20,
-        "percentStr": "20.00"
       },
       {
         "monsterId": "elfless",
@@ -6977,7 +6791,19 @@
     "num_species": 4,
     "species_enhanced": [
       {
+        "overworldMonsterId": "pawndead",
         "monsterId": "pawndead",
+        "percent": 25,
+        "percentStr": "25.00"
+      },
+      {
+        "monsterId": "pawndead",
+        "percent": 25,
+        "percentStr": "25.00"
+      },
+      {
+        "overworldMonsterId": "springheel",
+        "monsterId": "springheel",
         "percent": 25,
         "percentStr": "25.00"
       },
@@ -6987,7 +6813,19 @@
         "percentStr": "25.00"
       },
       {
+        "overworldMonsterId": "springheel",
         "monsterId": "hopskin",
+        "percent": 25,
+        "percentStr": "25.00"
+      },
+      {
+        "monsterId": "hopskin",
+        "percent": 25,
+        "percentStr": "25.00"
+      },
+      {
+        "overworldMonsterId": "springheel",
+        "monsterId": "snoopin",
         "percent": 25,
         "percentStr": "25.00"
       },
@@ -7031,7 +6869,19 @@
     "habitat_name_localised": "Southern Isles",
     "species_enhanced": [
       {
+        "overworldMonsterId": "traffikrab",
         "monsterId": "traffikrab",
+        "percent": 29.411764705882348,
+        "percentStr": "29.41"
+      },
+      {
+        "monsterId": "traffikrab",
+        "percent": 29.411764705882348,
+        "percentStr": "29.41"
+      },
+      {
+        "overworldMonsterId": "squirey",
+        "monsterId": "squirey",
         "percent": 29.411764705882348,
         "percentStr": "29.41"
       },
@@ -7041,7 +6891,19 @@
         "percentStr": "29.41"
       },
       {
+        "overworldMonsterId": "icepeck",
         "monsterId": "icepeck",
+        "percent": 5.88235294117647,
+        "percentStr": "5.88"
+      },
+      {
+        "monsterId": "icepeck",
+        "percent": 5.88235294117647,
+        "percentStr": "5.88"
+      },
+      {
+        "overworldMonsterId": "traffikrab",
+        "monsterId": "lobstacle",
         "percent": 5.88235294117647,
         "percentStr": "5.88"
       },
@@ -7049,6 +6911,15 @@
         "monsterId": "lobstacle",
         "percent": 5.88235294117647,
         "percentStr": "5.88"
+      },
+      {
+        "overworldMonsterId": "allseer",
+        "hour_min": 18,
+        "hour_max": 6,
+        "monsterId": "allseer",
+        "percent": 29.411764705882348,
+        "percentStr": "29.41",
+        "available_specific_time": true
       },
       {
         "hour_min": 18,
@@ -7083,14 +6954,32 @@
     "habitat_name_localised": "Marshland Caves",
     "species_enhanced": [
       {
+        "overworldMonsterId": "terracooka",
         "monsterId": "terracooka",
         "percent": 14.285714285714288,
         "percentStr": "14.29"
       },
       {
+        "monsterId": "terracooka",
+        "percent": 14.285714285714288,
+        "percentStr": "14.29"
+      },
+      {
+        "overworldMonsterId": "ferriclaw",
         "monsterId": "ferriclaw",
         "percent": 71.42857142857143,
         "percentStr": "71.43"
+      },
+      {
+        "monsterId": "ferriclaw",
+        "percent": 71.42857142857143,
+        "percentStr": "71.43"
+      },
+      {
+        "overworldMonsterId": "trapwurm",
+        "monsterId": "trapwurm",
+        "percent": 14.285714285714288,
+        "percentStr": "14.29"
       },
       {
         "monsterId": "trapwurm",
@@ -7113,9 +7002,21 @@
     "habitat_name_localised": "Marshland Caves",
     "species_enhanced": [
       {
+        "overworldMonsterId": "terracooka",
+        "monsterId": "terracooka",
+        "percent": 14.285714285714288,
+        "percentStr": "14.29"
+      },
+      {
         "monsterId": "terracooka",
         "percent": 8.333333333333334,
         "percentStr": "8.33"
+      },
+      {
+        "overworldMonsterId": "ferriclaw",
+        "monsterId": "ferriclaw",
+        "percent": 71.42857142857143,
+        "percentStr": "71.43"
       },
       {
         "monsterId": "ferriclaw",
@@ -7123,15 +7024,15 @@
         "percentStr": "41.67"
       },
       {
+        "overworldMonsterId": "trapwurm",
+        "monsterId": "trapwurm",
+        "percent": 14.285714285714288,
+        "percentStr": "14.29"
+      },
+      {
         "monsterId": "trapwurm",
         "percent": 8.333333333333334,
         "percentStr": "8.33"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "picksie",
-        "percent": 71.42857142857143,
-        "percentStr": "71.43"
       },
       {
         "monsterId": "picksie",
@@ -7151,20 +7052,26 @@
     "num_species": 3,
     "species_enhanced": [
       {
+        "overworldMonsterId": "traffikrab",
+        "monsterId": "traffikrab",
+        "percent": 50,
+        "percentStr": "50.00"
+      },
+      {
         "monsterId": "traffikrab",
         "percent": 45.45454545454545,
         "percentStr": "45.45"
       },
       {
+        "overworldMonsterId": "faucetear",
+        "monsterId": "faucetear",
+        "percent": 50,
+        "percentStr": "50.00"
+      },
+      {
         "monsterId": "faucetear",
         "percent": 45.45454545454545,
         "percentStr": "45.45"
-      },
-      {
-        "overworldMonsterId": "",
-        "monsterId": "burnace",
-        "percent": 10,
-        "percentStr": "10.00"
       },
       {
         "monsterId": "burnace",

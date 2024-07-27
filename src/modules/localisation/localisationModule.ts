@@ -13,12 +13,12 @@ import {
   defaultLocale,
 } from 'constant/localisation';
 import { ModuleType } from 'constant/module';
+import { paths } from 'constant/paths';
 import { tresSeparator } from 'constant/tresSeparator';
 import { ILocalisation } from 'contracts/localisation';
 import { FolderPathHelper } from 'helpers/folderPathHelper';
 import { stringStartsWith } from 'helpers/stringHelper';
 import { CommonModule } from 'modules/commonModule';
-import { paths } from 'constant/paths';
 
 const excludeLangCodes = ['eo'];
 

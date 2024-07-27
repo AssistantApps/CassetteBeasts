@@ -3,13 +3,17 @@
 {{> partials/breadcrumb }}
 
 <div class="grid masonry min-card-width mb-3">
+  <div class="meta">
+    <h1>{{lookup @root.translate 'UI_BESTIARY_LIST_MODE_VIEW_MONSTERS'}} &gt;&gt; {{data.name_localised}}</h1>
+  </div>
+
   <article class="monster-detail-card item-detail-card">
     <div class="monster-detail-card-heading item-detail-card-heading primary">
       <h2 class="Neu5Land animate__animated animate__fadeIn">{{data.name_localised}}</h2>
       {{#if data.battle_cry_audio_url}}
       <div class="audio noselect animate__animated animate__fadeIn">
         <h4 class="cursor-pointer" onclick="playAudioNode('{{data.name_localised}}-cry')">🔉</h4>
-        <audio id="{{data.name_localised}}-cry" class="hidden">
+        <audio id="{{data.name_localised}}-cry" class="hidden autoplay">
           <source src="{{data.battle_cry_audio_url}}" type="audio/wav">
         </audio>
       </div>
@@ -150,7 +154,7 @@
 
       <section class="additional-section animate__animated animate__fadeIn">
         <h3 class="section-heading tags">
-          <span class="Neu5Land" data-translate="TODO">Tags:</span>&nbsp;
+          <span class="Neu5Land">{{lookup @root.translate 'tags'}}:</span>&nbsp;
           {{#each data.move_tags}}<small>{{this}}<span
               class="{{#if @last}}hidden{{/if}}">,&nbsp;</span></small>{{/each}}
         </h3>
@@ -219,15 +223,15 @@
       <section class="additional-section habitat animate__animated animate__fadeIn">
         <details open>
           <summary>
-            <h3 class="section-heading Neu5Land noselect" data-translate="TODO">Habitat</h3>
+            <h3 class="section-heading Neu5Land noselect">{{lookup @root.translate 'overworld'}}</h3>
           </summary>
           <div class="table-container">
             <table class="moves last-td-padding highlight-row">
               <thead>
                 <tr>
-                  <td class="sprite" data-translate="TODO">Overworld</td>
+                  <td class="sprite">{{lookup @root.translate 'habitat'}}</td>
                   <td class="name">{{ lookup @root.translate 'UI_INVENTORY_FILTER_NAME' }}</td>
-                  <td class="percent" data-translate="TODO">percent</td>
+                  <td class="percent">{{lookup @root.translate 'percentTitle'}}</td>
                 </tr>
               </thead>
               <tbody>
@@ -247,7 +251,7 @@
                 {{#if data.spawn_backup_locations}}
                 {{#if data.spawn_overworld_locations}}
                 <tr>
-                  <td colspan="3" class="ta-center" data-translate="TODO">Backup</td>
+                  <td colspan="3" class="ta-center">{{lookup @root.translate 'backup'}}</td>
                 </tr>
                 {{/if}}
                 {{#each data.spawn_backup_locations}}

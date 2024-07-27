@@ -3,8 +3,8 @@ import path from 'path';
 
 import { handlebarTemplate } from 'constant/handlebar';
 import { paths } from 'constant/paths';
-import { getHandlebar } from 'services/internal/handlebarService';
 import { site } from 'constant/site';
+import { getHandlebar } from 'services/internal/handlebarService';
 
 export const generateSiteMap = async () => {
   try {

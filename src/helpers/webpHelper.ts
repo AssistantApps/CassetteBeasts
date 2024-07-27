@@ -5,7 +5,7 @@ import { paths } from 'constant/paths';
 import { ISpriteAnimDetailsEnhanced } from 'contracts/spriteAnim';
 import { animateWebp, IFrameInstructions } from 'lib/webpmux';
 import { getExternalResourcesImagePath } from 'mapper/externalResourceMapper';
-import { getBotPath, getConfig } from 'services/internal/configService';
+import { getBotPath } from 'services/internal/configService';
 import sharp from 'sharp';
 import {
   createFoldersOfDestFilePath,

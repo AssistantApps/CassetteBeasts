@@ -70,6 +70,7 @@ export class MiscModule extends CommonModule<ILocalisation> {
         uiKey: UIKeys.map,
         url: routes.map,
         gameUrl: worldModule.get('overworld').map_texture.path,
+        hideInMobile: true,
       },
     ];
 
@@ -121,10 +122,12 @@ export class MiscModule extends CommonModule<ILocalisation> {
       outputFiles.push(outputFile);
     }
 
+    const relativePath = `${langCode}${outputFile}`;
     await getHandlebar().compileTemplateToFile({
       data: this.getBasicPageData({
         langCode,
         modules,
+        relativePath,
         breadcrumbs: [],
         data: { cards: this._cards },
       }),

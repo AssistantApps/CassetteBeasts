@@ -2,9 +2,9 @@ import { FaviconOptions, favicons } from 'favicons';
 import fs from 'fs/promises';
 import path from 'path';
 
+import { paths } from 'constant/paths';
 import { site } from 'constant/site';
 import { getBotPath, getConfig } from 'services/internal/configService';
-import { paths } from 'constant/paths';
 
 export const generateFavicons = async () => {
   const publicFolder = path.join(getBotPath(), 'public');

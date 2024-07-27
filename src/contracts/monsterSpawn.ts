@@ -1,6 +1,4 @@
 import { IExternalResource } from './externalResource';
-import { IMonsterFormSimplified } from './monsterForm';
-import { IVector2D } from './vector';
 
 export interface IMonsterSpawnDetails {
   monster_form: IExternalResource;

@@ -3,6 +3,10 @@
 {{> partials/breadcrumb }}
 
 <div class="grid status-effect-detail-grid mb-3">
+  <div class="meta">
+    <h1>{{lookup @root.translate 'MOVE_CATEGORY_STATUS'}} &gt;&gt; {{data.name_localised}}</h1>
+  </div>
+
   <article class="item-detail-card">
     <div class="item-detail-card-heading primary">
       <img src="{{resimage data.icon.path}}" class="icon" alt="icon of {{data.name_localised}}" draggable="false">
@@ -71,7 +75,62 @@
     </div>
   </article>
 
+  {{#if data.moves_that_cause_this_effect}}
   <article class="item-detail-card">
+    <div class="item-detail-card-heading">
+      <h2 class="Neu5Land animate__animated animate__fadeIn">{{lookup @root.translate 'UI_PARTY_VIEW_MOVES'}}</h2>
+    </div>
+    <div class="item-detail-card-body">
+      <div class="table-container reverse-padding">
+        <table class="moves last-td-padding highlight-row animate__animated animate__fadeIn">
+          <thead>
+            <tr class="no-padding">
+              <td class="type"></td>
+              <td class="name">{{ lookup @root.translate 'UI_INVENTORY_FILTER_NAME' }}</td>
+              <td class="category">{{ lookup @root.translate 'UI_INVENTORY_FILTER_CATEGORY' }}</td>
+            </tr>
+          </thead>
+          <tbody>
+            {{#each data.moves_that_cause_this_effect}}
+            <tr class="move no-padding">
+              <td class="type">
+                <a href="/{{@root.langCode}}{{@root.routes.moves}}/{{encodeuri this.id}}.html"
+                  title="{{this.name_localised}}">
+                  {{#if this.elemental_types_elements.length}}
+
+                  {{#each this.elemental_types_elements}}
+                  <img src="{{resimage this.icon.path}}" class="move-image" alt="image of {{this.name_localised}}"
+                    draggable="false">
+                  {{/each}}
+
+                  {{else}}
+
+                  <img src="/assets/img/typeless.png" class="move-image" title="Typeless" alt="image of typeless"
+                    draggable="false">
+
+                  {{/if}}
+                </a>
+              </td>
+              <td class="name">
+                <a href="/{{@root.langCode}}{{@root.routes.moves}}/{{encodeuri this.id}}.html"
+                  title="{{this.name_localised}}">
+                  {{this.name_localised}}
+                </a>
+              </td>
+              <td class="category">
+                <a href="/{{@root.langCode}}{{@root.routes.moves}}/{{encodeuri this.id}}.html"
+                  title="{{this.name_localised}}">
+                  {{this.category_name_localised}}
+                </a>
+              </td>
+            </tr>
+            {{/each}}
+          </tbody>
+        </table>
+      </div>
+      <br>
+    </div>
   </article>
+  {{/if}}
 </div>
 {{/layouts/default }}

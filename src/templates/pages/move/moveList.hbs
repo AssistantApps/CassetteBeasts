@@ -16,6 +16,10 @@
 </section>
 
 <section id="move-grid" class="item-grid-list grid-mode mb-3">
+  <div class="meta">
+    <h1>{{lookup @root.translate 'UI_PARTY_VIEW_MOVES'}}</h1>
+  </div>
+
   {{#each data.list}}
   <a href="/{{@root.langCode}}{{@root.routes.moves}}/{{this.id}}.html"
     class="grid-list-item item animate__animated animate__fadeIn" data-title="{{this.name_localised}}"

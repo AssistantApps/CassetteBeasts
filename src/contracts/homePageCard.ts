@@ -5,4 +5,5 @@ export interface IHomePageCard {
   gameUrl?: string;
   imageUrl?: string;
   wip?: boolean;
+  hideInMobile?: boolean;
 }

@@ -4,14 +4,19 @@ import path from 'path';
 import { IntermediateFile } from 'constant/intermediateFile';
 import { ModuleType } from 'constant/module';
 import { paths } from 'constant/paths';
-import { ICharacter, ICharacterSfx, ICharacterSfxFiles } from 'contracts/character';
+import {
+  ICharacter,
+  ICharacterSfx,
+  ICharacterSfxFile,
+  ICharacterSfxFiles,
+} from 'contracts/character';
+import { IExternalResource } from 'contracts/externalResource';
 import { scaffoldFolderAndDelFileIfOverwrite } from 'helpers/fileHelper';
 import { FolderPathHelper } from 'helpers/folderPathHelper';
 import { copyWavFile } from 'helpers/wavHelper';
 import { readItemDetail } from 'modules/baseModule';
 import { CommonModule } from 'modules/commonModule';
 import { characterSfxMapFromDetailList } from './characterSfxMapFromDetailList';
-import { IExternalResource } from 'contracts/externalResource';
 
 export class CharacterSfxModule extends CommonModule<ICharacterSfx> {
   private _folder = FolderPathHelper.characterSfx();
@@ -54,10 +59,13 @@ export class CharacterSfxModule extends CommonModule<ICharacterSfx> {
         if (charSfxProp == 'audioFiles') continue;
         if (Array.isArray(charSfxValue) != true) continue;
 
-        const outputFiles: Array<string> = [];
+        const outputFiles: Array<ICharacterSfxFile> = [];
         for (const extResource of charSfxValue as Array<IExternalResource>) {
           const outputFile = extResource.path.replace('res://sfx/', '/assets/audio/');
-          outputFiles.push(outputFile);
+          outputFiles.push({
+            url: outputFile,
+            autoplay: outputFile.includes('recording_success'),
+          });
         }
 
         if (outputFiles.length < 1) continue;
@@ -82,12 +90,12 @@ export class CharacterSfxModule extends CommonModule<ICharacterSfx> {
 
           const outputFullPath = path.join(
             paths().destinationFolder,
-            sfx?.replace('res://sfx/', '/assets/audio/'),
+            (sfx?.url ?? '').replace('res://sfx/', '/assets/audio/'),
           );
           const exists = scaffoldFolderAndDelFileIfOverwrite(outputFullPath, overwrite);
           if (exists) break;
 
-          copyWavFile(sfx, outputFullPath);
+          copyWavFile(sfx.url, outputFullPath);
         }
       }
     }

@@ -1,5 +1,4 @@
 import { IExternalResource } from './externalResource';
-import { ISpriteAnimDetailsEnhanced } from './spriteAnim';
 import { IVector2D } from './vector';
 
 export interface INodeResourceHead {

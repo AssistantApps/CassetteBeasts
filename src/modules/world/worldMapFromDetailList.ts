@@ -4,7 +4,7 @@ import { ISubResource } from 'contracts/subResource';
 import { IWorld, IWorldMetaData } from 'contracts/world';
 import { tryParseRect2, tryParseVector2D } from 'helpers/mathHelper';
 import { getCleanedString } from 'helpers/stringHelper';
-import { getExternalResource, getExternalResources } from 'mapper/externalResourceMapper';
+import { getExternalResource } from 'mapper/externalResourceMapper';
 import { getSubResource, getSubResources } from 'mapper/subResourceMapper';
 
 export const worldMapFromDetailList =

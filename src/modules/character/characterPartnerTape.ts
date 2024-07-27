@@ -3,9 +3,8 @@ import sharp from 'sharp';
 
 import { AppImage } from 'constant/image';
 import { paths } from 'constant/paths';
-import { site } from 'constant/site';
-import { getExternalResourcesImagePath } from 'mapper/externalResourceMapper';
 import { getBase64FromFile } from 'helpers/fileHelper';
+import { getExternalResourcesImagePath } from 'mapper/externalResourceMapper';
 
 interface IMetaImagesProps {
   spriteBase64: string;

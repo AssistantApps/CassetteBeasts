@@ -3,6 +3,10 @@
 {{> partials/breadcrumb }}
 
 <section id="world-display" class="item-detail-card mb-3">
+  <div class="meta">
+    <h1>{{lookup @root.translate 'UI_PAUSE_MAP_BTN'}}</h1>
+  </div>
+
   <div id="world-tab-container" class="tab0">
     <div class="item-detail-card-heading primary noselect animate__animated animate__fadeIn">
       {{#each data.list}}

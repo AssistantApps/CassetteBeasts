@@ -1,4 +1,5 @@
 import { IExternalResource } from './externalResource';
+import { IMoveSimplified } from './move';
 
 export interface IStatusEffect {
   id: string;
@@ -29,4 +30,5 @@ export interface IStatusEffectEnhanced extends IStatusEffect {
   toast_on_remove_localised: string;
   name_modifier_localised: string;
   meta_image_url: string;
+  moves_that_cause_this_effect: Array<IMoveSimplified>;
 }

@@ -1,5 +1,11 @@
 {
+  "editor.formatOnSave": true,
   "typescript.preferences.quoteStyle": "single",
+  "[typescript]": {
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit"
+    }
+  },
   "prettier.trailingComma": "all",
   "prettier.tabWidth": 2,
   "prettier.semi": true,

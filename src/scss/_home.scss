@@ -16,6 +16,15 @@ $cardPadding: 0.5em;
 
   a {
     text-decoration: none;
+    border: 2px solid rgba(0, 0, 0, 0.25);
+    border-radius: var(--card-border-radius);
+    transition: transform 250ms ease-in-out, box-shadow 250ms ease-in-out;
+
+    &:hover {
+      z-index: 4;
+      transform: translateY(-10px);
+      box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.25);
+    }
 
     article {
       display: flex;

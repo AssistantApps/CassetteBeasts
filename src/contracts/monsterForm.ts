@@ -85,6 +85,8 @@ export interface IMonsterFormSimplified {
   resource_name: string;
   icon_url: string;
   source: string;
+  isSecret: boolean;
+  bestiary_index: number;
   bestiary_index_with_padding: string;
 }
 

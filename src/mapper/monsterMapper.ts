@@ -5,6 +5,8 @@ export const monsterToSimplified = (monster: IMonsterFormEnhanced): IMonsterForm
   name_localised: monster.name_localised,
   resource_name: monster.resource_name,
   icon_url: monster.icon_url,
+  isSecret: monster.isSecret,
+  bestiary_index: monster.bestiary_index,
   bestiary_index_with_padding: monster.bestiary_index_with_padding,
   source: undefined,
 });
