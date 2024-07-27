@@ -32,21 +32,22 @@
     data-id="{{this.bestiary_index_with_padding}}" data-title="{{this.name_localised}}"
     data-description="{{this.description_localised}}" style="animation-delay: {{multiply @index 30 600}}ms;">
     <div class="grid-list-item-image">
-      <img src="{{resimage this.icon_url}}" class="sprite" alt="image of {{this.name_localised}}" draggable="false">
+      <img src="{{resimage this.icon_url}}" class="sprite" loading="lazy" alt="image of {{this.name_localised}}"
+        draggable="false">
 
       {{#each this.animations}}
       {{#if @first}}
-      <img src="{{resimage this.imageUrl}}" class="sprite-anim" alt="gif #{{this.id}} of {{data.name_localised}}"
-        draggable="false">
+      <img src="{{resimage this.imageUrl}}" class="sprite-anim" loading="lazy"
+        alt="gif #{{this.id}} of {{data.name_localised}}" draggable="false">
       {{/if}}
       {{/each}}
 
-      <img src="{{resimage this.tape_sticker_texture.path}}" class="sticker animate__animated"
+      <img src="{{resimage this.tape_sticker_texture.path}}" class="sticker animate__animated" loading="lazy"
         alt="image of {{this.name_localised}}" draggable="false">
 
       {{#each this.elemental_types_elements}}
       <img src="{{resimage this.icon.path}}" class="type animate__animated" alt="element of {{this.name_localised}}"
-        draggable="false">
+        loading="lazy" draggable="false">
       {{/each}}
     </div>
     <section class="grid-list-item-container">

@@ -9,7 +9,8 @@
 
   <article class="item-detail-card">
     <div class="item-detail-card-heading primary">
-      <img src="{{resimage data.icon.path}}" class="icon" alt="icon of {{data.name_localised}}" draggable="false">
+      <img src="{{resimage data.icon.path}}" class="icon" loading="lazy" alt="icon of {{data.name_localised}}"
+        draggable="false">
       <h2 class="Neu5Land animate__animated animate__fadeIn">{{data.name_localised}}</h2>
     </div>
     <div class="item-detail-card-body">
@@ -23,7 +24,7 @@
         <div class="ap-block">
           {{#repeat data.cost}}
           <img src="/assets/img/meta/ap.png" class="ap" title="Action Point" alt="image of an action point"
-            draggable="false">
+            loading="lazy" draggable="false">
           {{/repeat}}
         </div>
       </div>
@@ -100,13 +101,13 @@
 
                   {{#each this.elemental_types_elements}}
                   <img src="{{resimage this.icon.path}}" class="move-image" alt="image of {{this.name_localised}}"
-                    draggable="false">
+                    loading="lazy" draggable="false">
                   {{/each}}
 
                   {{else}}
 
                   <img src="/assets/img/typeless.png" class="move-image" title="Typeless" alt="image of typeless"
-                    draggable="false">
+                    loading="lazy" draggable="false">
 
                   {{/if}}
                 </a>

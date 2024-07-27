@@ -13,9 +13,9 @@
 			<article>
 				<div class="img-container">
 					{{#if this.gameUrl}}
-					<img src="{{resimage this.gameUrl}}" alt="{{lookup @root.translate uiKey}}">
+					<img src="{{resimage this.gameUrl}}" loading="lazy" alt="{{lookup @root.translate uiKey}}">
 					{{else}}
-					<img src="{{this.imageUrl}}" alt="{{lookup @root.translate uiKey}}">
+					<img src="{{this.imageUrl}}" loading="lazy" alt="{{lookup @root.translate uiKey}}">
 					{{/if}}
 				</div>
 				<footer>

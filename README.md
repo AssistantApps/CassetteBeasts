@@ -74,9 +74,9 @@ By using the software and services provided, you agree to our [Terms and conditi
 <br />
 
 [cassetteBeastWebsite]: https://www.cassettebeasts.com?ref=AssistantAppsCBGithub
-[cassetteBeastPrivacy]: https://www.cassettebeasts.com/privacy_policy.html?ref=AssistantAppsCBGithub
-[cassetteBeastTerms]: https://www.cassettebeasts.com/terms_and_conditions.html?ref=AssistantAppsCBGithub
-[cassetteBeastCodeOfConduct]: https://github.com/AssistantApps/CassetteBeasts?tab=coc-ov-file#readme&ref=AssistantAppsCBGithub
+[cassetteBeastPrivacy]: https://www.cassettebeasts.assistantapps.com/privacy_policy.html?ref=AssistantAppsCBGithub
+[cassetteBeastTerms]: https://www.cassettebeasts.assistantapps.com/terms_and_conditions.html?ref=AssistantAppsCBGithub
+[cassetteBeastCodeOfConduct]: https://github.com/AssistantApps/CassetteBeasts?tab=coc-ov-file#readme
 [cassetteBeastWiki]: https://wiki.cassettebeasts.com?ref=AssistantAppsCBGithub
 [handlebarJS]: https://handlebarsjs.com?ref=AssistantAppsCBGithub
 [webpmux]: https://developers.google.com/speed/webp/docs/webpmux?ref=AssistantAppsCBGithub

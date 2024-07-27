@@ -12,18 +12,19 @@
       <h2 class="Neu5Land animate__animated animate__fadeIn">{{data.name_localised}}</h2>
       <div class="spacer"></div>
       {{#each data.elemental_types_elements}}
-      <img src="{{resimage this.icon.path}}" class="element-image" alt="image of {{this.name}}" draggable="false">
+      <img src="{{resimage this.icon.path}}" class="element-image" loading="lazy" alt="image of {{this.name}}"
+        draggable="false">
       {{/each}}
     </div>
     <div class="item-detail-card-body">
       <div id="sprite-tab-container">
         <div class="grid images noselect animate__animated animate__fadeIn">
           <div class="sprites">
-            <img src="{{resimage data.icon_url}}" class="char-image tab-content-0"
+            <img src="{{resimage data.icon_url}}" class="char-image tab-content-0" loading="lazy"
               alt="image of {{data.name_localised}}" draggable="false">
 
             {{#each data.animations}}
-            <img src="{{resimage this.imageUrl}}" class="char-image tab-content-{{inc @index}}"
+            <img src="{{resimage this.imageUrl}}" class="char-image tab-content-{{inc @index}}" loading="lazy"
               alt="gif #{{this.id}} of {{data.name_localised}}" draggable="false">
             {{/each}}
 
@@ -78,7 +79,7 @@
       <section class="wiki-section animate__animated animate__fadeIn">
         <a href="https://wiki.cassettebeasts.com/wiki/{{data.name_localised}}" rel="noopener noreferrer" target="_blank"
           title="view {{data.name_localised}} on the wiki" role="button" class="btn-border-hover outline secondary">
-          <img src="/assets/img/wiki.png" alt="wiki logo">
+          <img src="/assets/img/wiki.png" alt="wiki logo" loading="lazy">
           <div class="text">
             <h6>{{translatewithformat @root.translate 'viewOn' 'wiki.cassettebeasts.com'}}</h6>
           </div>
@@ -99,7 +100,7 @@
           <div class="sprites">
             {{#each data.portraits}}
             <img src="{{resimage this}}" class="portrait-image {{@root.data.resource_name}} tab-content-{{@index}}"
-              alt="portrait #{{inc @index}} of {{@root.data.name_localised}}" draggable="false">
+              loading="lazy" alt="portrait #{{inc @index}} of {{@root.data.name_localised}}" draggable="false">
             {{/each}}
 
           </div>
@@ -119,7 +120,7 @@
         <h3 class="section-heading Neu5Land">{{lookup @root.translate 'partnerMonster'}}</h3>
         <a href="/{{@root.langCode}}{{@root.routes.monsters}}/{{encodeuri data.partner_signature_species_monsters.resource_name}}.html"
           title="{{data.partner_signature_species_monsters.name_localised}}">
-          <img src="{{data.partner_image_url}}" class="tape-image animate__animated tada-hover"
+          <img src="{{data.partner_image_url}}" class="tape-image animate__animated tada-hover" loading="lazy"
             alt="tape image of {{data.partner_signature_species_monsters.name_localised}}" draggable="false">
         </a>
 

@@ -23,7 +23,7 @@
         <div class="tab-content-{{@index}} ta-center">
           <div class="map-grid-container">
             <img src="{{resimage this.map_texture.path}}" class="map" alt="image of {{this.name_localised}}"
-              draggable="false">
+              loading="lazy" draggable="false">
             <div class="map-grid" style="--num-col:{{this.numOfColumns}}; --num-row:{{this.numOfRows}};">
               {{#each chunk_meta_data_localised}}
               {{#each this}}
@@ -35,7 +35,7 @@
                   <div class="details">
                     {{#if this.icon_url}}
                     <img src="{{resimage this.icon_url}}" class="status" alt="image of {{this.name_localised}}"
-                      draggable="false">
+                      loading="lazy" draggable="false">
                     {{/if}}
                     <div class="text">
                       <p class="name">{{this.title_localised}}</p>
