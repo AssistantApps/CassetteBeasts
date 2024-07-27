@@ -7056,7 +7056,7 @@ tr:hover td.sprite img {
     grid-template-columns: 1fr;
   }
 }
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 768px) {
   body header.header [data-tooltip][data-placement=bottom]::after,
   body header.header [data-tooltip][data-placement=bottom]::before {
     transform: translate(-100%, 0.25rem);
@@ -7073,6 +7073,14 @@ tr:hover td.sprite img {
   body .character-detail-grid,
   body .status-effect-detail-grid {
     grid-template-columns: 1fr;
+  }
+  body .page-options-with-breadcrumbs {
+    flex-wrap: wrap;
+  }
+  body .page-options-with-breadcrumbs .breadcrumb {
+    width: 100%;
+    margin-top: 0.25em;
+    margin-bottom: 0.5em;
   }
   body .page-options {
     position: relative;
