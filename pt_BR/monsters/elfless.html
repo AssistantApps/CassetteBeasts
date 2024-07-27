@@ -9,8 +9,6 @@
         Elfetuoso - 
         Assistant for Cassette Beasts
     </title>
-    <link rel="index" href="https://cassettebeasts.assistantapps.com/">
-    <link rel="canonical" href="https://cassettebeasts.assistantapps.com/">
     <link rel="manifest" href="/site.webmanifest">
     <link rel="author" href="/humans.txt">
     <link rel="me" href="mailto:hi@kurtlourens.com">
@@ -26,7 +24,6 @@
     <link rel="alternate" href="https://cassettebeasts.assistantapps.com/zh_CN/monsters/elfless.html" hreflang="zh">
     <link rel="alternate" href="https://cassettebeasts.assistantapps.com/ja_JP/monsters/elfless.html" hreflang="ja">
     <link rel="alternate" href="https://cassettebeasts.assistantapps.com/ko_KR/monsters/elfless.html" hreflang="ko">
-    <link rel="alternate" href="https://cassettebeasts.assistantapps.com/es_MX/monsters/elfless.html" hreflang="es">
     <link rel="alternate" href="https://cassettebeasts.assistantapps.com/pt_BR/monsters/elfless.html" hreflang="pt">
     <link rel="alternate" href="https://cassettebeasts.assistantapps.com/en/monsters/elfless.html" hreflang="x-default">
 
@@ -47,7 +44,7 @@
     <meta name="distribution" content="Global">
     <meta name="generator" content="custom scripts using HandlebarJS">
     <link rel="search" href="opensearch.xml" type="application/opensearchdescription+xml" title="Search Title">
-    <meta name="revised" content="Thu Jul 25 2024">
+    <meta name="revised" content="Sat Jul 27 2024">
 
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
@@ -110,7 +107,13 @@
     <meta name="msapplication-starturl" content="/?pwa-app">
 
 
-    <link rel="stylesheet" href="/assets/css/main.css?v=1.1.1">
+    <link rel="stylesheet" href="/assets/css/main.css?v=1.2.0">
+
+    <script>
+        window.config = {
+            assistantAppsImgRoot: 'https://webcomp.assistantapps.com'
+        }
+    </script>
 
     <script type="application/ld+json">
         {
@@ -123,8 +126,8 @@
             "image": "/assets/favicon/android-chrome-192x192.png",
             "applicationCategory": "Application",
             "operatingSystem": "Android Lollipop, iOS, Chrome, Firefox, Opera, Internet Explorer, Edge",
-            "softwareVersion": "1.1.1",
-            "version": "1.1.1",
+            "softwareVersion": "1.2.0",
+            "version": "1.2.0",
             "author": {
                 "@type": "Person",
                 "name": "Kurt Lourens",
@@ -146,11 +149,12 @@
                 "jobTitle": "Senior Software Engineer",
             },
             "inLanguage": "en",
-            "dateCreated": "2024-07-25",
-            "dateModified": "2024-07-25",
-            "datePublished": "2024-07-25"
+            "dateCreated": "2024-07-27",
+            "dateModified": "2024-07-27",
+            "datePublished": "2024-07-27"
         }
-    </script></head>
+    </script>
+</head>
 <body class="overflow-x-hidden">
 
     <header class="header">
@@ -202,7 +206,7 @@
                             </ul>
                         </details>
                     </li>
-                    <li data-tooltip="About" data-placement="bottom">
+                    <li data-translate="TODO" data-tooltip="About" data-placement="bottom">
                         <a class="contrast" aria-label="About" href="/about.html">
                             <svg fill="#000000" height="24" width="24" viewBox="0 0 128 128" version="1.1"
                                 xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
@@ -263,13 +267,17 @@
                 </span>
             </li>
         </ul>
-        <div class="grid min-card-width mb-3">
+        <div class="grid masonry min-card-width mb-3">
+          <div class="meta">
+            <h1>Ver Monstros &gt;&gt; Elfetuoso</h1>
+          </div>
+        
           <article class="monster-detail-card item-detail-card">
             <div class="monster-detail-card-heading item-detail-card-heading primary">
               <h2 class="Neu5Land animate__animated animate__fadeIn">Elfetuoso</h2>
               <div class="audio noselect animate__animated animate__fadeIn">
                 <h4 class="cursor-pointer" onclick="playAudioNode('Elfetuoso-cry')">🔉</h4>
-                <audio id="Elfetuoso-cry" class="hidden">
+                <audio id="Elfetuoso-cry" class="hidden autoplay">
                   <source src="/assets/audio/cries/elfless_cry.wav" type="audio/wav">
                 </audio>
               </div>
@@ -408,7 +416,7 @@
         
               <div class="bio animate__animated animate__fadeIn">
                 <p>Elfetuosos desenham sorrisos desfigurados em máscaras feitas de casca de árvore para esconder suas verdadeiras emoções. Boatos infundados alegam que uma vez por ano todos os Elfetuosos se juntam para trocar suas máscaras antigas por novas.</p>
-                <p>Na literatura europeia, o \&quot;elfo\&quot; é uma criaturinha travessa cujo aspecto muda de acordo com a época. Assim como as fadas, elfos podem ser descritos como prestativos, levados ou até mesmo perversos.</p>
+                <p>Na literatura europeia, o &quot;elfo&quot; é uma criaturinha travessa cujo aspecto muda de acordo com a época. Assim como as fadas, elfos podem ser descritos como prestativos, levados ou até mesmo perversos.</p>
               </div>
         
               <section class="additional-section additional animate__animated animate__fadeIn">
@@ -437,9 +445,6 @@
                 </div>
               </section>
         
-              <div class="grid">
-        
-              </div>
         
               <section class="remaster-section animate__animated animate__fadeIn">
                 <h3 class="section-heading Neu5Land">Remasterização</h3>
@@ -460,7 +465,7 @@
                       <td class="specialisation">Escolha uma especialização</td>
                     </tr>
                   </thead>
-                  <tbody>
+                  <tbody data-translate="TODO">
                     <tr class="remaster no-padding">
                         <td class="from-to"></td>
                         <td class="sprite">
@@ -832,6 +837,1241 @@
                     </tr>          </tbody>
                 </table>
               </div>
+        
+              <section class="additional-section habitat animate__animated animate__fadeIn">
+                <details open>
+                  <summary>
+                    <h3 class="section-heading Neu5Land noselect">Overworld</h3>
+                  </summary>
+                  <div class="table-container">
+                    <table class="moves last-td-padding highlight-row">
+                      <thead>
+                        <tr>
+                          <td class="sprite">Habitat</td>
+                          <td class="name">Nome</td>
+                          <td class="percent">Porcentagem</td>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="overworld ta-center">
+                            <img src="/assets/img/generated/sprites/monsters/elfless.png" class="remaster-image" alt="overworld image"
+                              draggable="false">
+                          </td>
+                          <td class="name">
+                            Estação Cruz das Cerejeiras <code>(dungeon_meadow_elfless)</code>
+                          </td>
+                          <td class="percent">100.00%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld ta-center">
+                            <img src="/assets/img/generated/sprites/monsters/elfless.png" class="remaster-image" alt="overworld image"
+                              draggable="false">
+                          </td>
+                          <td class="name">
+                            Estação Cruz das Cerejeiras <code>(dungeon_meadow_elfless)</code>
+                          </td>
+                          <td class="percent">100.00%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld ta-center">
+                            <img src="/assets/img/generated/sprites/monsters/elfless.png" class="remaster-image" alt="overworld image"
+                              draggable="false">
+                          </td>
+                          <td class="name">
+                            Estação Cruz das Cerejeiras <code>(dungeon_meadow_elfless)</code>
+                          </td>
+                          <td class="percent">100.00%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld ta-center">
+                            <img src="/assets/img/generated/sprites/monsters/elfless.png" class="remaster-image" alt="overworld image"
+                              draggable="false">
+                          </td>
+                          <td class="name">
+                            Estação Cruz das Cerejeiras <code>(dungeon_meadow_elfless)</code>
+                          </td>
+                          <td class="percent">100.00%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld ta-center">
+                            <img src="/assets/img/generated/sprites/monsters/elfless.png" class="remaster-image" alt="overworld image"
+                              draggable="false">
+                          </td>
+                          <td class="name">
+                            Estação Cruz das Cerejeiras <code>(dungeon_meadow_elfless)</code>
+                          </td>
+                          <td class="percent">100.00%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld ta-center">
+                            <img src="/assets/img/generated/sprites/monsters/elfless.png" class="remaster-image" alt="overworld image"
+                              draggable="false">
+                          </td>
+                          <td class="name">
+                            Estação Cruz das Cerejeiras <code>(dungeon_meadow_elfless)</code>
+                          </td>
+                          <td class="percent">100.00%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld ta-center">
+                            <img src="/assets/img/generated/sprites/monsters/elfless.png" class="remaster-image" alt="overworld image"
+                              draggable="false">
+                          </td>
+                          <td class="name">
+                            Estação Cruz das Cerejeiras <code>(dungeon_meadow_elfless)</code>
+                          </td>
+                          <td class="percent">100.00%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld ta-center">
+                            <img src="/assets/img/generated/sprites/monsters/elfless.png" class="remaster-image" alt="overworld image"
+                              draggable="false">
+                          </td>
+                          <td class="name">
+                            Estação Cruz das Cerejeiras <code>(dungeon_meadow_elfless)</code>
+                          </td>
+                          <td class="percent">100.00%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld ta-center">
+                            <img src="/assets/img/generated/sprites/monsters/elfless.png" class="remaster-image" alt="overworld image"
+                              draggable="false">
+                          </td>
+                          <td class="name">
+                            Estação Cruz das Cerejeiras <code>(dungeon_meadow_elfless)</code>
+                          </td>
+                          <td class="percent">100.00%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld ta-center">
+                            <img src="/assets/img/generated/sprites/monsters/elfless.png" class="remaster-image" alt="overworld image"
+                              draggable="false">
+                          </td>
+                          <td class="name">
+                            Estação Cruz das Cerejeiras <code>(dungeon_meadow_elfless)</code>
+                          </td>
+                          <td class="percent">100.00%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld ta-center">
+                            <img src="/assets/img/generated/sprites/monsters/elfless.png" class="remaster-image" alt="overworld image"
+                              draggable="false">
+                          </td>
+                          <td class="name">
+                            Feralândia <code>(brokenhead)</code>
+                          </td>
+                          <td class="percent">50.00%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld ta-center">
+                            <img src="/assets/img/generated/sprites/monsters/elfless.png" class="remaster-image" alt="overworld image"
+                              draggable="false">
+                          </td>
+                          <td class="name">
+                            Feralândia <code>(brokenhead)</code>
+                          </td>
+                          <td class="percent">50.00%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld ta-center">
+                            <img src="/assets/img/generated/sprites/monsters/elfless.png" class="remaster-image" alt="overworld image"
+                              draggable="false">
+                          </td>
+                          <td class="name">
+                            Feralândia <code>(brokenhead)</code>
+                          </td>
+                          <td class="percent">50.00%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld ta-center">
+                            <img src="/assets/img/generated/sprites/monsters/elfless.png" class="remaster-image" alt="overworld image"
+                              draggable="false">
+                          </td>
+                          <td class="name">
+                            Feralândia <code>(brokenhead)</code>
+                          </td>
+                          <td class="percent">50.00%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld ta-center">
+                            <img src="/assets/img/generated/sprites/monsters/elfless.png" class="remaster-image" alt="overworld image"
+                              draggable="false">
+                          </td>
+                          <td class="name">
+                            Feralândia <code>(brokenhead)</code>
+                          </td>
+                          <td class="percent">50.00%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld ta-center">
+                            <img src="/assets/img/generated/sprites/monsters/elfless.png" class="remaster-image" alt="overworld image"
+                              draggable="false">
+                          </td>
+                          <td class="name">
+                            Feralândia <code>(brokenhead)</code>
+                          </td>
+                          <td class="percent">50.00%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld ta-center">
+                            <img src="/assets/img/generated/sprites/monsters/elfless.png" class="remaster-image" alt="overworld image"
+                              draggable="false">
+                          </td>
+                          <td class="name">
+                            Feralândia <code>(brokenhead)</code>
+                          </td>
+                          <td class="percent">50.00%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld ta-center">
+                            <img src="/assets/img/generated/sprites/monsters/elfless.png" class="remaster-image" alt="overworld image"
+                              draggable="false">
+                          </td>
+                          <td class="name">
+                            Feralândia <code>(brokenhead)</code>
+                          </td>
+                          <td class="percent">50.00%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld ta-center">
+                            <img src="/assets/img/generated/sprites/monsters/elfless.png" class="remaster-image" alt="overworld image"
+                              draggable="false">
+                          </td>
+                          <td class="name">
+                            Feralândia <code>(brokenhead)</code>
+                          </td>
+                          <td class="percent">50.00%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld ta-center">
+                            <img src="/assets/img/generated/sprites/monsters/elfless.png" class="remaster-image" alt="overworld image"
+                              draggable="false">
+                          </td>
+                          <td class="name">
+                            Feralândia <code>(brokenhead)</code>
+                          </td>
+                          <td class="percent">50.00%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld ta-center">
+                            <img src="/assets/img/generated/sprites/monsters/elfless.png" class="remaster-image" alt="overworld image"
+                              draggable="false">
+                          </td>
+                          <td class="name">
+                            Pradaria das Cerejeiras <code>(meadow)</code>
+                          </td>
+                          <td class="percent">7.93%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld ta-center">
+                            <img src="/assets/img/generated/sprites/monsters/elfless.png" class="remaster-image" alt="overworld image"
+                              draggable="false">
+                          </td>
+                          <td class="name">
+                            Pradaria das Cerejeiras <code>(meadow)</code>
+                          </td>
+                          <td class="percent">7.93%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld ta-center">
+                            <img src="/assets/img/generated/sprites/monsters/elfless.png" class="remaster-image" alt="overworld image"
+                              draggable="false">
+                          </td>
+                          <td class="name">
+                            Pradaria das Cerejeiras <code>(meadow)</code>
+                          </td>
+                          <td class="percent">7.93%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld ta-center">
+                            <img src="/assets/img/generated/sprites/monsters/elfless.png" class="remaster-image" alt="overworld image"
+                              draggable="false">
+                          </td>
+                          <td class="name">
+                            Pradaria das Cerejeiras <code>(meadow)</code>
+                          </td>
+                          <td class="percent">7.93%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld ta-center">
+                            <img src="/assets/img/generated/sprites/monsters/elfless.png" class="remaster-image" alt="overworld image"
+                              draggable="false">
+                          </td>
+                          <td class="name">
+                            Pradaria das Cerejeiras <code>(meadow)</code>
+                          </td>
+                          <td class="percent">7.93%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld ta-center">
+                            <img src="/assets/img/generated/sprites/monsters/elfless.png" class="remaster-image" alt="overworld image"
+                              draggable="false">
+                          </td>
+                          <td class="name">
+                            Pradaria das Cerejeiras <code>(meadow)</code>
+                          </td>
+                          <td class="percent">7.93%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld ta-center">
+                            <img src="/assets/img/generated/sprites/monsters/elfless.png" class="remaster-image" alt="overworld image"
+                              draggable="false">
+                          </td>
+                          <td class="name">
+                            Pradaria das Cerejeiras <code>(meadow)</code>
+                          </td>
+                          <td class="percent">7.93%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld ta-center">
+                            <img src="/assets/img/generated/sprites/monsters/elfless.png" class="remaster-image" alt="overworld image"
+                              draggable="false">
+                          </td>
+                          <td class="name">
+                            Pradaria das Cerejeiras <code>(meadow)</code>
+                          </td>
+                          <td class="percent">7.93%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld ta-center">
+                            <img src="/assets/img/generated/sprites/monsters/elfless.png" class="remaster-image" alt="overworld image"
+                              draggable="false">
+                          </td>
+                          <td class="name">
+                            Pradaria das Cerejeiras <code>(meadow)</code>
+                          </td>
+                          <td class="percent">7.93%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld ta-center">
+                            <img src="/assets/img/generated/sprites/monsters/elfless.png" class="remaster-image" alt="overworld image"
+                              draggable="false">
+                          </td>
+                          <td class="name">
+                            Pradaria das Cerejeiras <code>(meadow)</code>
+                          </td>
+                          <td class="percent">7.93%</td>
+                        </tr>
+        
+                        <tr>
+                          <td colspan="3" class="ta-center">Backup</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Estação Cruz das Cerejeiras <code>(dungeon_meadow_elfless)</code>
+                          </td>
+                          <td class="percent">100.00%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Estação Cruz das Cerejeiras <code>(dungeon_meadow_elfless)</code>
+                          </td>
+                          <td class="percent">100.00%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Estação Cruz das Cerejeiras <code>(dungeon_meadow_elfless)</code>
+                          </td>
+                          <td class="percent">100.00%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Estação Cruz das Cerejeiras <code>(dungeon_meadow_elfless)</code>
+                          </td>
+                          <td class="percent">100.00%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Estação Cruz das Cerejeiras <code>(dungeon_meadow_elfless)</code>
+                          </td>
+                          <td class="percent">100.00%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Estação Cruz das Cerejeiras <code>(dungeon_meadow_elfless)</code>
+                          </td>
+                          <td class="percent">100.00%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Estação Cruz das Cerejeiras <code>(dungeon_meadow_elfless)</code>
+                          </td>
+                          <td class="percent">100.00%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Estação Cruz das Cerejeiras <code>(dungeon_meadow_elfless)</code>
+                          </td>
+                          <td class="percent">100.00%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Estação Cruz das Cerejeiras <code>(dungeon_meadow_elfless)</code>
+                          </td>
+                          <td class="percent">100.00%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Estação Cruz das Cerejeiras <code>(dungeon_meadow_elfless)</code>
+                          </td>
+                          <td class="percent">100.00%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Estação Cruz das Cerejeiras <code>(dungeon_meadow_dominoth)</code>
+                          </td>
+                          <td class="percent">25.00%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Estação Cruz das Cerejeiras <code>(dungeon_meadow_dominoth)</code>
+                          </td>
+                          <td class="percent">25.00%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Estação Cruz das Cerejeiras <code>(dungeon_meadow_dominoth)</code>
+                          </td>
+                          <td class="percent">25.00%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Estação Cruz das Cerejeiras <code>(dungeon_meadow_dominoth)</code>
+                          </td>
+                          <td class="percent">25.00%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Estação Cruz das Cerejeiras <code>(dungeon_meadow_dominoth)</code>
+                          </td>
+                          <td class="percent">25.00%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Estação Cruz das Cerejeiras <code>(dungeon_meadow_dominoth)</code>
+                          </td>
+                          <td class="percent">25.00%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Estação Cruz das Cerejeiras <code>(dungeon_meadow_dominoth)</code>
+                          </td>
+                          <td class="percent">25.00%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Estação Cruz das Cerejeiras <code>(dungeon_meadow_dominoth)</code>
+                          </td>
+                          <td class="percent">25.00%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Estação Cruz das Cerejeiras <code>(dungeon_meadow_dominoth)</code>
+                          </td>
+                          <td class="percent">25.00%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Estação Cruz das Cerejeiras <code>(dungeon_meadow_dominoth)</code>
+                          </td>
+                          <td class="percent">25.00%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Feralândia <code>(brokenhead)</code>
+                          </td>
+                          <td class="percent">14.29%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Estação Cruz das Cerejeiras <code>(dungeon_meadow_springheel)</code>
+                          </td>
+                          <td class="percent">14.29%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Feralândia <code>(brokenhead)</code>
+                          </td>
+                          <td class="percent">14.29%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Estação Cruz das Cerejeiras <code>(dungeon_meadow_springheel)</code>
+                          </td>
+                          <td class="percent">14.29%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Feralândia <code>(brokenhead)</code>
+                          </td>
+                          <td class="percent">14.29%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Estação Cruz das Cerejeiras <code>(dungeon_meadow_springheel)</code>
+                          </td>
+                          <td class="percent">14.29%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Feralândia <code>(brokenhead)</code>
+                          </td>
+                          <td class="percent">14.29%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Estação Cruz das Cerejeiras <code>(dungeon_meadow_springheel)</code>
+                          </td>
+                          <td class="percent">14.29%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Feralândia <code>(brokenhead)</code>
+                          </td>
+                          <td class="percent">14.29%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Estação Cruz das Cerejeiras <code>(dungeon_meadow_springheel)</code>
+                          </td>
+                          <td class="percent">14.29%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Feralândia <code>(brokenhead)</code>
+                          </td>
+                          <td class="percent">14.29%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Estação Cruz das Cerejeiras <code>(dungeon_meadow_springheel)</code>
+                          </td>
+                          <td class="percent">14.29%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Feralândia <code>(brokenhead)</code>
+                          </td>
+                          <td class="percent">14.29%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Estação Cruz das Cerejeiras <code>(dungeon_meadow_springheel)</code>
+                          </td>
+                          <td class="percent">14.29%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Feralândia <code>(brokenhead)</code>
+                          </td>
+                          <td class="percent">14.29%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Estação Cruz das Cerejeiras <code>(dungeon_meadow_springheel)</code>
+                          </td>
+                          <td class="percent">14.29%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Feralândia <code>(brokenhead)</code>
+                          </td>
+                          <td class="percent">14.29%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Estação Cruz das Cerejeiras <code>(dungeon_meadow_springheel)</code>
+                          </td>
+                          <td class="percent">14.29%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Feralândia <code>(brokenhead)</code>
+                          </td>
+                          <td class="percent">14.29%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Estação Cruz das Cerejeiras <code>(dungeon_meadow_springheel)</code>
+                          </td>
+                          <td class="percent">14.29%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Parque de Nova Murta <code>(new_wirral_park)</code>
+                          </td>
+                          <td class="percent">6.67%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Parque de Nova Murta <code>(new_wirral_park)</code>
+                          </td>
+                          <td class="percent">6.67%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Parque de Nova Murta <code>(new_wirral_park)</code>
+                          </td>
+                          <td class="percent">6.67%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Parque de Nova Murta <code>(new_wirral_park)</code>
+                          </td>
+                          <td class="percent">6.67%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Parque de Nova Murta <code>(new_wirral_park)</code>
+                          </td>
+                          <td class="percent">6.67%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Parque de Nova Murta <code>(new_wirral_park)</code>
+                          </td>
+                          <td class="percent">6.67%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Parque de Nova Murta <code>(new_wirral_park)</code>
+                          </td>
+                          <td class="percent">6.67%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Parque de Nova Murta <code>(new_wirral_park)</code>
+                          </td>
+                          <td class="percent">6.67%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Parque de Nova Murta <code>(new_wirral_park)</code>
+                          </td>
+                          <td class="percent">6.67%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Parque de Nova Murta <code>(new_wirral_park)</code>
+                          </td>
+                          <td class="percent">6.67%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Bosques de Meandroleste <code>(eastham_woods_with_dominoth)</code>
+                          </td>
+                          <td class="percent">5.88%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Bosques de Meandroleste <code>(eastham_woods_with_dominoth)</code>
+                          </td>
+                          <td class="percent">5.88%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Bosques de Meandroleste <code>(eastham_woods_with_dominoth)</code>
+                          </td>
+                          <td class="percent">5.88%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Bosques de Meandroleste <code>(eastham_woods_with_dominoth)</code>
+                          </td>
+                          <td class="percent">5.88%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Bosques de Meandroleste <code>(eastham_woods_with_dominoth)</code>
+                          </td>
+                          <td class="percent">5.88%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Bosques de Meandroleste <code>(eastham_woods_with_dominoth)</code>
+                          </td>
+                          <td class="percent">5.88%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Bosques de Meandroleste <code>(eastham_woods_with_dominoth)</code>
+                          </td>
+                          <td class="percent">5.88%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Bosques de Meandroleste <code>(eastham_woods_with_dominoth)</code>
+                          </td>
+                          <td class="percent">5.88%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Bosques de Meandroleste <code>(eastham_woods_with_dominoth)</code>
+                          </td>
+                          <td class="percent">5.88%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Bosques de Meandroleste <code>(eastham_woods_with_dominoth)</code>
+                          </td>
+                          <td class="percent">5.88%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Parque de Nova Murta <code>(new_wirral_park_springheel)</code>
+                          </td>
+                          <td class="percent">5.68%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Parque de Nova Murta <code>(new_wirral_park_springheel)</code>
+                          </td>
+                          <td class="percent">5.68%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Parque de Nova Murta <code>(new_wirral_park_springheel)</code>
+                          </td>
+                          <td class="percent">5.68%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Parque de Nova Murta <code>(new_wirral_park_springheel)</code>
+                          </td>
+                          <td class="percent">5.68%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Parque de Nova Murta <code>(new_wirral_park_springheel)</code>
+                          </td>
+                          <td class="percent">5.68%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Parque de Nova Murta <code>(new_wirral_park_springheel)</code>
+                          </td>
+                          <td class="percent">5.68%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Parque de Nova Murta <code>(new_wirral_park_springheel)</code>
+                          </td>
+                          <td class="percent">5.68%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Parque de Nova Murta <code>(new_wirral_park_springheel)</code>
+                          </td>
+                          <td class="percent">5.68%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Parque de Nova Murta <code>(new_wirral_park_springheel)</code>
+                          </td>
+                          <td class="percent">5.68%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Parque de Nova Murta <code>(new_wirral_park_springheel)</code>
+                          </td>
+                          <td class="percent">5.68%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Pradaria das Cerejeiras <code>(meadow_springheel)</code>
+                          </td>
+                          <td class="percent">5.56%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Pradaria das Cerejeiras <code>(meadow_springheel)</code>
+                          </td>
+                          <td class="percent">5.56%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Pradaria das Cerejeiras <code>(meadow_springheel)</code>
+                          </td>
+                          <td class="percent">5.56%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Pradaria das Cerejeiras <code>(meadow_springheel)</code>
+                          </td>
+                          <td class="percent">5.56%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Pradaria das Cerejeiras <code>(meadow_springheel)</code>
+                          </td>
+                          <td class="percent">5.56%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Pradaria das Cerejeiras <code>(meadow_springheel)</code>
+                          </td>
+                          <td class="percent">5.56%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Pradaria das Cerejeiras <code>(meadow_springheel)</code>
+                          </td>
+                          <td class="percent">5.56%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Pradaria das Cerejeiras <code>(meadow_springheel)</code>
+                          </td>
+                          <td class="percent">5.56%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Pradaria das Cerejeiras <code>(meadow_springheel)</code>
+                          </td>
+                          <td class="percent">5.56%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Pradaria das Cerejeiras <code>(meadow_springheel)</code>
+                          </td>
+                          <td class="percent">5.56%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Cavernas da Pradaria das Cerejeiras <code>(meadow_caves)</code>
+                          </td>
+                          <td class="percent">5.13%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Cavernas da Pradaria das Cerejeiras <code>(meadow_caves)</code>
+                          </td>
+                          <td class="percent">5.13%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Cavernas da Pradaria das Cerejeiras <code>(meadow_caves)</code>
+                          </td>
+                          <td class="percent">5.13%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Cavernas da Pradaria das Cerejeiras <code>(meadow_caves)</code>
+                          </td>
+                          <td class="percent">5.13%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Cavernas da Pradaria das Cerejeiras <code>(meadow_caves)</code>
+                          </td>
+                          <td class="percent">5.13%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Cavernas da Pradaria das Cerejeiras <code>(meadow_caves)</code>
+                          </td>
+                          <td class="percent">5.13%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Cavernas da Pradaria das Cerejeiras <code>(meadow_caves)</code>
+                          </td>
+                          <td class="percent">5.13%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Cavernas da Pradaria das Cerejeiras <code>(meadow_caves)</code>
+                          </td>
+                          <td class="percent">5.13%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Cavernas da Pradaria das Cerejeiras <code>(meadow_caves)</code>
+                          </td>
+                          <td class="percent">5.13%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Cavernas da Pradaria das Cerejeiras <code>(meadow_caves)</code>
+                          </td>
+                          <td class="percent">5.13%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Pradaria das Cerejeiras <code>(meadow)</code>
+                          </td>
+                          <td class="percent">5.08%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Cavernas do Parque de Nova Murta <code>(new_wirral_park_caves)</code>
+                          </td>
+                          <td class="percent">5.08%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Pradaria das Cerejeiras <code>(meadow)</code>
+                          </td>
+                          <td class="percent">5.08%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Cavernas do Parque de Nova Murta <code>(new_wirral_park_caves)</code>
+                          </td>
+                          <td class="percent">5.08%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Pradaria das Cerejeiras <code>(meadow)</code>
+                          </td>
+                          <td class="percent">5.08%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Cavernas do Parque de Nova Murta <code>(new_wirral_park_caves)</code>
+                          </td>
+                          <td class="percent">5.08%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Pradaria das Cerejeiras <code>(meadow)</code>
+                          </td>
+                          <td class="percent">5.08%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Cavernas do Parque de Nova Murta <code>(new_wirral_park_caves)</code>
+                          </td>
+                          <td class="percent">5.08%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Pradaria das Cerejeiras <code>(meadow)</code>
+                          </td>
+                          <td class="percent">5.08%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Cavernas do Parque de Nova Murta <code>(new_wirral_park_caves)</code>
+                          </td>
+                          <td class="percent">5.08%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Pradaria das Cerejeiras <code>(meadow)</code>
+                          </td>
+                          <td class="percent">5.08%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Cavernas do Parque de Nova Murta <code>(new_wirral_park_caves)</code>
+                          </td>
+                          <td class="percent">5.08%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Pradaria das Cerejeiras <code>(meadow)</code>
+                          </td>
+                          <td class="percent">5.08%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Cavernas do Parque de Nova Murta <code>(new_wirral_park_caves)</code>
+                          </td>
+                          <td class="percent">5.08%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Pradaria das Cerejeiras <code>(meadow)</code>
+                          </td>
+                          <td class="percent">5.08%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Cavernas do Parque de Nova Murta <code>(new_wirral_park_caves)</code>
+                          </td>
+                          <td class="percent">5.08%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Pradaria das Cerejeiras <code>(meadow)</code>
+                          </td>
+                          <td class="percent">5.08%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Cavernas do Parque de Nova Murta <code>(new_wirral_park_caves)</code>
+                          </td>
+                          <td class="percent">5.08%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Pradaria das Cerejeiras <code>(meadow)</code>
+                          </td>
+                          <td class="percent">5.08%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Cavernas do Parque de Nova Murta <code>(new_wirral_park_caves)</code>
+                          </td>
+                          <td class="percent">5.08%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Cavernas dos Bosques de Meandroleste <code>(eastham_woods_caves)</code>
+                          </td>
+                          <td class="percent">5.00%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Bosques de Meandroleste <code>(eastham_woods_with_boltam)</code>
+                          </td>
+                          <td class="percent">5.00%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Cavernas dos Bosques de Meandroleste <code>(eastham_woods_caves)</code>
+                          </td>
+                          <td class="percent">5.00%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Bosques de Meandroleste <code>(eastham_woods_with_boltam)</code>
+                          </td>
+                          <td class="percent">5.00%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Cavernas dos Bosques de Meandroleste <code>(eastham_woods_caves)</code>
+                          </td>
+                          <td class="percent">5.00%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Bosques de Meandroleste <code>(eastham_woods_with_boltam)</code>
+                          </td>
+                          <td class="percent">5.00%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Cavernas dos Bosques de Meandroleste <code>(eastham_woods_caves)</code>
+                          </td>
+                          <td class="percent">5.00%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Bosques de Meandroleste <code>(eastham_woods_with_boltam)</code>
+                          </td>
+                          <td class="percent">5.00%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Cavernas dos Bosques de Meandroleste <code>(eastham_woods_caves)</code>
+                          </td>
+                          <td class="percent">5.00%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Bosques de Meandroleste <code>(eastham_woods_with_boltam)</code>
+                          </td>
+                          <td class="percent">5.00%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Cavernas dos Bosques de Meandroleste <code>(eastham_woods_caves)</code>
+                          </td>
+                          <td class="percent">5.00%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Bosques de Meandroleste <code>(eastham_woods_with_boltam)</code>
+                          </td>
+                          <td class="percent">5.00%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Cavernas dos Bosques de Meandroleste <code>(eastham_woods_caves)</code>
+                          </td>
+                          <td class="percent">5.00%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Bosques de Meandroleste <code>(eastham_woods_with_boltam)</code>
+                          </td>
+                          <td class="percent">5.00%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Cavernas dos Bosques de Meandroleste <code>(eastham_woods_caves)</code>
+                          </td>
+                          <td class="percent">5.00%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Bosques de Meandroleste <code>(eastham_woods_with_boltam)</code>
+                          </td>
+                          <td class="percent">5.00%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Cavernas dos Bosques de Meandroleste <code>(eastham_woods_caves)</code>
+                          </td>
+                          <td class="percent">5.00%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Bosques de Meandroleste <code>(eastham_woods_with_boltam)</code>
+                          </td>
+                          <td class="percent">5.00%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Cavernas dos Bosques de Meandroleste <code>(eastham_woods_caves)</code>
+                          </td>
+                          <td class="percent">5.00%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Bosques de Meandroleste <code>(eastham_woods_with_boltam)</code>
+                          </td>
+                          <td class="percent">5.00%</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </details>
+              </section>
             </div>
           </article>
         </div>
@@ -864,11 +2104,14 @@
                     Termos e Condições</a>
             </span>
             <span>&nbsp;|&nbsp;</span>
-            <span>v1.1.1</span>
+            <span>v1.2.0</span>
         </small>
-    </footer>    <script async src="/assets/js/main.js?v=1.1.1"></script>
-    <script defer src="/assets/js/analytics.js?v=1.1.1"></script>
+    </footer>
+    
+    <assistant-apps-posthog-analytics-no-cookie
+        analyticscode="phc_pCp48gthK67GEa2LB27jpP0X4BRU7TLcdQjeRi3gWXk"></assistant-apps-posthog-analytics-no-cookie>    <script src="/assets/js/main.js?v=1.2.0"></script>
     <script defer src="https://webcomp.assistantapps.com/build/bundle.js"></script>
+    
     <script>
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {

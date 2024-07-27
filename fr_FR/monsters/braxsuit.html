@@ -9,8 +9,6 @@
         Braxtard - 
         Assistant for Cassette Beasts
     </title>
-    <link rel="index" href="https://cassettebeasts.assistantapps.com/">
-    <link rel="canonical" href="https://cassettebeasts.assistantapps.com/">
     <link rel="manifest" href="/site.webmanifest">
     <link rel="author" href="/humans.txt">
     <link rel="me" href="mailto:hi@kurtlourens.com">
@@ -26,7 +24,6 @@
     <link rel="alternate" href="https://cassettebeasts.assistantapps.com/zh_CN/monsters/braxsuit.html" hreflang="zh">
     <link rel="alternate" href="https://cassettebeasts.assistantapps.com/ja_JP/monsters/braxsuit.html" hreflang="ja">
     <link rel="alternate" href="https://cassettebeasts.assistantapps.com/ko_KR/monsters/braxsuit.html" hreflang="ko">
-    <link rel="alternate" href="https://cassettebeasts.assistantapps.com/es_MX/monsters/braxsuit.html" hreflang="es">
     <link rel="alternate" href="https://cassettebeasts.assistantapps.com/pt_BR/monsters/braxsuit.html" hreflang="pt">
     <link rel="alternate" href="https://cassettebeasts.assistantapps.com/en/monsters/braxsuit.html" hreflang="x-default">
 
@@ -47,7 +44,7 @@
     <meta name="distribution" content="Global">
     <meta name="generator" content="custom scripts using HandlebarJS">
     <link rel="search" href="opensearch.xml" type="application/opensearchdescription+xml" title="Search Title">
-    <meta name="revised" content="Thu Jul 25 2024">
+    <meta name="revised" content="Sat Jul 27 2024">
 
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
@@ -110,7 +107,13 @@
     <meta name="msapplication-starturl" content="/?pwa-app">
 
 
-    <link rel="stylesheet" href="/assets/css/main.css?v=1.1.1">
+    <link rel="stylesheet" href="/assets/css/main.css?v=1.2.0">
+
+    <script>
+        window.config = {
+            assistantAppsImgRoot: 'https://webcomp.assistantapps.com'
+        }
+    </script>
 
     <script type="application/ld+json">
         {
@@ -123,8 +126,8 @@
             "image": "/assets/favicon/android-chrome-192x192.png",
             "applicationCategory": "Application",
             "operatingSystem": "Android Lollipop, iOS, Chrome, Firefox, Opera, Internet Explorer, Edge",
-            "softwareVersion": "1.1.1",
-            "version": "1.1.1",
+            "softwareVersion": "1.2.0",
+            "version": "1.2.0",
             "author": {
                 "@type": "Person",
                 "name": "Kurt Lourens",
@@ -146,11 +149,12 @@
                 "jobTitle": "Senior Software Engineer",
             },
             "inLanguage": "en",
-            "dateCreated": "2024-07-25",
-            "dateModified": "2024-07-25",
-            "datePublished": "2024-07-25"
+            "dateCreated": "2024-07-27",
+            "dateModified": "2024-07-27",
+            "datePublished": "2024-07-27"
         }
-    </script></head>
+    </script>
+</head>
 <body class="overflow-x-hidden">
 
     <header class="header">
@@ -202,7 +206,7 @@
                             </ul>
                         </details>
                     </li>
-                    <li data-tooltip="About" data-placement="bottom">
+                    <li data-translate="TODO" data-tooltip="About" data-placement="bottom">
                         <a class="contrast" aria-label="About" href="/about.html">
                             <svg fill="#000000" height="24" width="24" viewBox="0 0 128 128" version="1.1"
                                 xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
@@ -263,13 +267,17 @@
                 </span>
             </li>
         </ul>
-        <div class="grid min-card-width mb-3">
+        <div class="grid masonry min-card-width mb-3">
+          <div class="meta">
+            <h1>Voir les monstres &gt;&gt; Braxtard</h1>
+          </div>
+        
           <article class="monster-detail-card item-detail-card">
             <div class="monster-detail-card-heading item-detail-card-heading primary">
               <h2 class="Neu5Land animate__animated animate__fadeIn">Braxtard</h2>
               <div class="audio noselect animate__animated animate__fadeIn">
                 <h4 class="cursor-pointer" onclick="playAudioNode('Braxtard-cry')">🔉</h4>
-                <audio id="Braxtard-cry" class="hidden">
+                <audio id="Braxtard-cry" class="hidden autoplay">
                   <source src="/assets/audio/cries/braxsuit_cry.wav" type="audio/wav">
                 </audio>
               </div>
@@ -408,7 +416,7 @@
         
               <div class="bio animate__animated animate__fadeIn">
                 <p>Les Braxtards accordent une grande importance à leur apparence. Ils semblent réellement bouleversés dès que leur cravate est un peu de travers.</p>
-                <p>En 1952, trois garçons du comté de Braxton, en Virginie occidentale, ont observé un étrange extraterrestre. C&#x27;était une créature verte avec une tête en forme d\&#x27;as de pique.</p>
+                <p>En 1952, trois garçons du comté de Braxton, en Virginie occidentale, ont observé un étrange extraterrestre. C&#x27;était une créature verte avec une tête en forme d&#x27;as de pique.</p>
               </div>
         
               <section class="additional-section additional animate__animated animate__fadeIn">
@@ -437,9 +445,6 @@
                 </div>
               </section>
         
-              <div class="grid">
-        
-              </div>
         
               <section class="remaster-section animate__animated animate__fadeIn">
                 <h3 class="section-heading Neu5Land">Rematriçage</h3>
@@ -460,7 +465,7 @@
                       <td class="specialisation">Choisis une spécialisation</td>
                     </tr>
                   </thead>
-                  <tbody>
+                  <tbody data-translate="TODO">
                     <tr class="remaster no-padding">
                         <td class="from-to"></td>
                         <td class="sprite">
@@ -494,7 +499,7 @@
         
               <section class="additional-section animate__animated animate__fadeIn">
                 <h3 class="section-heading tags">
-                  <span class="Neu5Land">Tags:</span>&nbsp;
+                  <span class="Neu5Land">Mots-clés:</span>&nbsp;
                   <small>braxsuit<span
                       class="">,&nbsp;</span></small><small>space<span
                       class="">,&nbsp;</span></small><small>fast<span
@@ -799,6 +804,70 @@
                     </tr>          </tbody>
                 </table>
               </div>
+        
+              <section class="additional-section habitat animate__animated animate__fadeIn">
+                <details open>
+                  <summary>
+                    <h3 class="section-heading Neu5Land noselect">Overworld</h3>
+                  </summary>
+                  <div class="table-container">
+                    <table class="moves last-td-padding highlight-row">
+                      <thead>
+                        <tr>
+                          <td class="sprite">Habitat</td>
+                          <td class="name">Nom</td>
+                          <td class="percent">Pourcentage</td>
+                        </tr>
+                      </thead>
+                      <tbody>
+        
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Grottes de la forêt d&#x27;Estham <code>(eastham_woods_caves)</code>
+                          </td>
+                          <td class="percent">20.00%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Forêt d&#x27;Estham <code>(eastham_woods_with_boltam)</code>
+                          </td>
+                          <td class="percent">20.00%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Grottes de la forêt d&#x27;Estham <code>(eastham_woods_caves)</code>
+                          </td>
+                          <td class="percent">20.00%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Forêt d&#x27;Estham <code>(eastham_woods_with_boltam)</code>
+                          </td>
+                          <td class="percent">20.00%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Forêt d&#x27;Estham <code>(eastham_woods_with_dominoth)</code>
+                          </td>
+                          <td class="percent">11.76%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Forêt d&#x27;Estham <code>(eastham_woods_with_dominoth)</code>
+                          </td>
+                          <td class="percent">11.76%</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </details>
+              </section>
             </div>
           </article>
         </div>
@@ -831,11 +900,14 @@
                     Conditions d&#x27;utilisations</a>
             </span>
             <span>&nbsp;|&nbsp;</span>
-            <span>v1.1.1</span>
+            <span>v1.2.0</span>
         </small>
-    </footer>    <script async src="/assets/js/main.js?v=1.1.1"></script>
-    <script defer src="/assets/js/analytics.js?v=1.1.1"></script>
+    </footer>
+    
+    <assistant-apps-posthog-analytics-no-cookie
+        analyticscode="phc_pCp48gthK67GEa2LB27jpP0X4BRU7TLcdQjeRi3gWXk"></assistant-apps-posthog-analytics-no-cookie>    <script src="/assets/js/main.js?v=1.2.0"></script>
     <script defer src="https://webcomp.assistantapps.com/build/bundle.js"></script>
+    
     <script>
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {

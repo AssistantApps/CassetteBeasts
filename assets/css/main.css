@@ -6225,6 +6225,7 @@ body.Neu5Land .monster-detail-card-body .moves td {
 
 .page-container {
   position: relative;
+  padding-top: 0;
 }
 
 body.overflow-x-hidden {
@@ -6261,11 +6262,22 @@ body.overflow-x-hidden {
   flex: 1;
 }
 
+.page-options-with-breadcrumbs {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 1em;
+}
+.page-options-with-breadcrumbs .breadcrumb {
+  margin: 0;
+  height: unset;
+}
+.page-options-with-breadcrumbs .page-options > label,
+.page-options-with-breadcrumbs .page-options > select {
+  margin: 0;
+}
+
 .page-options {
-  position: absolute;
-  top: 1em;
-  right: 0;
-  width: 100%;
+  flex: 1;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -6281,7 +6293,6 @@ body.overflow-x-hidden {
   display: flex;
   flex-direction: row;
   padding: 0.25em 0.75em;
-  height: 100%;
   border: var(--pico-border-width) solid var(--pico-form-element-border-color);
   border-radius: var(--pico-border-radius);
   outline: 0;
@@ -6302,6 +6313,9 @@ body.overflow-x-hidden {
 #search {
   max-width: 100%;
   margin-bottom: 0.5em;
+}
+#search fieldset {
+  box-shadow: none;
 }
 #search > input {
   --pico-border-radius: 0.25rem;
@@ -6397,13 +6411,21 @@ footer small {
 
 #home-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1em;
   row-gap: 1em;
   margin-bottom: 0;
 }
 #home-grid a {
   text-decoration: none;
+  border: 2px solid rgba(0, 0, 0, 0.25);
+  border-radius: var(--card-border-radius);
+  transition: transform 250ms ease-in-out, box-shadow 250ms ease-in-out;
+}
+#home-grid a:hover {
+  z-index: 4;
+  transform: translateY(-10px);
+  box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.25);
 }
 #home-grid a article {
   display: flex;
@@ -6419,6 +6441,7 @@ footer small {
 #home-grid a article .img-container img {
   max-width: 192px;
   margin: 0 auto;
+  border-radius: var(--card-border-radius);
 }
 #home-grid a article h6 {
   font-weight: 400;
@@ -6625,9 +6648,13 @@ footer small {
   display: flex;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
+  width: calc(100% - 2em);
   min-width: 300px;
+  background-color: #ede4c5;
   gap: 1em;
+}
+.wiki-section a:hover {
+  background-color: #e7dbb1;
 }
 .wiki-section a img {
   height: 4em;
@@ -7015,6 +7042,9 @@ tr:hover td.sprite img {
   list-style: none;
   z-index: 1;
 }
+.breadcrumb li:not(:first-child) {
+  margin-top: 0.125em;
+}
 
 @media screen and (max-width: 992px) {
   body .search-input-border-radius {
@@ -7113,6 +7143,17 @@ tr:hover td.sprite img {
 #move-grid .grid-list-item {
   border-radius: var(--card-border-radius);
 }
+#move-grid .grid-list-item:hover .type {
+  animation: tada;
+  animation-duration: 2s;
+}
+#move-grid .grid-list-item:hover .ap {
+  animation: tada;
+  animation-duration: 1s;
+}
+#move-grid .grid-list-item .type {
+  border-radius: var(--card-border-radius);
+}
 #move-grid .grid-list-item .header {
   display: flex;
   flex-direction: row;
@@ -7161,13 +7202,21 @@ tr:hover td.sprite img {
   padding-top: 0.125em;
   padding-bottom: 0.125em;
   border-bottom: 1px solid rgba(0, 0, 0, 0.125);
-  background-color: transparent;
+  background-color: var(--card-background);
+  transition: background-color 150ms ease-in-out;
 }
 #move-grid.list-mode .grid-list-item:first-child {
   padding-top: 0.25em;
+  border-top-left-radius: var(--card-border-radius);
+  border-top-right-radius: var(--card-border-radius);
 }
 #move-grid.list-mode .grid-list-item:last-child {
   padding-bottom: 0.25em;
+  border-bottom-left-radius: var(--card-border-radius);
+  border-bottom-right-radius: var(--card-border-radius);
+}
+#move-grid.list-mode .grid-list-item:hover {
+  background-color: var(--card-background-hover);
 }
 #move-grid.list-mode .grid-list-item .status-card-container,
 #move-grid.list-mode .grid-list-item .grid-list-item-container small {
@@ -7214,6 +7263,10 @@ tr:hover td.sprite img {
 }
 #move-grid.list-mode .grid-list-item-container.no-cost.no-status {
   grid-column: 2/4;
+}
+#move-grid.grid-mode .grid-list-item:hover {
+  transform: translateY(-10px) rotate(-2deg);
+  box-shadow: 10px 10px 0px var(--brand-primary);
 }
 
 .move-detail-grid {
@@ -7287,6 +7340,9 @@ tr:hover td.sprite img {
 }
 #monster-grid .grid-list-item:hover .grid-list-item-image img.type {
   transform: scale(1.2);
+}
+#monster-grid .grid-list-item.secret img, #monster-grid .grid-list-item.secret .grid-list-item-container > * {
+  filter: blur(0.5em);
 }
 #monster-grid .grid-list-item .grid-list-item-image {
   height: 5.5em;
@@ -7396,6 +7452,7 @@ tr:hover td.sprite img {
   object-fit: contain;
   image-rendering: pixelated;
   transition: transform 250ms ease-in-out;
+  pointer-events: unset;
 }
 .monster-detail-card .monster-detail-card-body div.images .char-image:hover {
   transform: scale(1.2);
@@ -7456,11 +7513,14 @@ tr:hover td.sprite img {
   border-radius: 5px;
 }
 .monster-detail-card .monster-detail-card-body .bio {
-  padding: 1em 1em 0.5em 1em;
   text-align: justify;
 }
 .monster-detail-card .monster-detail-card-body .bio p:last-child {
   margin-bottom: 0;
+}
+.monster-detail-card .monster-detail-card-body .bio,
+.monster-detail-card .monster-detail-card-body .location {
+  padding: 1em 1em 0.5em 1em;
 }
 .monster-detail-card .monster-detail-card-body .additional-section td,
 .monster-detail-card .monster-detail-card-body .remasters td,
@@ -7513,6 +7573,39 @@ tr:hover td.sprite img {
 .monster-detail-card .monster-detail-card-body .remasters .specialisation p {
   margin: 0;
 }
+.monster-detail-card .monster-detail-card-body .habitat thead tr .sprite {
+  padding-left: 2em;
+}
+.monster-detail-card .monster-detail-card-body .habitat tr:hover code {
+  border: 2px solid #dbc98a;
+}
+.monster-detail-card .monster-detail-card-body .habitat .overworld {
+  padding: 0;
+}
+.monster-detail-card .monster-detail-card-body .habitat .overworld img {
+  height: 2em;
+}
+.monster-detail-card .monster-detail-card-body .habitat details {
+  margin-top: var(--pico-spacing);
+  margin-bottom: 0;
+}
+.monster-detail-card .monster-detail-card-body .habitat details[open] > summary {
+  margin-bottom: 0;
+}
+.monster-detail-card .monster-detail-card-body .habitat details summary::after {
+  display: inline-block;
+  float: none;
+}
+.monster-detail-card .monster-detail-card-body .habitat details summary h3 {
+  display: inline-block;
+}
+.monster-detail-card .monster-detail-card-body code {
+  padding: 0.25rem;
+  margin-left: 0.25rem;
+  color: var(--card-foreground);
+  background-color: #e7dbb1;
+  border: 2px solid #e7dbb1;
+}
 
 .monster-detail-card .monster-detail-card-body .id,
 .monster-detail-card .monster-detail-card-body .descrip,
@@ -7528,7 +7621,6 @@ tr:hover td.sprite img {
 }
 .monster-detail-card .monster-detail-card-body .additional,
 .monster-detail-card .monster-detail-card-body .additional-section,
-.monster-detail-card .monster-detail-card-body .habitat-section,
 .monster-detail-card .monster-detail-card-body .remaster-section,
 .monster-detail-card .monster-detail-card-body .wiki-section {
   animation-delay: 400ms;
@@ -7635,6 +7727,7 @@ tr:hover td.sprite img {
   object-fit: contain;
   image-rendering: pixelated;
   transition: transform 250ms ease-in-out;
+  pointer-events: unset;
 }
 .character-detail-grid .character-detail-card .item-detail-card-body div.images .char-image:hover {
   transform: scale(1.2);
@@ -7644,6 +7737,7 @@ tr:hover td.sprite img {
   margin: 0 auto;
   object-fit: contain;
   transition: transform 250ms ease-in-out;
+  pointer-events: unset;
 }
 .character-detail-grid .character-detail-card .item-detail-card-body div.images .portrait-image:hover {
   transform: scale(1.2);
@@ -7671,6 +7765,7 @@ tr:hover td.sprite img {
   margin: 0.5em 2.5em 0 2.5em;
   width: calc(100% - 5em);
   max-width: 300px;
+  pointer-events: unset;
 }
 .character-detail-grid .character-detail-card .item-detail-card-body .audio-section h3 {
   margin-bottom: 0.5em;
@@ -8022,7 +8117,8 @@ tr:hover td.sprite img {
   padding-inline: 0.5em;
   overflow: hidden;
   display: -webkit-box;
-  -webkit-line-clamp: 3; /* number of lines to show */
+  -webkit-line-clamp: 3;
+  /* number of lines to show */
   line-clamp: 3;
   -webkit-box-orient: vertical;
 }
@@ -8058,9 +8154,37 @@ tr:hover td.sprite img {
   color: var(--card-foreground);
   background-color: #e7dbb1;
 }
+.status-effect-detail-grid .item-detail-card-body .reverse-padding {
+  margin-inline: -1em;
+}
+.status-effect-detail-grid .item-detail-card-body .moves .type img {
+  margin-left: 1em;
+}
+.status-effect-detail-grid .item-detail-card-body .moves td {
+  color: var(--card-foreground);
+  background: var(--card-background);
+  border-bottom-color: rgba(0, 0, 0, 0.1);
+  border-bottom-width: 2px;
+  font-size: 0.9rem;
+  transition: background-color 250ms ease-in-out;
+}
+.status-effect-detail-grid .item-detail-card-body .moves .move {
+  color: var(--card-foreground);
+}
+.status-effect-detail-grid .item-detail-card-body .moves .move .type img {
+  width: 2rem;
+  min-width: 1.5rem;
+  border-radius: 3px;
+}
 
 #world-display .map-body {
-  padding: 1em 1em 0 1em;
+  padding: 1em;
+}
+#world-display .item-detail-card-heading .button-slanted {
+  color: white;
+}
+#world-display .item-detail-card-heading .button-slanted:hover {
+  border: 3px solid var(--brand-tertiary);
 }
 #world-display .map-grid-container {
   display: inline-block;
@@ -8100,7 +8224,7 @@ tr:hover td.sprite img {
   left: unset;
   right: calc(100% + 0.5em);
 }
-#world-display .map-grid-container .map-grid .cell.y-8 .popup, #world-display .map-grid-container .map-grid .cell.y-9 .popup, #world-display .map-grid-container .map-grid .cell.y-10 .popup, #world-display .map-grid-container .map-grid .cell.y-11 .popup, #world-display .map-grid-container .map-grid .cell.y-12 .popup, #world-display .map-grid-container .map-grid .cell.y-13 .popup, #world-display .map-grid-container .map-grid .cell.y-14 .popup, #world-display .map-grid-container .map-grid .cell.y-15 .popup, #world-display .map-grid-container .map-grid .cell.y-16 .popup {
+#world-display .map-grid-container .map-grid .cell.y-4 .popup, #world-display .map-grid-container .map-grid .cell.y-5 .popup, #world-display .map-grid-container .map-grid .cell.y-6 .popup, #world-display .map-grid-container .map-grid .cell.y-7 .popup, #world-display .map-grid-container .map-grid .cell.y-8 .popup, #world-display .map-grid-container .map-grid .cell.y-9 .popup, #world-display .map-grid-container .map-grid .cell.y-10 .popup {
   top: unset;
   bottom: calc(100% + 0.5em);
 }
@@ -8109,7 +8233,7 @@ tr:hover td.sprite img {
   top: 0.5em;
   left: calc(100% + 0.5em);
   padding: 1em;
-  min-width: 400px;
+  min-width: 450px;
   max-width: 600px;
   border-radius: var(--card-border-radius);
   border: 3px solid var(--card-foreground);
@@ -8121,6 +8245,27 @@ tr:hover td.sprite img {
 }
 #world-display .map-grid-container .map-grid .popup * {
   color: var(--card-foreground);
+}
+#world-display .map-grid-container .map-grid .popup .details {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5em;
+  justify-content: center;
+}
+#world-display .map-grid-container .map-grid .popup .details img {
+  height: 1.5em;
+  width: auto;
+}
+#world-display .map-grid-container .map-grid .popup .monster-spawns {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#world-display .map-grid-container .map-grid .popup .monster-spawns img {
+  height: 2.5em;
+  width: 3em;
+  object-fit: contain;
 }
 
 :root {
@@ -8214,6 +8359,15 @@ br {
 
 .m-0 {
   margin: 0;
+}
+
+.meta {
+  display: none;
+  opacity: 0;
+}
+
+img {
+  pointer-events: none;
 }
 
 .highlight {

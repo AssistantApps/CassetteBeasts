@@ -9,8 +9,6 @@
         Allseher - 
         Assistant for Cassette Beasts
     </title>
-    <link rel="index" href="https://cassettebeasts.assistantapps.com/">
-    <link rel="canonical" href="https://cassettebeasts.assistantapps.com/">
     <link rel="manifest" href="/site.webmanifest">
     <link rel="author" href="/humans.txt">
     <link rel="me" href="mailto:hi@kurtlourens.com">
@@ -26,7 +24,6 @@
     <link rel="alternate" href="https://cassettebeasts.assistantapps.com/zh_CN/monsters/allseer.html" hreflang="zh">
     <link rel="alternate" href="https://cassettebeasts.assistantapps.com/ja_JP/monsters/allseer.html" hreflang="ja">
     <link rel="alternate" href="https://cassettebeasts.assistantapps.com/ko_KR/monsters/allseer.html" hreflang="ko">
-    <link rel="alternate" href="https://cassettebeasts.assistantapps.com/es_MX/monsters/allseer.html" hreflang="es">
     <link rel="alternate" href="https://cassettebeasts.assistantapps.com/pt_BR/monsters/allseer.html" hreflang="pt">
     <link rel="alternate" href="https://cassettebeasts.assistantapps.com/en/monsters/allseer.html" hreflang="x-default">
 
@@ -47,7 +44,7 @@
     <meta name="distribution" content="Global">
     <meta name="generator" content="custom scripts using HandlebarJS">
     <link rel="search" href="opensearch.xml" type="application/opensearchdescription+xml" title="Search Title">
-    <meta name="revised" content="Thu Jul 25 2024">
+    <meta name="revised" content="Sat Jul 27 2024">
 
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
@@ -110,7 +107,13 @@
     <meta name="msapplication-starturl" content="/?pwa-app">
 
 
-    <link rel="stylesheet" href="/assets/css/main.css?v=1.1.1">
+    <link rel="stylesheet" href="/assets/css/main.css?v=1.2.0">
+
+    <script>
+        window.config = {
+            assistantAppsImgRoot: 'https://webcomp.assistantapps.com'
+        }
+    </script>
 
     <script type="application/ld+json">
         {
@@ -123,8 +126,8 @@
             "image": "/assets/favicon/android-chrome-192x192.png",
             "applicationCategory": "Application",
             "operatingSystem": "Android Lollipop, iOS, Chrome, Firefox, Opera, Internet Explorer, Edge",
-            "softwareVersion": "1.1.1",
-            "version": "1.1.1",
+            "softwareVersion": "1.2.0",
+            "version": "1.2.0",
             "author": {
                 "@type": "Person",
                 "name": "Kurt Lourens",
@@ -146,11 +149,12 @@
                 "jobTitle": "Senior Software Engineer",
             },
             "inLanguage": "en",
-            "dateCreated": "2024-07-25",
-            "dateModified": "2024-07-25",
-            "datePublished": "2024-07-25"
+            "dateCreated": "2024-07-27",
+            "dateModified": "2024-07-27",
+            "datePublished": "2024-07-27"
         }
-    </script></head>
+    </script>
+</head>
 <body class="overflow-x-hidden">
 
     <header class="header">
@@ -202,7 +206,7 @@
                             </ul>
                         </details>
                     </li>
-                    <li data-tooltip="About" data-placement="bottom">
+                    <li data-translate="TODO" data-tooltip="About" data-placement="bottom">
                         <a class="contrast" aria-label="About" href="/about.html">
                             <svg fill="#000000" height="24" width="24" viewBox="0 0 128 128" version="1.1"
                                 xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
@@ -263,13 +267,17 @@
                 </span>
             </li>
         </ul>
-        <div class="grid min-card-width mb-3">
+        <div class="grid masonry min-card-width mb-3">
+          <div class="meta">
+            <h1>Monster ansehen &gt;&gt; Allseher</h1>
+          </div>
+        
           <article class="monster-detail-card item-detail-card">
             <div class="monster-detail-card-heading item-detail-card-heading primary">
               <h2 class="Neu5Land animate__animated animate__fadeIn">Allseher</h2>
               <div class="audio noselect animate__animated animate__fadeIn">
                 <h4 class="cursor-pointer" onclick="playAudioNode('Allseher-cry')">🔉</h4>
-                <audio id="Allseher-cry" class="hidden">
+                <audio id="Allseher-cry" class="hidden autoplay">
                   <source src="/assets/audio/cries/allseer_cry.wav" type="audio/wav">
                 </audio>
               </div>
@@ -407,8 +415,8 @@
         
         
               <div class="bio animate__animated animate__fadeIn">
-                <p>Allseher sind hauptsächlich nachtaktiv und schweben mehrere Meter über dem Boden. Ihren Namen haben sie ihrem unangenehmen Verhalten zu verdanken, vorbeigehende Menschen schweigend mit einem scharlachroten \&quot;Auge\&quot; zu beobachten.</p>
-                <p>Obwohl Sichtungen \&quot;fliegender Untertassen\&quot; im frühen bis mittleren 20. Jahrhundert stark zugenommen haben, gibt es Berichte darüber schon seit fast 1.000 Jahren. Heutzutage verbindet man sie am häufigsten mit Science-Fiction.</p>
+                <p>Allseher sind hauptsächlich nachtaktiv und schweben mehrere Meter über dem Boden. Ihren Namen haben sie ihrem unangenehmen Verhalten zu verdanken, vorbeigehende Menschen schweigend mit einem scharlachroten &quot;Auge&quot; zu beobachten.</p>
+                <p>Obwohl Sichtungen &quot;fliegender Untertassen&quot; im frühen bis mittleren 20. Jahrhundert stark zugenommen haben, gibt es Berichte darüber schon seit fast 1.000 Jahren. Heutzutage verbindet man sie am häufigsten mit Science-Fiction.</p>
               </div>
         
               <section class="additional-section additional animate__animated animate__fadeIn">
@@ -437,9 +445,6 @@
                 </div>
               </section>
         
-              <div class="grid">
-        
-              </div>
         
               <section class="remaster-section animate__animated animate__fadeIn">
                 <h3 class="section-heading Neu5Land">Remaster</h3>
@@ -460,7 +465,7 @@
                       <td class="specialisation">Wähle eine Spezialisierung</td>
                     </tr>
                   </thead>
-                  <tbody>
+                  <tbody data-translate="TODO">
                     <tr class="remaster no-padding">
                         <td class="from-to"></td>
                         <td class="sprite">
@@ -525,7 +530,7 @@
         
               <section class="additional-section animate__animated animate__fadeIn">
                 <h3 class="section-heading tags">
-                  <span class="Neu5Land">Tags:</span>&nbsp;
+                  <span class="Neu5Land">Etikett:</span>&nbsp;
                   <small>allseer<span
                       class="">,&nbsp;</span></small><small>machine<span
                       class="">,&nbsp;</span></small><small>artificial_electricity<span
@@ -836,6 +841,771 @@
                     </tr>          </tbody>
                 </table>
               </div>
+        
+              <section class="additional-section habitat animate__animated animate__fadeIn">
+                <details open>
+                  <summary>
+                    <h3 class="section-heading Neu5Land noselect">Oberwelt</h3>
+                  </summary>
+                  <div class="table-container">
+                    <table class="moves last-td-padding highlight-row">
+                      <thead>
+                        <tr>
+                          <td class="sprite">Lebensraum</td>
+                          <td class="name">Name</td>
+                          <td class="percent">Prozent</td>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="overworld ta-center">
+                            <img src="/assets/img/generated/sprites/monsters/allseer.png" class="remaster-image" alt="overworld image"
+                              draggable="false">
+                          </td>
+                          <td class="name">
+                            Herbsthügel <code>(autumn_hill_low_level)</code>
+                          </td>
+                          <td class="percent">50.00%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld ta-center">
+                            <img src="/assets/img/generated/sprites/monsters/allseer.png" class="remaster-image" alt="overworld image"
+                              draggable="false">
+                          </td>
+                          <td class="name">
+                            Herbsthügel <code>(autumn_hill_low_level)</code>
+                          </td>
+                          <td class="percent">50.00%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld ta-center">
+                            <img src="/assets/img/generated/sprites/monsters/allseer.png" class="remaster-image" alt="overworld image"
+                              draggable="false">
+                          </td>
+                          <td class="name">
+                            Herbsthügel <code>(autumn_hill_low_level)</code>
+                          </td>
+                          <td class="percent">50.00%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld ta-center">
+                            <img src="/assets/img/generated/sprites/monsters/allseer.png" class="remaster-image" alt="overworld image"
+                              draggable="false">
+                          </td>
+                          <td class="name">
+                            Herbsthügel <code>(autumn_hill_low_level)</code>
+                          </td>
+                          <td class="percent">50.00%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld ta-center">
+                            <img src="/assets/img/generated/sprites/monsters/allseer.png" class="remaster-image" alt="overworld image"
+                              draggable="false">
+                          </td>
+                          <td class="name">
+                            Herbsthügel <code>(autumn_hill_high_level)</code>
+                          </td>
+                          <td class="percent">33.33%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld ta-center">
+                            <img src="/assets/img/generated/sprites/monsters/allseer.png" class="remaster-image" alt="overworld image"
+                              draggable="false">
+                          </td>
+                          <td class="name">
+                            Wald von Eastham <code>(eastham_woods_with_boltam)</code>
+                          </td>
+                          <td class="percent">33.33%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld ta-center">
+                            <img src="/assets/img/generated/sprites/monsters/allseer.png" class="remaster-image" alt="overworld image"
+                              draggable="false">
+                          </td>
+                          <td class="name">
+                            Herbsthügel <code>(autumn_hill_high_level)</code>
+                          </td>
+                          <td class="percent">33.33%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld ta-center">
+                            <img src="/assets/img/generated/sprites/monsters/allseer.png" class="remaster-image" alt="overworld image"
+                              draggable="false">
+                          </td>
+                          <td class="name">
+                            Wald von Eastham <code>(eastham_woods_with_boltam)</code>
+                          </td>
+                          <td class="percent">33.33%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld ta-center">
+                            <img src="/assets/img/generated/sprites/monsters/allseer.png" class="remaster-image" alt="overworld image"
+                              draggable="false">
+                          </td>
+                          <td class="name">
+                            Herbsthügel <code>(autumn_hill_high_level)</code>
+                          </td>
+                          <td class="percent">33.33%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld ta-center">
+                            <img src="/assets/img/generated/sprites/monsters/allseer.png" class="remaster-image" alt="overworld image"
+                              draggable="false">
+                          </td>
+                          <td class="name">
+                            Wald von Eastham <code>(eastham_woods_with_boltam)</code>
+                          </td>
+                          <td class="percent">33.33%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld ta-center">
+                            <img src="/assets/img/generated/sprites/monsters/allseer.png" class="remaster-image" alt="overworld image"
+                              draggable="false">
+                          </td>
+                          <td class="name">
+                            Herbsthügel <code>(autumn_hill_high_level)</code>
+                          </td>
+                          <td class="percent">33.33%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld ta-center">
+                            <img src="/assets/img/generated/sprites/monsters/allseer.png" class="remaster-image" alt="overworld image"
+                              draggable="false">
+                          </td>
+                          <td class="name">
+                            Wald von Eastham <code>(eastham_woods_with_boltam)</code>
+                          </td>
+                          <td class="percent">33.33%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld ta-center">
+                            <img src="/assets/img/generated/sprites/monsters/allseer.png" class="remaster-image" alt="overworld image"
+                              draggable="false">
+                          </td>
+                          <td class="name">
+                            Höhlen im Wald von Eastham <code>(eastham_woods_caves)</code>
+                          </td>
+                          <td class="percent">30.77%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld ta-center">
+                            <img src="/assets/img/generated/sprites/monsters/allseer.png" class="remaster-image" alt="overworld image"
+                              draggable="false">
+                          </td>
+                          <td class="name">
+                            Höhlen im Wald von Eastham <code>(eastham_woods_caves)</code>
+                          </td>
+                          <td class="percent">30.77%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld ta-center">
+                            <img src="/assets/img/generated/sprites/monsters/allseer.png" class="remaster-image" alt="overworld image"
+                              draggable="false">
+                          </td>
+                          <td class="name">
+                            Höhlen im Wald von Eastham <code>(eastham_woods_caves)</code>
+                          </td>
+                          <td class="percent">30.77%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld ta-center">
+                            <img src="/assets/img/generated/sprites/monsters/allseer.png" class="remaster-image" alt="overworld image"
+                              draggable="false">
+                          </td>
+                          <td class="name">
+                            Höhlen im Wald von Eastham <code>(eastham_woods_caves)</code>
+                          </td>
+                          <td class="percent">30.77%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld ta-center">
+                            <img src="/assets/img/generated/sprites/monsters/allseer.png" class="remaster-image" alt="overworld image"
+                              draggable="false">
+                          </td>
+                          <td class="name">
+                            Thirstaton-See <code>(lake_island)</code>
+                          </td>
+                          <td class="percent">30.30%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld ta-center">
+                            <img src="/assets/img/generated/sprites/monsters/allseer.png" class="remaster-image" alt="overworld image"
+                              draggable="false">
+                          </td>
+                          <td class="name">
+                            Thirstaton-See <code>(lake_island)</code>
+                          </td>
+                          <td class="percent">30.30%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld ta-center">
+                            <img src="/assets/img/generated/sprites/monsters/allseer.png" class="remaster-image" alt="overworld image"
+                              draggable="false">
+                          </td>
+                          <td class="name">
+                            Thirstaton-See <code>(lake_island)</code>
+                          </td>
+                          <td class="percent">30.30%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld ta-center">
+                            <img src="/assets/img/generated/sprites/monsters/allseer.png" class="remaster-image" alt="overworld image"
+                              draggable="false">
+                          </td>
+                          <td class="name">
+                            Thirstaton-See <code>(lake_island)</code>
+                          </td>
+                          <td class="percent">30.30%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld ta-center">
+                            <img src="/assets/img/generated/sprites/monsters/allseer.png" class="remaster-image" alt="overworld image"
+                              draggable="false">
+                          </td>
+                          <td class="name">
+                            Südliche Inseln <code>(southern_isles)</code>
+                          </td>
+                          <td class="percent">29.41%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld ta-center">
+                            <img src="/assets/img/generated/sprites/monsters/allseer.png" class="remaster-image" alt="overworld image"
+                              draggable="false">
+                          </td>
+                          <td class="name">
+                            Südliche Inseln <code>(southern_isles)</code>
+                          </td>
+                          <td class="percent">29.41%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld ta-center">
+                            <img src="/assets/img/generated/sprites/monsters/allseer.png" class="remaster-image" alt="overworld image"
+                              draggable="false">
+                          </td>
+                          <td class="name">
+                            Südliche Inseln <code>(southern_isles)</code>
+                          </td>
+                          <td class="percent">29.41%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld ta-center">
+                            <img src="/assets/img/generated/sprites/monsters/allseer.png" class="remaster-image" alt="overworld image"
+                              draggable="false">
+                          </td>
+                          <td class="name">
+                            Südliche Inseln <code>(southern_isles)</code>
+                          </td>
+                          <td class="percent">29.41%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld ta-center">
+                            <img src="/assets/img/generated/sprites/monsters/allseer.png" class="remaster-image" alt="overworld image"
+                              draggable="false">
+                          </td>
+                          <td class="name">
+                            Wald von Eastham <code>(eastham_woods_with_dominoth)</code>
+                          </td>
+                          <td class="percent">28.57%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld ta-center">
+                            <img src="/assets/img/generated/sprites/monsters/allseer.png" class="remaster-image" alt="overworld image"
+                              draggable="false">
+                          </td>
+                          <td class="name">
+                            Wald von Eastham <code>(eastham_woods_with_dominoth)</code>
+                          </td>
+                          <td class="percent">28.57%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld ta-center">
+                            <img src="/assets/img/generated/sprites/monsters/allseer.png" class="remaster-image" alt="overworld image"
+                              draggable="false">
+                          </td>
+                          <td class="name">
+                            Wald von Eastham <code>(eastham_woods_with_dominoth)</code>
+                          </td>
+                          <td class="percent">28.57%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld ta-center">
+                            <img src="/assets/img/generated/sprites/monsters/allseer.png" class="remaster-image" alt="overworld image"
+                              draggable="false">
+                          </td>
+                          <td class="name">
+                            Wald von Eastham <code>(eastham_woods_with_dominoth)</code>
+                          </td>
+                          <td class="percent">28.57%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld ta-center">
+                            <img src="/assets/img/generated/sprites/monsters/allseer.png" class="remaster-image" alt="overworld image"
+                              draggable="false">
+                          </td>
+                          <td class="name">
+                            Höhlen auf dem Herbsthügel <code>(autumn_hill_caves)</code>
+                          </td>
+                          <td class="percent">26.88%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld ta-center">
+                            <img src="/assets/img/generated/sprites/monsters/allseer.png" class="remaster-image" alt="overworld image"
+                              draggable="false">
+                          </td>
+                          <td class="name">
+                            Höhlen auf dem Herbsthügel <code>(autumn_hill_caves)</code>
+                          </td>
+                          <td class="percent">26.88%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld ta-center">
+                            <img src="/assets/img/generated/sprites/monsters/allseer.png" class="remaster-image" alt="overworld image"
+                              draggable="false">
+                          </td>
+                          <td class="name">
+                            Höhlen auf dem Herbsthügel <code>(autumn_hill_caves)</code>
+                          </td>
+                          <td class="percent">26.88%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld ta-center">
+                            <img src="/assets/img/generated/sprites/monsters/allseer.png" class="remaster-image" alt="overworld image"
+                              draggable="false">
+                          </td>
+                          <td class="name">
+                            Höhlen auf dem Herbsthügel <code>(autumn_hill_caves)</code>
+                          </td>
+                          <td class="percent">26.88%</td>
+                        </tr>
+        
+                        <tr>
+                          <td colspan="3" class="ta-center">Sicherung</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Trübe See <code>(autumn_hill_sea_island)</code>
+                          </td>
+                          <td class="percent">44.44%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Trübe See <code>(autumn_hill_water)</code>
+                          </td>
+                          <td class="percent">44.44%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Trübe See <code>(autumn_hill_sea_island)</code>
+                          </td>
+                          <td class="percent">44.44%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Trübe See <code>(autumn_hill_water)</code>
+                          </td>
+                          <td class="percent">44.44%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Trübe See <code>(autumn_hill_sea_island)</code>
+                          </td>
+                          <td class="percent">44.44%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Trübe See <code>(autumn_hill_water)</code>
+                          </td>
+                          <td class="percent">44.44%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Trübe See <code>(autumn_hill_sea_island)</code>
+                          </td>
+                          <td class="percent">44.44%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Trübe See <code>(autumn_hill_water)</code>
+                          </td>
+                          <td class="percent">44.44%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Herbsthügel <code>(autumn_hill_low_level)</code>
+                          </td>
+                          <td class="percent">29.41%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Südliche Inseln <code>(southern_isles)</code>
+                          </td>
+                          <td class="percent">29.41%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Herbsthügel <code>(autumn_hill_low_level)</code>
+                          </td>
+                          <td class="percent">29.41%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Südliche Inseln <code>(southern_isles)</code>
+                          </td>
+                          <td class="percent">29.41%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Herbsthügel <code>(autumn_hill_low_level)</code>
+                          </td>
+                          <td class="percent">29.41%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Südliche Inseln <code>(southern_isles)</code>
+                          </td>
+                          <td class="percent">29.41%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Herbsthügel <code>(autumn_hill_low_level)</code>
+                          </td>
+                          <td class="percent">29.41%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Südliche Inseln <code>(southern_isles)</code>
+                          </td>
+                          <td class="percent">29.41%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Wald von Eastham <code>(eastham_woods_with_dominoth)</code>
+                          </td>
+                          <td class="percent">23.53%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Wald von Eastham <code>(eastham_woods_with_dominoth)</code>
+                          </td>
+                          <td class="percent">23.53%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Wald von Eastham <code>(eastham_woods_with_dominoth)</code>
+                          </td>
+                          <td class="percent">23.53%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Wald von Eastham <code>(eastham_woods_with_dominoth)</code>
+                          </td>
+                          <td class="percent">23.53%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Herbsthügel <code>(autumn_hill_high_level)</code>
+                          </td>
+                          <td class="percent">20.70%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Herbsthügel <code>(autumn_hill_high_level)</code>
+                          </td>
+                          <td class="percent">20.70%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Herbsthügel <code>(autumn_hill_high_level)</code>
+                          </td>
+                          <td class="percent">20.70%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Herbsthügel <code>(autumn_hill_high_level)</code>
+                          </td>
+                          <td class="percent">20.70%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Höhlen im Wald von Eastham <code>(eastham_woods_caves)</code>
+                          </td>
+                          <td class="percent">20.00%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Wald von Eastham <code>(eastham_woods_with_boltam)</code>
+                          </td>
+                          <td class="percent">20.00%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Höhlen im Wald von Eastham <code>(eastham_woods_caves)</code>
+                          </td>
+                          <td class="percent">20.00%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Wald von Eastham <code>(eastham_woods_with_boltam)</code>
+                          </td>
+                          <td class="percent">20.00%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Höhlen im Wald von Eastham <code>(eastham_woods_caves)</code>
+                          </td>
+                          <td class="percent">20.00%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Wald von Eastham <code>(eastham_woods_with_boltam)</code>
+                          </td>
+                          <td class="percent">20.00%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Höhlen im Wald von Eastham <code>(eastham_woods_caves)</code>
+                          </td>
+                          <td class="percent">20.00%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Wald von Eastham <code>(eastham_woods_with_boltam)</code>
+                          </td>
+                          <td class="percent">20.00%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Herbsthügel <code>(autumn_hill_springheel)</code>
+                          </td>
+                          <td class="percent">17.86%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Herbsthügel <code>(autumn_hill_springheel)</code>
+                          </td>
+                          <td class="percent">17.86%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Herbsthügel <code>(autumn_hill_springheel)</code>
+                          </td>
+                          <td class="percent">17.86%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Herbsthügel <code>(autumn_hill_springheel)</code>
+                          </td>
+                          <td class="percent">17.86%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Thirstaton-See <code>(lake_island)</code>
+                          </td>
+                          <td class="percent">16.95%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Thirstaton-See <code>(lake_island)</code>
+                          </td>
+                          <td class="percent">16.95%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Thirstaton-See <code>(lake_island)</code>
+                          </td>
+                          <td class="percent">16.95%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Thirstaton-See <code>(lake_island)</code>
+                          </td>
+                          <td class="percent">16.95%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Herbsthügel <code>(autumn_hill_high_level_bulletino)</code>
+                          </td>
+                          <td class="percent">15.82%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Thirstaton-See <code>(lake_water)</code>
+                          </td>
+                          <td class="percent">15.82%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Herbsthügel <code>(autumn_hill_high_level_bulletino)</code>
+                          </td>
+                          <td class="percent">15.82%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Thirstaton-See <code>(lake_water)</code>
+                          </td>
+                          <td class="percent">15.82%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Herbsthügel <code>(autumn_hill_high_level_bulletino)</code>
+                          </td>
+                          <td class="percent">15.82%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Thirstaton-See <code>(lake_water)</code>
+                          </td>
+                          <td class="percent">15.82%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Herbsthügel <code>(autumn_hill_high_level_bulletino)</code>
+                          </td>
+                          <td class="percent">15.82%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Thirstaton-See <code>(lake_water)</code>
+                          </td>
+                          <td class="percent">15.82%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Herbsthügel <code>(autumn_hill_low_level_bulletino)</code>
+                          </td>
+                          <td class="percent">14.97%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Herbsthügel <code>(autumn_hill_low_level_bulletino)</code>
+                          </td>
+                          <td class="percent">14.97%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Herbsthügel <code>(autumn_hill_low_level_bulletino)</code>
+                          </td>
+                          <td class="percent">14.97%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Herbsthügel <code>(autumn_hill_low_level_bulletino)</code>
+                          </td>
+                          <td class="percent">14.97%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Höhlen auf dem Herbsthügel <code>(autumn_hill_caves)</code>
+                          </td>
+                          <td class="percent">13.97%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Höhlen auf dem Herbsthügel <code>(autumn_hill_caves)</code>
+                          </td>
+                          <td class="percent">13.97%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Höhlen auf dem Herbsthügel <code>(autumn_hill_caves)</code>
+                          </td>
+                          <td class="percent">13.97%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Höhlen auf dem Herbsthügel <code>(autumn_hill_caves)</code>
+                          </td>
+                          <td class="percent">13.97%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Thirstaton-See-Höhlen <code>(lake_caves)</code>
+                          </td>
+                          <td class="percent">10.00%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Thirstaton-See-Höhlen <code>(lake_caves)</code>
+                          </td>
+                          <td class="percent">10.00%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Thirstaton-See-Höhlen <code>(lake_caves)</code>
+                          </td>
+                          <td class="percent">10.00%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Thirstaton-See-Höhlen <code>(lake_caves)</code>
+                          </td>
+                          <td class="percent">10.00%</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </details>
+              </section>
             </div>
           </article>
         </div>
@@ -868,11 +1638,14 @@
                     Allgemeine Geschäftsbedingungen</a>
             </span>
             <span>&nbsp;|&nbsp;</span>
-            <span>v1.1.1</span>
+            <span>v1.2.0</span>
         </small>
-    </footer>    <script async src="/assets/js/main.js?v=1.1.1"></script>
-    <script defer src="/assets/js/analytics.js?v=1.1.1"></script>
+    </footer>
+    
+    <assistant-apps-posthog-analytics-no-cookie
+        analyticscode="phc_pCp48gthK67GEa2LB27jpP0X4BRU7TLcdQjeRi3gWXk"></assistant-apps-posthog-analytics-no-cookie>    <script src="/assets/js/main.js?v=1.2.0"></script>
     <script defer src="https://webcomp.assistantapps.com/build/bundle.js"></script>
+    
     <script>
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {

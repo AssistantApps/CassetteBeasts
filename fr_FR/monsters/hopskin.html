@@ -9,8 +9,6 @@
         Sautepeau - 
         Assistant for Cassette Beasts
     </title>
-    <link rel="index" href="https://cassettebeasts.assistantapps.com/">
-    <link rel="canonical" href="https://cassettebeasts.assistantapps.com/">
     <link rel="manifest" href="/site.webmanifest">
     <link rel="author" href="/humans.txt">
     <link rel="me" href="mailto:hi@kurtlourens.com">
@@ -26,7 +24,6 @@
     <link rel="alternate" href="https://cassettebeasts.assistantapps.com/zh_CN/monsters/hopskin.html" hreflang="zh">
     <link rel="alternate" href="https://cassettebeasts.assistantapps.com/ja_JP/monsters/hopskin.html" hreflang="ja">
     <link rel="alternate" href="https://cassettebeasts.assistantapps.com/ko_KR/monsters/hopskin.html" hreflang="ko">
-    <link rel="alternate" href="https://cassettebeasts.assistantapps.com/es_MX/monsters/hopskin.html" hreflang="es">
     <link rel="alternate" href="https://cassettebeasts.assistantapps.com/pt_BR/monsters/hopskin.html" hreflang="pt">
     <link rel="alternate" href="https://cassettebeasts.assistantapps.com/en/monsters/hopskin.html" hreflang="x-default">
 
@@ -47,7 +44,7 @@
     <meta name="distribution" content="Global">
     <meta name="generator" content="custom scripts using HandlebarJS">
     <link rel="search" href="opensearch.xml" type="application/opensearchdescription+xml" title="Search Title">
-    <meta name="revised" content="Thu Jul 25 2024">
+    <meta name="revised" content="Sat Jul 27 2024">
 
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
@@ -110,7 +107,13 @@
     <meta name="msapplication-starturl" content="/?pwa-app">
 
 
-    <link rel="stylesheet" href="/assets/css/main.css?v=1.1.1">
+    <link rel="stylesheet" href="/assets/css/main.css?v=1.2.0">
+
+    <script>
+        window.config = {
+            assistantAppsImgRoot: 'https://webcomp.assistantapps.com'
+        }
+    </script>
 
     <script type="application/ld+json">
         {
@@ -123,8 +126,8 @@
             "image": "/assets/favicon/android-chrome-192x192.png",
             "applicationCategory": "Application",
             "operatingSystem": "Android Lollipop, iOS, Chrome, Firefox, Opera, Internet Explorer, Edge",
-            "softwareVersion": "1.1.1",
-            "version": "1.1.1",
+            "softwareVersion": "1.2.0",
+            "version": "1.2.0",
             "author": {
                 "@type": "Person",
                 "name": "Kurt Lourens",
@@ -146,11 +149,12 @@
                 "jobTitle": "Senior Software Engineer",
             },
             "inLanguage": "en",
-            "dateCreated": "2024-07-25",
-            "dateModified": "2024-07-25",
-            "datePublished": "2024-07-25"
+            "dateCreated": "2024-07-27",
+            "dateModified": "2024-07-27",
+            "datePublished": "2024-07-27"
         }
-    </script></head>
+    </script>
+</head>
 <body class="overflow-x-hidden">
 
     <header class="header">
@@ -202,7 +206,7 @@
                             </ul>
                         </details>
                     </li>
-                    <li data-tooltip="About" data-placement="bottom">
+                    <li data-translate="TODO" data-tooltip="About" data-placement="bottom">
                         <a class="contrast" aria-label="About" href="/about.html">
                             <svg fill="#000000" height="24" width="24" viewBox="0 0 128 128" version="1.1"
                                 xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
@@ -263,13 +267,17 @@
                 </span>
             </li>
         </ul>
-        <div class="grid min-card-width mb-3">
+        <div class="grid masonry min-card-width mb-3">
+          <div class="meta">
+            <h1>Voir les monstres &gt;&gt; Sautepeau</h1>
+          </div>
+        
           <article class="monster-detail-card item-detail-card">
             <div class="monster-detail-card-heading item-detail-card-heading primary">
               <h2 class="Neu5Land animate__animated animate__fadeIn">Sautepeau</h2>
               <div class="audio noselect animate__animated animate__fadeIn">
                 <h4 class="cursor-pointer" onclick="playAudioNode('Sautepeau-cry')">🔉</h4>
-                <audio id="Sautepeau-cry" class="hidden">
+                <audio id="Sautepeau-cry" class="hidden autoplay">
                   <source src="/assets/audio/cries/hopskin_cry.wav" type="audio/wav">
                 </audio>
               </div>
@@ -407,8 +415,8 @@
         
         
               <div class="bio animate__animated animate__fadeIn">
-                <p>Les Sautepeaux attirent leurs proies à l&#x27;aide de leurs grands yeux ambrés et de leur large sourire. Mais ceux qui commettent l\&#x27;erreur de s\&#x27;approcher de ces êtres en apparence inoffensifs s\&#x27;aperçoivent bien vite qu\&#x27;ils cachent des griffes acérées sous leur manteau crasseux.</p>
-                <p>En 1955, une famille du Kentucky déclara à la police s&#x27;être fait attaquer dans sa ferme d\&#x27;Hopkinsville, décrivant les agresseurs comme des créatures aux oreilles pointues, aux mains griffues et aux yeux jaunes et brillants.</p>
+                <p>Les Sautepeaux attirent leurs proies à l&#x27;aide de leurs grands yeux ambrés et de leur large sourire. Mais ceux qui commettent l&#x27;erreur de s&#x27;approcher de ces êtres en apparence inoffensifs s&#x27;aperçoivent bien vite qu&#x27;ils cachent des griffes acérées sous leur manteau crasseux.</p>
+                <p>En 1955, une famille du Kentucky déclara à la police s&#x27;être fait attaquer dans sa ferme d&#x27;Hopkinsville, décrivant les agresseurs comme des créatures aux oreilles pointues, aux mains griffues et aux yeux jaunes et brillants.</p>
               </div>
         
               <section class="additional-section additional animate__animated animate__fadeIn">
@@ -437,9 +445,6 @@
                 </div>
               </section>
         
-              <div class="grid">
-        
-              </div>
         
               <section class="remaster-section animate__animated animate__fadeIn">
                 <h3 class="section-heading Neu5Land">Rematriçage</h3>
@@ -460,7 +465,7 @@
                       <td class="specialisation">Choisis une spécialisation</td>
                     </tr>
                   </thead>
-                  <tbody>
+                  <tbody data-translate="TODO">
                     <tr class="remaster no-padding">
                         <td class="from-to"></td>
                         <td class="sprite">
@@ -494,7 +499,7 @@
         
               <section class="additional-section animate__animated animate__fadeIn">
                 <h3 class="section-heading tags">
-                  <span class="Neu5Land">Tags:</span>&nbsp;
+                  <span class="Neu5Land">Mots-clés:</span>&nbsp;
                   <small>springheel<span
                       class="">,&nbsp;</span></small><small>deception<span
                       class="">,&nbsp;</span></small><small>hands<span
@@ -901,6 +906,337 @@
                     </tr>          </tbody>
                 </table>
               </div>
+        
+              <section class="additional-section habitat animate__animated animate__fadeIn">
+                <details open>
+                  <summary>
+                    <h3 class="section-heading Neu5Land noselect">Overworld</h3>
+                  </summary>
+                  <div class="table-container">
+                    <table class="moves last-td-padding highlight-row">
+                      <thead>
+                        <tr>
+                          <td class="sprite">Habitat</td>
+                          <td class="name">Nom</td>
+                          <td class="percent">Pourcentage</td>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="overworld ta-center">
+                            <img src="/assets/img/generated/sprites/monsters/springheel.png" class="remaster-image" alt="overworld image"
+                              draggable="false">
+                          </td>
+                          <td class="name">
+                            Colline de l&#x27;Automne <code>(autumn_hill_springheel)</code>
+                          </td>
+                          <td class="percent">50.00%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld ta-center">
+                            <img src="/assets/img/generated/sprites/monsters/springheel.png" class="remaster-image" alt="overworld image"
+                              draggable="false">
+                          </td>
+                          <td class="name">
+                            Forêt d&#x27;Estham <code>(eastham_woods_springheel)</code>
+                          </td>
+                          <td class="percent">50.00%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld ta-center">
+                            <img src="/assets/img/generated/sprites/monsters/springheel.png" class="remaster-image" alt="overworld image"
+                              draggable="false">
+                          </td>
+                          <td class="name">
+                            Marais <code>(marsh_springheel)</code>
+                          </td>
+                          <td class="percent">50.00%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld ta-center">
+                            <img src="/assets/img/generated/sprites/monsters/springheel.png" class="remaster-image" alt="overworld image"
+                              draggable="false">
+                          </td>
+                          <td class="name">
+                            Plaine aux Cerisiers <code>(meadow_springheel)</code>
+                          </td>
+                          <td class="percent">50.00%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld ta-center">
+                            <img src="/assets/img/generated/sprites/monsters/springheel.png" class="remaster-image" alt="overworld image"
+                              draggable="false">
+                          </td>
+                          <td class="name">
+                            Colline de l&#x27;Automne <code>(autumn_hill_springheel)</code>
+                          </td>
+                          <td class="percent">50.00%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld ta-center">
+                            <img src="/assets/img/generated/sprites/monsters/springheel.png" class="remaster-image" alt="overworld image"
+                              draggable="false">
+                          </td>
+                          <td class="name">
+                            Forêt d&#x27;Estham <code>(eastham_woods_springheel)</code>
+                          </td>
+                          <td class="percent">50.00%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld ta-center">
+                            <img src="/assets/img/generated/sprites/monsters/springheel.png" class="remaster-image" alt="overworld image"
+                              draggable="false">
+                          </td>
+                          <td class="name">
+                            Marais <code>(marsh_springheel)</code>
+                          </td>
+                          <td class="percent">50.00%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld ta-center">
+                            <img src="/assets/img/generated/sprites/monsters/springheel.png" class="remaster-image" alt="overworld image"
+                              draggable="false">
+                          </td>
+                          <td class="name">
+                            Plaine aux Cerisiers <code>(meadow_springheel)</code>
+                          </td>
+                          <td class="percent">50.00%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld ta-center">
+                            <img src="/assets/img/generated/sprites/monsters/springheel.png" class="remaster-image" alt="overworld image"
+                              draggable="false">
+                          </td>
+                          <td class="name">
+                            Les Terres Mortes <code>(deadlands_springheel)</code>
+                          </td>
+                          <td class="percent">33.33%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld ta-center">
+                            <img src="/assets/img/generated/sprites/monsters/springheel.png" class="remaster-image" alt="overworld image"
+                              draggable="false">
+                          </td>
+                          <td class="name">
+                            Gare des Cerises <code>(dungeon_meadow_springheel)</code>
+                          </td>
+                          <td class="percent">33.33%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld ta-center">
+                            <img src="/assets/img/generated/sprites/monsters/springheel.png" class="remaster-image" alt="overworld image"
+                              draggable="false">
+                          </td>
+                          <td class="name">
+                            Cimetière des cœurs perdus <code>(graveyard_springheel)</code>
+                          </td>
+                          <td class="percent">33.33%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld ta-center">
+                            <img src="/assets/img/generated/sprites/monsters/springheel.png" class="remaster-image" alt="overworld image"
+                              draggable="false">
+                          </td>
+                          <td class="name">
+                            Les Terres Mortes <code>(deadlands_springheel)</code>
+                          </td>
+                          <td class="percent">33.33%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld ta-center">
+                            <img src="/assets/img/generated/sprites/monsters/springheel.png" class="remaster-image" alt="overworld image"
+                              draggable="false">
+                          </td>
+                          <td class="name">
+                            Gare des Cerises <code>(dungeon_meadow_springheel)</code>
+                          </td>
+                          <td class="percent">33.33%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld ta-center">
+                            <img src="/assets/img/generated/sprites/monsters/springheel.png" class="remaster-image" alt="overworld image"
+                              draggable="false">
+                          </td>
+                          <td class="name">
+                            Cimetière des cœurs perdus <code>(graveyard_springheel)</code>
+                          </td>
+                          <td class="percent">33.33%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld ta-center">
+                            <img src="/assets/img/generated/sprites/monsters/springheel.png" class="remaster-image" alt="overworld image"
+                              draggable="false">
+                          </td>
+                          <td class="name">
+                            Nouvelle-Londres (Les Terres Mortes) <code>(deadlands_village)</code>
+                          </td>
+                          <td class="percent">23.09%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld ta-center">
+                            <img src="/assets/img/generated/sprites/monsters/springheel.png" class="remaster-image" alt="overworld image"
+                              draggable="false">
+                          </td>
+                          <td class="name">
+                            Nouvelle-Londres (Les Terres Mortes) <code>(deadlands_village)</code>
+                          </td>
+                          <td class="percent">23.09%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld ta-center">
+                            <img src="/assets/img/generated/sprites/monsters/springheel.png" class="remaster-image" alt="overworld image"
+                              draggable="false">
+                          </td>
+                          <td class="name">
+                            Parc de la Nouvelle-Wirral <code>(new_wirral_park_springheel)</code>
+                          </td>
+                          <td class="percent">20.00%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld ta-center">
+                            <img src="/assets/img/generated/sprites/monsters/springheel.png" class="remaster-image" alt="overworld image"
+                              draggable="false">
+                          </td>
+                          <td class="name">
+                            Parc de la Nouvelle-Wirral <code>(new_wirral_park_springheel)</code>
+                          </td>
+                          <td class="percent">20.00%</td>
+                        </tr>
+        
+                        <tr>
+                          <td colspan="3" class="ta-center">Sauvegarde</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Forêt d&#x27;Estham <code>(eastham_woods_springheel)</code>
+                          </td>
+                          <td class="percent">22.22%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Forêt d&#x27;Estham <code>(eastham_woods_springheel)</code>
+                          </td>
+                          <td class="percent">22.22%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Colline de l&#x27;Automne <code>(autumn_hill_springheel)</code>
+                          </td>
+                          <td class="percent">17.86%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Colline de l&#x27;Automne <code>(autumn_hill_springheel)</code>
+                          </td>
+                          <td class="percent">17.86%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Nouvelle-Londres (Les Terres Mortes) <code>(deadlands_village)</code>
+                          </td>
+                          <td class="percent">15.80%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Nouvelle-Londres (Les Terres Mortes) <code>(deadlands_village)</code>
+                          </td>
+                          <td class="percent">15.80%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Gare des Cerises <code>(dungeon_meadow_springheel)</code>
+                          </td>
+                          <td class="percent">14.29%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Gare des Cerises <code>(dungeon_meadow_springheel)</code>
+                          </td>
+                          <td class="percent">14.29%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Les Terres Mortes <code>(deadlands_springheel)</code>
+                          </td>
+                          <td class="percent">13.51%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Les Terres Mortes <code>(deadlands_springheel)</code>
+                          </td>
+                          <td class="percent">13.51%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Marais <code>(marsh_springheel)</code>
+                          </td>
+                          <td class="percent">11.76%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Marais <code>(marsh_springheel)</code>
+                          </td>
+                          <td class="percent">11.76%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Plaine aux Cerisiers <code>(meadow_springheel)</code>
+                          </td>
+                          <td class="percent">11.11%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Plaine aux Cerisiers <code>(meadow_springheel)</code>
+                          </td>
+                          <td class="percent">11.11%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Cimetière des cœurs perdus <code>(graveyard_springheel)</code>
+                          </td>
+                          <td class="percent">10.53%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Cimetière des cœurs perdus <code>(graveyard_springheel)</code>
+                          </td>
+                          <td class="percent">10.53%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Parc de la Nouvelle-Wirral <code>(new_wirral_park_springheel)</code>
+                          </td>
+                          <td class="percent">5.68%</td>
+                        </tr>
+                        <tr>
+                          <td class="overworld"></td>
+                          <td class="name">
+                            Parc de la Nouvelle-Wirral <code>(new_wirral_park_springheel)</code>
+                          </td>
+                          <td class="percent">5.68%</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </details>
+              </section>
             </div>
           </article>
         </div>
@@ -933,11 +1269,14 @@
                     Conditions d&#x27;utilisations</a>
             </span>
             <span>&nbsp;|&nbsp;</span>
-            <span>v1.1.1</span>
+            <span>v1.2.0</span>
         </small>
-    </footer>    <script async src="/assets/js/main.js?v=1.1.1"></script>
-    <script defer src="/assets/js/analytics.js?v=1.1.1"></script>
+    </footer>
+    
+    <assistant-apps-posthog-analytics-no-cookie
+        analyticscode="phc_pCp48gthK67GEa2LB27jpP0X4BRU7TLcdQjeRi3gWXk"></assistant-apps-posthog-analytics-no-cookie>    <script src="/assets/js/main.js?v=1.2.0"></script>
     <script defer src="https://webcomp.assistantapps.com/build/bundle.js"></script>
+    
     <script>
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
