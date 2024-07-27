@@ -3,12 +3,12 @@ import path from 'path';
 
 import { IntermediateFile } from 'constant/intermediateFile';
 import { ModuleType } from 'constant/module';
+import { paths } from 'constant/paths';
 import { IVersion } from 'contracts/version';
 import { readItemDetail } from 'modules/baseModule';
 import { CommonModule } from 'modules/commonModule';
 import { getConfig } from 'services/internal/configService';
 import { VersionMapFromDetailList } from './versionMapFromDetailList';
-import { paths } from 'constant/paths';
 
 export class VersionModule extends CommonModule<IVersion> {
   private _fileName = 'version.tres';

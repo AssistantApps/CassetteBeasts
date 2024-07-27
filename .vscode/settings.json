@@ -1,5 +1,11 @@
 {
+  "editor.formatOnSave": true,
   "typescript.preferences.quoteStyle": "single",
+  "[typescript]": {
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit"
+    }
+  },
   "prettier.trailingComma": "all",
   "prettier.tabWidth": 2,
   "prettier.semi": true,
@@ -7,6 +13,7 @@
   "prettier.printWidth": 100,
   "cSpell.words": [
     "allseer",
+    "analyticscode",
     "appguid",
     "arrayfrom",
     "assistantapps",
@@ -17,6 +24,7 @@
     "callout",
     "cassettebeasts",
     "cheaty",
+    "cookiebanner",
     "datelong",
     "deadworld",
     "debuff",
@@ -50,6 +58,7 @@
     "resimage",
     "resvg",
     "Roboto",
+    "showbanner",
     "ssfp",
     "starturl",
     "statcoord",
@@ -57,12 +66,14 @@
     "stringformat",
     "tada",
     "tehskai",
+    "texels",
     "translatewithformat",
     "tscn",
     "typedi",
     "typeless",
     "urlref",
     "uuidv",
+    "webcomp",
     "webp",
     "webpmux",
     "yxxx"

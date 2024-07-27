@@ -2,6 +2,7 @@ export enum ModuleType {
   Localisation,
   MonsterForms,
   MonsterSpriteAnim,
+  MonsterSpawn,
   Moves,
   Characters,
   CharacterSpriteAnim,

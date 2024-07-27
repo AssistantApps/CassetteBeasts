@@ -1,22 +1,24 @@
 import fs from 'fs';
 
+import { breadcrumb } from 'constant/breadcrumb';
+import { handlebarTemplate } from 'constant/handlebar';
 import { IntermediateFile } from 'constant/intermediateFile';
 import { ModuleType } from 'constant/module';
+import { routes } from 'constant/route';
 import { ILocalisation } from 'contracts/localisation';
+import { IMonsterForm, IMonsterFormEnhanced, IMonsterFormSimplified } from 'contracts/monsterForm';
+import { IMonsterSpawn } from 'contracts/monsterSpawn';
 import { IWorld, IWorldEnhanced, IWorldMetaDataEnhanced } from 'contracts/world';
 import { FolderPathHelper } from 'helpers/folderPathHelper';
 import { copyImageFromRes, copyImageToGeneratedFolder } from 'helpers/imageHelper';
+import { getExternalResourcesImagePath } from 'mapper/externalResourceMapper';
+import { monsterToSimplified } from 'mapper/monsterMapper';
 import { readItemDetail } from 'modules/baseModule';
 import { CommonModule } from 'modules/commonModule';
 import { LocalisationModule } from 'modules/localisation/localisationModule';
-import { worldMapFromDetailList, worldMetaDataMapFromDetailList } from './worldMapFromDetailList';
-import { getExternalResourcesImagePath } from 'mapper/externalResourceMapper';
-import { tryParseInt } from 'helpers/mathHelper';
-import { breadcrumb } from 'constant/breadcrumb';
-import { handlebarTemplate } from 'constant/handlebar';
-import { routes } from 'constant/route';
+import { MonsterSpawnModule } from 'modules/monsterSpawn/monsterSpawnModule';
 import { getHandlebar } from 'services/internal/handlebarService';
-import { anyObject } from 'helpers/typescriptHacks';
+import { worldMapFromDetailList, worldMetaDataMapFromDetailList } from './worldMapFromDetailList';
 
 export class WorldModule extends CommonModule<IWorld> {
   private _folders = [
@@ -28,7 +30,11 @@ export class WorldModule extends CommonModule<IWorld> {
     super({
       type: ModuleType.World,
       intermediateFile: IntermediateFile.world,
-      dependsOn: [ModuleType.Localisation],
+      dependsOn: [
+        ModuleType.Localisation, //
+        ModuleType.MonsterSpawn,
+        ModuleType.MonsterForms,
+      ],
     });
   }
 
@@ -76,12 +82,18 @@ export class WorldModule extends CommonModule<IWorld> {
     const map_chunk_metas = this._baseDetails.flatMap((map) =>
       Object.keys(map.chunk_meta_data),
     ).length;
-    return `${this._baseDetails.length} world files loaded with ${map_chunk_metas} chunks.`;
+    return `${this._baseDetails.length}  world files loaded with ${map_chunk_metas} chunks.`;
   };
 
   enrichData = async (langCode: string, modules: Array<CommonModule<unknown>>) => {
     const localeModule = this.getModuleOfType<ILocalisation>(modules, ModuleType.Localisation);
     const language = localeModule.get(langCode).messages;
+    const monsterSpawnModule = this.getModuleOfType<IMonsterSpawn>(
+      modules,
+      ModuleType.MonsterSpawn,
+    ) as unknown as MonsterSpawnModule;
+    const mapCoordToMonsterSpawnMap = monsterSpawnModule.getMapCoordToMonsterSpawnMap();
+    const monsterFormModule = this.getModuleOfType<IMonsterForm>(modules, ModuleType.MonsterForms);
 
     for (const detail of this._baseDetails) {
       const mapKey = detail.id.toLowerCase();
@@ -93,14 +105,11 @@ export class WorldModule extends CommonModule<IWorld> {
         allXValues.push(parseInt(coord[0]));
         allYValues.push(parseInt(coord[1]));
       }
-      const minX = Math.min(...allXValues);
-      const maxX = Math.max(...allXValues);
-      const offsetX = 0 - minX;
-      const rangeX = Math.abs(minX - maxX) + 1;
-      const minY = Math.min(...allYValues);
-      const maxY = Math.max(...allYValues);
-      const offsetY = 0 - minX;
-      const rangeY = Math.abs(minY - maxY) + 1;
+
+      const offsetX = Math.abs(detail.chunk_layout.x);
+      const rangeX = detail.chunk_layout.w;
+      const offsetY = Math.abs(detail.chunk_layout.y);
+      const rangeY = detail.chunk_layout.h;
 
       const chunk_meta_data_localised: Array<Array<IWorldMetaDataEnhanced>> = Array.from(
         Array(rangeY),
@@ -110,9 +119,28 @@ export class WorldModule extends CommonModule<IWorld> {
         const coords = chunkKey.split('_');
         const x = parseInt(coords[0]) + offsetX;
         const y = parseInt(coords[1]) + offsetY;
+
+        const monster_in_habitat: Array<IMonsterFormSimplified> = [];
+        const mapCoord = `${mapKey}_${coords[0]}_${coords[1]}`;
+        const speciesInThisZone = mapCoordToMonsterSpawnMap[mapCoord];
+        if (speciesInThisZone != null) {
+          const monsterIds = speciesInThisZone.map((mon) => mon.monsterId);
+          const distinctMonsterIds = monsterIds.filter(
+            (value, index, array) => array.indexOf(value) === index,
+          );
+          for (const monsterId of distinctMonsterIds) {
+            const monster = monsterFormModule.get(monsterId);
+            if (monster == null) continue;
+
+            monster_in_habitat.push(
+              monsterToSimplified(monster as unknown as IMonsterFormEnhanced),
+            );
+          }
+        }
+
         chunk_meta_data_localised[y][x] = {
           ...chunk,
-          id: chunkKey,
+          id: chunkKey.replace('_', ' '),
           features: undefined,
           title_localised: language[chunk.title],
           features_localised: chunk.features
@@ -122,17 +150,9 @@ export class WorldModule extends CommonModule<IWorld> {
               title_localised: language[feat.title],
               icon_url: feat.icon?.path,
             })),
+          monster_in_habitat: monster_in_habitat,
         };
       }
-
-      // const chunk_meta_data_localised_pivoted: Array<Array<IWorldMetaDataEnhanced>> = Array.from(
-      //   Array(gridY),
-      // ).map((_) => Array.from(Array(gridX)));
-      // for (let x = 0; x < gridX; x++) {
-      //   for (let y = 0; y < gridY; y++) {
-      //     chunk_meta_data_localised_pivoted[y][x] = chunk_meta_data_localised[x][y];
-      //   }
-      // }
 
       const detailEnhanced: IWorldEnhanced = {
         ...detail,
@@ -157,7 +177,7 @@ export class WorldModule extends CommonModule<IWorld> {
 
       for (const row of detailEnhanced.chunk_meta_data_localised) {
         for (const col of row) {
-          for (const feature of col?.features ?? []) {
+          for (const feature of col?.features_localised ?? []) {
             if (feature.icon?.path == null) continue;
             await copyImageFromRes(overwrite, feature.icon);
           }
@@ -173,7 +193,7 @@ export class WorldModule extends CommonModule<IWorld> {
 
       for (const row of detailEnhanced.chunk_meta_data_localised) {
         for (const col of row) {
-          for (const feature of col?.features ?? []) {
+          for (const feature of col?.features_localised ?? []) {
             if (feature.icon?.path == null) continue;
             await copyImageToGeneratedFolder(overwrite, feature.icon);
           }

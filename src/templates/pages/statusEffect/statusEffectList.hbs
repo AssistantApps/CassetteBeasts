@@ -8,6 +8,10 @@
 </section>
 
 <section id="status-effect-grid" class="item-grid-list mb-3">
+  <div class="meta">
+    <h1>{{lookup @root.translate 'MOVE_CATEGORY_STATUS'}}</h1>
+  </div>
+
   {{#each data.list}}
   <a href="/{{@root.langCode}}{{@root.routes.statusEffect}}/{{this.id}}.html"
     class="grid-list-item item animate__animated animate__fadeIn" data-title="{{this.name_localised}}"

@@ -7,8 +7,10 @@
         {{else if documentTitle}}{{documentTitle}} - {{/if}}
         {{meta.title}}
     </title>
+    {{!--
     <link rel="index" href="{{rootUrl}}">
-    <link rel="canonical" href="{{rootUrl}}">
+    <link rel="canonical" href="{{rootUrl}}{{relativePath}}">
+    --}}
     <link rel="manifest" href="/site.webmanifest">
     <link rel="author" href="/humans.txt">
     <link rel="me" href="{{humans.kurt.email}}">
@@ -85,5 +87,12 @@
 
     <link rel="stylesheet" href="/assets/css/main.css?v={{version}}">
 
+    <script>
+        window.config = {
+            assistantAppsImgRoot: 'https://webcomp.assistantapps.com'
+        }
+    </script>
+
     {{> partials/schemaOrg }}
+
 </head>

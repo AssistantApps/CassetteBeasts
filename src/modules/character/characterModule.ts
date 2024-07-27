@@ -12,7 +12,7 @@ import { site } from 'constant/site';
 import { ICharacter, ICharacterEnhanced, ICharacterSfx } from 'contracts/character';
 import { IElement } from 'contracts/element';
 import { ILocalisation } from 'contracts/localisation';
-import { IMonsterForm, IMonsterFormEnhanced } from 'contracts/monsterForm';
+import { IMonsterFormEnhanced, IMonsterFormSimplified } from 'contracts/monsterForm';
 import { ISpriteAnim } from 'contracts/spriteAnim';
 import { getAnimFileName, scaffoldFolderAndDelFileIfOverwrite } from 'helpers/fileHelper';
 import { FolderPathHelper } from 'helpers/folderPathHelper';
@@ -24,6 +24,7 @@ import {
 } from 'helpers/imageHelper';
 import { sortByStringProperty } from 'helpers/sortHelper';
 import { createWebpFromISpriteAnim } from 'helpers/webpHelper';
+import { monsterToSimplified } from 'mapper/monsterMapper';
 import { readItemDetail } from 'modules/baseModule';
 import { CommonModule } from 'modules/commonModule';
 import { LocalisationModule } from 'modules/localisation/localisationModule';
@@ -69,13 +70,16 @@ export class CharacterModule extends CommonModule<ICharacter> {
       this._baseDetails.push(detail);
     }
 
-    return `${this._baseDetails.length} characters`;
+    return `${this._baseDetails.length}  characters`;
   };
 
   enrichData = async (langCode: string, modules: Array<CommonModule<unknown>>) => {
     const localeModule = this.getModuleOfType<ILocalisation>(modules, ModuleType.Localisation);
     const language = localeModule.get(langCode).messages;
-    const monsterModule = this.getModuleOfType<IMonsterForm>(modules, ModuleType.MonsterForms);
+    const monsterModule = this.getModuleOfType<IMonsterFormEnhanced>(
+      modules,
+      ModuleType.MonsterForms,
+    );
     const elementModule = this.getModuleOfType<IElement>(modules, ModuleType.Elements);
     const spriteAnimModule = this.getModuleOfType<ISpriteAnim>(
       modules,
@@ -111,6 +115,11 @@ export class CharacterModule extends CommonModule<ICharacter> {
         reorderedAnimation[0] = reorderedAnimation[2];
         reorderedAnimation[2] = tempAnim;
       }
+      const partner_signature_species_monsters = monsterModule.get(
+        partner_signature_species_path
+          .replace('res://data/monster_forms/', '')
+          .replace('.tres', ''),
+      );
       const detailEnhanced: ICharacterEnhanced = {
         ...detail,
         name_localised: language[detail.name],
@@ -119,11 +128,11 @@ export class CharacterModule extends CommonModule<ICharacter> {
         sprite_sheet_path,
         battle_sprite_path,
         animations: reorderedAnimation,
-        partner_signature_species_monsters: monsterModule.get(
-          partner_signature_species_path
-            .replace('res://data/monster_forms/', '')
-            .replace('.tres', ''),
-        ),
+        partner_signature_species_monsters: monsterToSimplified(partner_signature_species_monsters),
+        partner_signature_species_tape_sticker_texture:
+          partner_signature_species_monsters?.tape_sticker_texture?.path,
+        partner_signature_species_elemental_types_elements:
+          partner_signature_species_monsters?.elemental_types_elements[0]?.icon.path,
         partner_signature_species_type_override_element: elementModule.get(tapeOverrideElementId),
         meta_image_url: `/assets/img/meta/${langCode}${routes.characters}/${encodeURI(mapKey)}.png`,
         partner_image_url: `/assets/img/meta/${langCode}${routes.characters}/${encodeURI(
@@ -256,7 +265,7 @@ export class CharacterModule extends CommonModule<ICharacter> {
       langCode,
       detailEnhanced.name_localised,
       detailEnhanced.portraits[0],
-      detailEnhanced.partner_signature_species_monsters.tape_sticker_texture.path,
+      detailEnhanced.partner_signature_species_tape_sticker_texture,
     );
     const template = getHandlebar().getCompiledTemplate<unknown>(
       handlebarTemplate.characterMetaImage,
@@ -275,14 +284,14 @@ export class CharacterModule extends CommonModule<ICharacter> {
     const exists = scaffoldFolderAndDelFileIfOverwrite(outputFullPath, overwrite);
     if (exists) return;
 
-    const monster = detailEnhanced.partner_signature_species_monsters as IMonsterFormEnhanced;
+    const monster = detailEnhanced.partner_signature_species_monsters as IMonsterFormSimplified;
     const overrideElement = detailEnhanced.partner_signature_species_type_override_element;
     const isBootleg = overrideElement?.icon?.path != null;
-    let elementPath = monster.elemental_types_elements[0].icon.path;
+    let elementPath = detailEnhanced.partner_signature_species_elemental_types_elements;
     if (isBootleg) elementPath = overrideElement?.icon?.path;
 
     const extraData = await getCharacterPartnerTapeImage(
-      monster.tape_sticker_texture.path,
+      detailEnhanced.partner_signature_species_tape_sticker_texture,
       elementPath,
       isBootleg,
     );

@@ -1,5 +1,5 @@
-import path from 'path';
 import { execFile } from 'node:child_process'; //get child_process module
+import path from 'path';
 
 import { paths } from 'constant/paths';
 

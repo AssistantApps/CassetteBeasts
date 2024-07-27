@@ -1,6 +1,6 @@
 import { IElement } from './element';
 import { IExternalResource } from './externalResource';
-import { IMonsterForm } from './monsterForm';
+import { IMonsterFormSimplified } from './monsterForm';
 import { ISpriteAnimDetailsEnhanced } from './spriteAnim';
 import { ISubResource } from './subResource';
 
@@ -68,10 +68,12 @@ export interface ICharacterEnhanced extends ICharacter {
   partner_image_url: string;
   // tapes_monsters: Array<IMonsterForm>;
   portraits: Array<string>;
-  partner_signature_species_monsters: IMonsterForm;
+  partner_signature_species_monsters: IMonsterFormSimplified;
+  partner_signature_species_tape_sticker_texture: string;
+  partner_signature_species_elemental_types_elements: string;
   partner_signature_species_type_override_element?: IElement;
   animations: Array<ISpriteAnimDetailsEnhanced>;
-  audioFiles: Array<Record<string, string>>;
+  audioFiles: Array<ICharacterSfxFiles>;
 }
 
 export interface ICharacterSfx {
@@ -94,5 +96,10 @@ export interface ICharacterSfx {
 
 export interface ICharacterSfxFiles {
   name: string;
-  files: Array<string>;
+  files: Array<ICharacterSfxFile>;
+}
+
+export interface ICharacterSfxFile {
+  url: string;
+  autoplay: boolean;
 }

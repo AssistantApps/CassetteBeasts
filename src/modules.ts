@@ -8,6 +8,7 @@ import { ElementsModule } from 'modules/elements/elementsModule';
 import { LocalisationModule } from 'modules/localisation/localisationModule';
 import { MiscModule } from 'modules/misc/miscModule';
 import { MonsterFormsModule } from 'modules/monsterForms/monsterFormsModule';
+import { MonsterSpawnModule } from 'modules/monsterSpawn/monsterSpawnModule';
 import { MonsterSpriteAnimModule } from 'modules/monsterSpriteAnim/monsterSpriteAnimModule';
 import { MovesModule } from 'modules/moves/movesModule';
 import { StatusEffectModule } from 'modules/statusEffect/statusEffectModule';
@@ -21,7 +22,8 @@ export const getModules = async (props: {
   if (props.loadFromJson == true) {
     await localisationModule.initFromIntermediate();
   } else {
-    await localisationModule.init();
+    const message = await localisationModule.init();
+    console.log(`\t${message}`);
   }
   const modules: Array<CommonModule<unknown>> = [
     localisationModule,
@@ -38,6 +40,9 @@ export const getModules = async (props: {
     // Monster
     new MonsterFormsModule(),
     new MonsterSpriteAnimModule(),
+    new MonsterSpawnModule(),
+
+    // Moves
     new MovesModule(),
 
     // Character

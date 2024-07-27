@@ -4,14 +4,14 @@ import readline from 'readline';
 
 import { tresSeparator } from 'constant/tresSeparator';
 import { IExternalResource } from 'contracts/externalResource';
+import { INodeResource } from 'contracts/nodeResource';
 import { ISubAnimationResource } from 'contracts/subAnimationResource';
 import { ISubResource } from 'contracts/subResource';
 import { stringStartsWith } from 'helpers/stringHelper';
 import { externalResourceMapper } from 'mapper/externalResourceMapper';
+import { nodeResourceFromDetailList, nodeResourceHeadMapper } from 'mapper/nodeResourceMapper';
 import { subAnimResourceFromDetailList, subAnimResourceMapper } from 'mapper/subAnimResourceMapper';
 import { subResourceFromDetailList, subResourceMapper } from 'mapper/subResourceMapper';
-import { INodeResource } from 'contracts/nodeResource';
-import { nodeResourceFromDetailList, nodeResourceHeadMapper } from 'mapper/nodeResourceMapper';
 
 export const getItemFromMapByIntId =
   <T>(mapItemDetailMap: Record<number, T>) =>

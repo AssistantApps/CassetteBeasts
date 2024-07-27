@@ -61,6 +61,7 @@ export interface IMoveEnhanced extends IMove {
 }
 
 export interface IMoveSimplified {
+  id: string;
   name_localised: string;
   category_name_localised: string;
   power: number;

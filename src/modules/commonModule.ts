@@ -1,20 +1,20 @@
 import fs from 'fs';
 import path from 'path';
 
+import { breadcrumb } from 'constant/breadcrumb';
+import { defaultLocale } from 'constant/localisation';
 import { ModuleType } from 'constant/module';
 import { paths } from 'constant/paths';
-import { LocalisationModule } from './localisation/localisationModule';
-import { PageData } from 'contracts/pageData';
-import { site } from 'constant/site';
 import { routes } from 'constant/route';
+import { site } from 'constant/site';
 import { IBreadcrumb } from 'contracts/breadcrumb';
-import { breadcrumb } from 'constant/breadcrumb';
-import { sortByStringProperty } from 'helpers/sortHelper';
-import { getConfig } from 'services/internal/configService';
-import { anyObject, promiseFromResult } from 'helpers/typescriptHacks';
-import { defaultLocale } from 'constant/localisation';
 import { ILocalisation } from 'contracts/localisation';
+import { PageData } from 'contracts/pageData';
+import { sortByStringProperty } from 'helpers/sortHelper';
+import { anyObject, promiseFromResult } from 'helpers/typescriptHacks';
+import { getConfig } from 'services/internal/configService';
 import { AssistantAppsModule } from './assistantApps/assistantAppsModule';
+import { LocalisationModule } from './localisation/localisationModule';
 
 export class CommonModule<T> {
   type: ModuleType;
@@ -100,9 +100,12 @@ export class CommonModule<T> {
       for (const lang of localeModule.getLanguageCodes()) {
         const langSpecificRelPath = props.relativePath.replace(props.langCode, lang);
         const indexOfDivider = lang.indexOf('_');
+        const alternateUrlLang = indexOfDivider > 0 ? lang.substring(0, indexOfDivider) : lang;
+        if (alternateUrls.filter((au) => au.lang == alternateUrlLang).length > 0) continue;
+
         alternateUrls.push({
           href: `${site.rootUrl}${langSpecificRelPath}`,
-          lang: indexOfDivider > 0 ? lang.substring(0, indexOfDivider) : lang,
+          lang: alternateUrlLang,
         });
       }
       alternateUrls.push({
@@ -129,6 +132,7 @@ export class CommonModule<T> {
       alternateUrls,
       data: props.data,
       langCode: props.langCode,
+      relativePath: props.relativePath,
       documentTitle: props.documentTitle,
       documentTitleUiKey: props.documentTitleUiKey,
       breadcrumbs: [breadcrumb.home(props.langCode), ...props.breadcrumbs],

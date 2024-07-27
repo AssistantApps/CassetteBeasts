@@ -47,6 +47,9 @@ export const UIKeys = {
   debuffs: 'TYPE_CHART_DEBUFFS', // Debuff(s)
   map: 'UI_PAUSE_MAP_BTN', // Map
   typeless: 'UI_INVENTORY_FILTER_TYPE_TYPELESS', // Typeless
+  cassetteBeasts: 'MAIN_CREDITS_TITLE', // Cassette Beasts
+  homePageLongText1: 'TUTORIAL_REMASTER', // long text for home page
+  homePageLongText2: 'TUTORIAL_RUMORS_DESCRIPTION1', // long text for home page
 } as const;
 
 export const UIKeysRemoveTrailingColon = [

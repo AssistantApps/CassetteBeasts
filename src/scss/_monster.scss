@@ -29,6 +29,11 @@
       }
     }
 
+    &.secret img,
+    &.secret .grid-list-item-container > * {
+      filter: blur(0.5em);
+    }
+
     .grid-list-item-image {
       height: 5.5em;
     }

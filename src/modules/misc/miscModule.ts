@@ -4,15 +4,13 @@ import { IntermediateFile } from 'constant/intermediateFile';
 import { UIKeys, defaultLocale } from 'constant/localisation';
 import { ModuleType } from 'constant/module';
 import { routes } from 'constant/route';
-import { ICharacter } from 'contracts/character';
 import { IElementEnhanced } from 'contracts/element';
 import { IHomePageCard } from 'contracts/homePageCard';
 import { ILocalisation } from 'contracts/localisation';
 import { IMonsterForm } from 'contracts/monsterForm';
 import { IStatusEffect } from 'contracts/statusEffect';
+import { IWorld } from 'contracts/world';
 import { CommonModule } from 'modules/commonModule';
-import { LocalisationModule } from 'modules/localisation/localisationModule';
-import { getConfig } from 'services/internal/configService';
 import { getHandlebar } from 'services/internal/handlebarService';
 
 export class MiscModule extends CommonModule<ILocalisation> {
@@ -28,6 +26,7 @@ export class MiscModule extends CommonModule<ILocalisation> {
         ModuleType.MonsterForms,
         ModuleType.StatusEffect,
         ModuleType.Elements,
+        ModuleType.World,
       ],
     });
   }
@@ -39,6 +38,7 @@ export class MiscModule extends CommonModule<ILocalisation> {
       modules,
       ModuleType.StatusEffect,
     );
+    const worldModule = this.getModuleOfType<IWorld>(modules, ModuleType.World);
 
     this._cards = [
       {
@@ -66,6 +66,12 @@ export class MiscModule extends CommonModule<ILocalisation> {
         url: routes.statusEffect,
         gameUrl: statusEffectModule.get('gambit').icon.path,
       },
+      {
+        uiKey: UIKeys.map,
+        url: routes.map,
+        gameUrl: worldModule.get('overworld').map_texture.path,
+        hideInMobile: true,
+      },
     ];
 
     this.isReady = true;
@@ -84,7 +90,6 @@ export class MiscModule extends CommonModule<ILocalisation> {
     const miscFiles: Array<{ src: string; dest?: string }> = [
       { src: handlebarTemplate.cname, dest: 'CNAME' },
       { src: handlebarTemplate.colour, dest: '../src/scss/_colour.scss' },
-      { src: handlebarTemplate.analytics, dest: 'assets/js/analytics.js' },
       { src: handlebarTemplate.termsAndConditions },
       { src: handlebarTemplate.privacyPolicy },
       { src: handlebarTemplate.openSearch },
@@ -117,10 +122,12 @@ export class MiscModule extends CommonModule<ILocalisation> {
       outputFiles.push(outputFile);
     }
 
+    const relativePath = `${langCode}${outputFile}`;
     await getHandlebar().compileTemplateToFile({
       data: this.getBasicPageData({
         langCode,
         modules,
+        relativePath,
         breadcrumbs: [],
         data: { cards: this._cards },
       }),

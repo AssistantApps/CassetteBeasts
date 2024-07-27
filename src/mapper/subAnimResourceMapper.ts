@@ -1,5 +1,4 @@
 import { IBoxSelection } from 'contracts/boxSelection';
-import { IExternalResource } from 'contracts/externalResource';
 import { ISubAnimationResource } from 'contracts/subAnimationResource';
 import { ISubResource } from 'contracts/subResource';
 import { tryParseFloat, tryParseInt } from 'helpers/mathHelper';

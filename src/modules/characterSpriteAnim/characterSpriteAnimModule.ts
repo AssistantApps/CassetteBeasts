@@ -41,6 +41,6 @@ export class CharacterSpriteAnimModule extends CommonModule<ISpriteAnim> {
     }
     this.isReady = true;
 
-    return `${this._baseDetails.length} characterSprites`;
+    return `${this._baseDetails.length}  character sprites`;
   };
 }

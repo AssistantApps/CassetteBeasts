@@ -22,7 +22,6 @@ export const handlebarTemplate = {
   fusionDetail: 'pages/fusion/fusionDetail.hbs',
 
   // misc
-  analytics: 'misc/analytics.js.hbs',
   cname: 'misc/CNAME.hbs',
   colour: 'misc/colour.scss.hbs',
   humans: 'misc/humans.txt.hbs',

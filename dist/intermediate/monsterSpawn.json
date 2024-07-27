@@ -1,0 +1,7084 @@
+{
+  "autumn_hill_caves": {
+    "id": "autumn_hill_caves",
+    "habitat_name": "REGION_NAME_AUTUMN_HILL_CAVES",
+    "habitat_overworld_chunks": [
+      {
+        "id": 5,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_6_-4.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 10,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_7_-6.tres",
+        "type": "Resource"
+      }
+    ],
+    "habitat_endless": true,
+    "min_team_size": 1,
+    "max_team_size": 2,
+    "num_species": 11,
+    "habitat_name_localised": "Autumn Hill Caves",
+    "species_enhanced": [
+      {
+        "overworldMonsterId": "masquerattle",
+        "monsterId": "masquerattle",
+        "percent": 26.88172043010753,
+        "percentStr": "26.88"
+      },
+      {
+        "monsterId": "masquerattle",
+        "percent": 13.966480446927374,
+        "percentStr": "13.97"
+      },
+      {
+        "overworldMonsterId": "masquerattle",
+        "monsterId": "jormungold",
+        "percent": 9.67741935483871,
+        "percentStr": "9.68"
+      },
+      {
+        "monsterId": "jormungold",
+        "percent": 5.027932960893853,
+        "percentStr": "5.03"
+      },
+      {
+        "overworldMonsterId": "allseer",
+        "monsterId": "allseer",
+        "percent": 26.88172043010753,
+        "percentStr": "26.88"
+      },
+      {
+        "monsterId": "allseer",
+        "percent": 13.966480446927374,
+        "percentStr": "13.97"
+      },
+      {
+        "overworldMonsterId": "allseer",
+        "monsterId": "triphinx",
+        "percent": 9.67741935483871,
+        "percentStr": "9.68"
+      },
+      {
+        "monsterId": "triphinx",
+        "percent": 5.027932960893853,
+        "percentStr": "5.03"
+      },
+      {
+        "monsterId": "thwackalope",
+        "percent": 13.966480446927374,
+        "percentStr": "13.97"
+      },
+      {
+        "monsterId": "macabra",
+        "percent": 5.027932960893853,
+        "percentStr": "5.03"
+      },
+      {
+        "monsterId": "folklord",
+        "percent": 5.027932960893853,
+        "percentStr": "5.03"
+      },
+      {
+        "monsterId": "stardigrade",
+        "percent": 5.027932960893853,
+        "percentStr": "5.03"
+      },
+      {
+        "monsterId": "muskrateer",
+        "percent": 13.966480446927374,
+        "percentStr": "13.97"
+      },
+      {
+        "monsterId": "salamagus",
+        "percent": 5.027932960893853,
+        "percentStr": "5.03"
+      },
+      {
+        "overworldMonsterId": "terracooka",
+        "monsterId": "terracooka",
+        "percent": 26.88172043010753,
+        "percentStr": "26.88"
+      },
+      {
+        "monsterId": "terracooka",
+        "percent": 13.966480446927374,
+        "percentStr": "13.97"
+      }
+    ],
+    "habitat_coords": [
+      "overworld_6_-4",
+      "overworld_7_-6"
+    ]
+  },
+  "autumn_hill_high_level": {
+    "id": "autumn_hill_high_level",
+    "habitat_name": "REGION_NAME_AUTUMN_HILL",
+    "habitat_overworld_chunks": [
+      {
+        "id": 8,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_6_-5.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 9,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_6_-6.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 11,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_7_-5.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 10,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_7_-6.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 18,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_8_-6.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 7,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_7_-4.tres",
+        "type": "Resource"
+      }
+    ],
+    "habitat_endless": true,
+    "min_team_size": 1,
+    "max_team_size": 2,
+    "num_species": 8,
+    "habitat_name_localised": "Autumn Hill",
+    "species_enhanced": [
+      {
+        "overworldMonsterId": "masquerattle",
+        "monsterId": "masquerattle",
+        "percent": 33.33333333333333,
+        "percentStr": "33.33"
+      },
+      {
+        "monsterId": "masquerattle",
+        "percent": 20.703933747412005,
+        "percentStr": "20.70"
+      },
+      {
+        "overworldMonsterId": "masquerattle",
+        "monsterId": "jormungold",
+        "percent": 16.666666666666664,
+        "percentStr": "16.67"
+      },
+      {
+        "monsterId": "jormungold",
+        "percent": 10.351966873706003,
+        "percentStr": "10.35"
+      },
+      {
+        "overworldMonsterId": "allseer",
+        "monsterId": "allseer",
+        "percent": 33.33333333333333,
+        "percentStr": "33.33"
+      },
+      {
+        "monsterId": "allseer",
+        "percent": 20.703933747412005,
+        "percentStr": "20.70"
+      },
+      {
+        "overworldMonsterId": "allseer",
+        "monsterId": "triphinx",
+        "percent": 16.666666666666664,
+        "percentStr": "16.67"
+      },
+      {
+        "monsterId": "triphinx",
+        "percent": 10.351966873706003,
+        "percentStr": "10.35"
+      },
+      {
+        "monsterId": "thwackalope",
+        "percent": 20.703933747412005,
+        "percentStr": "20.70"
+      },
+      {
+        "monsterId": "macabra",
+        "percent": 6.832298136645963,
+        "percentStr": "6.83"
+      },
+      {
+        "monsterId": "folklord",
+        "percent": 5.175983436853001,
+        "percentStr": "5.18"
+      },
+      {
+        "monsterId": "stardigrade",
+        "percent": 5.175983436853001,
+        "percentStr": "5.18"
+      }
+    ],
+    "habitat_coords": [
+      "overworld_6_-5",
+      "overworld_6_-6",
+      "overworld_7_-5",
+      "overworld_7_-6",
+      "overworld_8_-6",
+      "overworld_7_-4"
+    ]
+  },
+  "autumn_hill_high_level_bulletino": {
+    "id": "autumn_hill_high_level_bulletino",
+    "habitat_name": "REGION_NAME_AUTUMN_HILL",
+    "habitat_overworld_chunks": [
+      {
+        "id": 4,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_8_-4.tres",
+        "type": "Resource"
+      }
+    ],
+    "habitat_endless": true,
+    "min_team_size": 1,
+    "max_team_size": 2,
+    "num_species": 10,
+    "habitat_name_localised": "Autumn Hill",
+    "species_enhanced": [
+      {
+        "overworldMonsterId": "bulletino",
+        "monsterId": "bulletino",
+        "percent": 66.66666666666666,
+        "percentStr": "66.67"
+      },
+      {
+        "monsterId": "bulletino",
+        "percent": 15.822784810126581,
+        "percentStr": "15.82"
+      },
+      {
+        "overworldMonsterId": "bulletino",
+        "monsterId": "velocirifle",
+        "percent": 33.33333333333333,
+        "percentStr": "33.33"
+      },
+      {
+        "monsterId": "velocirifle",
+        "percent": 7.911392405063291,
+        "percentStr": "7.91"
+      },
+      {
+        "monsterId": "masquerattle",
+        "percent": 15.822784810126581,
+        "percentStr": "15.82"
+      },
+      {
+        "monsterId": "jormungold",
+        "percent": 7.911392405063291,
+        "percentStr": "7.91"
+      },
+      {
+        "monsterId": "allseer",
+        "percent": 15.822784810126581,
+        "percentStr": "15.82"
+      },
+      {
+        "monsterId": "triphinx",
+        "percent": 5.2215189873417724,
+        "percentStr": "5.22"
+      },
+      {
+        "monsterId": "thwackalope",
+        "percent": 15.822784810126581,
+        "percentStr": "15.82"
+      },
+      {
+        "monsterId": "macabra",
+        "percent": 5.2215189873417724,
+        "percentStr": "5.22"
+      },
+      {
+        "monsterId": "folklord",
+        "percent": 5.2215189873417724,
+        "percentStr": "5.22"
+      },
+      {
+        "monsterId": "stardigrade",
+        "percent": 5.2215189873417724,
+        "percentStr": "5.22"
+      }
+    ],
+    "habitat_coords": [
+      "overworld_8_-4"
+    ]
+  },
+  "autumn_hill_low_level": {
+    "id": "autumn_hill_low_level",
+    "habitat_name": "REGION_NAME_AUTUMN_HILL",
+    "habitat_overworld_chunks": [
+      {
+        "id": 9,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_6_-3.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 18,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_6_-4.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 8,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_7_-3.tres",
+        "type": "Resource"
+      }
+    ],
+    "habitat_endless": true,
+    "min_team_size": 1,
+    "max_team_size": 2,
+    "num_species": 5,
+    "habitat_name_localised": "Autumn Hill",
+    "species_enhanced": [
+      {
+        "overworldMonsterId": "masquerattle",
+        "monsterId": "masquerattle",
+        "percent": 50,
+        "percentStr": "50.00"
+      },
+      {
+        "monsterId": "masquerattle",
+        "percent": 29.411764705882348,
+        "percentStr": "29.41"
+      },
+      {
+        "overworldMonsterId": "allseer",
+        "monsterId": "allseer",
+        "percent": 50,
+        "percentStr": "50.00"
+      },
+      {
+        "monsterId": "allseer",
+        "percent": 29.411764705882348,
+        "percentStr": "29.41"
+      },
+      {
+        "monsterId": "thwackalope",
+        "percent": 29.411764705882348,
+        "percentStr": "29.41"
+      },
+      {
+        "monsterId": "macabra",
+        "percent": 5.88235294117647,
+        "percentStr": "5.88"
+      },
+      {
+        "monsterId": "stardigrade",
+        "percent": 5.88235294117647,
+        "percentStr": "5.88"
+      }
+    ],
+    "habitat_coords": [
+      "overworld_6_-3",
+      "overworld_6_-4",
+      "overworld_7_-3"
+    ]
+  },
+  "autumn_hill_low_level_bulletino": {
+    "id": "autumn_hill_low_level_bulletino",
+    "habitat_name": "REGION_NAME_AUTUMN_HILL",
+    "habitat_overworld_chunks": [
+      {
+        "id": 7,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_8_-3.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 8,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_8_-5.tres",
+        "type": "Resource"
+      }
+    ],
+    "habitat_endless": true,
+    "min_team_size": 1,
+    "max_team_size": 2,
+    "num_species": 6,
+    "habitat_name_localised": "Autumn Hill",
+    "species_enhanced": [
+      {
+        "overworldMonsterId": "bulletino",
+        "monsterId": "bulletino",
+        "percent": 100,
+        "percentStr": "100.00"
+      },
+      {
+        "monsterId": "bulletino",
+        "percent": 44.91017964071857,
+        "percentStr": "44.91"
+      },
+      {
+        "monsterId": "masquerattle",
+        "percent": 14.970059880239523,
+        "percentStr": "14.97"
+      },
+      {
+        "monsterId": "allseer",
+        "percent": 14.970059880239523,
+        "percentStr": "14.97"
+      },
+      {
+        "monsterId": "thwackalope",
+        "percent": 14.970059880239523,
+        "percentStr": "14.97"
+      },
+      {
+        "monsterId": "macabra",
+        "percent": 5.089820359281438,
+        "percentStr": "5.09"
+      },
+      {
+        "monsterId": "stardigrade",
+        "percent": 5.089820359281438,
+        "percentStr": "5.09"
+      }
+    ],
+    "habitat_coords": [
+      "overworld_8_-3",
+      "overworld_8_-5"
+    ]
+  },
+  "autumn_hill_sea_island": {
+    "id": "autumn_hill_sea_island",
+    "habitat_name": "REGION_NAME_MIRE_SEA",
+    "habitat_overworld_chunks": [
+      {
+        "id": 5,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_6_-7.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 8,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_7_-7.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 6,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_8_-7.tres",
+        "type": "Resource"
+      }
+    ],
+    "habitat_endless": true,
+    "min_team_size": 1,
+    "max_team_size": 2,
+    "num_species": 4,
+    "habitat_name_localised": "Mire Sea",
+    "species_enhanced": [
+      {
+        "overworldMonsterId": "diveal",
+        "monsterId": "diveal",
+        "percent": 88.88888888888889,
+        "percentStr": "88.89"
+      },
+      {
+        "monsterId": "diveal",
+        "percent": 44.44444444444444,
+        "percentStr": "44.44"
+      },
+      {
+        "monsterId": "allseer",
+        "percent": 44.44444444444444,
+        "percentStr": "44.44"
+      },
+      {
+        "monsterId": "triphinx",
+        "percent": 5.555555555555555,
+        "percentStr": "5.56"
+      },
+      {
+        "overworldMonsterId": "icepeck",
+        "monsterId": "icepeck",
+        "percent": 11.11111111111111,
+        "percentStr": "11.11"
+      },
+      {
+        "monsterId": "icepeck",
+        "percent": 5.555555555555555,
+        "percentStr": "5.56"
+      }
+    ],
+    "habitat_coords": [
+      "overworld_6_-7",
+      "overworld_7_-7",
+      "overworld_8_-7"
+    ]
+  },
+  "autumn_hill_springheel": {
+    "id": "autumn_hill_springheel",
+    "habitat_name": "REGION_NAME_AUTUMN_HILL",
+    "habitat_overworld_chunks": [
+      {
+        "id": 18,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_6_-4.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 7,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_7_-3.tres",
+        "type": "Resource"
+      }
+    ],
+    "habitat_endless": false,
+    "min_team_size": 1,
+    "max_team_size": 2,
+    "num_species": 7,
+    "habitat_name_localised": "Autumn Hill",
+    "species_enhanced": [
+      {
+        "overworldMonsterId": "springheel",
+        "monsterId": "snoopin",
+        "percent": 50,
+        "percentStr": "50.00"
+      },
+      {
+        "monsterId": "snoopin",
+        "percent": 17.857142857142858,
+        "percentStr": "17.86"
+      },
+      {
+        "overworldMonsterId": "springheel",
+        "monsterId": "hopskin",
+        "percent": 50,
+        "percentStr": "50.00"
+      },
+      {
+        "monsterId": "hopskin",
+        "percent": 17.857142857142858,
+        "percentStr": "17.86"
+      },
+      {
+        "monsterId": "masquerattle",
+        "percent": 17.857142857142858,
+        "percentStr": "17.86"
+      },
+      {
+        "monsterId": "allseer",
+        "percent": 17.857142857142858,
+        "percentStr": "17.86"
+      },
+      {
+        "monsterId": "thwackalope",
+        "percent": 17.857142857142858,
+        "percentStr": "17.86"
+      },
+      {
+        "monsterId": "macabra",
+        "percent": 5.357142857142858,
+        "percentStr": "5.36"
+      },
+      {
+        "monsterId": "stardigrade",
+        "percent": 5.357142857142858,
+        "percentStr": "5.36"
+      }
+    ],
+    "habitat_coords": [
+      "overworld_6_-4",
+      "overworld_7_-3"
+    ]
+  },
+  "autumn_hill_water": {
+    "id": "autumn_hill_water",
+    "habitat_name": "REGION_NAME_MIRE_SEA",
+    "habitat_overworld_chunks": [
+      {
+        "id": 6,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_6_-7.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 8,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_7_-7.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 7,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_8_-7.tres",
+        "type": "Resource"
+      }
+    ],
+    "habitat_endless": true,
+    "min_team_size": 1,
+    "max_team_size": 2,
+    "num_species": 4,
+    "habitat_name_localised": "Mire Sea",
+    "species_enhanced": [
+      {
+        "monsterId": "diveal",
+        "percent": 44.44444444444444,
+        "percentStr": "44.44"
+      },
+      {
+        "monsterId": "allseer",
+        "percent": 44.44444444444444,
+        "percentStr": "44.44"
+      },
+      {
+        "monsterId": "triphinx",
+        "percent": 5.555555555555555,
+        "percentStr": "5.56"
+      },
+      {
+        "monsterId": "stardigrade",
+        "percent": 5.555555555555555,
+        "percentStr": "5.56"
+      }
+    ],
+    "habitat_coords": [
+      "overworld_6_-7",
+      "overworld_7_-7",
+      "overworld_8_-7"
+    ]
+  },
+  "brokenhead": {
+    "id": "brokenhead",
+    "habitat_name": "REGION_NAME_BROKENHEAD",
+    "habitat_overworld_chunks": [
+      {
+        "id": 9,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-7_-7.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 10,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-6_-7.tres",
+        "type": "Resource"
+      }
+    ],
+    "habitat_endless": true,
+    "min_team_size": 1,
+    "max_team_size": 2,
+    "num_species": 7,
+    "habitat_name_localised": "Brokenhead",
+    "species_enhanced": [
+      {
+        "overworldMonsterId": "elfless",
+        "monsterId": "elfless",
+        "percent": 50,
+        "percentStr": "50.00"
+      },
+      {
+        "monsterId": "elfless",
+        "percent": 14.285714285714285,
+        "percentStr": "14.29"
+      },
+      {
+        "overworldMonsterId": "pombomb",
+        "monsterId": "pombomb",
+        "percent": 50,
+        "percentStr": "50.00"
+      },
+      {
+        "monsterId": "pombomb",
+        "percent": 14.285714285714285,
+        "percentStr": "14.29"
+      },
+      {
+        "monsterId": "kittelly",
+        "percent": 14.285714285714285,
+        "percentStr": "14.29"
+      },
+      {
+        "monsterId": "clocksley",
+        "percent": 14.285714285714285,
+        "percentStr": "14.29"
+      },
+      {
+        "monsterId": "brushroom",
+        "percent": 14.285714285714285,
+        "percentStr": "14.29"
+      },
+      {
+        "monsterId": "sirenade",
+        "percent": 14.285714285714285,
+        "percentStr": "14.29"
+      },
+      {
+        "monsterId": "spirouette",
+        "percent": 14.285714285714285,
+        "percentStr": "14.29"
+      }
+    ],
+    "habitat_coords": [
+      "overworld_-7_-7",
+      "overworld_-6_-7"
+    ]
+  },
+  "cast_iron_shore": {
+    "id": "cast_iron_shore",
+    "habitat_name": "REGION_NAME_CAST_IRON_SHORE",
+    "habitat_overworld_chunks": [
+      {
+        "id": 3,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-6_-4.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 6,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-6_-5.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 5,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-6_-6.tres",
+        "type": "Resource"
+      }
+    ],
+    "habitat_endless": true,
+    "min_team_size": 1,
+    "max_team_size": 2,
+    "num_species": 1,
+    "habitat_name_localised": "Cast Iron Shore",
+    "species_enhanced": [
+      {
+        "overworldMonsterId": "undyintentacle",
+        "monsterId": "undyin",
+        "percent": 100,
+        "percentStr": "100.00"
+      },
+      {
+        "monsterId": "undyin",
+        "percent": 100,
+        "percentStr": "100.00"
+      }
+    ],
+    "habitat_coords": [
+      "overworld_-6_-4",
+      "overworld_-6_-5",
+      "overworld_-6_-6"
+    ]
+  },
+  "church_quest_location": {
+    "id": "church_quest_location",
+    "habitat_name": "",
+    "habitat_overworld_chunks": [],
+    "habitat_endless": false,
+    "min_team_size": 1,
+    "max_team_size": 2,
+    "num_species": 11,
+    "species_enhanced": [
+      {
+        "overworldMonsterId": "twirligig",
+        "monsterId": "twirligig",
+        "percent": 38.095238095238095,
+        "percentStr": "38.10"
+      },
+      {
+        "monsterId": "twirligig",
+        "percent": 15.503875968992247,
+        "percentStr": "15.50"
+      },
+      {
+        "monsterId": "blossomaw",
+        "percent": 7.751937984496124,
+        "percentStr": "7.75"
+      },
+      {
+        "overworldMonsterId": "elfless",
+        "monsterId": "elfless",
+        "percent": 12.380952380952381,
+        "percentStr": "12.38"
+      },
+      {
+        "monsterId": "elfless",
+        "percent": 5.038759689922481,
+        "percentStr": "5.04"
+      },
+      {
+        "overworldMonsterId": "dominoth",
+        "monsterId": "dominoth",
+        "percent": 12.380952380952381,
+        "percentStr": "12.38"
+      },
+      {
+        "monsterId": "dominoth",
+        "percent": 5.038759689922481,
+        "percentStr": "5.04"
+      },
+      {
+        "overworldMonsterId": "dominoth",
+        "monsterId": "wingloom",
+        "percent": 12.380952380952381,
+        "percentStr": "12.38"
+      },
+      {
+        "monsterId": "wingloom",
+        "percent": 5.038759689922481,
+        "percentStr": "5.04"
+      },
+      {
+        "overworldMonsterId": "dominoth",
+        "monsterId": "mothmanic",
+        "percent": 12.380952380952381,
+        "percentStr": "12.38"
+      },
+      {
+        "monsterId": "mothmanic",
+        "percent": 5.038759689922481,
+        "percentStr": "5.04"
+      },
+      {
+        "overworldMonsterId": "puppercut",
+        "hour_min": 18,
+        "hour_max": 6,
+        "monsterId": "puppercut",
+        "percent": 12.380952380952381,
+        "percentStr": "12.38",
+        "available_specific_time": true
+      },
+      {
+        "hour_min": 18,
+        "hour_max": 6,
+        "monsterId": "puppercut",
+        "percent": 5.038759689922481,
+        "percentStr": "5.04",
+        "available_specific_time": true
+      },
+      {
+        "monsterId": "dandylion",
+        "percent": 15.503875968992247,
+        "percentStr": "15.50"
+      },
+      {
+        "monsterId": "frillypad",
+        "percent": 7.751937984496124,
+        "percentStr": "7.75"
+      },
+      {
+        "monsterId": "liligator",
+        "percent": 5.038759689922481,
+        "percentStr": "5.04"
+      },
+      {
+        "monsterId": "glaistain",
+        "percent": 23.25581395348837,
+        "percentStr": "23.26"
+      }
+    ],
+    "habitat_coords": []
+  },
+  "deadlands": {
+    "id": "deadlands",
+    "habitat_name": "REGION_NAME_DEADLANDS",
+    "habitat_overworld_chunks": [
+      {
+        "id": 16,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_4_-2.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 15,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_5_-1.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 13,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_5_-2.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 19,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_6_-1.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 18,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_6_-2.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 17,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_7_-1.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 12,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_7_-2.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 14,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_8_-1.tres",
+        "type": "Resource"
+      }
+    ],
+    "habitat_endless": true,
+    "min_team_size": 1,
+    "max_team_size": 2,
+    "num_species": 5,
+    "habitat_name_localised": "The Deadlands",
+    "species_enhanced": [
+      {
+        "overworldMonsterId": "nevermort",
+        "monsterId": "nevermort",
+        "percent": 40,
+        "percentStr": "40.00"
+      },
+      {
+        "monsterId": "nevermort",
+        "percent": 31.57894736842105,
+        "percentStr": "31.58"
+      },
+      {
+        "overworldMonsterId": "squirey",
+        "monsterId": "squirey",
+        "percent": 26.666666666666668,
+        "percentStr": "26.67"
+      },
+      {
+        "monsterId": "squirey",
+        "percent": 21.052631578947366,
+        "percentStr": "21.05"
+      },
+      {
+        "overworldMonsterId": "squirey",
+        "monsterId": "manispear",
+        "percent": 6.666666666666667,
+        "percentStr": "6.67"
+      },
+      {
+        "monsterId": "manispear",
+        "percent": 5.263157894736842,
+        "percentStr": "5.26"
+      },
+      {
+        "overworldMonsterId": "traffikrab",
+        "monsterId": "traffikrab",
+        "percent": 26.666666666666668,
+        "percentStr": "26.67"
+      },
+      {
+        "monsterId": "traffikrab",
+        "percent": 21.052631578947366,
+        "percentStr": "21.05"
+      },
+      {
+        "monsterId": "carniviper",
+        "percent": 21.052631578947366,
+        "percentStr": "21.05"
+      }
+    ],
+    "habitat_coords": [
+      "overworld_4_-2",
+      "overworld_5_-1",
+      "overworld_5_-2",
+      "overworld_6_-1",
+      "overworld_6_-2",
+      "overworld_7_-1",
+      "overworld_7_-2",
+      "overworld_8_-1"
+    ]
+  },
+  "deadlands_caves": {
+    "id": "deadlands_caves",
+    "habitat_name": "REGION_NAME_DEADLANDS_CAVES",
+    "habitat_overworld_chunks": [
+      {
+        "id": 12,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_6_-1.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 9,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_8_-1.tres",
+        "type": "Resource"
+      }
+    ],
+    "habitat_endless": false,
+    "min_team_size": 1,
+    "max_team_size": 2,
+    "num_species": 7,
+    "habitat_name_localised": "Deadlands Caves",
+    "species_enhanced": [
+      {
+        "overworldMonsterId": "carniviper",
+        "monsterId": "carniviper",
+        "percent": 22.22222222222222,
+        "percentStr": "22.22"
+      },
+      {
+        "monsterId": "carniviper",
+        "percent": 15.384615384615385,
+        "percentStr": "15.38"
+      },
+      {
+        "overworldMonsterId": "squirey",
+        "monsterId": "squirey",
+        "percent": 22.22222222222222,
+        "percentStr": "22.22"
+      },
+      {
+        "monsterId": "squirey",
+        "percent": 15.384615384615385,
+        "percentStr": "15.38"
+      },
+      {
+        "overworldMonsterId": "squirey",
+        "monsterId": "manispear",
+        "percent": 11.11111111111111,
+        "percentStr": "11.11"
+      },
+      {
+        "monsterId": "manispear",
+        "percent": 7.6923076923076925,
+        "percentStr": "7.69"
+      },
+      {
+        "overworldMonsterId": "nevermort",
+        "monsterId": "nevermort",
+        "percent": 22.22222222222222,
+        "percentStr": "22.22"
+      },
+      {
+        "monsterId": "nevermort",
+        "percent": 15.384615384615385,
+        "percentStr": "15.38"
+      },
+      {
+        "monsterId": "springheel",
+        "percent": 15.384615384615385,
+        "percentStr": "15.38"
+      },
+      {
+        "monsterId": "muskrateer",
+        "percent": 15.384615384615385,
+        "percentStr": "15.38"
+      },
+      {
+        "overworldMonsterId": "terracooka",
+        "monsterId": "terracooka",
+        "percent": 22.22222222222222,
+        "percentStr": "22.22"
+      },
+      {
+        "monsterId": "terracooka",
+        "percent": 15.384615384615385,
+        "percentStr": "15.38"
+      }
+    ],
+    "habitat_coords": [
+      "overworld_6_-1",
+      "overworld_8_-1"
+    ]
+  },
+  "deadlands_quarry": {
+    "id": "deadlands_quarry",
+    "habitat_name": "REGION_NAME_DINO_QUARRY",
+    "habitat_overworld_chunks": [
+      {
+        "id": 8,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_8_-2.tres",
+        "type": "Resource"
+      }
+    ],
+    "habitat_endless": true,
+    "min_team_size": 1,
+    "max_team_size": 2,
+    "num_species": 3,
+    "habitat_name_localised": "Dino Quarry, The Deadlands",
+    "species_enhanced": [
+      {
+        "overworldMonsterId": "bulletino",
+        "monsterId": "bulletino",
+        "percent": 100,
+        "percentStr": "100.00"
+      },
+      {
+        "monsterId": "bulletino",
+        "percent": 50,
+        "percentStr": "50.00"
+      },
+      {
+        "monsterId": "nevermort",
+        "percent": 25,
+        "percentStr": "25.00"
+      },
+      {
+        "monsterId": "squirey",
+        "percent": 25,
+        "percentStr": "25.00"
+      }
+    ],
+    "habitat_coords": [
+      "overworld_8_-2"
+    ]
+  },
+  "deadlands_springheel": {
+    "id": "deadlands_springheel",
+    "habitat_name": "REGION_NAME_DEADLANDS",
+    "habitat_overworld_chunks": [
+      {
+        "id": 7,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_6_-2.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 6,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_7_-2.tres",
+        "type": "Resource"
+      }
+    ],
+    "habitat_endless": false,
+    "min_team_size": 1,
+    "max_team_size": 2,
+    "num_species": 5,
+    "habitat_name_localised": "The Deadlands",
+    "species_enhanced": [
+      {
+        "overworldMonsterId": "springheel",
+        "monsterId": "springheel",
+        "percent": 66.66666666666666,
+        "percentStr": "66.67"
+      },
+      {
+        "monsterId": "springheel",
+        "percent": 27.027027027027025,
+        "percentStr": "27.03"
+      },
+      {
+        "overworldMonsterId": "springheel",
+        "monsterId": "hopskin",
+        "percent": 33.33333333333333,
+        "percentStr": "33.33"
+      },
+      {
+        "monsterId": "hopskin",
+        "percent": 13.513513513513512,
+        "percentStr": "13.51"
+      },
+      {
+        "monsterId": "nevermort",
+        "percent": 27.027027027027025,
+        "percentStr": "27.03"
+      },
+      {
+        "monsterId": "squirey",
+        "percent": 27.027027027027025,
+        "percentStr": "27.03"
+      },
+      {
+        "monsterId": "manispear",
+        "percent": 5.405405405405405,
+        "percentStr": "5.41"
+      }
+    ],
+    "habitat_coords": [
+      "overworld_6_-2",
+      "overworld_7_-2"
+    ]
+  },
+  "deadlands_village": {
+    "id": "deadlands_village",
+    "habitat_name": "REGION_NAME_OLD_VILLAGE",
+    "habitat_overworld_chunks": [
+      {
+        "id": 10,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_7_-2.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 13,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_5_-2.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 15,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_6_-2.tres",
+        "type": "Resource"
+      }
+    ],
+    "habitat_endless": true,
+    "min_team_size": 1,
+    "max_team_size": 2,
+    "num_species": 7,
+    "habitat_name_localised": "New London, The Deadlands",
+    "species_enhanced": [
+      {
+        "monsterId": "carniviper",
+        "percent": 15.797788309636651,
+        "percentStr": "15.80"
+      },
+      {
+        "overworldMonsterId": "nevermort",
+        "monsterId": "nevermort",
+        "percent": 23.094688221709006,
+        "percentStr": "23.09"
+      },
+      {
+        "monsterId": "nevermort",
+        "percent": 15.797788309636651,
+        "percentStr": "15.80"
+      },
+      {
+        "overworldMonsterId": "springheel",
+        "monsterId": "hopskin",
+        "percent": 23.094688221709006,
+        "percentStr": "23.09"
+      },
+      {
+        "monsterId": "hopskin",
+        "percent": 15.797788309636651,
+        "percentStr": "15.80"
+      },
+      {
+        "overworldMonsterId": "springheel",
+        "monsterId": "snoopin",
+        "percent": 23.094688221709006,
+        "percentStr": "23.09"
+      },
+      {
+        "monsterId": "snoopin",
+        "percent": 15.797788309636651,
+        "percentStr": "15.80"
+      },
+      {
+        "overworldMonsterId": "springheel",
+        "monsterId": "ripterra",
+        "percent": 7.621247113163973,
+        "percentStr": "7.62"
+      },
+      {
+        "monsterId": "ripterra",
+        "percent": 5.213270142180095,
+        "percentStr": "5.21"
+      },
+      {
+        "monsterId": "djinn_entonic",
+        "percent": 15.797788309636651,
+        "percentStr": "15.80"
+      },
+      {
+        "overworldMonsterId": "sanzatime",
+        "monsterId": "sanzatime",
+        "percent": 23.094688221709006,
+        "percentStr": "23.09"
+      },
+      {
+        "monsterId": "sanzatime",
+        "percent": 15.797788309636651,
+        "percentStr": "15.80"
+      }
+    ],
+    "habitat_coords": [
+      "overworld_7_-2",
+      "overworld_5_-2",
+      "overworld_6_-2"
+    ]
+  },
+  "dungeon_electric": {
+    "id": "dungeon_electric",
+    "habitat_name": "",
+    "habitat_overworld_chunks": [],
+    "habitat_endless": true,
+    "min_team_size": 1,
+    "max_team_size": 2,
+    "num_species": 3,
+    "species_enhanced": [
+      {
+        "overworldMonsterId": "traffikrab",
+        "monsterId": "traffikrab",
+        "percent": 100,
+        "percentStr": "100.00"
+      },
+      {
+        "monsterId": "traffikrab",
+        "percent": 44.44444444444444,
+        "percentStr": "44.44"
+      },
+      {
+        "monsterId": "burnace",
+        "percent": 44.44444444444444,
+        "percentStr": "44.44"
+      },
+      {
+        "monsterId": "smogmagog",
+        "percent": 11.11111111111111,
+        "percentStr": "11.11"
+      }
+    ],
+    "habitat_coords": []
+  },
+  "dungeon_final": {
+    "id": "dungeon_final",
+    "habitat_name": "",
+    "habitat_overworld_chunks": [],
+    "habitat_endless": true,
+    "min_team_size": 1,
+    "max_team_size": 2,
+    "num_species": 4,
+    "species_enhanced": [
+      {
+        "overworldMonsterId": "queenyx",
+        "monsterId": "queenyx",
+        "percent": 50,
+        "percentStr": "50.00"
+      },
+      {
+        "monsterId": "queenyx",
+        "percent": 25,
+        "percentStr": "25.00"
+      },
+      {
+        "overworldMonsterId": "faucetear",
+        "monsterId": "fountess",
+        "percent": 50,
+        "percentStr": "50.00"
+      },
+      {
+        "monsterId": "fountess",
+        "percent": 25,
+        "percentStr": "25.00"
+      },
+      {
+        "monsterId": "smogmagog",
+        "percent": 25,
+        "percentStr": "25.00"
+      },
+      {
+        "monsterId": "djinn_entonic",
+        "percent": 25,
+        "percentStr": "25.00"
+      }
+    ],
+    "habitat_coords": []
+  },
+  "dungeon_glowshroom": {
+    "id": "dungeon_glowshroom",
+    "habitat_name": "REGION_NAME_DUNGEON_GLOWSHROOM",
+    "habitat_overworld_chunks": [
+      {
+        "id": 5,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_5_-4.tres",
+        "type": "Resource"
+      }
+    ],
+    "habitat_endless": true,
+    "min_team_size": 1,
+    "max_team_size": 2,
+    "num_species": 4,
+    "habitat_name_localised": "Glowcester Road Station",
+    "species_enhanced": [
+      {
+        "overworldMonsterId": "carniviper",
+        "monsterId": "carniviper",
+        "percent": 33.33333333333333,
+        "percentStr": "33.33"
+      },
+      {
+        "monsterId": "carniviper",
+        "percent": 31.25,
+        "percentStr": "31.25"
+      },
+      {
+        "overworldMonsterId": "terracooka",
+        "monsterId": "terracooka",
+        "percent": 33.33333333333333,
+        "percentStr": "33.33"
+      },
+      {
+        "monsterId": "terracooka",
+        "percent": 31.25,
+        "percentStr": "31.25"
+      },
+      {
+        "overworldMonsterId": "faucetear",
+        "monsterId": "faucetear",
+        "percent": 33.33333333333333,
+        "percentStr": "33.33"
+      },
+      {
+        "monsterId": "faucetear",
+        "percent": 31.25,
+        "percentStr": "31.25"
+      },
+      {
+        "monsterId": "burnace",
+        "percent": 6.25,
+        "percentStr": "6.25"
+      }
+    ],
+    "habitat_coords": [
+      "overworld_5_-4"
+    ]
+  },
+  "dungeon_graveyard": {
+    "id": "dungeon_graveyard",
+    "habitat_name": "REGION_NAME_DUNGEON_GRAVEYARD",
+    "habitat_overworld_chunks": [
+      {
+        "id": 8,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-5_0.tres",
+        "type": "Resource"
+      }
+    ],
+    "habitat_endless": false,
+    "min_team_size": 1,
+    "max_team_size": 2,
+    "num_species": 6,
+    "habitat_name_localised": "Aldgrave Tomb Station",
+    "species_enhanced": [
+      {
+        "overworldMonsterId": "jellyton",
+        "monsterId": "jellyton",
+        "percent": 26.666666666666668,
+        "percentStr": "26.67"
+      },
+      {
+        "monsterId": "jellyton",
+        "percent": 21.052631578947366,
+        "percentStr": "21.05"
+      },
+      {
+        "overworldMonsterId": "pawndead",
+        "monsterId": "pawndead",
+        "percent": 26.666666666666668,
+        "percentStr": "26.67"
+      },
+      {
+        "monsterId": "pawndead",
+        "percent": 21.052631578947366,
+        "percentStr": "21.05"
+      },
+      {
+        "overworldMonsterId": "pawndead",
+        "monsterId": "skelevangelist",
+        "percent": 26.666666666666668,
+        "percentStr": "26.67"
+      },
+      {
+        "monsterId": "skelevangelist",
+        "percent": 21.052631578947366,
+        "percentStr": "21.05"
+      },
+      {
+        "overworldMonsterId": "queenyx",
+        "monsterId": "queenyx",
+        "percent": 6.666666666666667,
+        "percentStr": "6.67"
+      },
+      {
+        "monsterId": "queenyx",
+        "percent": 5.263157894736842,
+        "percentStr": "5.26"
+      },
+      {
+        "overworldMonsterId": "pawndead",
+        "monsterId": "kingrave",
+        "percent": 13.333333333333334,
+        "percentStr": "13.33"
+      },
+      {
+        "monsterId": "kingrave",
+        "percent": 10.526315789473683,
+        "percentStr": "10.53"
+      },
+      {
+        "monsterId": "scampire",
+        "percent": 21.052631578947366,
+        "percentStr": "21.05"
+      }
+    ],
+    "habitat_coords": [
+      "overworld_-5_0"
+    ]
+  },
+  "dungeon_landkeeper": {
+    "id": "dungeon_landkeeper",
+    "habitat_name": "",
+    "habitat_overworld_chunks": [],
+    "habitat_endless": true,
+    "min_team_size": 1,
+    "max_team_size": 2,
+    "num_species": 6,
+    "species_enhanced": [
+      {
+        "overworldMonsterId": "pawndead",
+        "monsterId": "pawndead",
+        "percent": 16.666666666666664,
+        "percentStr": "16.67"
+      },
+      {
+        "monsterId": "pawndead",
+        "percent": 16.666666666666664,
+        "percentStr": "16.67"
+      },
+      {
+        "overworldMonsterId": "springheel",
+        "monsterId": "springheel",
+        "percent": 16.666666666666664,
+        "percentStr": "16.67"
+      },
+      {
+        "monsterId": "springheel",
+        "percent": 16.666666666666664,
+        "percentStr": "16.67"
+      },
+      {
+        "overworldMonsterId": "springheel",
+        "monsterId": "hopskin",
+        "percent": 16.666666666666664,
+        "percentStr": "16.67"
+      },
+      {
+        "monsterId": "hopskin",
+        "percent": 16.666666666666664,
+        "percentStr": "16.67"
+      },
+      {
+        "overworldMonsterId": "springheel",
+        "monsterId": "ripterra",
+        "percent": 16.666666666666664,
+        "percentStr": "16.67"
+      },
+      {
+        "monsterId": "ripterra",
+        "percent": 16.666666666666664,
+        "percentStr": "16.67"
+      },
+      {
+        "overworldMonsterId": "springheel",
+        "monsterId": "snoopin",
+        "percent": 16.666666666666664,
+        "percentStr": "16.67"
+      },
+      {
+        "monsterId": "snoopin",
+        "percent": 16.666666666666664,
+        "percentStr": "16.67"
+      },
+      {
+        "overworldMonsterId": "springheel",
+        "monsterId": "scampire",
+        "percent": 16.666666666666664,
+        "percentStr": "16.67"
+      },
+      {
+        "monsterId": "scampire",
+        "percent": 16.666666666666664,
+        "percentStr": "16.67"
+      }
+    ],
+    "habitat_coords": []
+  },
+  "dungeon_meadow_dominoth": {
+    "id": "dungeon_meadow_dominoth",
+    "habitat_name": "REGION_NAME_DUNGEON_MEADOW",
+    "habitat_overworld_chunks": [
+      {
+        "id": 3,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-4_-4.tres",
+        "type": "Resource"
+      }
+    ],
+    "habitat_endless": true,
+    "min_team_size": 1,
+    "max_team_size": 2,
+    "num_species": 4,
+    "habitat_name_localised": "Cherry Cross Station",
+    "species_enhanced": [
+      {
+        "overworldMonsterId": "dominoth",
+        "monsterId": "dominoth",
+        "percent": 33.33333333333333,
+        "percentStr": "33.33"
+      },
+      {
+        "monsterId": "dominoth",
+        "percent": 25,
+        "percentStr": "25.00"
+      },
+      {
+        "overworldMonsterId": "dominoth",
+        "monsterId": "wingloom",
+        "percent": 33.33333333333333,
+        "percentStr": "33.33"
+      },
+      {
+        "monsterId": "wingloom",
+        "percent": 25,
+        "percentStr": "25.00"
+      },
+      {
+        "overworldMonsterId": "dominoth",
+        "monsterId": "mothmanic",
+        "percent": 33.33333333333333,
+        "percentStr": "33.33"
+      },
+      {
+        "monsterId": "mothmanic",
+        "percent": 25,
+        "percentStr": "25.00"
+      },
+      {
+        "monsterId": "elfless",
+        "percent": 25,
+        "percentStr": "25.00"
+      }
+    ],
+    "habitat_coords": [
+      "overworld_-4_-4"
+    ]
+  },
+  "dungeon_meadow_elfless": {
+    "id": "dungeon_meadow_elfless",
+    "habitat_name": "REGION_NAME_DUNGEON_MEADOW",
+    "habitat_overworld_chunks": [
+      {
+        "id": 3,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-4_-4.tres",
+        "type": "Resource"
+      }
+    ],
+    "habitat_endless": true,
+    "min_team_size": 1,
+    "max_team_size": 1,
+    "num_species": 1,
+    "habitat_name_localised": "Cherry Cross Station",
+    "species_enhanced": [
+      {
+        "overworldMonsterId": "elfless",
+        "monsterId": "elfless",
+        "percent": 100,
+        "percentStr": "100.00"
+      },
+      {
+        "monsterId": "elfless",
+        "percent": 100,
+        "percentStr": "100.00"
+      }
+    ],
+    "habitat_coords": [
+      "overworld_-4_-4"
+    ]
+  },
+  "dungeon_meadow_platform": {
+    "id": "dungeon_meadow_platform",
+    "habitat_name": "",
+    "habitat_overworld_chunks": [],
+    "habitat_endless": false,
+    "min_team_size": 1,
+    "max_team_size": 2,
+    "num_species": 3,
+    "species_enhanced": [
+      {
+        "monsterId": "thwackalope",
+        "percent": 33.33333333333333,
+        "percentStr": "33.33"
+      },
+      {
+        "overworldMonsterId": "springheel",
+        "monsterId": "scampire",
+        "percent": 50,
+        "percentStr": "50.00"
+      },
+      {
+        "monsterId": "scampire",
+        "percent": 33.33333333333333,
+        "percentStr": "33.33"
+      },
+      {
+        "overworldMonsterId": "queenyx",
+        "monsterId": "queenyx",
+        "percent": 50,
+        "percentStr": "50.00"
+      },
+      {
+        "monsterId": "queenyx",
+        "percent": 33.33333333333333,
+        "percentStr": "33.33"
+      }
+    ],
+    "habitat_coords": []
+  },
+  "dungeon_meadow_springheel": {
+    "id": "dungeon_meadow_springheel",
+    "habitat_name": "REGION_NAME_DUNGEON_MEADOW",
+    "habitat_overworld_chunks": [
+      {
+        "id": 3,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-4_-4.tres",
+        "type": "Resource"
+      }
+    ],
+    "habitat_endless": true,
+    "min_team_size": 1,
+    "max_team_size": 2,
+    "num_species": 7,
+    "habitat_name_localised": "Cherry Cross Station",
+    "species_enhanced": [
+      {
+        "monsterId": "dominoth",
+        "percent": 14.285714285714285,
+        "percentStr": "14.29"
+      },
+      {
+        "monsterId": "wingloom",
+        "percent": 14.285714285714285,
+        "percentStr": "14.29"
+      },
+      {
+        "monsterId": "mothmanic",
+        "percent": 14.285714285714285,
+        "percentStr": "14.29"
+      },
+      {
+        "overworldMonsterId": "springheel",
+        "monsterId": "springheel",
+        "percent": 33.33333333333333,
+        "percentStr": "33.33"
+      },
+      {
+        "monsterId": "springheel",
+        "percent": 14.285714285714285,
+        "percentStr": "14.29"
+      },
+      {
+        "overworldMonsterId": "springheel",
+        "monsterId": "snoopin",
+        "percent": 33.33333333333333,
+        "percentStr": "33.33"
+      },
+      {
+        "monsterId": "snoopin",
+        "percent": 14.285714285714285,
+        "percentStr": "14.29"
+      },
+      {
+        "overworldMonsterId": "springheel",
+        "monsterId": "hopskin",
+        "percent": 33.33333333333333,
+        "percentStr": "33.33"
+      },
+      {
+        "monsterId": "hopskin",
+        "percent": 14.285714285714285,
+        "percentStr": "14.29"
+      },
+      {
+        "monsterId": "elfless",
+        "percent": 14.285714285714285,
+        "percentStr": "14.29"
+      }
+    ],
+    "habitat_coords": [
+      "overworld_-4_-4"
+    ]
+  },
+  "dungeon_mountain": {
+    "id": "dungeon_mountain",
+    "habitat_name": "REGION_NAME_MT_WIRRAL_STATION",
+    "habitat_overworld_chunks": [
+      {
+        "id": 5,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-3_-7.tres",
+        "type": "Resource"
+      }
+    ],
+    "habitat_endless": true,
+    "min_team_size": 2,
+    "max_team_size": 2,
+    "num_species": 3,
+    "habitat_name_localised": "Icelington Station",
+    "species_enhanced": [
+      {
+        "overworldMonsterId": "icepeck",
+        "monsterId": "cryoshear",
+        "percent": 50,
+        "percentStr": "50.00"
+      },
+      {
+        "monsterId": "cryoshear",
+        "percent": 16.666666666666664,
+        "percentStr": "16.67"
+      },
+      {
+        "overworldMonsterId": "spookionna",
+        "monsterId": "spooki-onna",
+        "percent": 50,
+        "percentStr": "50.00"
+      },
+      {
+        "monsterId": "spooki-onna",
+        "percent": 16.666666666666664,
+        "percentStr": "16.67"
+      },
+      {
+        "monsterId": "smogmagog",
+        "percent": 66.66666666666666,
+        "percentStr": "66.67"
+      }
+    ],
+    "habitat_coords": [
+      "overworld_-3_-7"
+    ]
+  },
+  "dungeon_power_station": {
+    "id": "dungeon_power_station",
+    "habitat_name": "REGION_NAME_POWER_STATION",
+    "habitat_overworld_chunks": [
+      {
+        "id": 4,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_8_-2.tres",
+        "type": "Resource"
+      }
+    ],
+    "habitat_endless": true,
+    "min_team_size": 2,
+    "max_team_size": 2,
+    "num_species": 3,
+    "habitat_name_localised": "Power Station",
+    "species_enhanced": [
+      {
+        "monsterId": "anathema",
+        "percent": 47.05882352941176,
+        "percentStr": "47.06"
+      },
+      {
+        "monsterId": "khepri",
+        "percent": 47.05882352941176,
+        "percentStr": "47.06"
+      },
+      {
+        "overworldMonsterId": "faucetear",
+        "monsterId": "fountess",
+        "percent": 100,
+        "percentStr": "100.00"
+      },
+      {
+        "monsterId": "fountess",
+        "percent": 5.88235294117647,
+        "percentStr": "5.88"
+      }
+    ],
+    "habitat_coords": [
+      "overworld_8_-2"
+    ]
+  },
+  "dungeon_shipwreck": {
+    "id": "dungeon_shipwreck",
+    "habitat_name": "REGION_NAME_DUNGEON_SHIPWRECK",
+    "habitat_overworld_chunks": [
+      {
+        "id": 8,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-6_-6.tres",
+        "type": "Resource"
+      }
+    ],
+    "habitat_endless": true,
+    "min_team_size": 1,
+    "max_team_size": 2,
+    "num_species": 4,
+    "habitat_name_localised": "The “Titania” Shipwreck",
+    "species_enhanced": [
+      {
+        "overworldMonsterId": "traffikrab",
+        "monsterId": "traffikrab",
+        "percent": 50,
+        "percentStr": "50.00"
+      },
+      {
+        "monsterId": "traffikrab",
+        "percent": 25,
+        "percentStr": "25.00"
+      },
+      {
+        "monsterId": "burnace",
+        "percent": 25,
+        "percentStr": "25.00"
+      },
+      {
+        "monsterId": "undyin",
+        "percent": 25,
+        "percentStr": "25.00"
+      },
+      {
+        "overworldMonsterId": "faucetear",
+        "monsterId": "fountess",
+        "percent": 50,
+        "percentStr": "50.00"
+      },
+      {
+        "monsterId": "fountess",
+        "percent": 25,
+        "percentStr": "25.00"
+      }
+    ],
+    "habitat_coords": [
+      "overworld_-6_-6"
+    ]
+  },
+  "dungeon_waterloop": {
+    "id": "dungeon_waterloop",
+    "habitat_name": "REGION_NAME_DUNGEON_WATERLOOP",
+    "habitat_overworld_chunks": [
+      {
+        "id": 10,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_1_-4.tres",
+        "type": "Resource"
+      }
+    ],
+    "habitat_endless": true,
+    "min_team_size": 1,
+    "max_team_size": 2,
+    "num_species": 7,
+    "habitat_name_localised": "Waterloop Station",
+    "species_enhanced": [
+      {
+        "overworldMonsterId": "traffikrab",
+        "monsterId": "lobstacle",
+        "percent": 30.76923076923077,
+        "percentStr": "30.77"
+      },
+      {
+        "monsterId": "lobstacle",
+        "percent": 21.052631578947366,
+        "percentStr": "21.05"
+      },
+      {
+        "overworldMonsterId": "traffikrab",
+        "monsterId": "weevilite",
+        "percent": 30.76923076923077,
+        "percentStr": "30.77"
+      },
+      {
+        "monsterId": "weevilite",
+        "percent": 21.052631578947366,
+        "percentStr": "21.05"
+      },
+      {
+        "overworldMonsterId": "faucetear",
+        "monsterId": "faucetear",
+        "percent": 30.76923076923077,
+        "percentStr": "30.77"
+      },
+      {
+        "monsterId": "faucetear",
+        "percent": 21.052631578947366,
+        "percentStr": "21.05"
+      },
+      {
+        "overworldMonsterId": "faucetear",
+        "monsterId": "fountess",
+        "percent": 7.6923076923076925,
+        "percentStr": "7.69"
+      },
+      {
+        "monsterId": "fountess",
+        "percent": 5.263157894736842,
+        "percentStr": "5.26"
+      },
+      {
+        "monsterId": "salamagus",
+        "percent": 5.263157894736842,
+        "percentStr": "5.26"
+      },
+      {
+        "monsterId": "burnace",
+        "percent": 5.263157894736842,
+        "percentStr": "5.26"
+      },
+      {
+        "monsterId": "pondwalker",
+        "percent": 21.052631578947366,
+        "percentStr": "21.05"
+      }
+    ],
+    "habitat_coords": [
+      "overworld_1_-4"
+    ]
+  },
+  "eastham_woods_caves": {
+    "id": "eastham_woods_caves",
+    "habitat_name": "REGION_NAME_EASTHAM_WOODS_CAVES",
+    "habitat_overworld_chunks": [
+      {
+        "id": 15,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_2_-7.tres",
+        "type": "Resource"
+      }
+    ],
+    "habitat_endless": false,
+    "min_team_size": 1,
+    "max_team_size": 2,
+    "num_species": 8,
+    "habitat_name_localised": "Eastham Woods Caves",
+    "species_enhanced": [
+      {
+        "monsterId": "elfless",
+        "percent": 5,
+        "percentStr": "5.00"
+      },
+      {
+        "overworldMonsterId": "boltam",
+        "monsterId": "boltam",
+        "percent": 30.76923076923077,
+        "percentStr": "30.77"
+      },
+      {
+        "monsterId": "boltam",
+        "percent": 20,
+        "percentStr": "20.00"
+      },
+      {
+        "monsterId": "plasmantler",
+        "percent": 5,
+        "percentStr": "5.00"
+      },
+      {
+        "monsterId": "braxsuit",
+        "percent": 20,
+        "percentStr": "20.00"
+      },
+      {
+        "monsterId": "flapwoods",
+        "percent": 5,
+        "percentStr": "5.00"
+      },
+      {
+        "overworldMonsterId": "allseer",
+        "hour_min": 18,
+        "hour_max": 6,
+        "monsterId": "allseer",
+        "percent": 30.76923076923077,
+        "percentStr": "30.77",
+        "available_specific_time": true
+      },
+      {
+        "hour_min": 18,
+        "hour_max": 6,
+        "monsterId": "allseer",
+        "percent": 20,
+        "percentStr": "20.00",
+        "available_specific_time": true
+      },
+      {
+        "overworldMonsterId": "allseer",
+        "hour_min": 18,
+        "hour_max": 6,
+        "monsterId": "triphinx",
+        "percent": 7.6923076923076925,
+        "percentStr": "7.69",
+        "available_specific_time": true
+      },
+      {
+        "hour_min": 18,
+        "hour_max": 6,
+        "monsterId": "triphinx",
+        "percent": 5,
+        "percentStr": "5.00",
+        "available_specific_time": true
+      },
+      {
+        "overworldMonsterId": "terracooka",
+        "monsterId": "terracooka",
+        "percent": 30.76923076923077,
+        "percentStr": "30.77"
+      },
+      {
+        "monsterId": "terracooka",
+        "percent": 20,
+        "percentStr": "20.00"
+      }
+    ],
+    "habitat_coords": [
+      "overworld_2_-7"
+    ]
+  },
+  "eastham_woods_springheel": {
+    "id": "eastham_woods_springheel",
+    "habitat_name": "REGION_NAME_EASTHAM_WOODS",
+    "habitat_overworld_chunks": [
+      {
+        "id": 18,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_0_-6.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 13,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_1_-6.tres",
+        "type": "Resource"
+      }
+    ],
+    "habitat_endless": false,
+    "min_team_size": 1,
+    "max_team_size": 2,
+    "num_species": 6,
+    "habitat_name_localised": "Eastham Woods",
+    "species_enhanced": [
+      {
+        "overworldMonsterId": "springheel",
+        "monsterId": "snoopin",
+        "percent": 50,
+        "percentStr": "50.00"
+      },
+      {
+        "monsterId": "snoopin",
+        "percent": 22.22222222222222,
+        "percentStr": "22.22"
+      },
+      {
+        "overworldMonsterId": "springheel",
+        "monsterId": "hopskin",
+        "percent": 50,
+        "percentStr": "50.00"
+      },
+      {
+        "monsterId": "hopskin",
+        "percent": 22.22222222222222,
+        "percentStr": "22.22"
+      },
+      {
+        "monsterId": "boltam",
+        "percent": 22.22222222222222,
+        "percentStr": "22.22"
+      },
+      {
+        "monsterId": "plasmantler",
+        "percent": 5.555555555555555,
+        "percentStr": "5.56"
+      },
+      {
+        "monsterId": "busheye",
+        "percent": 22.22222222222222,
+        "percentStr": "22.22"
+      },
+      {
+        "monsterId": "huntorch",
+        "percent": 5.555555555555555,
+        "percentStr": "5.56"
+      }
+    ],
+    "habitat_coords": [
+      "overworld_0_-6",
+      "overworld_1_-6"
+    ]
+  },
+  "eastham_woods_with_boltam": {
+    "id": "eastham_woods_with_boltam",
+    "habitat_name": "REGION_NAME_EASTHAM_WOODS",
+    "habitat_overworld_chunks": [
+      {
+        "id": 17,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_0_-7.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 11,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_0_-6.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 15,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_1_-7.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 16,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_1_-6.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 14,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_2_-7.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 21,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_2_-6.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 23,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_3_-7.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 24,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_3_-6.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 13,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_4_-7.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 18,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_4_-6.tres",
+        "type": "Resource"
+      }
+    ],
+    "habitat_endless": true,
+    "min_team_size": 1,
+    "max_team_size": 2,
+    "num_species": 8,
+    "habitat_name_localised": "Eastham Woods",
+    "species_enhanced": [
+      {
+        "overworldMonsterId": "boltam",
+        "monsterId": "boltam",
+        "percent": 33.33333333333333,
+        "percentStr": "33.33"
+      },
+      {
+        "monsterId": "boltam",
+        "percent": 20,
+        "percentStr": "20.00"
+      },
+      {
+        "monsterId": "plasmantler",
+        "percent": 5,
+        "percentStr": "5.00"
+      },
+      {
+        "overworldMonsterId": "busheye",
+        "monsterId": "busheye",
+        "percent": 33.33333333333333,
+        "percentStr": "33.33"
+      },
+      {
+        "monsterId": "busheye",
+        "percent": 20,
+        "percentStr": "20.00"
+      },
+      {
+        "monsterId": "huntorch",
+        "percent": 5,
+        "percentStr": "5.00"
+      },
+      {
+        "monsterId": "braxsuit",
+        "percent": 20,
+        "percentStr": "20.00"
+      },
+      {
+        "monsterId": "flapwoods",
+        "percent": 5,
+        "percentStr": "5.00"
+      },
+      {
+        "monsterId": "elfless",
+        "percent": 5,
+        "percentStr": "5.00"
+      },
+      {
+        "overworldMonsterId": "allseer",
+        "hour_min": 18,
+        "hour_max": 6,
+        "monsterId": "allseer",
+        "percent": 33.33333333333333,
+        "percentStr": "33.33",
+        "available_specific_time": true
+      },
+      {
+        "hour_min": 18,
+        "hour_max": 6,
+        "monsterId": "allseer",
+        "percent": 20,
+        "percentStr": "20.00",
+        "available_specific_time": true
+      }
+    ],
+    "habitat_coords": [
+      "overworld_0_-7",
+      "overworld_0_-6",
+      "overworld_1_-7",
+      "overworld_1_-6",
+      "overworld_2_-7",
+      "overworld_2_-6",
+      "overworld_3_-7",
+      "overworld_3_-6",
+      "overworld_4_-7",
+      "overworld_4_-6"
+    ]
+  },
+  "eastham_woods_with_dominoth": {
+    "id": "eastham_woods_with_dominoth",
+    "habitat_name": "REGION_NAME_EASTHAM_WOODS",
+    "habitat_overworld_chunks": [
+      {
+        "id": 12,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_5_-7.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 3,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_5_-6.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 11,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_5_-5.tres",
+        "type": "Resource"
+      }
+    ],
+    "habitat_endless": true,
+    "min_team_size": 1,
+    "max_team_size": 2,
+    "num_species": 6,
+    "habitat_name_localised": "Eastham Woods",
+    "species_enhanced": [
+      {
+        "overworldMonsterId": "dominoth",
+        "monsterId": "dominoth",
+        "percent": 28.57142857142857,
+        "percentStr": "28.57"
+      },
+      {
+        "monsterId": "dominoth",
+        "percent": 23.52941176470588,
+        "percentStr": "23.53"
+      },
+      {
+        "overworldMonsterId": "dominoth",
+        "monsterId": "wingloom",
+        "percent": 14.285714285714285,
+        "percentStr": "14.29"
+      },
+      {
+        "monsterId": "wingloom",
+        "percent": 11.76470588235294,
+        "percentStr": "11.76"
+      },
+      {
+        "overworldMonsterId": "busheye",
+        "monsterId": "busheye",
+        "percent": 28.57142857142857,
+        "percentStr": "28.57"
+      },
+      {
+        "monsterId": "busheye",
+        "percent": 23.52941176470588,
+        "percentStr": "23.53"
+      },
+      {
+        "overworldMonsterId": "allseer",
+        "hour_min": 18,
+        "hour_max": 6,
+        "monsterId": "allseer",
+        "percent": 28.57142857142857,
+        "percentStr": "28.57",
+        "available_specific_time": true
+      },
+      {
+        "hour_min": 18,
+        "hour_max": 6,
+        "monsterId": "allseer",
+        "percent": 23.52941176470588,
+        "percentStr": "23.53",
+        "available_specific_time": true
+      },
+      {
+        "monsterId": "braxsuit",
+        "percent": 11.76470588235294,
+        "percentStr": "11.76"
+      },
+      {
+        "monsterId": "elfless",
+        "percent": 5.88235294117647,
+        "percentStr": "5.88"
+      }
+    ],
+    "habitat_coords": [
+      "overworld_5_-7",
+      "overworld_5_-6",
+      "overworld_5_-5"
+    ]
+  },
+  "elemental_altar_air": {
+    "id": "elemental_altar_air",
+    "habitat_name": "",
+    "habitat_overworld_chunks": [],
+    "habitat_endless": false,
+    "min_team_size": 1,
+    "max_team_size": 2,
+    "num_species": 3,
+    "species_enhanced": [
+      {
+        "monsterId": "dominoth",
+        "percent": 33.33333333333333,
+        "percentStr": "33.33"
+      },
+      {
+        "monsterId": "tokusect",
+        "percent": 33.33333333333333,
+        "percentStr": "33.33"
+      },
+      {
+        "monsterId": "braxsuit",
+        "percent": 33.33333333333333,
+        "percentStr": "33.33"
+      }
+    ],
+    "habitat_coords": []
+  },
+  "elemental_altar_earth": {
+    "id": "elemental_altar_earth",
+    "habitat_name": "",
+    "habitat_overworld_chunks": [],
+    "habitat_endless": false,
+    "min_team_size": 1,
+    "max_team_size": 2,
+    "num_species": 3,
+    "species_enhanced": [
+      {
+        "monsterId": "busheye",
+        "percent": 33.33333333333333,
+        "percentStr": "33.33"
+      },
+      {
+        "monsterId": "blossomaw",
+        "percent": 33.33333333333333,
+        "percentStr": "33.33"
+      },
+      {
+        "monsterId": "huntorch",
+        "percent": 33.33333333333333,
+        "percentStr": "33.33"
+      }
+    ],
+    "habitat_coords": []
+  },
+  "elemental_altar_fire": {
+    "id": "elemental_altar_fire",
+    "habitat_name": "",
+    "habitat_overworld_chunks": [],
+    "habitat_endless": false,
+    "min_team_size": 1,
+    "max_team_size": 2,
+    "num_species": 3,
+    "species_enhanced": [
+      {
+        "monsterId": "bulletino",
+        "percent": 33.33333333333333,
+        "percentStr": "33.33"
+      },
+      {
+        "monsterId": "velocirifle",
+        "percent": 33.33333333333333,
+        "percentStr": "33.33"
+      },
+      {
+        "monsterId": "salamagus",
+        "percent": 33.33333333333333,
+        "percentStr": "33.33"
+      }
+    ],
+    "habitat_coords": []
+  },
+  "elemental_altar_water": {
+    "id": "elemental_altar_water",
+    "habitat_name": "",
+    "habitat_overworld_chunks": [],
+    "habitat_endless": false,
+    "min_team_size": 1,
+    "max_team_size": 2,
+    "num_species": 2,
+    "species_enhanced": [
+      {
+        "monsterId": "diveal",
+        "percent": 50,
+        "percentStr": "50.00"
+      },
+      {
+        "monsterId": "scubalrus",
+        "percent": 50,
+        "percentStr": "50.00"
+      }
+    ],
+    "habitat_coords": []
+  },
+  "farm_cluckabilly": {
+    "id": "farm_cluckabilly",
+    "habitat_name": "REGION_NAME_FARM",
+    "habitat_overworld_chunks": [
+      {
+        "id": 5,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-3_-1.tres",
+        "type": "Resource"
+      }
+    ],
+    "habitat_endless": true,
+    "min_team_size": 1,
+    "max_team_size": 2,
+    "num_species": 2,
+    "habitat_name_localised": "Piper Farm",
+    "species_enhanced": [
+      {
+        "monsterId": "nevermort",
+        "percent": 33.33333333333333,
+        "percentStr": "33.33"
+      },
+      {
+        "overworldMonsterId": "cluckabilly",
+        "monsterId": "cluckabilly",
+        "percent": 100,
+        "percentStr": "100.00"
+      },
+      {
+        "monsterId": "cluckabilly",
+        "percent": 66.66666666666666,
+        "percentStr": "66.67"
+      }
+    ],
+    "habitat_coords": [
+      "overworld_-3_-1"
+    ]
+  },
+  "farm_nevermort": {
+    "id": "farm_nevermort",
+    "habitat_name": "REGION_NAME_FARM",
+    "habitat_overworld_chunks": [
+      {
+        "id": 5,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-3_-1.tres",
+        "type": "Resource"
+      }
+    ],
+    "habitat_endless": true,
+    "min_team_size": 1,
+    "max_team_size": 2,
+    "num_species": 2,
+    "habitat_name_localised": "Piper Farm",
+    "species_enhanced": [
+      {
+        "overworldMonsterId": "nevermort",
+        "monsterId": "nevermort",
+        "percent": 100,
+        "percentStr": "100.00"
+      },
+      {
+        "monsterId": "nevermort",
+        "percent": 33.33333333333333,
+        "percentStr": "33.33"
+      },
+      {
+        "monsterId": "cluckabilly",
+        "percent": 66.66666666666666,
+        "percentStr": "66.67"
+      }
+    ],
+    "habitat_coords": [
+      "overworld_-3_-1"
+    ]
+  },
+  "farm_pumpkin_patch": {
+    "id": "farm_pumpkin_patch",
+    "habitat_name": "REGION_NAME_FARM",
+    "habitat_overworld_chunks": [
+      {
+        "id": 1,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-3_-1.tres",
+        "type": "Resource"
+      }
+    ],
+    "habitat_endless": true,
+    "min_team_size": 1,
+    "max_team_size": 2,
+    "num_species": 3,
+    "habitat_name_localised": "Piper Farm",
+    "species_enhanced": [
+      {
+        "overworldMonsterId": "jumpkin",
+        "monsterId": "jumpkin",
+        "percent": 100,
+        "percentStr": "100.00"
+      },
+      {
+        "monsterId": "jumpkin",
+        "percent": 11.11111111111111,
+        "percentStr": "11.11"
+      },
+      {
+        "monsterId": "nevermort",
+        "percent": 44.44444444444444,
+        "percentStr": "44.44"
+      },
+      {
+        "monsterId": "cluckabilly",
+        "percent": 44.44444444444444,
+        "percentStr": "44.44"
+      }
+    ],
+    "habitat_coords": [
+      "overworld_-3_-1"
+    ]
+  },
+  "farm_quest_location": {
+    "id": "farm_quest_location",
+    "habitat_name": "REGION_NAME_FARM",
+    "habitat_overworld_chunks": [],
+    "habitat_endless": false,
+    "min_team_size": 1,
+    "max_team_size": 2,
+    "num_species": 4,
+    "habitat_name_localised": "Piper Farm",
+    "species_enhanced": [
+      {
+        "overworldMonsterId": "jellyton",
+        "monsterId": "jellyton",
+        "percent": 50,
+        "percentStr": "50.00"
+      },
+      {
+        "monsterId": "jellyton",
+        "percent": 25,
+        "percentStr": "25.00"
+      },
+      {
+        "monsterId": "jumpkin",
+        "percent": 25,
+        "percentStr": "25.00"
+      },
+      {
+        "monsterId": "nevermort",
+        "percent": 25,
+        "percentStr": "25.00"
+      },
+      {
+        "overworldMonsterId": "cluckabilly",
+        "monsterId": "cluckabilly",
+        "percent": 50,
+        "percentStr": "50.00"
+      },
+      {
+        "monsterId": "cluckabilly",
+        "percent": 25,
+        "percentStr": "25.00"
+      }
+    ],
+    "habitat_coords": []
+  },
+  "flood_lava": {
+    "id": "flood_lava",
+    "habitat_name": "",
+    "habitat_overworld_chunks": [],
+    "habitat_endless": false,
+    "min_team_size": 1,
+    "max_team_size": 2,
+    "num_species": 8,
+    "species_enhanced": [
+      {
+        "overworldMonsterId": "bulletino",
+        "monsterId": "bulletino",
+        "percent": 16.666666666666664,
+        "percentStr": "16.67"
+      },
+      {
+        "monsterId": "bulletino",
+        "percent": 12.5,
+        "percentStr": "12.50"
+      },
+      {
+        "overworldMonsterId": "bulletino",
+        "monsterId": "velocirifle",
+        "percent": 16.666666666666664,
+        "percentStr": "16.67"
+      },
+      {
+        "monsterId": "velocirifle",
+        "percent": 12.5,
+        "percentStr": "12.50"
+      },
+      {
+        "overworldMonsterId": "bulletino",
+        "monsterId": "artillerex",
+        "percent": 16.666666666666664,
+        "percentStr": "16.67"
+      },
+      {
+        "monsterId": "artillerex",
+        "percent": 12.5,
+        "percentStr": "12.50"
+      },
+      {
+        "monsterId": "salamagus",
+        "percent": 12.5,
+        "percentStr": "12.50"
+      },
+      {
+        "monsterId": "pyromeleon",
+        "percent": 12.5,
+        "percentStr": "12.50"
+      },
+      {
+        "overworldMonsterId": "terracooka",
+        "monsterId": "terracooka",
+        "percent": 16.666666666666664,
+        "percentStr": "16.67"
+      },
+      {
+        "monsterId": "terracooka",
+        "percent": 12.5,
+        "percentStr": "12.50"
+      },
+      {
+        "overworldMonsterId": "terracooka",
+        "monsterId": "coaldron",
+        "percent": 16.666666666666664,
+        "percentStr": "16.67"
+      },
+      {
+        "monsterId": "coaldron",
+        "percent": 12.5,
+        "percentStr": "12.50"
+      },
+      {
+        "overworldMonsterId": "pombomb",
+        "monsterId": "pombomb",
+        "percent": 16.666666666666664,
+        "percentStr": "16.67"
+      },
+      {
+        "monsterId": "pombomb",
+        "percent": 12.5,
+        "percentStr": "12.50"
+      }
+    ],
+    "habitat_coords": []
+  },
+  "flood_poison": {
+    "id": "flood_poison",
+    "habitat_name": "",
+    "habitat_overworld_chunks": [],
+    "habitat_endless": false,
+    "min_team_size": 1,
+    "max_team_size": 2,
+    "num_species": 7,
+    "species_enhanced": [
+      {
+        "overworldMonsterId": "carniviper",
+        "monsterId": "carniviper",
+        "percent": 25,
+        "percentStr": "25.00"
+      },
+      {
+        "monsterId": "carniviper",
+        "percent": 14.285714285714285,
+        "percentStr": "14.29"
+      },
+      {
+        "overworldMonsterId": "masquerattle",
+        "monsterId": "masquerattle",
+        "percent": 25,
+        "percentStr": "25.00"
+      },
+      {
+        "monsterId": "masquerattle",
+        "percent": 14.285714285714285,
+        "percentStr": "14.29"
+      },
+      {
+        "overworldMonsterId": "masquerattle",
+        "monsterId": "jormungold",
+        "percent": 25,
+        "percentStr": "25.00"
+      },
+      {
+        "monsterId": "jormungold",
+        "percent": 14.285714285714285,
+        "percentStr": "14.29"
+      },
+      {
+        "monsterId": "mardiusa",
+        "percent": 14.285714285714285,
+        "percentStr": "14.29"
+      },
+      {
+        "overworldMonsterId": "nevermort",
+        "monsterId": "nevermort",
+        "percent": 25,
+        "percentStr": "25.00"
+      },
+      {
+        "monsterId": "nevermort",
+        "percent": 14.285714285714285,
+        "percentStr": "14.29"
+      },
+      {
+        "monsterId": "apocrowlypse",
+        "percent": 14.285714285714285,
+        "percentStr": "14.29"
+      },
+      {
+        "monsterId": "jellyton",
+        "percent": 14.285714285714285,
+        "percentStr": "14.29"
+      }
+    ],
+    "habitat_coords": []
+  },
+  "flood_water": {
+    "id": "flood_water",
+    "habitat_name": "",
+    "habitat_overworld_chunks": [],
+    "habitat_endless": false,
+    "min_team_size": 1,
+    "max_team_size": 2,
+    "num_species": 9,
+    "species_enhanced": [
+      {
+        "overworldMonsterId": "diveal",
+        "monsterId": "diveal",
+        "percent": 25,
+        "percentStr": "25.00"
+      },
+      {
+        "monsterId": "diveal",
+        "percent": 11.11111111111111,
+        "percentStr": "11.11"
+      },
+      {
+        "overworldMonsterId": "diveal",
+        "monsterId": "scubalrus",
+        "percent": 25,
+        "percentStr": "25.00"
+      },
+      {
+        "monsterId": "scubalrus",
+        "percent": 11.11111111111111,
+        "percentStr": "11.11"
+      },
+      {
+        "monsterId": "padpole",
+        "percent": 11.11111111111111,
+        "percentStr": "11.11"
+      },
+      {
+        "monsterId": "frillypad",
+        "percent": 11.11111111111111,
+        "percentStr": "11.11"
+      },
+      {
+        "monsterId": "liligator",
+        "percent": 11.11111111111111,
+        "percentStr": "11.11"
+      },
+      {
+        "overworldMonsterId": "faucetear",
+        "monsterId": "faucetear",
+        "percent": 25,
+        "percentStr": "25.00"
+      },
+      {
+        "monsterId": "faucetear",
+        "percent": 11.11111111111111,
+        "percentStr": "11.11"
+      },
+      {
+        "overworldMonsterId": "faucetear",
+        "monsterId": "fountess",
+        "percent": 25,
+        "percentStr": "25.00"
+      },
+      {
+        "monsterId": "fountess",
+        "percent": 11.11111111111111,
+        "percentStr": "11.11"
+      },
+      {
+        "monsterId": "pondwalker",
+        "percent": 11.11111111111111,
+        "percentStr": "11.11"
+      },
+      {
+        "monsterId": "sharktanker",
+        "percent": 11.11111111111111,
+        "percentStr": "11.11"
+      }
+    ],
+    "habitat_coords": []
+  },
+  "graveyard": {
+    "id": "graveyard",
+    "habitat_name": "REGION_NAME_GRAVEYARD",
+    "habitat_overworld_chunks": [
+      {
+        "id": 7,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-5_0.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 8,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-4_0.tres",
+        "type": "Resource"
+      }
+    ],
+    "habitat_endless": true,
+    "min_team_size": 1,
+    "max_team_size": 2,
+    "num_species": 8,
+    "habitat_name_localised": "Lost Hearts Graveyard",
+    "species_enhanced": [
+      {
+        "overworldMonsterId": "jellyton",
+        "monsterId": "jellyton",
+        "percent": 21.276595744680854,
+        "percentStr": "21.28"
+      },
+      {
+        "monsterId": "jellyton",
+        "percent": 12.987012987012985,
+        "percentStr": "12.99"
+      },
+      {
+        "overworldMonsterId": "pawndead",
+        "monsterId": "pawndead",
+        "percent": 21.276595744680854,
+        "percentStr": "21.28"
+      },
+      {
+        "monsterId": "pawndead",
+        "percent": 12.987012987012985,
+        "percentStr": "12.99"
+      },
+      {
+        "overworldMonsterId": "pawndead",
+        "monsterId": "skelevangelist",
+        "percent": 10.638297872340427,
+        "percentStr": "10.64"
+      },
+      {
+        "monsterId": "skelevangelist",
+        "percent": 6.493506493506493,
+        "percentStr": "6.49"
+      },
+      {
+        "monsterId": "dandylion",
+        "percent": 25.97402597402597,
+        "percentStr": "25.97"
+      },
+      {
+        "overworldMonsterId": "puppercut",
+        "hour_min": 18,
+        "hour_max": 6,
+        "monsterId": "puppercut",
+        "percent": 17.021276595744684,
+        "percentStr": "17.02",
+        "available_specific_time": true
+      },
+      {
+        "hour_min": 18,
+        "hour_max": 6,
+        "monsterId": "puppercut",
+        "percent": 10.38961038961039,
+        "percentStr": "10.39",
+        "available_specific_time": true
+      },
+      {
+        "overworldMonsterId": "puppercut",
+        "hour_min": 18,
+        "hour_max": 6,
+        "monsterId": "southpaw",
+        "percent": 8.510638297872342,
+        "percentStr": "8.51",
+        "available_specific_time": true
+      },
+      {
+        "hour_min": 18,
+        "hour_max": 6,
+        "monsterId": "southpaw",
+        "percent": 5.194805194805195,
+        "percentStr": "5.19",
+        "available_specific_time": true
+      },
+      {
+        "hour_min": 18,
+        "hour_max": 6,
+        "monsterId": "scampire",
+        "percent": 12.987012987012985,
+        "percentStr": "12.99",
+        "available_specific_time": true
+      },
+      {
+        "overworldMonsterId": "sanzatime",
+        "hour_min": 6,
+        "hour_max": 18,
+        "monsterId": "sanzatime",
+        "percent": 21.276595744680854,
+        "percentStr": "21.28",
+        "available_specific_time": true
+      },
+      {
+        "hour_min": 6,
+        "hour_max": 18,
+        "monsterId": "sanzatime",
+        "percent": 12.987012987012985,
+        "percentStr": "12.99",
+        "available_specific_time": true
+      }
+    ],
+    "habitat_coords": [
+      "overworld_-5_0",
+      "overworld_-4_0"
+    ]
+  },
+  "graveyard_fusion": {
+    "id": "graveyard_fusion",
+    "habitat_name": "",
+    "habitat_overworld_chunks": [],
+    "habitat_endless": false,
+    "min_team_size": 1,
+    "max_team_size": 2,
+    "num_species": 9,
+    "species_enhanced": [
+      {
+        "overworldMonsterId": "jellyton",
+        "monsterId": "jellyton",
+        "percent": 22.22222222222222,
+        "percentStr": "22.22"
+      },
+      {
+        "monsterId": "jellyton",
+        "percent": 11.76470588235294,
+        "percentStr": "11.76"
+      },
+      {
+        "overworldMonsterId": "pawndead",
+        "monsterId": "pawndead",
+        "percent": 22.22222222222222,
+        "percentStr": "22.22"
+      },
+      {
+        "monsterId": "pawndead",
+        "percent": 11.76470588235294,
+        "percentStr": "11.76"
+      },
+      {
+        "overworldMonsterId": "pawndead",
+        "monsterId": "skelevangelist",
+        "percent": 11.11111111111111,
+        "percentStr": "11.11"
+      },
+      {
+        "monsterId": "skelevangelist",
+        "percent": 5.88235294117647,
+        "percentStr": "5.88"
+      },
+      {
+        "monsterId": "dandylion",
+        "percent": 23.52941176470588,
+        "percentStr": "23.53"
+      },
+      {
+        "overworldMonsterId": "puppercut",
+        "hour_min": 18,
+        "hour_max": 6,
+        "monsterId": "puppercut",
+        "percent": 11.11111111111111,
+        "percentStr": "11.11",
+        "available_specific_time": true
+      },
+      {
+        "hour_min": 18,
+        "hour_max": 6,
+        "monsterId": "puppercut",
+        "percent": 5.88235294117647,
+        "percentStr": "5.88",
+        "available_specific_time": true
+      },
+      {
+        "overworldMonsterId": "puppercut",
+        "hour_min": 18,
+        "hour_max": 6,
+        "monsterId": "southpaw",
+        "percent": 11.11111111111111,
+        "percentStr": "11.11",
+        "available_specific_time": true
+      },
+      {
+        "hour_min": 18,
+        "hour_max": 6,
+        "monsterId": "southpaw",
+        "percent": 5.88235294117647,
+        "percentStr": "5.88",
+        "available_specific_time": true
+      },
+      {
+        "hour_min": 18,
+        "hour_max": 6,
+        "monsterId": "scampire",
+        "percent": 11.76470588235294,
+        "percentStr": "11.76",
+        "available_specific_time": true
+      },
+      {
+        "overworldMonsterId": "sanzatime",
+        "hour_min": 6,
+        "hour_max": 18,
+        "monsterId": "sanzatime",
+        "percent": 22.22222222222222,
+        "percentStr": "22.22",
+        "available_specific_time": true
+      },
+      {
+        "hour_min": 6,
+        "hour_max": 18,
+        "monsterId": "sanzatime",
+        "percent": 11.76470588235294,
+        "percentStr": "11.76",
+        "available_specific_time": true
+      },
+      {
+        "monsterId": "bansheep",
+        "percent": 11.76470588235294,
+        "percentStr": "11.76"
+      }
+    ],
+    "habitat_coords": []
+  },
+  "graveyard_outside": {
+    "id": "graveyard_outside",
+    "habitat_name": "REGION_NAME_GRAVEYARD",
+    "habitat_overworld_chunks": [
+      {
+        "id": 1,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-3_0.tres",
+        "type": "Resource"
+      }
+    ],
+    "habitat_endless": true,
+    "min_team_size": 1,
+    "max_team_size": 2,
+    "num_species": 6,
+    "habitat_name_localised": "Lost Hearts Graveyard",
+    "species_enhanced": [
+      {
+        "overworldMonsterId": "jellyton",
+        "monsterId": "jellyton",
+        "percent": 23.52941176470588,
+        "percentStr": "23.53"
+      },
+      {
+        "monsterId": "jellyton",
+        "percent": 23.52941176470588,
+        "percentStr": "23.53"
+      },
+      {
+        "overworldMonsterId": "pawndead",
+        "monsterId": "pawndead",
+        "percent": 23.52941176470588,
+        "percentStr": "23.53"
+      },
+      {
+        "monsterId": "pawndead",
+        "percent": 23.52941176470588,
+        "percentStr": "23.53"
+      },
+      {
+        "overworldMonsterId": "pawndead",
+        "monsterId": "skelevangelist",
+        "percent": 11.76470588235294,
+        "percentStr": "11.76"
+      },
+      {
+        "monsterId": "skelevangelist",
+        "percent": 11.76470588235294,
+        "percentStr": "11.76"
+      },
+      {
+        "overworldMonsterId": "puppercut",
+        "hour_min": 18,
+        "hour_max": 6,
+        "monsterId": "puppercut",
+        "percent": 11.76470588235294,
+        "percentStr": "11.76",
+        "available_specific_time": true
+      },
+      {
+        "hour_min": 18,
+        "hour_max": 6,
+        "monsterId": "puppercut",
+        "percent": 11.76470588235294,
+        "percentStr": "11.76",
+        "available_specific_time": true
+      },
+      {
+        "overworldMonsterId": "puppercut",
+        "hour_min": 18,
+        "hour_max": 6,
+        "monsterId": "southpaw",
+        "percent": 5.88235294117647,
+        "percentStr": "5.88",
+        "available_specific_time": true
+      },
+      {
+        "hour_min": 18,
+        "hour_max": 6,
+        "monsterId": "southpaw",
+        "percent": 5.88235294117647,
+        "percentStr": "5.88",
+        "available_specific_time": true
+      },
+      {
+        "overworldMonsterId": "sanzatime",
+        "hour_min": 6,
+        "hour_max": 18,
+        "monsterId": "sanzatime",
+        "percent": 23.52941176470588,
+        "percentStr": "23.53",
+        "available_specific_time": true
+      },
+      {
+        "hour_min": 6,
+        "hour_max": 18,
+        "monsterId": "sanzatime",
+        "percent": 23.52941176470588,
+        "percentStr": "23.53",
+        "available_specific_time": true
+      }
+    ],
+    "habitat_coords": [
+      "overworld_-3_0"
+    ]
+  },
+  "graveyard_pawndead": {
+    "id": "graveyard_pawndead",
+    "habitat_name": "REGION_NAME_GRAVEYARD",
+    "habitat_overworld_chunks": [
+      {
+        "id": 7,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-5_0.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 8,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-4_0.tres",
+        "type": "Resource"
+      }
+    ],
+    "habitat_endless": true,
+    "min_team_size": 1,
+    "max_team_size": 2,
+    "num_species": 8,
+    "habitat_name_localised": "Lost Hearts Graveyard",
+    "species_enhanced": [
+      {
+        "monsterId": "jellyton",
+        "percent": 13.513513513513512,
+        "percentStr": "13.51"
+      },
+      {
+        "overworldMonsterId": "pawndead",
+        "monsterId": "pawndead",
+        "percent": 66.66666666666666,
+        "percentStr": "66.67"
+      },
+      {
+        "monsterId": "pawndead",
+        "percent": 13.513513513513512,
+        "percentStr": "13.51"
+      },
+      {
+        "overworldMonsterId": "pawndead",
+        "monsterId": "skelevangelist",
+        "percent": 33.33333333333333,
+        "percentStr": "33.33"
+      },
+      {
+        "monsterId": "skelevangelist",
+        "percent": 6.756756756756756,
+        "percentStr": "6.76"
+      },
+      {
+        "monsterId": "dandylion",
+        "percent": 27.027027027027025,
+        "percentStr": "27.03"
+      },
+      {
+        "hour_min": 18,
+        "hour_max": 6,
+        "monsterId": "puppercut",
+        "percent": 6.756756756756756,
+        "percentStr": "6.76",
+        "available_specific_time": true
+      },
+      {
+        "hour_min": 18,
+        "hour_max": 6,
+        "monsterId": "southpaw",
+        "percent": 5.405405405405405,
+        "percentStr": "5.41",
+        "available_specific_time": true
+      },
+      {
+        "hour_min": 18,
+        "hour_max": 6,
+        "monsterId": "scampire",
+        "percent": 13.513513513513512,
+        "percentStr": "13.51",
+        "available_specific_time": true
+      },
+      {
+        "hour_min": 6,
+        "hour_max": 18,
+        "monsterId": "sanzatime",
+        "percent": 13.513513513513512,
+        "percentStr": "13.51",
+        "available_specific_time": true
+      }
+    ],
+    "habitat_coords": [
+      "overworld_-5_0",
+      "overworld_-4_0"
+    ]
+  },
+  "graveyard_springheel": {
+    "id": "graveyard_springheel",
+    "habitat_name": "REGION_NAME_GRAVEYARD",
+    "habitat_overworld_chunks": [
+      {
+        "id": 7,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-5_0.tres",
+        "type": "Resource"
+      }
+    ],
+    "habitat_endless": false,
+    "min_team_size": 1,
+    "max_team_size": 2,
+    "num_species": 10,
+    "habitat_name_localised": "Lost Hearts Graveyard",
+    "species_enhanced": [
+      {
+        "monsterId": "jellyton",
+        "percent": 10.526315789473683,
+        "percentStr": "10.53"
+      },
+      {
+        "monsterId": "pawndead",
+        "percent": 10.526315789473683,
+        "percentStr": "10.53"
+      },
+      {
+        "monsterId": "skelevangelist",
+        "percent": 5.263157894736842,
+        "percentStr": "5.26"
+      },
+      {
+        "monsterId": "dandylion",
+        "percent": 21.052631578947366,
+        "percentStr": "21.05"
+      },
+      {
+        "hour_min": 18,
+        "hour_max": 6,
+        "monsterId": "puppercut",
+        "percent": 5.263157894736842,
+        "percentStr": "5.26",
+        "available_specific_time": true
+      },
+      {
+        "hour_min": 18,
+        "hour_max": 6,
+        "monsterId": "southpaw",
+        "percent": 5.263157894736842,
+        "percentStr": "5.26",
+        "available_specific_time": true
+      },
+      {
+        "overworldMonsterId": "springheel",
+        "hour_min": 18,
+        "hour_max": 6,
+        "monsterId": "scampire",
+        "percent": 33.33333333333333,
+        "percentStr": "33.33",
+        "available_specific_time": true
+      },
+      {
+        "hour_min": 18,
+        "hour_max": 6,
+        "monsterId": "scampire",
+        "percent": 10.526315789473683,
+        "percentStr": "10.53",
+        "available_specific_time": true
+      },
+      {
+        "hour_min": 6,
+        "hour_max": 18,
+        "monsterId": "sanzatime",
+        "percent": 10.526315789473683,
+        "percentStr": "10.53",
+        "available_specific_time": true
+      },
+      {
+        "overworldMonsterId": "springheel",
+        "hour_min": 6,
+        "hour_max": 18,
+        "monsterId": "hopskin",
+        "percent": 33.33333333333333,
+        "percentStr": "33.33",
+        "available_specific_time": true
+      },
+      {
+        "hour_min": 6,
+        "hour_max": 18,
+        "monsterId": "hopskin",
+        "percent": 10.526315789473683,
+        "percentStr": "10.53",
+        "available_specific_time": true
+      },
+      {
+        "overworldMonsterId": "springheel",
+        "hour_min": 6,
+        "hour_max": 18,
+        "monsterId": "snoopin",
+        "percent": 33.33333333333333,
+        "percentStr": "33.33",
+        "available_specific_time": true
+      },
+      {
+        "hour_min": 6,
+        "hour_max": 18,
+        "monsterId": "snoopin",
+        "percent": 10.526315789473683,
+        "percentStr": "10.53",
+        "available_specific_time": true
+      }
+    ],
+    "habitat_coords": [
+      "overworld_-5_0"
+    ]
+  },
+  "ham": {
+    "id": "ham",
+    "habitat_name": "REGION_NAME_HAM",
+    "habitat_overworld_chunks": [
+      {
+        "id": 3,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-1_-7.tres",
+        "type": "Resource"
+      }
+    ],
+    "habitat_endless": true,
+    "min_team_size": 1,
+    "max_team_size": 2,
+    "num_species": 7,
+    "habitat_name_localised": "“Ham”",
+    "species_enhanced": [
+      {
+        "overworldMonsterId": "squirey",
+        "monsterId": "squirey",
+        "percent": 25,
+        "percentStr": "25.00"
+      },
+      {
+        "monsterId": "squirey",
+        "percent": 21.052631578947366,
+        "percentStr": "21.05"
+      },
+      {
+        "overworldMonsterId": "squirey",
+        "monsterId": "manispear",
+        "percent": 25,
+        "percentStr": "25.00"
+      },
+      {
+        "monsterId": "manispear",
+        "percent": 21.052631578947366,
+        "percentStr": "21.05"
+      },
+      {
+        "monsterId": "macabra",
+        "percent": 10.526315789473683,
+        "percentStr": "10.53"
+      },
+      {
+        "monsterId": "folklord",
+        "percent": 5.263157894736842,
+        "percentStr": "5.26"
+      },
+      {
+        "overworldMonsterId": "dominoth",
+        "monsterId": "dominoth",
+        "percent": 25,
+        "percentStr": "25.00"
+      },
+      {
+        "monsterId": "dominoth",
+        "percent": 21.052631578947366,
+        "percentStr": "21.05"
+      },
+      {
+        "overworldMonsterId": "dominoth",
+        "monsterId": "wingloom",
+        "percent": 12.5,
+        "percentStr": "12.50"
+      },
+      {
+        "monsterId": "wingloom",
+        "percent": 10.526315789473683,
+        "percentStr": "10.53"
+      },
+      {
+        "overworldMonsterId": "puppercut",
+        "hour_min": 18,
+        "hour_max": 6,
+        "monsterId": "puppercut",
+        "percent": 12.5,
+        "percentStr": "12.50",
+        "available_specific_time": true
+      },
+      {
+        "hour_min": 18,
+        "hour_max": 6,
+        "monsterId": "puppercut",
+        "percent": 10.526315789473683,
+        "percentStr": "10.53",
+        "available_specific_time": true
+      }
+    ],
+    "habitat_coords": [
+      "overworld_-1_-7"
+    ]
+  },
+  "harbourtown_beach": {
+    "id": "harbourtown_beach",
+    "habitat_name": "REGION_NAME_TOWN_BEACH",
+    "habitat_overworld_chunks": [
+      {
+        "id": 7,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_2_0.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 10,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_3_0.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 8,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_4_0.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 9,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-2_0.tres",
+        "type": "Resource"
+      }
+    ],
+    "habitat_endless": true,
+    "min_team_size": 1,
+    "max_team_size": 2,
+    "num_species": 3,
+    "habitat_name_localised": "Harbourtown Beach",
+    "species_enhanced": [
+      {
+        "overworldMonsterId": "traffikrab",
+        "monsterId": "traffikrab",
+        "percent": 100,
+        "percentStr": "100.00"
+      },
+      {
+        "monsterId": "traffikrab",
+        "percent": 33.33333333333333,
+        "percentStr": "33.33"
+      },
+      {
+        "monsterId": "springheel",
+        "percent": 33.33333333333333,
+        "percentStr": "33.33"
+      },
+      {
+        "monsterId": "carniviper",
+        "percent": 33.33333333333333,
+        "percentStr": "33.33"
+      }
+    ],
+    "habitat_coords": [
+      "overworld_2_0",
+      "overworld_3_0",
+      "overworld_4_0",
+      "overworld_-2_0"
+    ]
+  },
+  "harbourtown_bootleg_tutorial": {
+    "id": "harbourtown_bootleg_tutorial",
+    "habitat_name": "",
+    "habitat_overworld_chunks": [],
+    "habitat_endless": false,
+    "min_team_size": 1,
+    "max_team_size": 1,
+    "num_species": 21,
+    "species_enhanced": [
+      {
+        "overworldMonsterId": "traffikrab",
+        "monsterId": "traffikrab",
+        "percent": 100,
+        "percentStr": "100.00"
+      },
+      {
+        "monsterId": "traffikrab",
+        "percent": 4.761904761904762,
+        "percentStr": "4.76"
+      },
+      {
+        "monsterId": "springheel",
+        "percent": 4.761904761904762,
+        "percentStr": "4.76"
+      },
+      {
+        "monsterId": "carniviper",
+        "percent": 4.761904761904762,
+        "percentStr": "4.76"
+      },
+      {
+        "monsterId": "dandylion",
+        "percent": 4.761904761904762,
+        "percentStr": "4.76"
+      },
+      {
+        "monsterId": "dominoth",
+        "percent": 4.761904761904762,
+        "percentStr": "4.76"
+      },
+      {
+        "monsterId": "squirey",
+        "percent": 4.761904761904762,
+        "percentStr": "4.76"
+      },
+      {
+        "monsterId": "allseer",
+        "percent": 4.761904761904762,
+        "percentStr": "4.76"
+      },
+      {
+        "monsterId": "braxsuit",
+        "percent": 4.761904761904762,
+        "percentStr": "4.76"
+      },
+      {
+        "monsterId": "sanzatime",
+        "percent": 4.761904761904762,
+        "percentStr": "4.76"
+      },
+      {
+        "monsterId": "salamagus",
+        "percent": 4.761904761904762,
+        "percentStr": "4.76"
+      },
+      {
+        "monsterId": "muskrateer",
+        "percent": 4.761904761904762,
+        "percentStr": "4.76"
+      },
+      {
+        "monsterId": "padpole",
+        "percent": 4.761904761904762,
+        "percentStr": "4.76"
+      },
+      {
+        "monsterId": "busheye",
+        "percent": 4.761904761904762,
+        "percentStr": "4.76"
+      },
+      {
+        "monsterId": "terracooka",
+        "percent": 4.761904761904762,
+        "percentStr": "4.76"
+      },
+      {
+        "monsterId": "pawndead",
+        "percent": 4.761904761904762,
+        "percentStr": "4.76"
+      },
+      {
+        "monsterId": "burnace",
+        "percent": 4.761904761904762,
+        "percentStr": "4.76"
+      },
+      {
+        "monsterId": "faucetear",
+        "percent": 4.761904761904762,
+        "percentStr": "4.76"
+      },
+      {
+        "monsterId": "pondwalker",
+        "percent": 4.761904761904762,
+        "percentStr": "4.76"
+      },
+      {
+        "monsterId": "pombomb",
+        "percent": 4.761904761904762,
+        "percentStr": "4.76"
+      },
+      {
+        "monsterId": "icepeck",
+        "percent": 4.761904761904762,
+        "percentStr": "4.76"
+      },
+      {
+        "monsterId": "sparktan",
+        "percent": 4.761904761904762,
+        "percentStr": "4.76"
+      }
+    ],
+    "habitat_coords": []
+  },
+  "harbourtown_outskirts": {
+    "id": "harbourtown_outskirts",
+    "habitat_name": "REGION_NAME_TOWN_OUTSKIRTS",
+    "habitat_overworld_chunks": [
+      {
+        "id": 13,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_2_-1.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 12,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_2_-2.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 11,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_3_-1.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 14,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_3_-2.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 10,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_4_-1.tres",
+        "type": "Resource"
+      }
+    ],
+    "habitat_endless": true,
+    "min_team_size": 1,
+    "max_team_size": 2,
+    "num_species": 5,
+    "habitat_name_localised": "Harbourtown Outskirts",
+    "species_enhanced": [
+      {
+        "overworldMonsterId": "traffikrab",
+        "monsterId": "traffikrab",
+        "percent": 45.45454545454545,
+        "percentStr": "45.45"
+      },
+      {
+        "monsterId": "traffikrab",
+        "percent": 29.411764705882348,
+        "percentStr": "29.41"
+      },
+      {
+        "overworldMonsterId": "carniviper",
+        "monsterId": "carniviper",
+        "percent": 45.45454545454545,
+        "percentStr": "45.45"
+      },
+      {
+        "monsterId": "carniviper",
+        "percent": 29.411764705882348,
+        "percentStr": "29.41"
+      },
+      {
+        "monsterId": "springheel",
+        "percent": 29.411764705882348,
+        "percentStr": "29.41"
+      },
+      {
+        "monsterId": "squirey",
+        "percent": 5.88235294117647,
+        "percentStr": "5.88"
+      },
+      {
+        "overworldMonsterId": "pombomb",
+        "monsterId": "pombomb",
+        "percent": 9.090909090909092,
+        "percentStr": "9.09"
+      },
+      {
+        "monsterId": "pombomb",
+        "percent": 5.88235294117647,
+        "percentStr": "5.88"
+      }
+    ],
+    "habitat_coords": [
+      "overworld_2_-1",
+      "overworld_2_-2",
+      "overworld_3_-1",
+      "overworld_3_-2",
+      "overworld_4_-1"
+    ]
+  },
+  "harbourtown_outskirts_caves": {
+    "id": "harbourtown_outskirts_caves",
+    "habitat_name": "REGION_NAME_TOWN_OUTSKIRTS_CAVES",
+    "habitat_overworld_chunks": [
+      {
+        "id": 13,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_2_-1.tres",
+        "type": "Resource"
+      }
+    ],
+    "habitat_endless": false,
+    "min_team_size": 1,
+    "max_team_size": 2,
+    "num_species": 5,
+    "habitat_name_localised": "Harbourtown Outskirts Caves",
+    "species_enhanced": [
+      {
+        "overworldMonsterId": "carniviper",
+        "monsterId": "carniviper",
+        "percent": 33.33333333333333,
+        "percentStr": "33.33"
+      },
+      {
+        "monsterId": "carniviper",
+        "percent": 20,
+        "percentStr": "20.00"
+      },
+      {
+        "overworldMonsterId": "traffikrab",
+        "monsterId": "traffikrab",
+        "percent": 33.33333333333333,
+        "percentStr": "33.33"
+      },
+      {
+        "monsterId": "traffikrab",
+        "percent": 20,
+        "percentStr": "20.00"
+      },
+      {
+        "monsterId": "springheel",
+        "percent": 20,
+        "percentStr": "20.00"
+      },
+      {
+        "monsterId": "muskrateer",
+        "percent": 20,
+        "percentStr": "20.00"
+      },
+      {
+        "overworldMonsterId": "terracooka",
+        "monsterId": "terracooka",
+        "percent": 33.33333333333333,
+        "percentStr": "33.33"
+      },
+      {
+        "monsterId": "terracooka",
+        "percent": 20,
+        "percentStr": "20.00"
+      }
+    ],
+    "habitat_coords": [
+      "overworld_2_-1"
+    ]
+  },
+  "harbourtown_outskirts_secret": {
+    "id": "harbourtown_outskirts_secret",
+    "habitat_name": "",
+    "habitat_overworld_chunks": [],
+    "habitat_endless": true,
+    "min_team_size": 2,
+    "max_team_size": 2,
+    "num_species": 3,
+    "species_enhanced": [
+      {
+        "monsterId": "dandylion",
+        "percent": 99.8003992015968,
+        "percentStr": "99.80"
+      },
+      {
+        "overworldMonsterId": "traffikrab",
+        "monsterId": "traffikrab",
+        "percent": 50,
+        "percentStr": "50.00"
+      },
+      {
+        "monsterId": "traffikrab",
+        "percent": 0.09980039920159679,
+        "percentStr": "0.10"
+      },
+      {
+        "overworldMonsterId": "carniviper",
+        "monsterId": "carniviper",
+        "percent": 50,
+        "percentStr": "50.00"
+      },
+      {
+        "monsterId": "carniviper",
+        "percent": 0.09980039920159679,
+        "percentStr": "0.10"
+      }
+    ],
+    "habitat_coords": []
+  },
+  "harbourtown_outskirts_springheel": {
+    "id": "harbourtown_outskirts_springheel",
+    "habitat_name": "REGION_NAME_TOWN_OUTSKIRTS",
+    "habitat_overworld_chunks": [
+      {
+        "id": 7,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_2_-1.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 6,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_3_-1.tres",
+        "type": "Resource"
+      }
+    ],
+    "habitat_endless": false,
+    "min_team_size": 1,
+    "max_team_size": 2,
+    "num_species": 5,
+    "habitat_name_localised": "Harbourtown Outskirts",
+    "species_enhanced": [
+      {
+        "overworldMonsterId": "springheel",
+        "monsterId": "springheel",
+        "percent": 100,
+        "percentStr": "100.00"
+      },
+      {
+        "monsterId": "springheel",
+        "percent": 29.411764705882348,
+        "percentStr": "29.41"
+      },
+      {
+        "monsterId": "traffikrab",
+        "percent": 29.411764705882348,
+        "percentStr": "29.41"
+      },
+      {
+        "monsterId": "carniviper",
+        "percent": 29.411764705882348,
+        "percentStr": "29.41"
+      },
+      {
+        "monsterId": "squirey",
+        "percent": 5.88235294117647,
+        "percentStr": "5.88"
+      },
+      {
+        "monsterId": "pombomb",
+        "percent": 5.88235294117647,
+        "percentStr": "5.88"
+      }
+    ],
+    "habitat_coords": [
+      "overworld_2_-1",
+      "overworld_3_-1"
+    ]
+  },
+  "lakeside": {
+    "id": "lakeside",
+    "habitat_name": "REGION_NAME_LAKESIDE",
+    "habitat_overworld_chunks": [
+      {
+        "id": 8,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-2_-5.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 7,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-1_-5.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 9,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_0_-5.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 10,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_1_-5.tres",
+        "type": "Resource"
+      }
+    ],
+    "habitat_endless": true,
+    "min_team_size": 1,
+    "max_team_size": 2,
+    "num_species": 6,
+    "habitat_name_localised": "Lakeside",
+    "species_enhanced": [
+      {
+        "overworldMonsterId": "squirey",
+        "monsterId": "squirey",
+        "percent": 31.25,
+        "percentStr": "31.25"
+      },
+      {
+        "monsterId": "squirey",
+        "percent": 29.411764705882348,
+        "percentStr": "29.41"
+      },
+      {
+        "overworldMonsterId": "squirey",
+        "monsterId": "manispear",
+        "percent": 15.625,
+        "percentStr": "15.63"
+      },
+      {
+        "monsterId": "manispear",
+        "percent": 14.705882352941174,
+        "percentStr": "14.71"
+      },
+      {
+        "overworldMonsterId": "dominoth",
+        "monsterId": "dominoth",
+        "percent": 31.25,
+        "percentStr": "31.25"
+      },
+      {
+        "monsterId": "dominoth",
+        "percent": 29.411764705882348,
+        "percentStr": "29.41"
+      },
+      {
+        "overworldMonsterId": "dominoth",
+        "monsterId": "wingloom",
+        "percent": 6.25,
+        "percentStr": "6.25"
+      },
+      {
+        "monsterId": "wingloom",
+        "percent": 5.88235294117647,
+        "percentStr": "5.88"
+      },
+      {
+        "monsterId": "macabra",
+        "percent": 5.88235294117647,
+        "percentStr": "5.88"
+      },
+      {
+        "overworldMonsterId": "puppercut",
+        "hour_min": 18,
+        "hour_max": 6,
+        "monsterId": "puppercut",
+        "percent": 15.625,
+        "percentStr": "15.63",
+        "available_specific_time": true
+      },
+      {
+        "hour_min": 18,
+        "hour_max": 6,
+        "monsterId": "puppercut",
+        "percent": 14.705882352941174,
+        "percentStr": "14.71",
+        "available_specific_time": true
+      }
+    ],
+    "habitat_coords": [
+      "overworld_-2_-5",
+      "overworld_-1_-5",
+      "overworld_0_-5",
+      "overworld_1_-5"
+    ]
+  },
+  "lakeside_caves": {
+    "id": "lakeside_caves",
+    "habitat_name": "REGION_NAME_LAKESIDE_CAVES",
+    "habitat_overworld_chunks": [
+      {
+        "id": 7,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-1_-5.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 8,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-1_-6.tres",
+        "type": "Resource"
+      }
+    ],
+    "habitat_endless": false,
+    "min_team_size": 1,
+    "max_team_size": 2,
+    "num_species": 7,
+    "habitat_name_localised": "Lakeside Caves",
+    "species_enhanced": [
+      {
+        "overworldMonsterId": "squirey",
+        "monsterId": "squirey",
+        "percent": 28.57142857142857,
+        "percentStr": "28.57"
+      },
+      {
+        "monsterId": "squirey",
+        "percent": 18.867924528301888,
+        "percentStr": "18.87"
+      },
+      {
+        "overworldMonsterId": "squirey",
+        "monsterId": "manispear",
+        "percent": 14.285714285714285,
+        "percentStr": "14.29"
+      },
+      {
+        "monsterId": "manispear",
+        "percent": 9.433962264150944,
+        "percentStr": "9.43"
+      },
+      {
+        "monsterId": "macabra",
+        "percent": 5.660377358490567,
+        "percentStr": "5.66"
+      },
+      {
+        "monsterId": "muskrateer",
+        "percent": 18.867924528301888,
+        "percentStr": "18.87"
+      },
+      {
+        "overworldMonsterId": "masquerattle",
+        "monsterId": "masquerattle",
+        "percent": 28.57142857142857,
+        "percentStr": "28.57"
+      },
+      {
+        "monsterId": "masquerattle",
+        "percent": 18.867924528301888,
+        "percentStr": "18.87"
+      },
+      {
+        "monsterId": "salamagus",
+        "percent": 9.433962264150944,
+        "percentStr": "9.43"
+      },
+      {
+        "overworldMonsterId": "terracooka",
+        "monsterId": "terracooka",
+        "percent": 28.57142857142857,
+        "percentStr": "28.57"
+      },
+      {
+        "monsterId": "terracooka",
+        "percent": 18.867924528301888,
+        "percentStr": "18.87"
+      }
+    ],
+    "habitat_coords": [
+      "overworld_-1_-5",
+      "overworld_-1_-6"
+    ]
+  },
+  "lakeside_caves_spawner": {
+    "id": "lakeside_caves_spawner",
+    "habitat_name": "REGION_NAME_LAKESIDE_CAVES",
+    "habitat_overworld_chunks": [
+      {
+        "id": 8,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-1_-6.tres",
+        "type": "Resource"
+      }
+    ],
+    "habitat_endless": true,
+    "min_team_size": 1,
+    "max_team_size": 2,
+    "num_species": 7,
+    "habitat_name_localised": "Lakeside Caves",
+    "species_enhanced": [
+      {
+        "overworldMonsterId": "squirey",
+        "monsterId": "squirey",
+        "percent": 28.57142857142857,
+        "percentStr": "28.57"
+      },
+      {
+        "monsterId": "squirey",
+        "percent": 18.867924528301888,
+        "percentStr": "18.87"
+      },
+      {
+        "overworldMonsterId": "squirey",
+        "monsterId": "manispear",
+        "percent": 14.285714285714285,
+        "percentStr": "14.29"
+      },
+      {
+        "monsterId": "manispear",
+        "percent": 9.433962264150944,
+        "percentStr": "9.43"
+      },
+      {
+        "monsterId": "macabra",
+        "percent": 5.660377358490567,
+        "percentStr": "5.66"
+      },
+      {
+        "monsterId": "muskrateer",
+        "percent": 18.867924528301888,
+        "percentStr": "18.87"
+      },
+      {
+        "overworldMonsterId": "masquerattle",
+        "monsterId": "masquerattle",
+        "percent": 28.57142857142857,
+        "percentStr": "28.57"
+      },
+      {
+        "monsterId": "masquerattle",
+        "percent": 18.867924528301888,
+        "percentStr": "18.87"
+      },
+      {
+        "monsterId": "salamagus",
+        "percent": 9.433962264150944,
+        "percentStr": "9.43"
+      },
+      {
+        "overworldMonsterId": "terracooka",
+        "monsterId": "terracooka",
+        "percent": 28.57142857142857,
+        "percentStr": "28.57"
+      },
+      {
+        "monsterId": "terracooka",
+        "percent": 18.867924528301888,
+        "percentStr": "18.87"
+      }
+    ],
+    "habitat_coords": [
+      "overworld_-1_-6"
+    ]
+  },
+  "lakeside_valley": {
+    "id": "lakeside_valley",
+    "habitat_name": "REGION_NAME_LAKESIDE",
+    "habitat_overworld_chunks": [
+      {
+        "id": 9,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-1_-6.tres",
+        "type": "Resource"
+      }
+    ],
+    "habitat_endless": true,
+    "min_team_size": 1,
+    "max_team_size": 2,
+    "num_species": 8,
+    "habitat_name_localised": "Lakeside",
+    "species_enhanced": [
+      {
+        "overworldMonsterId": "bulletino",
+        "monsterId": "bulletino",
+        "percent": 80,
+        "percentStr": "80.00"
+      },
+      {
+        "monsterId": "bulletino",
+        "percent": 22.22222222222222,
+        "percentStr": "22.22"
+      },
+      {
+        "overworldMonsterId": "bulletino",
+        "monsterId": "velocirifle",
+        "percent": 20,
+        "percentStr": "20.00"
+      },
+      {
+        "monsterId": "velocirifle",
+        "percent": 5.555555555555555,
+        "percentStr": "5.56"
+      },
+      {
+        "monsterId": "squirey",
+        "percent": 22.22222222222222,
+        "percentStr": "22.22"
+      },
+      {
+        "monsterId": "macabra",
+        "percent": 5.555555555555555,
+        "percentStr": "5.56"
+      },
+      {
+        "monsterId": "manispear",
+        "percent": 5.555555555555555,
+        "percentStr": "5.56"
+      },
+      {
+        "monsterId": "dominoth",
+        "percent": 22.22222222222222,
+        "percentStr": "22.22"
+      },
+      {
+        "monsterId": "wingloom",
+        "percent": 5.555555555555555,
+        "percentStr": "5.56"
+      },
+      {
+        "hour_min": 18,
+        "hour_max": 6,
+        "monsterId": "puppercut",
+        "percent": 11.11111111111111,
+        "percentStr": "11.11",
+        "available_specific_time": true
+      }
+    ],
+    "habitat_coords": [
+      "overworld_-1_-6"
+    ]
+  },
+  "lake_caves": {
+    "id": "lake_caves",
+    "habitat_name": "REGION_NAME_LAKE_CAVES",
+    "habitat_overworld_chunks": [
+      {
+        "id": 8,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-1_-2.tres",
+        "type": "Resource"
+      }
+    ],
+    "habitat_endless": false,
+    "min_team_size": 1,
+    "max_team_size": 2,
+    "num_species": 12,
+    "habitat_name_localised": "Thirstaton Lake Caves",
+    "species_enhanced": [
+      {
+        "overworldMonsterId": "diveal",
+        "monsterId": "diveal",
+        "percent": 40,
+        "percentStr": "40.00"
+      },
+      {
+        "monsterId": "diveal",
+        "percent": 10,
+        "percentStr": "10.00"
+      },
+      {
+        "overworldMonsterId": "diveal",
+        "monsterId": "scubalrus",
+        "percent": 20,
+        "percentStr": "20.00"
+      },
+      {
+        "monsterId": "scubalrus",
+        "percent": 5,
+        "percentStr": "5.00"
+      },
+      {
+        "monsterId": "muskrateer",
+        "percent": 10,
+        "percentStr": "10.00"
+      },
+      {
+        "monsterId": "dominoth",
+        "percent": 10,
+        "percentStr": "10.00"
+      },
+      {
+        "monsterId": "wingloom",
+        "percent": 5,
+        "percentStr": "5.00"
+      },
+      {
+        "monsterId": "lobstacle",
+        "percent": 10,
+        "percentStr": "10.00"
+      },
+      {
+        "monsterId": "stardigrade",
+        "percent": 5,
+        "percentStr": "5.00"
+      },
+      {
+        "hour_min": 18,
+        "hour_max": 6,
+        "monsterId": "allseer",
+        "percent": 10,
+        "percentStr": "10.00",
+        "available_specific_time": true
+      },
+      {
+        "hour_min": 18,
+        "hour_max": 6,
+        "monsterId": "triphinx",
+        "percent": 5,
+        "percentStr": "5.00",
+        "available_specific_time": true
+      },
+      {
+        "overworldMonsterId": "terracooka",
+        "monsterId": "terracooka",
+        "percent": 40,
+        "percentStr": "40.00"
+      },
+      {
+        "monsterId": "terracooka",
+        "percent": 10,
+        "percentStr": "10.00"
+      },
+      {
+        "monsterId": "frillypad",
+        "percent": 10,
+        "percentStr": "10.00"
+      },
+      {
+        "monsterId": "pondwalker",
+        "percent": 10,
+        "percentStr": "10.00"
+      }
+    ],
+    "habitat_coords": [
+      "overworld_-1_-2"
+    ]
+  },
+  "lake_diveal_island": {
+    "id": "lake_diveal_island",
+    "habitat_name": "REGION_NAME_LAKE",
+    "habitat_overworld_chunks": [
+      {
+        "id": 3,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-2_-4.tres",
+        "type": "Resource"
+      }
+    ],
+    "habitat_endless": true,
+    "min_team_size": 1,
+    "max_team_size": 2,
+    "num_species": 1,
+    "habitat_name_localised": "Thirstaton Lake",
+    "species_enhanced": [
+      {
+        "overworldMonsterId": "diveal",
+        "monsterId": "diveal",
+        "percent": 100,
+        "percentStr": "100.00"
+      },
+      {
+        "monsterId": "diveal",
+        "percent": 100,
+        "percentStr": "100.00"
+      }
+    ],
+    "habitat_coords": [
+      "overworld_-2_-4"
+    ]
+  },
+  "lake_island": {
+    "id": "lake_island",
+    "habitat_name": "REGION_NAME_LAKE",
+    "habitat_overworld_chunks": [
+      {
+        "id": 14,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-1_-4.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 15,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-2_-3.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 13,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_0_-4.tres",
+        "type": "Resource"
+      }
+    ],
+    "habitat_endless": true,
+    "min_team_size": 1,
+    "max_team_size": 2,
+    "num_species": 8,
+    "habitat_name_localised": "Thirstaton Lake",
+    "species_enhanced": [
+      {
+        "overworldMonsterId": "diveal",
+        "monsterId": "diveal",
+        "percent": 30.303030303030305,
+        "percentStr": "30.30"
+      },
+      {
+        "monsterId": "diveal",
+        "percent": 16.949152542372882,
+        "percentStr": "16.95"
+      },
+      {
+        "overworldMonsterId": "allseer",
+        "hour_min": 18,
+        "hour_max": 6,
+        "monsterId": "allseer",
+        "percent": 30.303030303030305,
+        "percentStr": "30.30",
+        "available_specific_time": true
+      },
+      {
+        "hour_min": 18,
+        "hour_max": 6,
+        "monsterId": "allseer",
+        "percent": 16.949152542372882,
+        "percentStr": "16.95",
+        "available_specific_time": true
+      },
+      {
+        "overworldMonsterId": "allseer",
+        "hour_min": 18,
+        "hour_max": 6,
+        "monsterId": "triphinx",
+        "percent": 9.090909090909092,
+        "percentStr": "9.09",
+        "available_specific_time": true
+      },
+      {
+        "hour_min": 18,
+        "hour_max": 6,
+        "monsterId": "triphinx",
+        "percent": 5.084745762711865,
+        "percentStr": "5.08",
+        "available_specific_time": true
+      },
+      {
+        "overworldMonsterId": "traffikrab",
+        "monsterId": "lobstacle",
+        "percent": 30.303030303030305,
+        "percentStr": "30.30"
+      },
+      {
+        "monsterId": "lobstacle",
+        "percent": 16.949152542372882,
+        "percentStr": "16.95"
+      },
+      {
+        "monsterId": "stardigrade",
+        "percent": 5.084745762711865,
+        "percentStr": "5.08"
+      },
+      {
+        "monsterId": "padpole",
+        "percent": 16.949152542372882,
+        "percentStr": "16.95"
+      },
+      {
+        "monsterId": "frillypad",
+        "percent": 5.084745762711865,
+        "percentStr": "5.08"
+      },
+      {
+        "monsterId": "pondwalker",
+        "percent": 16.949152542372882,
+        "percentStr": "16.95"
+      }
+    ],
+    "habitat_coords": [
+      "overworld_-1_-4",
+      "overworld_-2_-3",
+      "overworld_0_-4"
+    ]
+  },
+  "lake_island_secret": {
+    "id": "lake_island_secret",
+    "habitat_name": "",
+    "habitat_overworld_chunks": [],
+    "habitat_endless": true,
+    "min_team_size": 2,
+    "max_team_size": 2,
+    "num_species": 2,
+    "species_enhanced": [
+      {
+        "overworldMonsterId": "traffikrab",
+        "monsterId": "lobstacle",
+        "percent": 100,
+        "percentStr": "100.00"
+      },
+      {
+        "monsterId": "lobstacle",
+        "percent": 0.0999000999000999,
+        "percentStr": "0.10"
+      },
+      {
+        "monsterId": "dandylion",
+        "percent": 99.9000999000999,
+        "percentStr": "99.90"
+      }
+    ],
+    "habitat_coords": []
+  },
+  "lake_water": {
+    "id": "lake_water",
+    "habitat_name": "REGION_NAME_LAKE",
+    "habitat_overworld_chunks": [
+      {
+        "id": 7,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-2_-4.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 13,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-2_-3.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 12,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-1_-4.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 6,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-1_-3.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 11,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_0_-4.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 9,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_0_-3.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 8,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_1_-4.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 10,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_1_-3.tres",
+        "type": "Resource"
+      }
+    ],
+    "habitat_endless": true,
+    "min_team_size": 1,
+    "max_team_size": 2,
+    "num_species": 9,
+    "habitat_name_localised": "Thirstaton Lake",
+    "species_enhanced": [
+      {
+        "monsterId": "diveal",
+        "percent": 15.822784810126581,
+        "percentStr": "15.82"
+      },
+      {
+        "monsterId": "scubalrus",
+        "percent": 5.2215189873417724,
+        "percentStr": "5.22"
+      },
+      {
+        "hour_min": 18,
+        "hour_max": 6,
+        "monsterId": "allseer",
+        "percent": 15.822784810126581,
+        "percentStr": "15.82",
+        "available_specific_time": true
+      },
+      {
+        "hour_min": 18,
+        "hour_max": 6,
+        "monsterId": "triphinx",
+        "percent": 5.2215189873417724,
+        "percentStr": "5.22",
+        "available_specific_time": true
+      },
+      {
+        "monsterId": "stardigrade",
+        "percent": 5.2215189873417724,
+        "percentStr": "5.22"
+      },
+      {
+        "monsterId": "lobstacle",
+        "percent": 15.822784810126581,
+        "percentStr": "15.82"
+      },
+      {
+        "monsterId": "padpole",
+        "percent": 15.822784810126581,
+        "percentStr": "15.82"
+      },
+      {
+        "monsterId": "frillypad",
+        "percent": 5.2215189873417724,
+        "percentStr": "5.22"
+      },
+      {
+        "monsterId": "pondwalker",
+        "percent": 15.822784810126581,
+        "percentStr": "15.82"
+      }
+    ],
+    "habitat_coords": [
+      "overworld_-2_-4",
+      "overworld_-2_-3",
+      "overworld_-1_-4",
+      "overworld_-1_-3",
+      "overworld_0_-4",
+      "overworld_0_-3",
+      "overworld_1_-4",
+      "overworld_1_-3"
+    ]
+  },
+  "lenna_whistle_for_help": {
+    "id": "lenna_whistle_for_help",
+    "habitat_name": "",
+    "habitat_overworld_chunks": [],
+    "habitat_endless": false,
+    "min_team_size": 1,
+    "max_team_size": 2,
+    "num_species": 3,
+    "species_enhanced": [
+      {
+        "monsterId": "jumpkin",
+        "percent": 33.33333333333333,
+        "percentStr": "33.33"
+      },
+      {
+        "monsterId": "scampire",
+        "percent": 33.33333333333333,
+        "percentStr": "33.33"
+      },
+      {
+        "monsterId": "cluckabilly",
+        "percent": 33.33333333333333,
+        "percentStr": "33.33"
+      }
+    ],
+    "habitat_coords": []
+  },
+  "mall": {
+    "id": "mall",
+    "habitat_name": "REGION_NAME_MALL",
+    "habitat_overworld_chunks": [
+      {
+        "id": 2,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_3_-7.tres",
+        "type": "Resource"
+      }
+    ],
+    "habitat_endless": true,
+    "min_team_size": 1,
+    "max_team_size": 2,
+    "num_species": 9,
+    "habitat_name_localised": "Falldown Mall",
+    "species_enhanced": [
+      {
+        "overworldMonsterId": "dominoth",
+        "monsterId": "dominoth",
+        "percent": 10.344827586206897,
+        "percentStr": "10.34"
+      },
+      {
+        "monsterId": "dominoth",
+        "percent": 5.4945054945054945,
+        "percentStr": "5.49"
+      },
+      {
+        "overworldMonsterId": "dominoth",
+        "monsterId": "wingloom",
+        "percent": 10.344827586206897,
+        "percentStr": "10.34"
+      },
+      {
+        "monsterId": "wingloom",
+        "percent": 5.4945054945054945,
+        "percentStr": "5.49"
+      },
+      {
+        "overworldMonsterId": "dominoth",
+        "monsterId": "mothmanic",
+        "percent": 10.344827586206897,
+        "percentStr": "10.34"
+      },
+      {
+        "monsterId": "mothmanic",
+        "percent": 5.4945054945054945,
+        "percentStr": "5.49"
+      },
+      {
+        "overworldMonsterId": "mascotoy",
+        "monsterId": "mascotoy",
+        "percent": 34.48275862068966,
+        "percentStr": "34.48"
+      },
+      {
+        "monsterId": "mascotoy",
+        "percent": 18.315018315018314,
+        "percentStr": "18.32"
+      },
+      {
+        "monsterId": "binvader",
+        "percent": 18.315018315018314,
+        "percentStr": "18.32"
+      },
+      {
+        "monsterId": "muskrateer",
+        "percent": 18.315018315018314,
+        "percentStr": "18.32"
+      },
+      {
+        "monsterId": "ratcousel",
+        "percent": 5.128205128205129,
+        "percentStr": "5.13"
+      },
+      {
+        "overworldMonsterId": "faucetear",
+        "monsterId": "faucetear",
+        "percent": 34.48275862068966,
+        "percentStr": "34.48"
+      },
+      {
+        "monsterId": "faucetear",
+        "percent": 18.315018315018314,
+        "percentStr": "18.32"
+      },
+      {
+        "monsterId": "arkidd",
+        "percent": 5.128205128205129,
+        "percentStr": "5.13"
+      }
+    ],
+    "habitat_coords": [
+      "overworld_3_-7"
+    ]
+  },
+  "mall_fusion": {
+    "id": "mall_fusion",
+    "habitat_name": "",
+    "habitat_overworld_chunks": [],
+    "habitat_endless": false,
+    "min_team_size": 1,
+    "max_team_size": 2,
+    "num_species": 10,
+    "species_enhanced": [
+      {
+        "overworldMonsterId": "dominoth",
+        "monsterId": "dominoth",
+        "percent": 14.285714285714285,
+        "percentStr": "14.29"
+      },
+      {
+        "monsterId": "dominoth",
+        "percent": 5.88235294117647,
+        "percentStr": "5.88"
+      },
+      {
+        "overworldMonsterId": "dominoth",
+        "monsterId": "wingloom",
+        "percent": 14.285714285714285,
+        "percentStr": "14.29"
+      },
+      {
+        "monsterId": "wingloom",
+        "percent": 5.88235294117647,
+        "percentStr": "5.88"
+      },
+      {
+        "overworldMonsterId": "dominoth",
+        "monsterId": "mothmanic",
+        "percent": 14.285714285714285,
+        "percentStr": "14.29"
+      },
+      {
+        "monsterId": "mothmanic",
+        "percent": 5.88235294117647,
+        "percentStr": "5.88"
+      },
+      {
+        "overworldMonsterId": "mascotoy",
+        "monsterId": "mascotoy",
+        "percent": 28.57142857142857,
+        "percentStr": "28.57"
+      },
+      {
+        "monsterId": "mascotoy",
+        "percent": 11.76470588235294,
+        "percentStr": "11.76"
+      },
+      {
+        "monsterId": "binvader",
+        "percent": 11.76470588235294,
+        "percentStr": "11.76"
+      },
+      {
+        "monsterId": "muskrateer",
+        "percent": 11.76470588235294,
+        "percentStr": "11.76"
+      },
+      {
+        "monsterId": "ratcousel",
+        "percent": 11.76470588235294,
+        "percentStr": "11.76"
+      },
+      {
+        "overworldMonsterId": "faucetear",
+        "monsterId": "faucetear",
+        "percent": 28.57142857142857,
+        "percentStr": "28.57"
+      },
+      {
+        "monsterId": "faucetear",
+        "percent": 11.76470588235294,
+        "percentStr": "11.76"
+      },
+      {
+        "monsterId": "arkidd",
+        "percent": 11.76470588235294,
+        "percentStr": "11.76"
+      },
+      {
+        "monsterId": "candevil",
+        "percent": 11.76470588235294,
+        "percentStr": "11.76"
+      }
+    ],
+    "habitat_coords": []
+  },
+  "mall_only_ghosts": {
+    "id": "mall_only_ghosts",
+    "habitat_name": "REGION_NAME_MALL",
+    "habitat_overworld_chunks": [
+      {
+        "id": 2,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_3_-7.tres",
+        "type": "Resource"
+      }
+    ],
+    "habitat_endless": true,
+    "min_team_size": 1,
+    "max_team_size": 2,
+    "num_species": 9,
+    "habitat_name_localised": "Falldown Mall",
+    "species_enhanced": [
+      {
+        "overworldMonsterId": "dominoth",
+        "monsterId": "dominoth",
+        "percent": 10.344827586206897,
+        "percentStr": "10.34"
+      },
+      {
+        "monsterId": "dominoth",
+        "percent": 5.263157894736842,
+        "percentStr": "5.26"
+      },
+      {
+        "overworldMonsterId": "dominoth",
+        "monsterId": "wingloom",
+        "percent": 10.344827586206897,
+        "percentStr": "10.34"
+      },
+      {
+        "monsterId": "wingloom",
+        "percent": 5.263157894736842,
+        "percentStr": "5.26"
+      },
+      {
+        "overworldMonsterId": "dominoth",
+        "monsterId": "mothmanic",
+        "percent": 10.344827586206897,
+        "percentStr": "10.34"
+      },
+      {
+        "monsterId": "mothmanic",
+        "percent": 5.263157894736842,
+        "percentStr": "5.26"
+      },
+      {
+        "overworldMonsterId": "mascotoy",
+        "monsterId": "mascotoy",
+        "percent": 34.48275862068966,
+        "percentStr": "34.48"
+      },
+      {
+        "monsterId": "mascotoy",
+        "percent": 17.543859649122805,
+        "percentStr": "17.54"
+      },
+      {
+        "monsterId": "binvader",
+        "percent": 17.543859649122805,
+        "percentStr": "17.54"
+      },
+      {
+        "monsterId": "muskrateer",
+        "percent": 17.543859649122805,
+        "percentStr": "17.54"
+      },
+      {
+        "monsterId": "ratcousel",
+        "percent": 5.263157894736842,
+        "percentStr": "5.26"
+      },
+      {
+        "overworldMonsterId": "faucetear",
+        "monsterId": "faucetear",
+        "percent": 34.48275862068966,
+        "percentStr": "34.48"
+      },
+      {
+        "monsterId": "faucetear",
+        "percent": 17.543859649122805,
+        "percentStr": "17.54"
+      },
+      {
+        "monsterId": "arkidd",
+        "percent": 8.771929824561402,
+        "percentStr": "8.77"
+      }
+    ],
+    "habitat_coords": [
+      "overworld_3_-7"
+    ]
+  },
+  "marsh": {
+    "id": "marsh",
+    "habitat_name": "REGION_NAME_MARSH",
+    "habitat_overworld_chunks": [
+      {
+        "id": 19,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-4_-1.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 16,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-5_-1.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 8,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-6_-1.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 7,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-6_-2.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 15,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-6_-3.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 18,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-5_-2.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 14,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-4_-2.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 17,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-3_-2.tres",
+        "type": "Resource"
+      }
+    ],
+    "habitat_endless": true,
+    "min_team_size": 1,
+    "max_team_size": 2,
+    "num_species": 7,
+    "habitat_name_localised": "The Marshes",
+    "species_enhanced": [
+      {
+        "overworldMonsterId": "trapwurm",
+        "monsterId": "trapwurm",
+        "percent": 15.384615384615385,
+        "percentStr": "15.38"
+      },
+      {
+        "monsterId": "trapwurm",
+        "percent": 11.76470588235294,
+        "percentStr": "11.76"
+      },
+      {
+        "overworldMonsterId": "masquerattle",
+        "monsterId": "masquerattle",
+        "percent": 15.384615384615385,
+        "percentStr": "15.38"
+      },
+      {
+        "monsterId": "masquerattle",
+        "percent": 11.76470588235294,
+        "percentStr": "11.76"
+      },
+      {
+        "overworldMonsterId": "masquerattle",
+        "monsterId": "jormungold",
+        "percent": 15.384615384615385,
+        "percentStr": "15.38"
+      },
+      {
+        "monsterId": "jormungold",
+        "percent": 11.76470588235294,
+        "percentStr": "11.76"
+      },
+      {
+        "overworldMonsterId": "puppercut",
+        "hour_min": 18,
+        "hour_max": 6,
+        "monsterId": "puppercut",
+        "percent": 7.6923076923076925,
+        "percentStr": "7.69",
+        "available_specific_time": true
+      },
+      {
+        "hour_min": 18,
+        "hour_max": 6,
+        "monsterId": "puppercut",
+        "percent": 5.88235294117647,
+        "percentStr": "5.88",
+        "available_specific_time": true
+      },
+      {
+        "monsterId": "macabra",
+        "percent": 11.76470588235294,
+        "percentStr": "11.76"
+      },
+      {
+        "monsterId": "folklord",
+        "percent": 11.76470588235294,
+        "percentStr": "11.76"
+      },
+      {
+        "overworldMonsterId": "jellyton",
+        "monsterId": "jellyton",
+        "percent": 46.15384615384615,
+        "percentStr": "46.15"
+      },
+      {
+        "monsterId": "jellyton",
+        "percent": 35.294117647058826,
+        "percentStr": "35.29"
+      }
+    ],
+    "habitat_coords": [
+      "overworld_-4_-1",
+      "overworld_-5_-1",
+      "overworld_-6_-1",
+      "overworld_-6_-2",
+      "overworld_-6_-3",
+      "overworld_-5_-2",
+      "overworld_-4_-2",
+      "overworld_-3_-2"
+    ]
+  },
+  "marsh_beach_diveal": {
+    "id": "marsh_beach_diveal",
+    "habitat_name": "REGION_NAME_MARSH",
+    "habitat_overworld_chunks": [
+      {
+        "id": 5,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-7_-2.tres",
+        "type": "Resource"
+      }
+    ],
+    "habitat_endless": true,
+    "min_team_size": 1,
+    "max_team_size": 2,
+    "num_species": 4,
+    "habitat_name_localised": "The Marshes",
+    "species_enhanced": [
+      {
+        "overworldMonsterId": "diveal",
+        "monsterId": "diveal",
+        "percent": 33.33333333333333,
+        "percentStr": "33.33"
+      },
+      {
+        "monsterId": "diveal",
+        "percent": 25,
+        "percentStr": "25.00"
+      },
+      {
+        "overworldMonsterId": "diveal",
+        "monsterId": "scubalrus",
+        "percent": 33.33333333333333,
+        "percentStr": "33.33"
+      },
+      {
+        "monsterId": "scubalrus",
+        "percent": 25,
+        "percentStr": "25.00"
+      },
+      {
+        "monsterId": "jellyton",
+        "percent": 25,
+        "percentStr": "25.00"
+      },
+      {
+        "overworldMonsterId": "sanzatime",
+        "monsterId": "sanzatime",
+        "percent": 33.33333333333333,
+        "percentStr": "33.33"
+      },
+      {
+        "monsterId": "sanzatime",
+        "percent": 25,
+        "percentStr": "25.00"
+      }
+    ],
+    "habitat_coords": [
+      "overworld_-7_-2"
+    ]
+  },
+  "marsh_caves": {
+    "id": "marsh_caves",
+    "habitat_name": "REGION_NAME_MARSH_CAVES",
+    "habitat_overworld_chunks": [
+      {
+        "id": 16,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-5_-1.tres",
+        "type": "Resource"
+      }
+    ],
+    "habitat_endless": false,
+    "min_team_size": 1,
+    "max_team_size": 2,
+    "num_species": 8,
+    "habitat_name_localised": "Marshland Caves",
+    "species_enhanced": [
+      {
+        "overworldMonsterId": "trapwurm",
+        "monsterId": "trapwurm",
+        "percent": 13.333333333333334,
+        "percentStr": "13.33"
+      },
+      {
+        "monsterId": "trapwurm",
+        "percent": 10.526315789473683,
+        "percentStr": "10.53"
+      },
+      {
+        "overworldMonsterId": "masquerattle",
+        "monsterId": "masquerattle",
+        "percent": 13.333333333333334,
+        "percentStr": "13.33"
+      },
+      {
+        "monsterId": "masquerattle",
+        "percent": 10.526315789473683,
+        "percentStr": "10.53"
+      },
+      {
+        "overworldMonsterId": "masquerattle",
+        "monsterId": "jormungold",
+        "percent": 13.333333333333334,
+        "percentStr": "13.33"
+      },
+      {
+        "monsterId": "jormungold",
+        "percent": 10.526315789473683,
+        "percentStr": "10.53"
+      },
+      {
+        "overworldMonsterId": "puppercut",
+        "hour_min": 18,
+        "hour_max": 6,
+        "monsterId": "puppercut",
+        "percent": 6.666666666666667,
+        "percentStr": "6.67",
+        "available_specific_time": true
+      },
+      {
+        "hour_min": 18,
+        "hour_max": 6,
+        "monsterId": "puppercut",
+        "percent": 5.263157894736842,
+        "percentStr": "5.26",
+        "available_specific_time": true
+      },
+      {
+        "monsterId": "macabra",
+        "percent": 10.526315789473683,
+        "percentStr": "10.53"
+      },
+      {
+        "monsterId": "folklord",
+        "percent": 10.526315789473683,
+        "percentStr": "10.53"
+      },
+      {
+        "overworldMonsterId": "jellyton",
+        "monsterId": "jellyton",
+        "percent": 40,
+        "percentStr": "40.00"
+      },
+      {
+        "monsterId": "jellyton",
+        "percent": 31.57894736842105,
+        "percentStr": "31.58"
+      },
+      {
+        "overworldMonsterId": "terracooka",
+        "monsterId": "terracooka",
+        "percent": 13.333333333333334,
+        "percentStr": "13.33"
+      },
+      {
+        "monsterId": "terracooka",
+        "percent": 10.526315789473683,
+        "percentStr": "10.53"
+      }
+    ],
+    "habitat_coords": [
+      "overworld_-5_-1"
+    ]
+  },
+  "marsh_springheel": {
+    "id": "marsh_springheel",
+    "habitat_name": "REGION_NAME_MARSH",
+    "habitat_overworld_chunks": [
+      {
+        "id": 18,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-5_-2.tres",
+        "type": "Resource"
+      }
+    ],
+    "habitat_endless": false,
+    "min_team_size": 1,
+    "max_team_size": 2,
+    "num_species": 9,
+    "habitat_name_localised": "The Marshes",
+    "species_enhanced": [
+      {
+        "monsterId": "trapwurm",
+        "percent": 11.76470588235294,
+        "percentStr": "11.76"
+      },
+      {
+        "monsterId": "masquerattle",
+        "percent": 11.76470588235294,
+        "percentStr": "11.76"
+      },
+      {
+        "monsterId": "jormungold",
+        "percent": 11.76470588235294,
+        "percentStr": "11.76"
+      },
+      {
+        "hour_min": 18,
+        "hour_max": 6,
+        "monsterId": "puppercut",
+        "percent": 5.88235294117647,
+        "percentStr": "5.88",
+        "available_specific_time": true
+      },
+      {
+        "monsterId": "macabra",
+        "percent": 11.76470588235294,
+        "percentStr": "11.76"
+      },
+      {
+        "monsterId": "folklord",
+        "percent": 11.76470588235294,
+        "percentStr": "11.76"
+      },
+      {
+        "monsterId": "jellyton",
+        "percent": 11.76470588235294,
+        "percentStr": "11.76"
+      },
+      {
+        "overworldMonsterId": "springheel",
+        "monsterId": "snoopin",
+        "percent": 50,
+        "percentStr": "50.00"
+      },
+      {
+        "monsterId": "snoopin",
+        "percent": 11.76470588235294,
+        "percentStr": "11.76"
+      },
+      {
+        "overworldMonsterId": "springheel",
+        "monsterId": "hopskin",
+        "percent": 50,
+        "percentStr": "50.00"
+      },
+      {
+        "monsterId": "hopskin",
+        "percent": 11.76470588235294,
+        "percentStr": "11.76"
+      }
+    ],
+    "habitat_coords": [
+      "overworld_-5_-2"
+    ]
+  },
+  "meadow": {
+    "id": "meadow",
+    "habitat_name": "REGION_NAME_MEADOW",
+    "habitat_overworld_chunks": [
+      {
+        "id": 19,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-3_-3.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 20,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-4_-3.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 10,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-5_-3.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 8,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-3_-4.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 18,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-4_-4.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 16,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-5_-4.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 7,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-4_-5.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 17,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-5_-5.tres",
+        "type": "Resource"
+      }
+    ],
+    "habitat_endless": true,
+    "min_team_size": 1,
+    "max_team_size": 2,
+    "num_species": 9,
+    "habitat_name_localised": "Cherry Meadow",
+    "species_enhanced": [
+      {
+        "overworldMonsterId": "twirligig",
+        "monsterId": "twirligig",
+        "percent": 48.07692307692307,
+        "percentStr": "48.08"
+      },
+      {
+        "monsterId": "twirligig",
+        "percent": 30.81664098613251,
+        "percentStr": "30.82"
+      },
+      {
+        "monsterId": "blossomaw",
+        "percent": 15.408320493066254,
+        "percentStr": "15.41"
+      },
+      {
+        "overworldMonsterId": "elfless",
+        "monsterId": "elfless",
+        "percent": 7.9326923076923075,
+        "percentStr": "7.93"
+      },
+      {
+        "monsterId": "elfless",
+        "percent": 5.084745762711865,
+        "percentStr": "5.08"
+      },
+      {
+        "overworldMonsterId": "dominoth",
+        "monsterId": "dominoth",
+        "percent": 12.019230769230768,
+        "percentStr": "12.02"
+      },
+      {
+        "monsterId": "dominoth",
+        "percent": 7.704160246533127,
+        "percentStr": "7.70"
+      },
+      {
+        "overworldMonsterId": "dominoth",
+        "monsterId": "wingloom",
+        "percent": 12.019230769230768,
+        "percentStr": "12.02"
+      },
+      {
+        "monsterId": "wingloom",
+        "percent": 7.704160246533127,
+        "percentStr": "7.70"
+      },
+      {
+        "overworldMonsterId": "dominoth",
+        "monsterId": "mothmanic",
+        "percent": 12.019230769230768,
+        "percentStr": "12.02"
+      },
+      {
+        "monsterId": "mothmanic",
+        "percent": 7.704160246533127,
+        "percentStr": "7.70"
+      },
+      {
+        "overworldMonsterId": "puppercut",
+        "hour_min": 18,
+        "hour_max": 6,
+        "monsterId": "puppercut",
+        "percent": 7.9326923076923075,
+        "percentStr": "7.93",
+        "available_specific_time": true
+      },
+      {
+        "hour_min": 18,
+        "hour_max": 6,
+        "monsterId": "puppercut",
+        "percent": 5.084745762711865,
+        "percentStr": "5.08",
+        "available_specific_time": true
+      },
+      {
+        "monsterId": "frillypad",
+        "percent": 15.408320493066254,
+        "percentStr": "15.41"
+      },
+      {
+        "monsterId": "liligator",
+        "percent": 5.084745762711865,
+        "percentStr": "5.08"
+      }
+    ],
+    "habitat_coords": [
+      "overworld_-3_-3",
+      "overworld_-4_-3",
+      "overworld_-5_-3",
+      "overworld_-3_-4",
+      "overworld_-4_-4",
+      "overworld_-5_-4",
+      "overworld_-4_-5",
+      "overworld_-5_-5"
+    ]
+  },
+  "meadow_caves": {
+    "id": "meadow_caves",
+    "habitat_name": "REGION_NAME_MEADOW_CAVES",
+    "habitat_overworld_chunks": [
+      {
+        "id": 2,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-4_-6.tres",
+        "type": "Resource"
+      }
+    ],
+    "habitat_endless": false,
+    "min_team_size": 1,
+    "max_team_size": 2,
+    "num_species": 11,
+    "habitat_name_localised": "Cherry Meadow Caves",
+    "species_enhanced": [
+      {
+        "overworldMonsterId": "carniviper",
+        "monsterId": "carniviper",
+        "percent": 17.123287671232877,
+        "percentStr": "17.12"
+      },
+      {
+        "monsterId": "carniviper",
+        "percent": 12.224938875305625,
+        "percentStr": "12.22"
+      },
+      {
+        "overworldMonsterId": "twirligig",
+        "monsterId": "twirligig",
+        "percent": 17.123287671232877,
+        "percentStr": "17.12"
+      },
+      {
+        "monsterId": "twirligig",
+        "percent": 12.224938875305625,
+        "percentStr": "12.22"
+      },
+      {
+        "monsterId": "elfless",
+        "percent": 5.134474327628362,
+        "percentStr": "5.13"
+      },
+      {
+        "overworldMonsterId": "dominoth",
+        "monsterId": "dominoth",
+        "percent": 7.191780821917808,
+        "percentStr": "7.19"
+      },
+      {
+        "monsterId": "dominoth",
+        "percent": 5.134474327628362,
+        "percentStr": "5.13"
+      },
+      {
+        "overworldMonsterId": "dominoth",
+        "monsterId": "wingloom",
+        "percent": 7.191780821917808,
+        "percentStr": "7.19"
+      },
+      {
+        "monsterId": "wingloom",
+        "percent": 5.134474327628362,
+        "percentStr": "5.13"
+      },
+      {
+        "overworldMonsterId": "dominoth",
+        "monsterId": "mothmanic",
+        "percent": 17.123287671232877,
+        "percentStr": "17.12"
+      },
+      {
+        "monsterId": "mothmanic",
+        "percent": 12.224938875305625,
+        "percentStr": "12.22"
+      },
+      {
+        "overworldMonsterId": "pawndead",
+        "monsterId": "pawndead",
+        "percent": 17.123287671232877,
+        "percentStr": "17.12"
+      },
+      {
+        "monsterId": "pawndead",
+        "percent": 12.224938875305625,
+        "percentStr": "12.22"
+      },
+      {
+        "monsterId": "blossomaw",
+        "percent": 5.134474327628362,
+        "percentStr": "5.13"
+      },
+      {
+        "overworldMonsterId": "terracooka",
+        "monsterId": "terracooka",
+        "percent": 17.123287671232877,
+        "percentStr": "17.12"
+      },
+      {
+        "monsterId": "terracooka",
+        "percent": 12.224938875305625,
+        "percentStr": "12.22"
+      },
+      {
+        "monsterId": "frillypad",
+        "percent": 12.224938875305625,
+        "percentStr": "12.22"
+      },
+      {
+        "monsterId": "liligator",
+        "percent": 6.112469437652813,
+        "percentStr": "6.11"
+      }
+    ],
+    "habitat_coords": [
+      "overworld_-4_-6"
+    ]
+  },
+  "meadow_secret": {
+    "id": "meadow_secret",
+    "habitat_name": "",
+    "habitat_overworld_chunks": [],
+    "habitat_endless": true,
+    "min_team_size": 1,
+    "max_team_size": 2,
+    "num_species": 10,
+    "species_enhanced": [
+      {
+        "overworldMonsterId": "twirligig",
+        "monsterId": "twirligig",
+        "percent": 51.28205128205128,
+        "percentStr": "51.28"
+      },
+      {
+        "monsterId": "twirligig",
+        "percent": 0.19881703862020977,
+        "percentStr": "0.20"
+      },
+      {
+        "monsterId": "blossomaw",
+        "percent": 0.09940851931010489,
+        "percentStr": "0.10"
+      },
+      {
+        "overworldMonsterId": "elfless",
+        "monsterId": "elfless",
+        "percent": 5.128205128205128,
+        "percentStr": "5.13"
+      },
+      {
+        "monsterId": "elfless",
+        "percent": 0.019881703862020976,
+        "percentStr": "0.02"
+      },
+      {
+        "overworldMonsterId": "dominoth",
+        "monsterId": "dominoth",
+        "percent": 12.82051282051282,
+        "percentStr": "12.82"
+      },
+      {
+        "monsterId": "dominoth",
+        "percent": 0.049704259655052443,
+        "percentStr": "0.05"
+      },
+      {
+        "overworldMonsterId": "dominoth",
+        "monsterId": "wingloom",
+        "percent": 12.82051282051282,
+        "percentStr": "12.82"
+      },
+      {
+        "monsterId": "wingloom",
+        "percent": 0.049704259655052443,
+        "percentStr": "0.05"
+      },
+      {
+        "overworldMonsterId": "dominoth",
+        "monsterId": "mothmanic",
+        "percent": 12.82051282051282,
+        "percentStr": "12.82"
+      },
+      {
+        "monsterId": "mothmanic",
+        "percent": 0.049704259655052443,
+        "percentStr": "0.05"
+      },
+      {
+        "overworldMonsterId": "puppercut",
+        "hour_min": 18,
+        "hour_max": 6,
+        "monsterId": "puppercut",
+        "percent": 5.128205128205128,
+        "percentStr": "5.13",
+        "available_specific_time": true
+      },
+      {
+        "hour_min": 18,
+        "hour_max": 6,
+        "monsterId": "puppercut",
+        "percent": 0.019881703862020976,
+        "percentStr": "0.02",
+        "available_specific_time": true
+      },
+      {
+        "monsterId": "dandylion",
+        "percent": 99.40851931010488,
+        "percentStr": "99.41"
+      },
+      {
+        "monsterId": "frillypad",
+        "percent": 0.09940851931010489,
+        "percentStr": "0.10"
+      },
+      {
+        "monsterId": "liligator",
+        "percent": 0.004970425965505244,
+        "percentStr": "0.00"
+      }
+    ],
+    "habitat_coords": []
+  },
+  "meadow_springheel": {
+    "id": "meadow_springheel",
+    "habitat_name": "REGION_NAME_MEADOW",
+    "habitat_overworld_chunks": [
+      {
+        "id": 17,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-5_-5.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 19,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-3_-3.tres",
+        "type": "Resource"
+      }
+    ],
+    "habitat_endless": false,
+    "min_team_size": 1,
+    "max_team_size": 2,
+    "num_species": 11,
+    "habitat_name_localised": "Cherry Meadow",
+    "species_enhanced": [
+      {
+        "monsterId": "twirligig",
+        "percent": 22.22222222222222,
+        "percentStr": "22.22"
+      },
+      {
+        "monsterId": "blossomaw",
+        "percent": 11.11111111111111,
+        "percentStr": "11.11"
+      },
+      {
+        "monsterId": "elfless",
+        "percent": 5.555555555555555,
+        "percentStr": "5.56"
+      },
+      {
+        "monsterId": "dominoth",
+        "percent": 5.555555555555555,
+        "percentStr": "5.56"
+      },
+      {
+        "monsterId": "wingloom",
+        "percent": 5.555555555555555,
+        "percentStr": "5.56"
+      },
+      {
+        "monsterId": "mothmanic",
+        "percent": 5.555555555555555,
+        "percentStr": "5.56"
+      },
+      {
+        "hour_min": 18,
+        "hour_max": 6,
+        "monsterId": "puppercut",
+        "percent": 5.555555555555555,
+        "percentStr": "5.56",
+        "available_specific_time": true
+      },
+      {
+        "monsterId": "frillypad",
+        "percent": 11.11111111111111,
+        "percentStr": "11.11"
+      },
+      {
+        "monsterId": "liligator",
+        "percent": 5.555555555555555,
+        "percentStr": "5.56"
+      },
+      {
+        "overworldMonsterId": "springheel",
+        "monsterId": "hopskin",
+        "percent": 50,
+        "percentStr": "50.00"
+      },
+      {
+        "monsterId": "hopskin",
+        "percent": 11.11111111111111,
+        "percentStr": "11.11"
+      },
+      {
+        "overworldMonsterId": "springheel",
+        "monsterId": "snoopin",
+        "percent": 50,
+        "percentStr": "50.00"
+      },
+      {
+        "monsterId": "snoopin",
+        "percent": 11.11111111111111,
+        "percentStr": "11.11"
+      }
+    ],
+    "habitat_coords": [
+      "overworld_-5_-5",
+      "overworld_-3_-3"
+    ]
+  },
+  "mire_sea_west_island": {
+    "id": "mire_sea_west_island",
+    "habitat_name": "REGION_NAME_MIRE_SEA",
+    "habitat_overworld_chunks": [
+      {
+        "id": 15,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-6_0.tres",
+        "type": "Resource"
+      }
+    ],
+    "habitat_endless": true,
+    "min_team_size": 1,
+    "max_team_size": 2,
+    "num_species": 5,
+    "habitat_name_localised": "Mire Sea",
+    "species_enhanced": [
+      {
+        "overworldMonsterId": "traffikrab",
+        "monsterId": "traffikrab",
+        "percent": 45.45454545454545,
+        "percentStr": "45.45"
+      },
+      {
+        "monsterId": "traffikrab",
+        "percent": 29.411764705882348,
+        "percentStr": "29.41"
+      },
+      {
+        "overworldMonsterId": "traffikrab",
+        "monsterId": "weevilite",
+        "percent": 45.45454545454545,
+        "percentStr": "45.45"
+      },
+      {
+        "monsterId": "weevilite",
+        "percent": 29.411764705882348,
+        "percentStr": "29.41"
+      },
+      {
+        "overworldMonsterId": "icepeck",
+        "monsterId": "icepeck",
+        "percent": 9.090909090909092,
+        "percentStr": "9.09"
+      },
+      {
+        "monsterId": "icepeck",
+        "percent": 5.88235294117647,
+        "percentStr": "5.88"
+      },
+      {
+        "monsterId": "stardigrade",
+        "percent": 5.88235294117647,
+        "percentStr": "5.88"
+      },
+      {
+        "monsterId": "sharktanker",
+        "percent": 29.411764705882348,
+        "percentStr": "29.41"
+      }
+    ],
+    "habitat_coords": [
+      "overworld_-6_0"
+    ]
+  },
+  "mire_sea_west_water": {
+    "id": "mire_sea_west_water",
+    "habitat_name": "REGION_NAME_MIRE_SEA",
+    "habitat_overworld_chunks": [
+      {
+        "id": 15,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-6_0.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 8,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-7_0.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 11,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-7_-1.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 10,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-7_-2.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 12,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-7_-3.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 13,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-7_-4.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 14,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-7_-5.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 9,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-7_-6.tres",
+        "type": "Resource"
+      }
+    ],
+    "habitat_endless": true,
+    "min_team_size": 1,
+    "max_team_size": 2,
+    "num_species": 7,
+    "habitat_name_localised": "Mire Sea",
+    "species_enhanced": [
+      {
+        "monsterId": "traffikrab",
+        "percent": 20,
+        "percentStr": "20.00"
+      },
+      {
+        "monsterId": "weevilite",
+        "percent": 20,
+        "percentStr": "20.00"
+      },
+      {
+        "monsterId": "icepeck",
+        "percent": 5,
+        "percentStr": "5.00"
+      },
+      {
+        "monsterId": "diveal",
+        "percent": 10,
+        "percentStr": "10.00"
+      },
+      {
+        "monsterId": "scubalrus",
+        "percent": 20,
+        "percentStr": "20.00"
+      },
+      {
+        "monsterId": "stardigrade",
+        "percent": 5,
+        "percentStr": "5.00"
+      },
+      {
+        "monsterId": "sharktanker",
+        "percent": 20,
+        "percentStr": "20.00"
+      }
+    ],
+    "habitat_coords": [
+      "overworld_-6_0",
+      "overworld_-7_0",
+      "overworld_-7_-1",
+      "overworld_-7_-2",
+      "overworld_-7_-3",
+      "overworld_-7_-4",
+      "overworld_-7_-5",
+      "overworld_-7_-6"
+    ]
+  },
+  "mt_wirral": {
+    "id": "mt_wirral",
+    "habitat_name": "REGION_NAME_MT_WIRRAL",
+    "habitat_overworld_chunks": [
+      {
+        "id": 9,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-2_-6.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 10,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-2_-7.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 13,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-3_-6.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 19,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-3_-7.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 16,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-4_-6.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 17,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-4_-7.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 18,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-5_-6.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 15,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-5_-7.tres",
+        "type": "Resource"
+      }
+    ],
+    "habitat_endless": true,
+    "min_team_size": 1,
+    "max_team_size": 2,
+    "num_species": 7,
+    "habitat_name_localised": "Mt. Wirral",
+    "species_enhanced": [
+      {
+        "monsterId": "grampus",
+        "percent": 5.2631578947368425,
+        "percentStr": "5.26"
+      },
+      {
+        "overworldMonsterId": "spookionna",
+        "monsterId": "spooki-onna",
+        "percent": 41.66666666666667,
+        "percentStr": "41.67"
+      },
+      {
+        "monsterId": "spooki-onna",
+        "percent": 35.08771929824562,
+        "percentStr": "35.09"
+      },
+      {
+        "overworldMonsterId": "sparktan",
+        "monsterId": "sparktan",
+        "percent": 10.416666666666668,
+        "percentStr": "10.42"
+      },
+      {
+        "monsterId": "sparktan",
+        "percent": 8.771929824561404,
+        "percentStr": "8.77"
+      },
+      {
+        "monsterId": "zeustrike",
+        "percent": 5.2631578947368425,
+        "percentStr": "5.26"
+      },
+      {
+        "overworldMonsterId": "icepeck",
+        "monsterId": "icepeck",
+        "percent": 41.66666666666667,
+        "percentStr": "41.67"
+      },
+      {
+        "monsterId": "icepeck",
+        "percent": 35.08771929824562,
+        "percentStr": "35.09"
+      },
+      {
+        "overworldMonsterId": "icepeck",
+        "monsterId": "cryoshear",
+        "percent": 6.25,
+        "percentStr": "6.25"
+      },
+      {
+        "monsterId": "cryoshear",
+        "percent": 5.2631578947368425,
+        "percentStr": "5.26"
+      },
+      {
+        "monsterId": "plasmantler",
+        "percent": 5.2631578947368425,
+        "percentStr": "5.26"
+      }
+    ],
+    "habitat_coords": [
+      "overworld_-2_-6",
+      "overworld_-2_-7",
+      "overworld_-3_-6",
+      "overworld_-3_-7",
+      "overworld_-4_-6",
+      "overworld_-4_-7",
+      "overworld_-5_-6",
+      "overworld_-5_-7"
+    ]
+  },
+  "mt_wirral_caves": {
+    "id": "mt_wirral_caves",
+    "habitat_name": "REGION_NAME_MT_WIRRAL_CAVES",
+    "habitat_overworld_chunks": [
+      {
+        "id": 12,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-2_-7.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 5,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-3_-6.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 18,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-3_-7.tres",
+        "type": "Resource"
+      }
+    ],
+    "habitat_endless": true,
+    "min_team_size": 1,
+    "max_team_size": 2,
+    "num_species": 12,
+    "habitat_name_localised": "Mt. Wirral Caves",
+    "species_enhanced": [
+      {
+        "monsterId": "grampus",
+        "percent": 5.6818181818181825,
+        "percentStr": "5.68"
+      },
+      {
+        "overworldMonsterId": "spookionna",
+        "monsterId": "spooki-onna",
+        "percent": 16.806722689075627,
+        "percentStr": "16.81"
+      },
+      {
+        "monsterId": "spooki-onna",
+        "percent": 11.363636363636365,
+        "percentStr": "11.36"
+      },
+      {
+        "overworldMonsterId": "sparktan",
+        "monsterId": "sparktan",
+        "percent": 8.403361344537814,
+        "percentStr": "8.40"
+      },
+      {
+        "monsterId": "sparktan",
+        "percent": 5.6818181818181825,
+        "percentStr": "5.68"
+      },
+      {
+        "monsterId": "zeustrike",
+        "percent": 5.113636363636365,
+        "percentStr": "5.11"
+      },
+      {
+        "overworldMonsterId": "icepeck",
+        "monsterId": "icepeck",
+        "percent": 16.806722689075627,
+        "percentStr": "16.81"
+      },
+      {
+        "monsterId": "icepeck",
+        "percent": 11.363636363636365,
+        "percentStr": "11.36"
+      },
+      {
+        "overworldMonsterId": "icepeck",
+        "monsterId": "cryoshear",
+        "percent": 16.806722689075627,
+        "percentStr": "16.81"
+      },
+      {
+        "monsterId": "cryoshear",
+        "percent": 11.363636363636365,
+        "percentStr": "11.36"
+      },
+      {
+        "monsterId": "plasmantler",
+        "percent": 5.113636363636365,
+        "percentStr": "5.11"
+      },
+      {
+        "overworldMonsterId": "dominoth",
+        "monsterId": "mothmanic",
+        "percent": 16.806722689075627,
+        "percentStr": "16.81"
+      },
+      {
+        "monsterId": "mothmanic",
+        "percent": 11.363636363636365,
+        "percentStr": "11.36"
+      },
+      {
+        "monsterId": "ratcousel",
+        "percent": 11.363636363636365,
+        "percentStr": "11.36"
+      },
+      {
+        "overworldMonsterId": "terracooka",
+        "monsterId": "terracooka",
+        "percent": 16.806722689075627,
+        "percentStr": "16.81"
+      },
+      {
+        "monsterId": "terracooka",
+        "percent": 11.363636363636365,
+        "percentStr": "11.36"
+      },
+      {
+        "overworldMonsterId": "terracooka",
+        "monsterId": "coaldron",
+        "percent": 7.563025210084033,
+        "percentStr": "7.56"
+      },
+      {
+        "monsterId": "coaldron",
+        "percent": 5.113636363636365,
+        "percentStr": "5.11"
+      },
+      {
+        "monsterId": "khepri",
+        "percent": 5.113636363636365,
+        "percentStr": "5.11"
+      }
+    ],
+    "habitat_coords": [
+      "overworld_-2_-7",
+      "overworld_-3_-6",
+      "overworld_-3_-7"
+    ]
+  },
+  "mt_wirral_secret": {
+    "id": "mt_wirral_secret",
+    "habitat_name": "",
+    "habitat_overworld_chunks": [],
+    "habitat_endless": true,
+    "min_team_size": 1,
+    "max_team_size": 2,
+    "num_species": 8,
+    "species_enhanced": [
+      {
+        "monsterId": "grampus",
+        "percent": 0.009976455564866914,
+        "percentStr": "0.01"
+      },
+      {
+        "overworldMonsterId": "spookionna",
+        "monsterId": "spooki-onna",
+        "percent": 46.29629629629629,
+        "percentStr": "46.30"
+      },
+      {
+        "monsterId": "spooki-onna",
+        "percent": 0.09976455564866915,
+        "percentStr": "0.10"
+      },
+      {
+        "overworldMonsterId": "sparktan",
+        "monsterId": "sparktan",
+        "percent": 2.314814814814815,
+        "percentStr": "2.31"
+      },
+      {
+        "monsterId": "sparktan",
+        "percent": 0.004988227782433457,
+        "percentStr": "0.00"
+      },
+      {
+        "overworldMonsterId": "sparktan",
+        "monsterId": "zeustrike",
+        "percent": 0.4629629629629629,
+        "percentStr": "0.46"
+      },
+      {
+        "monsterId": "zeustrike",
+        "percent": 0.0009976455564866915,
+        "percentStr": "0.00"
+      },
+      {
+        "overworldMonsterId": "icepeck",
+        "monsterId": "icepeck",
+        "percent": 46.29629629629629,
+        "percentStr": "46.30"
+      },
+      {
+        "monsterId": "icepeck",
+        "percent": 0.09976455564866915,
+        "percentStr": "0.10"
+      },
+      {
+        "overworldMonsterId": "icepeck",
+        "monsterId": "cryoshear",
+        "percent": 4.62962962962963,
+        "percentStr": "4.63"
+      },
+      {
+        "monsterId": "cryoshear",
+        "percent": 0.009976455564866914,
+        "percentStr": "0.01"
+      },
+      {
+        "monsterId": "plasmantler",
+        "percent": 0.009976455564866914,
+        "percentStr": "0.01"
+      },
+      {
+        "monsterId": "dandylion",
+        "percent": 99.76455564866914,
+        "percentStr": "99.76"
+      }
+    ],
+    "habitat_coords": []
+  },
+  "mt_wirral_springheel": {
+    "id": "mt_wirral_springheel",
+    "habitat_name": "REGION_NAME_MT_WIRRAL",
+    "habitat_overworld_chunks": [
+      {
+        "id": 10,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-2_-7.tres",
+        "type": "Resource"
+      }
+    ],
+    "habitat_endless": false,
+    "min_team_size": 1,
+    "max_team_size": 2,
+    "num_species": 9,
+    "habitat_name_localised": "Mt. Wirral",
+    "species_enhanced": [
+      {
+        "monsterId": "grampus",
+        "percent": 5.2631578947368425,
+        "percentStr": "5.26"
+      },
+      {
+        "monsterId": "spooki-onna",
+        "percent": 17.54385964912281,
+        "percentStr": "17.54"
+      },
+      {
+        "monsterId": "sparktan",
+        "percent": 8.771929824561404,
+        "percentStr": "8.77"
+      },
+      {
+        "monsterId": "zeustrike",
+        "percent": 5.2631578947368425,
+        "percentStr": "5.26"
+      },
+      {
+        "monsterId": "icepeck",
+        "percent": 17.54385964912281,
+        "percentStr": "17.54"
+      },
+      {
+        "monsterId": "cryoshear",
+        "percent": 5.2631578947368425,
+        "percentStr": "5.26"
+      },
+      {
+        "monsterId": "plasmantler",
+        "percent": 5.2631578947368425,
+        "percentStr": "5.26"
+      },
+      {
+        "overworldMonsterId": "springheel",
+        "monsterId": "scampire",
+        "percent": 50,
+        "percentStr": "50.00"
+      },
+      {
+        "monsterId": "scampire",
+        "percent": 17.54385964912281,
+        "percentStr": "17.54"
+      },
+      {
+        "overworldMonsterId": "springheel",
+        "monsterId": "ripterra",
+        "percent": 50,
+        "percentStr": "50.00"
+      },
+      {
+        "monsterId": "ripterra",
+        "percent": 17.54385964912281,
+        "percentStr": "17.54"
+      }
+    ],
+    "habitat_coords": [
+      "overworld_-2_-7"
+    ]
+  },
+  "new_wirral_park": {
+    "id": "new_wirral_park",
+    "habitat_name": "REGION_NAME_NEW_WIRRAL_PARK",
+    "habitat_overworld_chunks": [
+      {
+        "id": 14,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_2_-3.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 17,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_2_-4.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 15,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_2_-5.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 20,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_3_-3.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 18,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_3_-4.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 12,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_3_-5.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 19,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_4_-3.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 10,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_4_-4.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 13,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_4_-5.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 16,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_5_-3.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 11,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_5_-4.tres",
+        "type": "Resource"
+      }
+    ],
+    "habitat_endless": true,
+    "min_team_size": 1,
+    "max_team_size": 2,
+    "num_species": 7,
+    "habitat_name_localised": "New Wirral Park",
+    "species_enhanced": [
+      {
+        "overworldMonsterId": "carniviper",
+        "monsterId": "carniviper",
+        "percent": 41.666666666666664,
+        "percentStr": "41.67"
+      },
+      {
+        "monsterId": "carniviper",
+        "percent": 33.33333333333333,
+        "percentStr": "33.33"
+      },
+      {
+        "overworldMonsterId": "dominoth",
+        "monsterId": "dominoth",
+        "percent": 41.666666666666664,
+        "percentStr": "41.67"
+      },
+      {
+        "monsterId": "dominoth",
+        "percent": 33.33333333333333,
+        "percentStr": "33.33"
+      },
+      {
+        "monsterId": "macabra",
+        "percent": 6.666666666666665,
+        "percentStr": "6.67"
+      },
+      {
+        "overworldMonsterId": "squirey",
+        "monsterId": "squirey",
+        "percent": 8.333333333333332,
+        "percentStr": "8.33"
+      },
+      {
+        "monsterId": "squirey",
+        "percent": 6.666666666666665,
+        "percentStr": "6.67"
+      },
+      {
+        "monsterId": "stardigrade",
+        "percent": 6.666666666666665,
+        "percentStr": "6.67"
+      },
+      {
+        "monsterId": "elfless",
+        "percent": 6.666666666666665,
+        "percentStr": "6.67"
+      },
+      {
+        "overworldMonsterId": "puppercut",
+        "hour_min": 18,
+        "hour_max": 6,
+        "monsterId": "puppercut",
+        "percent": 8.333333333333332,
+        "percentStr": "8.33",
+        "available_specific_time": true
+      },
+      {
+        "hour_min": 18,
+        "hour_max": 6,
+        "monsterId": "puppercut",
+        "percent": 6.666666666666665,
+        "percentStr": "6.67",
+        "available_specific_time": true
+      }
+    ],
+    "habitat_coords": [
+      "overworld_2_-3",
+      "overworld_2_-4",
+      "overworld_2_-5",
+      "overworld_3_-3",
+      "overworld_3_-4",
+      "overworld_3_-5",
+      "overworld_4_-3",
+      "overworld_4_-4",
+      "overworld_4_-5",
+      "overworld_5_-3",
+      "overworld_5_-4"
+    ]
+  },
+  "new_wirral_park_caves": {
+    "id": "new_wirral_park_caves",
+    "habitat_name": "REGION_NAME_NEW_WIRRAL_PARK_CAVES",
+    "habitat_overworld_chunks": [
+      {
+        "id": 11,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_3_-5.tres",
+        "type": "Resource"
+      }
+    ],
+    "habitat_endless": true,
+    "min_team_size": 1,
+    "max_team_size": 2,
+    "num_species": 8,
+    "habitat_name_localised": "New Wirral Park Caves",
+    "species_enhanced": [
+      {
+        "overworldMonsterId": "carniviper",
+        "monsterId": "carniviper",
+        "percent": 25,
+        "percentStr": "25.00"
+      },
+      {
+        "monsterId": "carniviper",
+        "percent": 16.949152542372882,
+        "percentStr": "16.95"
+      },
+      {
+        "overworldMonsterId": "dominoth",
+        "monsterId": "dominoth",
+        "percent": 25,
+        "percentStr": "25.00"
+      },
+      {
+        "monsterId": "dominoth",
+        "percent": 16.949152542372882,
+        "percentStr": "16.95"
+      },
+      {
+        "monsterId": "macabra",
+        "percent": 5.084745762711865,
+        "percentStr": "5.08"
+      },
+      {
+        "overworldMonsterId": "squirey",
+        "monsterId": "squirey",
+        "percent": 25,
+        "percentStr": "25.00"
+      },
+      {
+        "monsterId": "squirey",
+        "percent": 16.949152542372882,
+        "percentStr": "16.95"
+      },
+      {
+        "monsterId": "stardigrade",
+        "percent": 5.084745762711865,
+        "percentStr": "5.08"
+      },
+      {
+        "monsterId": "elfless",
+        "percent": 5.084745762711865,
+        "percentStr": "5.08"
+      },
+      {
+        "monsterId": "muskrateer",
+        "percent": 16.949152542372882,
+        "percentStr": "16.95"
+      },
+      {
+        "overworldMonsterId": "terracooka",
+        "monsterId": "terracooka",
+        "percent": 25,
+        "percentStr": "25.00"
+      },
+      {
+        "monsterId": "terracooka",
+        "percent": 16.949152542372882,
+        "percentStr": "16.95"
+      }
+    ],
+    "habitat_coords": [
+      "overworld_3_-5"
+    ]
+  },
+  "new_wirral_park_secret": {
+    "id": "new_wirral_park_secret",
+    "habitat_name": "",
+    "habitat_overworld_chunks": [],
+    "habitat_endless": true,
+    "min_team_size": 2,
+    "max_team_size": 2,
+    "num_species": 3,
+    "species_enhanced": [
+      {
+        "overworldMonsterId": "carniviper",
+        "monsterId": "carniviper",
+        "percent": 50,
+        "percentStr": "50.00"
+      },
+      {
+        "monsterId": "carniviper",
+        "percent": 0.09980039920159679,
+        "percentStr": "0.10"
+      },
+      {
+        "overworldMonsterId": "dominoth",
+        "monsterId": "dominoth",
+        "percent": 50,
+        "percentStr": "50.00"
+      },
+      {
+        "monsterId": "dominoth",
+        "percent": 0.09980039920159679,
+        "percentStr": "0.10"
+      },
+      {
+        "monsterId": "dandylion",
+        "percent": 99.8003992015968,
+        "percentStr": "99.80"
+      }
+    ],
+    "habitat_coords": []
+  },
+  "new_wirral_park_springheel": {
+    "id": "new_wirral_park_springheel",
+    "habitat_name": "REGION_NAME_NEW_WIRRAL_PARK",
+    "habitat_overworld_chunks": [
+      {
+        "id": 6,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_3_-4.tres",
+        "type": "Resource"
+      }
+    ],
+    "habitat_endless": false,
+    "min_team_size": 1,
+    "max_team_size": 2,
+    "num_species": 8,
+    "habitat_name_localised": "New Wirral Park",
+    "species_enhanced": [
+      {
+        "overworldMonsterId": "springheel",
+        "monsterId": "springheel",
+        "percent": 80,
+        "percentStr": "80.00"
+      },
+      {
+        "monsterId": "springheel",
+        "percent": 22.727272727272727,
+        "percentStr": "22.73"
+      },
+      {
+        "overworldMonsterId": "springheel",
+        "monsterId": "hopskin",
+        "percent": 20,
+        "percentStr": "20.00"
+      },
+      {
+        "monsterId": "hopskin",
+        "percent": 5.681818181818182,
+        "percentStr": "5.68"
+      },
+      {
+        "monsterId": "carniviper",
+        "percent": 22.727272727272727,
+        "percentStr": "22.73"
+      },
+      {
+        "monsterId": "macabra",
+        "percent": 5.681818181818182,
+        "percentStr": "5.68"
+      },
+      {
+        "monsterId": "dominoth",
+        "percent": 22.727272727272727,
+        "percentStr": "22.73"
+      },
+      {
+        "monsterId": "stardigrade",
+        "percent": 5.681818181818182,
+        "percentStr": "5.68"
+      },
+      {
+        "monsterId": "squirey",
+        "percent": 9.090909090909092,
+        "percentStr": "9.09"
+      },
+      {
+        "monsterId": "elfless",
+        "percent": 5.681818181818182,
+        "percentStr": "5.68"
+      }
+    ],
+    "habitat_coords": [
+      "overworld_3_-4"
+    ]
+  },
+  "office": {
+    "id": "office",
+    "habitat_name": "",
+    "habitat_overworld_chunks": [],
+    "habitat_endless": false,
+    "min_team_size": 1,
+    "max_team_size": 2,
+    "num_species": 4,
+    "species_enhanced": [
+      {
+        "overworldMonsterId": "pawndead",
+        "monsterId": "pawndead",
+        "percent": 25,
+        "percentStr": "25.00"
+      },
+      {
+        "monsterId": "pawndead",
+        "percent": 25,
+        "percentStr": "25.00"
+      },
+      {
+        "overworldMonsterId": "springheel",
+        "monsterId": "springheel",
+        "percent": 25,
+        "percentStr": "25.00"
+      },
+      {
+        "monsterId": "springheel",
+        "percent": 25,
+        "percentStr": "25.00"
+      },
+      {
+        "overworldMonsterId": "springheel",
+        "monsterId": "hopskin",
+        "percent": 25,
+        "percentStr": "25.00"
+      },
+      {
+        "monsterId": "hopskin",
+        "percent": 25,
+        "percentStr": "25.00"
+      },
+      {
+        "overworldMonsterId": "springheel",
+        "monsterId": "snoopin",
+        "percent": 25,
+        "percentStr": "25.00"
+      },
+      {
+        "monsterId": "snoopin",
+        "percent": 25,
+        "percentStr": "25.00"
+      }
+    ],
+    "habitat_coords": []
+  },
+  "southern_isles": {
+    "id": "southern_isles",
+    "habitat_name": "REGION_NAME_SOUTHERN_ISLES",
+    "habitat_overworld_chunks": [
+      {
+        "id": 13,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_5_0.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 12,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_6_0.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 10,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_7_0.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 14,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_8_0.tres",
+        "type": "Resource"
+      }
+    ],
+    "habitat_endless": true,
+    "min_team_size": 1,
+    "max_team_size": 2,
+    "num_species": 5,
+    "habitat_name_localised": "Southern Isles",
+    "species_enhanced": [
+      {
+        "overworldMonsterId": "traffikrab",
+        "monsterId": "traffikrab",
+        "percent": 29.411764705882348,
+        "percentStr": "29.41"
+      },
+      {
+        "monsterId": "traffikrab",
+        "percent": 29.411764705882348,
+        "percentStr": "29.41"
+      },
+      {
+        "overworldMonsterId": "squirey",
+        "monsterId": "squirey",
+        "percent": 29.411764705882348,
+        "percentStr": "29.41"
+      },
+      {
+        "monsterId": "squirey",
+        "percent": 29.411764705882348,
+        "percentStr": "29.41"
+      },
+      {
+        "overworldMonsterId": "icepeck",
+        "monsterId": "icepeck",
+        "percent": 5.88235294117647,
+        "percentStr": "5.88"
+      },
+      {
+        "monsterId": "icepeck",
+        "percent": 5.88235294117647,
+        "percentStr": "5.88"
+      },
+      {
+        "overworldMonsterId": "traffikrab",
+        "monsterId": "lobstacle",
+        "percent": 5.88235294117647,
+        "percentStr": "5.88"
+      },
+      {
+        "monsterId": "lobstacle",
+        "percent": 5.88235294117647,
+        "percentStr": "5.88"
+      },
+      {
+        "overworldMonsterId": "allseer",
+        "hour_min": 18,
+        "hour_max": 6,
+        "monsterId": "allseer",
+        "percent": 29.411764705882348,
+        "percentStr": "29.41",
+        "available_specific_time": true
+      },
+      {
+        "hour_min": 18,
+        "hour_max": 6,
+        "monsterId": "allseer",
+        "percent": 29.411764705882348,
+        "percentStr": "29.41",
+        "available_specific_time": true
+      }
+    ],
+    "habitat_coords": [
+      "overworld_5_0",
+      "overworld_6_0",
+      "overworld_7_0",
+      "overworld_8_0"
+    ]
+  },
+  "spider_cave": {
+    "id": "spider_cave",
+    "habitat_name": "REGION_NAME_MARSH_CAVES",
+    "habitat_overworld_chunks": [
+      {
+        "id": 6,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-6_-1.tres",
+        "type": "Resource"
+      }
+    ],
+    "habitat_endless": true,
+    "min_team_size": 1,
+    "max_team_size": 2,
+    "num_species": 3,
+    "habitat_name_localised": "Marshland Caves",
+    "species_enhanced": [
+      {
+        "overworldMonsterId": "terracooka",
+        "monsterId": "terracooka",
+        "percent": 14.285714285714288,
+        "percentStr": "14.29"
+      },
+      {
+        "monsterId": "terracooka",
+        "percent": 14.285714285714288,
+        "percentStr": "14.29"
+      },
+      {
+        "overworldMonsterId": "ferriclaw",
+        "monsterId": "ferriclaw",
+        "percent": 71.42857142857143,
+        "percentStr": "71.43"
+      },
+      {
+        "monsterId": "ferriclaw",
+        "percent": 71.42857142857143,
+        "percentStr": "71.43"
+      },
+      {
+        "overworldMonsterId": "trapwurm",
+        "monsterId": "trapwurm",
+        "percent": 14.285714285714288,
+        "percentStr": "14.29"
+      },
+      {
+        "monsterId": "trapwurm",
+        "percent": 14.285714285714288,
+        "percentStr": "14.29"
+      }
+    ],
+    "habitat_coords": [
+      "overworld_-6_-1"
+    ]
+  },
+  "spider_cave_quest_location": {
+    "id": "spider_cave_quest_location",
+    "habitat_name": "REGION_NAME_MARSH_CAVES",
+    "habitat_overworld_chunks": [],
+    "habitat_endless": false,
+    "min_team_size": 1,
+    "max_team_size": 2,
+    "num_species": 4,
+    "habitat_name_localised": "Marshland Caves",
+    "species_enhanced": [
+      {
+        "overworldMonsterId": "terracooka",
+        "monsterId": "terracooka",
+        "percent": 14.285714285714288,
+        "percentStr": "14.29"
+      },
+      {
+        "monsterId": "terracooka",
+        "percent": 8.333333333333334,
+        "percentStr": "8.33"
+      },
+      {
+        "overworldMonsterId": "ferriclaw",
+        "monsterId": "ferriclaw",
+        "percent": 71.42857142857143,
+        "percentStr": "71.43"
+      },
+      {
+        "monsterId": "ferriclaw",
+        "percent": 41.66666666666667,
+        "percentStr": "41.67"
+      },
+      {
+        "overworldMonsterId": "trapwurm",
+        "monsterId": "trapwurm",
+        "percent": 14.285714285714288,
+        "percentStr": "14.29"
+      },
+      {
+        "monsterId": "trapwurm",
+        "percent": 8.333333333333334,
+        "percentStr": "8.33"
+      },
+      {
+        "monsterId": "picksie",
+        "percent": 41.66666666666667,
+        "percentStr": "41.67"
+      }
+    ],
+    "habitat_coords": []
+  },
+  "station_harbourtown": {
+    "id": "station_harbourtown",
+    "habitat_name": "",
+    "habitat_overworld_chunks": [],
+    "habitat_endless": false,
+    "min_team_size": 1,
+    "max_team_size": 2,
+    "num_species": 3,
+    "species_enhanced": [
+      {
+        "overworldMonsterId": "traffikrab",
+        "monsterId": "traffikrab",
+        "percent": 50,
+        "percentStr": "50.00"
+      },
+      {
+        "monsterId": "traffikrab",
+        "percent": 45.45454545454545,
+        "percentStr": "45.45"
+      },
+      {
+        "overworldMonsterId": "faucetear",
+        "monsterId": "faucetear",
+        "percent": 50,
+        "percentStr": "50.00"
+      },
+      {
+        "monsterId": "faucetear",
+        "percent": 45.45454545454545,
+        "percentStr": "45.45"
+      },
+      {
+        "monsterId": "burnace",
+        "percent": 9.090909090909092,
+        "percentStr": "9.09"
+      }
+    ],
+    "habitat_coords": []
+  }
+}

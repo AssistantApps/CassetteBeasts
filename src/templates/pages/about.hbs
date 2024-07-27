@@ -1,7 +1,7 @@
 {{#> layouts/default }}
 
 <section id="about-grid" class="mb-1">
-    <h1 class="ta-center">{{lookup @root.translate 'about'}}</h1>
+    <h1 class="Neu5Land ta-center">{{lookup @root.translate 'about'}}</h1>
 
     <article class="mb-1">
         <div class="grid about">
@@ -10,7 +10,8 @@
                     title="{{humans.kurt.name}}">me ({{humans.kurt.additionalName}})</a>. It was born out of a desire to
                 keep enjoying the game even though i was nearing the end of <a
                     href="{{urlref 'https://www.cassettebeasts.com'}}" title="Cassette Beasts website"
-                    rel="noopener noreferrer" target="_blank">Cassette Beasts</a>, almost completing all the missions
+                    rel="noopener noreferrer" target="_blank">{{lookup @root.translate 'MAIN_CREDITS_TITLE'}}</a>,
+                almost completing all the missions
                 and the bestiary.
 
                 <br><br>
@@ -48,7 +49,13 @@
 </section>
 
 <section class="mb-1">
-    <h1 class="mt-1 ta-center">{{lookup @root.translate 'patrons'}}</h1>
+    <h1 class="Neu5Land mt-1 ta-center">{{lookup @root.translate 'donation'}}</h1>
+
+    <assistant-apps-donation-option-list></assistant-apps-donation-option-list>
+</section>
+
+<section class="mb-1">
+    <h1 class="Neu5Land mt-1 ta-center">{{lookup @root.translate 'patrons'}}</h1>
 
     <assistant-apps-patreon-list></assistant-apps-patreon-list>
 </section>

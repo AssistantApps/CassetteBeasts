@@ -12,7 +12,12 @@ import { IElement } from 'contracts/element';
 import { IExternalResource } from 'contracts/externalResource';
 import { ILocalisation } from 'contracts/localisation';
 import { IMonsterForm, IMonsterFormEnhanced, IMonsterFormMoveSource } from 'contracts/monsterForm';
-import { IMove, IMoveEnhanced } from 'contracts/move';
+import {
+  IMonsterSpawn,
+  IMonsterSpawnEnhanced,
+  IMonsterSpawnHabitatDetails,
+} from 'contracts/monsterSpawn';
+import { IMove } from 'contracts/move';
 import { ISpriteAnim } from 'contracts/spriteAnim';
 import { ISubResource, ISubResourceMonsterEnhanced } from 'contracts/subResource';
 import { getAnimFileName, scaffoldFolderAndDelFileIfOverwrite } from 'helpers/fileHelper';
@@ -23,13 +28,15 @@ import {
   cutImageFromSpriteSheet,
   generateMetaImage,
 } from 'helpers/imageHelper';
-import { sortByStringProperty } from 'helpers/sortHelper';
+import { monsterSort } from 'helpers/sortHelper';
 import { limitLengthWithEllipse, pad, resAndTresTrim } from 'helpers/stringHelper';
 import { copyWavFile } from 'helpers/wavHelper';
 import { createWebpFromISpriteAnim } from 'helpers/webpHelper';
+import { moveToSimplified } from 'mapper/moveMapper';
 import { readItemDetail } from 'modules/baseModule';
 import { CommonModule } from 'modules/commonModule';
 import { LocalisationModule } from 'modules/localisation/localisationModule';
+import { MonsterSpawnModule } from 'modules/monsterSpawn/monsterSpawnModule';
 import { MovesModule } from 'modules/moves/movesModule';
 import { getHandlebar } from '../../services/internal/handlebarService';
 import { getEvolutionMonster, monsterFormMapFromDetailList } from './monsterFormMapFromDetailList';
@@ -112,30 +119,34 @@ export class MonsterFormsModule extends CommonModule<IMonsterForm> {
 
       const detailEnhanced: IMonsterFormEnhanced = {
         ...detail,
+        id: mapKey,
         resource_name: mapKey,
         bestiary_index_with_padding:
           detail.bestiary_index >= 0 ? pad(detail.bestiary_index, 3) : '???',
         name_localised: language[detail.name],
-        description_localised: language[detail.description]
-          .replaceAll("\\'", "'")
-          .replaceAll('\\"', '"'),
+        description_localised: language[detail.description],
         icon_url,
         sprite_sheet_path: detail.battle_sprite_path.replace('.json', '.sheet.png'),
         evolution_specialization_question_localised:
           language[detail.evolution_specialization_question],
         fusion_name_prefix_localised: language[detail.fusion_name_prefix],
         fusion_name_suffix_localised: language[detail.fusion_name_suffix],
-        bestiary_bios_localised: detail.bestiary_bios.map((b) => language[b]),
+        bestiary_bios_localised: detail.bestiary_bios.map((b) =>
+          language[b].replaceAll("\\'", "'").replaceAll('\\"', '"'),
+        ),
         unlock_ability_localised: language[UIKeys.unlockedAbility].replace(
           '{ability}',
           detail.unlock_ability,
         ),
+        elemental_types: undefined,
         elemental_types_elements: detail.elemental_types.map((et) =>
           elementModule.get(resAndTresTrim(et.path)),
         ),
+        initial_moves: undefined,
         initial_moves_moves: detail.initial_moves.map((im) =>
           moveModule.get(resAndTresTrim(im.path)),
         ),
+        tape_upgrades: undefined,
         tape_upgrades_moves: detail.tape_upgrades.map((tu) => {
           let path = (tu as IExternalResource)?.path;
           if (path == null) {
@@ -147,19 +158,17 @@ export class MonsterFormsModule extends CommonModule<IMonsterForm> {
           ...a,
           imageUrl: getAnimFileName(icon_url, idx),
         })),
-        learnable_moves: moveIds.map(moveModule.get).map((move: IMoveEnhanced) => ({
-          name_localised: move.name_localised,
-          power: move.power,
-          accuracy: move.accuracy,
-          category_name_localised: move.category_name_localised,
-          elemental_types_elements: move.elemental_types_elements,
-        })),
+        learnable_moves: moveIds.map(moveModule.get).map(moveToSimplified),
         meta_image_url: `/assets/img/meta/${langCode}${routes.monsters}/${encodeURI(mapKey)}.png`,
         battle_cry_audio_url: detail.battle_cry?.path?.replace('res://sfx/', '/assets/audio/'),
+        isSecret: detail.folder == 'monster_forms_secret',
 
-        // initialised the following later
+        // initialise the following later
         evolutions_monster: [],
         total_evolutions: 0,
+        spawn_overworld_locations: [],
+        spawn_backup_locations: [],
+        has_locations: false,
       };
 
       this._setupMoveMap(detailEnhanced, mapKey, language);
@@ -193,6 +202,62 @@ export class MonsterFormsModule extends CommonModule<IMonsterForm> {
         (this._itemDetailMap[mapKey].evolution_from_monster != null ? 1 : 0);
     }
     this.isReady = true;
+  };
+
+  combineData = async (langCode: string, modules: Array<CommonModule<unknown>>) => {
+    const monsterSpawnModule = this.getModuleOfType<IMonsterSpawn>(
+      modules,
+      ModuleType.MonsterSpawn,
+      true,
+    ) as MonsterSpawnModule;
+
+    const monsterToLocationMap = monsterSpawnModule.getMonsterToLocationMap();
+    for (const mapKey of Object.keys(this._itemDetailMap)) {
+      const locations = monsterToLocationMap[mapKey];
+      if (locations == null) continue;
+
+      const overworldHabitats: Array<IMonsterSpawnHabitatDetails> = [];
+      const backupHabitats: Array<IMonsterSpawnHabitatDetails> = [];
+      for (const locationId of locations) {
+        const monsterSpawn = monsterSpawnModule.get(locationId) as unknown as IMonsterSpawnEnhanced;
+
+        for (const species of monsterSpawn.species_enhanced) {
+          if (species.monsterId == mapKey) {
+            if (monsterSpawn.habitat_name_localised == null) continue;
+            const habitat = {
+              id: monsterSpawn.id,
+              percent: species.percent,
+              percentStr: species.percentStr,
+              overworldSprite: undefined,
+              habitat_name_localised: monsterSpawn.habitat_name_localised,
+              hour_min: species.hour_min,
+              hour_max: species.hour_max,
+              available_specific_time: species.available_specific_time,
+            };
+            if (species.overworldMonsterId != null) {
+              const overworldMon = this._itemDetailMap[species.overworldMonsterId];
+              if (overworldMon != null) {
+                overworldHabitats.push({
+                  ...habitat,
+                  overworldSprite: overworldMon.icon_url,
+                });
+                continue;
+              }
+            }
+
+            backupHabitats.push(habitat);
+          }
+        }
+      }
+      this._itemDetailMap[mapKey].spawn_overworld_locations = overworldHabitats.sort(
+        (a, b) => b.percent - a.percent,
+      );
+      this._itemDetailMap[mapKey].spawn_backup_locations = backupHabitats.sort(
+        (a, b) => b.percent - a.percent,
+      );
+      this._itemDetailMap[mapKey].has_locations =
+        overworldHabitats.length > 0 || backupHabitats.length > 0;
+    }
   };
 
   copyWav = async (overwrite: boolean) => {
@@ -279,14 +344,13 @@ export class MonsterFormsModule extends CommonModule<IMonsterForm> {
     }
 
     const relativePath = `${langCode}${routes.monsters}/index.html`;
-    const sortedList = list.sort(sortByStringProperty((l) => l.name_localised));
     await getHandlebar().compileTemplateToFile({
       data: this.getBasicPageData({
         langCode,
         modules,
         documentTitleUiKey: mainBreadcrumb.uiKey,
         breadcrumbs: [mainBreadcrumb],
-        data: { list: sortedList },
+        data: { list: list.sort(monsterSort) },
         relativePath,
       }),
       outputFiles: [relativePath],
@@ -312,17 +376,19 @@ export class MonsterFormsModule extends CommonModule<IMonsterForm> {
       }
     }
 
-    for (const initialMove of detail.initial_moves) {
-      const move = resAndTresTrim(initialMove.path);
+    for (const initialMove of detail.initial_moves_moves) {
       const newEntry: IMonsterFormMoveSource = {
         monster_id: mapKey,
         source: '',
       };
-      const existingMove = this._moveToMonsterIdsMap[move];
+      const existingMove = this._moveToMonsterIdsMap[initialMove.id];
       if (existingMove) {
-        this._moveToMonsterIdsMap[move] = [...this._moveToMonsterIdsMap[move], newEntry];
+        this._moveToMonsterIdsMap[initialMove.id] = [
+          ...this._moveToMonsterIdsMap[initialMove.id],
+          newEntry,
+        ];
       } else {
-        this._moveToMonsterIdsMap[move] = [newEntry];
+        this._moveToMonsterIdsMap[initialMove.id] = [newEntry];
       }
     }
 

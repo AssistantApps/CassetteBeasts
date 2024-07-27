@@ -3,12 +3,16 @@
 {{> partials/breadcrumb }}
 
 <section id="world-display" class="item-detail-card mb-3">
+  <div class="meta">
+    <h1>{{lookup @root.translate 'UI_PAUSE_MAP_BTN'}}</h1>
+  </div>
+
   <div id="world-tab-container" class="tab0">
     <div class="item-detail-card-heading primary noselect animate__animated animate__fadeIn">
       {{#each data.list}}
-      <div class="cursor-pointer tab-button-{{@index}}"
+      <div class="button-slanted cursor-pointer tab-button-{{@index}}"
         onclick="applyClassToId('world-tab-container', 'tab', 'tab{{@index}}')">
-        <span>{{this.title_localised}}</span>
+        <span class="button-slanted-content">{{this.title_localised}}</span>
       </div>
       {{/each}}
     </div>
@@ -24,8 +28,9 @@
               {{#each chunk_meta_data_localised}}
               {{#each this}}
               <div id="{{this.id}}" class="cell x-{{@index}} y-{{@../index}}">
+                {{#if this}}
                 <div class="popup">
-                  <h5>{{this.title_localised}}</h5>
+                  <h5>{{this.title_localised}} <small>({{this.id}})</small></h5>
                   {{#each this.features_localised}}
                   <div class="details">
                     {{#if this.icon_url}}
@@ -33,11 +38,20 @@
                       draggable="false">
                     {{/if}}
                     <div class="text">
-                      <h4 class="name">{{this.title_localised}}</h4>
+                      <p class="name">{{this.title_localised}}</p>
                     </div>
                   </div>
                   {{/each}}
+                  {{#if this.monster_in_habitat}}
+                  <div class="monster-spawns">
+                    {{#each this.monster_in_habitat}}
+                    <img src="{{resimage this.icon_url}}" alt="{{this.name_localised}}"
+                      data-tooltip="{{this.name_localised}}" />
+                    {{/each}}
+                  </div>
+                  {{/if}}
                 </div>
+                {{/if}}
               </div>
               {{/each}}
               {{/each}}

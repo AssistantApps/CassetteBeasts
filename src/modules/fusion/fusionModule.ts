@@ -1,8 +1,13 @@
 import fs from 'fs';
 
+import { breadcrumb } from 'constant/breadcrumb';
+import { handlebarTemplate } from 'constant/handlebar';
 import { IntermediateFile } from 'constant/intermediateFile';
 import { ModuleType } from 'constant/module';
+import { routes } from 'constant/route';
 import { IFusion, IFusionEnhanced } from 'contracts/fusion';
+import { ILocalisation } from 'contracts/localisation';
+import { IMonsterForm } from 'contracts/monsterForm';
 import { INodeResource, INodeResourceEnhanced } from 'contracts/nodeResource';
 import { ISpriteAnim } from 'contracts/spriteAnim';
 import { getAnimFileName, getFileFromFilePath } from 'helpers/fileHelper';
@@ -12,13 +17,8 @@ import { mapNodeResourceFromFlatMap } from 'mapper/nodeResourceMapper';
 import { readItemDetail } from 'modules/baseModule';
 import { CommonModule } from 'modules/commonModule';
 import { LocalisationModule } from 'modules/localisation/localisationModule';
-import { fusionMapFromDetailList } from './fusionMapFromDetailList';
-import { breadcrumb } from 'constant/breadcrumb';
-import { routes } from 'constant/route';
-import { ILocalisation } from 'contracts/localisation';
-import { IMonsterForm } from 'contracts/monsterForm';
 import { getHandlebar } from 'services/internal/handlebarService';
-import { handlebarTemplate } from 'constant/handlebar';
+import { fusionMapFromDetailList } from './fusionMapFromDetailList';
 
 export class FusionModule extends CommonModule<IFusion> {
   private _folder = FolderPathHelper.fusions();

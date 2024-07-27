@@ -1,7 +1,11 @@
 import fs from 'fs';
 
+import { breadcrumb } from 'constant/breadcrumb';
+import { elementOrder } from 'constant/element';
+import { handlebarTemplate } from 'constant/handlebar';
 import { IntermediateFile } from 'constant/intermediateFile';
 import { ModuleType } from 'constant/module';
+import { routes } from 'constant/route';
 import { IElement, IElementEnhanced } from 'contracts/element';
 import {
   IElementGridCell,
@@ -9,17 +13,12 @@ import {
   IElementReactionEnhanced,
 } from 'contracts/elementReaction';
 import { ILocalisation } from 'contracts/localisation';
+import { IStatusEffect } from 'contracts/statusEffect';
 import { FolderPathHelper } from 'helpers/folderPathHelper';
 import { getItemFromMapByIntId, readItemDetail } from 'modules/baseModule';
 import { CommonModule } from 'modules/commonModule';
-import { elementReactionMapFromDetailList } from './elementReactionMapFromDetailList';
-import { elementOrder } from 'constant/element';
-import { breadcrumb } from 'constant/breadcrumb';
-import { routes } from 'constant/route';
 import { getHandlebar } from 'services/internal/handlebarService';
-import { handlebarTemplate } from 'constant/handlebar';
-import { LocalisationModule } from 'modules/localisation/localisationModule';
-import { IStatusEffect, IStatusEffectEnhanced } from 'contracts/statusEffect';
+import { elementReactionMapFromDetailList } from './elementReactionMapFromDetailList';
 
 export class ElementReactionModule extends CommonModule<IElementReaction> {
   private _folder = FolderPathHelper.elementReactions();
@@ -48,7 +47,7 @@ export class ElementReactionModule extends CommonModule<IElementReaction> {
       });
       this._baseDetails.push(detail);
     }
-    return `${this._baseDetails.length} element reactions`;
+    return `${this._baseDetails.length}  element reactions`;
   };
 
   enrichData = async (langCode: string, modules: Array<CommonModule<unknown>>) => {

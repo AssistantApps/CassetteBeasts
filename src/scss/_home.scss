@@ -9,13 +9,22 @@ $cardPadding: 0.5em;
 
 #home-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1em;
   row-gap: 1em;
   margin-bottom: 0;
 
   a {
     text-decoration: none;
+    border: 2px solid rgba(0, 0, 0, 0.25);
+    border-radius: var(--card-border-radius);
+    transition: transform 250ms ease-in-out, box-shadow 250ms ease-in-out;
+
+    &:hover {
+      z-index: 4;
+      transform: translateY(-10px);
+      box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.25);
+    }
 
     article {
       display: flex;
@@ -31,6 +40,7 @@ $cardPadding: 0.5em;
         img {
           max-width: 192px;
           margin: 0 auto;
+          border-radius: var(--card-border-radius);
         }
       }
 

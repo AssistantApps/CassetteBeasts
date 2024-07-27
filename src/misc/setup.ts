@@ -2,10 +2,10 @@ import fs from 'fs';
 import path from 'path';
 import prompts from 'prompts';
 
+import { TemplateGenerationSpeed } from 'constant/handlebar';
 import { timeout } from 'helpers/asyncHelper';
 import { addSpacesForEnum, capitalizeFirstLetter } from 'helpers/stringHelper';
 import { getBotPath } from 'services/internal/configService';
-import { TemplateGenerationSpeed } from 'constant/handlebar';
 
 export const setupDirectories = (props: { delete?: boolean }) => {
   const distFolder = path.join(getBotPath(), 'dist');

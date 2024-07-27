@@ -66,7 +66,17 @@ This was purely a personal choice, I am a a bit tired of using client-side javas
 <br />
 <br />
 
+---
+
+By using the software and services provided, you agree to our [Terms and conditions][cassetteBeastTerms], [Privacy Policy][cassetteBeastPrivacy], and [Code of Conduct][cassetteBeastCodeOfConduct].
+
+<br />
+<br />
+
 [cassetteBeastWebsite]: https://www.cassettebeasts.com?ref=AssistantAppsCBGithub
+[cassetteBeastPrivacy]: https://www.cassettebeasts.com/privacy_policy.html?ref=AssistantAppsCBGithub
+[cassetteBeastTerms]: https://www.cassettebeasts.com/terms_and_conditions.html?ref=AssistantAppsCBGithub
+[cassetteBeastCodeOfConduct]: https://github.com/AssistantApps/CassetteBeasts?tab=coc-ov-file#readme&ref=AssistantAppsCBGithub
 [cassetteBeastWiki]: https://wiki.cassettebeasts.com?ref=AssistantAppsCBGithub
 [handlebarJS]: https://handlebarsjs.com?ref=AssistantAppsCBGithub
 [webpmux]: https://developers.google.com/speed/webp/docs/webpmux?ref=AssistantAppsCBGithub

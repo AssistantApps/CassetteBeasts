@@ -29,6 +29,17 @@ function onPageLoad() {
   const tabContentId = `tab${window.assistantApps.useGif ? 1 : 0}`;
   const spriteContainerNode = document.getElementById('sprite-tab-container');
   if (spriteContainerNode != null) spriteContainerNode.classList.add(tabContentId);
+
+  const audios = document.querySelectorAll('audio.autoplay');
+  if (audios?.length > 0) {
+    audios[0].volume = 0.3;
+    const resetVolume = () => {
+      audios[0].volume = 1;
+      audios[0].removeEventListener('ended', resetVolume, false);
+    }
+    audios[0].addEventListener('ended', resetVolume, false);
+    audios[0].play();
+  }
 }
 
 //document.addEventListener("DOMContentLoaded", onPageLoad);
@@ -42,7 +53,10 @@ function setSetting(name, value) {
 function changeLanguage(newLangCode) {
   const pathName = window.location.pathname.substring(1);
   const slashIndex = pathName.indexOf('/');
-  const trailingPath = pathName.substring(slashIndex);
+  let trailingPath = pathName.substring(slashIndex);
+  if (slashIndex < 0) {
+    trailingPath = '/' + trailingPath;
+  }
 
   window.location.href = `/${newLangCode}${trailingPath}`;
 }

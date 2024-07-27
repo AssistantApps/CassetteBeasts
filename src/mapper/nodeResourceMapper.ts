@@ -1,7 +1,7 @@
 import { IExternalResource } from 'contracts/externalResource';
 import { INodeResource, INodeResourceEnhanced, INodeResourceHead } from 'contracts/nodeResource';
 import { tryParseVector2D } from 'helpers/mathHelper';
-import { stringToBool, stringToBoolWithDefault, stringToParent } from 'helpers/stringHelper';
+import { stringToBoolWithDefault, stringToParent } from 'helpers/stringHelper';
 
 export const nodeResourceHeadMapper = (line: string): INodeResourceHead | undefined => {
   const regexBasicLine = /\sname=\"(.+?)\"\stype=\"(.+?)\"\sparent=\"(.+?)\"/;

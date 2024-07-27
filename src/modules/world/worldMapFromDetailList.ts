@@ -2,8 +2,9 @@ import { IExternalResource } from 'contracts/externalResource';
 import { ISubAnimationResource } from 'contracts/subAnimationResource';
 import { ISubResource } from 'contracts/subResource';
 import { IWorld, IWorldMetaData } from 'contracts/world';
+import { tryParseRect2, tryParseVector2D } from 'helpers/mathHelper';
 import { getCleanedString } from 'helpers/stringHelper';
-import { getExternalResource, getExternalResources } from 'mapper/externalResourceMapper';
+import { getExternalResource } from 'mapper/externalResourceMapper';
 import { getSubResource, getSubResources } from 'mapper/subResourceMapper';
 
 export const worldMapFromDetailList =
@@ -29,6 +30,8 @@ export const worldMapFromDetailList =
         props.resourceMap['map_background'],
         props.externalResourcesMap,
       ),
+      chunk_layout: tryParseRect2(props.resourceMap['chunk_layout']),
+      texels_per_world_unit: tryParseVector2D(props.resourceMap['texels_per_world_unit']),
       chunk_metadata_path: getCleanedString(props.resourceMap['chunk_metadata_path']),
       default_chunk_metadata: getSubResource(
         props.resourceMap['default_chunk_metadata'],

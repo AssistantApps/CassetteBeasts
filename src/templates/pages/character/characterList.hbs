@@ -1,17 +1,21 @@
 {{#> layouts/default }}
 
-{{> partials/breadcrumb }}
+<div class="page-options-with-breadcrumbs">
+  {{> partials/breadcrumb }}
 
-<div class="page-options">
-  <label>
-    <input id="character-grid-checkbox" type="checkbox" role="switch" name="animated images"
-      onchange="toggleClassToId('character-grid', 'useGif', this.checked); setSetting('useGif', this.checked)">
-    <span>Use gifs</span>
-  </label>
+  <div class="page-options">
+    <label>
+      <input id="character-grid-checkbox" type="checkbox" role="switch" name="animated images"
+        onchange="toggleClassToId('character-grid', 'useGif', this.checked); setSetting('useGif', this.checked)">
+      <span>Use gifs</span>
+    </label>
+  </div>
 </div>
 
 <section id="character-grid" class="item-grid-list">
-  <h2 class="hidden">{{lookup @root.translate 'UI_BESTIARY_LIST_MODE_VIEW_MONSTERS'}}</h2>
+  <div class="meta">
+    <h1>{{lookup @root.translate 'characters'}}</h1>
+  </div>
   {{#each data.list}}
   <a href="/{{@root.langCode}}{{@root.routes.characters}}/{{this.resource_name}}.html"
     class="grid-list-item animate__animated animate__fadeIn" data-title="{{this.name_localised}}"

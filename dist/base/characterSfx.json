@@ -794,33 +794,54 @@
       {
         "name": "hurt",
         "files": [
-          "/assets/audio/voices/eugene/eugene_hurt_1.wav",
-          "/assets/audio/voices/eugene/eugene_hurt_2.wav",
-          "/assets/audio/voices/eugene/eugene_hurt_3.wav"
+          {
+            "url": "/assets/audio/voices/eugene/eugene_hurt_1.wav",
+            "autoplay": false
+          },
+          {
+            "url": "/assets/audio/voices/eugene/eugene_hurt_2.wav",
+            "autoplay": false
+          },
+          {
+            "url": "/assets/audio/voices/eugene/eugene_hurt_3.wav",
+            "autoplay": false
+          }
         ]
       },
       {
         "name": "recording",
         "files": [
-          "/assets/audio/voices/eugene/eugene_recording.wav"
+          {
+            "url": "/assets/audio/voices/eugene/eugene_recording.wav",
+            "autoplay": false
+          }
         ]
       },
       {
         "name": "recording success",
         "files": [
-          "/assets/audio/voices/eugene/eugene_recording_success.wav"
+          {
+            "url": "/assets/audio/voices/eugene/eugene_recording_success.wav",
+            "autoplay": true
+          }
         ]
       },
       {
         "name": "recording failure",
         "files": [
-          "/assets/audio/voices/eugene/eugene_recording_failure.wav"
+          {
+            "url": "/assets/audio/voices/eugene/eugene_recording_failure.wav",
+            "autoplay": false
+          }
         ]
       },
       {
         "name": "defeat",
         "files": [
-          "/assets/audio/voices/eugene/eugene_defeat.wav"
+          {
+            "url": "/assets/audio/voices/eugene/eugene_defeat.wav",
+            "autoplay": false
+          }
         ]
       }
     ]
@@ -884,33 +905,54 @@
       {
         "name": "hurt",
         "files": [
-          "/assets/audio/voices/felix/felix_hurt_1.wav",
-          "/assets/audio/voices/felix/felix_hurt_2.wav",
-          "/assets/audio/voices/felix/felix_hurt_3.wav"
+          {
+            "url": "/assets/audio/voices/felix/felix_hurt_1.wav",
+            "autoplay": false
+          },
+          {
+            "url": "/assets/audio/voices/felix/felix_hurt_2.wav",
+            "autoplay": false
+          },
+          {
+            "url": "/assets/audio/voices/felix/felix_hurt_3.wav",
+            "autoplay": false
+          }
         ]
       },
       {
         "name": "recording",
         "files": [
-          "/assets/audio/voices/felix/felix_recording.wav"
+          {
+            "url": "/assets/audio/voices/felix/felix_recording.wav",
+            "autoplay": false
+          }
         ]
       },
       {
         "name": "recording success",
         "files": [
-          "/assets/audio/voices/felix/felix_recording_success.wav"
+          {
+            "url": "/assets/audio/voices/felix/felix_recording_success.wav",
+            "autoplay": true
+          }
         ]
       },
       {
         "name": "recording failure",
         "files": [
-          "/assets/audio/voices/felix/felix_recording_failure.wav"
+          {
+            "url": "/assets/audio/voices/felix/felix_recording_failure.wav",
+            "autoplay": false
+          }
         ]
       },
       {
         "name": "defeat",
         "files": [
-          "/assets/audio/voices/felix/felix_defeat.wav"
+          {
+            "url": "/assets/audio/voices/felix/felix_defeat.wav",
+            "autoplay": false
+          }
         ]
       }
     ]
@@ -1549,33 +1591,54 @@
       {
         "name": "hurt",
         "files": [
-          "/assets/audio/voices/kayleigh/kayleigh_hurt_1.wav",
-          "/assets/audio/voices/kayleigh/kayleigh_hurt_2.wav",
-          "/assets/audio/voices/kayleigh/kayleigh_hurt_3.wav"
+          {
+            "url": "/assets/audio/voices/kayleigh/kayleigh_hurt_1.wav",
+            "autoplay": false
+          },
+          {
+            "url": "/assets/audio/voices/kayleigh/kayleigh_hurt_2.wav",
+            "autoplay": false
+          },
+          {
+            "url": "/assets/audio/voices/kayleigh/kayleigh_hurt_3.wav",
+            "autoplay": false
+          }
         ]
       },
       {
         "name": "recording",
         "files": [
-          "/assets/audio/voices/kayleigh/kayleigh_recording.wav"
+          {
+            "url": "/assets/audio/voices/kayleigh/kayleigh_recording.wav",
+            "autoplay": false
+          }
         ]
       },
       {
         "name": "recording success",
         "files": [
-          "/assets/audio/voices/kayleigh/kayleigh_recording_success.wav"
+          {
+            "url": "/assets/audio/voices/kayleigh/kayleigh_recording_success.wav",
+            "autoplay": true
+          }
         ]
       },
       {
         "name": "recording failure",
         "files": [
-          "/assets/audio/voices/kayleigh/kayleigh_recording_failure.wav"
+          {
+            "url": "/assets/audio/voices/kayleigh/kayleigh_recording_failure.wav",
+            "autoplay": false
+          }
         ]
       },
       {
         "name": "defeat",
         "files": [
-          "/assets/audio/voices/kayleigh/kayleigh_defeat.wav"
+          {
+            "url": "/assets/audio/voices/kayleigh/kayleigh_defeat.wav",
+            "autoplay": false
+          }
         ]
       }
     ]
@@ -2189,33 +2252,54 @@
       {
         "name": "hurt",
         "files": [
-          "/assets/audio/voices/meredith/meredith_hurt_1.wav",
-          "/assets/audio/voices/meredith/meredith_hurt_2.wav",
-          "/assets/audio/voices/meredith/meredith_hurt_3.wav"
+          {
+            "url": "/assets/audio/voices/meredith/meredith_hurt_1.wav",
+            "autoplay": false
+          },
+          {
+            "url": "/assets/audio/voices/meredith/meredith_hurt_2.wav",
+            "autoplay": false
+          },
+          {
+            "url": "/assets/audio/voices/meredith/meredith_hurt_3.wav",
+            "autoplay": false
+          }
         ]
       },
       {
         "name": "recording",
         "files": [
-          "/assets/audio/voices/meredith/meredith_recording.wav"
+          {
+            "url": "/assets/audio/voices/meredith/meredith_recording.wav",
+            "autoplay": false
+          }
         ]
       },
       {
         "name": "recording success",
         "files": [
-          "/assets/audio/voices/meredith/meredith_recording_success.wav"
+          {
+            "url": "/assets/audio/voices/meredith/meredith_recording_success.wav",
+            "autoplay": true
+          }
         ]
       },
       {
         "name": "recording failure",
         "files": [
-          "/assets/audio/voices/meredith/meredith_recording_failure.wav"
+          {
+            "url": "/assets/audio/voices/meredith/meredith_recording_failure.wav",
+            "autoplay": false
+          }
         ]
       },
       {
         "name": "defeat",
         "files": [
-          "/assets/audio/voices/meredith/meredith_defeat.wav"
+          {
+            "url": "/assets/audio/voices/meredith/meredith_defeat.wav",
+            "autoplay": false
+          }
         ]
       }
     ]
@@ -2393,33 +2477,54 @@
       {
         "name": "hurt",
         "files": [
-          "/assets/audio/voices/viola/viola_hurt_1.wav",
-          "/assets/audio/voices/viola/viola_hurt_2.wav",
-          "/assets/audio/voices/viola/viola_hurt_3.wav"
+          {
+            "url": "/assets/audio/voices/viola/viola_hurt_1.wav",
+            "autoplay": false
+          },
+          {
+            "url": "/assets/audio/voices/viola/viola_hurt_2.wav",
+            "autoplay": false
+          },
+          {
+            "url": "/assets/audio/voices/viola/viola_hurt_3.wav",
+            "autoplay": false
+          }
         ]
       },
       {
         "name": "recording",
         "files": [
-          "/assets/audio/voices/viola/viola_recording.wav"
+          {
+            "url": "/assets/audio/voices/viola/viola_recording.wav",
+            "autoplay": false
+          }
         ]
       },
       {
         "name": "recording success",
         "files": [
-          "/assets/audio/voices/viola/viola_recording_success.wav"
+          {
+            "url": "/assets/audio/voices/viola/viola_recording_success.wav",
+            "autoplay": true
+          }
         ]
       },
       {
         "name": "recording failure",
         "files": [
-          "/assets/audio/voices/viola/viola_recording_failure.wav"
+          {
+            "url": "/assets/audio/voices/viola/viola_recording_failure.wav",
+            "autoplay": false
+          }
         ]
       },
       {
         "name": "defeat",
         "files": [
-          "/assets/audio/voices/viola/viola_defeat.wav"
+          {
+            "url": "/assets/audio/voices/viola/viola_defeat.wav",
+            "autoplay": false
+          }
         ]
       }
     ]

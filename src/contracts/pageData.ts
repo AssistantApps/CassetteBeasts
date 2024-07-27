@@ -5,6 +5,7 @@ export type PageData<T> = typeof site & {
   humansArray: Array<string>;
   analyticsCode: string;
   version: string;
+  relativePath?: string;
   documentTitle?: string;
   documentTitleUiKey?: string;
   alternateUrls: Array<string>;

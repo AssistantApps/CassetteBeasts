@@ -17,8 +17,9 @@ import { IStatusEffect, IStatusEffectEnhanced } from 'contracts/statusEffect';
 import { scaffoldFolderAndDelFileIfOverwrite } from 'helpers/fileHelper';
 import { FolderPathHelper } from 'helpers/folderPathHelper';
 import { generateMetaImage } from 'helpers/imageHelper';
-import { sortByStringProperty } from 'helpers/sortHelper';
+import { monsterSimplifiedSort, sortByStringProperty } from 'helpers/sortHelper';
 import { limitLengthWithEllipse, resAndTresTrim } from 'helpers/stringHelper';
+import { monsterToSimplified } from 'mapper/monsterMapper';
 import { readItemDetail } from 'modules/baseModule';
 import { CommonModule } from 'modules/commonModule';
 import { LocalisationModule } from 'modules/localisation/localisationModule';
@@ -31,6 +32,7 @@ import { getMoveMetaImage } from './moveMeta';
 export class MovesModule extends CommonModule<IMove> {
   private _folder = FolderPathHelper.moves();
   private _moveTagToMovesIdMap: Record<string, Array<string>> = {};
+  private _statusEffectToMovesIdMap: Record<string, Array<string>> = {};
 
   constructor() {
     super({
@@ -69,10 +71,13 @@ export class MovesModule extends CommonModule<IMove> {
     );
 
     for (const detail of this._baseDetails) {
+      if (detail.id == 'placeholder') continue;
+      if (detail.id.includes('debug')) continue;
+
       for (const tag of detail.tags) {
-        const existingMove = this._moveTagToMovesIdMap[tag];
-        if (existingMove) {
-          this._moveTagToMovesIdMap[tag] = [...this._moveTagToMovesIdMap[tag], detail.id];
+        const existingMoves = this._moveTagToMovesIdMap[tag];
+        if (existingMoves) {
+          this._moveTagToMovesIdMap[tag] = [...existingMoves, detail.id];
         } else {
           this._moveTagToMovesIdMap[tag] = [detail.id];
         }
@@ -81,6 +86,15 @@ export class MovesModule extends CommonModule<IMove> {
       const status_effects_elements = detail.status_effects
         .map((se) => statusEffectModule.get(resAndTresTrim(se.path)))
         .filter((er) => er != null) as Array<IStatusEffectEnhanced>;
+      for (const status_effect of status_effects_elements) {
+        const existingStatusEffects = this._statusEffectToMovesIdMap[status_effect.id];
+        if (existingStatusEffects) {
+          this._statusEffectToMovesIdMap[status_effect.id] = [...existingStatusEffects, detail.id];
+        } else {
+          this._statusEffectToMovesIdMap[status_effect.id] = [detail.id];
+        }
+      }
+
       const elemental_types_elements = detail.elemental_types
         .map((et) => elementModule.get(resAndTresTrim(et.path)))
         .filter((er) => er != null) as Array<IElementEnhanced>;
@@ -112,28 +126,61 @@ export class MovesModule extends CommonModule<IMove> {
       true,
     ) as MonsterFormsModule;
 
+    const allMonsterMap = monsterModule._itemDetailMap;
+    const monstersList = Object.keys(allMonsterMap).map(
+      (m) => allMonsterMap[m] as IMonsterFormEnhanced,
+    );
+    const moveTypeToMonsterMapCache: Record<string, Array<IMonsterFormSimplified>> = {};
+
     const moveToMonsterIdMap = monsterModule.getMoveToMonsterIdMap();
-    for (const detail of this._baseDetails) {
-      const monsters_that_can_learn: Array<IMonsterFormSimplified> = [];
+    for (const moveKey of Object.keys(this._itemDetailMap)) {
+      const detail: IMoveEnhanced = this._itemDetailMap[moveKey];
+      const monstersThatCanLearnMap: Record<string, IMonsterFormSimplified> = {};
       for (const tag of detail.tags) {
         const monsterFromSrcLists = moveToMonsterIdMap?.[tag] ?? [];
         for (const monsterFromSrc of monsterFromSrcLists) {
+          const existingValue = monstersThatCanLearnMap[monsterFromSrc.monster_id];
+          if (existingValue != null) continue;
+
           const monster = monsterModule.get(monsterFromSrc.monster_id);
           const monsterDetail = monster as IMonsterFormEnhanced;
-          monsters_that_can_learn.push({
-            name_localised: monsterDetail.name_localised,
-            resource_name: monsterDetail.resource_name,
-            icon_url: monsterDetail.icon_url,
+          monstersThatCanLearnMap[monsterFromSrc.monster_id] = {
+            ...monsterToSimplified(monsterDetail),
             source: monsterFromSrc.source,
-            bestiary_index_with_padding: monsterDetail.bestiary_index_with_padding,
-          });
+          };
         }
       }
-      this._itemDetailMap[detail.id].monsters_that_can_learn = monsters_that_can_learn;
+
+      let monstersOfType: Array<IMonsterFormSimplified> = [];
+      for (const element of detail.elemental_types_elements) {
+        monstersOfType = moveTypeToMonsterMapCache[element.id];
+        if (monstersOfType != null) {
+          continue;
+        }
+
+        monstersOfType = monstersList
+          .filter(
+            (m) =>
+              m.elemental_types_elements.filter((el) =>
+                detail.elemental_types_elements.map((elType) => elType.id).includes(el.id),
+              ).length > 0,
+          )
+          .map(monsterToSimplified);
+        moveTypeToMonsterMapCache[element.id] = [...monstersOfType];
+      }
+
+      for (const monsterOfType of monstersOfType) {
+        const existingValue = monstersThatCanLearnMap[monsterOfType.id];
+        if (existingValue != null) continue;
+        monstersThatCanLearnMap[monsterOfType.id] = monsterOfType;
+      }
+      this._itemDetailMap[detail.id].monsters_that_can_learn =
+        Object.values(monstersThatCanLearnMap).sort(monsterSimplifiedSort);
     }
   };
 
   getMoveTagToMoveIdsMap = () => this._moveTagToMovesIdMap;
+  getStatusEffectToMovesIdMap = () => this._statusEffectToMovesIdMap;
 
   generateMetaImages = async (
     langCode: string,
@@ -175,8 +222,6 @@ export class MovesModule extends CommonModule<IMove> {
     const list: Array<IMoveEnhanced> = [];
     for (const mapKey of Object.keys(this._itemDetailMap)) {
       const details: IMoveEnhanced = this._itemDetailMap[mapKey];
-      if (details.id == 'placeholder') continue;
-      if (details.id.includes('debug')) continue;
 
       const status_effects_elements_max_3 = details.status_effects_elements.slice(0, 3);
       if (details.status_effects_elements.length > 3) {

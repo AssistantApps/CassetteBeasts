@@ -1,5 +1,6 @@
 .page-container {
   position: relative;
+  padding-top: 0;
 }
 
 body.overflow-x-hidden {
@@ -29,6 +30,7 @@ body.overflow-x-hidden {
 .dropdown-list {
   max-height: 50vh;
   overflow-y: auto;
+
   &::-webkit-scrollbar-track {
     margin-top: 0;
     margin-bottom: 0;
@@ -39,11 +41,27 @@ body.overflow-x-hidden {
   flex: 1;
 }
 
+.page-options-with-breadcrumbs {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 1em;
+
+  .breadcrumb {
+    margin: 0;
+    height: unset;
+  }
+
+  .page-options {
+
+    >label,
+    >select {
+      margin: 0;
+    }
+  }
+}
+
 .page-options {
-  position: absolute;
-  top: 1em;
-  right: 0;
-  width: 100%;
+  flex: 1;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -52,16 +70,15 @@ body.overflow-x-hidden {
   --pico-box-shadow: none !important;
   --pico-switch-checked-background-color: var(--brand-tertiary) !important;
 
-  > * {
+  >* {
     max-width: 250px;
     z-index: 1;
   }
 
-  > label {
+  >label {
     display: flex;
     flex-direction: row;
     padding: 0.25em 0.75em;
-    height: 100%;
     border: var(--pico-border-width) solid var(--pico-form-element-border-color);
     border-radius: var(--pico-border-radius);
     outline: 0;
@@ -71,12 +88,13 @@ body.overflow-x-hidden {
     input {
       margin-top: 3px;
     }
+
     span {
       display: block;
     }
   }
 
-  > select {
+  >select {
     padding: 0.25em 0.75em;
     height: unset;
   }
@@ -86,7 +104,11 @@ body.overflow-x-hidden {
   max-width: 100%;
   margin-bottom: 0.5em;
 
-  > input {
+  fieldset {
+    box-shadow: none;
+  }
+
+  >input {
     --pico-border-radius: 0.25rem;
   }
 
@@ -106,12 +128,14 @@ body.overflow-x-hidden {
     --pico-color: white;
     text-decoration: none;
   }
+
   .branding {
     &:hover {
       .logo {
         animation: tada;
         animation-duration: 2s;
       }
+
       .title span {
         animation: waive;
         animation-duration: 2s;
@@ -119,6 +143,7 @@ body.overflow-x-hidden {
         animation-delay: calc(0.1s * var(--i));
       }
     }
+
     .title span {
       display: inline-block;
     }
@@ -159,23 +184,28 @@ footer {
     content: '';
     z-index: 1;
   }
+
   &::before {
     width: 0;
     height: 100%;
     border-width: 1px 0 1px 0;
   }
+
   &::after {
     width: 100%;
     height: 0;
     border-width: 0 1px 0 1px;
   }
+
   &:hover {
     border-color: var(--brand-tertiary);
     color: var(--brand-tertiary);
+
     &::before {
       width: 100%;
       border-width: 1px 0 1px 0;
     }
+
     &::after {
       height: 100%;
       border-width: 0 1px 0 1px;
