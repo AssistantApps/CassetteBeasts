@@ -5,7 +5,7 @@ import { ISubAnimationResource } from 'contracts/subAnimationResource';
 import { ISubResource, ISubResourceMonsterEnhanced } from 'contracts/subResource';
 import { tryParseFloat, tryParseInt } from 'helpers/mathHelper';
 import { getCleanedString, resAndTresTrim, stringToBool } from 'helpers/stringHelper';
-import { getExternalResource } from 'mapper/externalResourceMapper';
+import { getExternalResource, getExternalResources } from 'mapper/externalResourceMapper';
 import { MovesModule } from 'modules/moves/movesModule';
 
 export const monsterSpawnMapFromDetailList =
@@ -37,7 +37,7 @@ export const monsterSpawnMapFromDetailList =
     return {
       id,
       habitat_name: getCleanedString(props.resourceMap['habitat_name']),
-      habitat_overworld_chunks: getExternalResource(
+      habitat_overworld_chunks: getExternalResources(
         props.resourceMap['habitat_overworld_chunks'], //
         props.externalResourcesMap,
       ),

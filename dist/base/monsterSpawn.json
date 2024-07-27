@@ -2,11 +2,18 @@
   {
     "id": "autumn_hill_caves",
     "habitat_name": "REGION_NAME_AUTUMN_HILL_CAVES",
-    "habitat_overworld_chunks": {
-      "id": 5,
-      "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_6_-4.tres",
-      "type": "Resource"
-    },
+    "habitat_overworld_chunks": [
+      {
+        "id": 5,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_6_-4.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 10,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_7_-6.tres",
+        "type": "Resource"
+      }
+    ],
     "habitat_endless": true,
     "min_team_size": 1,
     "max_team_size": 2,
@@ -152,11 +159,38 @@
   {
     "id": "autumn_hill_high_level",
     "habitat_name": "REGION_NAME_AUTUMN_HILL",
-    "habitat_overworld_chunks": {
-      "id": 8,
-      "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_6_-5.tres",
-      "type": "Resource"
-    },
+    "habitat_overworld_chunks": [
+      {
+        "id": 8,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_6_-5.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 9,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_6_-6.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 11,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_7_-5.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 10,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_7_-6.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 18,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_8_-6.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 7,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_7_-4.tres",
+        "type": "Resource"
+      }
+    ],
     "habitat_endless": true,
     "min_team_size": 1,
     "max_team_size": 2,
@@ -267,11 +301,13 @@
   {
     "id": "autumn_hill_high_level_bulletino",
     "habitat_name": "REGION_NAME_AUTUMN_HILL",
-    "habitat_overworld_chunks": {
-      "id": 4,
-      "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_8_-4.tres",
-      "type": "Resource"
-    },
+    "habitat_overworld_chunks": [
+      {
+        "id": 4,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_8_-4.tres",
+        "type": "Resource"
+      }
+    ],
     "habitat_endless": true,
     "min_team_size": 1,
     "max_team_size": 2,
@@ -392,11 +428,23 @@
   {
     "id": "autumn_hill_low_level",
     "habitat_name": "REGION_NAME_AUTUMN_HILL",
-    "habitat_overworld_chunks": {
-      "id": 9,
-      "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_6_-3.tres",
-      "type": "Resource"
-    },
+    "habitat_overworld_chunks": [
+      {
+        "id": 9,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_6_-3.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 18,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_6_-4.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 8,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_7_-3.tres",
+        "type": "Resource"
+      }
+    ],
     "habitat_endless": true,
     "min_team_size": 1,
     "max_team_size": 2,
@@ -467,11 +515,18 @@
   {
     "id": "autumn_hill_low_level_bulletino",
     "habitat_name": "REGION_NAME_AUTUMN_HILL",
-    "habitat_overworld_chunks": {
-      "id": 7,
-      "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_8_-3.tres",
-      "type": "Resource"
-    },
+    "habitat_overworld_chunks": [
+      {
+        "id": 7,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_8_-3.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 8,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_8_-5.tres",
+        "type": "Resource"
+      }
+    ],
     "habitat_endless": true,
     "min_team_size": 1,
     "max_team_size": 2,
@@ -547,11 +602,23 @@
   {
     "id": "autumn_hill_sea_island",
     "habitat_name": "REGION_NAME_MIRE_SEA",
-    "habitat_overworld_chunks": {
-      "id": 5,
-      "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_6_-7.tres",
-      "type": "Resource"
-    },
+    "habitat_overworld_chunks": [
+      {
+        "id": 5,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_6_-7.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 8,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_7_-7.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 6,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_8_-7.tres",
+        "type": "Resource"
+      }
+    ],
     "habitat_endless": true,
     "min_team_size": 1,
     "max_team_size": 2,
@@ -612,11 +679,18 @@
   {
     "id": "autumn_hill_springheel",
     "habitat_name": "REGION_NAME_AUTUMN_HILL",
-    "habitat_overworld_chunks": {
-      "id": 18,
-      "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_6_-4.tres",
-      "type": "Resource"
-    },
+    "habitat_overworld_chunks": [
+      {
+        "id": 18,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_6_-4.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 7,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_7_-3.tres",
+        "type": "Resource"
+      }
+    ],
     "habitat_endless": false,
     "min_team_size": 1,
     "max_team_size": 2,
@@ -707,11 +781,23 @@
   {
     "id": "autumn_hill_water",
     "habitat_name": "REGION_NAME_MIRE_SEA",
-    "habitat_overworld_chunks": {
-      "id": 6,
-      "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_6_-7.tres",
-      "type": "Resource"
-    },
+    "habitat_overworld_chunks": [
+      {
+        "id": 6,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_6_-7.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 8,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_7_-7.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 7,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_8_-7.tres",
+        "type": "Resource"
+      }
+    ],
     "habitat_endless": true,
     "min_team_size": 1,
     "max_team_size": 2,
@@ -762,11 +848,18 @@
   {
     "id": "brokenhead",
     "habitat_name": "REGION_NAME_BROKENHEAD",
-    "habitat_overworld_chunks": {
-      "id": 9,
-      "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-7_-7.tres",
-      "type": "Resource"
-    },
+    "habitat_overworld_chunks": [
+      {
+        "id": 9,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-7_-7.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 10,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-6_-7.tres",
+        "type": "Resource"
+      }
+    ],
     "habitat_endless": true,
     "min_team_size": 1,
     "max_team_size": 2,
@@ -857,11 +950,23 @@
   {
     "id": "cast_iron_shore",
     "habitat_name": "REGION_NAME_CAST_IRON_SHORE",
-    "habitat_overworld_chunks": {
-      "id": 3,
-      "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-6_-4.tres",
-      "type": "Resource"
-    },
+    "habitat_overworld_chunks": [
+      {
+        "id": 3,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-6_-4.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 6,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-6_-5.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 5,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-6_-6.tres",
+        "type": "Resource"
+      }
+    ],
     "habitat_endless": true,
     "min_team_size": 1,
     "max_team_size": 2,
@@ -887,6 +992,7 @@
   {
     "id": "church_quest_location",
     "habitat_name": "",
+    "habitat_overworld_chunks": [],
     "habitat_endless": false,
     "min_team_size": 1,
     "max_team_size": 2,
@@ -1037,11 +1143,48 @@
   {
     "id": "deadlands",
     "habitat_name": "REGION_NAME_DEADLANDS",
-    "habitat_overworld_chunks": {
-      "id": 16,
-      "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_4_-2.tres",
-      "type": "Resource"
-    },
+    "habitat_overworld_chunks": [
+      {
+        "id": 16,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_4_-2.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 15,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_5_-1.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 13,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_5_-2.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 19,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_6_-1.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 18,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_6_-2.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 17,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_7_-1.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 12,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_7_-2.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 14,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_8_-1.tres",
+        "type": "Resource"
+      }
+    ],
     "habitat_endless": true,
     "min_team_size": 1,
     "max_team_size": 2,
@@ -1122,11 +1265,18 @@
   {
     "id": "deadlands_caves",
     "habitat_name": "REGION_NAME_DEADLANDS_CAVES",
-    "habitat_overworld_chunks": {
-      "id": 12,
-      "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_6_-1.tres",
-      "type": "Resource"
-    },
+    "habitat_overworld_chunks": [
+      {
+        "id": 12,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_6_-1.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 9,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_8_-1.tres",
+        "type": "Resource"
+      }
+    ],
     "habitat_endless": false,
     "min_team_size": 1,
     "max_team_size": 2,
@@ -1232,11 +1382,13 @@
   {
     "id": "deadlands_quarry",
     "habitat_name": "REGION_NAME_DINO_QUARRY",
-    "habitat_overworld_chunks": {
-      "id": 8,
-      "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_8_-2.tres",
-      "type": "Resource"
-    },
+    "habitat_overworld_chunks": [
+      {
+        "id": 8,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_8_-2.tres",
+        "type": "Resource"
+      }
+    ],
     "habitat_endless": true,
     "min_team_size": 1,
     "max_team_size": 2,
@@ -1282,11 +1434,18 @@
   {
     "id": "deadlands_springheel",
     "habitat_name": "REGION_NAME_DEADLANDS",
-    "habitat_overworld_chunks": {
-      "id": 7,
-      "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_6_-2.tres",
-      "type": "Resource"
-    },
+    "habitat_overworld_chunks": [
+      {
+        "id": 7,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_6_-2.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 6,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_7_-2.tres",
+        "type": "Resource"
+      }
+    ],
     "habitat_endless": false,
     "min_team_size": 1,
     "max_team_size": 2,
@@ -1357,11 +1516,23 @@
   {
     "id": "deadlands_village",
     "habitat_name": "REGION_NAME_OLD_VILLAGE",
-    "habitat_overworld_chunks": {
-      "id": 10,
-      "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_7_-2.tres",
-      "type": "Resource"
-    },
+    "habitat_overworld_chunks": [
+      {
+        "id": 10,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_7_-2.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 13,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_5_-2.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 15,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_6_-2.tres",
+        "type": "Resource"
+      }
+    ],
     "habitat_endless": true,
     "min_team_size": 1,
     "max_team_size": 2,
@@ -1467,6 +1638,7 @@
   {
     "id": "dungeon_electric",
     "habitat_name": "",
+    "habitat_overworld_chunks": [],
     "habitat_endless": true,
     "min_team_size": 1,
     "max_team_size": 2,
@@ -1512,6 +1684,7 @@
   {
     "id": "dungeon_final",
     "habitat_name": "",
+    "habitat_overworld_chunks": [],
     "habitat_endless": true,
     "min_team_size": 1,
     "max_team_size": 2,
@@ -1572,11 +1745,13 @@
   {
     "id": "dungeon_glowshroom",
     "habitat_name": "REGION_NAME_DUNGEON_GLOWSHROOM",
-    "habitat_overworld_chunks": {
-      "id": 5,
-      "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_5_-4.tres",
-      "type": "Resource"
-    },
+    "habitat_overworld_chunks": [
+      {
+        "id": 5,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_5_-4.tres",
+        "type": "Resource"
+      }
+    ],
     "habitat_endless": true,
     "min_team_size": 1,
     "max_team_size": 2,
@@ -1642,11 +1817,13 @@
   {
     "id": "dungeon_graveyard",
     "habitat_name": "REGION_NAME_DUNGEON_GRAVEYARD",
-    "habitat_overworld_chunks": {
-      "id": 8,
-      "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-5_0.tres",
-      "type": "Resource"
-    },
+    "habitat_overworld_chunks": [
+      {
+        "id": 8,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-5_0.tres",
+        "type": "Resource"
+      }
+    ],
     "habitat_endless": false,
     "min_team_size": 1,
     "max_team_size": 2,
@@ -1742,6 +1919,7 @@
   {
     "id": "dungeon_landkeeper",
     "habitat_name": "",
+    "habitat_overworld_chunks": [],
     "habitat_endless": true,
     "min_team_size": 1,
     "max_team_size": 2,
@@ -1842,11 +2020,13 @@
   {
     "id": "dungeon_meadow_dominoth",
     "habitat_name": "REGION_NAME_DUNGEON_MEADOW",
-    "habitat_overworld_chunks": {
-      "id": 3,
-      "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-4_-4.tres",
-      "type": "Resource"
-    },
+    "habitat_overworld_chunks": [
+      {
+        "id": 3,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-4_-4.tres",
+        "type": "Resource"
+      }
+    ],
     "habitat_endless": true,
     "min_team_size": 1,
     "max_team_size": 2,
@@ -1912,11 +2092,13 @@
   {
     "id": "dungeon_meadow_elfless",
     "habitat_name": "REGION_NAME_DUNGEON_MEADOW",
-    "habitat_overworld_chunks": {
-      "id": 3,
-      "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-4_-4.tres",
-      "type": "Resource"
-    },
+    "habitat_overworld_chunks": [
+      {
+        "id": 3,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-4_-4.tres",
+        "type": "Resource"
+      }
+    ],
     "habitat_endless": true,
     "min_team_size": 1,
     "max_team_size": 1,
@@ -1942,6 +2124,7 @@
   {
     "id": "dungeon_meadow_platform",
     "habitat_name": "",
+    "habitat_overworld_chunks": [],
     "habitat_endless": false,
     "min_team_size": 1,
     "max_team_size": 2,
@@ -1992,11 +2175,13 @@
   {
     "id": "dungeon_meadow_springheel",
     "habitat_name": "REGION_NAME_DUNGEON_MEADOW",
-    "habitat_overworld_chunks": {
-      "id": 3,
-      "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-4_-4.tres",
-      "type": "Resource"
-    },
+    "habitat_overworld_chunks": [
+      {
+        "id": 3,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-4_-4.tres",
+        "type": "Resource"
+      }
+    ],
     "habitat_endless": true,
     "min_team_size": 1,
     "max_team_size": 2,
@@ -2092,11 +2277,13 @@
   {
     "id": "dungeon_mountain",
     "habitat_name": "REGION_NAME_MT_WIRRAL_STATION",
-    "habitat_overworld_chunks": {
-      "id": 5,
-      "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-3_-7.tres",
-      "type": "Resource"
-    },
+    "habitat_overworld_chunks": [
+      {
+        "id": 5,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-3_-7.tres",
+        "type": "Resource"
+      }
+    ],
     "habitat_endless": true,
     "min_team_size": 2,
     "max_team_size": 2,
@@ -2147,11 +2334,13 @@
   {
     "id": "dungeon_power_station",
     "habitat_name": "REGION_NAME_POWER_STATION",
-    "habitat_overworld_chunks": {
-      "id": 4,
-      "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_8_-2.tres",
-      "type": "Resource"
-    },
+    "habitat_overworld_chunks": [
+      {
+        "id": 4,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_8_-2.tres",
+        "type": "Resource"
+      }
+    ],
     "habitat_endless": true,
     "min_team_size": 2,
     "max_team_size": 2,
@@ -2197,11 +2386,13 @@
   {
     "id": "dungeon_shipwreck",
     "habitat_name": "REGION_NAME_DUNGEON_SHIPWRECK",
-    "habitat_overworld_chunks": {
-      "id": 8,
-      "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-6_-6.tres",
-      "type": "Resource"
-    },
+    "habitat_overworld_chunks": [
+      {
+        "id": 8,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-6_-6.tres",
+        "type": "Resource"
+      }
+    ],
     "habitat_endless": true,
     "min_team_size": 1,
     "max_team_size": 2,
@@ -2262,11 +2453,13 @@
   {
     "id": "dungeon_waterloop",
     "habitat_name": "REGION_NAME_DUNGEON_WATERLOOP",
-    "habitat_overworld_chunks": {
-      "id": 10,
-      "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_1_-4.tres",
-      "type": "Resource"
-    },
+    "habitat_overworld_chunks": [
+      {
+        "id": 10,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_1_-4.tres",
+        "type": "Resource"
+      }
+    ],
     "habitat_endless": true,
     "min_team_size": 1,
     "max_team_size": 2,
@@ -2367,11 +2560,13 @@
   {
     "id": "eastham_woods_caves",
     "habitat_name": "REGION_NAME_EASTHAM_WOODS_CAVES",
-    "habitat_overworld_chunks": {
-      "id": 15,
-      "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_2_-7.tres",
-      "type": "Resource"
-    },
+    "habitat_overworld_chunks": [
+      {
+        "id": 15,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_2_-7.tres",
+        "type": "Resource"
+      }
+    ],
     "habitat_endless": false,
     "min_team_size": 1,
     "max_team_size": 2,
@@ -2482,11 +2677,18 @@
   {
     "id": "eastham_woods_springheel",
     "habitat_name": "REGION_NAME_EASTHAM_WOODS",
-    "habitat_overworld_chunks": {
-      "id": 18,
-      "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_0_-6.tres",
-      "type": "Resource"
-    },
+    "habitat_overworld_chunks": [
+      {
+        "id": 18,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_0_-6.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 13,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_1_-6.tres",
+        "type": "Resource"
+      }
+    ],
     "habitat_endless": false,
     "min_team_size": 1,
     "max_team_size": 2,
@@ -2567,11 +2769,58 @@
   {
     "id": "eastham_woods_with_boltam",
     "habitat_name": "REGION_NAME_EASTHAM_WOODS",
-    "habitat_overworld_chunks": {
-      "id": 17,
-      "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_0_-7.tres",
-      "type": "Resource"
-    },
+    "habitat_overworld_chunks": [
+      {
+        "id": 17,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_0_-7.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 11,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_0_-6.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 15,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_1_-7.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 16,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_1_-6.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 14,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_2_-7.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 21,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_2_-6.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 23,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_3_-7.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 24,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_3_-6.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 13,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_4_-7.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 18,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_4_-6.tres",
+        "type": "Resource"
+      }
+    ],
     "habitat_endless": true,
     "min_team_size": 1,
     "max_team_size": 2,
@@ -2677,11 +2926,23 @@
   {
     "id": "eastham_woods_with_dominoth",
     "habitat_name": "REGION_NAME_EASTHAM_WOODS",
-    "habitat_overworld_chunks": {
-      "id": 12,
-      "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_5_-7.tres",
-      "type": "Resource"
-    },
+    "habitat_overworld_chunks": [
+      {
+        "id": 12,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_5_-7.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 3,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_5_-6.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 11,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_5_-5.tres",
+        "type": "Resource"
+      }
+    ],
     "habitat_endless": true,
     "min_team_size": 1,
     "max_team_size": 2,
@@ -2772,6 +3033,7 @@
   {
     "id": "elemental_altar_air",
     "habitat_name": "",
+    "habitat_overworld_chunks": [],
     "habitat_endless": false,
     "min_team_size": 1,
     "max_team_size": 2,
@@ -2812,6 +3074,7 @@
   {
     "id": "elemental_altar_earth",
     "habitat_name": "",
+    "habitat_overworld_chunks": [],
     "habitat_endless": false,
     "min_team_size": 1,
     "max_team_size": 2,
@@ -2852,6 +3115,7 @@
   {
     "id": "elemental_altar_fire",
     "habitat_name": "",
+    "habitat_overworld_chunks": [],
     "habitat_endless": false,
     "min_team_size": 1,
     "max_team_size": 2,
@@ -2892,6 +3156,7 @@
   {
     "id": "elemental_altar_water",
     "habitat_name": "",
+    "habitat_overworld_chunks": [],
     "habitat_endless": false,
     "min_team_size": 1,
     "max_team_size": 2,
@@ -2922,11 +3187,13 @@
   {
     "id": "farm_cluckabilly",
     "habitat_name": "REGION_NAME_FARM",
-    "habitat_overworld_chunks": {
-      "id": 5,
-      "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-3_-1.tres",
-      "type": "Resource"
-    },
+    "habitat_overworld_chunks": [
+      {
+        "id": 5,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-3_-1.tres",
+        "type": "Resource"
+      }
+    ],
     "habitat_endless": true,
     "min_team_size": 1,
     "max_team_size": 2,
@@ -2962,11 +3229,13 @@
   {
     "id": "farm_nevermort",
     "habitat_name": "REGION_NAME_FARM",
-    "habitat_overworld_chunks": {
-      "id": 5,
-      "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-3_-1.tres",
-      "type": "Resource"
-    },
+    "habitat_overworld_chunks": [
+      {
+        "id": 5,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-3_-1.tres",
+        "type": "Resource"
+      }
+    ],
     "habitat_endless": true,
     "min_team_size": 1,
     "max_team_size": 2,
@@ -3002,11 +3271,13 @@
   {
     "id": "farm_pumpkin_patch",
     "habitat_name": "REGION_NAME_FARM",
-    "habitat_overworld_chunks": {
-      "id": 1,
-      "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-3_-1.tres",
-      "type": "Resource"
-    },
+    "habitat_overworld_chunks": [
+      {
+        "id": 1,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-3_-1.tres",
+        "type": "Resource"
+      }
+    ],
     "habitat_endless": true,
     "min_team_size": 1,
     "max_team_size": 2,
@@ -3052,6 +3323,7 @@
   {
     "id": "farm_quest_location",
     "habitat_name": "REGION_NAME_FARM",
+    "habitat_overworld_chunks": [],
     "habitat_endless": false,
     "min_team_size": 1,
     "max_team_size": 2,
@@ -3112,6 +3384,7 @@
   {
     "id": "flood_lava",
     "habitat_name": "",
+    "habitat_overworld_chunks": [],
     "habitat_endless": false,
     "min_team_size": 1,
     "max_team_size": 2,
@@ -3232,6 +3505,7 @@
   {
     "id": "flood_poison",
     "habitat_name": "",
+    "habitat_overworld_chunks": [],
     "habitat_endless": false,
     "min_team_size": 1,
     "max_team_size": 2,
@@ -3332,6 +3606,7 @@
   {
     "id": "flood_water",
     "habitat_name": "",
+    "habitat_overworld_chunks": [],
     "habitat_endless": false,
     "min_team_size": 1,
     "max_team_size": 2,
@@ -3452,11 +3727,18 @@
   {
     "id": "graveyard",
     "habitat_name": "REGION_NAME_GRAVEYARD",
-    "habitat_overworld_chunks": {
-      "id": 7,
-      "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-5_0.tres",
-      "type": "Resource"
-    },
+    "habitat_overworld_chunks": [
+      {
+        "id": 7,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-5_0.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 8,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-4_0.tres",
+        "type": "Resource"
+      }
+    ],
     "habitat_endless": true,
     "min_team_size": 1,
     "max_team_size": 2,
@@ -3577,6 +3859,7 @@
   {
     "id": "graveyard_fusion",
     "habitat_name": "",
+    "habitat_overworld_chunks": [],
     "habitat_endless": false,
     "min_team_size": 1,
     "max_team_size": 2,
@@ -3707,11 +3990,13 @@
   {
     "id": "graveyard_outside",
     "habitat_name": "REGION_NAME_GRAVEYARD",
-    "habitat_overworld_chunks": {
-      "id": 1,
-      "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-3_0.tres",
-      "type": "Resource"
-    },
+    "habitat_overworld_chunks": [
+      {
+        "id": 1,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-3_0.tres",
+        "type": "Resource"
+      }
+    ],
     "habitat_endless": true,
     "min_team_size": 1,
     "max_team_size": 2,
@@ -3812,11 +4097,18 @@
   {
     "id": "graveyard_pawndead",
     "habitat_name": "REGION_NAME_GRAVEYARD",
-    "habitat_overworld_chunks": {
-      "id": 7,
-      "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-5_0.tres",
-      "type": "Resource"
-    },
+    "habitat_overworld_chunks": [
+      {
+        "id": 7,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-5_0.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 8,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-4_0.tres",
+        "type": "Resource"
+      }
+    ],
     "habitat_endless": true,
     "min_team_size": 1,
     "max_team_size": 2,
@@ -3917,11 +4209,13 @@
   {
     "id": "graveyard_springheel",
     "habitat_name": "REGION_NAME_GRAVEYARD",
-    "habitat_overworld_chunks": {
-      "id": 7,
-      "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-5_0.tres",
-      "type": "Resource"
-    },
+    "habitat_overworld_chunks": [
+      {
+        "id": 7,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-5_0.tres",
+        "type": "Resource"
+      }
+    ],
     "habitat_endless": false,
     "min_team_size": 1,
     "max_team_size": 2,
@@ -4047,11 +4341,13 @@
   {
     "id": "ham",
     "habitat_name": "REGION_NAME_HAM",
-    "habitat_overworld_chunks": {
-      "id": 3,
-      "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-1_-7.tres",
-      "type": "Resource"
-    },
+    "habitat_overworld_chunks": [
+      {
+        "id": 3,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-1_-7.tres",
+        "type": "Resource"
+      }
+    ],
     "habitat_endless": true,
     "min_team_size": 1,
     "max_team_size": 2,
@@ -4157,11 +4453,28 @@
   {
     "id": "harbourtown_beach",
     "habitat_name": "REGION_NAME_TOWN_BEACH",
-    "habitat_overworld_chunks": {
-      "id": 7,
-      "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_2_0.tres",
-      "type": "Resource"
-    },
+    "habitat_overworld_chunks": [
+      {
+        "id": 7,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_2_0.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 10,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_3_0.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 8,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_4_0.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 9,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-2_0.tres",
+        "type": "Resource"
+      }
+    ],
     "habitat_endless": true,
     "min_team_size": 1,
     "max_team_size": 2,
@@ -4207,6 +4520,7 @@
   {
     "id": "harbourtown_bootleg_tutorial",
     "habitat_name": "",
+    "habitat_overworld_chunks": [],
     "habitat_endless": false,
     "min_team_size": 1,
     "max_team_size": 1,
@@ -4432,11 +4746,33 @@
   {
     "id": "harbourtown_outskirts",
     "habitat_name": "REGION_NAME_TOWN_OUTSKIRTS",
-    "habitat_overworld_chunks": {
-      "id": 13,
-      "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_2_-1.tres",
-      "type": "Resource"
-    },
+    "habitat_overworld_chunks": [
+      {
+        "id": 13,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_2_-1.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 12,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_2_-2.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 11,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_3_-1.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 14,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_3_-2.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 10,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_4_-1.tres",
+        "type": "Resource"
+      }
+    ],
     "habitat_endless": true,
     "min_team_size": 1,
     "max_team_size": 2,
@@ -4512,11 +4848,13 @@
   {
     "id": "harbourtown_outskirts_caves",
     "habitat_name": "REGION_NAME_TOWN_OUTSKIRTS_CAVES",
-    "habitat_overworld_chunks": {
-      "id": 13,
-      "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_2_-1.tres",
-      "type": "Resource"
-    },
+    "habitat_overworld_chunks": [
+      {
+        "id": 13,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_2_-1.tres",
+        "type": "Resource"
+      }
+    ],
     "habitat_endless": false,
     "min_team_size": 1,
     "max_team_size": 2,
@@ -4592,6 +4930,7 @@
   {
     "id": "harbourtown_outskirts_secret",
     "habitat_name": "",
+    "habitat_overworld_chunks": [],
     "habitat_endless": true,
     "min_team_size": 2,
     "max_team_size": 2,
@@ -4642,11 +4981,18 @@
   {
     "id": "harbourtown_outskirts_springheel",
     "habitat_name": "REGION_NAME_TOWN_OUTSKIRTS",
-    "habitat_overworld_chunks": {
-      "id": 7,
-      "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_2_-1.tres",
-      "type": "Resource"
-    },
+    "habitat_overworld_chunks": [
+      {
+        "id": 7,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_2_-1.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 6,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_3_-1.tres",
+        "type": "Resource"
+      }
+    ],
     "habitat_endless": false,
     "min_team_size": 1,
     "max_team_size": 2,
@@ -4712,11 +5058,28 @@
   {
     "id": "lakeside",
     "habitat_name": "REGION_NAME_LAKESIDE",
-    "habitat_overworld_chunks": {
-      "id": 8,
-      "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-2_-5.tres",
-      "type": "Resource"
-    },
+    "habitat_overworld_chunks": [
+      {
+        "id": 8,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-2_-5.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 7,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-1_-5.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 9,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_0_-5.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 10,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_1_-5.tres",
+        "type": "Resource"
+      }
+    ],
     "habitat_endless": true,
     "min_team_size": 1,
     "max_team_size": 2,
@@ -4812,11 +5175,18 @@
   {
     "id": "lakeside_caves",
     "habitat_name": "REGION_NAME_LAKESIDE_CAVES",
-    "habitat_overworld_chunks": {
-      "id": 7,
-      "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-1_-5.tres",
-      "type": "Resource"
-    },
+    "habitat_overworld_chunks": [
+      {
+        "id": 7,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-1_-5.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 8,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-1_-6.tres",
+        "type": "Resource"
+      }
+    ],
     "habitat_endless": false,
     "min_team_size": 1,
     "max_team_size": 2,
@@ -4917,11 +5287,13 @@
   {
     "id": "lakeside_caves_spawner",
     "habitat_name": "REGION_NAME_LAKESIDE_CAVES",
-    "habitat_overworld_chunks": {
-      "id": 8,
-      "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-1_-6.tres",
-      "type": "Resource"
-    },
+    "habitat_overworld_chunks": [
+      {
+        "id": 8,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-1_-6.tres",
+        "type": "Resource"
+      }
+    ],
     "habitat_endless": true,
     "min_team_size": 1,
     "max_team_size": 2,
@@ -5022,11 +5394,13 @@
   {
     "id": "lakeside_valley",
     "habitat_name": "REGION_NAME_LAKESIDE",
-    "habitat_overworld_chunks": {
-      "id": 9,
-      "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-1_-6.tres",
-      "type": "Resource"
-    },
+    "habitat_overworld_chunks": [
+      {
+        "id": 9,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-1_-6.tres",
+        "type": "Resource"
+      }
+    ],
     "habitat_endless": true,
     "min_team_size": 1,
     "max_team_size": 2,
@@ -5127,11 +5501,13 @@
   {
     "id": "lake_caves",
     "habitat_name": "REGION_NAME_LAKE_CAVES",
-    "habitat_overworld_chunks": {
-      "id": 8,
-      "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-1_-2.tres",
-      "type": "Resource"
-    },
+    "habitat_overworld_chunks": [
+      {
+        "id": 8,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-1_-2.tres",
+        "type": "Resource"
+      }
+    ],
     "habitat_endless": false,
     "min_team_size": 1,
     "max_team_size": 2,
@@ -5277,11 +5653,13 @@
   {
     "id": "lake_diveal_island",
     "habitat_name": "REGION_NAME_LAKE",
-    "habitat_overworld_chunks": {
-      "id": 3,
-      "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-2_-4.tres",
-      "type": "Resource"
-    },
+    "habitat_overworld_chunks": [
+      {
+        "id": 3,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-2_-4.tres",
+        "type": "Resource"
+      }
+    ],
     "habitat_endless": true,
     "min_team_size": 1,
     "max_team_size": 2,
@@ -5307,11 +5685,23 @@
   {
     "id": "lake_island",
     "habitat_name": "REGION_NAME_LAKE",
-    "habitat_overworld_chunks": {
-      "id": 14,
-      "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-1_-4.tres",
-      "type": "Resource"
-    },
+    "habitat_overworld_chunks": [
+      {
+        "id": 14,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-1_-4.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 15,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-2_-3.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 13,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_0_-4.tres",
+        "type": "Resource"
+      }
+    ],
     "habitat_endless": true,
     "min_team_size": 1,
     "max_team_size": 2,
@@ -5422,6 +5812,7 @@
   {
     "id": "lake_island_secret",
     "habitat_name": "",
+    "habitat_overworld_chunks": [],
     "habitat_endless": true,
     "min_team_size": 2,
     "max_team_size": 2,
@@ -5457,11 +5848,48 @@
   {
     "id": "lake_water",
     "habitat_name": "REGION_NAME_LAKE",
-    "habitat_overworld_chunks": {
-      "id": 7,
-      "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-2_-4.tres",
-      "type": "Resource"
-    },
+    "habitat_overworld_chunks": [
+      {
+        "id": 7,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-2_-4.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 13,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-2_-3.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 12,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-1_-4.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 6,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-1_-3.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 11,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_0_-4.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 9,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_0_-3.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 8,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_1_-4.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 10,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_1_-3.tres",
+        "type": "Resource"
+      }
+    ],
     "habitat_endless": true,
     "min_team_size": 1,
     "max_team_size": 2,
@@ -5562,6 +5990,7 @@
   {
     "id": "lenna_whistle_for_help",
     "habitat_name": "",
+    "habitat_overworld_chunks": [],
     "habitat_endless": false,
     "min_team_size": 1,
     "max_team_size": 2,
@@ -5602,11 +6031,13 @@
   {
     "id": "mall",
     "habitat_name": "REGION_NAME_MALL",
-    "habitat_overworld_chunks": {
-      "id": 2,
-      "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_3_-7.tres",
-      "type": "Resource"
-    },
+    "habitat_overworld_chunks": [
+      {
+        "id": 2,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_3_-7.tres",
+        "type": "Resource"
+      }
+    ],
     "habitat_endless": true,
     "min_team_size": 1,
     "max_team_size": 2,
@@ -5732,6 +6163,7 @@
   {
     "id": "mall_fusion",
     "habitat_name": "",
+    "habitat_overworld_chunks": [],
     "habitat_endless": false,
     "min_team_size": 1,
     "max_team_size": 2,
@@ -5867,11 +6299,13 @@
   {
     "id": "mall_only_ghosts",
     "habitat_name": "REGION_NAME_MALL",
-    "habitat_overworld_chunks": {
-      "id": 2,
-      "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_3_-7.tres",
-      "type": "Resource"
-    },
+    "habitat_overworld_chunks": [
+      {
+        "id": 2,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_3_-7.tres",
+        "type": "Resource"
+      }
+    ],
     "habitat_endless": true,
     "min_team_size": 1,
     "max_team_size": 2,
@@ -5997,11 +6431,48 @@
   {
     "id": "marsh",
     "habitat_name": "REGION_NAME_MARSH",
-    "habitat_overworld_chunks": {
-      "id": 19,
-      "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-4_-1.tres",
-      "type": "Resource"
-    },
+    "habitat_overworld_chunks": [
+      {
+        "id": 19,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-4_-1.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 16,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-5_-1.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 8,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-6_-1.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 7,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-6_-2.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 15,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-6_-3.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 18,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-5_-2.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 14,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-4_-2.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 17,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-3_-2.tres",
+        "type": "Resource"
+      }
+    ],
     "habitat_endless": true,
     "min_team_size": 1,
     "max_team_size": 2,
@@ -6107,11 +6578,13 @@
   {
     "id": "marsh_beach_diveal",
     "habitat_name": "REGION_NAME_MARSH",
-    "habitat_overworld_chunks": {
-      "id": 5,
-      "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-7_-2.tres",
-      "type": "Resource"
-    },
+    "habitat_overworld_chunks": [
+      {
+        "id": 5,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-7_-2.tres",
+        "type": "Resource"
+      }
+    ],
     "habitat_endless": true,
     "min_team_size": 1,
     "max_team_size": 2,
@@ -6177,11 +6650,13 @@
   {
     "id": "marsh_caves",
     "habitat_name": "REGION_NAME_MARSH_CAVES",
-    "habitat_overworld_chunks": {
-      "id": 16,
-      "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-5_-1.tres",
-      "type": "Resource"
-    },
+    "habitat_overworld_chunks": [
+      {
+        "id": 16,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-5_-1.tres",
+        "type": "Resource"
+      }
+    ],
     "habitat_endless": false,
     "min_team_size": 1,
     "max_team_size": 2,
@@ -6302,11 +6777,13 @@
   {
     "id": "marsh_springheel",
     "habitat_name": "REGION_NAME_MARSH",
-    "habitat_overworld_chunks": {
-      "id": 18,
-      "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-5_-2.tres",
-      "type": "Resource"
-    },
+    "habitat_overworld_chunks": [
+      {
+        "id": 18,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-5_-2.tres",
+        "type": "Resource"
+      }
+    ],
     "habitat_endless": false,
     "min_team_size": 1,
     "max_team_size": 2,
@@ -6417,11 +6894,48 @@
   {
     "id": "meadow",
     "habitat_name": "REGION_NAME_MEADOW",
-    "habitat_overworld_chunks": {
-      "id": 19,
-      "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-3_-3.tres",
-      "type": "Resource"
-    },
+    "habitat_overworld_chunks": [
+      {
+        "id": 19,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-3_-3.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 20,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-4_-3.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 10,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-5_-3.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 8,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-3_-4.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 18,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-4_-4.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 16,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-5_-4.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 7,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-4_-5.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 17,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-5_-5.tres",
+        "type": "Resource"
+      }
+    ],
     "habitat_endless": true,
     "min_team_size": 1,
     "max_team_size": 2,
@@ -6552,11 +7066,13 @@
   {
     "id": "meadow_caves",
     "habitat_name": "REGION_NAME_MEADOW_CAVES",
-    "habitat_overworld_chunks": {
-      "id": 2,
-      "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-4_-6.tres",
-      "type": "Resource"
-    },
+    "habitat_overworld_chunks": [
+      {
+        "id": 2,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-4_-6.tres",
+        "type": "Resource"
+      }
+    ],
     "habitat_endless": false,
     "min_team_size": 1,
     "max_team_size": 2,
@@ -6712,6 +7228,7 @@
   {
     "id": "meadow_secret",
     "habitat_name": "",
+    "habitat_overworld_chunks": [],
     "habitat_endless": true,
     "min_team_size": 1,
     "max_team_size": 2,
@@ -6852,11 +7369,18 @@
   {
     "id": "meadow_springheel",
     "habitat_name": "REGION_NAME_MEADOW",
-    "habitat_overworld_chunks": {
-      "id": 17,
-      "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-5_-5.tres",
-      "type": "Resource"
-    },
+    "habitat_overworld_chunks": [
+      {
+        "id": 17,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-5_-5.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 19,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-3_-3.tres",
+        "type": "Resource"
+      }
+    ],
     "habitat_endless": false,
     "min_team_size": 1,
     "max_team_size": 2,
@@ -6987,11 +7511,13 @@
   {
     "id": "mire_sea_west_island",
     "habitat_name": "REGION_NAME_MIRE_SEA",
-    "habitat_overworld_chunks": {
-      "id": 15,
-      "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-6_0.tres",
-      "type": "Resource"
-    },
+    "habitat_overworld_chunks": [
+      {
+        "id": 15,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-6_0.tres",
+        "type": "Resource"
+      }
+    ],
     "habitat_endless": true,
     "min_team_size": 1,
     "max_team_size": 2,
@@ -7067,11 +7593,48 @@
   {
     "id": "mire_sea_west_water",
     "habitat_name": "REGION_NAME_MIRE_SEA",
-    "habitat_overworld_chunks": {
-      "id": 15,
-      "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-6_0.tres",
-      "type": "Resource"
-    },
+    "habitat_overworld_chunks": [
+      {
+        "id": 15,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-6_0.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 8,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-7_0.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 11,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-7_-1.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 10,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-7_-2.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 12,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-7_-3.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 13,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-7_-4.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 14,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-7_-5.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 9,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-7_-6.tres",
+        "type": "Resource"
+      }
+    ],
     "habitat_endless": true,
     "min_team_size": 1,
     "max_team_size": 2,
@@ -7152,11 +7715,48 @@
   {
     "id": "mt_wirral",
     "habitat_name": "REGION_NAME_MT_WIRRAL",
-    "habitat_overworld_chunks": {
-      "id": 9,
-      "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-2_-6.tres",
-      "type": "Resource"
-    },
+    "habitat_overworld_chunks": [
+      {
+        "id": 9,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-2_-6.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 10,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-2_-7.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 13,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-3_-6.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 19,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-3_-7.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 16,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-4_-6.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 17,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-4_-7.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 18,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-5_-6.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 15,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-5_-7.tres",
+        "type": "Resource"
+      }
+    ],
     "habitat_endless": true,
     "min_team_size": 1,
     "max_team_size": 2,
@@ -7257,11 +7857,23 @@
   {
     "id": "mt_wirral_caves",
     "habitat_name": "REGION_NAME_MT_WIRRAL_CAVES",
-    "habitat_overworld_chunks": {
-      "id": 12,
-      "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-2_-7.tres",
-      "type": "Resource"
-    },
+    "habitat_overworld_chunks": [
+      {
+        "id": 12,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-2_-7.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 5,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-3_-6.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 18,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-3_-7.tres",
+        "type": "Resource"
+      }
+    ],
     "habitat_endless": true,
     "min_team_size": 1,
     "max_team_size": 2,
@@ -7427,6 +8039,7 @@
   {
     "id": "mt_wirral_secret",
     "habitat_name": "",
+    "habitat_overworld_chunks": [],
     "habitat_endless": true,
     "min_team_size": 1,
     "max_team_size": 2,
@@ -7542,11 +8155,13 @@
   {
     "id": "mt_wirral_springheel",
     "habitat_name": "REGION_NAME_MT_WIRRAL",
-    "habitat_overworld_chunks": {
-      "id": 10,
-      "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-2_-7.tres",
-      "type": "Resource"
-    },
+    "habitat_overworld_chunks": [
+      {
+        "id": 10,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-2_-7.tres",
+        "type": "Resource"
+      }
+    ],
     "habitat_endless": false,
     "min_team_size": 1,
     "max_team_size": 2,
@@ -7657,11 +8272,63 @@
   {
     "id": "new_wirral_park",
     "habitat_name": "REGION_NAME_NEW_WIRRAL_PARK",
-    "habitat_overworld_chunks": {
-      "id": 14,
-      "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_2_-3.tres",
-      "type": "Resource"
-    },
+    "habitat_overworld_chunks": [
+      {
+        "id": 14,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_2_-3.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 17,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_2_-4.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 15,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_2_-5.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 20,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_3_-3.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 18,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_3_-4.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 12,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_3_-5.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 19,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_4_-3.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 10,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_4_-4.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 13,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_4_-5.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 16,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_5_-3.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 11,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_5_-4.tres",
+        "type": "Resource"
+      }
+    ],
     "habitat_endless": true,
     "min_team_size": 1,
     "max_team_size": 2,
@@ -7762,11 +8429,13 @@
   {
     "id": "new_wirral_park_caves",
     "habitat_name": "REGION_NAME_NEW_WIRRAL_PARK_CAVES",
-    "habitat_overworld_chunks": {
-      "id": 11,
-      "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_3_-5.tres",
-      "type": "Resource"
-    },
+    "habitat_overworld_chunks": [
+      {
+        "id": 11,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_3_-5.tres",
+        "type": "Resource"
+      }
+    ],
     "habitat_endless": true,
     "min_team_size": 1,
     "max_team_size": 2,
@@ -7877,6 +8546,7 @@
   {
     "id": "new_wirral_park_secret",
     "habitat_name": "",
+    "habitat_overworld_chunks": [],
     "habitat_endless": true,
     "min_team_size": 2,
     "max_team_size": 2,
@@ -7927,11 +8597,13 @@
   {
     "id": "new_wirral_park_springheel",
     "habitat_name": "REGION_NAME_NEW_WIRRAL_PARK",
-    "habitat_overworld_chunks": {
-      "id": 6,
-      "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_3_-4.tres",
-      "type": "Resource"
-    },
+    "habitat_overworld_chunks": [
+      {
+        "id": 6,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_3_-4.tres",
+        "type": "Resource"
+      }
+    ],
     "habitat_endless": false,
     "min_team_size": 1,
     "max_team_size": 2,
@@ -8032,6 +8704,7 @@
   {
     "id": "office",
     "habitat_name": "",
+    "habitat_overworld_chunks": [],
     "habitat_endless": false,
     "min_team_size": 1,
     "max_team_size": 2,
@@ -8102,11 +8775,28 @@
   {
     "id": "southern_isles",
     "habitat_name": "REGION_NAME_SOUTHERN_ISLES",
-    "habitat_overworld_chunks": {
-      "id": 13,
-      "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_5_0.tres",
-      "type": "Resource"
-    },
+    "habitat_overworld_chunks": [
+      {
+        "id": 13,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_5_0.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 12,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_6_0.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 10,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_7_0.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 14,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_8_0.tres",
+        "type": "Resource"
+      }
+    ],
     "habitat_endless": true,
     "min_team_size": 1,
     "max_team_size": 2,
@@ -8192,11 +8882,13 @@
   {
     "id": "spider_cave",
     "habitat_name": "REGION_NAME_MARSH_CAVES",
-    "habitat_overworld_chunks": {
-      "id": 6,
-      "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-6_-1.tres",
-      "type": "Resource"
-    },
+    "habitat_overworld_chunks": [
+      {
+        "id": 6,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-6_-1.tres",
+        "type": "Resource"
+      }
+    ],
     "habitat_endless": true,
     "min_team_size": 1,
     "max_team_size": 2,
@@ -8252,6 +8944,7 @@
   {
     "id": "spider_cave_quest_location",
     "habitat_name": "REGION_NAME_MARSH_CAVES",
+    "habitat_overworld_chunks": [],
     "habitat_endless": false,
     "min_team_size": 1,
     "max_team_size": 2,
@@ -8317,6 +9010,7 @@
   {
     "id": "station_harbourtown",
     "habitat_name": "",
+    "habitat_overworld_chunks": [],
     "habitat_endless": false,
     "min_team_size": 1,
     "max_team_size": 2,

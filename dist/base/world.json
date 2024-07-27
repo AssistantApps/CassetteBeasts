@@ -17,6 +17,16 @@
       "path": "res://data/map_metadata/overworld_bg.png",
       "type": "Texture"
     },
+    "chunk_layout": {
+      "x": -7,
+      "y": -7,
+      "w": 16,
+      "h": 8
+    },
+    "texels_per_world_unit": {
+      "x": 0,
+      "y": 0
+    },
     "chunk_metadata_path": "res://data/map_metadata/overworld_chunk_metadata",
     "default_chunk_metadata": {
       "id": 1,
@@ -1716,6 +1726,16 @@
       "id": 4,
       "path": "res://data/map_metadata/pier/pier_map_metadata_bg.png",
       "type": "Texture"
+    },
+    "chunk_layout": {
+      "x": -4,
+      "y": -2,
+      "w": 9,
+      "h": 5
+    },
+    "texels_per_world_unit": {
+      "x": 1,
+      "y": 1
     },
     "chunk_metadata_path": "res://data/map_metadata/pier/pier_chunk_metadata/",
     "default_chunk_metadata": {

@@ -8,7 +8,7 @@ import { ElementsModule } from 'modules/elements/elementsModule';
 import { LocalisationModule } from 'modules/localisation/localisationModule';
 import { MiscModule } from 'modules/misc/miscModule';
 import { MonsterFormsModule } from 'modules/monsterForms/monsterFormsModule';
-import { MonsterSpawnFormsModule } from 'modules/monsterSpawn/monsterSpawnFormsModule';
+import { MonsterSpawnModule } from 'modules/monsterSpawn/monsterSpawnModule';
 import { MonsterSpriteAnimModule } from 'modules/monsterSpriteAnim/monsterSpriteAnimModule';
 import { MovesModule } from 'modules/moves/movesModule';
 import { StatusEffectModule } from 'modules/statusEffect/statusEffectModule';
@@ -40,7 +40,7 @@ export const getModules = async (props: {
     // Monster
     new MonsterFormsModule(),
     new MonsterSpriteAnimModule(),
-    new MonsterSpawnFormsModule(),
+    new MonsterSpawnModule(),
 
     // Moves
     new MovesModule(),

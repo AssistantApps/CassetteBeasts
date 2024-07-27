@@ -1,5 +1,7 @@
 import { IExternalResource } from './externalResource';
+import { IMonsterFormSimplified } from './monsterForm';
 import { ISubResource, ISubResourceMapEnhanced } from './subResource';
+import { IRect2, IVector2D } from './vector';
 
 export interface IWorld {
   id: string;
@@ -7,6 +9,8 @@ export interface IWorld {
   map_texture: IExternalResource;
   map_obscure: IExternalResource;
   map_background: IExternalResource;
+  chunk_layout: IRect2;
+  texels_per_world_unit: IVector2D;
   chunk_metadata_path: string;
   default_chunk_metadata?: ISubResource;
   chunk_meta_data: Record<string, IWorldMetaData>;
@@ -29,4 +33,5 @@ export interface IWorldMetaDataEnhanced extends IWorldMetaData {
   id: string;
   title_localised: string;
   features_localised: Array<ISubResourceMapEnhanced>;
+  monster_in_habitat: Array<IMonsterFormSimplified>;
 }

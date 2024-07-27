@@ -9,6 +9,7 @@ import { IHomePageCard } from 'contracts/homePageCard';
 import { ILocalisation } from 'contracts/localisation';
 import { IMonsterForm } from 'contracts/monsterForm';
 import { IStatusEffect } from 'contracts/statusEffect';
+import { IWorld } from 'contracts/world';
 import { CommonModule } from 'modules/commonModule';
 import { getHandlebar } from 'services/internal/handlebarService';
 
@@ -25,6 +26,7 @@ export class MiscModule extends CommonModule<ILocalisation> {
         ModuleType.MonsterForms,
         ModuleType.StatusEffect,
         ModuleType.Elements,
+        ModuleType.World,
       ],
     });
   }
@@ -36,6 +38,7 @@ export class MiscModule extends CommonModule<ILocalisation> {
       modules,
       ModuleType.StatusEffect,
     );
+    const worldModule = this.getModuleOfType<IWorld>(modules, ModuleType.World);
 
     this._cards = [
       {
@@ -62,6 +65,11 @@ export class MiscModule extends CommonModule<ILocalisation> {
         uiKey: UIKeys.statusEffect,
         url: routes.statusEffect,
         gameUrl: statusEffectModule.get('gambit').icon.path,
+      },
+      {
+        uiKey: UIKeys.map,
+        url: routes.map,
+        gameUrl: worldModule.get('overworld').map_texture.path,
       },
     ];
 

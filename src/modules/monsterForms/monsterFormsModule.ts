@@ -34,6 +34,12 @@ import { MovesModule } from 'modules/moves/movesModule';
 import { getHandlebar } from '../../services/internal/handlebarService';
 import { getEvolutionMonster, monsterFormMapFromDetailList } from './monsterFormMapFromDetailList';
 import { getMonsterFormMetaImage } from './monsterFormMeta';
+import { MonsterSpawnModule } from 'modules/monsterSpawn/monsterSpawnModule';
+import {
+  IMonsterSpawn,
+  IMonsterSpawnEnhanced,
+  IMonsterSpawnHabitatDetails,
+} from 'contracts/monsterSpawn';
 
 export class MonsterFormsModule extends CommonModule<IMonsterForm> {
   private _folders = [
@@ -112,6 +118,7 @@ export class MonsterFormsModule extends CommonModule<IMonsterForm> {
 
       const detailEnhanced: IMonsterFormEnhanced = {
         ...detail,
+        id: mapKey,
         resource_name: mapKey,
         bestiary_index_with_padding:
           detail.bestiary_index >= 0 ? pad(detail.bestiary_index, 3) : '???',
@@ -164,6 +171,9 @@ export class MonsterFormsModule extends CommonModule<IMonsterForm> {
         // initialised the following later
         evolutions_monster: [],
         total_evolutions: 0,
+        spawn_overworld_locations: [],
+        spawn_backup_locations: [],
+        has_locations: false,
       };
 
       this._setupMoveMap(detailEnhanced, mapKey, language);
@@ -200,27 +210,52 @@ export class MonsterFormsModule extends CommonModule<IMonsterForm> {
   };
 
   combineData = async (langCode: string, modules: Array<CommonModule<unknown>>) => {
-    // const monsterModule = this.getModuleOfType<IMonsterForm>(
-    //   modules,
-    //   ModuleType.MonsterForms,
-    //   true,
-    // ) as MonsterFormsModule;
-    // const moveToMonsterIdMap = monsterModule.getMoveToMonsterIdMap();
-    // for (const detail of this._baseDetails) {
-    //   const monsters_that_can_learn: Array<IMonsterFormSimplified> = [];
-    //   for (const tag of detail.tags) {
-    //     const monsterFromSrcLists = moveToMonsterIdMap?.[tag] ?? [];
-    //     for (const monsterFromSrc of monsterFromSrcLists) {
-    //       const monster = monsterModule.get(monsterFromSrc.monster_id);
-    //       const monsterDetail = monster as IMonsterFormEnhanced;
-    //       monsters_that_can_learn.push({
-    //         ...monsterToSimplified(monsterDetail),
-    //         source: monsterFromSrc.source,
-    //       });
-    //     }
-    //   }
-    //   this._itemDetailMap[detail.id].monsters_that_can_learn = monsters_that_can_learn;
-    // }
+    const monsterSpawnModule = this.getModuleOfType<IMonsterSpawn>(
+      modules,
+      ModuleType.MonsterSpawn,
+      true,
+    ) as MonsterSpawnModule;
+
+    const monsterToLocationMap = monsterSpawnModule.getMonsterToLocationMap();
+    for (const mapKey of Object.keys(this._itemDetailMap)) {
+      const locations = monsterToLocationMap[mapKey];
+      if (locations == null) continue;
+
+      const overworldHabitats: Array<IMonsterSpawnHabitatDetails> = [];
+      const backupHabitats: Array<IMonsterSpawnHabitatDetails> = [];
+      for (const locationId of locations) {
+        const monsterSpawn = monsterSpawnModule.get(locationId) as unknown as IMonsterSpawnEnhanced;
+
+        for (const species of monsterSpawn.species_enhanced) {
+          if (species.monster?.id == mapKey) {
+            if (monsterSpawn.habitat_name_localised == null) continue;
+            const habitat = {
+              id: monsterSpawn.id,
+              percent: species.percent,
+              percentStr: species.percentStr,
+              overworldSprite: species.overworldSprite,
+              habitat_name_localised: monsterSpawn.habitat_name_localised,
+              hour_min: species.hour_min,
+              hour_max: species.hour_max,
+              available_specific_time: species.available_specific_time,
+            };
+            if (species.overworldSprite != null) {
+              overworldHabitats.push(habitat);
+            } else {
+              backupHabitats.push(habitat);
+            }
+          }
+        }
+      }
+      this._itemDetailMap[mapKey].spawn_overworld_locations = overworldHabitats.sort(
+        (a, b) => b.percent - a.percent,
+      );
+      this._itemDetailMap[mapKey].spawn_backup_locations = backupHabitats.sort(
+        (a, b) => b.percent - a.percent,
+      );
+      this._itemDetailMap[mapKey].has_locations =
+        overworldHabitats.length > 0 || backupHabitats.length > 0;
+    }
   };
 
   copyWav = async (overwrite: boolean) => {

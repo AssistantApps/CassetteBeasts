@@ -1,4 +1,5 @@
 .monster-detail-card {
+
   .monster-detail-sticker-container {
     position: absolute;
     top: 5em;
@@ -133,12 +134,16 @@
     }
 
     .bio {
-      padding: 1em 1em 0.5em 1em;
       text-align: justify;
 
       p:last-child {
         margin-bottom: 0;
       }
+    }
+
+    .bio,
+    .location {
+      padding: 1em 1em 0.5em 1em;
     }
 
     .additional-section,
@@ -198,12 +203,59 @@
         margin: 0;
       }
     }
+
+    .habitat {
+      thead tr .sprite {
+        padding-left: 2em;
+      }
+
+      tr:hover code {
+        border: 2px solid darken($gameCardBackground, 20%);
+      }
+
+      .overworld {
+        padding: 0;
+
+        img {
+          height: 2em;
+        }
+      }
+
+      details {
+        margin-top: var(--pico-spacing);
+        margin-bottom: 0;
+
+        &[open]>summary {
+          margin-bottom: 0;
+        }
+
+        summary {
+          &::after {
+            display: inline-block;
+            float: none;
+          }
+
+          h3 {
+            display: inline-block;
+          }
+        }
+      }
+    }
+
+    code {
+      padding: 0.25rem;
+      margin-left: 0.25rem;
+      color: var(--card-foreground);
+      background-color: darken($gameCardBackground, 10%);
+      border: 2px solid darken($gameCardBackground, 10%);
+    }
   }
 }
 
 // animation delays
 .monster-detail-card {
   .monster-detail-card-body {
+
     .id,
     .descrip,
     .images {
@@ -221,7 +273,6 @@
 
     .additional,
     .additional-section,
-    .habitat-section,
     .remaster-section,
     .wiki-section {
       animation-delay: 400ms;

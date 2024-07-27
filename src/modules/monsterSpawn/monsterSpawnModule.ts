@@ -3,32 +3,27 @@ import fs from 'fs';
 import { IntermediateFile } from 'constant/intermediateFile';
 import { ModuleType } from 'constant/module';
 import { ILocalisation } from 'contracts/localisation';
-import { IMonsterFormEnhanced } from 'contracts/monsterForm';
 import {
   IMonsterSpawn,
   IMonsterSpawnDetailsEnhanced,
   IMonsterSpawnEnhanced,
 } from 'contracts/monsterSpawn';
-import { IWorld } from 'contracts/world';
 import { FolderPathHelper } from 'helpers/folderPathHelper';
-import { monsterToSimplified } from 'mapper/monsterMapper';
 import { readItemDetail } from 'modules/baseModule';
 import { CommonModule } from 'modules/commonModule';
-import { monsterSpawnMapFromDetailList } from './monsterSpawnFormMapFromDetailList';
+import { monsterSpawnMapFromDetailList } from './monsterSpawnFormMapDetailList';
+import { IVector2D } from 'contracts/vector';
 
-export class MonsterSpawnFormsModule extends CommonModule<IMonsterSpawn> {
+export class MonsterSpawnModule extends CommonModule<IMonsterSpawn> {
   private _folder = FolderPathHelper.monsterSpawn();
   private _monsterToLocationMap: Record<string, Array<string>> = {};
+  private _mapCoordToMonsterSpawnMap: Record<string, Array<IMonsterSpawnDetailsEnhanced>> = {};
 
   constructor() {
     super({
       type: ModuleType.MonsterSpawn,
       intermediateFile: IntermediateFile.monsterSpawn,
-      dependsOn: [
-        ModuleType.Localisation, //
-        ModuleType.MonsterForms,
-        ModuleType.World,
-      ],
+      dependsOn: [ModuleType.Localisation],
     });
   }
 
@@ -53,11 +48,6 @@ export class MonsterSpawnFormsModule extends CommonModule<IMonsterSpawn> {
   enrichData = async (langCode: string, modules: Array<CommonModule<unknown>>) => {
     const localeModule = this.getModuleOfType<ILocalisation>(modules, ModuleType.Localisation);
     const language = localeModule.get(langCode).messages;
-    // const worldModule = this.getModuleOfType<IWorld>(modules, ModuleType.World);
-    const monsterModule = this.getModuleOfType<IMonsterFormEnhanced>(
-      modules,
-      ModuleType.MonsterForms,
-    );
 
     for (const detail of this._baseDetails) {
       const species_enhanced: Array<IMonsterSpawnDetailsEnhanced> = [];
@@ -70,19 +60,14 @@ export class MonsterSpawnFormsModule extends CommonModule<IMonsterSpawn> {
         .reduce((partial, cur) => partial + cur, 0);
 
       for (const spec of detail.species) {
-        const monster_form = monsterModule.get(
-          (spec.monster_form?.path ?? '')
-            .replace('res://data/monster_forms/', '')
-            .replace('.tres', ''),
-        );
-        const world_monster = monsterModule.get(
-          (spec.world_monster?.path ?? '')
-            .replace('res://world/monsters/', '')
-            .replace('.tscn', '')
-            .toLowerCase(),
-        );
+        const monsterKey = (spec.monster_form?.path ?? '')
+          .replace('res://data/monster_forms/', '')
+          .replace('.tres', '');
+        const worldMonsterKey = (spec.world_monster?.path ?? '')
+          .replace('res://world/monsters/', '')
+          .replace('.tscn', '')
+          .toLowerCase();
 
-        const monsterKey = monster_form.name.replace('_NAME', '').toLowerCase();
         const existingValues = this._monsterToLocationMap[monsterKey];
         if (existingValues != null) {
           this._monsterToLocationMap[monsterKey] = [...existingValues, detail.id];
@@ -91,24 +76,50 @@ export class MonsterSpawnFormsModule extends CommonModule<IMonsterSpawn> {
         }
 
         const isAllDay = spec.hour_min == 0 && spec.hour_max == 24;
-        species_enhanced.push({
-          hour_min: isAllDay ? undefined : spec.hour_min,
-          hour_max: isAllDay ? undefined : spec.hour_max,
+        const percentMonster = (spec.weight / totalWeight) * 100;
+        const baseItem: IMonsterSpawnDetailsEnhanced = {
+          overworldMonsterId: undefined,
+          world_monster: undefined,
           weight: undefined,
           monster_form: undefined,
-          monster_form_monster: monster_form != null ? monsterToSimplified(monster_form) : null,
-          monster_form_percent: Math.round((spec.weight / totalWeight) * 1000) / 10,
-          world_monster: undefined,
-          world_monster_monster: world_monster != null ? monsterToSimplified(world_monster) : null,
-          world_monster_percent: Math.round((spec.weight / totalOverworldWeight) * 1000) / 10,
+          hour_min: isAllDay ? undefined : spec.hour_min,
+          hour_max: isAllDay ? undefined : spec.hour_max,
+          monsterId: monsterKey,
+          // monster: monster_form != null ? monsterToSimplified(monster_form) : null,
+          percent: percentMonster,
+          percentStr: percentMonster.toFixed(2),
           available_specific_time: isAllDay ? undefined : true,
-        });
+        };
+        if (worldMonsterKey.length < 1) {
+          const percentWorld = (spec.weight / totalOverworldWeight) * 100;
+          species_enhanced.push({
+            ...baseItem,
+            overworldMonsterId: worldMonsterKey,
+            percent: percentWorld,
+            percentStr: percentWorld.toFixed(2),
+          });
+        }
+        species_enhanced.push(baseItem);
+      }
+      const habitat_coords: Array<string> = [];
+      for (const extResource of detail.habitat_overworld_chunks) {
+        const coordStr = extResource.path
+          .replace('res://data/map_metadata/overworld_chunk_metadata/', '')
+          .replace('.tres', '');
+        habitat_coords.push(coordStr);
+        this._mapCoordToMonsterSpawnMap[coordStr] = species_enhanced;
+        // const coord = coordStr.split('_');
+        // habitat_coords.push({
+        //   x: parseInt(coord[0]),
+        //   y: parseInt(coord[1]),
+        // });
       }
       const detailEnhanced: IMonsterSpawnEnhanced = {
         ...detail,
         habitat_name_localised: language[detail.habitat_name],
         species: undefined,
         species_enhanced,
+        habitat_coords,
       };
 
       this._itemDetailMap[detail.id] = detailEnhanced;
@@ -116,6 +127,9 @@ export class MonsterSpawnFormsModule extends CommonModule<IMonsterSpawn> {
 
     this.isReady = true;
   };
+
+  getMonsterToLocationMap = () => this._monsterToLocationMap;
+  getMapCoordToMonsterSpawnMap = () => this._mapCoordToMonsterSpawnMap;
 
   getImagesFromGameFiles = async (overwrite: boolean) => {
     // for (const mapKey of Object.keys(this._itemDetailMap)) {

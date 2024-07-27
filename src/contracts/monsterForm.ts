@@ -1,5 +1,6 @@
 import { IElement } from './element';
 import { IExternalResource } from './externalResource';
+import { IMonsterSpawnHabitatDetails } from './monsterSpawn';
 import { IMove, IMoveSimplified } from './move';
 import { ISpriteAnimDetailsEnhanced } from './spriteAnim';
 import { ISubResource, ISubResourceMonsterEnhanced } from './subResource';
@@ -50,6 +51,7 @@ export interface IMonsterForm {
 }
 
 export interface IMonsterFormEnhanced extends IMonsterForm {
+  id: string;
   resource_name: string;
   name_localised: string;
   description_localised: string;
@@ -72,9 +74,13 @@ export interface IMonsterFormEnhanced extends IMonsterForm {
   unlock_ability_localised: string;
   battle_cry_audio_url: string;
   isSecret: boolean;
+  spawn_overworld_locations: Array<IMonsterSpawnHabitatDetails>;
+  spawn_backup_locations: Array<IMonsterSpawnHabitatDetails>;
+  has_locations: boolean;
 }
 
 export interface IMonsterFormSimplified {
+  id: string;
   name_localised: string;
   resource_name: string;
   icon_url: string;

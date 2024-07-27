@@ -1,7 +1,19 @@
 #world-display {
   .map-body {
-    padding: 1em 1em 0 1em;
+    padding: 1em;
   }
+
+  .item-detail-card-heading {
+    .button-slanted {
+      color: white;
+
+      &:hover {
+        // background-color: var(--brand-tertiary);
+        border: 3px solid var(--brand-tertiary);
+      }
+    }
+  }
+
   .map-grid-container {
     display: inline-block;
     position: relative;
@@ -10,6 +22,7 @@
       height: 50vh;
       border-radius: var(--card-border-radius);
     }
+
     .map-grid {
       position: absolute;
       top: 0;
@@ -63,15 +76,13 @@
           }
         }
 
+        &.y-4,
+        &.y-5,
+        &.y-6,
+        &.y-7,
         &.y-8,
         &.y-9,
-        &.y-10,
-        &.y-11,
-        &.y-12,
-        &.y-13,
-        &.y-14,
-        &.y-15,
-        &.y-16 {
+        &.y-10 {
           .popup {
             top: unset;
             bottom: calc(100% + 0.5em);
@@ -84,7 +95,7 @@
         top: 0.5em;
         left: calc(100% + 0.5em);
         padding: 1em;
-        min-width: 400px;
+        min-width: 450px;
         max-width: 600px;
         border-radius: var(--card-border-radius);
         border: 3px solid var(--card-foreground);
@@ -96,6 +107,31 @@
 
         * {
           color: var(--card-foreground);
+        }
+
+        .details {
+          display: flex;
+          flex-direction: row;
+          gap: 0.5em;
+          justify-content: center;
+
+          img {
+            height: 1.5em;
+            width: auto;
+          }
+        }
+
+        .monster-spawns {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: center;
+
+          img {
+            height: 2.5em;
+            width: 3em;
+            object-fit: contain;
+          }
         }
       }
     }
