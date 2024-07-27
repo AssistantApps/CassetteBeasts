@@ -1,11 +1,10 @@
 $desktopWidth: 1500px;
 $smallDesktopWidth: 992px;
-$tabletWidth: 720px;
+$tabletWidth: 768px;
 $phoneWidth: 467px;
 
 body {
-  @media screen and (max-width: $desktopWidth) {
-  }
+  @media screen and (max-width: $desktopWidth) {}
 
   @media screen and (max-width: $smallDesktopWidth) {
     .search-input-border-radius {
@@ -21,6 +20,7 @@ body {
 
   @media screen and (max-width: $tabletWidth) {
     header.header {
+
       [data-tooltip][data-placement='bottom']::after,
       [data-tooltip][data-placement='bottom']::before {
         transform: translate(-100%, 0.25rem);
@@ -33,6 +33,7 @@ body {
 
     .monster-detail-card .monster-detail-card-body {
       div.images {
+
         .char-image,
         .stats,
         .stats svg {
@@ -40,10 +41,21 @@ body {
         }
       }
     }
+
     .move-detail-grid,
     .character-detail-grid,
     .status-effect-detail-grid {
       grid-template-columns: 1fr;
+    }
+
+    .page-options-with-breadcrumbs {
+      flex-wrap: wrap;
+
+      .breadcrumb {
+        width: 100%;
+        margin-top: 0.25em;
+        margin-bottom: 0.5em;
+      }
     }
 
     .page-options {
@@ -54,7 +66,7 @@ body {
       flex-direction: column;
       gap: 0.5em;
 
-      > * {
+      >* {
         max-width: unset;
         min-width: 100%;
       }
@@ -78,6 +90,7 @@ body {
 
   @media screen and (max-width: $phoneWidth) {
     header.header {
+
       [data-tooltip][data-placement='bottom']::after,
       [data-tooltip][data-placement='bottom']::before {
         content: unset;
@@ -94,6 +107,7 @@ body {
           margin: 0 auto;
         }
       }
+
       a {
         min-width: unset;
         margin: 0 1em;

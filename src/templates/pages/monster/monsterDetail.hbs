@@ -20,18 +20,19 @@
       {{/if}}
       <div class="spacer"></div>
       {{#each data.elemental_types_elements}}
-      <img src="{{resimage this.icon.path}}" class="element-image" alt="image of {{this.name}}" draggable="false">
+      <img src="{{resimage this.icon.path}}" class="element-image" loading="lazy" alt="image of {{this.name}}"
+        draggable="false">
       {{/each}}
     </div>
     <div class="monster-detail-card-body item-detail-card-body">
       <div id="sprite-tab-container" class="monster-detail-card-main">
         <div class="grid images noselect animate__animated animate__fadeIn">
           <div class="sprites">
-            <img src="{{resimage data.icon_url}}" class="char-image tab-content-0"
+            <img src="{{resimage data.icon_url}}" class="char-image tab-content-0" loading="lazy"
               alt="image of {{data.name_localised}}" draggable="false">
 
             {{#each data.animations}}
-            <img src="{{resimage this.imageUrl}}" class="char-image  tab-content-{{inc @index}}"
+            <img src="{{resimage this.imageUrl}}" class="char-image  tab-content-{{inc @index}}" loading="lazy"
               alt="gif #{{this.id}} of {{data.name_localised}}" draggable="false">
             {{/each}}
 
@@ -64,7 +65,7 @@
 
       {{#if data.unlock_ability}}
       <div class="ability animate__animated animate__fadeIn">
-        <img src="/assets/img/ability/{{data.unlock_ability}}.png" class="ability-image"
+        <img src="/assets/img/ability/{{data.unlock_ability}}.png" class="ability-image" loading="lazy"
           alt="image of {{data.unlock_ability}}" draggable="false">
         <div>
           <span>{{data.unlock_ability_localised}}</span>
@@ -112,7 +113,7 @@
         <h3 class="section-heading Neu5Land">DLC</h3>
         <div class="dlc">
           <img src="/assets/img/dlc/{{data.require_dlc}}.png" class="ability-image" alt="image of {{data.require_dlc}}"
-            draggable="false">
+            loading="lazy" draggable="false">
           <div>
             <span>{{lookup @root.translate 'DLC_01_PIER_NAME'}}</span>
           </div>
@@ -163,7 +164,7 @@
       <section class="wiki-section animate__animated animate__fadeIn">
         <a href="https://wiki.cassettebeasts.com/wiki/{{data.name_localised}}" rel="noopener noreferrer" target="_blank"
           title="view {{data.name_localised}} on the wiki" role="button" class="btn-border-hover outline secondary">
-          <img src="/assets/img/wiki.png" alt="wiki logo">
+          <img src="/assets/img/wiki.png" alt="wiki logo" loading="lazy">
           <div class="text">
             <h6>{{translatewithformat @root.translate 'viewOn' 'wiki.cassettebeasts.com'}}</h6>
           </div>
@@ -171,9 +172,9 @@
       </section>
     </div>
 
-    <div class="monster-detail-sticker-container animate__animated">
+    <div class="monster-detail-sticker-container hidden-in-mobile animate__animated">
       <div class="animate__animated bounce-on-hover">
-        <img src="{{resimage data.tape_sticker_texture.path}}"
+        <img src="{{resimage data.tape_sticker_texture.path}}" loading="lazy"
           class="monster-detail-sticker animate__animated animate__delay-1s animate__rollIn animate__tada"
           alt="sticker of {{this.name}}">
       </div>
@@ -188,7 +189,7 @@
 
     <div class="monster-detail-tape-container animate__animated hidden-in-mobile noselect">
       <div class="animate__animated swing-hover Neu5Land">
-        <img src="/assets/img/meta/tape.png" alt="monster tape">
+        <img src="/assets/img/meta/tape.png" alt="monster tape" loading="lazy">
         <p>{{data.name_localised}}</p>
       </div>
     </div>
@@ -239,7 +240,7 @@
                 <tr>
                   <td class="overworld ta-center">
                     <img src="{{resimage this.overworldSprite}}" class="remaster-image" alt="overworld image"
-                      draggable="false">
+                      loading="lazy" draggable="false">
                   </td>
                   <td class="name">
                     {{this.habitat_name_localised}} <code>({{this.id}})</code>

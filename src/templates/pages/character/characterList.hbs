@@ -21,19 +21,20 @@
     class="grid-list-item animate__animated animate__fadeIn" data-title="{{this.name_localised}}"
     data-description="{{this.description_localised}}" style="animation-delay: {{multiply @index 30 600}}ms;">
     <div class="grid-list-item-image">
-      <img src="{{resimage this.icon_url}}" class="sprite" alt="image of {{this.name_localised}}" draggable="false">
+      <img src="{{resimage this.icon_url}}" class="sprite" loading="lazy" alt="image of {{this.name_localised}}"
+        draggable="false">
 
       {{#each this.animations}}
       {{#if @first}}
       <img src="{{resimage this.imageUrl}}" class="sprite-anim" alt="gif #{{this.id}} of {{data.name_localised}}"
-        draggable="false">
+        loading="lazy" draggable="false">
       {{/if}}
       {{/each}}
 
       {{#each this.portraits}}
       {{#if @first}}
       <img src="{{resimage this}}" class="sticker animate__animated" alt="portrait of {{this.name_localised}}"
-        draggable="false">
+        loading="lazy" draggable="false">
       {{/if}}
       {{/each}}
     </div>

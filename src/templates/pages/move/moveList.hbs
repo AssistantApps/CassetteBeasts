@@ -29,10 +29,11 @@
       <div class="types">
         {{#if this.elemental_types_elements}}
         {{#each this.elemental_types_elements}}
-        <img src="{{resimage this.icon.path}}" class="type" alt="element of {{this.name_localised}}" draggable="false">
+        <img src="{{resimage this.icon.path}}" class="type" loading="lazy" alt="element of {{this.name_localised}}"
+          draggable="false">
         {{/each}}
         {{else}}
-        <img src="/assets/img/typeless.png" class="type" title="Typeless" alt="image of {{this.name}}"
+        <img src="/assets/img/typeless.png" class="type" loading="lazy" title="Typeless" alt="image of {{this.name}}"
           draggable="false">
         {{/if}}
       </div>
@@ -43,7 +44,7 @@
       </div>
       <div class="ap-block">
         {{#repeat this.cost}}
-        <img src="/assets/img/meta/ap.png" class="ap" title="Action Point" alt="image of an action point"
+        <img src="/assets/img/meta/ap.png" class="ap" title="Action Point" alt="image of an action point" loading="lazy"
           draggable="false">
         {{/repeat}}
       </div>
@@ -71,7 +72,8 @@
     <section class="status-card-container">
       {{#each this.status_effects_elements_max_3}}
       <div class="status-group">
-        <img src="{{resimage this.icon.path}}" class="status" alt="status of {{this.name_localised}}" draggable="false">
+        <img src="{{resimage this.icon.path}}" class="status" loading="lazy" alt="status of {{this.name_localised}}"
+          draggable="false">
         <small>{{this.name_localised}}</small>
       </div>
       {{/each}}
@@ -80,7 +82,7 @@
 
     <div class="ap-block">
       {{#repeat this.cost}}
-      <img src="/assets/img/meta/ap.png" class="ap" title="Action Point" alt="image of an action point"
+      <img src="/assets/img/meta/ap.png" class="ap" title="Action Point" alt="image of an action point" loading="lazy"
         draggable="false">
       {{/repeat}}
     </div>

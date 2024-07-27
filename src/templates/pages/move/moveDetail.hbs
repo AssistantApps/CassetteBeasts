@@ -11,10 +11,12 @@
     <div class="move-detail-card-heading item-detail-card-heading primary">
       {{#if data.elemental_types_elements}}
       {{#each data.elemental_types_elements}}
-      <img src="{{resimage this.icon.path}}" class="type" alt="element of {{this.name_localised}}" draggable="false">
+      <img src="{{resimage this.icon.path}}" class="type" loading="lazy" alt="element of {{this.name_localised}}"
+        draggable="false">
       {{/each}}
       {{else}}
-      <img src="/assets/img/typeless.png" class="type" title="Typeless" alt="image of {{this.name}}" draggable="false">
+      <img src="/assets/img/typeless.png" class="type" loading="lazy" title="Typeless" alt="image of {{this.name}}"
+        draggable="false">
       {{/if}}
       <h2 class="Neu5Land animate__animated animate__fadeIn">{{data.name_localised}}</h2>
 
@@ -27,7 +29,7 @@
         <div class="ap-block">
           {{#repeat data.cost}}
           <img src="/assets/img/meta/ap.png" class="ap" title="Action Point" alt="image of an action point"
-            draggable="false">
+            loading="lazy" draggable="false">
           {{/repeat}}
         </div>
       </div>
@@ -81,7 +83,7 @@
         {{#each data.status_effects_elements}}
         <a href="/{{@root.langCode}}{{@root.routes.statusEffect}}/{{this.id}}.html"
           class="status-group animate__animated animate__fadeIn">
-          <img src="{{resimage this.icon.path}}" class="status" alt="status of {{this.name_localised}}"
+          <img src="{{resimage this.icon.path}}" class="status" alt="status of {{this.name_localised}}" loading="lazy"
             draggable="false">
           <small>{{this.name_localised}}</small>
         </a>
@@ -107,7 +109,7 @@
                 <a href="/{{@root.langCode}}{{@root.routes.monsters}}/{{encodeuri this.resource_name}}.html"
                   title="{{this.name_localised}}">
                   <img src="{{resimage this.icon_url}}" class="remaster-image" alt="image of {{this.name_localised}}"
-                    draggable="false">
+                    loading="lazy" draggable="false">
                 </a>
               </td>
               <td class="name">
