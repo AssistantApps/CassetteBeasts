@@ -1,7 +1,7 @@
 <header class="header">
     <div class="container noselect">
         <nav>
-            <a aria-label="Home" href="{{@root.routes.home}}">
+            <a aria-label="Home" href="{{@root.routes.home}}" title="Home">
                 <ul class="branding">
                     <li>
                         <div class="logo animate__animated">
@@ -36,7 +36,7 @@
                     </details>
                 </li>
                 <li data-translate="TODO" data-tooltip="About" data-placement="bottom">
-                    <a class="contrast" aria-label="About" href="{{@root.routes.about}}">
+                    <a class="contrast" aria-label="About" title="About" href="{{@root.routes.about}}">
                         <svg fill="#000000" height="24" width="24" viewBox="0 0 128 128" version="1.1"
                             xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
                             xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -60,7 +60,8 @@
                     </a>
                 </li>
                 <li data-tooltip="AssistantApps" data-placement="bottom">
-                    <a class="contrast" aria-label="Turn off dark mode" href="{{@root.assistantApps.website}}">
+                    <a class="contrast" aria-label="AssistantApps" title="AssistantApps"
+                        href="{{@root.assistantApps.website}}">
                         <img src="/assets/img/assistantApps-32.png" height="24" width="24" alt="assistant apps logo">
                     </a>
                 </li>

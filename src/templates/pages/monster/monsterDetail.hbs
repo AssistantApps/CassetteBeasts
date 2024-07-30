@@ -4,7 +4,7 @@
 
 <div class="grid masonry min-card-width mb-3">
   <div class="meta">
-    <h1>{{lookup @root.translate 'UI_BESTIARY_LIST_MODE_VIEW_MONSTERS'}} &gt;&gt; {{data.name_localised}}</h1>
+    <h1>{{lookup @root.translate 'UI_BESTIARY_LIST_MODE_VIEW_MONSTERS'}} - {{data.name_localised}}</h1>
   </div>
 
   <article class="monster-detail-card item-detail-card">
@@ -26,13 +26,14 @@
     </div>
     <div class="monster-detail-card-body item-detail-card-body">
       <div id="sprite-tab-container" class="monster-detail-card-main">
+        <h2 class="meta">Images for {{data.name_localised}}</h2>
         <div class="grid images noselect animate__animated animate__fadeIn">
           <div class="sprites">
             <img src="{{resimage data.icon_url}}" class="char-image tab-content-0" loading="lazy"
               alt="image of {{data.name_localised}}" draggable="false">
 
             {{#each data.animations}}
-            <img src="{{resimage this.imageUrl}}" class="char-image  tab-content-{{inc @index}}" loading="lazy"
+            <img src="{{resimage this.imageUrl}}" class="char-image  tab-content-{{inc @index}}"
               alt="gif #{{this.id}} of {{data.name_localised}}" draggable="false">
             {{/each}}
 
@@ -74,6 +75,7 @@
       {{/if}}
 
       <div class="bio animate__animated animate__fadeIn">
+        <h2 class="meta">bios for Cassette Beast {{data.name_localised}}</h2>
         {{#if data.unlock_ability.length}}
         <p>{{unlock_ability}}</p>
         {{/if}}
@@ -83,7 +85,10 @@
       </div>
 
       <section class="additional-section additional animate__animated animate__fadeIn">
-        <h3 class="section-heading Neu5Land">{{lookup @root.translate 'additionalStats'}}</h3>
+        <h3 class="section-heading Neu5Land">
+          {{lookup @root.translate 'additionalStats'}}
+          <span class="meta">for {{data.name_localised}}</span>
+        </h3>
         <div class="table-container">
           <table class="additional highlight-cell animate__animated animate__fadeIn">
             <thead>

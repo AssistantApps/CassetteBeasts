@@ -3,7 +3,7 @@
     {{#if @index}}<li>››</li>{{/if}}
     {{#if @first}}
     <li>
-        <a href="{{this.link}}" title="{{this.name}}" rel="noopener noreferrer">
+        <a href="{{this.link}}" title="home" rel="noopener noreferrer">
             <img src="/assets/img/home.png" alt="home">
         </a>
     </li>
@@ -26,11 +26,13 @@
             {{/if}}
         </span>
         {{else}}
-        <a href="{{this.link}}" title="{{this.name}}" rel="noopener noreferrer">
-            {{#if this.name}}
-            {{this.name}}
-            {{else}}
+        <a href="{{this.link}}"
+            title="{{#if this.uiKey}}{{lookup @root.translate this.uiKey}}{{else}}{{this.name}}{{/if}}"
+            rel="noopener noreferrer">
+            {{#if this.uiKey}}
             {{lookup @root.translate this.uiKey}}
+            {{else}}
+            {{this.name}}
             {{/if}}
         </a>
         {{/if}}

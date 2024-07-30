@@ -4,7 +4,8 @@ $tabletWidth: 768px;
 $phoneWidth: 467px;
 
 body {
-  @media screen and (max-width: $desktopWidth) {}
+  @media screen and (max-width: $desktopWidth) {
+  }
 
   @media screen and (max-width: $smallDesktopWidth) {
     .search-input-border-radius {
@@ -20,7 +21,6 @@ body {
 
   @media screen and (max-width: $tabletWidth) {
     header.header {
-
       [data-tooltip][data-placement='bottom']::after,
       [data-tooltip][data-placement='bottom']::before {
         transform: translate(-100%, 0.25rem);
@@ -33,13 +33,15 @@ body {
 
     .monster-detail-card .monster-detail-card-body {
       div.images {
-
         .char-image,
         .stats,
         .stats svg {
           height: 10em;
         }
       }
+    }
+    .monster-detail-sticker-container {
+      display: none;
     }
 
     .move-detail-grid,
@@ -66,7 +68,7 @@ body {
       flex-direction: column;
       gap: 0.5em;
 
-      >* {
+      > * {
         max-width: unset;
         min-width: 100%;
       }
@@ -90,7 +92,6 @@ body {
 
   @media screen and (max-width: $phoneWidth) {
     header.header {
-
       [data-tooltip][data-placement='bottom']::after,
       [data-tooltip][data-placement='bottom']::before {
         content: unset;
