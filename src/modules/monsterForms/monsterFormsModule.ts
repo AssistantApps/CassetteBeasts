@@ -80,14 +80,6 @@ export class MonsterFormsModule extends CommonModule<IMonsterForm> {
           mapFromDetailList: monsterFormMapFromDetailList(folderName),
         });
         this._baseDetails.push(detail);
-
-        if (detail.evolutions.length > 0) {
-          const mapKey = detail.name.replace('_NAME', '').toLowerCase();
-          for (const evolution of detail.evolutions) {
-            this._evolutionFromMap[(evolution as ISubResourceMonsterEnhanced).resource_name] =
-              mapKey;
-          }
-        }
       }
     }
 
@@ -106,6 +98,8 @@ export class MonsterFormsModule extends CommonModule<IMonsterForm> {
       modules,
       ModuleType.MonsterSpriteAnim,
     );
+
+    this._buildEvolutionFromMap();
 
     for (const detail of this._baseDetails) {
       const mapKey = detail.name.replace('_NAME', '').toLowerCase();
@@ -143,16 +137,22 @@ export class MonsterFormsModule extends CommonModule<IMonsterForm> {
           elementModule.get(resAndTresTrim(et.path)),
         ),
         initial_moves: undefined,
-        initial_moves_moves: detail.initial_moves.map((im) =>
-          moveModule.get(resAndTresTrim(im.path)),
-        ),
+        initial_moves_moves: detail.initial_moves.map((im) => ({
+          ...moveModule.get(resAndTresTrim(im.path)),
+          monsters_that_can_learn: [],
+          status_effects_elements: [],
+        })),
         tape_upgrades: undefined,
         tape_upgrades_moves: detail.tape_upgrades.map((tu) => {
           let path = (tu as IExternalResource)?.path;
           if (path == null) {
             path = (tu as ISubResource)?.sticker?.path;
           }
-          return moveModule.get(resAndTresTrim(path ?? ''));
+          return {
+            ...moveModule.get(resAndTresTrim(path ?? '')),
+            monsters_that_can_learn: [],
+            status_effects_elements: [],
+          };
         }),
         animations: (spriteAnimModule.get(sprite_anim_key)?.animations ?? []).map((a, idx) => ({
           ...a,
@@ -356,6 +356,18 @@ export class MonsterFormsModule extends CommonModule<IMonsterForm> {
       outputFiles: [relativePath],
       templateFile: handlebarTemplate.monster,
     });
+  };
+
+  private _buildEvolutionFromMap = () => {
+    this._evolutionFromMap = {};
+    for (const detail of this._baseDetails) {
+      if (detail.evolutions.length > 0) {
+        const mapKey = detail.name.replace('_NAME', '').toLowerCase();
+        for (const evolution of detail.evolutions) {
+          this._evolutionFromMap[(evolution as ISubResourceMonsterEnhanced).resource_name] = mapKey;
+        }
+      }
+    }
   };
 
   private _setupMoveMap = (
