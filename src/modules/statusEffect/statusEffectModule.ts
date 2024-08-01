@@ -20,6 +20,7 @@ import {
   generateMetaImage,
 } from 'helpers/imageHelper';
 import { sortByStringProperty } from 'helpers/sortHelper';
+import { pad } from 'helpers/stringHelper';
 import { moveToSimplified } from 'mapper/moveMapper';
 import { readItemDetail } from 'modules/baseModule';
 import { CommonModule } from 'modules/commonModule';
@@ -55,7 +56,7 @@ export class StatusEffectModule extends CommonModule<IStatusEffect> {
       });
       this._baseDetails.push(detail);
     }
-    return `${this._baseDetails.length}  status effects`;
+    return `${pad(this._baseDetails.length, 3, ' ')} status effects`;
   };
 
   enrichData = async (langCode: string, modules: Array<CommonModule<unknown>>) => {

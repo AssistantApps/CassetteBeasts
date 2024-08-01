@@ -77,9 +77,9 @@ export const getStringArray = (line: string): Array<string> =>
     .map(getCleanedString)
     .filter((l) => l != null && l.length > 0);
 
-export const pad = (num: number, size: number): string => {
+export const pad = (num: number, size: number, char: string = '0'): string => {
   let s = num + '';
-  while (s.length < size) s = '0' + s;
+  while (s.length < size) s = char + s;
   return s;
 };
 

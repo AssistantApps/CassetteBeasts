@@ -4,6 +4,7 @@ import { IntermediateFile } from 'constant/intermediateFile';
 import { ModuleType } from 'constant/module';
 import { ISpriteAnim } from 'contracts/spriteAnim';
 import { FolderPathHelper } from 'helpers/folderPathHelper';
+import { pad } from 'helpers/stringHelper';
 import { readItemDetail } from 'modules/baseModule';
 import { CommonModule } from 'modules/commonModule';
 import { spriteAnimMapFromDetailList } from '../../misc/spriteAnimMapFromDetailList';
@@ -41,6 +42,6 @@ export class CharacterSpriteAnimModule extends CommonModule<ISpriteAnim> {
     }
     this.isReady = true;
 
-    return `${this._baseDetails.length}  character sprites`;
+    return `${pad(this._baseDetails.length, 3, ' ')} character sprites`;
   };
 }

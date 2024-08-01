@@ -17,7 +17,7 @@ import { paths } from 'constant/paths';
 import { tresSeparator } from 'constant/tresSeparator';
 import { ILocalisation } from 'contracts/localisation';
 import { FolderPathHelper } from 'helpers/folderPathHelper';
-import { stringStartsWith } from 'helpers/stringHelper';
+import { pad, stringStartsWith } from 'helpers/stringHelper';
 import { CommonModule } from 'modules/commonModule';
 
 const excludeLangCodes = ['eo'];
@@ -121,7 +121,7 @@ export class LocalisationModule extends CommonModule<ILocalisation> {
     }
 
     this.isReady = true;
-    return `${Object.keys(this._itemDetailMap).length} languages loaded, with ${
+    return `${pad(Object.keys(this._itemDetailMap).length, 3, ' ')} languages loaded, with ${
       Object.keys(this._itemDetailMap?.[defaultLocale]?.messages ?? {}).length
     } keys per language.`;
   };

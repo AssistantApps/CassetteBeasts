@@ -1,0 +1,1271 @@
+[
+  {
+    "id": "adeptile",
+    "name_localised": "Adeptile",
+    "resource_name": "adeptile",
+    "icon_url": "res://sprites/monsters/adeptile.png",
+    "isSecret": false,
+    "bestiary_index": 123,
+    "bestiary_index_with_padding": "123"
+  },
+  {
+    "id": "aeroboros",
+    "name_localised": "Aeroboros",
+    "resource_name": "aeroboros",
+    "icon_url": "res://sprites/monsters/aeroboros.png",
+    "isSecret": false,
+    "bestiary_index": 10,
+    "bestiary_index_with_padding": "010"
+  },
+  {
+    "id": "allseer",
+    "name_localised": "Allseer",
+    "resource_name": "allseer",
+    "icon_url": "res://sprites/monsters/allseer.png",
+    "isSecret": false,
+    "bestiary_index": 52,
+    "bestiary_index_with_padding": "052"
+  },
+  {
+    "id": "amphare",
+    "name_localised": "Amphare",
+    "resource_name": "amphare",
+    "icon_url": "res://sprites/monsters/amphare.png",
+    "isSecret": false,
+    "bestiary_index": -1,
+    "bestiary_index_with_padding": "???"
+  },
+  {
+    "id": "anathema",
+    "name_localised": "Anathema",
+    "resource_name": "anathema",
+    "icon_url": "res://sprites/monsters/anathema.png",
+    "isSecret": false,
+    "bestiary_index": 120,
+    "bestiary_index_with_padding": "120"
+  },
+  {
+    "id": "apocrowlypse",
+    "name_localised": "Apocrowlypse",
+    "resource_name": "apocrowlypse",
+    "icon_url": "res://sprites/monsters/apocrowlypse.png",
+    "isSecret": false,
+    "bestiary_index": 48,
+    "bestiary_index_with_padding": "048"
+  },
+  {
+    "id": "arkidd",
+    "name_localised": "Arkidd",
+    "resource_name": "arkidd",
+    "icon_url": "res://sprites/monsters/arkidd.png",
+    "isSecret": false,
+    "bestiary_index": 113,
+    "bestiary_index_with_padding": "113"
+  },
+  {
+    "id": "artillerex",
+    "name_localised": "Artillerex",
+    "resource_name": "artillerex",
+    "icon_url": "res://sprites/monsters/artillerex.png",
+    "isSecret": false,
+    "bestiary_index": 43,
+    "bestiary_index_with_padding": "043"
+  },
+  {
+    "id": "auriclaw",
+    "name_localised": "Auriclaw",
+    "resource_name": "auriclaw",
+    "icon_url": "res://sprites/monsters/auriclaw.png",
+    "isSecret": false,
+    "bestiary_index": 127,
+    "bestiary_index_with_padding": "127"
+  },
+  {
+    "id": "averevoir",
+    "name_localised": "Averevoir",
+    "resource_name": "averevoir",
+    "icon_url": "res://sprites/monsters/averevoir.png",
+    "isSecret": false,
+    "bestiary_index": 117,
+    "bestiary_index_with_padding": "117"
+  },
+  {
+    "id": "bansheep",
+    "name_localised": "Bansheep",
+    "resource_name": "bansheep",
+    "icon_url": "res://sprites/monsters/bansheep.png",
+    "isSecret": false,
+    "bestiary_index": 19,
+    "bestiary_index_with_padding": "019"
+  },
+  {
+    "id": "beanstalker",
+    "name_localised": "Beanstalker",
+    "resource_name": "beanstalker",
+    "icon_url": "res://sprites/monsters/beanstalker.png",
+    "isSecret": false,
+    "bestiary_index": 90,
+    "bestiary_index_with_padding": "090"
+  },
+  {
+    "id": "binterloper",
+    "name_localised": "Binterloper",
+    "resource_name": "binterloper",
+    "icon_url": "res://sprites/monsters/binterloper.png",
+    "isSecret": false,
+    "bestiary_index": 83,
+    "bestiary_index_with_padding": "083"
+  },
+  {
+    "id": "binvader",
+    "name_localised": "Binvader",
+    "resource_name": "binvader",
+    "icon_url": "res://sprites/monsters/binvader.png",
+    "isSecret": false,
+    "bestiary_index": 82,
+    "bestiary_index_with_padding": "082"
+  },
+  {
+    "id": "blossomaw",
+    "name_localised": "Blossomaw",
+    "resource_name": "blossomaw",
+    "icon_url": "res://sprites/monsters/blossomaw.png",
+    "isSecret": false,
+    "bestiary_index": 27,
+    "bestiary_index_with_padding": "027"
+  },
+  {
+    "id": "blunderbusk",
+    "name_localised": "Blunderbusk",
+    "resource_name": "blunderbusk",
+    "icon_url": "res://sprites/monsters/blunderbusk.png",
+    "isSecret": false,
+    "bestiary_index": -1,
+    "bestiary_index_with_padding": "???"
+  },
+  {
+    "id": "boltam",
+    "name_localised": "Boltam",
+    "resource_name": "boltam",
+    "icon_url": "res://sprites/monsters/boltam.png",
+    "isSecret": false,
+    "bestiary_index": 71,
+    "bestiary_index_with_padding": "071"
+  },
+  {
+    "id": "braxsuit",
+    "name_localised": "Braxsuit",
+    "resource_name": "braxsuit",
+    "icon_url": "res://sprites/monsters/braxsuit.png",
+    "isSecret": false,
+    "bestiary_index": 55,
+    "bestiary_index_with_padding": "055"
+  },
+  {
+    "id": "brushroom",
+    "name_localised": "Brushroom",
+    "resource_name": "brushroom",
+    "icon_url": "res://sprites/monsters/brushroom.png",
+    "isSecret": false,
+    "bestiary_index": 69,
+    "bestiary_index_with_padding": "069"
+  },
+  {
+    "id": "bulletino",
+    "name_localised": "Bulletino",
+    "resource_name": "bulletino",
+    "icon_url": "res://sprites/monsters/bulletino.png",
+    "isSecret": false,
+    "bestiary_index": 41,
+    "bestiary_index_with_padding": "041"
+  },
+  {
+    "id": "burnace",
+    "name_localised": "Burnace",
+    "resource_name": "burnace",
+    "icon_url": "res://sprites/monsters/burnace.png",
+    "isSecret": false,
+    "bestiary_index": 96,
+    "bestiary_index_with_padding": "096"
+  },
+  {
+    "id": "busheye",
+    "name_localised": "Busheye",
+    "resource_name": "busheye",
+    "icon_url": "res://sprites/monsters/busheye.png",
+    "isSecret": false,
+    "bestiary_index": 73,
+    "bestiary_index_with_padding": "073"
+  },
+  {
+    "id": "candevil",
+    "name_localised": "Candevil",
+    "resource_name": "candevil",
+    "icon_url": "res://sprites/monsters/candevil.png",
+    "isSecret": false,
+    "bestiary_index": 14,
+    "bestiary_index_with_padding": "014"
+  },
+  {
+    "id": "capricorpse",
+    "name_localised": "Capricorpse",
+    "resource_name": "capricorpse",
+    "icon_url": "res://sprites/monsters/capricorpse.png",
+    "isSecret": false,
+    "bestiary_index": 23,
+    "bestiary_index_with_padding": "023"
+  },
+  {
+    "id": "carniviper",
+    "name_localised": "Carniviper",
+    "resource_name": "carniviper",
+    "icon_url": "res://sprites/monsters/carniviper.png",
+    "isSecret": false,
+    "bestiary_index": 6,
+    "bestiary_index_with_padding": "006"
+  },
+  {
+    "id": "cat-5",
+    "name_localised": "Cat-5",
+    "resource_name": "cat-5",
+    "icon_url": "res://sprites/monsters/cat-5.png",
+    "isSecret": false,
+    "bestiary_index": 38,
+    "bestiary_index_with_padding": "038"
+  },
+  {
+    "id": "charlequin",
+    "name_localised": "Charlequin",
+    "resource_name": "charlequin",
+    "icon_url": "res://sprites/monsters/charlequin.png",
+    "isSecret": false,
+    "bestiary_index": -1,
+    "bestiary_index_with_padding": "???"
+  },
+  {
+    "id": "clocksley",
+    "name_localised": "Clocksley",
+    "resource_name": "clocksley",
+    "icon_url": "res://sprites/monsters/clocksley.png",
+    "isSecret": false,
+    "bestiary_index": 49,
+    "bestiary_index_with_padding": "049"
+  },
+  {
+    "id": "cluckabilly",
+    "name_localised": "Cluckabilly",
+    "resource_name": "cluckabilly",
+    "icon_url": "res://sprites/monsters/cluckabilly.png",
+    "isSecret": false,
+    "bestiary_index": 100,
+    "bestiary_index_with_padding": "100"
+  },
+  {
+    "id": "coaldron",
+    "name_localised": "Coaldron",
+    "resource_name": "coaldron",
+    "icon_url": "res://sprites/monsters/coaldron.png",
+    "isSecret": false,
+    "bestiary_index": 77,
+    "bestiary_index_with_padding": "077"
+  },
+  {
+    "id": "cryoshear",
+    "name_localised": "Cryoshear",
+    "resource_name": "cryoshear",
+    "icon_url": "res://sprites/monsters/cryoshear.png",
+    "isSecret": false,
+    "bestiary_index": 107,
+    "bestiary_index_with_padding": "107"
+  },
+  {
+    "id": "dandylion",
+    "name_localised": "Dandylion",
+    "resource_name": "dandylion",
+    "icon_url": "res://sprites/monsters/dandylion.png",
+    "isSecret": false,
+    "bestiary_index": 26,
+    "bestiary_index_with_padding": "026"
+  },
+  {
+    "id": "decibelle",
+    "name_localised": "Decibelle",
+    "resource_name": "decibelle",
+    "icon_url": "res://sprites/monsters/decibelle.png",
+    "isSecret": false,
+    "bestiary_index": 25,
+    "bestiary_index_with_padding": "025"
+  },
+  {
+    "id": "diveal",
+    "name_localised": "Diveal",
+    "resource_name": "diveal",
+    "icon_url": "res://sprites/monsters/diveal.png",
+    "isSecret": false,
+    "bestiary_index": 45,
+    "bestiary_index_with_padding": "045"
+  },
+  {
+    "id": "diveberg",
+    "name_localised": "Diveberg",
+    "resource_name": "diveberg",
+    "icon_url": "res://sprites/monsters/diveberg.png",
+    "isSecret": false,
+    "bestiary_index": 122,
+    "bestiary_index_with_padding": "122"
+  },
+  {
+    "id": "djinn_entonic",
+    "name_localised": "Djinn Entonic",
+    "resource_name": "djinn_entonic",
+    "icon_url": "res://sprites/monsters/djinn_entonic.png",
+    "isSecret": false,
+    "bestiary_index": 112,
+    "bestiary_index_with_padding": "112"
+  },
+  {
+    "id": "dominoth",
+    "name_localised": "Dominoth",
+    "resource_name": "dominoth",
+    "icon_url": "res://sprites/monsters/dominoth.png",
+    "isSecret": false,
+    "bestiary_index": 30,
+    "bestiary_index_with_padding": "030"
+  },
+  {
+    "id": "draculeaf",
+    "name_localised": "Draculeaf",
+    "resource_name": "draculeaf",
+    "icon_url": "res://sprites/monsters/draculeaf.png",
+    "isSecret": false,
+    "bestiary_index": 91,
+    "bestiary_index_with_padding": "091"
+  },
+  {
+    "id": "elfless",
+    "name_localised": "Elfless",
+    "resource_name": "elfless",
+    "icon_url": "res://sprites/monsters/elfless.png",
+    "isSecret": false,
+    "bestiary_index": 66,
+    "bestiary_index_with_padding": "066"
+  },
+  {
+    "id": "faerious",
+    "name_localised": "Faerious",
+    "resource_name": "faerious",
+    "icon_url": "res://sprites/monsters/faerious.png",
+    "isSecret": false,
+    "bestiary_index": 68,
+    "bestiary_index_with_padding": "068"
+  },
+  {
+    "id": "faucetear",
+    "name_localised": "Faucetear",
+    "resource_name": "faucetear",
+    "icon_url": "res://sprites/monsters/faucetear.png",
+    "isSecret": false,
+    "bestiary_index": 98,
+    "bestiary_index_with_padding": "098"
+  },
+  {
+    "id": "ferriclaw",
+    "name_localised": "Ferriclaw",
+    "resource_name": "ferriclaw",
+    "icon_url": "res://sprites/monsters/ferriclaw.png",
+    "isSecret": false,
+    "bestiary_index": 126,
+    "bestiary_index_with_padding": "126"
+  },
+  {
+    "id": "flapwoods",
+    "name_localised": "Flapwoods",
+    "resource_name": "flapwoods",
+    "icon_url": "res://sprites/monsters/flapwoods.png",
+    "isSecret": false,
+    "bestiary_index": 56,
+    "bestiary_index_with_padding": "056"
+  },
+  {
+    "id": "folklord",
+    "name_localised": "Folklord",
+    "resource_name": "folklord",
+    "icon_url": "res://sprites/monsters/folklord.png",
+    "isSecret": false,
+    "bestiary_index": 29,
+    "bestiary_index_with_padding": "029"
+  },
+  {
+    "id": "fortiwinx",
+    "name_localised": "Fortiwinx",
+    "resource_name": "fortiwinx",
+    "icon_url": "res://sprites/monsters/fortiwinx.png",
+    "isSecret": false,
+    "bestiary_index": 58,
+    "bestiary_index_with_padding": "058"
+  },
+  {
+    "id": "fountess",
+    "name_localised": "Fountess",
+    "resource_name": "fountess",
+    "icon_url": "res://sprites/monsters/shower.png",
+    "isSecret": false,
+    "bestiary_index": 99,
+    "bestiary_index_with_padding": "099"
+  },
+  {
+    "id": "fragliacci",
+    "name_localised": "Fragliacci",
+    "resource_name": "fragliacci",
+    "icon_url": "res://sprites/monsters/fragliacci.png",
+    "isSecret": false,
+    "bestiary_index": -1,
+    "bestiary_index_with_padding": "???"
+  },
+  {
+    "id": "frillypad",
+    "name_localised": "Frillypad",
+    "resource_name": "frillypad",
+    "icon_url": "res://sprites/monsters/frillypad.png",
+    "isSecret": false,
+    "bestiary_index": 64,
+    "bestiary_index_with_padding": "064"
+  },
+  {
+    "id": "fungogh",
+    "name_localised": "Fungogh",
+    "resource_name": "fungogh",
+    "icon_url": "res://sprites/monsters/fungogh.png",
+    "isSecret": false,
+    "bestiary_index": 70,
+    "bestiary_index_with_padding": "070"
+  },
+  {
+    "id": "galagor",
+    "name_localised": "Galagor",
+    "resource_name": "galagor",
+    "icon_url": "res://sprites/monsters/galagor.png",
+    "isSecret": false,
+    "bestiary_index": 79,
+    "bestiary_index_with_padding": "079"
+  },
+  {
+    "id": "gearyu",
+    "name_localised": "Gearyu",
+    "resource_name": "gearyu",
+    "icon_url": "res://sprites/monsters/gearyu.png",
+    "isSecret": false,
+    "bestiary_index": 44,
+    "bestiary_index_with_padding": "044"
+  },
+  {
+    "id": "glaistain",
+    "name_localised": "Glaistain",
+    "resource_name": "glaistain",
+    "icon_url": "res://sprites/monsters/glaistain.png",
+    "isSecret": false,
+    "bestiary_index": 118,
+    "bestiary_index_with_padding": "118"
+  },
+  {
+    "id": "grampus",
+    "name_localised": "Grampus",
+    "resource_name": "grampus",
+    "icon_url": "res://sprites/monsters/grampus.png",
+    "isSecret": false,
+    "bestiary_index": 67,
+    "bestiary_index_with_padding": "067"
+  },
+  {
+    "id": "gumbaal",
+    "name_localised": "Gumbaal",
+    "resource_name": "gumbaal",
+    "icon_url": "res://sprites/monsters/gumbaal.png",
+    "isSecret": false,
+    "bestiary_index": 18,
+    "bestiary_index_with_padding": "018"
+  },
+  {
+    "id": "hauntome",
+    "name_localised": "Hauntome",
+    "resource_name": "hauntome",
+    "icon_url": "res://sprites/monsters/hauntome.png",
+    "isSecret": false,
+    "bestiary_index": -1,
+    "bestiary_index_with_padding": "???"
+  },
+  {
+    "id": "hedgeherne",
+    "name_localised": "Hedgeherne",
+    "resource_name": "hedgeherne",
+    "icon_url": "res://sprites/monsters/hedgeherne.png",
+    "isSecret": false,
+    "bestiary_index": 75,
+    "bestiary_index_with_padding": "075"
+  },
+  {
+    "id": "hopskin",
+    "name_localised": "Hopskin",
+    "resource_name": "hopskin",
+    "icon_url": "res://sprites/monsters/hopskin.png",
+    "isSecret": false,
+    "bestiary_index": 2,
+    "bestiary_index_with_padding": "002"
+  },
+  {
+    "id": "huntorch",
+    "name_localised": "Huntorch",
+    "resource_name": "huntorch",
+    "icon_url": "res://sprites/monsters/huntorch.png",
+    "isSecret": false,
+    "bestiary_index": 74,
+    "bestiary_index_with_padding": "074"
+  },
+  {
+    "id": "icepeck",
+    "name_localised": "Icepeck",
+    "resource_name": "icepeck",
+    "icon_url": "res://sprites/monsters/icepeck.png",
+    "isSecret": false,
+    "bestiary_index": 106,
+    "bestiary_index_with_padding": "106"
+  },
+  {
+    "id": "jellyton",
+    "name_localised": "Jellyton",
+    "resource_name": "jellyton",
+    "icon_url": "res://sprites/monsters/jellyton.png",
+    "isSecret": false,
+    "bestiary_index": 86,
+    "bestiary_index_with_padding": "086"
+  },
+  {
+    "id": "jormungold",
+    "name_localised": "Jormungold",
+    "resource_name": "jormungold",
+    "icon_url": "res://sprites/monsters/jormungold.png",
+    "isSecret": false,
+    "bestiary_index": 8,
+    "bestiary_index_with_padding": "008"
+  },
+  {
+    "id": "jumpkin",
+    "name_localised": "Jumpkin",
+    "resource_name": "jumpkin",
+    "icon_url": "res://sprites/monsters/jumpkin.png",
+    "isSecret": false,
+    "bestiary_index": 89,
+    "bestiary_index_with_padding": "089"
+  },
+  {
+    "id": "khepri",
+    "name_localised": "Khepri",
+    "resource_name": "khepri",
+    "icon_url": "res://sprites/monsters/khepri.png",
+    "isSecret": false,
+    "bestiary_index": 116,
+    "bestiary_index_with_padding": "116"
+  },
+  {
+    "id": "khufo",
+    "name_localised": "Khufo",
+    "resource_name": "khufo",
+    "icon_url": "res://sprites/monsters/khufo.png",
+    "isSecret": false,
+    "bestiary_index": 53,
+    "bestiary_index_with_padding": "053"
+  },
+  {
+    "id": "kingrave",
+    "name_localised": "Kingrave",
+    "resource_name": "kingrave",
+    "icon_url": "res://sprites/monsters/kingrave.png",
+    "isSecret": false,
+    "bestiary_index": 94,
+    "bestiary_index_with_padding": "094"
+  },
+  {
+    "id": "kirikuri",
+    "name_localised": "Kirikuri",
+    "resource_name": "kirikuri",
+    "icon_url": "res://sprites/monsters/kirikuri.png",
+    "isSecret": false,
+    "bestiary_index": 85,
+    "bestiary_index_with_padding": "085"
+  },
+  {
+    "id": "kittelly",
+    "name_localised": "Kittelly",
+    "resource_name": "kittelly",
+    "icon_url": "res://sprites/monsters/kittelly.png",
+    "isSecret": false,
+    "bestiary_index": 37,
+    "bestiary_index_with_padding": "037"
+  },
+  {
+    "id": "kuneko",
+    "name_localised": "Kuneko",
+    "resource_name": "kuneko",
+    "icon_url": "res://sprites/monsters/kuneko.png",
+    "isSecret": false,
+    "bestiary_index": 110,
+    "bestiary_index_with_padding": "110"
+  },
+  {
+    "id": "lapacitor",
+    "name_localised": "Lapacitor",
+    "resource_name": "lapacitor",
+    "icon_url": "res://sprites/monsters/lapacitor.png",
+    "isSecret": false,
+    "bestiary_index": -1,
+    "bestiary_index_with_padding": "???"
+  },
+  {
+    "id": "liligator",
+    "name_localised": "Liligator",
+    "resource_name": "liligator",
+    "icon_url": "res://sprites/monsters/liligator.png",
+    "isSecret": false,
+    "bestiary_index": 65,
+    "bestiary_index_with_padding": "065"
+  },
+  {
+    "id": "littlered",
+    "name_localised": "Littlered",
+    "resource_name": "littlered",
+    "icon_url": "res://sprites/monsters/littlered.png",
+    "isSecret": false,
+    "bestiary_index": -1,
+    "bestiary_index_with_padding": "???"
+  },
+  {
+    "id": "lobstacle",
+    "name_localised": "Lobstacle",
+    "resource_name": "lobstacle",
+    "icon_url": "res://sprites/monsters/lobstacle.png",
+    "isSecret": false,
+    "bestiary_index": 13,
+    "bestiary_index_with_padding": "013"
+  },
+  {
+    "id": "macabra",
+    "name_localised": "Macabra",
+    "resource_name": "macabra",
+    "icon_url": "res://sprites/monsters/macabra.png",
+    "isSecret": false,
+    "bestiary_index": 28,
+    "bestiary_index_with_padding": "028"
+  },
+  {
+    "id": "majortom",
+    "name_localised": "Majortom",
+    "resource_name": "majortom",
+    "icon_url": "res://sprites/monsters/majortom.png",
+    "isSecret": false,
+    "bestiary_index": -1,
+    "bestiary_index_with_padding": "???"
+  },
+  {
+    "id": "malchemy",
+    "name_localised": "Malchemy",
+    "resource_name": "malchemy",
+    "icon_url": "res://sprites/monsters/malchemy.png",
+    "isSecret": false,
+    "bestiary_index": 15,
+    "bestiary_index_with_padding": "015"
+  },
+  {
+    "id": "manispear",
+    "name_localised": "Manispear",
+    "resource_name": "manispear",
+    "icon_url": "res://sprites/monsters/manispear.png",
+    "isSecret": false,
+    "bestiary_index": 35,
+    "bestiary_index_with_padding": "035"
+  },
+  {
+    "id": "mardiusa",
+    "name_localised": "Mardiusa",
+    "resource_name": "mardiusa",
+    "icon_url": "res://sprites/monsters/mardiusa.png",
+    "isSecret": false,
+    "bestiary_index": 9,
+    "bestiary_index_with_padding": "009"
+  },
+  {
+    "id": "mascotorn",
+    "name_localised": "Mascotorn",
+    "resource_name": "mascotorn",
+    "icon_url": "res://sprites/monsters/mascotorn.png",
+    "isSecret": false,
+    "bestiary_index": 81,
+    "bestiary_index_with_padding": "081"
+  },
+  {
+    "id": "mascotoy",
+    "name_localised": "Mascotoy",
+    "resource_name": "mascotoy",
+    "icon_url": "res://sprites/monsters/mascotoy.png",
+    "isSecret": false,
+    "bestiary_index": 80,
+    "bestiary_index_with_padding": "080"
+  },
+  {
+    "id": "masquerattle",
+    "name_localised": "Masquerattle",
+    "resource_name": "masquerattle",
+    "icon_url": "res://sprites/monsters/masquerattle.png",
+    "isSecret": false,
+    "bestiary_index": 7,
+    "bestiary_index_with_padding": "007"
+  },
+  {
+    "id": "miasmodeus",
+    "name_localised": "Miasmodeus",
+    "resource_name": "miasmodeus",
+    "icon_url": "res://sprites/monsters/miasmodeus.png",
+    "isSecret": false,
+    "bestiary_index": 16,
+    "bestiary_index_with_padding": "016"
+  },
+  {
+    "id": "minortom",
+    "name_localised": "Minortom",
+    "resource_name": "minortom",
+    "icon_url": "res://sprites/monsters/minortom.png",
+    "isSecret": false,
+    "bestiary_index": -1,
+    "bestiary_index_with_padding": "???"
+  },
+  {
+    "id": "miss_mimic",
+    "name_localised": "Miss Mimic",
+    "resource_name": "miss_mimic",
+    "icon_url": "res://sprites/monsters/miss_mimic.png",
+    "isSecret": false,
+    "bestiary_index": 119,
+    "bestiary_index_with_padding": "119"
+  },
+  {
+    "id": "mothmanic",
+    "name_localised": "Mothmanic",
+    "resource_name": "mothmanic",
+    "icon_url": "res://sprites/monsters/mothmanic.png",
+    "isSecret": false,
+    "bestiary_index": 32,
+    "bestiary_index_with_padding": "032"
+  },
+  {
+    "id": "muskrateer",
+    "name_localised": "Muskrateer",
+    "resource_name": "muskrateer",
+    "icon_url": "res://sprites/monsters/muskrateer.png",
+    "isSecret": false,
+    "bestiary_index": 61,
+    "bestiary_index_with_padding": "061"
+  },
+  {
+    "id": "nevermort",
+    "name_localised": "Nevermort",
+    "resource_name": "nevermort",
+    "icon_url": "res://sprites/monsters/nevermort.png",
+    "isSecret": false,
+    "bestiary_index": 47,
+    "bestiary_index_with_padding": "047"
+  },
+  {
+    "id": "padpole",
+    "name_localised": "Padpole",
+    "resource_name": "padpole",
+    "icon_url": "res://sprites/monsters/padpole.png",
+    "isSecret": false,
+    "bestiary_index": 63,
+    "bestiary_index_with_padding": "063"
+  },
+  {
+    "id": "palangolin",
+    "name_localised": "Palangolin",
+    "resource_name": "palangolin",
+    "icon_url": "res://sprites/monsters/palangolin.png",
+    "isSecret": false,
+    "bestiary_index": 36,
+    "bestiary_index_with_padding": "036"
+  },
+  {
+    "id": "pawndead",
+    "name_localised": "Pawndead",
+    "resource_name": "pawndead",
+    "icon_url": "res://sprites/monsters/pawndead.png",
+    "isSecret": false,
+    "bestiary_index": 92,
+    "bestiary_index_with_padding": "092"
+  },
+  {
+    "id": "picksie",
+    "name_localised": "Picksie",
+    "resource_name": "picksie",
+    "icon_url": "res://sprites/monsters/picksie.png",
+    "isSecret": false,
+    "bestiary_index": 128,
+    "bestiary_index_with_padding": "128"
+  },
+  {
+    "id": "pinbolt",
+    "name_localised": "Pinbolt",
+    "resource_name": "pinbolt",
+    "icon_url": "res://sprites/monsters/pinbolt.png",
+    "isSecret": false,
+    "bestiary_index": 121,
+    "bestiary_index_with_padding": "121"
+  },
+  {
+    "id": "plasmantler",
+    "name_localised": "Plasmantler",
+    "resource_name": "plasmantler",
+    "icon_url": "res://sprites/monsters/plasmantler.png",
+    "isSecret": false,
+    "bestiary_index": 72,
+    "bestiary_index_with_padding": "072"
+  },
+  {
+    "id": "pombomb",
+    "name_localised": "Pombomb",
+    "resource_name": "pombomb",
+    "icon_url": "res://sprites/monsters/pombomb.png",
+    "isSecret": false,
+    "bestiary_index": 104,
+    "bestiary_index_with_padding": "104"
+  },
+  {
+    "id": "pondwalker",
+    "name_localised": "Pondwalker",
+    "resource_name": "pondwalker",
+    "icon_url": "res://sprites/monsters/pondwalker.png",
+    "isSecret": false,
+    "bestiary_index": 102,
+    "bestiary_index_with_padding": "102"
+  },
+  {
+    "id": "puppercut",
+    "name_localised": "Puppercut",
+    "resource_name": "puppercut",
+    "icon_url": "res://sprites/monsters/puppercut.png",
+    "isSecret": false,
+    "bestiary_index": 39,
+    "bestiary_index_with_padding": "039"
+  },
+  {
+    "id": "pyromeleon",
+    "name_localised": "Pyromeleon",
+    "resource_name": "pyromeleon",
+    "icon_url": "res://sprites/monsters/pyromeleon.png",
+    "isSecret": false,
+    "bestiary_index": 60,
+    "bestiary_index_with_padding": "060"
+  },
+  {
+    "id": "queenyx",
+    "name_localised": "Queenyx",
+    "resource_name": "queenyx",
+    "icon_url": "res://sprites/monsters/queenyx.png",
+    "isSecret": false,
+    "bestiary_index": 95,
+    "bestiary_index_with_padding": "095"
+  },
+  {
+    "id": "ramtasm",
+    "name_localised": "Ramtasm",
+    "resource_name": "ramtasm",
+    "icon_url": "res://sprites/monsters/ramtasm.png",
+    "isSecret": false,
+    "bestiary_index": 21,
+    "bestiary_index_with_padding": "021"
+  },
+  {
+    "id": "ratcousel",
+    "name_localised": "Ratcousel",
+    "resource_name": "ratcousel",
+    "icon_url": "res://sprites/monsters/ratcousel.png",
+    "isSecret": false,
+    "bestiary_index": 62,
+    "bestiary_index_with_padding": "062"
+  },
+  {
+    "id": "regensea",
+    "name_localised": "Regensea",
+    "resource_name": "regensea",
+    "icon_url": "res://sprites/monsters/regensea.png",
+    "isSecret": false,
+    "bestiary_index": 88,
+    "bestiary_index_with_padding": "088"
+  },
+  {
+    "id": "ripterra",
+    "name_localised": "Ripterra",
+    "resource_name": "ripterra",
+    "icon_url": "res://sprites/monsters/ripterra.png",
+    "isSecret": false,
+    "bestiary_index": 3,
+    "bestiary_index_with_padding": "003"
+  },
+  {
+    "id": "robindam",
+    "name_localised": "Robindam",
+    "resource_name": "robindam",
+    "icon_url": "res://sprites/monsters/robindam.png",
+    "isSecret": false,
+    "bestiary_index": 50,
+    "bestiary_index_with_padding": "050"
+  },
+  {
+    "id": "rockertrice",
+    "name_localised": "Rockertrice",
+    "resource_name": "rockertrice",
+    "icon_url": "res://sprites/monsters/rockertrice.png",
+    "isSecret": false,
+    "bestiary_index": 101,
+    "bestiary_index_with_padding": "101"
+  },
+  {
+    "id": "rosehood",
+    "name_localised": "Rosehood",
+    "resource_name": "rosehood",
+    "icon_url": "res://sprites/monsters/rosehood.png",
+    "isSecret": false,
+    "bestiary_index": -1,
+    "bestiary_index_with_padding": "???"
+  },
+  {
+    "id": "salamagus",
+    "name_localised": "Salamagus",
+    "resource_name": "salamagus",
+    "icon_url": "res://sprites/monsters/salamagus.png",
+    "isSecret": false,
+    "bestiary_index": 59,
+    "bestiary_index_with_padding": "059"
+  },
+  {
+    "id": "sanzatime",
+    "name_localised": "Sanzatime",
+    "resource_name": "sanzatime",
+    "icon_url": "res://sprites/monsters/sanzatime.png",
+    "isSecret": false,
+    "bestiary_index": 57,
+    "bestiary_index_with_padding": "057"
+  },
+  {
+    "id": "scampire",
+    "name_localised": "Scampire",
+    "resource_name": "scampire",
+    "icon_url": "res://sprites/monsters/scampire.png",
+    "isSecret": false,
+    "bestiary_index": 5,
+    "bestiary_index_with_padding": "005"
+  },
+  {
+    "id": "scarleteeth",
+    "name_localised": "Scarleteeth",
+    "resource_name": "scarleteeth",
+    "icon_url": "res://sprites/monsters/scarleteeth.png",
+    "isSecret": false,
+    "bestiary_index": -1,
+    "bestiary_index_with_padding": "???"
+  },
+  {
+    "id": "scubalrus",
+    "name_localised": "Scubalrus",
+    "resource_name": "scubalrus",
+    "icon_url": "res://sprites/monsters/scubalrus.png",
+    "isSecret": false,
+    "bestiary_index": 46,
+    "bestiary_index_with_padding": "046"
+  },
+  {
+    "id": "sharktanker",
+    "name_localised": "Sharktanker",
+    "resource_name": "sharktanker",
+    "icon_url": "res://sprites/monsters/sharktanker.png",
+    "isSecret": false,
+    "bestiary_index": 103,
+    "bestiary_index_with_padding": "103"
+  },
+  {
+    "id": "shining_kuneko",
+    "name_localised": "Shining Kuneko",
+    "resource_name": "shining_kuneko",
+    "icon_url": "res://sprites/monsters/shining_kuneko.png",
+    "isSecret": false,
+    "bestiary_index": 111,
+    "bestiary_index_with_padding": "111"
+  },
+  {
+    "id": "sirenade",
+    "name_localised": "Sirenade",
+    "resource_name": "sirenade",
+    "icon_url": "res://sprites/monsters/sirenade.png",
+    "isSecret": false,
+    "bestiary_index": 24,
+    "bestiary_index_with_padding": "024"
+  },
+  {
+    "id": "skelevangelist",
+    "name_localised": "Skelevangelist",
+    "resource_name": "skelevangelist",
+    "icon_url": "res://sprites/monsters/skelevangelist.png",
+    "isSecret": false,
+    "bestiary_index": 93,
+    "bestiary_index_with_padding": "093"
+  },
+  {
+    "id": "smogmagog",
+    "name_localised": "Smogmagog",
+    "resource_name": "smogmagog",
+    "icon_url": "res://sprites/monsters/smogmagog.png",
+    "isSecret": false,
+    "bestiary_index": 97,
+    "bestiary_index_with_padding": "097"
+  },
+  {
+    "id": "snoopin",
+    "name_localised": "Snoopin",
+    "resource_name": "snoopin",
+    "icon_url": "res://sprites/monsters/snoopin.png",
+    "isSecret": false,
+    "bestiary_index": 4,
+    "bestiary_index_with_padding": "004"
+  },
+  {
+    "id": "southpaw",
+    "name_localised": "Southpaw",
+    "resource_name": "southpaw",
+    "icon_url": "res://sprites/monsters/southpaw.png",
+    "isSecret": false,
+    "bestiary_index": 40,
+    "bestiary_index_with_padding": "040"
+  },
+  {
+    "id": "sparktan",
+    "name_localised": "Sparktan",
+    "resource_name": "sparktan",
+    "icon_url": "res://sprites/monsters/sparktan.png",
+    "isSecret": false,
+    "bestiary_index": 108,
+    "bestiary_index_with_padding": "108"
+  },
+  {
+    "id": "spirouette",
+    "name_localised": "Spirouette",
+    "resource_name": "spirouette",
+    "icon_url": "res://sprites/monsters/spirouette.png",
+    "isSecret": false,
+    "bestiary_index": 87,
+    "bestiary_index_with_padding": "087"
+  },
+  {
+    "id": "spitzfyre",
+    "name_localised": "Spitzfyre",
+    "resource_name": "spitzfyre",
+    "icon_url": "res://sprites/monsters/spitzfyre.png",
+    "isSecret": false,
+    "bestiary_index": 105,
+    "bestiary_index_with_padding": "105"
+  },
+  {
+    "id": "spooki-onna",
+    "name_localised": "Spooki-onna",
+    "resource_name": "spooki-onna",
+    "icon_url": "res://sprites/monsters/spooki-onna.png",
+    "isSecret": false,
+    "bestiary_index": 115,
+    "bestiary_index_with_padding": "115"
+  },
+  {
+    "id": "springheel",
+    "name_localised": "Springheel",
+    "resource_name": "springheel",
+    "icon_url": "res://sprites/monsters/springheel.png",
+    "isSecret": false,
+    "bestiary_index": 1,
+    "bestiary_index_with_padding": "001"
+  },
+  {
+    "id": "squirey",
+    "name_localised": "Squirey",
+    "resource_name": "squirey",
+    "icon_url": "res://sprites/monsters/squirey.png",
+    "isSecret": false,
+    "bestiary_index": 34,
+    "bestiary_index_with_padding": "034"
+  },
+  {
+    "id": "stardigrade",
+    "name_localised": "Stardigrade",
+    "resource_name": "stardigrade",
+    "icon_url": "res://sprites/monsters/stardigrade.png",
+    "isSecret": false,
+    "bestiary_index": 78,
+    "bestiary_index_with_padding": "078"
+  },
+  {
+    "id": "terracooka",
+    "name_localised": "Terracooka",
+    "resource_name": "terracooka",
+    "icon_url": "res://sprites/monsters/terracooka.png",
+    "isSecret": false,
+    "bestiary_index": 76,
+    "bestiary_index_with_padding": "076"
+  },
+  {
+    "id": "thwackalope",
+    "name_localised": "Thwackalope",
+    "resource_name": "thwackalope",
+    "icon_url": "res://sprites/monsters/thwackalope.png",
+    "isSecret": false,
+    "bestiary_index": 51,
+    "bestiary_index_with_padding": "051"
+  },
+  {
+    "id": "tokusect",
+    "name_localised": "Tokusect",
+    "resource_name": "tokusect",
+    "icon_url": "res://sprites/monsters/tokusect.png",
+    "isSecret": false,
+    "bestiary_index": 33,
+    "bestiary_index_with_padding": "033"
+  },
+  {
+    "id": "traffikrab",
+    "name_localised": "Traffikrab",
+    "resource_name": "traffikrab",
+    "icon_url": "res://sprites/monsters/traffikrab.png",
+    "isSecret": false,
+    "bestiary_index": 11,
+    "bestiary_index_with_padding": "011"
+  },
+  {
+    "id": "trapwurm",
+    "name_localised": "Trapwurm",
+    "resource_name": "trapwurm",
+    "icon_url": "res://sprites/monsters/trapwurm.png",
+    "isSecret": false,
+    "bestiary_index": 124,
+    "bestiary_index_with_padding": "124"
+  },
+  {
+    "id": "triphinx",
+    "name_localised": "Triphinx",
+    "resource_name": "triphinx",
+    "icon_url": "res://sprites/monsters/triphinx.png",
+    "isSecret": false,
+    "bestiary_index": 54,
+    "bestiary_index_with_padding": "054"
+  },
+  {
+    "id": "twirligig",
+    "name_localised": "Twirligig",
+    "resource_name": "twirligig",
+    "icon_url": "res://sprites/monsters/twirligig.png",
+    "isSecret": false,
+    "bestiary_index": 84,
+    "bestiary_index_with_padding": "084"
+  },
+  {
+    "id": "umbrahella",
+    "name_localised": "Umbrahella",
+    "resource_name": "umbrahella",
+    "icon_url": "res://sprites/monsters/umbrahella.png",
+    "isSecret": false,
+    "bestiary_index": -1,
+    "bestiary_index_with_padding": "???"
+  },
+  {
+    "id": "undyin",
+    "name_localised": "Undyin",
+    "resource_name": "undyin",
+    "icon_url": "res://sprites/monsters/undyin.png",
+    "isSecret": false,
+    "bestiary_index": 114,
+    "bestiary_index_with_padding": "114"
+  },
+  {
+    "id": "velocirifle",
+    "name_localised": "Velocirifle",
+    "resource_name": "velocirifle",
+    "icon_url": "res://sprites/monsters/velocirifle.png",
+    "isSecret": false,
+    "bestiary_index": 42,
+    "bestiary_index_with_padding": "042"
+  },
+  {
+    "id": "vendemon",
+    "name_localised": "Vendemon",
+    "resource_name": "vendemon",
+    "icon_url": "res://sprites/monsters/vendemon.png",
+    "isSecret": false,
+    "bestiary_index": 17,
+    "bestiary_index_with_padding": "017"
+  },
+  {
+    "id": "weevilite",
+    "name_localised": "Weevilite",
+    "resource_name": "weevilite",
+    "icon_url": "res://sprites/monsters/weevilite.png",
+    "isSecret": false,
+    "bestiary_index": 12,
+    "bestiary_index_with_padding": "012"
+  },
+  {
+    "id": "wingloom",
+    "name_localised": "Wingloom",
+    "resource_name": "wingloom",
+    "icon_url": "res://sprites/monsters/wingloom.png",
+    "isSecret": false,
+    "bestiary_index": 31,
+    "bestiary_index_with_padding": "031"
+  },
+  {
+    "id": "wooltergeist",
+    "name_localised": "Wooltergeist",
+    "resource_name": "wooltergeist",
+    "icon_url": "res://sprites/monsters/wooltergeist.png",
+    "isSecret": false,
+    "bestiary_index": 20,
+    "bestiary_index_with_padding": "020"
+  },
+  {
+    "id": "wyrmaw",
+    "name_localised": "Wyrmaw",
+    "resource_name": "wyrmaw",
+    "icon_url": "res://sprites/monsters/wyrmaw.png",
+    "isSecret": false,
+    "bestiary_index": 125,
+    "bestiary_index_with_padding": "125"
+  },
+  {
+    "id": "zeustrike",
+    "name_localised": "Zeustrike",
+    "resource_name": "zeustrike",
+    "icon_url": "res://sprites/monsters/zeustrike.png",
+    "isSecret": false,
+    "bestiary_index": 109,
+    "bestiary_index_with_padding": "109"
+  },
+  {
+    "id": "zombleat",
+    "name_localised": "Zombleat",
+    "resource_name": "zombleat",
+    "icon_url": "res://sprites/monsters/zombleat.png",
+    "isSecret": false,
+    "bestiary_index": 22,
+    "bestiary_index_with_padding": "022"
+  },
+  {
+    "id": "magikrab",
+    "name_localised": "Magikrab",
+    "resource_name": "magikrab",
+    "icon_url": "res://sprites/monsters/magikrab.png",
+    "isSecret": true,
+    "bestiary_index": 0,
+    "bestiary_index_with_padding": "000"
+  }
+]

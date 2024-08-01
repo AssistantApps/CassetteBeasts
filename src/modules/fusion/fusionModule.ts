@@ -4,19 +4,26 @@ import { breadcrumb } from 'constant/breadcrumb';
 import { handlebarTemplate } from 'constant/handlebar';
 import { IntermediateFile } from 'constant/intermediateFile';
 import { ModuleType } from 'constant/module';
+import { paths } from 'constant/paths';
 import { routes } from 'constant/route';
 import { IFusion, IFusionEnhanced } from 'contracts/fusion';
 import { ILocalisation } from 'contracts/localisation';
 import { IMonsterForm } from 'contracts/monsterForm';
 import { INodeResource, INodeResourceEnhanced } from 'contracts/nodeResource';
 import { ISpriteAnim } from 'contracts/spriteAnim';
-import { getAnimFileName, getFileFromFilePath } from 'helpers/fileHelper';
+import {
+  createFoldersOfDestFilePath,
+  getAnimFileName,
+  getFileFromFilePath,
+} from 'helpers/fileHelper';
 import { FolderPathHelper } from 'helpers/folderPathHelper';
 import { copyImageFromRes, cutImageFromSpriteSheet } from 'helpers/imageHelper';
+import { pad } from 'helpers/stringHelper';
 import { mapNodeResourceFromFlatMap } from 'mapper/nodeResourceMapper';
 import { readItemDetail } from 'modules/baseModule';
 import { CommonModule } from 'modules/commonModule';
 import { LocalisationModule } from 'modules/localisation/localisationModule';
+import path from 'path';
 import { getHandlebar } from 'services/internal/handlebarService';
 import { fusionMapFromDetailList } from './fusionMapFromDetailList';
 
@@ -47,7 +54,7 @@ export class FusionModule extends CommonModule<IFusion> {
       this._baseDetails.push(detail);
     }
 
-    return `${this._baseDetails.length} fusions`;
+    return `${pad(this._baseDetails.length, 3, ' ')} fusions`;
   };
 
   enrichData = async (langCode: string, modules: Array<CommonModule<unknown>>) => {
@@ -115,36 +122,41 @@ export class FusionModule extends CommonModule<IFusion> {
 
     const mainBreadcrumb = breadcrumb.fusion(langCode);
 
-    const monsterIdA = 'adeptile';
-    const monsterIdB = 'springheel';
-    const monsterA = monsterModule.get(monsterIdA);
-    const monsterB = monsterModule.get(monsterIdB);
-    const fusionKey = language[monsterA.fusion_name_prefix] + language[monsterB.fusion_name_suffix];
+    // const monsterIdA = 'adeptile';
+    // const monsterIdB = 'springheel';
+    // const monsterA = monsterModule.get(monsterIdA);
+    // const monsterB = monsterModule.get(monsterIdB);
+    // const fusionKey = language[monsterA.fusion_name_prefix] + language[monsterB.fusion_name_suffix];
 
-    const monsterFusionA: IFusionEnhanced = this._itemDetailMap[monsterIdA];
-    const monsterFusionB: IFusionEnhanced = this._itemDetailMap[monsterIdB];
-    const fusion: Record<string, INodeResourceEnhanced> = { ...monsterFusionA.nodes_enhanced };
-    for (const bKey of Object.keys(monsterFusionB)) {
-      const monsterFusionBProp = monsterFusionB[bKey];
-    }
+    // const monsterFusionA: IFusionEnhanced = this._itemDetailMap[monsterIdA];
+    // const monsterFusionB: IFusionEnhanced = this._itemDetailMap[monsterIdB];
+    // const fusion: Record<string, INodeResourceEnhanced> = { ...monsterFusionA.nodes_enhanced };
+    // for (const bKey of Object.keys(monsterFusionB)) {
+    //   const monsterFusionBProp = monsterFusionB[bKey];
+    // }
 
-    const relativePath = `${langCode}${routes.fusion}/${encodeURI(fusionKey)}.html`;
+    const fusionJsonFile = `assets/json${routes.fusion}.json`;
+    const destFusionJsonFile = path.join(paths().destinationFolder, fusionJsonFile);
+    createFoldersOfDestFilePath(destFusionJsonFile);
+    const list = Object.values(this._itemDetailMap).map((l: IFusionEnhanced) => ({
+      ...l,
+      nodes: l.nodes_enhanced,
+    }));
+    fs.writeFileSync(destFusionJsonFile, JSON.stringify(list, null, 2), 'utf-8');
+
+    const relativePath = `${langCode}${routes.fusion}/index.html`;
     const detailPageData = this.getBasicPageData({
       langCode,
       modules,
-      documentTitle: fusionKey,
-      breadcrumbs: [mainBreadcrumb, breadcrumb.fusionDetail(langCode, fusionKey)],
-      data: {
-        monsterA,
-        monsterB,
-        fusion,
-      },
+      documentTitle: 'Fusion',
+      breadcrumbs: [mainBreadcrumb, breadcrumb.fusion(langCode)],
+      data: {},
       relativePath,
     });
     await getHandlebar().compileTemplateToFile({
       data: detailPageData,
       outputFiles: [relativePath],
-      templateFile: handlebarTemplate.characterDetail,
+      templateFile: handlebarTemplate.fusion,
     });
 
     // const list: Array<ICharacterEnhanced> = [];

@@ -23,6 +23,7 @@ import {
   generateMetaImage,
 } from 'helpers/imageHelper';
 import { sortByStringProperty } from 'helpers/sortHelper';
+import { pad } from 'helpers/stringHelper';
 import { createWebpFromISpriteAnim } from 'helpers/webpHelper';
 import { monsterToSimplified } from 'mapper/monsterMapper';
 import { readItemDetail } from 'modules/baseModule';
@@ -70,7 +71,7 @@ export class CharacterModule extends CommonModule<ICharacter> {
       this._baseDetails.push(detail);
     }
 
-    return `${this._baseDetails.length}  characters`;
+    return `${pad(this._baseDetails.length, 3, ' ')} characters`;
   };
 
   enrichData = async (langCode: string, modules: Array<CommonModule<unknown>>) => {

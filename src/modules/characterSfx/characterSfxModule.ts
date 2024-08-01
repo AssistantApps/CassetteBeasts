@@ -13,6 +13,7 @@ import {
 import { IExternalResource } from 'contracts/externalResource';
 import { scaffoldFolderAndDelFileIfOverwrite } from 'helpers/fileHelper';
 import { FolderPathHelper } from 'helpers/folderPathHelper';
+import { pad } from 'helpers/stringHelper';
 import { copyWavFile } from 'helpers/wavHelper';
 import { readItemDetail } from 'modules/baseModule';
 import { CommonModule } from 'modules/commonModule';
@@ -42,7 +43,7 @@ export class CharacterSfxModule extends CommonModule<ICharacterSfx> {
       this._baseDetails.push(detail);
     }
 
-    return `${this._baseDetails.length}  character sfx`;
+    return `${pad(this._baseDetails.length, 3, ' ')} character sfx`;
   };
 
   enrichData = async (langCode: string, modules: Array<CommonModule<unknown>>) => {

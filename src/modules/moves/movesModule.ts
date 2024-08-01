@@ -18,7 +18,7 @@ import { scaffoldFolderAndDelFileIfOverwrite } from 'helpers/fileHelper';
 import { FolderPathHelper } from 'helpers/folderPathHelper';
 import { generateMetaImage } from 'helpers/imageHelper';
 import { monsterSimplifiedSort, sortByStringProperty } from 'helpers/sortHelper';
-import { limitLengthWithEllipse, resAndTresTrim } from 'helpers/stringHelper';
+import { limitLengthWithEllipse, pad, resAndTresTrim } from 'helpers/stringHelper';
 import { monsterToSimplified } from 'mapper/monsterMapper';
 import { readItemDetail } from 'modules/baseModule';
 import { CommonModule } from 'modules/commonModule';
@@ -58,7 +58,7 @@ export class MovesModule extends CommonModule<IMove> {
       });
       this._baseDetails.push(detail);
     }
-    return `${this._baseDetails.length} moves`;
+    return `${pad(this._baseDetails.length, 3, ' ')} moves`;
   };
 
   enrichData = async (langCode: string, modules: Array<CommonModule<unknown>>) => {

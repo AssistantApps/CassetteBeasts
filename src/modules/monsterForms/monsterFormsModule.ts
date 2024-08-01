@@ -11,7 +11,12 @@ import { routes } from 'constant/route';
 import { IElement } from 'contracts/element';
 import { IExternalResource } from 'contracts/externalResource';
 import { ILocalisation } from 'contracts/localisation';
-import { IMonsterForm, IMonsterFormEnhanced, IMonsterFormMoveSource } from 'contracts/monsterForm';
+import {
+  IMonsterForm,
+  IMonsterFormEnhanced,
+  IMonsterFormMoveSource,
+  IMonsterFormSimplified,
+} from 'contracts/monsterForm';
 import {
   IMonsterSpawn,
   IMonsterSpawnEnhanced,
@@ -20,7 +25,11 @@ import {
 import { IMove } from 'contracts/move';
 import { ISpriteAnim } from 'contracts/spriteAnim';
 import { ISubResource, ISubResourceMonsterEnhanced } from 'contracts/subResource';
-import { getAnimFileName, scaffoldFolderAndDelFileIfOverwrite } from 'helpers/fileHelper';
+import {
+  createFoldersOfDestFilePath,
+  getAnimFileName,
+  scaffoldFolderAndDelFileIfOverwrite,
+} from 'helpers/fileHelper';
 import { FolderPathHelper } from 'helpers/folderPathHelper';
 import {
   copyImageFromRes,
@@ -32,6 +41,7 @@ import { monsterSort } from 'helpers/sortHelper';
 import { limitLengthWithEllipse, pad, resAndTresTrim } from 'helpers/stringHelper';
 import { copyWavFile } from 'helpers/wavHelper';
 import { createWebpFromISpriteAnim } from 'helpers/webpHelper';
+import { monsterToSimplified } from 'mapper/monsterMapper';
 import { moveToSimplified } from 'mapper/moveMapper';
 import { readItemDetail } from 'modules/baseModule';
 import { CommonModule } from 'modules/commonModule';
@@ -83,7 +93,7 @@ export class MonsterFormsModule extends CommonModule<IMonsterForm> {
       }
     }
 
-    return `${this._baseDetails.length} monsters`;
+    return `${pad(this._baseDetails.length, 3, ' ')} monsters`;
   };
 
   enrichData = async (langCode: string, modules: Array<CommonModule<unknown>>) => {
@@ -320,9 +330,11 @@ export class MonsterFormsModule extends CommonModule<IMonsterForm> {
   writePages = async (langCode: string, modules: Array<CommonModule<unknown>>) => {
     const mainBreadcrumb = breadcrumb.monster(langCode);
     const list: Array<IMonsterFormEnhanced> = [];
+    const simplifiedMonsters: Array<IMonsterFormSimplified> = [];
     for (const mapKey of Object.keys(this._itemDetailMap)) {
       const details: IMonsterFormEnhanced = this._itemDetailMap[mapKey];
       list.push(details);
+      simplifiedMonsters.push(monsterToSimplified(details));
 
       const relativePath = `${langCode}${routes.monsters}/${encodeURI(mapKey)}.html`;
       const detailPageData = this.getBasicPageData({
@@ -342,6 +354,11 @@ export class MonsterFormsModule extends CommonModule<IMonsterForm> {
         templateFile: handlebarTemplate.monsterDetail,
       });
     }
+
+    const simpleMonsterJsonFile = `assets/json${routes.monsters}.json`;
+    const destMonsterJsonFile = path.join(paths().destinationFolder, simpleMonsterJsonFile);
+    createFoldersOfDestFilePath(destMonsterJsonFile);
+    fs.writeFileSync(destMonsterJsonFile, JSON.stringify(simplifiedMonsters, null, 2), 'utf-8');
 
     const relativePath = `${langCode}${routes.monsters}/index.html`;
     await getHandlebar().compileTemplateToFile({

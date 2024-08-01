@@ -9,6 +9,7 @@ import {
   IMonsterSpawnEnhanced,
 } from 'contracts/monsterSpawn';
 import { FolderPathHelper } from 'helpers/folderPathHelper';
+import { pad } from 'helpers/stringHelper';
 import { readItemDetail } from 'modules/baseModule';
 import { CommonModule } from 'modules/commonModule';
 import { monsterSpawnMapFromDetailList } from './monsterSpawnFormMapDetailList';
@@ -41,7 +42,7 @@ export class MonsterSpawnModule extends CommonModule<IMonsterSpawn> {
       this._baseDetails.push(detail);
     }
 
-    return `${this._baseDetails.length}  monster spawns`;
+    return `${pad(this._baseDetails.length, 3, ' ')} monster spawns`;
   };
 
   enrichData = async (langCode: string, modules: Array<CommonModule<unknown>>) => {

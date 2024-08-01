@@ -19,7 +19,7 @@ export const handlebarTemplate = {
   statusEffectDetail: 'pages/statusEffect/statusEffectDetail.hbs',
   statusEffectMeta: 'partials/statusEffect/statusEffectMetaImage.hbs',
   worldTabs: 'pages/world/worldTabs.hbs',
-  fusionDetail: 'pages/fusion/fusionDetail.hbs',
+  fusion: 'pages/fusion/fusion.hbs',
 
   // misc
   cname: 'misc/CNAME.hbs',

@@ -11,6 +11,7 @@ import { IMonsterSpawn } from 'contracts/monsterSpawn';
 import { IWorld, IWorldEnhanced, IWorldMetaDataEnhanced } from 'contracts/world';
 import { FolderPathHelper } from 'helpers/folderPathHelper';
 import { copyImageFromRes, copyImageToGeneratedFolder } from 'helpers/imageHelper';
+import { pad } from 'helpers/stringHelper';
 import { getExternalResourcesImagePath } from 'mapper/externalResourceMapper';
 import { monsterToSimplified } from 'mapper/monsterMapper';
 import { readItemDetail } from 'modules/baseModule';
@@ -82,7 +83,8 @@ export class WorldModule extends CommonModule<IWorld> {
     const map_chunk_metas = this._baseDetails.flatMap((map) =>
       Object.keys(map.chunk_meta_data),
     ).length;
-    return `${this._baseDetails.length}  world files loaded with ${map_chunk_metas} chunks.`;
+    const count = pad(this._baseDetails.length, 3, ' ');
+    return `${count} world files loaded with ${map_chunk_metas} chunks.`;
   };
 
   enrichData = async (langCode: string, modules: Array<CommonModule<unknown>>) => {
