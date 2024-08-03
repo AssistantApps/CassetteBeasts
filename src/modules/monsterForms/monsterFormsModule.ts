@@ -8,23 +8,19 @@ import { UIKeys } from 'constant/localisation';
 import { ModuleType } from 'constant/module';
 import { paths } from 'constant/paths';
 import { routes } from 'constant/route';
-import { IElement } from 'contracts/element';
-import { IExternalResource } from 'contracts/externalResource';
-import { ILocalisation } from 'contracts/localisation';
-import {
+import type { IElement } from 'contracts/element';
+import type { IExternalResource } from 'contracts/externalResource';
+import type { ILocalisation } from 'contracts/localisation';
+import type {
   IMonsterForm,
   IMonsterFormEnhanced,
   IMonsterFormMoveSource,
   IMonsterFormSimplified,
 } from 'contracts/monsterForm';
-import {
-  IMonsterSpawn,
-  IMonsterSpawnEnhanced,
-  IMonsterSpawnHabitatDetails,
-} from 'contracts/monsterSpawn';
-import { IMove } from 'contracts/move';
-import { ISpriteAnim } from 'contracts/spriteAnim';
-import { ISubResource, ISubResourceMonsterEnhanced } from 'contracts/subResource';
+import type { IMonsterSpawnEnhanced, IMonsterSpawnHabitatDetails } from 'contracts/monsterSpawn';
+import type { IMoveEnhanced } from 'contracts/move';
+import type { ISpriteAnim } from 'contracts/spriteAnim';
+import type { ISubResource, ISubResourceMonsterEnhanced } from 'contracts/subResource';
 import {
   createFoldersOfDestFilePath,
   getAnimFileName,
@@ -52,7 +48,7 @@ import { getHandlebar } from '../../services/internal/handlebarService';
 import { getEvolutionMonster, monsterFormMapFromDetailList } from './monsterFormMapFromDetailList';
 import { getMonsterFormMetaImage } from './monsterFormMeta';
 
-export class MonsterFormsModule extends CommonModule<IMonsterForm> {
+export class MonsterFormsModule extends CommonModule<IMonsterForm, IMonsterFormEnhanced> {
   private _folders = [
     FolderPathHelper.monsterForms(),
     FolderPathHelper.monsterFormsSecret(),
@@ -96,14 +92,11 @@ export class MonsterFormsModule extends CommonModule<IMonsterForm> {
     return `${pad(this._baseDetails.length, 3, ' ')} monsters`;
   };
 
-  enrichData = async (langCode: string, modules: Array<CommonModule<unknown>>) => {
+  enrichData = async (langCode: string, modules: Array<CommonModule<unknown, unknown>>) => {
     const localeModule = this.getModuleOfType<ILocalisation>(modules, ModuleType.Localisation);
     const language = localeModule.get(langCode).messages;
     const elementModule = this.getModuleOfType<IElement>(modules, ModuleType.Elements);
-    const moveModule = this.getModuleOfType<IMove>(
-      modules,
-      ModuleType.Moves,
-    ) as unknown as MovesModule;
+    const moveModule = this.getModuleOfType<IMoveEnhanced>(modules, ModuleType.Moves);
     const spriteAnimModule = this.getModuleOfType<ISpriteAnim>(
       modules,
       ModuleType.MonsterSpriteAnim,
@@ -118,7 +111,7 @@ export class MonsterFormsModule extends CommonModule<IMonsterForm> {
         .replace('res://sprites/monsters/', '')
         .replace('.json', '');
 
-      const moveTagToMoveIdsMap = moveModule.getMoveTagToMoveIdsMap();
+      const moveTagToMoveIdsMap = (moveModule as unknown as MovesModule).getMoveTagToMoveIdsMap();
       const moveIds = moveTagToMoveIdsMap?.[mapKey] ?? [];
 
       const detailEnhanced: IMonsterFormEnhanced = {
@@ -143,18 +136,18 @@ export class MonsterFormsModule extends CommonModule<IMonsterForm> {
           detail.unlock_ability,
         ),
         elemental_types: undefined,
-        elemental_types_elements: detail.elemental_types.map((et) =>
+        elemental_types_elements: (detail.elemental_types ?? []).map((et) =>
           elementModule.get(resAndTresTrim(et.path)),
         ),
         initial_moves: undefined,
-        initial_moves_moves: detail.initial_moves.map((im) => ({
+        initial_moves_moves: (detail.initial_moves ?? []).map((im) => ({
           ...moveModule.get(resAndTresTrim(im.path)),
           monsters_that_can_learn: [],
           status_effects_elements: [],
         })),
         tape_upgrades: undefined,
-        tape_upgrades_moves: detail.tape_upgrades.map((tu) => {
-          let path = (tu as IExternalResource)?.path;
+        tape_upgrades_moves: (detail.tape_upgrades ?? []).map((tu) => {
+          let path: string | undefined = (tu as IExternalResource)?.path;
           if (path == null) {
             path = (tu as ISubResource)?.sticker?.path;
           }
@@ -192,7 +185,7 @@ export class MonsterFormsModule extends CommonModule<IMonsterForm> {
             language,
             evo,
             moveModule,
-            this._itemDetailMap[evo.resource_name] as IMonsterFormEnhanced,
+            this._itemDetailMap[(evo as any).resource_name ?? ''] as IMonsterFormEnhanced, // idk what past me did here...
           ),
         )
         .filter((m) => m != null);
@@ -214,14 +207,16 @@ export class MonsterFormsModule extends CommonModule<IMonsterForm> {
     this.isReady = true;
   };
 
-  combineData = async (langCode: string, modules: Array<CommonModule<unknown>>) => {
-    const monsterSpawnModule = this.getModuleOfType<IMonsterSpawn>(
+  combineData = async (langCode: string, modules: Array<CommonModule<unknown, unknown>>) => {
+    const monsterSpawnModule = this.getModuleOfType<IMonsterSpawnEnhanced>(
       modules,
       ModuleType.MonsterSpawn,
       true,
-    ) as MonsterSpawnModule;
+    );
 
-    const monsterToLocationMap = monsterSpawnModule.getMonsterToLocationMap();
+    const monsterToLocationMap = (
+      monsterSpawnModule as unknown as MonsterSpawnModule
+    ).getMonsterToLocationMap();
     for (const mapKey of Object.keys(this._itemDetailMap)) {
       const locations = monsterToLocationMap[mapKey];
       if (locations == null) continue;
@@ -234,7 +229,7 @@ export class MonsterFormsModule extends CommonModule<IMonsterForm> {
         for (const species of monsterSpawn.species_enhanced) {
           if (species.monsterId == mapKey) {
             if (monsterSpawn.habitat_name_localised == null) continue;
-            const habitat = {
+            const habitat: IMonsterSpawnHabitatDetails = {
               id: monsterSpawn.id,
               percent: species.percent,
               percentStr: species.percentStr,
@@ -282,7 +277,7 @@ export class MonsterFormsModule extends CommonModule<IMonsterForm> {
       const exists = scaffoldFolderAndDelFileIfOverwrite(outputFullPath, overwrite);
       if (exists) break;
 
-      copyWavFile(detailEnhanced.battle_cry?.path, outputFullPath);
+      copyWavFile(detailEnhanced.battle_cry?.path ?? '', outputFullPath);
     }
   };
 
@@ -294,7 +289,7 @@ export class MonsterFormsModule extends CommonModule<IMonsterForm> {
     }
   };
 
-  generateImages = async (overwrite: boolean, modules: Array<CommonModule<unknown>>) => {
+  generateImages = async (overwrite: boolean, modules: Array<CommonModule<unknown, unknown>>) => {
     for (const mapKey of Object.keys(this._itemDetailMap)) {
       const detailEnhanced: IMonsterFormEnhanced = this._itemDetailMap[mapKey];
 
@@ -327,7 +322,7 @@ export class MonsterFormsModule extends CommonModule<IMonsterForm> {
     }
   };
 
-  writePages = async (langCode: string, modules: Array<CommonModule<unknown>>) => {
+  writePages = async (langCode: string, modules: Array<CommonModule<unknown, unknown>>) => {
     const mainBreadcrumb = breadcrumb.monster(langCode);
     const list: Array<IMonsterFormEnhanced> = [];
     const simplifiedMonsters: Array<IMonsterFormSimplified> = [];
@@ -381,7 +376,9 @@ export class MonsterFormsModule extends CommonModule<IMonsterForm> {
       if (detail.evolutions.length > 0) {
         const mapKey = detail.name.replace('_NAME', '').toLowerCase();
         for (const evolution of detail.evolutions) {
-          this._evolutionFromMap[(evolution as ISubResourceMonsterEnhanced).resource_name] = mapKey;
+          const resource_name = (evolution as ISubResourceMonsterEnhanced)?.resource_name;
+          if (resource_name == null) continue;
+          this._evolutionFromMap[resource_name] = mapKey;
         }
       }
     }
@@ -451,7 +448,7 @@ export class MonsterFormsModule extends CommonModule<IMonsterForm> {
     if (exists) return;
 
     const extraData = await getMonsterFormMetaImage(
-      detailEnhanced.tape_sticker_texture.path,
+      detailEnhanced.tape_sticker_texture?.path,
       detailEnhanced.elemental_types_elements[0].icon.path,
     );
     const template = getHandlebar().getCompiledTemplate<unknown>(

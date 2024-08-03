@@ -1,4 +1,4 @@
-import { ObjectWithPropsOfValue } from 'helpers/typescriptHacks';
+import type { ObjectWithPropsOfValue } from 'helpers/typescriptHacks';
 
 export interface ILocalisation {
   id: number;

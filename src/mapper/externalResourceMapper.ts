@@ -1,4 +1,4 @@
-import { IExternalResource } from 'contracts/externalResource';
+import type { IExternalResource } from 'contracts/externalResource';
 
 export const externalResourceMapper = (line: string): IExternalResource | undefined => {
   const regex = /\spath=\"(.+?)\"\stype=\"(.+?)\"\sid=(\d+)/;
@@ -6,16 +6,16 @@ export const externalResourceMapper = (line: string): IExternalResource | undefi
   if ((matches?.length ?? 0) != 4) return;
 
   return {
-    id: parseInt(matches[3]),
-    path: matches[1],
-    type: matches[2],
+    id: parseInt(matches?.[3] ?? ''),
+    path: matches?.[1] ?? '',
+    type: matches?.[2] ?? '',
   };
 };
 
 export const getExternalResource = (
   line: string,
   externalResourcesMap: Record<number, IExternalResource>,
-): IExternalResource => {
+): IExternalResource | undefined => {
   if (line == null || line.length < 1) return;
   const searchWord = 'ExtResource(';
   const indexOfResource = line.indexOf(searchWord);

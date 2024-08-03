@@ -1,7 +1,7 @@
-import { IExternalResource } from 'contracts/externalResource';
-import { IStatusEffect } from 'contracts/statusEffect';
-import { ISubAnimationResource } from 'contracts/subAnimationResource';
-import { ISubResource } from 'contracts/subResource';
+import type { IExternalResource } from 'contracts/externalResource';
+import type { IStatusEffect } from 'contracts/statusEffect';
+import type { ISubAnimationResource } from 'contracts/subAnimationResource';
+import type { ISubResource } from 'contracts/subResource';
 import { tryParseInt } from 'helpers/mathHelper';
 import { getCleanedString, getStringArray, stringToBool } from 'helpers/stringHelper';
 import { getExternalResource } from 'mapper/externalResourceMapper';
@@ -19,7 +19,7 @@ export const statusEffectMapFromDetailList =
       name: getCleanedString(props.resourceMap['name']),
       description: getCleanedString(props.resourceMap['description']),
       has_duration: stringToBool(props.resourceMap['has_duration']),
-      reduce_duration_at: tryParseInt(props.resourceMap['reduce_duration_at']),
+      reduce_duration_at: tryParseInt(props.resourceMap['reduce_duration_at'])!,
       icon: getExternalResource(
         props.resourceMap['icon'], //
         props.externalResourcesMap,
@@ -37,6 +37,6 @@ export const statusEffectMapFromDetailList =
         props.resourceMap['sprite_animation_prefix_priority'],
       ),
       stats_affected: getStringArray(props.resourceMap['stats_affected']),
-      stat_offset: tryParseInt(props.resourceMap['stat_offset']),
+      stat_offset: tryParseInt(props.resourceMap['stat_offset'])!,
     };
   };

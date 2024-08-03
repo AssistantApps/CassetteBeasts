@@ -1,6 +1,6 @@
-import { IElement } from './element';
-import { IExternalResource } from './externalResource';
-import { IMove } from './move';
+import type { IElement } from './element';
+import type { IExternalResource } from './externalResource';
+import type { IMove } from './move';
 
 export interface ISubResource {
   id: number;

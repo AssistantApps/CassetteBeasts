@@ -3,10 +3,10 @@ import path from 'path';
 import readline from 'readline';
 
 import { tresSeparator } from 'constant/tresSeparator';
-import { IExternalResource } from 'contracts/externalResource';
-import { INodeResource } from 'contracts/nodeResource';
-import { ISubAnimationResource } from 'contracts/subAnimationResource';
-import { ISubResource } from 'contracts/subResource';
+import type { IExternalResource } from 'contracts/externalResource';
+import type { INodeResource } from 'contracts/nodeResource';
+import type { ISubAnimationResource } from 'contracts/subAnimationResource';
+import type { ISubResource } from 'contracts/subResource';
 import { stringStartsWith } from 'helpers/stringHelper';
 import { externalResourceMapper } from 'mapper/externalResourceMapper';
 import { nodeResourceFromDetailList, nodeResourceHeadMapper } from 'mapper/nodeResourceMapper';
@@ -14,7 +14,7 @@ import { subAnimResourceFromDetailList, subAnimResourceMapper } from 'mapper/sub
 import { subResourceFromDetailList, subResourceMapper } from 'mapper/subResourceMapper';
 
 export const getItemFromMapByIntId =
-  <T>(mapItemDetailMap: Record<number, T>) =>
+  <T>(mapItemDetailMap: Record<string, T>) =>
   (id: string) => {
     const idNum = parseInt(id);
     if (isNaN(idNum)) {

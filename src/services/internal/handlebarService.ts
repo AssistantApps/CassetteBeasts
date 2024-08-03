@@ -4,7 +4,7 @@ import path from 'path';
 import { Container, Service } from 'typedi';
 
 import { paths } from 'constant/paths';
-import { PageData } from 'contracts/pageData';
+import type { PageData } from 'contracts/pageData';
 import { createFoldersOfDestFilePath, getIndexOfFolderSlash } from 'helpers/fileHelper';
 
 interface IProps<T> {

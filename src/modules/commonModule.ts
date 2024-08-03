@@ -7,23 +7,23 @@ import { ModuleType } from 'constant/module';
 import { paths } from 'constant/paths';
 import { routes } from 'constant/route';
 import { site } from 'constant/site';
-import { IBreadcrumb } from 'contracts/breadcrumb';
-import { ILocalisation } from 'contracts/localisation';
-import { PageData } from 'contracts/pageData';
+import type { IBreadcrumb } from 'contracts/breadcrumb';
+import type { ILocalisation } from 'contracts/localisation';
+import type { IAlternateUrl, PageData } from 'contracts/pageData';
 import { sortByStringProperty } from 'helpers/sortHelper';
 import { anyObject, promiseFromResult } from 'helpers/typescriptHacks';
 import { getConfig } from 'services/internal/configService';
 import { AssistantAppsModule } from './assistantApps/assistantAppsModule';
 import { LocalisationModule } from './localisation/localisationModule';
 
-export class CommonModule<T> {
+export class CommonModule<T, TE> {
   type: ModuleType;
   dependsOn: Array<ModuleType>;
   intermediateFile: string;
   isReady: boolean = false;
 
   _baseDetails: Array<T> = [];
-  _itemDetailMap: Record<number, T> = {};
+  _itemDetailMap: Record<string, TE> = {};
 
   constructor(props: {
     type: ModuleType;
@@ -35,11 +35,11 @@ export class CommonModule<T> {
     this.intermediateFile = props.intermediateFile;
   }
 
-  getModuleOfType = <T>(
-    modules: Array<CommonModule<unknown>>,
+  getModuleOfType = <TE>(
+    modules: Array<CommonModule<unknown, unknown>>,
     typeToGet: ModuleType,
     ignoreWarning: boolean = false,
-  ): CommonModule<T> => {
+  ): CommonModule<TE, TE> => {
     if (!ignoreWarning && !this.dependsOn.includes(typeToGet)) {
       console.error(
         `Dependency '${ModuleType[typeToGet]}' is not in dependsOn array of module '${
@@ -48,15 +48,17 @@ export class CommonModule<T> {
       );
     }
     for (const module of modules) {
-      if (module.type === typeToGet) return module as CommonModule<T>;
+      if (module.type === typeToGet) return module as CommonModule<TE, TE>;
     }
+
+    throw `Module "${ModuleType[typeToGet]}" not found!`;
   };
 
   init = async (): Promise<string | void> => undefined;
-  enrichData = (langCode: string, modules: Array<CommonModule<unknown>>) => {};
-  combineData = (langCode: string, modules: Array<CommonModule<unknown>>) => {};
+  enrichData = (langCode: string, modules: Array<CommonModule<unknown, unknown>>) => {};
+  combineData = (langCode: string, modules: Array<CommonModule<unknown, unknown>>) => {};
   getImagesFromGameFiles = async (overwrite: boolean) => promiseFromResult(anyObject);
-  generateImages = async (overwrite: boolean, modules: Array<CommonModule<unknown>>) =>
+  generateImages = async (overwrite: boolean, modules: Array<CommonModule<unknown, unknown>>) =>
     promiseFromResult(anyObject);
   generateMetaImages = async (
     langCode: string,
@@ -64,12 +66,12 @@ export class CommonModule<T> {
     overwrite: boolean,
   ) => promiseFromResult(anyObject);
   copyWav = async (overwrite: boolean) => promiseFromResult(anyObject);
-  get = (id: string): T => this._itemDetailMap[id];
-  getMap = (): Record<number, T> => this._itemDetailMap;
+  get = (id: string): TE => this._itemDetailMap[id];
+  getMap = (): Record<number, TE> => this._itemDetailMap;
 
   getBasicPageData = <TK>(props: {
     langCode: string;
-    modules: Array<CommonModule<unknown>>;
+    modules: Array<CommonModule<unknown, unknown>>;
     breadcrumbs: Array<IBreadcrumb>;
     documentTitleUiKey?: string;
     documentTitle?: string;
@@ -91,11 +93,13 @@ export class CommonModule<T> {
     const translationRecords = localeModule.getUITranslations(props.langCode);
     const aaTranslationRecords = assistantAppsModule.getUITranslations(props.langCode);
 
-    const humansArray = Object.keys(site.humans).map((h) => site.humans[h]);
+    const humansArray = Object.keys(site.humans).map(
+      (h) => (site.humans as unknown as Record<string, string>)[h],
+    );
     const version = getConfig().packageVersion();
     const analyticsCode = getConfig().getAnalyticsCode();
 
-    const alternateUrls = [];
+    const alternateUrls: Array<IAlternateUrl> = [];
     if (props.relativePath != null) {
       for (const lang of localeModule.getLanguageCodes()) {
         const langSpecificRelPath = props.relativePath.replace(props.langCode, lang);
@@ -168,5 +172,5 @@ export class CommonModule<T> {
     fs.writeFileSync(destBaseFile, JSON.stringify(this._baseDetails, null, 2), 'utf-8');
   };
 
-  writePages = async (langCode: string, modules: Array<CommonModule<unknown>>) => {};
+  writePages = async (langCode: string, modules: Array<CommonModule<unknown, unknown>>) => {};
 }

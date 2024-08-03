@@ -1,4 +1,4 @@
-import { IBoxSelection } from './boxSelection';
+import type { IBoxSelection } from './boxSelection';
 
 export interface ISpriteAnimDetails {
   id: number;

@@ -1,7 +1,7 @@
-import { IElement } from 'contracts/element';
-import { IExternalResource } from 'contracts/externalResource';
-import { ISubAnimationResource } from 'contracts/subAnimationResource';
-import { ISubResource } from 'contracts/subResource';
+import type { IElement } from 'contracts/element';
+import type { IExternalResource } from 'contracts/externalResource';
+import type { ISubAnimationResource } from 'contracts/subAnimationResource';
+import type { ISubResource } from 'contracts/subResource';
 import { tryParseInt } from 'helpers/mathHelper';
 import { getCleanedString, stringToBool } from 'helpers/stringHelper';
 import { getExternalResource } from 'mapper/externalResourceMapper';
@@ -15,7 +15,7 @@ export const elementMapFromDetailList = (props: {
   return {
     id: getCleanedString(props.resourceMap['id']),
     name: getCleanedString(props.resourceMap['name']),
-    sort_order: tryParseInt(props.resourceMap['sort_order']),
+    sort_order: tryParseInt(props.resourceMap['sort_order']) ?? 0,
     sparkle: stringToBool(props.resourceMap['sparkle']),
     icon: getExternalResource(
       props.resourceMap['icon'], //

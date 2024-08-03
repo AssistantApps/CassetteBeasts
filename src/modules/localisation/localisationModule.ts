@@ -15,14 +15,14 @@ import {
 import { ModuleType } from 'constant/module';
 import { paths } from 'constant/paths';
 import { tresSeparator } from 'constant/tresSeparator';
-import { ILocalisation } from 'contracts/localisation';
+import type { ILocalisation } from 'contracts/localisation';
 import { FolderPathHelper } from 'helpers/folderPathHelper';
 import { pad, stringStartsWith } from 'helpers/stringHelper';
 import { CommonModule } from 'modules/commonModule';
 
 const excludeLangCodes = ['eo'];
 
-export class LocalisationModule extends CommonModule<ILocalisation> {
+export class LocalisationModule extends CommonModule<ILocalisation, ILocalisation> {
   constructor() {
     super({
       type: ModuleType.Localisation,
@@ -61,7 +61,7 @@ export class LocalisationModule extends CommonModule<ILocalisation> {
         messages: {},
       };
       let item: ILocalisation = { ...defaultItem };
-      let mode: 'none' | 'head' | 'messages' | 'locale';
+      let mode: 'none' | 'head' | 'messages' | 'locale' | undefined;
       for await (const line of rl) {
         if (mode == 'none') {
           item = { ...defaultItem };

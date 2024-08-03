@@ -1,7 +1,7 @@
-import { IExternalResource } from 'contracts/externalResource';
-import { ISubAnimationResource } from 'contracts/subAnimationResource';
-import { ISubResource } from 'contracts/subResource';
-import { IWorld, IWorldMetaData } from 'contracts/world';
+import type { IExternalResource } from 'contracts/externalResource';
+import type { ISubAnimationResource } from 'contracts/subAnimationResource';
+import type { ISubResource } from 'contracts/subResource';
+import type { IWorld, IWorldMetaData } from 'contracts/world';
 import { tryParseRect2, tryParseVector2D } from 'helpers/mathHelper';
 import { getCleanedString } from 'helpers/stringHelper';
 import { getExternalResource } from 'mapper/externalResourceMapper';

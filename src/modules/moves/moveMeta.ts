@@ -3,8 +3,7 @@ import path from 'path';
 import { AppImage } from 'constant/image';
 import { UIKeys } from 'constant/localisation';
 import { paths } from 'constant/paths';
-import { ILocalisation } from 'contracts/localisation';
-import { IMoveEnhanced } from 'contracts/move';
+import type { IMoveEnhanced } from 'contracts/move';
 import { getBase64FromFile } from 'helpers/fileHelper';
 import { getDescripLines } from 'helpers/stringHelper';
 import { getExternalResourcesImagePath } from 'mapper/externalResourceMapper';
@@ -22,8 +21,8 @@ export const getMoveMetaImage = async (
   langCode: string,
   elementFilePath: string,
   detail: IMoveEnhanced,
-  language: Record<number, ILocalisation>,
-): Promise<IMetaImagesProps> => {
+  language: Record<string, string>,
+): Promise<IMetaImagesProps | undefined> => {
   const elementPath = getExternalResourcesImagePath(elementFilePath);
   if (elementPath == null || elementPath.length < 1) return;
   const elementFullPath = path.join(paths().generatedImagesFolder, elementPath);
@@ -43,7 +42,7 @@ export const getMoveMetaImage = async (
 
   const descriptionLines = getDescripLines(langCode, detail.description_localised);
 
-  const additional = [language[UIKeys.power].replace('{power}', detail.power)];
+  const additional = [(language[UIKeys.power] ?? '').replace('{power}', detail.power.toString())];
   if (detail.unavoidable) {
     additional.push(`${language[UIKeys.accuracy]}: Unavoidable`);
   } else {

@@ -2,14 +2,14 @@ import fs from 'fs';
 
 import { IntermediateFile } from 'constant/intermediateFile';
 import { ModuleType } from 'constant/module';
-import { ISpriteAnim } from 'contracts/spriteAnim';
+import type { ISpriteAnim } from 'contracts/spriteAnim';
 import { FolderPathHelper } from 'helpers/folderPathHelper';
 import { pad } from 'helpers/stringHelper';
 import { readItemDetail } from 'modules/baseModule';
 import { CommonModule } from 'modules/commonModule';
 import { spriteAnimMapFromDetailList } from '../../misc/spriteAnimMapFromDetailList';
 
-export class FusionSpriteAnimModule extends CommonModule<ISpriteAnim> {
+export class FusionSpriteAnimModule extends CommonModule<ISpriteAnim, ISpriteAnim> {
   private _folder = FolderPathHelper.fusionSpriteAnim();
 
   constructor() {

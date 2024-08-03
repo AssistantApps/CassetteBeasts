@@ -19,7 +19,7 @@ import { WorldModule } from 'modules/world/worldModule';
 
 export const getModules = async (props: {
   loadFromJson?: boolean;
-}): Promise<[LocalisationModule, Array<CommonModule<unknown>>]> => {
+}): Promise<[LocalisationModule, Array<CommonModule<unknown, unknown>>]> => {
   const localisationModule = new LocalisationModule();
   if (props.loadFromJson == true) {
     await localisationModule.initFromIntermediate();
@@ -27,7 +27,7 @@ export const getModules = async (props: {
     const message = await localisationModule.init();
     console.log(`\t${message}`);
   }
-  const modules: Array<CommonModule<unknown>> = [
+  const modules: Array<CommonModule<unknown, unknown>> = [
     localisationModule,
     new MiscModule(),
     new WorldModule(),

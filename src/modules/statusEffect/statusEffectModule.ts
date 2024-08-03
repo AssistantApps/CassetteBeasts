@@ -8,10 +8,10 @@ import { ModuleType } from 'constant/module';
 import { paths } from 'constant/paths';
 import { routes } from 'constant/route';
 import { site } from 'constant/site';
-import { IElement, IElementEnhanced } from 'contracts/element';
-import { ILocalisation } from 'contracts/localisation';
-import { IMove, IMoveEnhanced, IMoveSimplified } from 'contracts/move';
-import { IStatusEffect, IStatusEffectEnhanced } from 'contracts/statusEffect';
+import type { IElement, IElementEnhanced } from 'contracts/element';
+import type { ILocalisation } from 'contracts/localisation';
+import type { IMove, IMoveEnhanced, IMoveSimplified } from 'contracts/move';
+import type { IStatusEffect, IStatusEffectEnhanced } from 'contracts/statusEffect';
 import { scaffoldFolderAndDelFileIfOverwrite } from 'helpers/fileHelper';
 import { FolderPathHelper } from 'helpers/folderPathHelper';
 import {
@@ -30,7 +30,7 @@ import { getHandlebar } from 'services/internal/handlebarService';
 import { statusEffectMapFromDetailList } from './statusEffectMapFromDetailList';
 import { getStatusMetaImage } from './statusEffectMeta';
 
-export class StatusEffectModule extends CommonModule<IStatusEffect> {
+export class StatusEffectModule extends CommonModule<IStatusEffect, IStatusEffectEnhanced> {
   private _folder = FolderPathHelper.statusEffects();
 
   constructor() {
@@ -59,7 +59,7 @@ export class StatusEffectModule extends CommonModule<IStatusEffect> {
     return `${pad(this._baseDetails.length, 3, ' ')} status effects`;
   };
 
-  enrichData = async (langCode: string, modules: Array<CommonModule<unknown>>) => {
+  enrichData = async (langCode: string, modules: Array<CommonModule<unknown, unknown>>) => {
     const localeModule = this.getModuleOfType<ILocalisation>(modules, ModuleType.Localisation);
     const language = localeModule.get(langCode).messages;
     const elementModule = this.getModuleOfType<IElement>(modules, ModuleType.Elements);
@@ -89,7 +89,7 @@ export class StatusEffectModule extends CommonModule<IStatusEffect> {
     this.isReady = true;
   };
 
-  combineData = async (langCode: string, modules: Array<CommonModule<unknown>>) => {
+  combineData = async (langCode: string, modules: Array<CommonModule<unknown, unknown>>) => {
     const moveModule = this.getModuleOfType<IMove>(modules, ModuleType.Moves, true) as MovesModule;
     const statusEffectToMovesIdMap = moveModule.getStatusEffectToMovesIdMap();
 
@@ -133,7 +133,7 @@ export class StatusEffectModule extends CommonModule<IStatusEffect> {
 
       const extraData = await getStatusMetaImage(
         langCode,
-        detailEnhanced.icon?.path,
+        detailEnhanced.icon?.path ?? '',
         detailEnhanced.description_localised ?? '...',
       );
       const template = getHandlebar().getCompiledTemplate<unknown>(
@@ -145,7 +145,7 @@ export class StatusEffectModule extends CommonModule<IStatusEffect> {
     }
   };
 
-  writePages = async (langCode: string, modules: Array<CommonModule<unknown>>) => {
+  writePages = async (langCode: string, modules: Array<CommonModule<unknown, unknown>>) => {
     const mainBreadcrumb = breadcrumb.statusEffect(langCode);
     const list: Array<IStatusEffectEnhanced> = [];
     for (const mapKey of Object.keys(this._itemDetailMap)) {

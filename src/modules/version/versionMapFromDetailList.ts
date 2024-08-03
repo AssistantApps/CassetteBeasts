@@ -1,6 +1,6 @@
-import { IExternalResource } from 'contracts/externalResource';
-import { ISubAnimationResource } from 'contracts/subAnimationResource';
-import { IVersion } from 'contracts/version';
+import type { IExternalResource } from 'contracts/externalResource';
+import type { ISubAnimationResource } from 'contracts/subAnimationResource';
+import type { IVersion } from 'contracts/version';
 import { getCleanedString } from 'helpers/stringHelper';
 
 export const VersionMapFromDetailList = (props: {

@@ -3,7 +3,7 @@ export const chineseLocale = 'zh_CN';
 export const japaneseLocale = 'ja_JP';
 export const koreanLocale = 'ko_KR';
 
-export const UIKeys = {
+export const UIKeys: Record<string, string> = {
   remaster: 'UI_EVOLUTION_TITLE', // remaster
   stickers: 'UI_PARTY_STICKERS', // stickers
   maxHP: 'SHORT_NAME_max_hp', // Max HP

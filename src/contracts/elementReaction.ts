@@ -1,6 +1,6 @@
-import { IElement } from './element';
-import { IExternalResource } from './externalResource';
-import { IStatusEffect } from './statusEffect';
+import type { IElement } from './element';
+import type { IExternalResource } from './externalResource';
+import type { IStatusEffect } from './statusEffect';
 
 export interface IElementReaction {
   id: string;

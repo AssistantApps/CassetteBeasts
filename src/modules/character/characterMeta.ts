@@ -23,7 +23,7 @@ export const getCharacterMetaImage = async (
   name_localised: string,
   portraitFilePath: string,
   personalTapeFilePath: string,
-): Promise<IMetaImagesProps> => {
+): Promise<IMetaImagesProps | undefined> => {
   let estimatedCharWidth = 50;
   if (langCode == chineseLocale) estimatedCharWidth = 120;
   if (langCode == japaneseLocale) estimatedCharWidth = 120;
@@ -34,6 +34,8 @@ export const getCharacterMetaImage = async (
   const portraitFullPath = path.join(paths().generatedImagesFolder, portraitPath);
   const portraitMetaData = await sharp(portraitFullPath).metadata();
   const portraitBase64 = getBase64FromFile(portraitFullPath);
+
+  if (portraitMetaData.height == null || portraitMetaData.width == null) return;
   const portraitHeightRatio = site.images.meta.height / portraitMetaData.height;
   const portraitWidth = Math.round(portraitMetaData.width * portraitHeightRatio);
   const nameOffset = portraitWidth + name_localised.length * estimatedCharWidth;
@@ -49,6 +51,8 @@ export const getCharacterMetaImage = async (
 
   const personalTapeHeight = (site.images.meta.height / 5) * 2.5;
   const personalTapeMetaData = await sharp(personalTapeFullPath).metadata();
+  if (personalTapeMetaData.height == null || personalTapeMetaData.width == null) return;
+
   const personalTapeHeightRatio = personalTapeHeight / personalTapeMetaData.height;
   const personalTapeWidth = Math.round(personalTapeMetaData.width * personalTapeHeightRatio);
   const personalTapeX = portraitFilePath.includes('eugene') ? 650 : 800;

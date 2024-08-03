@@ -4,16 +4,15 @@ import { IntermediateFile } from 'constant/intermediateFile';
 import { UIKeys, defaultLocale } from 'constant/localisation';
 import { ModuleType } from 'constant/module';
 import { routes } from 'constant/route';
-import { IElementEnhanced } from 'contracts/element';
-import { IHomePageCard } from 'contracts/homePageCard';
-import { ILocalisation } from 'contracts/localisation';
-import { IMonsterForm } from 'contracts/monsterForm';
-import { IStatusEffect } from 'contracts/statusEffect';
-import { IWorld } from 'contracts/world';
+import type { IElementEnhanced } from 'contracts/element';
+import type { IHomePageCard } from 'contracts/homePageCard';
+import type { IMonsterForm } from 'contracts/monsterForm';
+import type { IStatusEffect } from 'contracts/statusEffect';
+import type { IWorld } from 'contracts/world';
 import { CommonModule } from 'modules/commonModule';
 import { getHandlebar } from 'services/internal/handlebarService';
 
-export class MiscModule extends CommonModule<ILocalisation> {
+export class MiscModule extends CommonModule<unknown, unknown> {
   private _cards: Array<IHomePageCard> = [];
 
   constructor() {
@@ -31,7 +30,7 @@ export class MiscModule extends CommonModule<ILocalisation> {
     });
   }
 
-  enrichData = async (langCode: string, modules: Array<CommonModule<unknown>>) => {
+  enrichData = async (langCode: string, modules: Array<CommonModule<unknown, unknown>>) => {
     const monsterModule = this.getModuleOfType<IMonsterForm>(modules, ModuleType.MonsterForms);
     const elementModule = this.getModuleOfType<IElementEnhanced>(modules, ModuleType.Elements);
     const statusEffectModule = this.getModuleOfType<IStatusEffect>(
@@ -44,7 +43,7 @@ export class MiscModule extends CommonModule<ILocalisation> {
       {
         uiKey: UIKeys.viewMonsters,
         url: routes.monsters,
-        gameUrl: monsterModule.get('kittelly').tape_sticker_texture.path,
+        gameUrl: monsterModule.get('kittelly').tape_sticker_texture?.path,
       },
       {
         uiKey: UIKeys.viewStickers,
@@ -64,12 +63,12 @@ export class MiscModule extends CommonModule<ILocalisation> {
       {
         uiKey: UIKeys.statusEffect,
         url: routes.statusEffect,
-        gameUrl: statusEffectModule.get('gambit').icon.path,
+        gameUrl: statusEffectModule.get('gambit').icon?.path,
       },
       {
         uiKey: UIKeys.map,
         url: routes.map,
-        gameUrl: worldModule.get('overworld').map_texture.path,
+        gameUrl: worldModule.get('overworld').map_texture?.path,
         hideInMobile: true,
       },
     ];
@@ -80,7 +79,7 @@ export class MiscModule extends CommonModule<ILocalisation> {
   initFromIntermediate = async () => {}; // no intermediate file
   writeIntermediate = () => {}; // no intermediate file
 
-  writePages = async (langCode: string, modules: Array<CommonModule<unknown>>) => {
+  writePages = async (langCode: string, modules: Array<CommonModule<unknown, unknown>>) => {
     await Promise.all([
       this.writeMiscPage(langCode, routes.home, handlebarTemplate.home, modules),
       this.writeMiscPage(langCode, routes.about, handlebarTemplate.about, modules),
@@ -115,7 +114,7 @@ export class MiscModule extends CommonModule<ILocalisation> {
     langCode: string,
     outputFile: string,
     handleBarTemplate: string,
-    modules: Array<CommonModule<unknown>>,
+    modules: Array<CommonModule<unknown, unknown>>,
   ) => {
     const outputFiles = [`${langCode}${outputFile}`];
     if (langCode == defaultLocale) {

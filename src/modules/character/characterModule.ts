@@ -9,11 +9,11 @@ import { ModuleType } from 'constant/module';
 import { paths } from 'constant/paths';
 import { routes } from 'constant/route';
 import { site } from 'constant/site';
-import { ICharacter, ICharacterEnhanced, ICharacterSfx } from 'contracts/character';
-import { IElement } from 'contracts/element';
-import { ILocalisation } from 'contracts/localisation';
-import { IMonsterFormEnhanced, IMonsterFormSimplified } from 'contracts/monsterForm';
-import { ISpriteAnim } from 'contracts/spriteAnim';
+import type { ICharacter, ICharacterEnhanced, ICharacterSfx } from 'contracts/character';
+import type { IElement } from 'contracts/element';
+import type { ILocalisation } from 'contracts/localisation';
+import type { IMonsterFormEnhanced, IMonsterFormSimplified } from 'contracts/monsterForm';
+import type { ISpriteAnim } from 'contracts/spriteAnim';
 import { getAnimFileName, scaffoldFolderAndDelFileIfOverwrite } from 'helpers/fileHelper';
 import { FolderPathHelper } from 'helpers/folderPathHelper';
 import {
@@ -34,7 +34,7 @@ import { characterMapFromDetailList } from './characterMapFromDetailList';
 import { getCharacterMetaImage } from './characterMeta';
 import { getCharacterPartnerTapeImage } from './characterPartnerTape';
 
-export class CharacterModule extends CommonModule<ICharacter> {
+export class CharacterModule extends CommonModule<ICharacter, ICharacterEnhanced> {
   private _folder = FolderPathHelper.characters();
 
   constructor() {
@@ -74,7 +74,7 @@ export class CharacterModule extends CommonModule<ICharacter> {
     return `${pad(this._baseDetails.length, 3, ' ')} characters`;
   };
 
-  enrichData = async (langCode: string, modules: Array<CommonModule<unknown>>) => {
+  enrichData = async (langCode: string, modules: Array<CommonModule<unknown, unknown>>) => {
     const localeModule = this.getModuleOfType<ILocalisation>(modules, ModuleType.Localisation);
     const language = localeModule.get(langCode).messages;
     const monsterModule = this.getModuleOfType<IMonsterFormEnhanced>(
@@ -100,9 +100,9 @@ export class CharacterModule extends CommonModule<ICharacter> {
         .replace('res://sprites/characters/battle/', '')
         .replace('res://sprites/characters/world/', '')
         .replace('.json', '');
-      const tapeOverrideElementId = detail.partner_signature_species_type_override?.path
-        ?.replace('res://data/elemental_types/', '')
-        ?.replace('.tres', '');
+      const tapeOverrideElementId = (detail.partner_signature_species_type_override?.path ?? '')
+        .replace('res://data/elemental_types/', '')
+        .replace('.tres', '');
 
       const animations = (spriteAnimModule.get(sprite_anim_key)?.animations ?? []).map(
         (a, idx) => ({
@@ -149,7 +149,7 @@ export class CharacterModule extends CommonModule<ICharacter> {
     this.isReady = true;
   };
 
-  combineData = async (langCode: string, modules: Array<CommonModule<unknown>>) => {
+  combineData = async (langCode: string, modules: Array<CommonModule<unknown, unknown>>) => {
     const characterSfxModule = this.getModuleOfType<ICharacterSfx>(
       modules,
       ModuleType.CharacterSfx,
@@ -174,7 +174,7 @@ export class CharacterModule extends CommonModule<ICharacter> {
     }
   };
 
-  generateImages = async (overwrite: boolean, modules: Array<CommonModule<unknown>>) => {
+  generateImages = async (overwrite: boolean, modules: Array<CommonModule<unknown, unknown>>) => {
     for (const mapKey of Object.keys(this._itemDetailMap)) {
       const detailEnhanced: ICharacterEnhanced = this._itemDetailMap[mapKey];
 
@@ -214,7 +214,7 @@ export class CharacterModule extends CommonModule<ICharacter> {
     }
   };
 
-  writePages = async (langCode: string, modules: Array<CommonModule<unknown>>) => {
+  writePages = async (langCode: string, modules: Array<CommonModule<unknown, unknown>>) => {
     const mainBreadcrumb = breadcrumb.character(langCode);
     const list: Array<ICharacterEnhanced> = [];
     for (const mapKey of Object.keys(this._itemDetailMap)) {

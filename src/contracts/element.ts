@@ -1,4 +1,4 @@
-import { IExternalResource } from './externalResource';
+import type { IExternalResource } from './externalResource';
 
 export interface IElement {
   id: string;

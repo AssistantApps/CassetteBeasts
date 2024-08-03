@@ -1,4 +1,4 @@
-import { IBoxSelection } from './boxSelection';
+import type { IBoxSelection } from './boxSelection';
 
 export interface ISubAnimationResource {
   id: number;

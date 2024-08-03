@@ -1,7 +1,7 @@
-import { ICharacterSfx } from 'contracts/character';
-import { IExternalResource } from 'contracts/externalResource';
-import { ISubAnimationResource } from 'contracts/subAnimationResource';
-import { ISubResource } from 'contracts/subResource';
+import type { ICharacterSfx } from 'contracts/character';
+import type { IExternalResource } from 'contracts/externalResource';
+import type { ISubAnimationResource } from 'contracts/subAnimationResource';
+import type { ISubResource } from 'contracts/subResource';
 import { getExternalResources } from 'mapper/externalResourceMapper';
 
 export const characterSfxMapFromDetailList =

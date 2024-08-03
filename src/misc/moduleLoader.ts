@@ -5,7 +5,7 @@ const debugModuleLoading = false;
 
 export const smartLoadingModules = async (props: {
   langCode: string;
-  modules: Array<CommonModule<unknown>>;
+  modules: Array<CommonModule<unknown, unknown>>;
   reInitialise?: boolean;
   loadFromJson?: boolean;
 }) => {

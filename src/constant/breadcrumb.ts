@@ -1,4 +1,4 @@
-import { IBreadcrumb } from 'contracts/breadcrumb';
+import type { IBreadcrumb } from 'contracts/breadcrumb';
 import { UIKeys } from './localisation';
 import { routes } from './route';
 

@@ -1,4 +1,4 @@
-import { FaviconOptions, favicons } from 'favicons';
+import { type FaviconOptions, favicons } from 'favicons';
 import fs from 'fs/promises';
 import path from 'path';
 
@@ -80,6 +80,6 @@ export const generateFavicons = async () => {
       htmlContentLines.join('\n'),
     );
   } catch (error) {
-    console.log(error.message);
+    console.log((error as any).message);
   }
 };

@@ -1,8 +1,8 @@
-import { IExternalResource } from 'contracts/externalResource';
-import { IFusion } from 'contracts/fusion';
-import { INodeResource } from 'contracts/nodeResource';
-import { ISubAnimationResource } from 'contracts/subAnimationResource';
-import { ISubResource } from 'contracts/subResource';
+import type { IExternalResource } from 'contracts/externalResource';
+import type { IFusion } from 'contracts/fusion';
+import type { INodeResource } from 'contracts/nodeResource';
+import type { ISubAnimationResource } from 'contracts/subAnimationResource';
+import type { ISubResource } from 'contracts/subResource';
 import { getExternalResource } from 'mapper/externalResourceMapper';
 
 export const fusionMapFromDetailList =
@@ -24,19 +24,19 @@ export const fusionMapFromDetailList =
   };
 
 const mapNodes = (props: {
-  externalResourcesMap: Record<number, IExternalResource>;
-  nodeResourceMap: Record<number, INodeResource>;
+  externalResourcesMap: Record<string, IExternalResource>;
+  nodeResourceMap: Record<string, INodeResource>;
 }): Record<number, INodeResource> => {
-  const result: Record<number, INodeResource> = {};
+  const result: Record<string, INodeResource> = {};
 
   for (const nodeKey of Object.keys(props.nodeResourceMap)) {
     const node: INodeResource = props.nodeResourceMap[nodeKey];
     const newNode: INodeResource = {
       ...node,
-      instance_external: getExternalResource(node.instance, props.externalResourcesMap),
+      instance_external: getExternalResource(node.instance ?? '', props.externalResourcesMap),
       child: mapNodes({
         externalResourcesMap: props.externalResourcesMap,
-        nodeResourceMap: node.child,
+        nodeResourceMap: node.child ?? result,
       }),
     };
     result[nodeKey] = newNode;

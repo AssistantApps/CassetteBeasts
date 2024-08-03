@@ -1,8 +1,8 @@
-import { IElement } from './element';
-import { IExternalResource } from './externalResource';
-import { IMonsterFormSimplified } from './monsterForm';
-import { ISpriteAnimDetailsEnhanced } from './spriteAnim';
-import { ISubResource } from './subResource';
+import type { IElement } from './element';
+import type { IExternalResource } from './externalResource';
+import type { IMonsterFormSimplified } from './monsterForm';
+import type { ISpriteAnimDetailsEnhanced } from './spriteAnim';
+import type { ISubResource } from './subResource';
 
 export interface ICharacter {
   id: string;

@@ -4,14 +4,14 @@ import path from 'path';
 import { IntermediateFile } from 'constant/intermediateFile';
 import { ModuleType } from 'constant/module';
 import { paths } from 'constant/paths';
-import { IVersion } from 'contracts/version';
+import type { IVersion } from 'contracts/version';
 import { pad } from 'helpers/stringHelper';
 import { readItemDetail } from 'modules/baseModule';
 import { CommonModule } from 'modules/commonModule';
 import { getConfig } from 'services/internal/configService';
 import { VersionMapFromDetailList } from './versionMapFromDetailList';
 
-export class VersionModule extends CommonModule<IVersion> {
+export class VersionModule extends CommonModule<IVersion, IVersion> {
   private _fileName = 'version.tres';
   constructor() {
     super({

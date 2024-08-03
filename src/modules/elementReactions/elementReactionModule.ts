@@ -6,14 +6,14 @@ import { handlebarTemplate } from 'constant/handlebar';
 import { IntermediateFile } from 'constant/intermediateFile';
 import { ModuleType } from 'constant/module';
 import { routes } from 'constant/route';
-import { IElement, IElementEnhanced } from 'contracts/element';
-import {
+import type { IElement, IElementEnhanced } from 'contracts/element';
+import type {
   IElementGridCell,
   IElementReaction,
   IElementReactionEnhanced,
 } from 'contracts/elementReaction';
-import { ILocalisation } from 'contracts/localisation';
-import { IStatusEffect } from 'contracts/statusEffect';
+import type { ILocalisation } from 'contracts/localisation';
+import type { IStatusEffect } from 'contracts/statusEffect';
 import { FolderPathHelper } from 'helpers/folderPathHelper';
 import { pad } from 'helpers/stringHelper';
 import { getItemFromMapByIntId, readItemDetail } from 'modules/baseModule';
@@ -21,7 +21,10 @@ import { CommonModule } from 'modules/commonModule';
 import { getHandlebar } from 'services/internal/handlebarService';
 import { elementReactionMapFromDetailList } from './elementReactionMapFromDetailList';
 
-export class ElementReactionModule extends CommonModule<IElementReaction> {
+export class ElementReactionModule extends CommonModule<
+  IElementReaction,
+  IElementReactionEnhanced
+> {
   private _folder = FolderPathHelper.elementReactions();
   private _effectGrid: Array<Array<IElementGridCell>> = [];
   private _effectOptions: Array<IElementGridCell> = [];
@@ -51,7 +54,7 @@ export class ElementReactionModule extends CommonModule<IElementReaction> {
     return `${pad(this._baseDetails.length, 3, ' ')} element reactions`;
   };
 
-  enrichData = async (langCode: string, modules: Array<CommonModule<unknown>>) => {
+  enrichData = async (langCode: string, modules: Array<CommonModule<unknown, unknown>>) => {
     const localeModule = this.getModuleOfType<ILocalisation>(modules, ModuleType.Localisation);
     const language = localeModule.get(langCode).messages;
     const elementModule = this.getModuleOfType<IElement>(modules, ModuleType.Elements);
@@ -137,7 +140,7 @@ export class ElementReactionModule extends CommonModule<IElementReaction> {
 
   get = getItemFromMapByIntId(this._itemDetailMap);
 
-  writePages = async (langCode: string, modules: Array<CommonModule<unknown>>) => {
+  writePages = async (langCode: string, modules: Array<CommonModule<unknown, unknown>>) => {
     const mainBreadcrumb = breadcrumb.element(langCode);
     const list: Array<IElementReaction> = [];
     for (const mapKey of Object.keys(this._itemDetailMap)) {

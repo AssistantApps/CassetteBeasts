@@ -1,9 +1,10 @@
-import aliveServer from 'alive-server';
 import watch from 'node-watch';
 import path from 'path';
 
 import { paths } from 'constant/paths';
 import { generateMainCss } from './sass';
+
+const aliveServer = require('alive-server');
 
 interface IWatchDevFiles {
   onSassChange?: () => void;

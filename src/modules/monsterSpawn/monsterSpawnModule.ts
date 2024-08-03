@@ -2,8 +2,8 @@ import fs from 'fs';
 
 import { IntermediateFile } from 'constant/intermediateFile';
 import { ModuleType } from 'constant/module';
-import { ILocalisation } from 'contracts/localisation';
-import {
+import type { ILocalisation } from 'contracts/localisation';
+import type {
   IMonsterSpawn,
   IMonsterSpawnDetailsEnhanced,
   IMonsterSpawnEnhanced,
@@ -14,7 +14,7 @@ import { readItemDetail } from 'modules/baseModule';
 import { CommonModule } from 'modules/commonModule';
 import { monsterSpawnMapFromDetailList } from './monsterSpawnFormMapDetailList';
 
-export class MonsterSpawnModule extends CommonModule<IMonsterSpawn> {
+export class MonsterSpawnModule extends CommonModule<IMonsterSpawn, IMonsterSpawnEnhanced> {
   private _folder = FolderPathHelper.monsterSpawn();
   private _monsterToLocationMap: Record<string, Array<string>> = {};
   private _mapCoordToMonsterSpawnMap: Record<string, Array<IMonsterSpawnDetailsEnhanced>> = {};
@@ -45,21 +45,24 @@ export class MonsterSpawnModule extends CommonModule<IMonsterSpawn> {
     return `${pad(this._baseDetails.length, 3, ' ')} monster spawns`;
   };
 
-  enrichData = async (langCode: string, modules: Array<CommonModule<unknown>>) => {
+  enrichData = async (langCode: string, modules: Array<CommonModule<unknown, unknown>>) => {
     const localeModule = this.getModuleOfType<ILocalisation>(modules, ModuleType.Localisation);
     const language = localeModule.get(langCode).messages;
 
     for (const detail of this._baseDetails) {
       const species_enhanced: Array<IMonsterSpawnDetailsEnhanced> = [];
-      const totalWeight = detail.species
-        .map((s) => s.weight)
-        .reduce((partial, cur) => partial + cur, 0);
-      const totalOverworldWeight = detail.species
-        .filter((s) => s.world_monster != null)
-        .map((s) => s.weight)
-        .reduce((partial, cur) => partial + cur, 0);
+      const detailSpecies = detail.species ?? [];
+      const totalWeight =
+        detailSpecies
+          .map((s) => s.weight)
+          .reduce((partial, cur) => (partial ?? 0) + (cur ?? 0), 0) ?? 1;
+      const totalOverworldWeight =
+        detailSpecies
+          .filter((s) => s.world_monster != null)
+          .map((s) => s.weight)
+          .reduce((partial, cur) => (partial ?? 0) + (cur ?? 0), 0) ?? 1;
 
-      for (const spec of detail.species) {
+      for (const spec of detailSpecies) {
         const monsterKey = (spec.monster_form?.path ?? '')
           .replace('res://data/monster_forms/', '')
           .replace('.tres', '');
@@ -76,7 +79,7 @@ export class MonsterSpawnModule extends CommonModule<IMonsterSpawn> {
         }
 
         const isAllDay = spec.hour_min == 0 && spec.hour_max == 24;
-        const percentMonster = (spec.weight / totalWeight) * 100;
+        const percentMonster = ((spec.weight ?? 0) / totalWeight) * 100;
         const baseItem: IMonsterSpawnDetailsEnhanced = {
           overworldMonsterId: undefined,
           world_monster: undefined,
@@ -91,7 +94,7 @@ export class MonsterSpawnModule extends CommonModule<IMonsterSpawn> {
           available_specific_time: isAllDay ? undefined : true,
         };
         if (worldMonsterKey.length > 0) {
-          const percentWorld = (spec.weight / totalOverworldWeight) * 100;
+          const percentWorld = ((spec.weight ?? 0) / totalOverworldWeight) * 100;
           species_enhanced.push({
             ...baseItem,
             overworldMonsterId: worldMonsterKey,
@@ -139,7 +142,7 @@ export class MonsterSpawnModule extends CommonModule<IMonsterSpawn> {
     // }
   };
 
-  generateImages = async (overwrite: boolean, modules: Array<CommonModule<unknown>>) => {
+  generateImages = async (overwrite: boolean, modules: Array<CommonModule<unknown, unknown>>) => {
     // for (const mapKey of Object.keys(this._itemDetailMap)) {
     //   const detailEnhanced: IMonsterFormEnhanced = this._itemDetailMap[mapKey];
     //   await copyImageToGeneratedFolder(overwrite, detailEnhanced.tape_sticker_texture);

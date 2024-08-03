@@ -9,11 +9,15 @@ import { ModuleType } from 'constant/module';
 import { paths } from 'constant/paths';
 import { routes } from 'constant/route';
 import { site } from 'constant/site';
-import { IElement, IElementEnhanced } from 'contracts/element';
-import { ILocalisation } from 'contracts/localisation';
-import { IMonsterForm, IMonsterFormEnhanced, IMonsterFormSimplified } from 'contracts/monsterForm';
-import { IMove, IMoveEnhanced } from 'contracts/move';
-import { IStatusEffect, IStatusEffectEnhanced } from 'contracts/statusEffect';
+import type { IElement, IElementEnhanced } from 'contracts/element';
+import type { ILocalisation } from 'contracts/localisation';
+import type {
+  IMonsterForm,
+  IMonsterFormEnhanced,
+  IMonsterFormSimplified,
+} from 'contracts/monsterForm';
+import type { IMove, IMoveEnhanced } from 'contracts/move';
+import type { IStatusEffect, IStatusEffectEnhanced } from 'contracts/statusEffect';
 import { scaffoldFolderAndDelFileIfOverwrite } from 'helpers/fileHelper';
 import { FolderPathHelper } from 'helpers/folderPathHelper';
 import { generateMetaImage } from 'helpers/imageHelper';
@@ -29,7 +33,7 @@ import { getHandlebar } from 'services/internal/handlebarService';
 import { moveMapFromDetailList } from './moveMapFromDetailList';
 import { getMoveMetaImage } from './moveMeta';
 
-export class MovesModule extends CommonModule<IMove> {
+export class MovesModule extends CommonModule<IMove, IMoveEnhanced> {
   private _folder = FolderPathHelper.moves();
   private _moveTagToMovesIdMap: Record<string, Array<string>> = {};
   private _statusEffectToMovesIdMap: Record<string, Array<string>> = {};
@@ -61,7 +65,7 @@ export class MovesModule extends CommonModule<IMove> {
     return `${pad(this._baseDetails.length, 3, ' ')} moves`;
   };
 
-  enrichData = async (langCode: string, modules: Array<CommonModule<unknown>>) => {
+  enrichData = async (langCode: string, modules: Array<CommonModule<unknown, unknown>>) => {
     const localeModule = this.getModuleOfType<ILocalisation>(modules, ModuleType.Localisation);
     const language = localeModule.get(langCode).messages;
     const elementModule = this.getModuleOfType<IElement>(modules, ModuleType.Elements);
@@ -119,7 +123,7 @@ export class MovesModule extends CommonModule<IMove> {
     this.isReady = true;
   };
 
-  combineData = async (langCode: string, modules: Array<CommonModule<unknown>>) => {
+  combineData = async (langCode: string, modules: Array<CommonModule<unknown, unknown>>) => {
     const monsterModule = this.getModuleOfType<IMonsterForm>(
       modules,
       ModuleType.MonsterForms,
@@ -187,7 +191,7 @@ export class MovesModule extends CommonModule<IMove> {
     localeModule: LocalisationModule,
     overwrite: boolean,
   ) => {
-    const language: Record<number, ILocalisation> = localeModule.get(langCode).messages;
+    const language: Record<string, string> = localeModule.get(langCode).messages;
 
     for (const mapKey of Object.keys(this._itemDetailMap)) {
       const detailEnhanced: IMoveEnhanced = this._itemDetailMap[mapKey];
@@ -211,7 +215,7 @@ export class MovesModule extends CommonModule<IMove> {
     }
   };
 
-  writePages = async (langCode: string, modules: Array<CommonModule<unknown>>) => {
+  writePages = async (langCode: string, modules: Array<CommonModule<unknown, unknown>>) => {
     const localeModule = this.getModuleOfType<ILocalisation>(
       modules,
       ModuleType.Localisation,

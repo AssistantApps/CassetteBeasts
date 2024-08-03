@@ -1,4 +1,5 @@
 import fs from 'fs';
+import path from 'path';
 
 import { breadcrumb } from 'constant/breadcrumb';
 import { handlebarTemplate } from 'constant/handlebar';
@@ -6,11 +7,11 @@ import { IntermediateFile } from 'constant/intermediateFile';
 import { ModuleType } from 'constant/module';
 import { paths } from 'constant/paths';
 import { routes } from 'constant/route';
-import { IFusion, IFusionEnhanced } from 'contracts/fusion';
-import { ILocalisation } from 'contracts/localisation';
-import { IMonsterForm } from 'contracts/monsterForm';
-import { INodeResource, INodeResourceEnhanced } from 'contracts/nodeResource';
-import { ISpriteAnim } from 'contracts/spriteAnim';
+import type { IFusion, IFusionEnhanced } from 'contracts/fusion';
+import type { ILocalisation } from 'contracts/localisation';
+import type { IMonsterForm } from 'contracts/monsterForm';
+import type { INodeResource, INodeResourceEnhanced } from 'contracts/nodeResource';
+import type { ISpriteAnim } from 'contracts/spriteAnim';
 import {
   createFoldersOfDestFilePath,
   getAnimFileName,
@@ -23,11 +24,10 @@ import { mapNodeResourceFromFlatMap } from 'mapper/nodeResourceMapper';
 import { readItemDetail } from 'modules/baseModule';
 import { CommonModule } from 'modules/commonModule';
 import { LocalisationModule } from 'modules/localisation/localisationModule';
-import path from 'path';
 import { getHandlebar } from 'services/internal/handlebarService';
 import { fusionMapFromDetailList } from './fusionMapFromDetailList';
 
-export class FusionModule extends CommonModule<IFusion> {
+export class FusionModule extends CommonModule<IFusion, IFusionEnhanced> {
   private _folder = FolderPathHelper.fusions();
   private _enhanced_nodes: Array<IFusionEnhanced> = [];
 
@@ -57,11 +57,12 @@ export class FusionModule extends CommonModule<IFusion> {
     return `${pad(this._baseDetails.length, 3, ' ')} fusions`;
   };
 
-  enrichData = async (langCode: string, modules: Array<CommonModule<unknown>>) => {
+  enrichData = async (langCode: string, modules: Array<CommonModule<unknown, unknown>>) => {
     for (const detail of this._baseDetails) {
-      const nodes_enhanced: Record<number, INodeResourceEnhanced> = {};
-      for (const mapKey of Object.keys(detail.nodes)) {
-        const node: INodeResource = detail.nodes[mapKey];
+      const nodes_enhanced: Record<string, INodeResourceEnhanced> = {};
+      const detailNodes = detail.nodes ?? {};
+      for (const mapKey of Object.keys(detailNodes)) {
+        const node: INodeResource = detailNodes[mapKey];
         const instance_external_path = node.instance_external?.path ?? '';
 
         const node_enhanced: INodeResourceEnhanced = {
@@ -92,7 +93,7 @@ export class FusionModule extends CommonModule<IFusion> {
     }
   };
 
-  generateImages = async (overwrite: boolean, modules: Array<CommonModule<unknown>>) => {
+  generateImages = async (overwrite: boolean, modules: Array<CommonModule<unknown, unknown>>) => {
     const spriteAnimModule = this.getModuleOfType<ISpriteAnim>(
       modules,
       ModuleType.FusionSpriteAnim,
@@ -112,7 +113,7 @@ export class FusionModule extends CommonModule<IFusion> {
     overwrite: boolean,
   ) => {};
 
-  writePages = async (langCode: string, modules: Array<CommonModule<unknown>>) => {
+  writePages = async (langCode: string, modules: Array<CommonModule<unknown, unknown>>) => {
     const localeModule = this.getModuleOfType<ILocalisation>(
       modules,
       ModuleType.Localisation,
@@ -199,8 +200,9 @@ export class FusionModule extends CommonModule<IFusion> {
   private _findMostCommonKeys = () => {
     const mapCount: Record<string, number> = {};
     for (const detail of this._baseDetails) {
-      for (const nodeKey of Object.keys(detail.nodes)) {
-        const node: INodeResource = detail.nodes[nodeKey];
+      const detailNodes = detail.nodes ?? {};
+      for (const nodeKey of Object.keys(detailNodes)) {
+        const node: INodeResource = detailNodes[nodeKey];
         mapCount[node.name] = (mapCount[node.name] ?? 0) + 1;
       }
     }
@@ -251,7 +253,7 @@ export class FusionModule extends CommonModule<IFusion> {
 
   private _generateNodeImages = async (
     overwrite: boolean,
-    spriteAnimModule: CommonModule<ISpriteAnim>,
+    spriteAnimModule: CommonModule<ISpriteAnim, ISpriteAnim>,
     node: INodeResourceEnhanced,
   ) => {
     const icon_url = node.instance_external_path.replace('.json', '.png');

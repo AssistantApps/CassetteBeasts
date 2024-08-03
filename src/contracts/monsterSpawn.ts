@@ -1,20 +1,20 @@
-import { IExternalResource } from './externalResource';
+import type { IExternalResource } from './externalResource';
 
 export interface IMonsterSpawnDetails {
-  monster_form: IExternalResource;
-  world_monster: IExternalResource;
-  weight: number;
-  hour_min: number;
-  hour_max: number;
+  monster_form?: IExternalResource;
+  world_monster?: IExternalResource;
+  weight?: number;
+  hour_min?: number;
+  hour_max?: number;
 }
 
 export interface IMonsterSpawnDetailsEnhanced extends IMonsterSpawnDetails {
-  overworldMonsterId: string;
-  monsterId: string;
+  overworldMonsterId?: string;
+  monsterId?: string;
   // monster: IMonsterFormSimplified;
   percent: number;
   percentStr: string;
-  available_specific_time: boolean;
+  available_specific_time?: boolean;
 }
 
 export interface IMonsterSpawn {
@@ -25,7 +25,7 @@ export interface IMonsterSpawn {
   min_team_size: number;
   max_team_size: number;
   num_species: number;
-  species: Array<IMonsterSpawnDetails>;
+  species?: Array<IMonsterSpawnDetails>;
 }
 
 export interface IMonsterSpawnEnhanced extends IMonsterSpawn {
@@ -37,10 +37,10 @@ export interface IMonsterSpawnEnhanced extends IMonsterSpawn {
 export interface IMonsterSpawnHabitatDetails {
   id: string;
   habitat_name_localised: string;
-  overworldSprite: string;
+  overworldSprite?: string;
   percent: number;
   percentStr: string;
-  hour_min: number;
-  hour_max: number;
-  available_specific_time: boolean;
+  hour_min?: number;
+  hour_max?: number;
+  available_specific_time?: boolean;
 }

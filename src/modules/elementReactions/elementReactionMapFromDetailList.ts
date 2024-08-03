@@ -1,7 +1,7 @@
-import { IElementReaction } from 'contracts/elementReaction';
-import { IExternalResource } from 'contracts/externalResource';
-import { ISubAnimationResource } from 'contracts/subAnimationResource';
-import { ISubResource } from 'contracts/subResource';
+import type { IElementReaction } from 'contracts/elementReaction';
+import type { IExternalResource } from 'contracts/externalResource';
+import type { ISubAnimationResource } from 'contracts/subAnimationResource';
+import type { ISubResource } from 'contracts/subResource';
 import { tryParseInt } from 'helpers/mathHelper';
 import { getCleanedString, getStringArray } from 'helpers/stringHelper';
 import { getExternalResource, getExternalResources } from 'mapper/externalResourceMapper';
@@ -29,10 +29,10 @@ export const elementReactionMapFromDetailList =
         props.externalResourcesMap,
       ),
       varied_result_amount: getStringArray(props.resourceMap['varied_result_amount']).map(
-        tryParseInt,
+        (a) => tryParseInt(a)!,
       ),
-      default_result_amount: tryParseInt(props.resourceMap['default_result_amount']),
-      result_hint: tryParseInt(props.resourceMap['result_hint']),
+      default_result_amount: tryParseInt(props.resourceMap['default_result_amount']) ?? 0,
+      result_hint: tryParseInt(props.resourceMap['result_hint']) ?? 0,
       toast_message: getCleanedString(props.resourceMap['toast_message']),
     };
   };

@@ -2,8 +2,8 @@ import fs from 'fs';
 
 import { IntermediateFile } from 'constant/intermediateFile';
 import { ModuleType } from 'constant/module';
-import { IElement, IElementEnhanced } from 'contracts/element';
-import { ILocalisation } from 'contracts/localisation';
+import type { IElement, IElementEnhanced } from 'contracts/element';
+import type { ILocalisation } from 'contracts/localisation';
 import { FolderPathHelper } from 'helpers/folderPathHelper';
 import { copyImageFromRes, copyImageToGeneratedFolder } from 'helpers/imageHelper';
 import { pad } from 'helpers/stringHelper';
@@ -11,7 +11,7 @@ import { readItemDetail } from 'modules/baseModule';
 import { CommonModule } from 'modules/commonModule';
 import { elementMapFromDetailList } from './elementMapFromDetailList';
 
-export class ElementsModule extends CommonModule<IElement> {
+export class ElementsModule extends CommonModule<IElement, IElementEnhanced> {
   private _folder = FolderPathHelper.elements();
 
   constructor() {
@@ -38,7 +38,7 @@ export class ElementsModule extends CommonModule<IElement> {
     return `${pad(this._baseDetails.length, 3, ' ')} elements`;
   };
 
-  enrichData = async (langCode: string, modules: Array<CommonModule<unknown>>) => {
+  enrichData = async (langCode: string, modules: Array<CommonModule<unknown, unknown>>) => {
     const localeModule = this.getModuleOfType<ILocalisation>(modules, ModuleType.Localisation);
     const language = localeModule.get(langCode).messages;
 

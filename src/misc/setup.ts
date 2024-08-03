@@ -104,7 +104,7 @@ export const templateGenerationSpeedPrompt = async (
     choices: Object.keys(TemplateGenerationSpeed)
       .filter((e: any) => isNaN(e) == false)
       .map((e) => ({
-        title: TemplateGenerationSpeed[e],
+        title: TemplateGenerationSpeed[Number(e)],
         value: e,
       })),
   });

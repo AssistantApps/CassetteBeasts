@@ -5,10 +5,10 @@ import { handlebarTemplate } from 'constant/handlebar';
 import { IntermediateFile } from 'constant/intermediateFile';
 import { ModuleType } from 'constant/module';
 import { routes } from 'constant/route';
-import { ILocalisation } from 'contracts/localisation';
-import { IMonsterForm, IMonsterFormEnhanced, IMonsterFormSimplified } from 'contracts/monsterForm';
-import { IMonsterSpawn } from 'contracts/monsterSpawn';
-import { IWorld, IWorldEnhanced, IWorldMetaDataEnhanced } from 'contracts/world';
+import type { ILocalisation } from 'contracts/localisation';
+import type { IMonsterFormEnhanced, IMonsterFormSimplified } from 'contracts/monsterForm';
+import type { IMonsterSpawn } from 'contracts/monsterSpawn';
+import type { IWorld, IWorldEnhanced, IWorldMetaDataEnhanced } from 'contracts/world';
 import { FolderPathHelper } from 'helpers/folderPathHelper';
 import { copyImageFromRes, copyImageToGeneratedFolder } from 'helpers/imageHelper';
 import { pad } from 'helpers/stringHelper';
@@ -21,7 +21,7 @@ import { MonsterSpawnModule } from 'modules/monsterSpawn/monsterSpawnModule';
 import { getHandlebar } from 'services/internal/handlebarService';
 import { worldMapFromDetailList, worldMetaDataMapFromDetailList } from './worldMapFromDetailList';
 
-export class WorldModule extends CommonModule<IWorld> {
+export class WorldModule extends CommonModule<IWorld, IWorldEnhanced> {
   private _folders = [
     FolderPathHelper.world(), //
     FolderPathHelper.worldPier(),
@@ -87,7 +87,7 @@ export class WorldModule extends CommonModule<IWorld> {
     return `${count} world files loaded with ${map_chunk_metas} chunks.`;
   };
 
-  enrichData = async (langCode: string, modules: Array<CommonModule<unknown>>) => {
+  enrichData = async (langCode: string, modules: Array<CommonModule<unknown, unknown>>) => {
     const localeModule = this.getModuleOfType<ILocalisation>(modules, ModuleType.Localisation);
     const language = localeModule.get(langCode).messages;
     const monsterSpawnModule = this.getModuleOfType<IMonsterSpawn>(
@@ -95,7 +95,10 @@ export class WorldModule extends CommonModule<IWorld> {
       ModuleType.MonsterSpawn,
     ) as unknown as MonsterSpawnModule;
     const mapCoordToMonsterSpawnMap = monsterSpawnModule.getMapCoordToMonsterSpawnMap();
-    const monsterFormModule = this.getModuleOfType<IMonsterForm>(modules, ModuleType.MonsterForms);
+    const monsterFormModule = this.getModuleOfType<IMonsterFormEnhanced>(
+      modules,
+      ModuleType.MonsterForms,
+    );
 
     for (const detail of this._baseDetails) {
       const mapKey = detail.id.toLowerCase();
@@ -107,6 +110,8 @@ export class WorldModule extends CommonModule<IWorld> {
         allXValues.push(parseInt(coord[0]));
         allYValues.push(parseInt(coord[1]));
       }
+
+      if (detail.chunk_layout == null) continue;
 
       const offsetX = Math.abs(detail.chunk_layout.x);
       const rangeX = detail.chunk_layout.w;
@@ -127,9 +132,9 @@ export class WorldModule extends CommonModule<IWorld> {
         const speciesInThisZone = mapCoordToMonsterSpawnMap[mapCoord];
         if (speciesInThisZone != null) {
           const monsterIds = speciesInThisZone.map((mon) => mon.monsterId);
-          const distinctMonsterIds = monsterIds.filter(
-            (value, index, array) => array.indexOf(value) === index,
-          );
+          const distinctMonsterIds = monsterIds
+            .filter((value, index, array) => array.indexOf(value) === index)
+            .filter((m) => m != null);
           for (const monsterId of distinctMonsterIds) {
             const monster = monsterFormModule.get(monsterId);
             if (monster == null) continue;
@@ -145,12 +150,12 @@ export class WorldModule extends CommonModule<IWorld> {
           id: chunkKey.replace('_', ' '),
           features: undefined,
           title_localised: language[chunk.title],
-          features_localised: chunk.features
+          features_localised: (chunk.features ?? [])
             .filter((feat) => feat != null)
             .map((feat) => ({
               ...feat,
-              title_localised: language[feat.title],
-              icon_url: feat.icon?.path,
+              title_localised: language[feat.title ?? ''],
+              icon_url: feat.icon?.path ?? '',
             })),
           monster_in_habitat: monster_in_habitat,
         };
@@ -163,7 +168,8 @@ export class WorldModule extends CommonModule<IWorld> {
         title_localised: language[detail.title],
         chunk_meta_data: {},
         chunk_meta_data_localised: chunk_meta_data_localised,
-        default_chunk_metadata_title_localised: language[detail.default_chunk_metadata.title],
+        default_chunk_metadata_title_localised:
+          language[detail.default_chunk_metadata?.title ?? ''],
         default_chunk_metadata: undefined,
       };
 
@@ -188,7 +194,7 @@ export class WorldModule extends CommonModule<IWorld> {
     }
   };
 
-  generateImages = async (overwrite: boolean, modules: Array<CommonModule<unknown>>) => {
+  generateImages = async (overwrite: boolean, modules: Array<CommonModule<unknown, unknown>>) => {
     for (const mapKey of Object.keys(this._itemDetailMap)) {
       const detailEnhanced: IWorldEnhanced = this._itemDetailMap[mapKey];
       await copyImageToGeneratedFolder(overwrite, detailEnhanced.map_texture);
@@ -216,7 +222,7 @@ export class WorldModule extends CommonModule<IWorld> {
     // }
   };
 
-  writePages = async (langCode: string, modules: Array<CommonModule<unknown>>) => {
+  writePages = async (langCode: string, modules: Array<CommonModule<unknown, unknown>>) => {
     const mainBreadcrumb = breadcrumb.world(langCode);
     const relativePath = `${langCode}${routes.map}/index.html`;
 
