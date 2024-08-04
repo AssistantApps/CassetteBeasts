@@ -1,10 +1,10 @@
 import type { IExternalResource } from 'contracts/externalResource';
+import { getExternalResource } from 'contracts/mapper/externalResourceMapper';
 import type { IStatusEffect } from 'contracts/statusEffect';
 import type { ISubAnimationResource } from 'contracts/subAnimationResource';
 import type { ISubResource } from 'contracts/subResource';
 import { tryParseInt } from 'helpers/mathHelper';
 import { getCleanedString, getStringArray, stringToBool } from 'helpers/stringHelper';
-import { getExternalResource } from 'mapper/externalResourceMapper';
 
 export const statusEffectMapFromDetailList =
   (id: string) =>

@@ -3,16 +3,29 @@
   "version": "1.2.2",
   "description": "Website generated from data & images extracted from the Cassette Beasts",
   "scripts": {
-    "start": "dotenv -- tsx src/main.ts",
-    "build": "dotenv -- tsx src/build.ts",
-    "service-worker": "npx workbox-cli generateSW ./workbox-config.js"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "data:dev": "dotenv -- tsx --tsconfig ./tsconfig.data.json src/main.ts",
+    "data:build": "dotenv -- tsx --tsconfig ./tsconfig.data.json src/build.ts",
+    "data:service-worker": "npx workbox-cli generateSW ./workbox-config.js",
+    "astro": "astro"
   },
   "author": "Kurt Lourens",
   "license": "GPL-3.0-only",
   "dependencies": {
+    "@astrojs/check": "^0.8.3",
+    "@astrojs/sitemap": "^3.1.6",
+    "@astrojs/solid-js": "^4.4.0",
+    "astro": "^4.12.2",
+    "solid-js": "^1.8.19"
+  },
+  "devDependencies": {
     "@assistantapps/assistantapps.api.client": "^0.0.26",
     "@resvg/resvg-js": "^2.6.2",
     "@types/node": "^20.14.9",
+    "@types/prompts": "^2.4.9",
     "alive-server": "^1.3.0",
     "dotenv-cli": "^7.4.2",
     "favicons": "^7.2.0",
@@ -24,6 +37,8 @@
     "sass": "^1.77.6",
     "sharp": "^0.33.4",
     "tsx": "^4.15.8",
-    "typedi": "^0.10.0"
+    "typedi": "^0.10.0",
+    "typescript": "^5.5.3",
+    "vite": "^5.3.4"
   }
 }

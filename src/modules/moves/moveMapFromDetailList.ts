@@ -1,10 +1,10 @@
 import type { IExternalResource } from 'contracts/externalResource';
+import { getExternalResources } from 'contracts/mapper/externalResourceMapper';
 import type { IMove } from 'contracts/move';
 import type { ISubAnimationResource } from 'contracts/subAnimationResource';
 import type { ISubResource } from 'contracts/subResource';
 import { tryParseInt } from 'helpers/mathHelper';
 import { getCleanedString, getStringArray, stringToBool } from 'helpers/stringHelper';
-import { getExternalResources } from 'mapper/externalResourceMapper';
 
 export const moveMapFromDetailList =
   (id: string) =>

@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 
-import { getExternalResourcesImagePath } from 'mapper/externalResourceMapper';
+import { getExternalResourcesImagePath } from 'contracts/mapper/externalResourceMapper';
 import { getConfig } from 'services/internal/configService';
 
 export const copyWavFile = (sfxPath: string, outputPath: string) => {

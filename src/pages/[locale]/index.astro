@@ -1,0 +1,35 @@
+---
+import HomeContent from '../../components/pages/Home.astro';
+
+import languageJson from '../../assets/json/language.json';
+
+import { astroPaths } from 'constants/astro';
+import { IntermediateFile } from 'constants/intermediateFile';
+import type { IHomePageCard } from 'contracts/homePageCard';
+import { readDataFromAssets } from 'helpers/fileHelper';
+import { availableLanguages, defaultLocale } from '../../constants/localisation';
+import type { ILocalisation } from '../../contracts/localisation';
+
+export async function getStaticPaths() {
+  const misc = await readDataFromAssets<Array<IHomePageCard>>({
+    pathFolders: [...astroPaths.intermediatePath],
+    destFileName: IntermediateFile.misc,
+  });
+  const paths: any = [];
+  for (const locale of availableLanguages) {
+    const path = {
+      params: { locale: locale },
+      props: { cards: misc },
+    };
+    paths.push(path as never);
+  }
+  return paths;
+}
+
+const { locale } = Astro.params;
+const cards = (Astro.props as any).cards as Array<IHomePageCard>;
+const translationLookup = (languageJson as Record<string, ILocalisation>)[locale ?? defaultLocale]
+  .messages;
+---
+
+<HomeContent locale={locale} cards={cards} translationLookup={translationLookup} />

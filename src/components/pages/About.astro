@@ -1,0 +1,123 @@
+---
+import Layout from 'components/layouts/Layout.astro';
+
+import { UIKeys } from 'constants/localisation';
+import { site } from 'constants/site';
+import { encodeEmail } from 'helpers/stringHelper';
+import { translator } from 'helpers/translateHelper';
+import { urlRef } from 'helpers/urlHelper';
+
+interface Props {
+  locale: string;
+  translationLookup: Record<string, string>;
+}
+
+const { locale, translationLookup } = Astro.props;
+const { translate } = translator(translationLookup);
+const title = translate('about');
+---
+
+<Layout locale={locale} documentTitle={title} translationLookup={translationLookup}>
+  <section id="about-grid" class="mb-1">
+    <h1 class="Neu5Land ta-center">{title}</h1>
+
+    <article class="mb-1">
+      <div class="grid about">
+        <div class="content">
+          This website is a "quick" passion project for <a
+            href={urlRef(site.humans.kurt.website)}
+            title={site.humans.kurt.name}>me ({site.humans.kurt.additionalName})</a
+          >. It was born out of a desire to keep enjoying the game even though i was nearing the end
+          of <a
+            href={urlRef('https://www.cassettebeasts.com')}
+            title={translate(UIKeys.cassetteBeasts) + ' website'}
+            rel="noopener noreferrer"
+            target="_blank">{translate(UIKeys.cassetteBeasts)}</a
+          >, almost completing all the missions and the bestiary.
+
+          <br /><br />
+
+          I have a range of apps that I make available under the <a
+            href={urlRef(site.assistantApps.website)}
+            title={site.assistantApps.name}>{site.assistantApps.name}</a
+          > name. This small website will be considered as one of the apps, although I suspect it will
+          always be smaller than the other games. But I am happy for that assumption to be proven wrong!
+          😂
+
+          <br /><br />
+
+          <span class="hidden-in-mobile">On the right hand side</span><span
+            class="hidden-in-desktop">Below</span
+          >
+          are the members of <a
+            href={urlRef(site.assistantApps.website)}
+            title={site.assistantApps.name}>{site.assistantApps.name}</a
+          >. Their roles are different per app, but I could not have gotten to where I am without
+          them 💖.
+
+          <br /><br />
+
+          Get in contact with us in the following ways:
+          <ul>
+            <li>
+              <a href={urlRef(site.assistantApps.discord)} title={site.assistantApps.name}
+                >Our Discord server</a
+              >
+            </li>
+            <li>
+              Email us at <a
+                href="mailto:go-away-bot-scraper@fake.com"
+                title="click to reveal email"
+                data-email={encodeEmail(site.assistantApps.email)}
+                onclick="revealEmail(this, event)">"Click to reveal"</a
+              >
+            </li>
+          </ul>
+          <i
+            >We try to be as responsive as possible, but your message might fall through the cracks.</i
+          >
+        </div>
+        <assistant-apps-team-list>
+          <progress slot="loading" style="margin-top: 3em;"></progress>
+          <p slot="error" class="ta-center" style="margin-top: 40%;">
+            Something went wrong<br />loading team members
+          </p>
+        </assistant-apps-team-list>
+      </div>
+    </article>
+  </section>
+
+  <section class="mb-1">
+    <h1 class="Neu5Land mt-1 ta-center">{translate('donation')}</h1>
+
+    <assistant-apps-donation-option-list>
+      <progress slot="loading" style="margin-top: 2em;"></progress>
+      <h4 slot="error" class="ta-center" style="margin-top: 2em;">
+        Something went wrong<br />loading donation options
+      </h4>
+    </assistant-apps-donation-option-list>
+  </section>
+
+  <section class="mb-1">
+    <h1 class="Neu5Land mt-1 ta-center">{translate('patrons')}</h1>
+
+    <div class="patreon-container">
+      <assistant-apps-patreon-list>
+        <progress slot="loading" style="margin-top: 2em;"></progress>
+        <h4 slot="error" class="ta-center" style="margin-top: 2em;">
+          Something went wrong<br />loading Patreon supporters
+        </h4>
+      </assistant-apps-patreon-list>
+    </div>
+  </section>
+</Layout>
+
+<style lang="scss">
+  .patreon-container {
+    min-height: 10vh;
+
+    h4 {
+      font-weight: 400;
+    }
+  }
+</style>

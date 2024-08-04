@@ -1,9 +1,9 @@
 import path from 'path';
 
-import { paths } from 'constant/paths';
+import { paths } from 'constants/paths';
+import { getExternalResourcesImagePath } from 'contracts/mapper/externalResourceMapper';
 import { getBase64FromFile } from 'helpers/fileHelper';
 import { getDescripLines } from 'helpers/stringHelper';
-import { getExternalResourcesImagePath } from 'mapper/externalResourceMapper';
 
 interface IMetaImagesProps {
   iconBase64: string;

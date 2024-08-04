@@ -1,0 +1,70 @@
+---
+import DocumentHead from 'components/meta/DocumentHead.astro';
+import Header from 'components/Header.astro';
+import Footer from 'components/Footer.astro';
+
+import versionJson from '../../assets/json/version.json';
+import languageJson from '../../assets/json/language.json';
+
+import '../../scss/main.scss';
+
+import { site } from 'constants/site';
+import { excludeLangCodes } from 'constants/localisation';
+
+interface Props {
+  locale: string;
+  documentTitle: string;
+  metaImageUrl?: string;
+  schemaExtra?: string;
+  translationLookup: Record<string, string>;
+}
+
+const { locale, documentTitle, metaImageUrl, schemaExtra, translationLookup } = Astro.props;
+
+const allLangCodes = Object.keys(languageJson).filter((lang) => !excludeLangCodes.includes(lang));
+---
+
+<html lang="en" transition:animate="none">
+  <DocumentHead
+    locale={locale}
+    allLangCodes={allLangCodes}
+    documentTitle={documentTitle}
+    metaImageUrl={metaImageUrl}
+    schemaExtra={schemaExtra}
+    version={versionJson.app_version}
+  />
+
+  <body class="overflow-x-hidden">
+    <Header locale={locale} allLangCodes={allLangCodes} translationLookup={translationLookup} />
+
+    <main class="container page-container" transition:animate="fade">
+      <div class="full-page-app-notice" transition:persist>
+        <assistant-apps-app-notice-list appguid={site.assistantApps.appGuid} langcode={locale}
+        ></assistant-apps-app-notice-list>
+      </div>
+
+      <slot />
+    </main>
+
+    <Footer
+      transition:persist
+      translationLookup={translationLookup}
+      version={versionJson.app_version}
+    />
+
+    <script is:inline src={`/assets/js/main.js?v=${versionJson.app_version}`}></script>
+    <script is:inline defer src="https://webcomp.assistantapps.com/build/bundle.js"></script>
+
+    <script is:inline>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js');
+        });
+      }
+      document.addEventListener('astro:page-load', () => {
+        console.log('hi');
+        onPageLoad();
+      });
+    </script>
+  </body>
+</html>

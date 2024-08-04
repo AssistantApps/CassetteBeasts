@@ -1,11 +1,11 @@
 import type { ICharacter } from 'contracts/character';
 import type { IExternalResource } from 'contracts/externalResource';
+import { getExternalResource, getExternalResources } from 'contracts/mapper/externalResourceMapper';
+import { getSubResources } from 'contracts/mapper/subResourceMapper';
 import type { ISubAnimationResource } from 'contracts/subAnimationResource';
 import type { ISubResource } from 'contracts/subResource';
 import { tryParseInt } from 'helpers/mathHelper';
 import { getCleanedString, stringToBool } from 'helpers/stringHelper';
-import { getExternalResource, getExternalResources } from 'mapper/externalResourceMapper';
-import { getSubResources } from 'mapper/subResourceMapper';
 
 export const characterMapFromDetailList = (props: {
   resourceMap: Record<string, string>;

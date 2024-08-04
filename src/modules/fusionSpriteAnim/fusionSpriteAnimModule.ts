@@ -1,7 +1,7 @@
 import fs from 'fs';
 
-import { IntermediateFile } from 'constant/intermediateFile';
-import { ModuleType } from 'constant/module';
+import { IntermediateFile } from 'constants/intermediateFile';
+import { ModuleType } from 'constants/module';
 import type { ISpriteAnim } from 'contracts/spriteAnim';
 import { FolderPathHelper } from 'helpers/folderPathHelper';
 import { pad } from 'helpers/stringHelper';

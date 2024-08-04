@@ -1,0 +1,110 @@
+---
+import { site } from 'constants/site';
+import { statsCoord } from 'helpers/mathHelper';
+
+interface Props {
+  max_hp: number;
+  ranged_attack: number;
+  ranged_defense: number;
+  speed: number;
+  melee_defense: number;
+  melee_attack: number;
+  translationLookup: Record<string, string>;
+}
+
+const {
+  max_hp,
+  ranged_attack,
+  ranged_defense,
+  speed,
+  melee_defense,
+  melee_attack,
+  translationLookup,
+} = Astro.props;
+---
+
+<svg viewBox="0 0 250 250" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="0" stdDeviation="0.2" flood-opacity="0.5"></feDropShadow>
+    </filter>
+  </defs>
+  <g color="black" transform="translate(25, 25)">
+    <polygon
+      points="100,100 14,50 100,0"
+      fill={site.theme.statHexBackground}
+      stroke={site.theme.gameCardBackground}></polygon>
+    <polygon
+      points="100,100 14,50 14,150"
+      fill={site.theme.statHexBackground}
+      stroke={site.theme.gameCardBackground}></polygon>
+    <polygon
+      points="100,100 14,150 100,200"
+      fill={site.theme.statHexBackground}
+      stroke={site.theme.gameCardBackground}></polygon>
+    <polygon
+      points="100,100 100,200 186,150"
+      fill={site.theme.statHexBackground}
+      stroke={site.theme.gameCardBackground}></polygon>
+    <polygon
+      points="100,100 186,50 186,150"
+      fill={site.theme.statHexBackground}
+      stroke={site.theme.gameCardBackground}></polygon>
+    <polygon
+      points="100,100 186,50 100,0"
+      fill={site.theme.statHexBackground}
+      stroke={site.theme.gameCardBackground}></polygon>
+
+    <g>
+      <animate attributeName="opacity" dur="500ms" from="0" to="1"></animate>
+      <text y="-12" text-anchor="middle" font-size="10px">
+        <tspan x="100">{translationLookup['SHORT_NAME_max_hp']}</tspan>
+        <tspan x="100" dy="10px">{max_hp}</tspan>
+      </text>
+      <text y="45" text-anchor="middle" font-size="10px">
+        <tspan x="0">{translationLookup['SHORT_NAME_ranged_attack']}</tspan>
+        <tspan x="0" dy="10px">{ranged_attack}</tspan>
+      </text>
+      <text y="160" text-anchor="middle" font-size="10px">
+        <tspan x="0">{translationLookup['SHORT_NAME_ranged_defense']}</tspan>
+        <tspan x="0" dy="10px">{ranged_defense}</tspan>
+      </text>
+      <text y="210" text-anchor="middle" font-size="10px">
+        <tspan x="100">{translationLookup['SHORT_NAME_speed']}</tspan>
+        <tspan x="100" dy="10px">{speed}</tspan>
+      </text>
+      <text y="160" text-anchor="middle" font-size="10px">
+        <tspan x="200">{translationLookup['SHORT_NAME_melee_defense']}</tspan>
+        <tspan x="200" dy="10px">{melee_defense}</tspan>
+      </text>
+      <text y="45" text-anchor="middle" font-size="10px">
+        <tspan x="200">{translationLookup['SHORT_NAME_melee_attack']}</tspan>
+        <tspan x="200" dy="10px">{melee_attack}</tspan>
+      </text>
+    </g>
+
+    <polygon
+      points={`${statsCoord(max_hp, 'max_hp')} 
+        ${statsCoord(ranged_attack, 'ranged_attack')} 
+        ${statsCoord(ranged_defense, 'ranged_defense')} 
+        ${statsCoord(speed, 'speed')} 
+        ${statsCoord(melee_defense, 'melee_defense')}
+        ${statsCoord(melee_attack, 'melee_attack')}`}
+      fill={site.theme.brandTertiary}
+      stroke={site.theme.brandPrimary}
+      stroke-width="2px"
+      opacity="0.75"
+    >
+      <animate
+        attributeName="points"
+        dur="1s"
+        from="100,100 100,100 100,100 100,100 100,100 100,100"
+        to={`${statsCoord(max_hp, 'max_hp')} 
+        ${statsCoord(ranged_attack, 'ranged_attack')} 
+        ${statsCoord(ranged_defense, 'ranged_defense')} 
+        ${statsCoord(speed, 'speed')} 
+        ${statsCoord(melee_defense, 'melee_defense')}
+        ${statsCoord(melee_attack, 'melee_attack')}`}></animate>
+    </polygon>
+  </g>
+</svg>

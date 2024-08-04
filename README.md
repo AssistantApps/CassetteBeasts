@@ -59,9 +59,16 @@ This was quite a challenge, the images for the monsters are in a "sprite sheet" 
 
 <br />
 
-## Why [HandlebarJS][handlebarJS]?
+## Why ~~[HandlebarJS][handlebarJS]~~ [Astro][astro]?
 
-This was purely a personal choice, I am a a bit tired of using client-side javascript frameworks and I wanted to mess around with more "pure" html and javascript, however I really did not want to craft each an every page manually. So [HandlebarJS][handlebarJS] was perfectly suited for letting me write HTML while allowing for automation. I am not as big of a fan of writing "pure" css, so I used scss to generate the css and I made use of [Pico][picoCssWebsite] for the base styling of the website.
+This was purely a personal choice, I am a a bit tired of using client-side javascript frameworks and I wanted to mess around with more "pure" html and javascript, however I really did not want to craft each an every page manually. So [HandlebarJS][handlebarJS] was perfectly suited for letting me write HTML while allowing for automation. Soon after launching the site I started a new project using [Astro][astro] and I was so impressed that I decided to convert this whole project to [Astro][astro] 😅. [Astro][astro] provides a much better developer experience, although a lot of the control is taken away from me.
+
+### Other tech choices
+
+- SolidJS
+  - I like SolidJS because of how similar it is to React and it improves on a lot of aspects I dislike about React. [Astro][astro] allows me to have parts of my site use whatever JS framework I want.
+- SCSS
+  - I am not as big of a fan of writing "pure" css, so I used scss to generate the css and I made use of [Pico][picoCssWebsite] for the base styling of the website.
 
 <br />
 <br />
@@ -79,6 +86,7 @@ By using the software and services provided, you agree to our [Terms and conditi
 [cassetteBeastCodeOfConduct]: https://github.com/AssistantApps/CassetteBeasts?tab=coc-ov-file#readme
 [cassetteBeastWiki]: https://wiki.cassettebeasts.com?ref=AssistantAppsCBGithub
 [handlebarJS]: https://handlebarsjs.com?ref=AssistantAppsCBGithub
+[astro]: https://astro.build?ref=AssistantAppsCBGithub
 [webpmux]: https://developers.google.com/speed/webp/docs/webpmux?ref=AssistantAppsCBGithub
 [nmpjsGifEncoder2]: https://www.npmjs.com/package/gif-encoder?ref=AssistantAppsCBGithub
 [npmjsSharp]: https://www.npmjs.com/package/sharp?ref=AssistantAppsCBGithub

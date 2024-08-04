@@ -1,10 +1,10 @@
 import type { IElementReaction } from 'contracts/elementReaction';
 import type { IExternalResource } from 'contracts/externalResource';
+import { getExternalResource, getExternalResources } from 'contracts/mapper/externalResourceMapper';
 import type { ISubAnimationResource } from 'contracts/subAnimationResource';
 import type { ISubResource } from 'contracts/subResource';
 import { tryParseInt } from 'helpers/mathHelper';
 import { getCleanedString, getStringArray } from 'helpers/stringHelper';
-import { getExternalResource, getExternalResources } from 'mapper/externalResourceMapper';
 
 export const elementReactionMapFromDetailList =
   (id: string) =>

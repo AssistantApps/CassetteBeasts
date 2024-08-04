@@ -1,0 +1,220 @@
+---
+import Layout from 'components/layouts/Layout.astro';
+import Breadcrumb from 'components/Breadcrumb.astro';
+
+import languageJson from 'assets/json/language.json';
+
+import { readDataFromAssets } from 'helpers/fileHelper';
+import { IntermediateFile } from 'constants/intermediateFile';
+import { astroPaths } from 'constants/astro';
+import { routes } from 'constants/route';
+import { breadcrumb } from 'constants/breadcrumb';
+import { availableLanguages, UIKeys } from 'constants/localisation';
+import type { ILocalisation } from 'contracts/localisation';
+import type { IMoveEnhanced } from 'contracts/move';
+import { translator } from 'helpers/translateHelper';
+import { imgUrl } from 'helpers/urlHelper';
+
+export async function getStaticPaths() {
+  const paths: any = [];
+  for (const locale of availableLanguages) {
+    const itemsMap = await readDataFromAssets<Record<string, IMoveEnhanced>>({
+      pathFolders: [...astroPaths.intermediatePath, locale],
+      destFileName: IntermediateFile.moves,
+    });
+    for (const item of Object.values(itemsMap)) {
+      const path = {
+        params: { locale: locale, id: item.id },
+        props: { item },
+      };
+      paths.push(path as never);
+    }
+  }
+  return paths;
+}
+
+const { locale } = Astro.params;
+const data = (Astro.props as any).item as IMoveEnhanced;
+const translationLookup = (languageJson as Record<string, ILocalisation>)[locale].messages;
+const { translate } = translator(translationLookup);
+---
+
+<Layout
+  locale={locale}
+  documentTitle={data.name_localised}
+  metaImageUrl={data.meta_image_url}
+  translationLookup={translationLookup}
+>
+  <Breadcrumb
+    locale={locale}
+    translationLookup={translationLookup}
+    breadcrumbs={[breadcrumb.move(locale), breadcrumb.moveDetail(locale, data.name_localised)]}
+  />
+
+  <div class="grid move-detail-grid mb-3">
+    <div class="meta">
+      <h1>{translate(UIKeys.viewStickers)} - {data.name_localised}</h1>
+    </div>
+
+    <article class="move-detail-card item-detail-card">
+      <div class="move-detail-card-heading item-detail-card-heading primary">
+        {
+          data.elemental_types_elements.map((element) => (
+            <img
+              src={imgUrl(element.icon?.path)}
+              class="type"
+              loading="lazy"
+              alt={`image of ${element.name}`}
+              draggable="false"
+            />
+          ))
+        }
+
+        {
+          data.elemental_types_elements.length == 0 && (
+            <img
+              src="/assets/img/typeless.png"
+              class="type"
+              loading="lazy"
+              title="Typeless"
+              alt="image of {this.name}"
+              draggable="false"
+            />
+          )
+        }
+
+        <h2 class="Neu5Land animate__animated animate__fadeIn">{data.name_localised}</h2>
+
+        <h4 class="Neu5Land animate__animated animate__fadeIn">{data.category_name_localised}</h4>
+      </div>
+      <div class="move-detail-card-body item-detail-card-body">
+        <div class="sub-heading">
+          <p>{data.description_localised}</p>
+          <div class="spacer"></div>
+          <div class="ap-block">
+            {
+              Array.from(Array(data.cost)).map((_) => (
+                <img
+                  src="/assets/img/meta/ap.png"
+                  class="ap"
+                  title={translate(UIKeys.ap)}
+                  alt="image of an action point"
+                  loading="lazy"
+                  draggable="false"
+                />
+              ))
+            }
+          </div>
+        </div>
+
+        <section class="additional-section animate__animated animate__fadeIn">
+          <h3 class="Neu5Land">{translate(UIKeys.stats)}</h3>
+          <div class="table-container">
+            <table class="additional highlight-cell animate__animated animate__fadeIn">
+              <thead>
+                <tr>
+                  <td class="ta-center">{translate(UIKeys.power)}</td>
+                  <td class="ta-center">{translate(UIKeys.accuracy)}</td>
+                  <td class="ta-center">{translate('cost')}</td>
+                  <td class="ta-center">{translate(UIKeys.priorityChance)}</td>
+                  <td class="ta-center">{translate('canBeCopied')}</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="ta-center">{data.power}</td>
+                  <td class="ta-center">
+                    {data.unavoidable ? translate('unavoidable') : `${data.accuracy}%`}
+                  </td>
+                  <td class="ta-center">
+                    {data.is_passive_only ? translate(UIKeys.passive) : data.cost}
+                  </td>
+                  <td class="ta-center">{data.priority}</td>
+                  <td class="ta-center">{data.can_be_copied}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="additional-section animate__animated animate__fadeIn">
+          <h3 class="tags">
+            <span class="Neu5Land">{translate('tags')}:</span>&nbsp;
+            {
+              data.tags.map((moveTag, index) => (
+                <small>
+                  <span>{moveTag}</span>
+                  <span class={index == data.tags.length - 1 ? 'hidden' : ''}>,&nbsp;</span>
+                </small>
+              ))
+            }
+          </h3>
+        </section>
+
+        <section class="status-card-container">
+          {
+            data.status_effects_elements.map((elem) => (
+              <a
+                href={`/${locale}${routes.statusEffect}/${elem.id}.html`}
+                class="status-group animate__animated animate__fadeIn"
+              >
+                <img
+                  src={imgUrl(elem.icon?.path)}
+                  class="status"
+                  alt={`status of ${elem.name_localised}`}
+                  loading="lazy"
+                  draggable="false"
+                />
+                <small>{elem.name_localised}</small>
+              </a>
+            ))
+          }
+        </section>
+      </div>
+    </article>
+
+    <article class="move-detail-card item-detail-card">
+      <div class="move-detail-card-heading item-detail-card-heading">
+        <h2 class="Neu5Land animate__animated animate__fadeIn">{translate(UIKeys.applySticker)}</h2>
+        <div class="spacer"></div>
+      </div>
+      <div class="move-detail-card-body item-detail-card-body">
+        <div class="table-container">
+          <table class="additional-section highlight-row animate__animated animate__fadeIn">
+            <tbody>
+              {
+                data.monsters_that_can_learn.map((mon) => (
+                  <tr class="no-padding">
+                    <td class="sprite ta-center">
+                      <a
+                        href={`/${locale}${routes.monsters}/${encodeURI(mon.resource_name)}.html`}
+                        title={mon.name_localised}
+                      >
+                        <img
+                          src={imgUrl(mon.icon_url)}
+                          class="remaster-image"
+                          alt={`image of ${mon.name_localised}`}
+                          loading="lazy"
+                          draggable="false"
+                        />
+                      </a>
+                    </td>
+                    <td class="name">
+                      <a
+                        href={`/${locale}${routes.monsters}/${encodeURI(mon.resource_name)}.html`}
+                        title={mon.name_localised}
+                      >
+                        {mon.name_localised}(
+                        <small class="beast-id">#{mon.bestiary_index_with_padding}</small>)
+                      </a>
+                    </td>
+                  </tr>
+                ))
+              }
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </article>
+  </div>
+</Layout>

@@ -36,14 +36,11 @@ function onPageLoad() {
     const resetVolume = () => {
       audios[0].volume = 1;
       audios[0].removeEventListener('ended', resetVolume, false);
-    }
+    };
     audios[0].addEventListener('ended', resetVolume, false);
     audios[0].play();
   }
 }
-
-//document.addEventListener("DOMContentLoaded", onPageLoad);
-onPageLoad();
 
 function setSetting(name, value) {
   window.assistantApps[name] = value;
@@ -55,7 +52,8 @@ function changeLanguage(newLangCode) {
   const slashIndex = pathName.indexOf('/');
   let trailingPath = pathName.substring(slashIndex);
   if (slashIndex < 0) {
-    trailingPath = '/' + trailingPath;
+    // trailingPath = '/' + trailingPath;
+    trailingPath = '';
   }
 
   window.location.href = `/${newLangCode}${trailingPath}`;

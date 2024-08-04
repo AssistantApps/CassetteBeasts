@@ -1,4 +1,4 @@
-import { site } from 'constant/site';
+import { site } from 'constants/site';
 import type { IBreadcrumb } from './breadcrumb';
 
 export interface IAlternateUrl {

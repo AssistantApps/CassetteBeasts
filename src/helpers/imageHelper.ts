@@ -3,11 +3,11 @@ import path from 'path';
 import sharp from 'sharp';
 
 import { Resvg } from '@resvg/resvg-js';
-import { fontMetas, type IFontFile } from 'constant/fonts';
-import { paths } from 'constant/paths';
+import { fontMetas, type IFontFile } from 'constants/fonts';
+import { paths } from 'constants/paths';
 import type { IBoxSelection } from 'contracts/boxSelection';
 import type { IExternalResource } from 'contracts/externalResource';
-import { getExternalResourcesImagePath } from 'mapper/externalResourceMapper';
+import { getExternalResourcesImagePath } from 'contracts/mapper/externalResourceMapper';
 import { getConfig } from 'services/internal/configService';
 import { createFoldersOfDestFilePath } from './fileHelper';
 import { retryAsync } from './retryHelper';

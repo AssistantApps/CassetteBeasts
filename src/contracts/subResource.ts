@@ -1,6 +1,6 @@
-import type { IElement } from './element';
+import type { IElementEnhanced } from './element';
 import type { IExternalResource } from './externalResource';
-import type { IMove } from './move';
+import type { IMoveEnhanced } from './move';
 
 export interface ISubResource {
   id: number;
@@ -33,8 +33,8 @@ export interface ISubResourceMonsterEnhanced extends ISubResource {
   icon_url: string;
   name_localised: string;
   bestiary_index_with_padding: string;
-  elemental_types_elements: Array<IElement>;
-  required_move_move?: IMove;
+  elemental_types_elements: Array<IElementEnhanced>;
+  required_move_move?: IMoveEnhanced;
   specialization_localised?: string;
 }
 

@@ -1,7 +1,7 @@
 import fs from 'fs';
 
-import { IntermediateFile } from 'constant/intermediateFile';
-import { ModuleType } from 'constant/module';
+import { IntermediateFile } from 'constants/intermediateFile';
+import { ModuleType } from 'constants/module';
 import type { ILocalisation } from 'contracts/localisation';
 import type {
   IMonsterSpawn,
@@ -12,6 +12,7 @@ import { FolderPathHelper } from 'helpers/folderPathHelper';
 import { pad } from 'helpers/stringHelper';
 import { readItemDetail } from 'modules/baseModule';
 import { CommonModule } from 'modules/commonModule';
+import type { LocalisationModule } from 'modules/localisation/localisationModule';
 import { monsterSpawnMapFromDetailList } from './monsterSpawnFormMapDetailList';
 
 export class MonsterSpawnModule extends CommonModule<IMonsterSpawn, IMonsterSpawnEnhanced> {
@@ -46,8 +47,10 @@ export class MonsterSpawnModule extends CommonModule<IMonsterSpawn, IMonsterSpaw
   };
 
   enrichData = async (langCode: string, modules: Array<CommonModule<unknown, unknown>>) => {
-    const localeModule = this.getModuleOfType<ILocalisation>(modules, ModuleType.Localisation);
-    const language = localeModule.get(langCode).messages;
+    const localeModule = this.getModuleOfType<ILocalisation>(
+      modules,
+      ModuleType.Localisation,
+    ) as LocalisationModule;
 
     for (const detail of this._baseDetails) {
       const species_enhanced: Array<IMonsterSpawnDetailsEnhanced> = [];
@@ -119,7 +122,7 @@ export class MonsterSpawnModule extends CommonModule<IMonsterSpawn, IMonsterSpaw
       }
       const detailEnhanced: IMonsterSpawnEnhanced = {
         ...detail,
-        habitat_name_localised: language[detail.habitat_name],
+        habitat_name_localised: localeModule.translate(langCode, detail.habitat_name),
         species: undefined,
         species_enhanced,
         habitat_coords,

@@ -1,10 +1,10 @@
 import type { IElement } from 'contracts/element';
 import type { IExternalResource } from 'contracts/externalResource';
+import { getExternalResource } from 'contracts/mapper/externalResourceMapper';
 import type { ISubAnimationResource } from 'contracts/subAnimationResource';
 import type { ISubResource } from 'contracts/subResource';
 import { tryParseInt } from 'helpers/mathHelper';
 import { getCleanedString, stringToBool } from 'helpers/stringHelper';
-import { getExternalResource } from 'mapper/externalResourceMapper';
 
 export const elementMapFromDetailList = (props: {
   resourceMap: Record<string, string>;

@@ -2,8 +2,8 @@ import { type FaviconOptions, favicons } from 'favicons';
 import fs from 'fs/promises';
 import path from 'path';
 
-import { paths } from 'constant/paths';
-import { site } from 'constant/site';
+import { paths } from 'constants/paths';
+import { site } from 'constants/site';
 import { getBotPath, getConfig } from 'services/internal/configService';
 
 export const generateFavicons = async () => {

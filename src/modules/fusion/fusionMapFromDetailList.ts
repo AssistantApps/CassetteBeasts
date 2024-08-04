@@ -1,9 +1,9 @@
 import type { IExternalResource } from 'contracts/externalResource';
 import type { IFusion } from 'contracts/fusion';
+import { getExternalResource } from 'contracts/mapper/externalResourceMapper';
 import type { INodeResource } from 'contracts/nodeResource';
 import type { ISubAnimationResource } from 'contracts/subAnimationResource';
 import type { ISubResource } from 'contracts/subResource';
-import { getExternalResource } from 'mapper/externalResourceMapper';
 
 export const fusionMapFromDetailList =
   (id: string) =>

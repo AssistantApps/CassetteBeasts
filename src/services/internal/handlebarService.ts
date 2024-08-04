@@ -3,9 +3,9 @@ import Handlebars from 'handlebars';
 import path from 'path';
 import { Container, Service } from 'typedi';
 
-import { paths } from 'constant/paths';
+import { paths } from 'constants/paths';
 import type { PageData } from 'contracts/pageData';
-import { createFoldersOfDestFilePath, getIndexOfFolderSlash } from 'helpers/fileHelper';
+import { createFoldersOfDestFilePath } from 'helpers/fileHelper';
 
 interface IProps<T> {
   data: PageData<T>;
@@ -15,7 +15,6 @@ interface IProps<T> {
 
 @Service()
 export class HandlebarService {
-  private _generatedFiles: Record<string, string> = {};
   private _registeredPartials: Array<string> = [];
   private _registeredHelpers: Array<string> = [];
   private _allowedTemplatesToCompile: Array<string> = [];
@@ -49,7 +48,6 @@ export class HandlebarService {
 
     registerPartialsForFolder('layouts');
     registerPartialsForFolder('partials');
-    registerPartialsForFolder('pages');
   };
 
   unregisterPartialsAndHelpers = () => {
@@ -92,7 +90,6 @@ export class HandlebarService {
       const compiledTemplate = this.getCompiledTemplate(props.templateFile, props.data);
 
       for (const actualOutputFile of actualOutputFiles) {
-        this._generatedFiles[actualOutputFile] = actualOutputFile;
         const destFullFilePath = path.join(paths().destinationFolder, actualOutputFile);
         createFoldersOfDestFilePath(destFullFilePath);
         fs.writeFileSync(destFullFilePath, compiledTemplate, 'utf8');
@@ -104,36 +101,6 @@ export class HandlebarService {
   getAllowedTemplatesToCompile = () => this._allowedTemplatesToCompile;
   setAllowedTemplatesToCompile = (allowedFiles: Array<string>) =>
     (this._allowedTemplatesToCompile = allowedFiles);
-
-  clearGitIgnore = () => {
-    this._generatedFiles = {};
-  };
-  generateGitIgnore = () => {
-    try {
-      const destFullFilePath = path.join(paths().destinationFolder, '.gitignore');
-      createFoldersOfDestFilePath(destFullFilePath);
-      const gitIgnoreFiles: Record<string, string> = {};
-      for (const objKey of Object.keys(this._generatedFiles)) {
-        if (objKey.includes('scss')) continue;
-        const indexOfSlash = getIndexOfFolderSlash(objKey);
-        if (indexOfSlash < 1) {
-          gitIgnoreFiles[objKey] = objKey;
-        } else {
-          const folder = objKey.substring(0, indexOfSlash);
-          gitIgnoreFiles[folder] = folder;
-        }
-      }
-      fs.writeFileSync(
-        destFullFilePath,
-        Object.keys(gitIgnoreFiles)
-          .map((f) => `/${f}`.replace('//', '/'))
-          .join('\n'),
-        'utf8',
-      );
-    } catch (e) {
-      console.error(`Failed to generate .gitignore`, e);
-    }
-  };
 }
 
 export const forEachFileInDirRecursive = (

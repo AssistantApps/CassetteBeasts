@@ -7,7 +7,7 @@ export interface IElement {
   //   palette: string;
   //   vfx_palette: string;
   sparkle: boolean;
-  icon: IExternalResource;
+  icon?: IExternalResource;
   loot_table: string;
 }
 

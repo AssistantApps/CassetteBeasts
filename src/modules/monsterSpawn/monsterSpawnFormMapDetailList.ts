@@ -1,4 +1,5 @@
 import type { IExternalResource } from 'contracts/externalResource';
+import { getExternalResource, getExternalResources } from 'contracts/mapper/externalResourceMapper';
 import type { IMonsterFormEnhanced } from 'contracts/monsterForm';
 import type { IMonsterSpawn, IMonsterSpawnDetails } from 'contracts/monsterSpawn';
 import type { IMove, IMoveEnhanced } from 'contracts/move';
@@ -6,7 +7,6 @@ import type { ISubAnimationResource } from 'contracts/subAnimationResource';
 import type { ISubResource, ISubResourceMonsterEnhanced } from 'contracts/subResource';
 import { tryParseFloat, tryParseInt } from 'helpers/mathHelper';
 import { getCleanedString, resAndTresTrim, stringToBool } from 'helpers/stringHelper';
-import { getExternalResource, getExternalResources } from 'mapper/externalResourceMapper';
 import type { CommonModule } from 'modules/commonModule';
 
 export const monsterSpawnMapFromDetailList =

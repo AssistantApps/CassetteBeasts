@@ -1,7 +1,7 @@
-import type { IElement } from './element';
+import type { IElementEnhanced } from './element';
 import type { IExternalResource } from './externalResource';
 import type { IMonsterFormSimplified } from './monsterForm';
-import type { IStatusEffect } from './statusEffect';
+import type { IStatusEffectEnhanced } from './statusEffect';
 
 export interface IMove {
   id: string;
@@ -55,8 +55,9 @@ export interface IMoveEnhanced extends IMove {
   description_localised: string;
   title_override_localised: string;
   monsters_that_can_learn: Array<IMonsterFormSimplified>;
-  elemental_types_elements: Array<IElement>;
-  status_effects_elements: Array<IStatusEffect>;
+  elemental_types_elements: Array<IElementEnhanced>;
+  status_effects_elements: Array<IStatusEffectEnhanced>;
+  status_effects_elements_max_3: Array<IStatusEffectEnhanced>;
   meta_image_url: string;
 }
 
@@ -66,5 +67,5 @@ export interface IMoveSimplified {
   category_name_localised: string;
   power: number;
   accuracy: number;
-  elemental_types_elements: Array<IElement>;
+  elemental_types_elements: Array<IElementEnhanced>;
 }

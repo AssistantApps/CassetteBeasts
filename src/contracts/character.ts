@@ -15,7 +15,7 @@ export interface ICharacter {
   //   elemental_types: string;
   exp_yield: number;
   require_dlc: boolean;
-  battle_sprite: IExternalResource;
+  battle_sprite?: IExternalResource;
   character_kind: number;
   force_unrecordable: boolean;
   human_colors: string;
@@ -37,9 +37,9 @@ export interface ICharacter {
   exp_gradient: number;
   exp_base_level: number;
   partner_id: string;
-  partner_signature_species: IExternalResource;
+  partner_signature_species?: IExternalResource;
   partner_signature_species_type_override?: IExternalResource;
-  sfx: IExternalResource;
+  sfx?: IExternalResource;
   // 'human_part_names/body': string;
   // 'human_part_names/arms': string;
   // 'human_part_names/hair': string;

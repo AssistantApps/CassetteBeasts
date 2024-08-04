@@ -1,9 +1,9 @@
 import fs from 'fs';
 import path from 'path';
 
-import { IntermediateFile } from 'constant/intermediateFile';
-import { ModuleType } from 'constant/module';
-import { paths } from 'constant/paths';
+import { IntermediateFile } from 'constants/intermediateFile';
+import { ModuleType } from 'constants/module';
+import { paths } from 'constants/paths';
 import type { IVersion } from 'contracts/version';
 import { pad } from 'helpers/stringHelper';
 import { readItemDetail } from 'modules/baseModule';
@@ -17,6 +17,7 @@ export class VersionModule extends CommonModule<IVersion, IVersion> {
     super({
       type: ModuleType.Version,
       intermediateFile: IntermediateFile.version,
+      loadOnce: true,
       dependsOn: [],
     });
   }

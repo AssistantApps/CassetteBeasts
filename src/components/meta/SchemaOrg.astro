@@ -1,0 +1,59 @@
+---
+import { site } from '../../constants/site';
+import { isoDate } from '../../helpers/dateHelper';
+
+interface Props {
+  documentTitle?: string;
+  description?: string;
+  schemaExtra?: string;
+  langCode?: string;
+  version?: string;
+}
+
+const { documentTitle, description, schemaExtra, version } = Astro.props;
+const date = isoDate();
+
+const htmlString = `
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org/",
+    "@type": "SoftwareApplication",
+    "name": "${documentTitle != null ? `${documentTitle} - ` : ''}${site.meta.appName}",
+    "url": "${site.rootUrl}",
+    "about": "${description}",
+    "description": "${description}",
+    "image": "${site.images.favicon.x192}",
+    "applicationCategory": "Application",
+    "operatingSystem": "Android Lollipop, iOS, Chrome, Firefox, Opera, Internet Explorer, Edge",
+    "softwareVersion": "${version}",
+    "version": "${version}",
+    ${schemaExtra ?? ''}
+    "author": {
+      "@type": "Person",
+      "name": "${site.humans.kurt.name}",
+      "givenName": "${site.humans.kurt.name}",
+      "familyName": "${site.humans.kurt.name}",
+      "additionalName": "${site.humans.kurt.additionalName}",
+      "url": "${site.humans.kurt.website}",
+      "image": "${site.humans.kurt.image}",
+      "jobTitle": "${site.humans.kurt.jobTitle}"
+    },
+    "creator": {
+      "@type": "Person",
+      "name": "${site.humans.kurt.name}",
+      "givenName": "${site.humans.kurt.name}",
+      "familyName": "${site.humans.kurt.name}",
+      "additionalName": "${site.humans.kurt.additionalName}",
+      "url": "${site.humans.kurt.website}",
+      "image": "${site.humans.kurt.image}",
+      "jobTitle": "${site.humans.kurt.jobTitle}"
+    },
+    "inLanguage": "en",
+    "dateCreated": "${date}",
+    "dateModified": "${date}",
+    "datePublished": "${date}"
+  }
+</script>`;
+---
+
+<Fragment set:html={htmlString} />

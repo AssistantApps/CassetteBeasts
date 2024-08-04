@@ -1,0 +1,25 @@
+---
+import AboutContent from '../../components/pages/About.astro';
+
+import languageJson from '../../assets/json/language.json';
+
+import { availableLanguages, defaultLocale } from '../../constants/localisation';
+import type { ILocalisation } from '../../contracts/localisation';
+
+export async function getStaticPaths() {
+  const paths: any = [];
+  for (const locale of availableLanguages) {
+    const path = {
+      params: { locale: locale },
+    };
+    paths.push(path as never);
+  }
+  return paths;
+}
+
+const { locale } = Astro.params;
+const translationLookup = (languageJson as Record<string, ILocalisation>)[locale ?? defaultLocale]
+  .messages;
+---
+
+<AboutContent locale={locale} translationLookup={translationLookup} />

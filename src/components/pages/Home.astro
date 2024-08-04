@@ -1,0 +1,71 @@
+---
+import Layout from 'components/layouts/Layout.astro';
+
+import type { IHomePageCard } from 'contracts/homePageCard';
+import { translator } from 'helpers/translateHelper';
+import { imgUrl } from 'helpers/urlHelper';
+
+interface Props {
+  locale: string;
+  cards: Array<IHomePageCard>;
+  translationLookup: Record<string, string>;
+}
+
+const { locale, cards, translationLookup } = Astro.props;
+const { translate } = translator(translationLookup);
+const title = 'Home';
+---
+
+<Layout locale={locale} documentTitle={title} translationLookup={translationLookup}>
+  <div class="home-grid-center">
+    <section id="home-grid">
+      <div class="meta">
+        <h1>{translate('MAIN_CREDITS_TITLE')}</h1>
+        <p>{translate('TUTORIAL_REMASTER')}</p>
+        <p>{translate('TUTORIAL_RUMORS_DESCRIPTION1')}</p>
+      </div>
+
+      {
+        cards.map((card, index) => (
+          <a
+            href={card.wip ? '#' : `/${locale}${card.url}`}
+            class={
+              (card.hideInMobile ? 'hidden-in-mobile ' : '') +
+              (card.wip ? ' wip ' : '') +
+              ' animate__animated animate__fadeIn'
+            }
+            style={`animation-delay: ${Math.min(index * 100, 600)}ms;`}
+          >
+            <article>
+              <div class="img-container">
+                {card.gameUrl != null ? (
+                  <img
+                    src={imgUrl(card.gameUrl)}
+                    loading="lazy"
+                    alt={card.uiKey != null ? translate(card.uiKey) : card.title}
+                  />
+                ) : (
+                  <img
+                    src={card.imageUrl}
+                    loading="lazy"
+                    alt={card.uiKey != null ? translate(card.uiKey) : card.title}
+                  />
+                )}
+              </div>
+              <footer>
+                <h6 class="ta-center">{card.uiKey != null ? translate(card.uiKey) : card.title}</h6>
+              </footer>
+              {card.wip && (
+                <span>
+                  Work
+                  <br />
+                  in progress
+                </span>
+              )}
+            </article>
+          </a>
+        ))
+      }
+    </section>
+  </div>
+</Layout>

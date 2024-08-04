@@ -1,31 +1,26 @@
 import fs from 'fs';
 import path from 'path';
 
-import { breadcrumb } from 'constant/breadcrumb';
-import { handlebarTemplate } from 'constant/handlebar';
-import { IntermediateFile } from 'constant/intermediateFile';
-import { UIKeys } from 'constant/localisation';
-import { ModuleType } from 'constant/module';
-import { paths } from 'constant/paths';
-import { routes } from 'constant/route';
-import type { IElement } from 'contracts/element';
+import { handlebarTemplate } from 'constants/handlebar';
+import { IntermediateFile } from 'constants/intermediateFile';
+import { UIKeys } from 'constants/localisation';
+import { ModuleType } from 'constants/module';
+import { paths } from 'constants/paths';
+import { routes } from 'constants/route';
+import type { IElementEnhanced } from 'contracts/element';
 import type { IExternalResource } from 'contracts/externalResource';
 import type { ILocalisation } from 'contracts/localisation';
+import { moveToSimplified } from 'contracts/mapper/moveMapper';
 import type {
   IMonsterForm,
   IMonsterFormEnhanced,
   IMonsterFormMoveSource,
-  IMonsterFormSimplified,
 } from 'contracts/monsterForm';
 import type { IMonsterSpawnEnhanced, IMonsterSpawnHabitatDetails } from 'contracts/monsterSpawn';
 import type { IMoveEnhanced } from 'contracts/move';
 import type { ISpriteAnim } from 'contracts/spriteAnim';
 import type { ISubResource, ISubResourceMonsterEnhanced } from 'contracts/subResource';
-import {
-  createFoldersOfDestFilePath,
-  getAnimFileName,
-  scaffoldFolderAndDelFileIfOverwrite,
-} from 'helpers/fileHelper';
+import { getAnimFileName, scaffoldFolderAndDelFileIfOverwrite } from 'helpers/fileHelper';
 import { FolderPathHelper } from 'helpers/folderPathHelper';
 import {
   copyImageFromRes,
@@ -33,12 +28,9 @@ import {
   cutImageFromSpriteSheet,
   generateMetaImage,
 } from 'helpers/imageHelper';
-import { monsterSort } from 'helpers/sortHelper';
-import { limitLengthWithEllipse, pad, resAndTresTrim } from 'helpers/stringHelper';
+import { pad, resAndTresTrim } from 'helpers/stringHelper';
 import { copyWavFile } from 'helpers/wavHelper';
 import { createWebpFromISpriteAnim } from 'helpers/webpHelper';
-import { monsterToSimplified } from 'mapper/monsterMapper';
-import { moveToSimplified } from 'mapper/moveMapper';
 import { readItemDetail } from 'modules/baseModule';
 import { CommonModule } from 'modules/commonModule';
 import { LocalisationModule } from 'modules/localisation/localisationModule';
@@ -93,9 +85,11 @@ export class MonsterFormsModule extends CommonModule<IMonsterForm, IMonsterFormE
   };
 
   enrichData = async (langCode: string, modules: Array<CommonModule<unknown, unknown>>) => {
-    const localeModule = this.getModuleOfType<ILocalisation>(modules, ModuleType.Localisation);
-    const language = localeModule.get(langCode).messages;
-    const elementModule = this.getModuleOfType<IElement>(modules, ModuleType.Elements);
+    const localeModule = this.getModuleOfType<ILocalisation>(
+      modules,
+      ModuleType.Localisation,
+    ) as LocalisationModule;
+    const elementModule = this.getModuleOfType<IElementEnhanced>(modules, ModuleType.Elements);
     const moveModule = this.getModuleOfType<IMoveEnhanced>(modules, ModuleType.Moves);
     const spriteAnimModule = this.getModuleOfType<ISpriteAnim>(
       modules,
@@ -120,21 +114,22 @@ export class MonsterFormsModule extends CommonModule<IMonsterForm, IMonsterFormE
         resource_name: mapKey,
         bestiary_index_with_padding:
           detail.bestiary_index >= 0 ? pad(detail.bestiary_index, 3) : '???',
-        name_localised: language[detail.name],
-        description_localised: language[detail.description],
+        name_localised: localeModule.translate(langCode, detail.name),
+        description_localised: localeModule.translate(langCode, detail.description),
         icon_url,
         sprite_sheet_path: detail.battle_sprite_path.replace('.json', '.sheet.png'),
-        evolution_specialization_question_localised:
-          language[detail.evolution_specialization_question],
-        fusion_name_prefix_localised: language[detail.fusion_name_prefix],
-        fusion_name_suffix_localised: language[detail.fusion_name_suffix],
+        evolution_specialization_question_localised: localeModule.translate(
+          langCode,
+          detail.evolution_specialization_question,
+        ),
+        fusion_name_prefix_localised: localeModule.translate(langCode, detail.fusion_name_prefix),
+        fusion_name_suffix_localised: localeModule.translate(langCode, detail.fusion_name_suffix),
         bestiary_bios_localised: detail.bestiary_bios.map((b) =>
-          language[b].replaceAll("\\'", "'").replaceAll('\\"', '"'),
+          localeModule.translate(langCode, b).replaceAll("\\'", "'").replaceAll('\\"', '"'),
         ),
-        unlock_ability_localised: language[UIKeys.unlockedAbility].replace(
-          '{ability}',
-          detail.unlock_ability,
-        ),
+        unlock_ability_localised: localeModule
+          .translate(langCode, UIKeys.unlockedAbility)
+          .replace('{ability}', detail.unlock_ability),
         elemental_types: undefined,
         elemental_types_elements: (detail.elemental_types ?? []).map((et) =>
           elementModule.get(resAndTresTrim(et.path)),
@@ -174,7 +169,11 @@ export class MonsterFormsModule extends CommonModule<IMonsterForm, IMonsterFormE
         has_locations: false,
       };
 
-      this._setupMoveMap(detailEnhanced, mapKey, language);
+      this._setupMoveMap(
+        detailEnhanced,
+        mapKey,
+        (key) => localeModule.translate(langCode, key), //
+      );
       this._itemDetailMap[mapKey] = detailEnhanced;
     }
 
@@ -182,7 +181,7 @@ export class MonsterFormsModule extends CommonModule<IMonsterForm, IMonsterFormE
       this._itemDetailMap[mapKey].evolutions_monster = this._itemDetailMap[mapKey].evolutions
         .map((evo) =>
           getEvolutionMonster(
-            language,
+            (key) => localeModule.translate(langCode, key),
             evo,
             moveModule,
             this._itemDetailMap[(evo as any).resource_name ?? ''] as IMonsterFormEnhanced, // idk what past me did here...
@@ -194,7 +193,7 @@ export class MonsterFormsModule extends CommonModule<IMonsterForm, IMonsterFormE
       if (prevMapKey != null) {
         const fakeResource = { id: 0, type: 'Custom', resource_name: prevMapKey };
         this._itemDetailMap[mapKey].evolution_from_monster = getEvolutionMonster(
-          language,
+          (key) => localeModule.translate(langCode, key),
           fakeResource,
           moveModule,
           this._itemDetailMap[fakeResource.resource_name],
@@ -322,54 +321,6 @@ export class MonsterFormsModule extends CommonModule<IMonsterForm, IMonsterFormE
     }
   };
 
-  writePages = async (langCode: string, modules: Array<CommonModule<unknown, unknown>>) => {
-    const mainBreadcrumb = breadcrumb.monster(langCode);
-    const list: Array<IMonsterFormEnhanced> = [];
-    const simplifiedMonsters: Array<IMonsterFormSimplified> = [];
-    for (const mapKey of Object.keys(this._itemDetailMap)) {
-      const details: IMonsterFormEnhanced = this._itemDetailMap[mapKey];
-      list.push(details);
-      simplifiedMonsters.push(monsterToSimplified(details));
-
-      const relativePath = `${langCode}${routes.monsters}/${encodeURI(mapKey)}.html`;
-      const detailPageData = this.getBasicPageData({
-        langCode,
-        modules,
-        documentTitle: details.name_localised,
-        description: limitLengthWithEllipse(details.bestiary_bios_localised.join(' '), 125),
-        breadcrumbs: [mainBreadcrumb, breadcrumb.monsterDetail(langCode, details.name_localised)],
-        data: details,
-        relativePath,
-      });
-      detailPageData.images.twitter = details.meta_image_url;
-      detailPageData.images.facebook = details.meta_image_url;
-      await getHandlebar().compileTemplateToFile({
-        data: detailPageData,
-        outputFiles: [relativePath],
-        templateFile: handlebarTemplate.monsterDetail,
-      });
-    }
-
-    const simpleMonsterJsonFile = `assets/json${routes.monsters}.json`;
-    const destMonsterJsonFile = path.join(paths().destinationFolder, simpleMonsterJsonFile);
-    createFoldersOfDestFilePath(destMonsterJsonFile);
-    fs.writeFileSync(destMonsterJsonFile, JSON.stringify(simplifiedMonsters, null, 2), 'utf-8');
-
-    const relativePath = `${langCode}${routes.monsters}/index.html`;
-    await getHandlebar().compileTemplateToFile({
-      data: this.getBasicPageData({
-        langCode,
-        modules,
-        documentTitleUiKey: mainBreadcrumb.uiKey,
-        breadcrumbs: [mainBreadcrumb],
-        data: { list: list.sort(monsterSort) },
-        relativePath,
-      }),
-      outputFiles: [relativePath],
-      templateFile: handlebarTemplate.monster,
-    });
-  };
-
   private _buildEvolutionFromMap = () => {
     this._evolutionFromMap = {};
     for (const detail of this._baseDetails) {
@@ -387,12 +338,12 @@ export class MonsterFormsModule extends CommonModule<IMonsterForm, IMonsterFormE
   private _setupMoveMap = (
     detail: IMonsterFormEnhanced,
     mapKey: string,
-    language: Record<string, string>,
+    translate: (key: string) => string,
   ) => {
     for (const move of [...detail.move_tags, 'any']) {
       const newEntry: IMonsterFormMoveSource = {
         monster_id: mapKey,
-        source: language[UIKeys.stickers],
+        source: translate(UIKeys.stickers),
       };
       const existingMove = this._moveToMonsterIdsMap[move];
       if (existingMove) {
@@ -449,7 +400,7 @@ export class MonsterFormsModule extends CommonModule<IMonsterForm, IMonsterFormE
 
     const extraData = await getMonsterFormMetaImage(
       detailEnhanced.tape_sticker_texture?.path,
-      detailEnhanced.elemental_types_elements[0].icon.path,
+      detailEnhanced.elemental_types_elements[0].icon?.path,
     );
     const template = getHandlebar().getCompiledTemplate<unknown>(
       handlebarTemplate.monsterMetaImage,

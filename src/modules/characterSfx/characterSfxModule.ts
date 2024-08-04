@@ -1,9 +1,9 @@
 import fs from 'fs';
 import path from 'path';
 
-import { IntermediateFile } from 'constant/intermediateFile';
-import { ModuleType } from 'constant/module';
-import { paths } from 'constant/paths';
+import { IntermediateFile } from 'constants/intermediateFile';
+import { ModuleType } from 'constants/module';
+import { paths } from 'constants/paths';
 import type {
   ICharacter,
   ICharacterSfx,

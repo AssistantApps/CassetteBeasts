@@ -1,10 +1,10 @@
 import path from 'path';
 import sharp from 'sharp';
 
-import { AppImage } from 'constant/image';
-import { paths } from 'constant/paths';
+import { AppImage } from 'constants/image';
+import { paths } from 'constants/paths';
+import { getExternalResourcesImagePath } from 'contracts/mapper/externalResourceMapper';
 import { getBase64FromFile } from 'helpers/fileHelper';
-import { getExternalResourcesImagePath } from 'mapper/externalResourceMapper';
 
 interface IMetaImagesProps {
   spriteBase64: string;

@@ -1,16 +1,16 @@
 import fs from 'fs';
 
-import { breadcrumb } from 'constant/breadcrumb';
-import { handlebarTemplate } from 'constant/handlebar';
-import { AppImage } from 'constant/image';
-import { IntermediateFile } from 'constant/intermediateFile';
-import { UIKeys } from 'constant/localisation';
-import { ModuleType } from 'constant/module';
-import { paths } from 'constant/paths';
-import { routes } from 'constant/route';
-import { site } from 'constant/site';
+import { handlebarTemplate } from 'constants/handlebar';
+import { AppImage } from 'constants/image';
+import { IntermediateFile } from 'constants/intermediateFile';
+import { UIKeys } from 'constants/localisation';
+import { ModuleType } from 'constants/module';
+import { paths } from 'constants/paths';
+import { routes } from 'constants/route';
+import { site } from 'constants/site';
 import type { IElement, IElementEnhanced } from 'contracts/element';
 import type { ILocalisation } from 'contracts/localisation';
+import { monsterToSimplified } from 'contracts/mapper/monsterMapper';
 import type {
   IMonsterForm,
   IMonsterFormEnhanced,
@@ -21,9 +21,8 @@ import type { IStatusEffect, IStatusEffectEnhanced } from 'contracts/statusEffec
 import { scaffoldFolderAndDelFileIfOverwrite } from 'helpers/fileHelper';
 import { FolderPathHelper } from 'helpers/folderPathHelper';
 import { generateMetaImage } from 'helpers/imageHelper';
-import { monsterSimplifiedSort, sortByStringProperty } from 'helpers/sortHelper';
-import { limitLengthWithEllipse, pad, resAndTresTrim } from 'helpers/stringHelper';
-import { monsterToSimplified } from 'mapper/monsterMapper';
+import { monsterSimplifiedSort } from 'helpers/sortHelper';
+import { pad, resAndTresTrim } from 'helpers/stringHelper';
 import { readItemDetail } from 'modules/baseModule';
 import { CommonModule } from 'modules/commonModule';
 import { LocalisationModule } from 'modules/localisation/localisationModule';
@@ -66,8 +65,10 @@ export class MovesModule extends CommonModule<IMove, IMoveEnhanced> {
   };
 
   enrichData = async (langCode: string, modules: Array<CommonModule<unknown, unknown>>) => {
-    const localeModule = this.getModuleOfType<ILocalisation>(modules, ModuleType.Localisation);
-    const language = localeModule.get(langCode).messages;
+    const localeModule = this.getModuleOfType<ILocalisation>(
+      modules,
+      ModuleType.Localisation,
+    ) as LocalisationModule;
     const elementModule = this.getModuleOfType<IElement>(modules, ModuleType.Elements);
     const statusEffectModule = this.getModuleOfType<IStatusEffect>(
       modules,
@@ -99,22 +100,31 @@ export class MovesModule extends CommonModule<IMove, IMoveEnhanced> {
         }
       }
 
+      const status_effects_elements_max_3 = status_effects_elements.slice(0, 3);
+      if (status_effects_elements.length > 3) {
+        status_effects_elements_max_3.push({
+          icon: { path: AppImage.moreStatusEffects },
+          name_localised: localeModule.translate(langCode, UIKeys.other),
+        } as unknown as IStatusEffectEnhanced);
+      }
+
       const elemental_types_elements = detail.elemental_types
         .map((et) => elementModule.get(resAndTresTrim(et.path)))
         .filter((er) => er != null) as Array<IElementEnhanced>;
       const detailEnhanced: IMoveEnhanced = {
         ...detail,
-        name_localised: language[detail.name],
-        category_name_localised: language[detail.category_name],
-        description_localised: (language[detail.description] ?? '')
+        name_localised: localeModule.translate(langCode, detail.name),
+        category_name_localised: localeModule.translate(langCode, detail.category_name),
+        description_localised: (localeModule.translate(langCode, detail.description) ?? '')
           .replaceAll('{status_effect}', status_effects_elements?.[0]?.name_localised)
           .replaceAll('{duration}', (detail.amount ?? 0).toString())
           .replaceAll('{type}', elemental_types_elements?.[0]?.name_localised)
           .replaceAll('{percent}', '50'),
-        title_override_localised: language[detail.title_override],
+        title_override_localised: localeModule.translate(langCode, detail.title_override),
         monsters_that_can_learn: [],
         elemental_types_elements,
         status_effects_elements,
+        status_effects_elements_max_3,
         meta_image_url: `/assets/img/meta/${langCode}${routes.moves}/${encodeURI(detail.id)}.png`,
       };
 
@@ -191,8 +201,6 @@ export class MovesModule extends CommonModule<IMove, IMoveEnhanced> {
     localeModule: LocalisationModule,
     overwrite: boolean,
   ) => {
-    const language: Record<string, string> = localeModule.get(langCode).messages;
-
     for (const mapKey of Object.keys(this._itemDetailMap)) {
       const detailEnhanced: IMoveEnhanced = this._itemDetailMap[mapKey];
 
@@ -204,7 +212,7 @@ export class MovesModule extends CommonModule<IMove, IMoveEnhanced> {
         langCode,
         detailEnhanced.elemental_types_elements?.[0]?.icon?.path ?? '../typeless.png',
         detailEnhanced,
-        language,
+        localeModule,
       );
       const template = getHandlebar().getCompiledTemplate<unknown>(
         handlebarTemplate.moveMetaImage,
@@ -213,57 +221,5 @@ export class MovesModule extends CommonModule<IMove, IMoveEnhanced> {
 
       generateMetaImage({ overwrite, template, langCode, outputFullPath });
     }
-  };
-
-  writePages = async (langCode: string, modules: Array<CommonModule<unknown, unknown>>) => {
-    const localeModule = this.getModuleOfType<ILocalisation>(
-      modules,
-      ModuleType.Localisation,
-    ) as LocalisationModule;
-    const language: ILocalisation = localeModule.get(langCode);
-
-    const mainBreadcrumb = breadcrumb.move(langCode);
-    const list: Array<IMoveEnhanced> = [];
-    for (const mapKey of Object.keys(this._itemDetailMap)) {
-      const details: IMoveEnhanced = this._itemDetailMap[mapKey];
-
-      const status_effects_elements_max_3 = details.status_effects_elements.slice(0, 3);
-      if (details.status_effects_elements.length > 3) {
-        status_effects_elements_max_3.push({
-          icon: { path: AppImage.moreStatusEffects },
-          name_localised: language.messages[UIKeys.other],
-        } as unknown as IStatusEffect);
-      }
-      list.push({ ...details, status_effects_elements_max_3 } as IMoveEnhanced);
-
-      const detailPageData = this.getBasicPageData({
-        langCode,
-        modules,
-        documentTitle: details.name_localised,
-        description: limitLengthWithEllipse(details.description_localised, 125),
-        breadcrumbs: [mainBreadcrumb, breadcrumb.moveDetail(langCode, details.name_localised)],
-        data: details,
-      });
-      detailPageData.images.twitter = details.meta_image_url;
-      detailPageData.images.facebook = details.meta_image_url;
-      await getHandlebar().compileTemplateToFile({
-        data: detailPageData,
-        outputFiles: [`${langCode}${routes.moves}/${encodeURI(mapKey)}.html`],
-        templateFile: handlebarTemplate.moveDetail,
-      });
-    }
-
-    const sortedList = list.sort(sortByStringProperty((l) => l.name_localised));
-    await getHandlebar().compileTemplateToFile({
-      data: this.getBasicPageData({
-        langCode,
-        modules,
-        documentTitleUiKey: mainBreadcrumb.uiKey,
-        breadcrumbs: [mainBreadcrumb],
-        data: { list: sortedList },
-      }),
-      outputFiles: [`${langCode}${routes.moves}/index.html`],
-      templateFile: handlebarTemplate.move,
-    });
   };
 }

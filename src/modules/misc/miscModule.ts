@@ -1,16 +1,18 @@
-import { handlebarTemplate } from 'constant/handlebar';
-import { AppImage } from 'constant/image';
-import { IntermediateFile } from 'constant/intermediateFile';
-import { UIKeys, defaultLocale } from 'constant/localisation';
-import { ModuleType } from 'constant/module';
-import { routes } from 'constant/route';
+import fs from 'fs';
+import path from 'path';
+
+import { AppImage } from 'constants/image';
+import { IntermediateFile } from 'constants/intermediateFile';
+import { UIKeys } from 'constants/localisation';
+import { ModuleType } from 'constants/module';
+import { paths } from 'constants/paths';
+import { routes } from 'constants/route';
 import type { IElementEnhanced } from 'contracts/element';
 import type { IHomePageCard } from 'contracts/homePageCard';
 import type { IMonsterForm } from 'contracts/monsterForm';
 import type { IStatusEffect } from 'contracts/statusEffect';
 import type { IWorld } from 'contracts/world';
 import { CommonModule } from 'modules/commonModule';
-import { getHandlebar } from 'services/internal/handlebarService';
 
 export class MiscModule extends CommonModule<unknown, unknown> {
   private _cards: Array<IHomePageCard> = [];
@@ -19,6 +21,7 @@ export class MiscModule extends CommonModule<unknown, unknown> {
     super({
       type: ModuleType.Misc,
       intermediateFile: IntermediateFile.misc,
+      loadOnce: true,
       dependsOn: [
         ModuleType.Version,
         ModuleType.Localisation,
@@ -58,7 +61,7 @@ export class MiscModule extends CommonModule<unknown, unknown> {
       {
         uiKey: UIKeys.elementalTypeChart,
         url: routes.elementReactions,
-        gameUrl: elementModule.get('astral').icon.path,
+        gameUrl: elementModule.get('astral').icon?.path,
       },
       {
         uiKey: UIKeys.statusEffect,
@@ -76,62 +79,10 @@ export class MiscModule extends CommonModule<unknown, unknown> {
     this.isReady = true;
   };
 
-  initFromIntermediate = async () => {}; // no intermediate file
-  writeIntermediate = () => {}; // no intermediate file
+  initFromIntermediate = async () => {};
 
-  writePages = async (langCode: string, modules: Array<CommonModule<unknown, unknown>>) => {
-    await Promise.all([
-      this.writeMiscPage(langCode, routes.home, handlebarTemplate.home, modules),
-      this.writeMiscPage(langCode, routes.about, handlebarTemplate.about, modules),
-    ]);
-
-    if (langCode != defaultLocale) return;
-    const miscFiles: Array<{ src: string; dest?: string }> = [
-      { src: handlebarTemplate.cname, dest: 'CNAME' },
-      { src: handlebarTemplate.colour, dest: '../src/scss/_colour.scss' },
-      { src: handlebarTemplate.termsAndConditions },
-      { src: handlebarTemplate.privacyPolicy },
-      { src: handlebarTemplate.openSearch },
-      { src: handlebarTemplate.humans },
-      { src: handlebarTemplate.robots },
-    ];
-
-    for (const miscFile of miscFiles) {
-      await getHandlebar().compileTemplateToFile({
-        data: this.getBasicPageData({
-          langCode,
-          modules,
-          breadcrumbs: [],
-          data: {},
-        }),
-        outputFiles: [miscFile.dest ?? miscFile.src.replace('misc/', '').replace('.hbs', '')],
-        templateFile: miscFile.src,
-      });
-    }
-  };
-
-  private writeMiscPage = async (
-    langCode: string,
-    outputFile: string,
-    handleBarTemplate: string,
-    modules: Array<CommonModule<unknown, unknown>>,
-  ) => {
-    const outputFiles = [`${langCode}${outputFile}`];
-    if (langCode == defaultLocale) {
-      outputFiles.push(outputFile);
-    }
-
-    const relativePath = `${langCode}${outputFile}`;
-    await getHandlebar().compileTemplateToFile({
-      data: this.getBasicPageData({
-        langCode,
-        modules,
-        relativePath,
-        breadcrumbs: [],
-        data: { cards: this._cards },
-      }),
-      outputFiles,
-      templateFile: handleBarTemplate,
-    });
+  writeIntermediate = () => {
+    const destFile = path.join(paths().intermediateFolder, this.intermediateFile);
+    fs.writeFileSync(destFile, JSON.stringify(this._cards, null, 2), 'utf-8');
   };
 }

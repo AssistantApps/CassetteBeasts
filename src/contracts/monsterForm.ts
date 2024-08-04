@@ -1,7 +1,7 @@
-import type { IElement } from './element';
+import type { IElementEnhanced } from './element';
 import type { IExternalResource } from './externalResource';
 import type { IMonsterSpawnHabitatDetails } from './monsterSpawn';
-import type { IMove, IMoveSimplified } from './move';
+import type { IMoveEnhanced, IMoveSimplified } from './move';
 import type { ISpriteAnimDetailsEnhanced } from './spriteAnim';
 import type { ISubResource, ISubResourceMonsterEnhanced } from './subResource';
 
@@ -66,9 +66,9 @@ export interface IMonsterFormEnhanced extends IMonsterForm {
   fusion_name_prefix_localised: string;
   fusion_name_suffix_localised: string;
   bestiary_bios_localised: Array<string>;
-  elemental_types_elements: Array<IElement>;
-  initial_moves_moves: Array<IMove>;
-  tape_upgrades_moves: Array<IMove>;
+  elemental_types_elements: Array<IElementEnhanced>;
+  initial_moves_moves: Array<IMoveEnhanced>;
+  tape_upgrades_moves: Array<IMoveEnhanced>;
   animations: Array<ISpriteAnimDetailsEnhanced>;
   learnable_moves: Array<IMoveSimplified>;
   unlock_ability_localised: string;
@@ -84,7 +84,7 @@ export interface IMonsterFormSimplified {
   name_localised: string;
   resource_name: string;
   icon_url: string;
-  source: string;
+  source?: string;
   isSecret: boolean;
   bestiary_index: number;
   bestiary_index_with_padding: string;

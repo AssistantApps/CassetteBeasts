@@ -1,10 +1,10 @@
 import fs from 'fs';
 import path from 'path';
 
-import { paths } from 'constant/paths';
+import { paths } from 'constants/paths';
+import { getExternalResourcesImagePath } from 'contracts/mapper/externalResourceMapper';
 import type { ISpriteAnimDetailsEnhanced } from 'contracts/spriteAnim';
 import { animateWebp, type IFrameInstructions } from 'lib/webpmux';
-import { getExternalResourcesImagePath } from 'mapper/externalResourceMapper';
 import { getBotPath } from 'services/internal/configService';
 import sharp from 'sharp';
 import {

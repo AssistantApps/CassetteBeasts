@@ -1,12 +1,13 @@
 import path from 'path';
 
-import { AppImage } from 'constant/image';
-import { UIKeys } from 'constant/localisation';
-import { paths } from 'constant/paths';
+import { AppImage } from 'constants/image';
+import { UIKeys } from 'constants/localisation';
+import { paths } from 'constants/paths';
+import { getExternalResourcesImagePath } from 'contracts/mapper/externalResourceMapper';
 import type { IMoveEnhanced } from 'contracts/move';
 import { getBase64FromFile } from 'helpers/fileHelper';
 import { getDescripLines } from 'helpers/stringHelper';
-import { getExternalResourcesImagePath } from 'mapper/externalResourceMapper';
+import type { LocalisationModule } from 'modules/localisation/localisationModule';
 
 interface IMetaImagesProps {
   elementBase64: string;
@@ -21,7 +22,7 @@ export const getMoveMetaImage = async (
   langCode: string,
   elementFilePath: string,
   detail: IMoveEnhanced,
-  language: Record<string, string>,
+  localeModule: LocalisationModule,
 ): Promise<IMetaImagesProps | undefined> => {
   const elementPath = getExternalResourcesImagePath(elementFilePath);
   if (elementPath == null || elementPath.length < 1) return;
@@ -42,11 +43,16 @@ export const getMoveMetaImage = async (
 
   const descriptionLines = getDescripLines(langCode, detail.description_localised);
 
-  const additional = [(language[UIKeys.power] ?? '').replace('{power}', detail.power.toString())];
+  const additional = [
+    (localeModule.translate(langCode, UIKeys.power) ?? '').replace(
+      '{power}',
+      detail.power.toString(),
+    ),
+  ];
   if (detail.unavoidable) {
-    additional.push(`${language[UIKeys.accuracy]}: Unavoidable`);
+    additional.push(`${localeModule.translate(langCode, UIKeys.accuracy)}: Unavoidable`);
   } else {
-    additional.push(`${language[UIKeys.accuracy]}: ${detail.accuracy}%`);
+    additional.push(`${localeModule.translate(langCode, UIKeys.accuracy)}: ${detail.accuracy}%`);
   }
 
   return {

@@ -1,4 +1,6 @@
 import type { IExternalResource } from 'contracts/externalResource';
+import { getExternalResource, getExternalResources } from 'contracts/mapper/externalResourceMapper';
+import { getResources } from 'contracts/mapper/resourceMapper';
 import type { IMonsterForm, IMonsterFormEnhanced } from 'contracts/monsterForm';
 import type { IMove, IMoveEnhanced } from 'contracts/move';
 import type { ISubAnimationResource } from 'contracts/subAnimationResource';
@@ -10,8 +12,6 @@ import {
   resAndTresTrim,
   stringToBool,
 } from 'helpers/stringHelper';
-import { getExternalResource, getExternalResources } from 'mapper/externalResourceMapper';
-import { getResources } from 'mapper/resourceMapper';
 import type { CommonModule } from 'modules/commonModule';
 
 export const monsterFormMapFromDetailList =
@@ -87,7 +87,7 @@ export const monsterFormMapFromDetailList =
   };
 
 export const getEvolutionMonster = (
-  language: Record<string, string>,
+  translate: (key: string) => string,
   resource: ISubResource,
   moveModule: CommonModule<IMove, IMoveEnhanced>,
   monsterDetails: IMonsterFormEnhanced,
@@ -100,6 +100,6 @@ export const getEvolutionMonster = (
     bestiary_index_with_padding: monsterDetails.bestiary_index_with_padding,
     elemental_types_elements: monsterDetails.elemental_types_elements,
     required_move_move: moveModule.get(resAndTresTrim(resource?.required_move?.path ?? '')),
-    specialization_localised: language[resource.specialization ?? ''],
+    specialization_localised: translate(resource.specialization ?? ''),
   };
 };
