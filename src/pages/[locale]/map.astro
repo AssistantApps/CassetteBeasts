@@ -1,7 +1,6 @@
 ---
 import Layout from 'components/layouts/Layout.astro';
 import Breadcrumb from 'components/Breadcrumb.astro';
-import { Debug } from 'astro:components';
 
 import languageJson from '../../assets/json/language.json';
 
@@ -9,11 +8,9 @@ import { readDataFromAssets } from 'helpers/fileHelper';
 import { IntermediateFile } from 'constants/intermediateFile';
 import { astroPaths } from 'constants/astro';
 import { breadcrumb } from 'constants/breadcrumb';
-import { routes } from 'constants/route';
 import { availableLanguages, UIKeys } from 'constants/localisation';
 import type { ILocalisation } from 'contracts/localisation';
 import type { IWorldEnhanced } from 'contracts/world';
-import { sortByStringProperty } from 'helpers/sortHelper';
 import { translator } from 'helpers/translateHelper';
 import { imgUrl } from 'helpers/urlHelper';
 

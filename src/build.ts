@@ -40,7 +40,7 @@ const main = async () => {
 
     if (langCode != defaultLocale) {
       for (const module of modules) {
-        await module.writeIntermediate(langCode);
+        module.writeIntermediate(langCode);
       }
     }
 

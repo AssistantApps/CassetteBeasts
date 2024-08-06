@@ -25,6 +25,9 @@ export default defineConfig({
   routing: {
     prefixDefaultLocale: false,
   },
+  build: {
+    format: 'preserve',
+  },
   integrations: [
     sitemap({
       changefreq: 'monthly',

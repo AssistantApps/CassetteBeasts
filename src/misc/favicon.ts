@@ -2,7 +2,6 @@ import { type FaviconOptions, favicons } from 'favicons';
 import fs from 'fs/promises';
 import path from 'path';
 
-import { paths } from 'constants/paths';
 import { site } from 'constants/site';
 import { getBotPath, getConfig } from 'services/internal/configService';
 
@@ -76,7 +75,7 @@ export const generateFavicons = async () => {
       htmlContentLines.push(htmlLine);
     }
     await fs.writeFile(
-      path.join(paths().templatesFolder, 'partials', 'favicon.hbs'),
+      path.join(getBotPath(), 'src', 'components', 'meta', 'FaviconHead.astro'),
       htmlContentLines.join('\n'),
     );
   } catch (error) {

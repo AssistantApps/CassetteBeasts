@@ -129,7 +129,8 @@ const highlight = (node, text, searchString) => {
   }
 };
 
-const orderItemsByDataAttr = (parentId, attrToOrderBy) => {
+const orderItemsByDataAttr = (elem, parentId) => {
+  const attrToOrderBy = elem.value;
   const parentNode = document.getElementById(parentId);
   if (parentNode == null) return;
 
@@ -162,8 +163,7 @@ const playAudioNode = (id) => {
   node.play();
 };
 
-const revealEmail = (elem, event) => {
-  event?.preventDefault?.();
+const revealEmail = (elem) => {
   const obfuscated = atob(decodeURI(elem.dataset['email']));
   let realValue = '';
   for (let index = 0; index < obfuscated.split('').length; index++) {
@@ -176,4 +176,5 @@ const revealEmail = (elem, event) => {
   elem.title = realValue.replace('mailto:', '');
   elem.innerText = realValue.replace('mailto:', '');
   elem.removeAttribute('onclick');
+  return false;
 };

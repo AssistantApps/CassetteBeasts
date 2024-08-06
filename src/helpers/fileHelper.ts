@@ -93,7 +93,7 @@ interface IWriteProps<T> {
 
 export const writeDataToAssets = async <T>(props: IWriteProps<T>) => {
   const fullPath = path.join(props.botPath, 'assets', props.destFileName);
-  await fs.writeFileSync(fullPath, JSON.stringify(props.data, null, 2), 'utf-8');
+  fs.writeFileSync(fullPath, JSON.stringify(props.data, null, 2), 'utf-8');
 };
 
 interface IReadProps {
@@ -102,6 +102,6 @@ interface IReadProps {
 }
 export const readDataFromAssets = async <T>(props: IReadProps): Promise<T> => {
   const fullPath = path.join(...astroPaths.assetsPath, ...props.pathFolders, props.destFileName);
-  const content = await fs.readFileSync(fullPath, 'utf-8');
+  const content = fs.readFileSync(fullPath, 'utf-8');
   return JSON.parse(content);
 };

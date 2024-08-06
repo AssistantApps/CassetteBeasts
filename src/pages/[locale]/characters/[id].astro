@@ -2,8 +2,6 @@
 import Layout from 'components/layouts/Layout.astro';
 import Breadcrumb from 'components/Breadcrumb.astro';
 import StatHex from 'components/stat/StatHex.astro';
-import MonsterRemaster from 'components/monster/MonsterRemaster.astro';
-import MonsterMoveRow from 'components/monster/MonsterMoveRow.astro';
 
 import languageJson from 'assets/json/language.json';
 
@@ -201,7 +199,7 @@ const { translate } = translator(translationLookup);
           </div>
           <div class="controls noselect animate__animated animate__fadeIn">
             {
-              data.portraits.map((portrait, index) => (
+              data.portraits.map((_, index) => (
                 <div
                   class={`button-slanted cursor-pointer tab-button-${index}`}
                   onclick={`applyClassToId('portrait-tab-container', 'tab', 'tab${index}')`}

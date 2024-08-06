@@ -17,7 +17,7 @@
             "type": "node-terminal",
             "request": "launch",
             "name": "data (build)",
-            "command": "npm run data:build",
+            "command": "npm run data",
             "skipFiles": [
                 "<node_internals>/**"
             ]

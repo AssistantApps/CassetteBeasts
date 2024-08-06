@@ -4,5 +4,15 @@
     "jsx": "preserve",
     "jsxImportSource": "solid-js",
     "baseUrl": "src",
-  }
+  },
+  "exclude": [
+    "lib",
+    "dist",
+    "misc",
+    "public",
+    "node_modules",
+    "src/modules/**/*",
+    "src/templates/helpers/*",
+    "workbox-config.js"
+    ]
 }

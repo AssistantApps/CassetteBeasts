@@ -44,7 +44,7 @@ const main = async () => {
     },
     createIntermediateFiles: async () => {
       for (const module of modules) {
-        await module.writeIntermediate(langCode);
+        module.writeIntermediate(langCode);
       }
     },
     copyImagesFromGameFiles: async () => {
