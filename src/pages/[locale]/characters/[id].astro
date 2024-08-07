@@ -9,10 +9,14 @@ import { readDataFromAssets } from 'helpers/fileHelper';
 import { IntermediateFile } from 'constants/intermediateFile';
 import { astroPaths } from 'constants/astro';
 import { breadcrumb } from 'constants/breadcrumb';
+import { site } from 'constants/site';
 import { routes } from 'constants/route';
 import { availableLanguages, UIKeys } from 'constants/localisation';
 import type { ILocalisation } from 'contracts/localisation';
 import type { ICharacterEnhanced } from 'contracts/character';
+import { type IGuideSchema, AccessMode } from 'contracts/schema/guideScheme';
+import { isoDate } from 'helpers/dateHelper';
+import { toSchemaOrgProperty } from 'helpers/schemaHelper';
 import { translator } from 'helpers/translateHelper';
 import { imgUrl } from 'helpers/urlHelper';
 
@@ -38,12 +42,21 @@ const { locale } = Astro.params;
 const data = (Astro.props as any).item as ICharacterEnhanced;
 const translationLookup = (languageJson as Record<string, ILocalisation>)[locale].messages;
 const { translate } = translator(translationLookup);
+
+const additionalSchemaObj: IGuideSchema = {
+  name: data.name_localised,
+  headline: data.name_localised,
+  accessMode: AccessMode.textual,
+  dateModified: isoDate(),
+  thumbnailUrl: site.rootUrl + data.meta_image_url.slice(1),
+};
 ---
 
 <Layout
   locale={locale}
   documentTitle={data.name_localised}
   metaImageUrl={data.meta_image_url}
+  schemaExtra={toSchemaOrgProperty('mainEntity', 'Guide', additionalSchemaObj)}
   translationLookup={translationLookup}
 >
   <Breadcrumb
@@ -72,7 +85,7 @@ const { translate } = translator(translationLookup);
                 src={data.icon_url}
                 class="char-image tab-content-0"
                 loading="lazy"
-                alt={`image of ${data.name_localised}`}
+                alt={`${data.name_localised}`}
                 draggable="false"
               />
 
@@ -142,6 +155,7 @@ const { translate } = translator(translationLookup);
                               id={`${audio.name}-${audioIdx}`}
                               class={`hidden ${file.autoplay ? 'autoplay' : ''}`}
                             >
+                              <track kind="captions" srclang="en" label="english_captions" />
                               <source src={file.url} type="audio/wav" />
                             </audio>
                           </Fragment>
@@ -223,7 +237,7 @@ const { translate } = translator(translationLookup);
               src={data.partner_image_url}
               class="tape-image animate__animated tada-hover"
               loading="lazy"
-              alt={`tape image of ${data.partner_signature_species_monsters.name_localised}`}
+              alt={`tape ${data.partner_signature_species_monsters.name_localised}`}
               draggable="false"
             />
           </a>

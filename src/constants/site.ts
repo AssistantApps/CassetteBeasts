@@ -34,7 +34,7 @@ export const site = {
     metaImageSize: 'summary_large_image',
   },
   images: {
-    maskIcon: '/safari-pinned-tab.svg',
+    maskIcon: '/assets/favicon/safari-pinned-tab.svg',
     favicon: {
       ico: '/favicon.ico',
       x16: '/assets/favicon/favicon-16x16.png',

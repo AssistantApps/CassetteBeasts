@@ -10,8 +10,12 @@ import { astroPaths } from 'constants/astro';
 import { breadcrumb } from 'constants/breadcrumb';
 import { routes } from 'constants/route';
 import { availableLanguages, UIKeys } from 'constants/localisation';
+import { site } from 'constants/site';
 import type { ILocalisation } from 'contracts/localisation';
 import type { IStatusEffectEnhanced } from 'contracts/statusEffect';
+import { type IGuideSchema, AccessMode } from 'contracts/schema/guideScheme';
+import { isoDate } from 'helpers/dateHelper';
+import { toSchemaOrgProperty } from 'helpers/schemaHelper';
 import { translator } from 'helpers/translateHelper';
 import { imgUrl } from 'helpers/urlHelper';
 
@@ -37,12 +41,25 @@ const { locale } = Astro.params;
 const data = (Astro.props as any).item as IStatusEffectEnhanced;
 const translationLookup = (languageJson as Record<string, ILocalisation>)[locale].messages;
 const { translate } = translator(translationLookup);
+
+const additionalSchemaObj: IGuideSchema = {
+  name: data.name_localised,
+  headline: data.name_localised,
+  about: data.description_localised,
+  abstract: data.description_localised,
+  description: data.description_localised,
+  accessMode: AccessMode.textual,
+  dateModified: isoDate(),
+  thumbnailUrl: site.rootUrl + data.meta_image_url.slice(1),
+};
 ---
 
 <Layout
   locale={locale}
   documentTitle={data.name_localised}
+  description={data.description_localised}
   metaImageUrl={data.meta_image_url}
+  schemaExtra={toSchemaOrgProperty('mainEntity', 'Guide', additionalSchemaObj)}
   translationLookup={translationLookup}
 >
   <Breadcrumb
@@ -156,7 +173,7 @@ const { translate } = translator(translationLookup);
                                 <img
                                   src={imgUrl(elem.icon?.path)}
                                   class="move-image"
-                                  alt={`image of ${elem.name_localised}`}
+                                  alt={`${elem.name_localised}`}
                                   loading="lazy"
                                   draggable="false"
                                 />
@@ -167,7 +184,7 @@ const { translate } = translator(translationLookup);
                               src="/assets/img/typeless.png"
                               class="move-image"
                               title="Typeless"
-                              alt="image of typeless"
+                              alt="typeless"
                               loading="lazy"
                               draggable="false"
                             />

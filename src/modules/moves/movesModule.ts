@@ -119,7 +119,9 @@ export class MovesModule extends CommonModule<IMove, IMoveEnhanced> {
           .replaceAll('{status_effect}', status_effects_elements?.[0]?.name_localised)
           .replaceAll('{duration}', (detail.amount ?? 0).toString())
           .replaceAll('{type}', elemental_types_elements?.[0]?.name_localised)
-          .replaceAll('{percent}', '50'),
+          .replaceAll('{percent}', '50')
+          .replaceAll("\\'", "'")
+          .replaceAll('\\"', "'"),
         title_override_localised: localeModule.translate(langCode, detail.title_override),
         monsters_that_can_learn: [],
         elemental_types_elements,

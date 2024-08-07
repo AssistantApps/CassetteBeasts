@@ -28,7 +28,7 @@ const title = 'Home';
       {
         cards.map((card, index) => (
           <a
-            href={card.wip ? '#' : `/${locale}${card.url}`}
+            href={card.wip ? '/index.html' : `/${locale}${card.url}`}
             class={
               (card.hideInMobile ? 'hidden-in-mobile ' : '') +
               (card.wip ? ' wip ' : '') +

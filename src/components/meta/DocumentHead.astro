@@ -7,10 +7,12 @@ import { site } from '../../constants/site';
 import { defaultLocale } from '../../constants/localisation';
 import type { IAlternateUrl } from '../../contracts/pageData';
 import { longDate } from '../../helpers/dateHelper';
+import { limitLengthWithEllipse } from '../../helpers/stringHelper';
 
 interface Props {
   locale: string;
   documentTitle?: string;
+  shortDescription?: string;
   description?: string;
   metaImageUrl?: string;
   allLangCodes: Array<string>;
@@ -27,7 +29,7 @@ const relativePath = Astro.url.pathname.slice(1);
 
 const alternateUrls: Array<IAlternateUrl> = [];
 for (const lang of allLangCodes) {
-  const langSpecificRelPath = relativePath.replace(locale, lang);
+  const langSpecificRelPath = relativePath.replace(locale, lang).slice(0, -1) + '.html';
   const indexOfDivider = lang.indexOf('_');
   const alternateUrlLang = indexOfDivider > 0 ? lang.substring(0, indexOfDivider) : lang;
   if (alternateUrls.filter((au) => au.lang == alternateUrlLang).length > 0) continue;
@@ -38,7 +40,7 @@ for (const lang of allLangCodes) {
   });
 }
 alternateUrls.push({
-  href: `${site.rootUrl}${relativePath.replace(locale, defaultLocale)}`,
+  href: `${site.rootUrl}${relativePath.replace(locale, defaultLocale).slice(0, -1) + '.html'}`,
   lang: 'x-default',
 });
 ---
@@ -97,28 +99,28 @@ alternateUrls.push({
 
   <!-- Apple -->
   <link rel="mask-icon" href={site.images.maskIcon} color={site.theme.maskColour} />
-  <meta name="apple-mobile-web-app-title" content={site.meta.appName} />
+  <meta name="apple-mobile-web-app-title" content={documentTitle ?? site.meta.title} />
   <meta name="apple-mobile-web-app-status-bar-style" content={site.theme.appleStatusBar} />
 
   <!-- Twitter -->
   <meta name="twitter:card" content={site.twitter.metaImageSize} />
   <meta name="twitter:site" content={site.twitter.handle} />
   <meta name="twitter:creator" content={site.humans.kurt.twitter} />
-  <meta name="twitter:url" content={site.rootUrl} />
-  <meta name="twitter:title" content={site.meta.appName} />
-  <meta name="twitter:description" content={description} />
-  <meta name="twitter:image" content={metaImageUrl} />
-  <meta name="twitter:image:alt" content={site.twitter.imageAlt} />
+  <meta name="twitter:url" content={site.rootUrl + relativePath.slice(0, -1) + '.html'} />
+  <meta name="twitter:title" content={documentTitle ?? site.meta.title} />
+  <meta name="twitter:description" content={limitLengthWithEllipse(description, 120)} />
+  <meta name="twitter:image" content={site.rootUrl + metaImageUrl.slice(1)} />
+  <meta name="twitter:image:alt" content={limitLengthWithEllipse(description, 120)} />
 
   <!-- Facebook -->
-  <meta property="og:url" content={site.rootUrl} />
+  <meta property="og:url" content={site.rootUrl + relativePath.slice(0, -1) + '.html'} />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content={site.meta.title} />
-  <meta property="og:image" content={site.twitter.imageAlt} />
-  <meta property="og:image:alt" content={metaImageUrl} />
-  <meta property="og:description" content={description} />
+  <meta property="og:title" content={documentTitle ?? site.meta.title} />
+  <meta property="og:image" content={site.rootUrl + metaImageUrl.slice(1)} />
+  <meta property="og:image:alt" content={limitLengthWithEllipse(description, 120)} />
+  <meta property="og:description" content={limitLengthWithEllipse(description, 120)} />
   <meta property="og:site_name" content={site.meta.title} />
-  <meta property="og:locale" content="en_UK" />
+  <meta property="og:locale" content={locale} />
   <meta property="article:author" content={site.humans.kurt.name} />
 
   <!-- Microsoft -->
@@ -134,10 +136,10 @@ alternateUrls.push({
     };
   </script>
 
-  <!-- <link rel="stylesheet" href="/assets/css/main.css?v={{version}" /> -->
   <ViewTransitions />
 
   <SchemaOrg
+    locale={locale}
     documentTitle={documentTitle}
     description={description}
     schemaExtra={schemaExtra}

@@ -12,9 +12,13 @@ import { IntermediateFile } from 'constants/intermediateFile';
 import { astroPaths } from 'constants/astro';
 import { breadcrumb } from 'constants/breadcrumb';
 import { availableLanguages, UIKeys } from 'constants/localisation';
+import { site } from 'constants/site';
 import type { ILocalisation } from 'contracts/localisation';
 import type { IMonsterFormEnhanced } from 'contracts/monsterForm';
-import { stars } from 'helpers/stringHelper';
+import { type IGuideSchema, AccessMode } from 'contracts/schema/guideScheme';
+import { isoDate } from 'helpers/dateHelper';
+import { toSchemaOrgProperty } from 'helpers/schemaHelper';
+import { limitLengthWithEllipse, stars } from 'helpers/stringHelper';
 import { translator } from 'helpers/translateHelper';
 import { imgUrl } from 'helpers/urlHelper';
 
@@ -40,12 +44,25 @@ const { locale } = Astro.params;
 const data = (Astro.props as any).item as IMonsterFormEnhanced;
 const translationLookup = (languageJson as Record<string, ILocalisation>)[locale].messages;
 const { translate } = translator(translationLookup);
+
+const additionalSchemaObj: IGuideSchema = {
+  name: data.name_localised,
+  headline: data.name_localised,
+  about: data.description_localised,
+  abstract: data.description_localised,
+  description: limitLengthWithEllipse(data.bestiary_bios_localised.join(), 200),
+  accessMode: AccessMode.textual,
+  dateModified: isoDate(),
+  thumbnailUrl: site.rootUrl + data.meta_image_url.slice(1),
+};
 ---
 
 <Layout
   locale={locale}
   documentTitle={data.name_localised}
+  description={data.description_localised}
   metaImageUrl={data.meta_image_url}
+  schemaExtra={toSchemaOrgProperty('mainEntity', 'Guide', additionalSchemaObj)}
   translationLookup={translationLookup}
 >
   <Breadcrumb
@@ -72,6 +89,7 @@ const { translate } = translator(translationLookup);
                 🔉
               </h4>
               <audio id={`${data.name_localised}-cry`} class="hidden autoplay">
+                <track kind="captions" srclang="en" label="english_captions" />
                 <source src={data.battle_cry_audio_url} type="audio/wav" />
               </audio>
             </div>
@@ -84,7 +102,7 @@ const { translate } = translator(translationLookup);
               src={imgUrl(element.icon?.path)}
               class="element-image"
               loading="lazy"
-              alt={`image of ${element.name}`}
+              alt={`${element.name}`}
               draggable="false"
             />
           ))
@@ -99,7 +117,7 @@ const { translate } = translator(translationLookup);
                 src={data.icon_url}
                 class="char-image tab-content-0"
                 loading="lazy"
-                alt="image of {data.name_localised}"
+                alt={`${data.name_localised}`}
                 draggable="false"
               />
 
@@ -160,7 +178,7 @@ const { translate } = translator(translationLookup);
                   src={`/assets/img/ability/${data.unlock_ability}.png`}
                   class="ability-image"
                   loading="lazy"
-                  alt={`image of ${data.unlock_ability}`}
+                  alt={`${data.unlock_ability}`}
                   draggable="false"
                 />
                 <div>
@@ -215,7 +233,7 @@ const { translate } = translator(translationLookup);
                   <img
                     src={`/assets/img/dlc/${data.require_dlc}.png`}
                     class="ability-image"
-                    alt={`image of ${data.require_dlc}`}
+                    alt={`${data.require_dlc}`}
                     loading="lazy"
                     draggable="false"
                   />
@@ -379,7 +397,7 @@ const { translate } = translator(translationLookup);
                               <img
                                 src={imgUrl(loc.overworldSprite)}
                                 class="remaster-image"
-                                alt="overworld image"
+                                alt="overworld"
                                 loading="lazy"
                                 draggable="false"
                               />

@@ -109,7 +109,7 @@ const { translate } = translator(translationLookup);
                   class="type"
                   loading="lazy"
                   title="Typeless"
-                  alt="image of {this.name}"
+                  alt="{this.name}"
                   draggable="false"
                 />
               )}
@@ -120,12 +120,12 @@ const { translate } = translator(translationLookup);
               </div>
             </div>
             <div class="ap-block">
-              {Array.from(Array(data.cost)).map((_) => (
+              {Array.from(Array(data.cost)).map(() => (
                 <img
                   src="/assets/img/meta/ap.png"
                   class="ap"
                   title="Action Point"
-                  alt="image of an action point"
+                  alt="an action point"
                   loading="lazy"
                   draggable="false"
                 />
@@ -173,12 +173,12 @@ const { translate } = translator(translationLookup);
           )}
 
           <div class="ap-block">
-            {Array.from(Array(data.cost)).map((_) => (
+            {Array.from(Array(data.cost)).map(() => (
               <img
                 src="/assets/img/meta/ap.png"
                 class="ap"
                 title="Action Point"
-                alt="image of an action point"
+                alt="an action point"
                 loading="lazy"
                 draggable="false"
               />

@@ -7,11 +7,15 @@ import languageJson from 'assets/json/language.json';
 import { readDataFromAssets } from 'helpers/fileHelper';
 import { IntermediateFile } from 'constants/intermediateFile';
 import { astroPaths } from 'constants/astro';
-import { routes } from 'constants/route';
 import { breadcrumb } from 'constants/breadcrumb';
+import { routes } from 'constants/route';
 import { availableLanguages, UIKeys } from 'constants/localisation';
+import { site } from 'constants/site';
 import type { ILocalisation } from 'contracts/localisation';
 import type { IMoveEnhanced } from 'contracts/move';
+import { type IGuideSchema, AccessMode } from 'contracts/schema/guideScheme';
+import { isoDate } from 'helpers/dateHelper';
+import { toSchemaOrgProperty } from 'helpers/schemaHelper';
 import { translator } from 'helpers/translateHelper';
 import { imgUrl } from 'helpers/urlHelper';
 
@@ -37,12 +41,25 @@ const { locale } = Astro.params;
 const data = (Astro.props as any).item as IMoveEnhanced;
 const translationLookup = (languageJson as Record<string, ILocalisation>)[locale].messages;
 const { translate } = translator(translationLookup);
+
+const additionalSchemaObj: IGuideSchema = {
+  name: data.name_localised,
+  headline: data.name_localised,
+  about: data.description_localised,
+  abstract: data.description_localised,
+  description: data.description_localised,
+  accessMode: AccessMode.textual,
+  dateModified: isoDate(),
+  thumbnailUrl: site.rootUrl + data.meta_image_url.slice(1),
+};
 ---
 
 <Layout
   locale={locale}
   documentTitle={data.name_localised}
+  description={data.description_localised}
   metaImageUrl={data.meta_image_url}
+  schemaExtra={toSchemaOrgProperty('mainEntity', 'Guide', additionalSchemaObj)}
   translationLookup={translationLookup}
 >
   <Breadcrumb
@@ -64,7 +81,7 @@ const { translate } = translator(translationLookup);
               src={imgUrl(element.icon?.path)}
               class="type"
               loading="lazy"
-              alt={`image of ${element.name}`}
+              alt={`${element.name}`}
               draggable="false"
             />
           ))
@@ -77,7 +94,7 @@ const { translate } = translator(translationLookup);
               class="type"
               loading="lazy"
               title="Typeless"
-              alt="image of {this.name}"
+              alt="{this.name}"
               draggable="false"
             />
           )
@@ -93,12 +110,12 @@ const { translate } = translator(translationLookup);
           <div class="spacer"></div>
           <div class="ap-block">
             {
-              Array.from(Array(data.cost)).map((_) => (
+              Array.from(Array(data.cost)).map(() => (
                 <img
                   src="/assets/img/meta/ap.png"
                   class="ap"
                   title={translate(UIKeys.ap)}
-                  alt="image of an action point"
+                  alt="an action point"
                   loading="lazy"
                   draggable="false"
                 />
@@ -193,7 +210,7 @@ const { translate } = translator(translationLookup);
                         <img
                           src={imgUrl(mon.icon_url)}
                           class="remaster-image"
-                          alt={`image of ${mon.name_localised}`}
+                          alt={`${mon.name_localised}`}
                           loading="lazy"
                           draggable="false"
                         />

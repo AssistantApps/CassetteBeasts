@@ -3,6 +3,7 @@ import Layout from 'components/layouts/Layout.astro';
 import Breadcrumb from 'components/Breadcrumb.astro';
 
 import languageJson from '../../assets/json/language.json';
+import versionJson from '../../assets/json/version.json';
 
 import { readDataFromAssets } from 'helpers/fileHelper';
 import { IntermediateFile } from 'constants/intermediateFile';
@@ -69,7 +70,7 @@ const { translate } = translator(translationLookup);
                         src={imgUrl(cell.iconUrl)}
                         class="element"
                         loading="lazy"
-                        alt={`image of ${cell.name}`}
+                        alt={`${cell.name}`}
                         draggable="false"
                       />
                     )}
@@ -81,7 +82,7 @@ const { translate } = translator(translationLookup);
                             <img
                               src={imgUrl(buff.icon?.path)}
                               class="status"
-                              alt={`image of ${buff.name_localised}`}
+                              alt={`${buff.name_localised}`}
                               loading="lazy"
                               draggable="false"
                             />
@@ -100,7 +101,7 @@ const { translate } = translator(translationLookup);
                           <img
                             src={imgUrl(buff.icon?.path)}
                             class="status"
-                            alt={`image of ${buff.name_localised}`}
+                            alt={`${buff.name_localised}`}
                             loading="lazy"
                             draggable="false"
                           />
@@ -122,125 +123,123 @@ const { translate } = translator(translationLookup);
       </div>
     </div>
   </div>
-
   
-<section id="element-reaction-list" class="shidden-in-desktop mb-3">
-  <br>
-  <h3 class="ta-center">{translate(UIKeys.attacker)}</h3>
-  <details id="attacker" class="dropdown">
-      <summary class="role-link">
-          <li class="effect-option cursor-pointer">
-              <img src="/assets/img/typeless.png" class="type" loading="lazy"
-                  title={translate(UIKeys.typeless)}
-                  alt={translate(UIKeys.typeless)} draggable="false">
-              <div class="text">{translate(UIKeys.typeless)}</div>
-          </li>
-      </summary>
-      <ul class="dropdown-list">
-          <li data-id="" class="effect-option cursor-pointer"
-              onclick="onElementSelect(this, 'element-reaction-list')">
-              <img src="/assets/img/typeless.png" class="type" loading="lazy"
-                  title={translate(UIKeys.typeless)}
-                  alt={translate(UIKeys.typeless)} draggable="false">
-              <div class="text">{translate(UIKeys.typeless)}</div>
-          </li>
-          {
-          effectOptions.map(effect => <li data-id={effect.id} class="effect-option cursor-pointer"
-              onclick="onElementSelect(this, 'element-reaction-list')">
-              <img src={imgUrl(effect.iconUrl)} alt={effect.name} loading="lazy" />
-              <div class="text">
-                  {effect.name}
-              </div>
-          </li>)
-          }
-      </ul>
-  </details>
+  <section id="element-reaction-list" class="shidden-in-desktop mb-3">
+    <br>
+    <h3 class="ta-center">{translate(UIKeys.attacker)}</h3>
+    <details id="attacker" class="dropdown">
+        <summary class="role-link">
+            <li class="effect-option cursor-pointer">
+                <img src="/assets/img/typeless.png" class="type" loading="lazy"
+                    title={translate(UIKeys.typeless)}
+                    alt={translate(UIKeys.typeless)} draggable="false">
+                <div class="text">{translate(UIKeys.typeless)}</div>
+            </li>
+        </summary>
+        <ul class="dropdown-list">
+            <li data-id="" class="effect-option cursor-pointer"
+                onclick="onElementSelect(this, 'element-reaction-list')">
+                <img src="/assets/img/typeless.png" class="type" loading="lazy"
+                    title={translate(UIKeys.typeless)}
+                    alt={translate(UIKeys.typeless)} draggable="false">
+                <div class="text">{translate(UIKeys.typeless)}</div>
+            </li>
+            {
+            effectOptions.map(effect => <li data-id={effect.id} class="effect-option cursor-pointer"
+                onclick="onElementSelect(this, 'element-reaction-list')">
+                <img src={imgUrl(effect.iconUrl)} alt={effect.name} loading="lazy" />
+                <div class="text">
+                    {effect.name}
+                </div>
+            </li>)
+            }
+        </ul>
+    </details>
 
-  <br>
+    <br>
 
-  <h3 class="ta-center">{translate(UIKeys.defender)}</h3>
-  <details id="defender" class="dropdown">
-      <summary class="role-link">
-          <li class="effect-option cursor-pointer">
-              <img src="/assets/img/typeless.png" class="type" loading="lazy"
-                  title={translate(UIKeys.typeless)}
-                  alt={translate(UIKeys.typeless)} draggable="false">
-              <div class="text">{translate(UIKeys.typeless)}</div>
-          </li>
-      </summary>
-      <ul class="dropdown-list">
-          <li data-id="" class="effect-option cursor-pointer"
-              onclick="onElementSelect(this, 'element-reaction-list')">
-              <img src="/assets/img/typeless.png" class="type" loading="lazy"
-                  title={translate(UIKeys.typeless)}
-                  alt={translate(UIKeys.typeless)} draggable="false">
-              <div class="text">{translate(UIKeys.typeless)}</div>
-          </li>
-          {
-          effectOptions.map(effect => <li data-id={effect.id} class="effect-option cursor-pointer"
-              onclick="onElementSelect(this, 'element-reaction-list')">
-              <img src={imgUrl(effect.iconUrl)} alt={effect.name} loading="lazy" />
-              <div class="text">
-                  {effect.name}
-              </div>
-          </li>)
-          }
-      </ul>
-  </details>
+    <h3 class="ta-center">{translate(UIKeys.defender)}</h3>
+    <details id="defender" class="dropdown">
+        <summary class="role-link">
+            <li class="effect-option cursor-pointer">
+                <img src="/assets/img/typeless.png" class="type" loading="lazy"
+                    title={translate(UIKeys.typeless)}
+                    alt={translate(UIKeys.typeless)} draggable="false">
+                <div class="text">{translate(UIKeys.typeless)}</div>
+            </li>
+        </summary>
+        <ul class="dropdown-list">
+            <li data-id="" class="effect-option cursor-pointer"
+                onclick="onElementSelect(this, 'element-reaction-list')">
+                <img src="/assets/img/typeless.png" class="type" loading="lazy"
+                    title={translate(UIKeys.typeless)}
+                    alt={translate(UIKeys.typeless)} draggable="false">
+                <div class="text">{translate(UIKeys.typeless)}</div>
+            </li>
+            {
+            effectOptions.map(effect => <li data-id={effect.id} class="effect-option cursor-pointer"
+                onclick="onElementSelect(this, 'element-reaction-list')">
+                <img src={imgUrl(effect.iconUrl)} alt={effect.name} loading="lazy" />
+                <div class="text">
+                    {effect.name}
+                </div>
+            </li>)
+            }
+        </ul>
+    </details>
 
-  <br>
+    <br>
 
-  {
-    grid.map((row) => (
-      <Fragment>
-        {row.map((cell) => (
-          <Fragment>
-              {
-                cell.buffs.length > 0 && (<div class={`buff-details ${cell.id} ${cell.buffs ? 'hasBuffs' : ''} ${cell.is_buff ? 'buff' : ''} ${cell.is_debuff ? 'debuff' : ''}`}>
-                  <div class="extended">
-                      <div class="mobile-detail-row">
-                          <div class="attacker"></div>
-                          <div class="action"></div>
-                          <div class="defender"></div>
-                      </div>
-                      <div class="content">
-                            {cell.is_buff && <h3>{translate(UIKeys.defender)}</h3>}
-                            {cell.is_debuff && <h3>{translate(UIKeys.debuffs)}</h3>}
+    {
+      grid.map((row) => (
+        <Fragment>
+          {row.map((cell) => (
+            <Fragment>
+                {
+                  cell.buffs.length > 0 && (<div class={`buff-details ${cell.id} ${cell.buffs ? 'hasBuffs' : ''} ${cell.is_buff ? 'buff' : ''} ${cell.is_debuff ? 'debuff' : ''}`}>
+                    <div class="extended">
+                        <div class="mobile-detail-row">
+                            <div class="attacker"></div>
+                            <div class="action"></div>
+                            <div class="defender"></div>
+                        </div>
+                        <div class="content">
+                              {cell.is_buff && <h3>{translate(UIKeys.defender)}</h3>}
+                              {cell.is_debuff && <h3>{translate(UIKeys.debuffs)}</h3>}
 
-                            {cell.buffs.map((buff) => (
-                              <div class="details">
-                                <img
-                                  src={imgUrl(buff.icon?.path)}
-                                  class="status"
-                                  alt={`image of ${buff.name_localised}`}
-                                  loading="lazy"
-                                  draggable="false"
-                                />
-                                <div class="text">
-                                  <h4 class="name">{buff.name_localised}</h4>
-                                  {buff.description_localised}
+                              {cell.buffs.map((buff) => (
+                                <div class="details">
+                                  <img
+                                    src={imgUrl(buff.icon?.path)}
+                                    class="status"
+                                    alt={`${buff.name_localised}`}
+                                    loading="lazy"
+                                    draggable="false"
+                                  />
+                                  <div class="text">
+                                    <h4 class="name">{buff.name_localised}</h4>
+                                    {buff.description_localised}
+                                  </div>
                                 </div>
-                              </div>
-                            ))}
-                      </div>
-                  </div>
-                </div>)
-              }
-          </Fragment>
-        ))}
-      </Fragment>
-    ))
-  }
+                              ))}
+                        </div>
+                    </div>
+                  </div>)
+                }
+            </Fragment>
+          ))}
+        </Fragment>
+      ))
+    }
 
-  <br>
+    <br>
 
-  <div class="no-effect ta-center">
-      <div class="card hasBuffs">
-          <h5>No effect</h5>
-      </div>
-  </div>
-  </div>
-</section>
+    <div class="no-effect ta-center">
+        <div class="card hasBuffs">
+            <h5>No effect</h5>
+        </div>
+    </div>
+  </section>
 
-  <script is:inline defer src="/assets/js/highlightGrid.js?v={version}"></script>
+  <script is:inline defer src={`/assets/js/highlightGrid.js?v=${versionJson.app_version}`}></script>
 </Layout>

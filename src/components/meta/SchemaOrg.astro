@@ -1,28 +1,33 @@
 ---
 import { site } from '../../constants/site';
 import { isoDate } from '../../helpers/dateHelper';
+import { limitLengthWithEllipse } from '../../helpers/stringHelper';
 
 interface Props {
+  locale: string;
   documentTitle?: string;
-  description?: string;
+  description: string;
+  metaImageUrl?: string;
   schemaExtra?: string;
-  langCode?: string;
   version?: string;
 }
 
-const { documentTitle, description, schemaExtra, version } = Astro.props;
+const { locale, documentTitle, description, metaImageUrl, schemaExtra, version } = Astro.props;
 const date = isoDate();
 
-const htmlString = `
-<script type="application/ld+json">
-  {
+const indexOfDivider = locale.indexOf('_');
+const langCode = indexOfDivider > 0 ? locale.substring(0, indexOfDivider) : locale;
+
+let jsonStr = `{
     "@context": "https://schema.org/",
     "@type": "SoftwareApplication",
     "name": "${documentTitle != null ? `${documentTitle} - ` : ''}${site.meta.appName}",
     "url": "${site.rootUrl}",
-    "about": "${description}",
-    "description": "${description}",
-    "image": "${site.images.favicon.x192}",
+    "about": "${limitLengthWithEllipse(description, 80)}",
+    "abstract": "${limitLengthWithEllipse(description, 80)}",
+    "description": "${limitLengthWithEllipse(description, 150)}",
+    "image": "${metaImageUrl ?? site.images.favicon.x192}",
+    "keywords": "${site.meta.keywords}",
     "applicationCategory": "Application",
     "operatingSystem": "Android Lollipop, iOS, Chrome, Firefox, Opera, Internet Explorer, Edge",
     "softwareVersion": "${version}",
@@ -48,11 +53,16 @@ const htmlString = `
       "image": "${site.humans.kurt.image}",
       "jobTitle": "${site.humans.kurt.jobTitle}"
     },
-    "inLanguage": "en",
+    "inLanguage": "${langCode}",
     "dateCreated": "${date}",
     "dateModified": "${date}",
     "datePublished": "${date}"
-  }
+  }`;
+
+const jsonObj = JSON.parse(jsonStr);
+const htmlString = `
+<script type="application/ld+json">
+${JSON.stringify(jsonObj, null, 2)}
 </script>`;
 ---
 

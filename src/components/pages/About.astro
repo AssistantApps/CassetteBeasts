@@ -17,7 +17,12 @@ const { translate } = translator(translationLookup);
 const title = translate('about');
 ---
 
-<Layout locale={locale} documentTitle={title} translationLookup={translationLookup}>
+<Layout
+  locale={locale}
+  documentTitle={title}
+  description={`This website is a 'quick' passion project for me (KhaozTopsy). It was born out of a desire to keep enjoying the game even though i was nearing the end of Cassette Beasts, almost completing all the missions and the bestiary.`}
+  translationLookup={translationLookup}
+>
   <section id="about-grid" class="mb-1">
     <h1 class="Neu5Land ta-center">{title}</h1>
 

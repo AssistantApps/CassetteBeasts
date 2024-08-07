@@ -14,12 +14,14 @@ import { excludeLangCodes } from 'constants/localisation';
 interface Props {
   locale: string;
   documentTitle: string;
+  description?: string;
   metaImageUrl?: string;
   schemaExtra?: string;
   translationLookup: Record<string, string>;
 }
 
-const { locale, documentTitle, metaImageUrl, schemaExtra, translationLookup } = Astro.props;
+const { locale, documentTitle, description, metaImageUrl, schemaExtra, translationLookup } =
+  Astro.props;
 
 const allLangCodes = Object.keys(languageJson).filter((lang) => !excludeLangCodes.includes(lang));
 ---
@@ -29,6 +31,7 @@ const allLangCodes = Object.keys(languageJson).filter((lang) => !excludeLangCode
     locale={locale}
     allLangCodes={allLangCodes}
     documentTitle={documentTitle}
+    description={description}
     metaImageUrl={metaImageUrl}
     schemaExtra={schemaExtra}
     version={versionJson.app_version}
@@ -62,7 +65,7 @@ const allLangCodes = Object.keys(languageJson).filter((lang) => !excludeLangCode
         });
       }
       document.addEventListener('astro:page-load', () => {
-        onPageLoad();
+        window.onPageLoad();
       });
     </script>
   </body>

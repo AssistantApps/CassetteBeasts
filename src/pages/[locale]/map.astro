@@ -71,7 +71,7 @@ const { translate } = translator(translationLookup);
                   <img
                     src={imgUrl(map.map_texture?.path)}
                     class="map"
-                    alt={`image of ${map.title_localised}`}
+                    alt={`${map.title_localised}`}
                     loading="lazy"
                     draggable="false"
                   />
@@ -94,7 +94,7 @@ const { translate } = translator(translationLookup);
                                       <img
                                         src={imgUrl(feat.icon_url)}
                                         class="status"
-                                        alt={`image of ${feat.title_localised}`}
+                                        alt={`${feat.title_localised}`}
                                         loading="lazy"
                                         draggable="false"
                                       />

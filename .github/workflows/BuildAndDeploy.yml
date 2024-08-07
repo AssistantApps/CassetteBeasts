@@ -53,12 +53,12 @@ jobs:
 
       - name: Generate service worker
         run: |
-          npm run data:service-worker
+          npm run service-worker
 
       - name: Remove gitignore
         run: |
           rm -f .gitignore
-          rm -f public/.gitignore
+          rm -f dist/.gitignore
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4

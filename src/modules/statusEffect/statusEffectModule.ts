@@ -73,7 +73,9 @@ export class StatusEffectModule extends CommonModule<IStatusEffect, IStatusEffec
       const detailEnhanced: IStatusEffectEnhanced = {
         ...detail,
         name_localised,
-        description_localised: localeModule.translate(langCode, detail.description),
+        description_localised: (localeModule.translate(langCode, detail.description) ?? '')
+          .replaceAll("\\'", "'")
+          .replaceAll('\\"', "'"),
         toast_on_remove_localised: localeModule.translate(langCode, detail.toast_on_remove),
         name_modifier_localised: localeModule.translate(langCode, detail.name_modifier),
         meta_image_url: `/assets/img/meta/${langCode}${routes.statusEffect}/${encodeURI(

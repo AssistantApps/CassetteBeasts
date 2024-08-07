@@ -115,7 +115,9 @@ export class MonsterFormsModule extends CommonModule<IMonsterForm, IMonsterFormE
         bestiary_index_with_padding:
           detail.bestiary_index >= 0 ? pad(detail.bestiary_index, 3) : '???',
         name_localised: localeModule.translate(langCode, detail.name),
-        description_localised: localeModule.translate(langCode, detail.description),
+        description_localised: localeModule
+          .translate(langCode, detail.description)
+          .replaceAll("\\'", "'"),
         icon_url,
         sprite_sheet_path: detail.battle_sprite_path.replace('.json', '.sheet.png'),
         evolution_specialization_question_localised: localeModule.translate(
