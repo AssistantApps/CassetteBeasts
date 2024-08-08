@@ -1,0 +1,9 @@
+{
+    "recommendations": [
+        "dbaeumer.vscode-eslint",
+        "astro-build.astro-vscode",
+        "streetsidesoftware.code-spell-checker",
+        "seatonjiang.gitmoji-vscode",
+        "esbenp.prettier-vscode"
+    ]
+}

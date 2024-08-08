@@ -48,7 +48,7 @@ jobs:
       - name: Build TS
         run: |
           npm ci
-          npm run data:build
+          npm run data
           npm run build
 
       - name: Generate service worker
