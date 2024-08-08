@@ -2,8 +2,8 @@
 import Layout from 'components/layouts/Layout.astro';
 import Breadcrumb from 'components/Breadcrumb.astro';
 
-import languageJson from '../../assets/json/language.json';
-import versionJson from '../../assets/json/version.json';
+import languageJson from '../../../assets/json/language.json';
+import versionJson from '../../../assets/json/version.json';
 
 import { readDataFromAssets } from 'helpers/fileHelper';
 import { IntermediateFile } from 'constants/intermediateFile';
@@ -124,7 +124,7 @@ const { translate } = translator(translationLookup);
     </div>
   </div>
   
-  <section id="element-reaction-list" class="shidden-in-desktop mb-3">
+  <section id="element-reaction-list" class="hidden-in-desktop mb-3">
     <br>
     <h3 class="ta-center">{translate(UIKeys.attacker)}</h3>
     <details id="attacker" class="dropdown">

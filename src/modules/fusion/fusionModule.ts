@@ -46,6 +46,7 @@ export class FusionModule extends CommonModule<IFusion, IFusionEnhanced> {
   };
 
   enrichData = async (langCode: string, modules: Array<CommonModule<unknown, unknown>>) => {
+    this._enhanced_nodes = [];
     for (const detail of this._baseDetails) {
       const nodes_enhanced: Record<string, INodeResourceEnhanced> = {};
       const detailNodes = detail.nodes ?? {};

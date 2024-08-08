@@ -52,6 +52,9 @@ export class MonsterSpawnModule extends CommonModule<IMonsterSpawn, IMonsterSpaw
       ModuleType.Localisation,
     ) as LocalisationModule;
 
+    this._monsterToLocationMap = {};
+    this._mapCoordToMonsterSpawnMap = {};
+
     for (const detail of this._baseDetails) {
       const species_enhanced: Array<IMonsterSpawnDetailsEnhanced> = [];
       const detailSpecies = detail.species ?? [];

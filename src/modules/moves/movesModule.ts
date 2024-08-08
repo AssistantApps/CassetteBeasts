@@ -75,6 +75,9 @@ export class MovesModule extends CommonModule<IMove, IMoveEnhanced> {
       ModuleType.StatusEffect,
     );
 
+    this._moveTagToMovesIdMap = {};
+    this._statusEffectToMovesIdMap = {};
+
     for (const detail of this._baseDetails) {
       if (detail.id == 'placeholder') continue;
       if (detail.id.includes('debug')) continue;

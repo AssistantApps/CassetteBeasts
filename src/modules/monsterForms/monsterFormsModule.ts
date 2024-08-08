@@ -96,6 +96,8 @@ export class MonsterFormsModule extends CommonModule<IMonsterForm, IMonsterFormE
       ModuleType.MonsterSpriteAnim,
     );
 
+    this._evolutionFromMap = {};
+    this._moveToMonsterIdsMap = {};
     this._buildEvolutionFromMap();
 
     for (const detail of this._baseDetails) {
@@ -324,7 +326,6 @@ export class MonsterFormsModule extends CommonModule<IMonsterForm, IMonsterFormE
   };
 
   private _buildEvolutionFromMap = () => {
-    this._evolutionFromMap = {};
     for (const detail of this._baseDetails) {
       if (detail.evolutions.length > 0) {
         const mapKey = detail.name.replace('_NAME', '').toLowerCase();
