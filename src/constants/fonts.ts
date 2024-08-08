@@ -22,6 +22,11 @@ export const fontMetas: { [prop: string]: Array<IFontFile> } = {
       name: 'Neu5Land',
     },
   ],
-  [japaneseLocale]: [],
+  [japaneseLocale]: [
+    {
+      file: './assets/font/regular.NotoSansJP-Bold.ttf',
+      name: 'Neu5Land',
+    },
+  ],
   [chineseLocale]: [],
 } as const;
