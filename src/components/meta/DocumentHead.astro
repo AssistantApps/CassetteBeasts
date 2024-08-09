@@ -12,7 +12,6 @@ import { limitLengthWithEllipse } from '../../helpers/stringHelper';
 interface Props {
   locale: string;
   documentTitle?: string;
-  shortDescription?: string;
   description?: string;
   metaImageUrl?: string;
   allLangCodes: Array<string>;
@@ -26,6 +25,8 @@ const description = Astro.props.description ?? site.meta.description;
 const metaImageUrl = Astro.props.metaImageUrl ?? site.images.meta.url;
 
 const relativePath = Astro.url.pathname.slice(1);
+const canonical = site.rootUrl + relativePath.slice(0, -1) + '.html';
+const metaDescription = limitLengthWithEllipse(description, 120);
 
 const alternateUrls: Array<IAlternateUrl> = [];
 for (const lang of allLangCodes) {
@@ -51,7 +52,7 @@ alternateUrls.push({
   <meta name="application-name" content={site.meta.appName} />
   <title>{documentTitle != null ? `${documentTitle} - ` : ''}{site.meta.title}</title>
   <link rel="index" href={site.rootUrl} />
-  <link rel="canonical" href={site.rootUrl} />
+  <link rel="canonical" href={canonical} />
   <link rel="manifest" href="/site.webmanifest" />
   <link rel="author" href="/humans.txt" />
   <link rel="me" href={site.humans.kurt.email} />
@@ -68,9 +69,9 @@ alternateUrls.push({
   <meta name="url" content={site.rootUrl} />
   <meta name="identifier-URL" content={site.rootUrl} />
   <meta name="theme-color" content={site.theme.colour} />
-  <meta name="subject" content={description} />
-  <meta name="description" content={description} />
-  <meta name="abstract" content={description} />
+  <meta name="subject" content={metaDescription} />
+  <meta name="description" content={metaDescription} />
+  <meta name="abstract" content={metaDescription} />
   <meta name="copyright" content={site.meta.copyright} />
   <meta name="keywords" content={site.meta.keywords} />
   <meta name="language" content={locale} />
@@ -106,19 +107,19 @@ alternateUrls.push({
   <meta name="twitter:card" content={site.twitter.metaImageSize} />
   <meta name="twitter:site" content={site.twitter.handle} />
   <meta name="twitter:creator" content={site.humans.kurt.twitter} />
-  <meta name="twitter:url" content={site.rootUrl + relativePath.slice(0, -1) + '.html'} />
+  <meta name="twitter:url" content={canonical} />
   <meta name="twitter:title" content={documentTitle ?? site.meta.title} />
-  <meta name="twitter:description" content={limitLengthWithEllipse(description, 120)} />
+  <meta name="twitter:description" content={metaDescription} />
   <meta name="twitter:image" content={site.rootUrl + metaImageUrl.slice(1)} />
-  <meta name="twitter:image:alt" content={limitLengthWithEllipse(description, 120)} />
+  <meta name="twitter:image:alt" content={metaDescription} />
 
   <!-- Facebook -->
-  <meta property="og:url" content={site.rootUrl + relativePath.slice(0, -1) + '.html'} />
+  <meta property="og:url" content={canonical} />
   <meta property="og:type" content="website" />
   <meta property="og:title" content={documentTitle ?? site.meta.title} />
   <meta property="og:image" content={site.rootUrl + metaImageUrl.slice(1)} />
-  <meta property="og:image:alt" content={limitLengthWithEllipse(description, 120)} />
-  <meta property="og:description" content={limitLengthWithEllipse(description, 120)} />
+  <meta property="og:image:alt" content={metaDescription} />
+  <meta property="og:description" content={metaDescription} />
   <meta property="og:site_name" content={site.meta.title} />
   <meta property="og:locale" content={locale} />
   <meta property="article:author" content={site.humans.kurt.name} />

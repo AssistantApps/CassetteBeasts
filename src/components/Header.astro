@@ -30,7 +30,7 @@ const availableLanguages = allLangCodes
 <header class="header">
   <div class="container noselect">
     <nav>
-      <a aria-label="Home" href={`/${locale}${routes.home}`} transition:persist>
+      <a title="Home" aria-label="Home" href={`/${locale}${routes.home}`} transition:persist>
         <ul class="branding">
           <li transition:persist>
             <div class="logo animate__animated">
@@ -98,6 +98,7 @@ const availableLanguages = allLangCodes
           <a
             rel="noopener noreferrer"
             class="contrast"
+            title="GitHub repository"
             aria-label="GitHub repository"
             href={urlRef(site.github.repo)}
             target="_blank"
