@@ -1,11 +1,11 @@
-import { IElement } from './element';
-import { IExternalResource } from './externalResource';
-import { IStatusEffect } from './statusEffect';
+import type { IElement } from './element';
+import type { IExternalResource } from './externalResource';
+import type { IStatusEffect, IStatusEffectEnhanced } from './statusEffect';
 
 export interface IElementReaction {
   id: string;
-  attacker: IExternalResource;
-  defender: IExternalResource;
+  attacker?: IExternalResource;
+  defender?: IExternalResource;
   result: Array<IExternalResource>;
   varied_result_amount: Array<number>;
   default_result_amount: number;
@@ -27,5 +27,5 @@ export interface IElementGridCell {
   is_buff: boolean;
   is_debuff: boolean;
   message?: string;
-  buffs: Array<IStatusEffect>;
+  buffs: Array<IStatusEffectEnhanced>;
 }

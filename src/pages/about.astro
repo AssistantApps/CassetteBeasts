@@ -1,0 +1,12 @@
+---
+import AboutContent from '../components/pages/About.astro';
+
+import languageJson from '../assets/json/language.json';
+
+import { defaultLocale } from '../constants/localisation';
+import type { ILocalisation } from '../contracts/localisation';
+
+const translationLookup = (languageJson as Record<string, ILocalisation>)[defaultLocale].messages;
+---
+
+<AboutContent locale={defaultLocale} translationLookup={translationLookup} />

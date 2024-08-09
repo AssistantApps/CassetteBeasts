@@ -1,0 +1,221 @@
+---
+import Layout from 'components/layouts/Layout.astro';
+import Breadcrumb from 'components/Breadcrumb.astro';
+
+import languageJson from 'assets/json/language.json';
+
+import { readDataFromAssets } from 'helpers/fileHelper';
+import { IntermediateFile } from 'constants/intermediateFile';
+import { astroPaths } from 'constants/astro';
+import { breadcrumb } from 'constants/breadcrumb';
+import { routes } from 'constants/route';
+import { availableLanguages, UIKeys } from 'constants/localisation';
+import { site } from 'constants/site';
+import type { ILocalisation } from 'contracts/localisation';
+import type { IStatusEffectEnhanced } from 'contracts/statusEffect';
+import { type IGuideSchema, AccessMode } from 'contracts/schema/guideScheme';
+import { isoDate } from 'helpers/dateHelper';
+import { toSchemaOrgProperty } from 'helpers/schemaHelper';
+import { translator } from 'helpers/translateHelper';
+import { imgUrl } from 'helpers/urlHelper';
+
+export async function getStaticPaths() {
+  const paths: any = [];
+  for (const locale of availableLanguages) {
+    const itemMap = await readDataFromAssets<Record<string, IStatusEffectEnhanced>>({
+      pathFolders: [...astroPaths.intermediatePath, locale],
+      destFileName: IntermediateFile.statusEffects,
+    });
+    for (const item of Object.values(itemMap)) {
+      const path = {
+        params: { locale: locale, id: item.id },
+        props: { item },
+      };
+      paths.push(path as never);
+    }
+  }
+  return paths;
+}
+
+const { locale } = Astro.params;
+const data = (Astro.props as any).item as IStatusEffectEnhanced;
+const translationLookup = (languageJson as Record<string, ILocalisation>)[locale].messages;
+const { translate } = translator(translationLookup);
+
+const additionalSchemaObj: IGuideSchema = {
+  name: data.name_localised,
+  headline: data.name_localised,
+  about: data.description_localised,
+  abstract: data.description_localised,
+  description: data.description_localised,
+  accessMode: AccessMode.textual,
+  dateModified: isoDate(),
+  thumbnailUrl: site.rootUrl + data.meta_image_url.slice(1),
+};
+---
+
+<Layout
+  locale={locale}
+  documentTitle={data.name_localised}
+  description={data.description_localised}
+  metaImageUrl={data.meta_image_url}
+  schemaExtra={toSchemaOrgProperty('mainEntity', 'Guide', additionalSchemaObj)}
+  translationLookup={translationLookup}
+>
+  <Breadcrumb
+    locale={locale}
+    translationLookup={translationLookup}
+    breadcrumbs={[
+      breadcrumb.statusEffect(locale),
+      breadcrumb.statusEffectDetail(locale, data.name_localised),
+    ]}
+  />
+
+  <div class="grid status-effect-detail-grid mb-3">
+    <div class="meta">
+      <h1>{translate(UIKeys.statusEffect)} - {data.name_localised}</h1>
+    </div>
+
+    <article class="item-detail-card">
+      <div class="item-detail-card-heading primary">
+        <img
+          src={imgUrl(data.icon?.path)}
+          class="icon"
+          loading="lazy"
+          alt={`icon of ${data.name_localised}`}
+          draggable="false"
+        />
+        <h2 class="Neu5Land animate__animated animate__fadeIn">{data.name_localised}</h2>
+      </div>
+      <div class="item-detail-card-body">
+        <div class="sub-heading">
+          {data.description_localised ? <p>{data.description_localised}</p> : <p>...</p>}
+        </div>
+
+        <section
+          class="additional-section negative-margin additional animate__animated animate__fadeIn"
+        >
+          <h3 class="section-heading Neu5Land">{translate('additionalStats')}</h3>
+          <div class="table-container">
+            <table class="additional highlight-cell animate__animated animate__fadeIn">
+              <thead>
+                <tr>
+                  <td class="ta-center">
+                    <code>is_removable</code>
+                  </td>
+                  <td class="ta-center">
+                    <code>is_buff</code>
+                  </td>
+                  <td class="ta-center">
+                    <code>is_debuff</code>
+                  </td>
+                  <td class="ta-center">
+                    <code>is_decoy</code>
+                  </td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="ta-center">{data.is_removable ? '✔️' : '❌'}</td>
+                  <td class="ta-center">{data.is_buff ? '✔️' : '❌'}</td>
+                  <td class="ta-center">{data.is_debuff ? '✔️' : '❌'}</td>
+                  <td class="ta-center">{data.is_decoy ? '✔️' : '❌'}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        {
+          data.stats_affected.length > 0 && (
+            <section class="status-section additional animate__animated animate__fadeIn">
+              <h3 class="section-heading custom-padding Neu5Land">{translate(UIKeys.stats)}</h3>
+              <div class="statuses">
+                {data.stats_affected.map((stat) => (
+                  <code>{stat}</code>
+                ))}
+              </div>
+            </section>
+          )
+        }
+      </div>
+    </article>
+
+    {
+      data.moves_that_cause_this_effect.length > 0 && (
+        <article class="item-detail-card">
+          <div class="item-detail-card-heading">
+            <h2 class="Neu5Land animate__animated animate__fadeIn">
+              {translate(UIKeys.viewStickers)}
+            </h2>
+          </div>
+          <div class="item-detail-card-body">
+            <div class="table-container reverse-padding">
+              <table class="moves last-td-padding highlight-row animate__animated animate__fadeIn">
+                <thead>
+                  <tr class="no-padding">
+                    <td class="type" />
+                    <td class="name">{translate(UIKeys.name)}</td>
+                    <td class="category">{translate(UIKeys.category)}</td>
+                  </tr>
+                </thead>
+                <tbody>
+                  {data.moves_that_cause_this_effect.map((move) => (
+                    <tr class="move no-padding">
+                      <td class="type">
+                        <a
+                          href={`/${locale}${routes.moves}/${encodeURI(move.id)}.html`}
+                          title={move.name_localised}
+                        >
+                          {move.elemental_types_elements.length > 0 ? (
+                            <Fragment>
+                              {move.elemental_types_elements.map((elem) => (
+                                <img
+                                  src={imgUrl(elem.icon?.path)}
+                                  class="move-image"
+                                  alt={`${elem.name_localised}`}
+                                  loading="lazy"
+                                  draggable="false"
+                                />
+                              ))}
+                            </Fragment>
+                          ) : (
+                            <img
+                              src="/assets/img/typeless.png"
+                              class="move-image"
+                              title="Typeless"
+                              alt="typeless"
+                              loading="lazy"
+                              draggable="false"
+                            />
+                          )}
+                        </a>
+                      </td>
+                      <td class="name">
+                        <a
+                          href={`/${locale}${routes.moves}/${encodeURI(move.id)}.html`}
+                          title={move.name_localised}
+                        >
+                          {move.name_localised}
+                        </a>
+                      </td>
+                      <td class="category">
+                        <a
+                          href={`/${locale}${routes.moves}/${encodeURI(move.id)}.html`}
+                          title={move.name_localised}
+                        >
+                          {move.category_name_localised}
+                        </a>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <br />
+          </div>
+        </article>
+      )
+    }
+  </div>
+</Layout>

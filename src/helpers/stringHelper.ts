@@ -1,4 +1,4 @@
-import { chineseLocale, japaneseLocale, koreanLocale } from 'constant/localisation';
+import { chineseLocale, japaneseLocale, koreanLocale } from 'constants/localisation';
 
 const capitalizeAlphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
@@ -77,9 +77,9 @@ export const getStringArray = (line: string): Array<string> =>
     .map(getCleanedString)
     .filter((l) => l != null && l.length > 0);
 
-export const pad = (num: number, size: number): string => {
+export const pad = (num: number, size: number, char: string = '0'): string => {
   let s = num + '';
-  while (s.length < size) s = '0' + s;
+  while (s.length < size) s = char + s;
   return s;
 };
 
@@ -97,6 +97,16 @@ export const limitLengthWithEllipse = (line: string, limit: number): string => {
   if (line == null || line.length < 1) return '';
   if (line.length < limit) return line;
   return line.substring(0, limit) + '...';
+};
+
+export const stars = (amount: number): string => {
+  if (isNaN(amount)) return '';
+  return '★'.repeat(amount + 1);
+};
+
+export const encodeEmail = (email: string) => {
+  const chars = (email ?? '').toString().split('');
+  return encodeURI(btoa(chars.map((c) => `<${c}>`).join('')));
 };
 
 export const getDescripLines = (langCode: string, description: string) => {

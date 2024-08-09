@@ -63,8 +63,8 @@ const displayElementReaction = (containerElem) => {
 
   let numResults = 0;
   const noEffectElem = containerElem.querySelector('.no-effect');
-  const buffElems = containerElem.querySelectorAll('.buff-details');
-  for (const buffElem of buffElems) {
+  const buffElements = containerElem.querySelectorAll('.buff-details');
+  for (const buffElem of buffElements) {
     let hasKey = false;
     let classKey = '';
     for (const classItem of buffElem.classList) {
@@ -104,7 +104,7 @@ const displayElementReaction = (containerElem) => {
   }
 
   if (numResults == 0) {
-    noEffectElem.setProperty('display', 'block', 'important');
+    noEffectElem.style.setProperty('display', 'block', 'important');
   } else {
     noEffectElem.style.setProperty('display', 'none', 'important');
   }

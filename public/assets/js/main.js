@@ -36,14 +36,11 @@ function onPageLoad() {
     const resetVolume = () => {
       audios[0].volume = 1;
       audios[0].removeEventListener('ended', resetVolume, false);
-    }
+    };
     audios[0].addEventListener('ended', resetVolume, false);
     audios[0].play();
   }
 }
-
-//document.addEventListener("DOMContentLoaded", onPageLoad);
-onPageLoad();
 
 function setSetting(name, value) {
   window.assistantApps[name] = value;
@@ -55,7 +52,8 @@ function changeLanguage(newLangCode) {
   const slashIndex = pathName.indexOf('/');
   let trailingPath = pathName.substring(slashIndex);
   if (slashIndex < 0) {
-    trailingPath = '/' + trailingPath;
+    // trailingPath = '/' + trailingPath;
+    trailingPath = '';
   }
 
   window.location.href = `/${newLangCode}${trailingPath}`;
@@ -131,7 +129,8 @@ const highlight = (node, text, searchString) => {
   }
 };
 
-const orderItemsByDataAttr = (parentId, attrToOrderBy) => {
+const orderItemsByDataAttr = (elem, parentId) => {
+  const attrToOrderBy = elem.value;
   const parentNode = document.getElementById(parentId);
   if (parentNode == null) return;
 
@@ -164,8 +163,7 @@ const playAudioNode = (id) => {
   node.play();
 };
 
-const revealEmail = (elem, event) => {
-  event?.preventDefault?.();
+const revealEmail = (elem) => {
   const obfuscated = atob(decodeURI(elem.dataset['email']));
   let realValue = '';
   for (let index = 0; index < obfuscated.split('').length; index++) {
@@ -178,4 +176,5 @@ const revealEmail = (elem, event) => {
   elem.title = realValue.replace('mailto:', '');
   elem.innerText = realValue.replace('mailto:', '');
   elem.removeAttribute('onclick');
+  return false;
 };

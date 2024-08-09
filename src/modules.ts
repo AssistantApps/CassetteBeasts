@@ -5,6 +5,8 @@ import { CharacterSpriteAnimModule } from 'modules/characterSpriteAnim/character
 import { CommonModule } from 'modules/commonModule';
 import { ElementReactionModule } from 'modules/elementReactions/elementReactionModule';
 import { ElementsModule } from 'modules/elements/elementsModule';
+import { FusionModule } from 'modules/fusion/fusionModule';
+import { FusionSpriteAnimModule } from 'modules/fusionSpriteAnim/fusionSpriteAnimModule';
 import { LocalisationModule } from 'modules/localisation/localisationModule';
 import { MiscModule } from 'modules/misc/miscModule';
 import { MonsterFormsModule } from 'modules/monsterForms/monsterFormsModule';
@@ -17,7 +19,7 @@ import { WorldModule } from 'modules/world/worldModule';
 
 export const getModules = async (props: {
   loadFromJson?: boolean;
-}): Promise<[LocalisationModule, Array<CommonModule<unknown>>]> => {
+}): Promise<[LocalisationModule, Array<CommonModule<unknown, unknown>>]> => {
   const localisationModule = new LocalisationModule();
   if (props.loadFromJson == true) {
     await localisationModule.initFromIntermediate();
@@ -25,7 +27,7 @@ export const getModules = async (props: {
     const message = await localisationModule.init();
     console.log(`\t${message}`);
   }
-  const modules: Array<CommonModule<unknown>> = [
+  const modules: Array<CommonModule<unknown, unknown>> = [
     localisationModule,
     new MiscModule(),
     new WorldModule(),
@@ -51,8 +53,8 @@ export const getModules = async (props: {
     new CharacterSfxModule(),
 
     // Fusions
-    // new FusionModule(),
-    // new FusionSpriteAnimModule(),
+    new FusionModule(),
+    new FusionSpriteAnimModule(),
   ];
   return [localisationModule, modules];
 };

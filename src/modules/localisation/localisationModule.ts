@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import readline from 'readline';
 
-import { IntermediateFile } from 'constant/intermediateFile';
+import { IntermediateFile } from 'constants/intermediateFile';
 import {
   UIKeys,
   UIKeysRemoveNewline,
@@ -11,23 +11,26 @@ import {
   UIKeysRemoveTrailingColon,
   UIKeysReplace0Param,
   defaultLocale,
-} from 'constant/localisation';
-import { ModuleType } from 'constant/module';
-import { paths } from 'constant/paths';
-import { tresSeparator } from 'constant/tresSeparator';
-import { ILocalisation } from 'contracts/localisation';
+  excludeLangCodes,
+} from 'constants/localisation';
+import { ModuleType } from 'constants/module';
+import { paths } from 'constants/paths';
+import { tresSeparator } from 'constants/tresSeparator';
+import type { ILocalisation } from 'contracts/localisation';
 import { FolderPathHelper } from 'helpers/folderPathHelper';
-import { stringStartsWith } from 'helpers/stringHelper';
+import { pad, stringStartsWith } from 'helpers/stringHelper';
 import { CommonModule } from 'modules/commonModule';
 
-const excludeLangCodes = ['eo'];
+export class LocalisationModule extends CommonModule<ILocalisation, ILocalisation> {
+  _keysToKeep: Record<string, string> = {};
+  _aaItemDetailMap: Record<string, Record<string, string>> = {};
 
-export class LocalisationModule extends CommonModule<ILocalisation> {
   constructor() {
     super({
       type: ModuleType.Localisation,
       intermediateFile: IntermediateFile.language,
-      dependsOn: [],
+      loadOnce: true,
+      dependsOn: [ModuleType.AssistantApps],
     });
   }
 
@@ -61,7 +64,7 @@ export class LocalisationModule extends CommonModule<ILocalisation> {
         messages: {},
       };
       let item: ILocalisation = { ...defaultItem };
-      let mode: 'none' | 'head' | 'messages' | 'locale';
+      let mode: 'none' | 'head' | 'messages' | 'locale' | undefined;
       for await (const line of rl) {
         if (mode == 'none') {
           item = { ...defaultItem };
@@ -120,30 +123,19 @@ export class LocalisationModule extends CommonModule<ILocalisation> {
       }
     }
 
-    this.isReady = true;
-    return `${Object.keys(this._itemDetailMap).length} languages loaded, with ${
+    return `${pad(Object.keys(this._itemDetailMap).length, 3, ' ')} languages loaded, with ${
       Object.keys(this._itemDetailMap?.[defaultLocale]?.messages ?? {}).length
     } keys per language.`;
   };
 
-  loadAssistantAppsLanguage = () => {
-    const aaSrcFile = path.join(paths().intermediateFolder, IntermediateFile.assistantAppsLanguage);
-    const jsonString = fs.readFileSync(aaSrcFile, 'utf-8');
-    const langExportMap = JSON.parse(jsonString);
-    for (const langExportKey of Object.keys(langExportMap)) {
-      if (this._itemDetailMap[langExportKey]?.messages == null) {
-        console.error(
-          `Language "${langExportKey}" does not exist in LocalisationModule._itemDetailMap`,
-        );
-        continue;
-      }
-
-      const langMap = langExportMap[langExportKey];
-      for (const langMapKey of Object.keys(langMap)) {
-        const value = langMap[langMapKey];
-        this._itemDetailMap[langExportKey].messages[langMapKey] = value;
-      }
+  enrichData = async (langCode: string, modules: Array<CommonModule<unknown, unknown>>) => {
+    const aaModule = this.getModuleOfType<ILocalisation>(modules, ModuleType.AssistantApps);
+    for (const locale of this.getLanguageCodes()) {
+      const allMessages = aaModule.get(locale).messages;
+      this._aaItemDetailMap[locale] = { ...allMessages };
     }
+
+    this.isReady = true;
   };
 
   getLanguageCodes = () =>
@@ -167,7 +159,7 @@ export class LocalisationModule extends CommonModule<ILocalisation> {
 
     const uiLocalisationMap: Record<string, string> = {};
     for (const uiKey of Object.keys(UIKeys)) {
-      const uiKeyString = UIKeys[uiKey];
+      const uiKeyString = (UIKeys as Record<string, string>)[uiKey];
       let message: string = messageMap[uiKeyString];
       if (UIKeysRemoveTrailingColon.includes(uiKeyString)) {
         const colonIndex = message.indexOf(':');
@@ -194,8 +186,63 @@ export class LocalisationModule extends CommonModule<ILocalisation> {
       uiLocalisationMap[uiKeyString] = message.trim();
     }
 
+    for (const localisationKey of Object.keys(messageMap)) {
+      if (localisationKey.includes('LANG_') == false) continue;
+
+      let message: string = messageMap[localisationKey];
+      uiLocalisationMap[localisationKey] = message.trim();
+    }
+
     return uiLocalisationMap;
   };
 
   get = (id: string) => this._itemDetailMap[id];
+
+  translate = (locale: string, key: string): string => {
+    this._keysToKeep[key] = key;
+    const localisation = this._itemDetailMap[locale];
+    if (localisation == null) return key;
+
+    return localisation.messages[key];
+  };
+
+  initFromIntermediate = async () => {
+    const srcFile = path.join(paths().intermediateFolder, this.intermediateFile);
+    const jsonString = fs.readFileSync(srcFile, 'utf-8');
+    this._itemDetailMap = JSON.parse(jsonString);
+  };
+
+  writeIntermediate = () => {
+    const destFile = path.join(paths().intermediateFolder, this.intermediateFile);
+
+    const newItemDetailMap: Record<string, ILocalisation> = {};
+    for (const locale of this.getLanguageCodes()) {
+      const existingMessages = this._itemDetailMap[locale].messages;
+      const filteredMessages: Record<string, string> = {};
+      for (const existingMessageKey of Object.keys(existingMessages)) {
+        // if (this._keysToKeep[existingMessageKey] == null) continue;
+        filteredMessages[existingMessageKey] = existingMessages[existingMessageKey];
+      }
+
+      const uiTranslations = this.getUITranslations(locale);
+      for (const uiTransKey of Object.keys(uiTranslations)) {
+        const uiTransValue = uiTranslations[uiTransKey];
+        filteredMessages[uiTransKey] = uiTransValue;
+      }
+
+      const aaMessages = this._aaItemDetailMap[locale];
+      for (const aaTransKey of Object.keys(aaMessages)) {
+        const aaTransValue = aaMessages[aaTransKey];
+        filteredMessages[aaTransKey] = aaTransValue;
+      }
+
+      newItemDetailMap[locale] = {
+        id: this._itemDetailMap[locale].id,
+        locale: this._itemDetailMap[locale].locale,
+        messages: filteredMessages,
+      };
+    }
+
+    fs.writeFileSync(destFile, JSON.stringify(newItemDetailMap, null, 2), 'utf-8');
+  };
 }

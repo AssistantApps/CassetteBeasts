@@ -1,0 +1,69 @@
+---
+import { site } from '../../constants/site';
+import { isoDate } from '../../helpers/dateHelper';
+import { limitLengthWithEllipse } from '../../helpers/stringHelper';
+
+interface Props {
+  locale: string;
+  documentTitle?: string;
+  description: string;
+  metaImageUrl?: string;
+  schemaExtra?: string;
+  version?: string;
+}
+
+const { locale, documentTitle, description, metaImageUrl, schemaExtra, version } = Astro.props;
+const date = isoDate();
+
+const indexOfDivider = locale.indexOf('_');
+const langCode = indexOfDivider > 0 ? locale.substring(0, indexOfDivider) : locale;
+
+let jsonStr = `{
+    "@context": "https://schema.org/",
+    "@type": "SoftwareApplication",
+    "name": "${documentTitle != null ? `${documentTitle} - ` : ''}${site.meta.appName}",
+    "url": "${site.rootUrl}",
+    "about": "${limitLengthWithEllipse(description, 80)}",
+    "abstract": "${limitLengthWithEllipse(description, 80)}",
+    "description": "${limitLengthWithEllipse(description, 150)}",
+    "image": "${metaImageUrl ?? site.images.favicon.x192}",
+    "keywords": "${site.meta.keywords}",
+    "applicationCategory": "Application",
+    "operatingSystem": "Android Lollipop, iOS, Chrome, Firefox, Opera, Internet Explorer, Edge",
+    "softwareVersion": "${version}",
+    "version": "${version}",
+    ${schemaExtra ?? ''}
+    "author": {
+      "@type": "Person",
+      "name": "${site.humans.kurt.name}",
+      "givenName": "${site.humans.kurt.name}",
+      "familyName": "${site.humans.kurt.name}",
+      "additionalName": "${site.humans.kurt.additionalName}",
+      "url": "${site.humans.kurt.website}",
+      "image": "${site.humans.kurt.image}",
+      "jobTitle": "${site.humans.kurt.jobTitle}"
+    },
+    "creator": {
+      "@type": "Person",
+      "name": "${site.humans.kurt.name}",
+      "givenName": "${site.humans.kurt.name}",
+      "familyName": "${site.humans.kurt.name}",
+      "additionalName": "${site.humans.kurt.additionalName}",
+      "url": "${site.humans.kurt.website}",
+      "image": "${site.humans.kurt.image}",
+      "jobTitle": "${site.humans.kurt.jobTitle}"
+    },
+    "inLanguage": "${langCode}",
+    "dateCreated": "${date}",
+    "dateModified": "${date}",
+    "datePublished": "${date}"
+  }`;
+
+const jsonObj = JSON.parse(jsonStr);
+const htmlString = `
+<script type="application/ld+json">
+${JSON.stringify(jsonObj, null, 2)}
+</script>`;
+---
+
+<Fragment set:html={htmlString} />

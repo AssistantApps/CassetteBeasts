@@ -1,0 +1,133 @@
+---
+import Layout from 'components/layouts/Layout.astro';
+import Breadcrumb from 'components/Breadcrumb.astro';
+
+import languageJson from '../../../assets/json/language.json';
+
+import { readDataFromAssets } from 'helpers/fileHelper';
+import { IntermediateFile } from 'constants/intermediateFile';
+import { astroPaths } from 'constants/astro';
+import { breadcrumb } from 'constants/breadcrumb';
+import { availableLanguages, UIKeys } from 'constants/localisation';
+import type { ILocalisation } from 'contracts/localisation';
+import type { IWorldEnhanced } from 'contracts/world';
+import { translator } from 'helpers/translateHelper';
+import { imgUrl } from 'helpers/urlHelper';
+
+export async function getStaticPaths() {
+  const paths: any = [];
+  for (const locale of availableLanguages) {
+    const itemMap = await readDataFromAssets<Record<string, IWorldEnhanced>>({
+      pathFolders: [...astroPaths.intermediatePath, locale],
+      destFileName: IntermediateFile.world,
+    });
+    const path = {
+      params: { locale: locale },
+      props: { list: Object.values(itemMap) },
+    };
+    paths.push(path as never);
+  }
+  return paths;
+}
+
+const { locale } = Astro.params;
+const list = (Astro.props as any).list as Array<IWorldEnhanced>;
+const translationLookup = (languageJson as Record<string, ILocalisation>)[locale].messages;
+const { translate } = translator(translationLookup);
+---
+
+<Layout locale={locale} documentTitle={translate(UIKeys.map)} translationLookup={translationLookup}>
+  <Breadcrumb
+    locale={locale}
+    translationLookup={translationLookup}
+    breadcrumbs={[breadcrumb.world(locale)]}
+  />
+
+  <section id="world-display" class="item-detail-card mb-3">
+    <div class="meta">
+      <h1>{translate(UIKeys.map)}</h1>
+    </div>
+
+    <div id="world-tab-container" class="tab0">
+      <div class="item-detail-card-heading primary noselect animate__animated animate__fadeIn">
+        {
+          list.map((data, index) => (
+            <div
+              class={`button-slanted cursor-pointer tab-button-${index}`}
+              onclick={`applyClassToId('world-tab-container', 'tab', 'tab${index}')`}
+            >
+              <span class="button-slanted-content">{data.title_localised}</span>
+            </div>
+          ))
+        }
+      </div>
+
+      <div class="item-detail-card-body">
+        <div class="map-body">
+          {
+            list.map((map, index) => (
+              <div class={`tab-content-${index} ta-center`}>
+                <div class="map-grid-container">
+                  <img
+                    src={imgUrl(map.map_texture?.path)}
+                    class="map"
+                    alt={`${map.title_localised}`}
+                    loading="lazy"
+                    draggable="false"
+                  />
+                  <div
+                    class="map-grid"
+                    style={`--num-col:${map.numOfColumns}; --num-row:${map.numOfRows};`}
+                  >
+                    {map.chunk_meta_data_localised.map((chunkMeta, rowIdx) => (
+                      <Fragment>
+                        {chunkMeta.map((cell, colIdx) => (
+                          <div class={`cell x-${colIdx} y-${rowIdx}`}>
+                            {cell != null && (
+                              <div class="popup">
+                                <h5>
+                                  {cell.title_localised} <small>({cell.id})</small>
+                                </h5>
+                                {cell.features_localised.map((feat) => (
+                                  <div class="details">
+                                    {feat.icon_url && (
+                                      <img
+                                        src={imgUrl(feat.icon_url)}
+                                        class="status"
+                                        alt={`${feat.title_localised}`}
+                                        loading="lazy"
+                                        draggable="false"
+                                      />
+                                    )}
+                                    <div class="text">
+                                      <p class="name">{feat.title_localised}</p>
+                                    </div>
+                                  </div>
+                                ))}
+                                {cell.monster_in_habitat.length > 0 && (
+                                  <div class="monster-spawns">
+                                    {cell.monster_in_habitat.map((monster) => (
+                                      <img
+                                        src={imgUrl(monster.icon_url)}
+                                        alt={monster.name_localised}
+                                        data-tooltip={monster.name_localised}
+                                      />
+                                    ))}
+                                  </div>
+                                )}
+                              </div>
+                            )}
+                          </div>
+                        ))}
+                      </Fragment>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

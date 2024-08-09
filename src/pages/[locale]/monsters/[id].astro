@@ -1,0 +1,441 @@
+---
+import Layout from 'components/layouts/Layout.astro';
+import Breadcrumb from 'components/Breadcrumb.astro';
+import StatHex from 'components/stat/StatHex.astro';
+import MonsterRemaster from 'components/monster/MonsterRemaster.astro';
+import MonsterMoveRow from 'components/monster/MonsterMoveRow.astro';
+
+import languageJson from 'assets/json/language.json';
+
+import { readDataFromAssets } from 'helpers/fileHelper';
+import { IntermediateFile } from 'constants/intermediateFile';
+import { astroPaths } from 'constants/astro';
+import { breadcrumb } from 'constants/breadcrumb';
+import { availableLanguages, UIKeys } from 'constants/localisation';
+import { site } from 'constants/site';
+import type { ILocalisation } from 'contracts/localisation';
+import type { IMonsterFormEnhanced } from 'contracts/monsterForm';
+import { type IGuideSchema, AccessMode } from 'contracts/schema/guideScheme';
+import { isoDate } from 'helpers/dateHelper';
+import { toSchemaOrgProperty } from 'helpers/schemaHelper';
+import { limitLengthWithEllipse, stars } from 'helpers/stringHelper';
+import { translator } from 'helpers/translateHelper';
+import { imgUrl } from 'helpers/urlHelper';
+
+export async function getStaticPaths() {
+  const paths: any = [];
+  for (const locale of availableLanguages) {
+    const itemMap = await readDataFromAssets<Record<string, IMonsterFormEnhanced>>({
+      pathFolders: [...astroPaths.intermediatePath, locale],
+      destFileName: IntermediateFile.monsterForms,
+    });
+    for (const item of Object.values(itemMap)) {
+      const path = {
+        params: { locale: locale, id: item.id },
+        props: { item },
+      };
+      paths.push(path as never);
+    }
+  }
+  return paths;
+}
+
+const { locale } = Astro.params;
+const data = (Astro.props as any).item as IMonsterFormEnhanced;
+const translationLookup = (languageJson as Record<string, ILocalisation>)[locale].messages;
+const { translate } = translator(translationLookup);
+
+const additionalSchemaObj: IGuideSchema = {
+  name: data.name_localised,
+  headline: data.name_localised,
+  about: data.description_localised,
+  abstract: data.description_localised,
+  description: limitLengthWithEllipse(data.bestiary_bios_localised.join(), 200),
+  accessMode: AccessMode.textual,
+  dateModified: isoDate(),
+  thumbnailUrl: site.rootUrl + data.meta_image_url.slice(1),
+};
+---
+
+<Layout
+  locale={locale}
+  documentTitle={data.name_localised}
+  description={data.description_localised}
+  metaImageUrl={data.meta_image_url}
+  schemaExtra={toSchemaOrgProperty('mainEntity', 'Guide', additionalSchemaObj)}
+  translationLookup={translationLookup}
+>
+  <Breadcrumb
+    locale={locale}
+    translationLookup={translationLookup}
+    breadcrumbs={[
+      breadcrumb.monster(locale),
+      breadcrumb.monsterDetail(locale, data.name_localised),
+    ]}
+  />
+
+  <div class="grid masonry min-card-width mb-3">
+    <div class="meta">
+      <h1>{translate(UIKeys.viewMonsters)} - {data.name_localised}</h1>
+    </div>
+
+    <article class="monster-detail-card item-detail-card">
+      <div class="monster-detail-card-heading item-detail-card-heading primary">
+        <h2 class="Neu5Land animate__animated animate__fadeIn">{data.name_localised}</h2>
+        {
+          data.battle_cry_audio_url != null && (
+            <div class="audio noselect animate__animated animate__fadeIn">
+              <h4 class="cursor-pointer" onclick={`playAudioNode('${data.name_localised}-cry')`}>
+                🔉
+              </h4>
+              <audio id={`${data.name_localised}-cry`} class="hidden autoplay">
+                <track kind="captions" srclang="en" label="english_captions" />
+                <source src={data.battle_cry_audio_url} type="audio/wav" />
+              </audio>
+            </div>
+          )
+        }
+        <div class="spacer"></div>
+        {
+          data.elemental_types_elements.map((element) => (
+            <img
+              src={imgUrl(element.icon?.path)}
+              class="element-image"
+              loading="lazy"
+              alt={`${element.name}`}
+              draggable="false"
+            />
+          ))
+        }
+      </div>
+      <div class="monster-detail-card-body item-detail-card-body">
+        <div id="sprite-tab-container" class="monster-detail-card-main">
+          <h2 class="meta">Images for {data.name_localised}</h2>
+          <div class="grid images noselect animate__animated animate__fadeIn">
+            <div class="sprites">
+              <img
+                src={data.icon_url}
+                class="char-image tab-content-0"
+                loading="lazy"
+                alt={`${data.name_localised}`}
+                draggable="false"
+              />
+
+              {
+                data.animations.map((anim, index) => (
+                  <img
+                    src={imgUrl(anim.imageUrl)}
+                    class={`char-image  tab-content-${index + 1}`}
+                    alt={`gif #${anim.id} of ${data.name_localised}`}
+                    draggable="false"
+                  />
+                ))
+              }
+            </div>
+
+            <div class="stats">
+              <StatHex
+                max_hp={data.max_hp}
+                ranged_attack={data.ranged_attack}
+                ranged_defense={data.ranged_defense}
+                speed={data.speed}
+                melee_defense={data.melee_defense}
+                melee_attack={data.melee_attack}
+                translationLookup={translationLookup}
+              />
+            </div>
+          </div>
+          <div class="controls noselect animate__animated animate__fadeIn">
+            <div
+              class="button-slanted cursor-pointer tab-button-0"
+              onclick="applyClassToId('sprite-tab-container', 'tab', 'tab0')"
+            >
+              <span class="button-slanted-content">{translate('static')}</span>
+            </div>
+
+            {
+              data.animations.map((_, index) => (
+                <div
+                  class={`button-slanted cursor-pointer tab-button-${index + 1}`}
+                  onclick={`applyClassToId('sprite-tab-container', 'tab', 'tab${index + 1}')`}
+                >
+                  <span class="button-slanted-content">
+                    {translate('gifNum', (index + 1).toString())}
+                  </span>
+                </div>
+              ))
+            }
+          </div>
+          <span class="descrip">"{data.description_localised}"</span>
+        </div>
+        <span class="id"><span class="noselect">#</span>{data.bestiary_index_with_padding}</span>
+
+        <Fragment>
+          {
+            data.unlock_ability.length > 0 && (
+              <div class="ability animate__animated animate__fadeIn">
+                <img
+                  src={`/assets/img/ability/${data.unlock_ability}.png`}
+                  class="ability-image"
+                  loading="lazy"
+                  alt={`${data.unlock_ability}`}
+                  draggable="false"
+                />
+                <div>
+                  <span>{data.unlock_ability_localised}</span>
+                </div>
+              </div>
+            )
+          }
+        </Fragment>
+
+        <div class="bio animate__animated animate__fadeIn">
+          <h2 class="meta">bios for Cassette Beast {data.name_localised}</h2>
+          {data.unlock_ability.length > 0 && <p>{data.unlock_ability}</p>}
+          {data.bestiary_bios_localised.map((bio) => <p>{bio}</p>)}
+        </div>
+
+        <section class="additional-section additional animate__animated animate__fadeIn">
+          <h3 class="section-heading Neu5Land">
+            {translate('additionalStats')}
+            <span class="meta">for {data.name_localised}</span>
+          </h3>
+          <div class="table-container">
+            <table class="additional highlight-cell animate__animated animate__fadeIn">
+              <thead>
+                <tr>
+                  <td class="ta-center">{translate(UIKeys.evasion)}</td>
+                  <td class="ta-center">{translate(UIKeys.maxAP)}</td>
+                  <td class="ta-center">{translate(UIKeys.moveSlots)}</td>
+                  <td class="ta-center">{translate(UIKeys.recording)}</td>
+                  <td class="ta-center">{translate(UIKeys.expPoints)}</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="ta-center">{data.evasion}</td>
+                  <td class="ta-center">{data.max_ap}</td>
+                  <td class="ta-center">{data.move_slots}</td>
+                  <td class="ta-center">{data.capture_rate}%</td>
+                  <td class="ta-center">{data.exp_base_level}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <Fragment>
+          {
+            data.require_dlc && (
+              <section class="dlc-section animate__animated animate__fadeIn">
+                <h3 class="section-heading Neu5Land">DLC</h3>
+                <div class="dlc">
+                  <img
+                    src={`/assets/img/dlc/${data.require_dlc}.png`}
+                    class="ability-image"
+                    alt={`${data.require_dlc}`}
+                    loading="lazy"
+                    draggable="false"
+                  />
+                  <div>
+                    <span>{translate(UIKeys.dlcPierOfTheUnknown)}</span>
+                  </div>
+                </div>
+              </section>
+            )
+          }
+        </Fragment>
+
+        <Fragment>
+          {
+            data.total_evolutions > 0 && (
+              <section class="remaster-section animate__animated animate__fadeIn">
+                <h3 class="section-heading Neu5Land">{translate(UIKeys.remaster)}</h3>
+                <table class="remasters first-td-padding highlight-row animate__animated animate__fadeIn">
+                  <colgroup>
+                    <col span="1" class="from-to" />
+                    <col span="1" class="sprite" />
+                    <col span="1" class="name" />
+                    <col span="1" class="type" />
+                    <col span="1" class="specialisation" />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <td class="from-to" />
+                      <td class="sprite" />
+                      <td class="name">{translate(UIKeys.name)}</td>
+                      <td class="type" />
+                      <td class="specialisation">{translate(UIKeys.chooseSpecialisation)}</td>
+                    </tr>
+                  </thead>
+                  <tbody data-translate="TODO">
+                    {data.evolution_from_monster && (
+                      <MonsterRemaster
+                        locale={locale}
+                        fromOrTo="From"
+                        data={data.evolution_from_monster}
+                      />
+                    )}
+
+                    {data.evolutions_monster.map((evMonster) => (
+                      <MonsterRemaster locale={locale} data={evMonster} />
+                    ))}
+                  </tbody>
+                </table>
+              </section>
+            )
+          }
+        </Fragment>
+
+        <section class="additional-section animate__animated animate__fadeIn">
+          <h3 class="section-heading tags">
+            <span class="Neu5Land">{translate('tags')}:</span>&nbsp;
+            {
+              data.move_tags.map((moveTag, index) => (
+                <small>
+                  <span>{moveTag}</span>
+                  <span class={index == data.move_tags.length - 1 ? 'hidden' : ''}>,&nbsp;</span>
+                </small>
+              ))
+            }
+          </h3>
+        </section>
+
+        <section class="wiki-section animate__animated animate__fadeIn">
+          <a
+            href={`https://wiki.cassettebeasts.com/wiki/${data.name_localised}`}
+            rel="noopener noreferrer"
+            target="_blank"
+            title={`view ${data.name_localised} on the wiki`}
+            role="button"
+            class="btn-border-hover outline secondary"
+          >
+            <img src="/assets/img/wiki.png" alt="wiki logo" loading="lazy" />
+            <div class="text">
+              <h6>{translate('viewOn', 'wiki.cassettebeasts.com')}</h6>
+            </div>
+          </a>
+        </section>
+      </div>
+
+      <div class="monster-detail-sticker-container hidden-in-mobile animate__animated">
+        <div class="animate__animated bounce-on-hover">
+          <img
+            src={imgUrl(data.tape_sticker_texture?.path)}
+            loading="lazy"
+            class="monster-detail-sticker animate__animated animate__delay-1s animate__rollIn animate__tada"
+            alt={`sticker of ${data.name}`}
+          />
+        </div>
+      </div>
+    </article>
+
+    <article class="monster-detail-card item-detail-card">
+      <div class="monster-detail-card-heading item-detail-card-heading">
+        <h2 class="Neu5Land animate__animated animate__fadeIn">{translate(UIKeys.stickers)}</h2>
+        <div class="spacer"></div>
+      </div>
+
+      <div class="monster-detail-tape-container animate__animated hidden-in-mobile noselect">
+        <div class="animate__animated swing-hover Neu5Land">
+          <img src="/assets/img/meta/tape.png" alt="monster tape" loading="lazy" />
+          <p>{data.name_localised}</p>
+        </div>
+      </div>
+
+      <div class="monster-detail-card-body item-detail-card-body table-container">
+        <div class="table-container">
+          <table class="moves last-td-padding highlight-row animate__animated animate__fadeIn">
+            <thead>
+              <tr class="no-padding">
+                <td class="star"></td>
+                <td class="type"></td>
+                <td class="name">{translate(UIKeys.name)}</td>
+                <td class="category">{translate(UIKeys.category)}</td>
+                <td class="power">{translate(UIKeys.power)}</td>
+                <td class="accuracy">{translate(UIKeys.accuracy)}</td>
+                <td class="ap">{translate(UIKeys.ap)}</td>
+              </tr>
+            </thead>
+            <tbody>
+              {
+                data.initial_moves_moves.map((move) => (
+                  <MonsterMoveRow locale={locale} source={translate('initial')} data={move} />
+                ))
+              }
+
+              {
+                data.tape_upgrades_moves.map((move, index) => (
+                  <MonsterMoveRow locale={locale} source={stars(index)} data={move} />
+                ))
+              }
+            </tbody>
+          </table>
+        </div>
+
+        {
+          data.has_locations && (
+            <section class="additional-section habitat animate__animated animate__fadeIn">
+              <details open>
+                <summary>
+                  <h3 class="section-heading Neu5Land noselect">{translate('overworld')}</h3>
+                </summary>
+                <div class="table-container">
+                  <table class="moves last-td-padding highlight-row">
+                    <thead>
+                      <tr>
+                        <td class="sprite">{translate('habitat')}</td>
+                        <td class="name">{translate(UIKeys.name)}</td>
+                        <td class="percent">{translate('percentTitle')}</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {data.spawn_overworld_locations.map((loc) => (
+                        <Fragment>
+                          <tr>
+                            <td class="overworld ta-center">
+                              <img
+                                src={imgUrl(loc.overworldSprite)}
+                                class="remaster-image"
+                                alt="overworld"
+                                loading="lazy"
+                                draggable="false"
+                              />
+                            </td>
+                            <td class="name">
+                              {loc.habitat_name_localised} <code>({loc.id})</code>
+                            </td>
+                            <td class="percent">{loc.percentStr}%</td>
+                          </tr>
+                        </Fragment>
+                      ))}
+
+                      {data.spawn_backup_locations.length > 0 &&
+                        data.spawn_overworld_locations.length > 0 && (
+                          <tr>
+                            <td colspan="3" class="ta-center">
+                              {translate('backup')}
+                            </td>
+                          </tr>
+                        )}
+
+                      {data.spawn_backup_locations.map((backupLoc) => (
+                        <tr>
+                          <td class="overworld" />
+                          <td class="name">
+                            {backupLoc.habitat_name_localised} <code>({backupLoc.id})</code>
+                          </td>
+                          <td class="percent">{backupLoc.percentStr}%</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </details>
+            </section>
+          )
+        }
+      </div>
+    </article>
+  </div>
+</Layout>

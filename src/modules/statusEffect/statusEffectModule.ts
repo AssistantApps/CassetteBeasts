@@ -1,17 +1,17 @@
 import fs from 'fs';
 import path from 'path';
 
-import { breadcrumb } from 'constant/breadcrumb';
-import { handlebarTemplate } from 'constant/handlebar';
-import { IntermediateFile } from 'constant/intermediateFile';
-import { ModuleType } from 'constant/module';
-import { paths } from 'constant/paths';
-import { routes } from 'constant/route';
-import { site } from 'constant/site';
-import { IElement, IElementEnhanced } from 'contracts/element';
-import { ILocalisation } from 'contracts/localisation';
-import { IMove, IMoveEnhanced, IMoveSimplified } from 'contracts/move';
-import { IStatusEffect, IStatusEffectEnhanced } from 'contracts/statusEffect';
+import { handlebarTemplate } from 'constants/handlebar';
+import { IntermediateFile } from 'constants/intermediateFile';
+import { ModuleType } from 'constants/module';
+import { paths } from 'constants/paths';
+import { routes } from 'constants/route';
+import { site } from 'constants/site';
+import type { IElement, IElementEnhanced } from 'contracts/element';
+import type { ILocalisation } from 'contracts/localisation';
+import { moveToSimplified } from 'contracts/mapper/moveMapper';
+import type { IMove, IMoveEnhanced, IMoveSimplified } from 'contracts/move';
+import type { IStatusEffect, IStatusEffectEnhanced } from 'contracts/statusEffect';
 import { scaffoldFolderAndDelFileIfOverwrite } from 'helpers/fileHelper';
 import { FolderPathHelper } from 'helpers/folderPathHelper';
 import {
@@ -19,8 +19,7 @@ import {
   copyImageToGeneratedFolder,
   generateMetaImage,
 } from 'helpers/imageHelper';
-import { sortByStringProperty } from 'helpers/sortHelper';
-import { moveToSimplified } from 'mapper/moveMapper';
+import { pad } from 'helpers/stringHelper';
 import { readItemDetail } from 'modules/baseModule';
 import { CommonModule } from 'modules/commonModule';
 import { LocalisationModule } from 'modules/localisation/localisationModule';
@@ -29,7 +28,7 @@ import { getHandlebar } from 'services/internal/handlebarService';
 import { statusEffectMapFromDetailList } from './statusEffectMapFromDetailList';
 import { getStatusMetaImage } from './statusEffectMeta';
 
-export class StatusEffectModule extends CommonModule<IStatusEffect> {
+export class StatusEffectModule extends CommonModule<IStatusEffect, IStatusEffectEnhanced> {
   private _folder = FolderPathHelper.statusEffects();
 
   constructor() {
@@ -55,16 +54,18 @@ export class StatusEffectModule extends CommonModule<IStatusEffect> {
       });
       this._baseDetails.push(detail);
     }
-    return `${this._baseDetails.length}  status effects`;
+    return `${pad(this._baseDetails.length, 3, ' ')} status effects`;
   };
 
-  enrichData = async (langCode: string, modules: Array<CommonModule<unknown>>) => {
-    const localeModule = this.getModuleOfType<ILocalisation>(modules, ModuleType.Localisation);
-    const language = localeModule.get(langCode).messages;
+  enrichData = async (langCode: string, modules: Array<CommonModule<unknown, unknown>>) => {
+    const localeModule = this.getModuleOfType<ILocalisation>(
+      modules,
+      ModuleType.Localisation,
+    ) as LocalisationModule;
     const elementModule = this.getModuleOfType<IElement>(modules, ModuleType.Elements);
 
     for (const detail of this._baseDetails) {
-      let name_localised = language[detail.name];
+      let name_localised = localeModule.translate(langCode, detail.name);
       if (name_localised.includes('{type}')) {
         const element = elementModule.get('air') as IElementEnhanced;
         name_localised = name_localised.replace('{type}', element.name_localised);
@@ -72,9 +73,11 @@ export class StatusEffectModule extends CommonModule<IStatusEffect> {
       const detailEnhanced: IStatusEffectEnhanced = {
         ...detail,
         name_localised,
-        description_localised: language[detail.description],
-        toast_on_remove_localised: language[detail.toast_on_remove],
-        name_modifier_localised: language[detail.name_modifier],
+        description_localised: (localeModule.translate(langCode, detail.description) ?? '')
+          .replaceAll("\\'", "'")
+          .replaceAll('\\"', "'"),
+        toast_on_remove_localised: localeModule.translate(langCode, detail.toast_on_remove),
+        name_modifier_localised: localeModule.translate(langCode, detail.name_modifier),
         meta_image_url: `/assets/img/meta/${langCode}${routes.statusEffect}/${encodeURI(
           detail.id,
         )}.png`,
@@ -88,7 +91,7 @@ export class StatusEffectModule extends CommonModule<IStatusEffect> {
     this.isReady = true;
   };
 
-  combineData = async (langCode: string, modules: Array<CommonModule<unknown>>) => {
+  combineData = async (langCode: string, modules: Array<CommonModule<unknown, unknown>>) => {
     const moveModule = this.getModuleOfType<IMove>(modules, ModuleType.Moves, true) as MovesModule;
     const statusEffectToMovesIdMap = moveModule.getStatusEffectToMovesIdMap();
 
@@ -132,7 +135,7 @@ export class StatusEffectModule extends CommonModule<IStatusEffect> {
 
       const extraData = await getStatusMetaImage(
         langCode,
-        detailEnhanced.icon?.path,
+        detailEnhanced.icon?.path ?? '',
         detailEnhanced.description_localised ?? '...',
       );
       const template = getHandlebar().getCompiledTemplate<unknown>(
@@ -142,48 +145,5 @@ export class StatusEffectModule extends CommonModule<IStatusEffect> {
 
       generateMetaImage({ overwrite, template, langCode, outputFullPath });
     }
-  };
-
-  writePages = async (langCode: string, modules: Array<CommonModule<unknown>>) => {
-    const mainBreadcrumb = breadcrumb.statusEffect(langCode);
-    const list: Array<IStatusEffectEnhanced> = [];
-    for (const mapKey of Object.keys(this._itemDetailMap)) {
-      const details: IStatusEffectEnhanced = this._itemDetailMap[mapKey];
-      if (details.icon == null) continue;
-      list.push(details);
-      const relativePath = `${langCode}${routes.statusEffect}/${encodeURI(mapKey)}.html`;
-      const detailPageData = this.getBasicPageData({
-        langCode,
-        modules,
-        documentTitle: details.name_localised,
-        breadcrumbs: [
-          mainBreadcrumb,
-          breadcrumb.statusEffectDetail(langCode, details.name_localised),
-        ],
-        data: details,
-        relativePath,
-      });
-      detailPageData.images.twitter = details.meta_image_url;
-      detailPageData.images.facebook = details.meta_image_url;
-      await getHandlebar().compileTemplateToFile({
-        data: detailPageData,
-        outputFiles: [relativePath],
-        templateFile: handlebarTemplate.statusEffectDetail,
-      });
-    }
-    const relativePath = `${langCode}${routes.statusEffect}/index.html`;
-    const sortedList = list.sort(sortByStringProperty((l) => l.name_localised));
-    await getHandlebar().compileTemplateToFile({
-      data: this.getBasicPageData({
-        langCode,
-        modules,
-        documentTitleUiKey: mainBreadcrumb.uiKey,
-        breadcrumbs: [mainBreadcrumb],
-        data: { list: sortedList },
-        relativePath,
-      }),
-      outputFiles: [relativePath],
-      templateFile: handlebarTemplate.statusEffect,
-    });
   };
 }

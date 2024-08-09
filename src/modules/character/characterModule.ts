@@ -1,19 +1,19 @@
 import fs from 'fs';
 import path from 'path';
 
-import { breadcrumb } from 'constant/breadcrumb';
-import { handlebarTemplate } from 'constant/handlebar';
-import { cutBarkleyPortrait } from 'constant/image';
-import { IntermediateFile } from 'constant/intermediateFile';
-import { ModuleType } from 'constant/module';
-import { paths } from 'constant/paths';
-import { routes } from 'constant/route';
-import { site } from 'constant/site';
-import { ICharacter, ICharacterEnhanced, ICharacterSfx } from 'contracts/character';
-import { IElement } from 'contracts/element';
-import { ILocalisation } from 'contracts/localisation';
-import { IMonsterFormEnhanced, IMonsterFormSimplified } from 'contracts/monsterForm';
-import { ISpriteAnim } from 'contracts/spriteAnim';
+import { handlebarTemplate } from 'constants/handlebar';
+import { cutBarkleyPortrait } from 'constants/image';
+import { IntermediateFile } from 'constants/intermediateFile';
+import { ModuleType } from 'constants/module';
+import { paths } from 'constants/paths';
+import { routes } from 'constants/route';
+import { site } from 'constants/site';
+import type { ICharacter, ICharacterEnhanced, ICharacterSfx } from 'contracts/character';
+import type { IElement } from 'contracts/element';
+import type { ILocalisation } from 'contracts/localisation';
+import { monsterToSimplified } from 'contracts/mapper/monsterMapper';
+import type { IMonsterFormEnhanced, IMonsterFormSimplified } from 'contracts/monsterForm';
+import type { ISpriteAnim } from 'contracts/spriteAnim';
 import { getAnimFileName, scaffoldFolderAndDelFileIfOverwrite } from 'helpers/fileHelper';
 import { FolderPathHelper } from 'helpers/folderPathHelper';
 import {
@@ -22,9 +22,8 @@ import {
   cutImageFromSpriteSheet,
   generateMetaImage,
 } from 'helpers/imageHelper';
-import { sortByStringProperty } from 'helpers/sortHelper';
+import { pad } from 'helpers/stringHelper';
 import { createWebpFromISpriteAnim } from 'helpers/webpHelper';
-import { monsterToSimplified } from 'mapper/monsterMapper';
 import { readItemDetail } from 'modules/baseModule';
 import { CommonModule } from 'modules/commonModule';
 import { LocalisationModule } from 'modules/localisation/localisationModule';
@@ -33,7 +32,7 @@ import { characterMapFromDetailList } from './characterMapFromDetailList';
 import { getCharacterMetaImage } from './characterMeta';
 import { getCharacterPartnerTapeImage } from './characterPartnerTape';
 
-export class CharacterModule extends CommonModule<ICharacter> {
+export class CharacterModule extends CommonModule<ICharacter, ICharacterEnhanced> {
   private _folder = FolderPathHelper.characters();
 
   constructor() {
@@ -70,12 +69,14 @@ export class CharacterModule extends CommonModule<ICharacter> {
       this._baseDetails.push(detail);
     }
 
-    return `${this._baseDetails.length}  characters`;
+    return `${pad(this._baseDetails.length, 3, ' ')} characters`;
   };
 
-  enrichData = async (langCode: string, modules: Array<CommonModule<unknown>>) => {
-    const localeModule = this.getModuleOfType<ILocalisation>(modules, ModuleType.Localisation);
-    const language = localeModule.get(langCode).messages;
+  enrichData = async (langCode: string, modules: Array<CommonModule<unknown, unknown>>) => {
+    const localeModule = this.getModuleOfType<ILocalisation>(
+      modules,
+      ModuleType.Localisation,
+    ) as LocalisationModule;
     const monsterModule = this.getModuleOfType<IMonsterFormEnhanced>(
       modules,
       ModuleType.MonsterForms,
@@ -99,9 +100,9 @@ export class CharacterModule extends CommonModule<ICharacter> {
         .replace('res://sprites/characters/battle/', '')
         .replace('res://sprites/characters/world/', '')
         .replace('.json', '');
-      const tapeOverrideElementId = detail.partner_signature_species_type_override?.path
-        ?.replace('res://data/elemental_types/', '')
-        ?.replace('.tres', '');
+      const tapeOverrideElementId = (detail.partner_signature_species_type_override?.path ?? '')
+        .replace('res://data/elemental_types/', '')
+        .replace('.tres', '');
 
       const animations = (spriteAnimModule.get(sprite_anim_key)?.animations ?? []).map(
         (a, idx) => ({
@@ -122,7 +123,7 @@ export class CharacterModule extends CommonModule<ICharacter> {
       );
       const detailEnhanced: ICharacterEnhanced = {
         ...detail,
-        name_localised: language[detail.name],
+        name_localised: localeModule.translate(langCode, detail.name),
         resource_name: detail.resource_name.replace('.tres', ''),
         icon_url,
         sprite_sheet_path,
@@ -130,9 +131,9 @@ export class CharacterModule extends CommonModule<ICharacter> {
         animations: reorderedAnimation,
         partner_signature_species_monsters: monsterToSimplified(partner_signature_species_monsters),
         partner_signature_species_tape_sticker_texture:
-          partner_signature_species_monsters?.tape_sticker_texture?.path,
+          partner_signature_species_monsters?.tape_sticker_texture?.path ?? '',
         partner_signature_species_elemental_types_elements:
-          partner_signature_species_monsters?.elemental_types_elements[0]?.icon.path,
+          partner_signature_species_monsters?.elemental_types_elements[0]?.icon?.path ?? '',
         partner_signature_species_type_override_element: elementModule.get(tapeOverrideElementId),
         meta_image_url: `/assets/img/meta/${langCode}${routes.characters}/${encodeURI(mapKey)}.png`,
         partner_image_url: `/assets/img/meta/${langCode}${routes.characters}/${encodeURI(
@@ -148,7 +149,7 @@ export class CharacterModule extends CommonModule<ICharacter> {
     this.isReady = true;
   };
 
-  combineData = async (langCode: string, modules: Array<CommonModule<unknown>>) => {
+  combineData = async (langCode: string, modules: Array<CommonModule<unknown, unknown>>) => {
     const characterSfxModule = this.getModuleOfType<ICharacterSfx>(
       modules,
       ModuleType.CharacterSfx,
@@ -173,7 +174,7 @@ export class CharacterModule extends CommonModule<ICharacter> {
     }
   };
 
-  generateImages = async (overwrite: boolean, modules: Array<CommonModule<unknown>>) => {
+  generateImages = async (overwrite: boolean, modules: Array<CommonModule<unknown, unknown>>) => {
     for (const mapKey of Object.keys(this._itemDetailMap)) {
       const detailEnhanced: ICharacterEnhanced = this._itemDetailMap[mapKey];
 
@@ -213,45 +214,6 @@ export class CharacterModule extends CommonModule<ICharacter> {
     }
   };
 
-  writePages = async (langCode: string, modules: Array<CommonModule<unknown>>) => {
-    const mainBreadcrumb = breadcrumb.character(langCode);
-    const list: Array<ICharacterEnhanced> = [];
-    for (const mapKey of Object.keys(this._itemDetailMap)) {
-      const details: ICharacterEnhanced = this._itemDetailMap[mapKey];
-      list.push(details);
-      const relativePath = `${langCode}${routes.characters}/${encodeURI(mapKey)}.html`;
-      const detailPageData = this.getBasicPageData({
-        langCode,
-        modules,
-        documentTitle: details.name_localised,
-        breadcrumbs: [mainBreadcrumb, breadcrumb.characterDetail(langCode, details.name_localised)],
-        data: details,
-        relativePath,
-      });
-      detailPageData.images.twitter = details.meta_image_url;
-      detailPageData.images.facebook = details.meta_image_url;
-      await getHandlebar().compileTemplateToFile({
-        data: detailPageData,
-        outputFiles: [relativePath],
-        templateFile: handlebarTemplate.characterDetail,
-      });
-    }
-    const relativePath = `${langCode}${routes.characters}/index.html`;
-    const sortedList = list.sort(sortByStringProperty((l) => l.name_localised));
-    await getHandlebar().compileTemplateToFile({
-      data: this.getBasicPageData({
-        langCode,
-        modules,
-        documentTitleUiKey: mainBreadcrumb.uiKey,
-        breadcrumbs: [mainBreadcrumb],
-        data: { list: sortedList },
-        relativePath,
-      }),
-      outputFiles: [relativePath],
-      templateFile: handlebarTemplate.character,
-    });
-  };
-
   private _generateCharacterMetaImage = async (
     langCode: string,
     overwrite: boolean,
@@ -288,7 +250,7 @@ export class CharacterModule extends CommonModule<ICharacter> {
     const overrideElement = detailEnhanced.partner_signature_species_type_override_element;
     const isBootleg = overrideElement?.icon?.path != null;
     let elementPath = detailEnhanced.partner_signature_species_elemental_types_elements;
-    if (isBootleg) elementPath = overrideElement?.icon?.path;
+    if (isBootleg) elementPath = overrideElement?.icon?.path ?? '';
 
     const extraData = await getCharacterPartnerTapeImage(
       detailEnhanced.partner_signature_species_tape_sticker_texture,

@@ -3,14 +3,15 @@ import path from 'path';
 import sharp from 'sharp';
 
 import { Resvg } from '@resvg/resvg-js';
-import { fontMetas, IFontFile } from 'constant/fonts';
-import { paths } from 'constant/paths';
-import { IBoxSelection } from 'contracts/boxSelection';
-import { IExternalResource } from 'contracts/externalResource';
-import { getExternalResourcesImagePath } from 'mapper/externalResourceMapper';
+import { fontMetas, type IFontFile } from 'constants/fonts';
+import { paths } from 'constants/paths';
+import type { IBoxSelection } from 'contracts/boxSelection';
+import type { IExternalResource } from 'contracts/externalResource';
+import { getExternalResourcesImagePath } from 'contracts/mapper/externalResourceMapper';
 import { getConfig } from 'services/internal/configService';
 import { createFoldersOfDestFilePath } from './fileHelper';
 import { retryAsync } from './retryHelper';
+import { anyObject } from './typescriptHacks';
 
 interface ICutImageWhenCopying {
   top: number;
@@ -19,7 +20,10 @@ interface ICutImageWhenCopying {
   height: number;
 }
 
-export const copyImageFromRes = async (overwrite: boolean, externalResource: IExternalResource) => {
+export const copyImageFromRes = async (
+  overwrite: boolean,
+  externalResource?: IExternalResource,
+) => {
   const imagePath = getExternalResourcesImagePath(externalResource?.path);
   if (imagePath == null || imagePath.length < 1) return;
 
@@ -82,8 +86,8 @@ export const cutImageFromSpriteSheet = async (props: ICutImageFromSpriteSheetPro
 
 export const copyImageToGeneratedFolder = async (
   overwrite: boolean,
-  externalResource: IExternalResource,
-  cutImageWhenCopying: ICutImageWhenCopying = null,
+  externalResource?: IExternalResource,
+  cutImageWhenCopying: ICutImageWhenCopying | null = null,
 ) => {
   const imagePath = getExternalResourcesImagePath(externalResource?.path);
   if (imagePath == null || imagePath.length < 1) return;
@@ -121,7 +125,7 @@ export const writePngFromSvg = (
       mode: 'width',
       value: 1200,
     },
-    font: undefined,
+    font: anyObject,
   };
   if (fonts.length > 0) {
     opts.font = {

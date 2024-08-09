@@ -1,5 +1,5 @@
 module.exports = {
-  globDirectory: 'public/',
+  globDirectory: 'dist/',
   globPatterns: ['**/*.{html,css,png,ico,webp,jpg}'],
   globIgnores: [
     '**/node_modules/**/*',
@@ -23,6 +23,6 @@ module.exports = {
     '**/pt_BR/**/*',
     '**/zh_CN/**/*',
   ],
-  swDest: 'public/sw.js',
+  swDest: 'dist/sw.js',
   ignoreURLParametersMatching: [/^utm_/, /^fbclid$/, /^standalone/],
 };

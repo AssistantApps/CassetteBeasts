@@ -6,6 +6,13 @@
       "source.organizeImports": "explicit"
     }
   },
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "astro", // Enable .astro
+    "typescript", // Enable .ts
+    "typescriptreact" // Enable .tsx
+  ],
   "prettier.trailingComma": "all",
   "prettier.tabWidth": 2,
   "prettier.semi": true,
@@ -17,12 +24,14 @@
     "appguid",
     "arrayfrom",
     "assistantapps",
+    "astrojs",
     "bgcolor",
     "browserconfig",
     "Bulbasaur",
     "Bytten",
     "callout",
     "cassettebeasts",
+    "changefreq",
     "cheaty",
     "cookiebanner",
     "datelong",
@@ -43,6 +52,7 @@
     "Konqueror",
     "kurtlourens",
     "langcode",
+    "lastmod",
     "Lilo",
     "Lourens",
     "Metas",
@@ -50,6 +60,7 @@
     "neuquant",
     "noselect",
     "nositelinkssearchbox",
+    "Noto",
     "opensearch",
     "opensearchdescription",
     "POSTHOG",

@@ -1,0 +1,65 @@
+---
+import { breadcrumb } from 'constants/breadcrumb';
+import type { IBreadcrumb } from 'contracts/breadcrumb';
+
+interface Props {
+  locale: string;
+  translationLookup: Record<string, string>;
+  breadcrumbs: Array<IBreadcrumb>;
+}
+
+const { locale, translationLookup, breadcrumbs } = Astro.props;
+const localBreadcrumbs = [breadcrumb.home(locale), ...breadcrumbs];
+---
+
+<ul class="breadcrumb noselect" transition:animate="none">
+  {
+    localBreadcrumbs.map((breadcrumb, index) => {
+      const jsxElements = [];
+      if (index > 0) {
+        jsxElements.push(<li>››</li>);
+      }
+      if (index == 0) {
+        jsxElements.push(
+          <li>
+            <a href={breadcrumb.link} title="home" rel="noopener noreferrer">
+              <img src="/assets/img/home.png" alt="home" />
+            </a>
+          </li>,
+        );
+      } else {
+        if (breadcrumb.disabled) {
+          jsxElements.push(
+            <li>
+              <span>
+                {breadcrumb.uiKey ? translationLookup[breadcrumb.uiKey] : breadcrumb.name}
+              </span>
+            </li>,
+          );
+        } else if (index == localBreadcrumbs.length - 1) {
+          jsxElements.push(
+            <li>
+              <span>
+                {breadcrumb.uiKey ? translationLookup[breadcrumb.uiKey] : breadcrumb.name}
+              </span>
+            </li>,
+          );
+        } else {
+          jsxElements.push(
+            <li>
+              <a
+                href={breadcrumb.link}
+                title={breadcrumb.uiKey ? translationLookup[breadcrumb.uiKey] : breadcrumb.name}
+                rel="noopener noreferrer"
+              >
+                {breadcrumb.uiKey ? translationLookup[breadcrumb.uiKey] : breadcrumb.name}
+              </a>
+            </li>,
+          );
+        }
+      }
+
+      return <Fragment>{jsxElements}</Fragment>;
+    })
+  }
+</ul>

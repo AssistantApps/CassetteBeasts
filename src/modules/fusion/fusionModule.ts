@@ -1,26 +1,21 @@
 import fs from 'fs';
 
-import { breadcrumb } from 'constant/breadcrumb';
-import { handlebarTemplate } from 'constant/handlebar';
-import { IntermediateFile } from 'constant/intermediateFile';
-import { ModuleType } from 'constant/module';
-import { routes } from 'constant/route';
-import { IFusion, IFusionEnhanced } from 'contracts/fusion';
-import { ILocalisation } from 'contracts/localisation';
-import { IMonsterForm } from 'contracts/monsterForm';
-import { INodeResource, INodeResourceEnhanced } from 'contracts/nodeResource';
-import { ISpriteAnim } from 'contracts/spriteAnim';
+import { IntermediateFile } from 'constants/intermediateFile';
+import { ModuleType } from 'constants/module';
+import type { IFusion, IFusionEnhanced } from 'contracts/fusion';
+import { mapNodeResourceFromFlatMap } from 'contracts/mapper/nodeResourceMapper';
+import type { INodeResource, INodeResourceEnhanced } from 'contracts/nodeResource';
+import type { ISpriteAnim } from 'contracts/spriteAnim';
 import { getAnimFileName, getFileFromFilePath } from 'helpers/fileHelper';
 import { FolderPathHelper } from 'helpers/folderPathHelper';
 import { copyImageFromRes, cutImageFromSpriteSheet } from 'helpers/imageHelper';
-import { mapNodeResourceFromFlatMap } from 'mapper/nodeResourceMapper';
+import { pad } from 'helpers/stringHelper';
 import { readItemDetail } from 'modules/baseModule';
 import { CommonModule } from 'modules/commonModule';
 import { LocalisationModule } from 'modules/localisation/localisationModule';
-import { getHandlebar } from 'services/internal/handlebarService';
 import { fusionMapFromDetailList } from './fusionMapFromDetailList';
 
-export class FusionModule extends CommonModule<IFusion> {
+export class FusionModule extends CommonModule<IFusion, IFusionEnhanced> {
   private _folder = FolderPathHelper.fusions();
   private _enhanced_nodes: Array<IFusionEnhanced> = [];
 
@@ -47,14 +42,16 @@ export class FusionModule extends CommonModule<IFusion> {
       this._baseDetails.push(detail);
     }
 
-    return `${this._baseDetails.length} fusions`;
+    return `${pad(this._baseDetails.length, 3, ' ')} fusions`;
   };
 
-  enrichData = async (langCode: string, modules: Array<CommonModule<unknown>>) => {
+  enrichData = async (langCode: string, modules: Array<CommonModule<unknown, unknown>>) => {
+    this._enhanced_nodes = [];
     for (const detail of this._baseDetails) {
-      const nodes_enhanced: Record<number, INodeResourceEnhanced> = {};
-      for (const mapKey of Object.keys(detail.nodes)) {
-        const node: INodeResource = detail.nodes[mapKey];
+      const nodes_enhanced: Record<string, INodeResourceEnhanced> = {};
+      const detailNodes = detail.nodes ?? {};
+      for (const mapKey of Object.keys(detailNodes)) {
+        const node: INodeResource = detailNodes[mapKey];
         const instance_external_path = node.instance_external?.path ?? '';
 
         const node_enhanced: INodeResourceEnhanced = {
@@ -85,7 +82,7 @@ export class FusionModule extends CommonModule<IFusion> {
     }
   };
 
-  generateImages = async (overwrite: boolean, modules: Array<CommonModule<unknown>>) => {
+  generateImages = async (overwrite: boolean, modules: Array<CommonModule<unknown, unknown>>) => {
     const spriteAnimModule = this.getModuleOfType<ISpriteAnim>(
       modules,
       ModuleType.FusionSpriteAnim,
@@ -105,90 +102,96 @@ export class FusionModule extends CommonModule<IFusion> {
     overwrite: boolean,
   ) => {};
 
-  writePages = async (langCode: string, modules: Array<CommonModule<unknown>>) => {
-    const localeModule = this.getModuleOfType<ILocalisation>(
-      modules,
-      ModuleType.Localisation,
-    ) as LocalisationModule;
-    const language = localeModule.getTranslationMapForLocal(langCode).messages;
-    const monsterModule = this.getModuleOfType<IMonsterForm>(modules, ModuleType.MonsterForms);
+  // writePages = async (langCode: string, modules: Array<CommonModule<unknown, unknown>>) => {
+  //   const localeModule = this.getModuleOfType<ILocalisation>(
+  //     modules,
+  //     ModuleType.Localisation,
+  //   ) as LocalisationModule;
+  //   const language = localeModule.getTranslationMapForLocal(langCode).messages;
+  //   const monsterModule = this.getModuleOfType<IMonsterForm>(modules, ModuleType.MonsterForms);
 
-    const mainBreadcrumb = breadcrumb.fusion(langCode);
+  //   const mainBreadcrumb = breadcrumb.fusion(langCode);
 
-    const monsterIdA = 'adeptile';
-    const monsterIdB = 'springheel';
-    const monsterA = monsterModule.get(monsterIdA);
-    const monsterB = monsterModule.get(monsterIdB);
-    const fusionKey = language[monsterA.fusion_name_prefix] + language[monsterB.fusion_name_suffix];
+  //   // const monsterIdA = 'adeptile';
+  //   // const monsterIdB = 'springheel';
+  //   // const monsterA = monsterModule.get(monsterIdA);
+  //   // const monsterB = monsterModule.get(monsterIdB);
+  //   // const fusionKey = language[monsterA.fusion_name_prefix] + language[monsterB.fusion_name_suffix];
 
-    const monsterFusionA: IFusionEnhanced = this._itemDetailMap[monsterIdA];
-    const monsterFusionB: IFusionEnhanced = this._itemDetailMap[monsterIdB];
-    const fusion: Record<string, INodeResourceEnhanced> = { ...monsterFusionA.nodes_enhanced };
-    for (const bKey of Object.keys(monsterFusionB)) {
-      const monsterFusionBProp = monsterFusionB[bKey];
-    }
+  //   // const monsterFusionA: IFusionEnhanced = this._itemDetailMap[monsterIdA];
+  //   // const monsterFusionB: IFusionEnhanced = this._itemDetailMap[monsterIdB];
+  //   // const fusion: Record<string, INodeResourceEnhanced> = { ...monsterFusionA.nodes_enhanced };
+  //   // for (const bKey of Object.keys(monsterFusionB)) {
+  //   //   const monsterFusionBProp = monsterFusionB[bKey];
+  //   // }
 
-    const relativePath = `${langCode}${routes.fusion}/${encodeURI(fusionKey)}.html`;
-    const detailPageData = this.getBasicPageData({
-      langCode,
-      modules,
-      documentTitle: fusionKey,
-      breadcrumbs: [mainBreadcrumb, breadcrumb.fusionDetail(langCode, fusionKey)],
-      data: {
-        monsterA,
-        monsterB,
-        fusion,
-      },
-      relativePath,
-    });
-    await getHandlebar().compileTemplateToFile({
-      data: detailPageData,
-      outputFiles: [relativePath],
-      templateFile: handlebarTemplate.characterDetail,
-    });
+  //   const fusionJsonFile = `assets/json${routes.fusion}.json`;
+  //   const destFusionJsonFile = path.join(paths().destinationFolder, fusionJsonFile);
+  //   createFoldersOfDestFilePath(destFusionJsonFile);
+  //   const list = Object.values(this._itemDetailMap).map((l: IFusionEnhanced) => ({
+  //     ...l,
+  //     nodes: l.nodes_enhanced,
+  //   }));
+  //   fs.writeFileSync(destFusionJsonFile, JSON.stringify(list, null, 2), 'utf-8');
 
-    // const list: Array<ICharacterEnhanced> = [];
-    // for (const mapKey of Object.keys(this._itemDetailMap)) {
-    //   const details: ICharacterEnhanced = this._itemDetailMap[mapKey];
-    //   list.push(details);
-    //   const relativePath = `${langCode}${routes.characters}/${encodeURI(mapKey)}.html`;
-    //   const detailPageData = this.getBasicPageData({
-    //     langCode,
-    //     localeModule,
-    //     documentTitle: details.name_localised,
-    //     breadcrumbs: [mainBreadcrumb, breadcrumb.characterDetail(langCode, details.name_localised)],
-    //     data: details,
-    //     relativePath,
-    //   });
-    //   detailPageData.images.twitter = details.meta_image_url;
-    //   detailPageData.images.facebook = details.meta_image_url;
-    //   await getHandlebar().compileTemplateToFile({
-    //     data: detailPageData,
-    //     outputFiles: [relativePath],
-    //     templateFile: handlebarTemplate.characterDetail,
-    //   });
-    // }
-    // const relativePath = `${langCode}${routes.fusion}/index.html`;
-    // const sortedList = list.sort(sortByStringProperty((l) => l.name_localised));
-    // await getHandlebar().compileTemplateToFile({
-    //   data: this.getBasicPageData({
-    //     langCode,
-    //     localeModule,
-    //     documentTitleUiKey: mainBreadcrumb.uiKey,
-    //     breadcrumbs: [mainBreadcrumb],
-    //     data: { list: sortedList },
-    //     relativePath,
-    //   }),
-    //   outputFiles: [relativePath],
-    //   templateFile: handlebarTemplate.character,
-    // });
-  };
+  //   const relativePath = `${langCode}${routes.fusion}/index.html`;
+  //   const detailPageData = this.getBasicPageData({
+  //     langCode,
+  //     modules,
+  //     documentTitle: 'Fusion',
+  //     breadcrumbs: [mainBreadcrumb, breadcrumb.fusion(langCode)],
+  //     data: {},
+  //     relativePath,
+  //   });
+  //   await getHandlebar().compileTemplateToFile({
+  //     data: detailPageData,
+  //     outputFiles: [relativePath],
+  //     templateFile: handlebarTemplate.fusion,
+  //   });
+
+  //   // const list: Array<ICharacterEnhanced> = [];
+  //   // for (const mapKey of Object.keys(this._itemDetailMap)) {
+  //   //   const details: ICharacterEnhanced = this._itemDetailMap[mapKey];
+  //   //   list.push(details);
+  //   //   const relativePath = `${langCode}${routes.characters}/${encodeURI(mapKey)}.html`;
+  //   //   const detailPageData = this.getBasicPageData({
+  //   //     langCode,
+  //   //     localeModule,
+  //   //     documentTitle: details.name_localised,
+  //   //     breadcrumbs: [mainBreadcrumb, breadcrumb.characterDetail(langCode, details.name_localised)],
+  //   //     data: details,
+  //   //     relativePath,
+  //   //   });
+  //   //   detailPageData.images.twitter = details.meta_image_url;
+  //   //   detailPageData.images.facebook = details.meta_image_url;
+  //   //   await getHandlebar().compileTemplateToFile({
+  //   //     data: detailPageData,
+  //   //     outputFiles: [relativePath],
+  //   //     templateFile: handlebarTemplate.characterDetail,
+  //   //   });
+  //   // }
+  //   // const relativePath = `${langCode}${routes.fusion}/index.html`;
+  //   // const sortedList = list.sort(sortByStringProperty((l) => l.name_localised));
+  //   // await getHandlebar().compileTemplateToFile({
+  //   //   data: this.getBasicPageData({
+  //   //     langCode,
+  //   //     localeModule,
+  //   //     documentTitleUiKey: mainBreadcrumb.uiKey,
+  //   //     breadcrumbs: [mainBreadcrumb],
+  //   //     data: { list: sortedList },
+  //   //     relativePath,
+  //   //   }),
+  //   //   outputFiles: [relativePath],
+  //   //   templateFile: handlebarTemplate.character,
+  //   // });
+  // };
 
   private _findMostCommonKeys = () => {
     const mapCount: Record<string, number> = {};
     for (const detail of this._baseDetails) {
-      for (const nodeKey of Object.keys(detail.nodes)) {
-        const node: INodeResource = detail.nodes[nodeKey];
+      const detailNodes = detail.nodes ?? {};
+      for (const nodeKey of Object.keys(detailNodes)) {
+        const node: INodeResource = detailNodes[nodeKey];
         mapCount[node.name] = (mapCount[node.name] ?? 0) + 1;
       }
     }
@@ -239,7 +242,7 @@ export class FusionModule extends CommonModule<IFusion> {
 
   private _generateNodeImages = async (
     overwrite: boolean,
-    spriteAnimModule: CommonModule<ISpriteAnim>,
+    spriteAnimModule: CommonModule<ISpriteAnim, ISpriteAnim>,
     node: INodeResourceEnhanced,
   ) => {
     const icon_url = node.instance_external_path.replace('.json', '.png');

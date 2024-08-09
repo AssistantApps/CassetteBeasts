@@ -1,5 +1,5 @@
-import { IExternalResource } from './externalResource';
-import { IMoveSimplified } from './move';
+import type { IExternalResource } from './externalResource';
+import type { IMoveSimplified } from './move';
 
 export interface IStatusEffect {
   id: string;
@@ -7,7 +7,7 @@ export interface IStatusEffect {
   description: string;
   has_duration: boolean;
   reduce_duration_at: number;
-  icon: IExternalResource;
+  icon?: IExternalResource;
   is_removable: boolean;
   is_buff: boolean;
   is_debuff: boolean;

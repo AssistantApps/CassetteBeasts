@@ -1,0 +1,153 @@
+---
+import Layout from 'components/layouts/Layout.astro';
+import Breadcrumb from '../../../components/Breadcrumb.astro';
+
+import languageJson from '../../../assets/json/language.json';
+
+import { readDataFromAssets } from 'helpers/fileHelper';
+import { IntermediateFile } from 'constants/intermediateFile';
+import { astroPaths } from 'constants/astro';
+import { breadcrumb } from 'constants/breadcrumb';
+import { routes } from 'constants/route';
+import { availableLanguages, UIKeys } from 'constants/localisation';
+import type { ILocalisation } from 'contracts/localisation';
+import type { IMonsterFormEnhanced } from 'contracts/monsterForm';
+import { monsterSort } from 'helpers/sortHelper';
+import { translator } from 'helpers/translateHelper';
+import { imgUrl } from 'helpers/urlHelper';
+
+export async function getStaticPaths() {
+  const paths: any = [];
+  for (const locale of availableLanguages) {
+    const itemMap = await readDataFromAssets<Record<string, IMonsterFormEnhanced>>({
+      pathFolders: [...astroPaths.intermediatePath, locale],
+      destFileName: IntermediateFile.monsterForms,
+    });
+    const path = {
+      params: { locale: locale },
+      props: { list: Object.values(itemMap) },
+    };
+    paths.push(path as never);
+  }
+  return paths;
+}
+
+const { locale } = Astro.params;
+const unorderedList = (Astro.props as any).list as Array<IMonsterFormEnhanced>;
+const list = unorderedList.sort(monsterSort);
+const translationLookup = (languageJson as Record<string, ILocalisation>)[locale].messages;
+const { translate } = translator(translationLookup);
+---
+
+<Layout
+  locale={locale}
+  documentTitle={translate(UIKeys.viewMonsters)}
+  translationLookup={translationLookup}
+>
+  <div class="page-options-with-breadcrumbs">
+    <Breadcrumb
+      locale={locale}
+      translationLookup={translationLookup}
+      breadcrumbs={[breadcrumb.monster(locale)]}
+    />
+
+    <div class="page-options">
+      <label>
+        <input
+          id="monster-grid-checkbox"
+          type="checkbox"
+          role="switch"
+          name="animated images"
+          onchange="toggleClassToId('monster-grid', 'useGif', this.checked); setSetting('useGif', this.checked)"
+        />
+        <span>{translate('useGifs')}</span>
+      </label>
+      <select
+        name="Sort by"
+        aria-label="Sort by"
+        required
+        onchange="orderItemsByDataAttr(this, 'monster-grid')"
+      >
+        <option value="id">{translate('bestiaryId')}</option>
+        <option value="title">{translate('alphabetical')}</option>
+      </select>
+    </div>
+  </div>
+
+  <section id="search">
+    <h2 class="hidden">Search</h2>
+    <input
+      type="search"
+      name="search"
+      placeholder="Search for..."
+      oninput="onSearchChange(this.value)"
+    />
+  </section>
+
+  <section id="monster-grid" class="item-grid-list mb-3">
+    <div class="meta">
+      <h1>{translate(UIKeys.viewMonsters)}</h1>
+    </div>
+    {
+      list.map((data, index) => (
+        <a
+          href={`/${locale}${routes.monsters}/${data.resource_name}.html`}
+          class={`grid-list-item item ${data.isSecret ? 'secret' : ''} animate__animated animate__fadeIn`}
+          data-id={data.bestiary_index_with_padding}
+          data-title={data.name_localised}
+          data-description={data.description_localised}
+          style={`animation-delay: ${Math.min(index * 30, 600)}ms;`}
+        >
+          <div class="grid-list-item-image">
+            <img
+              src={imgUrl(data.icon_url)}
+              class="sprite"
+              loading="lazy"
+              alt={`${data.name_localised}`}
+              draggable="false"
+            />
+
+            {data.animations.map((anim, index) => {
+              if (index != 0) return '';
+              return (
+                <img
+                  src={imgUrl(anim.imageUrl)}
+                  class="sprite-anim"
+                  loading="lazy"
+                  alt={`gif #${anim.id} of ${data.name_localised}`}
+                  draggable="false"
+                />
+              );
+            })}
+
+            <img
+              src={imgUrl(data.tape_sticker_texture?.path)}
+              class="sticker animate__animated"
+              loading="lazy"
+              alt={`${data.name_localised}`}
+              draggable="false"
+            />
+
+            {data.elemental_types_elements.map((elem) => (
+              <img
+                src={imgUrl(elem.icon?.path)}
+                class="type animate__animated"
+                alt={`element of ${elem.name_localised}`}
+                loading="lazy"
+                draggable="false"
+              />
+            ))}
+          </div>
+          <section class="grid-list-item-container">
+            <h2 class="Neu5Land heading">{data.name_localised}</h2>
+            <small class="description">{data.description_localised}</small>
+          </section>
+          <div class="bestiary">
+            <span>#</span>
+            <span>{data.bestiary_index_with_padding}</span>
+          </div>
+        </a>
+      ))
+    }
+  </section>
+</Layout>

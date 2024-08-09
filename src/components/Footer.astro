@@ -1,0 +1,59 @@
+---
+import { routes } from 'constants/route';
+import { site } from 'constants/site';
+import { UIKeys } from 'constants/localisation';
+import { translator } from 'helpers/translateHelper';
+
+interface Props {
+  version: string;
+  translationLookup: Record<string, string>;
+}
+
+const { version, translationLookup } = Astro.props;
+const analyticsCode = import.meta.env.POSTHOG_ANALYTICS_CODE;
+const { translate } = translator(translationLookup);
+---
+
+<footer class="ta-center" transition:persist>
+  <small
+    class="legal"
+    set:html={translate(
+      'legalNotice',
+      '<span class="tertiary">Bytten Studio Ltd</span>',
+      `<span class="tertiary">${translate(UIKeys.cassetteBeasts)}</span>`,
+    )}
+  />
+  <br />
+  <small class="ta-center">
+    <span>© {site.assistantApps.name}. All rights reserved.</span>
+    <span>&nbsp;|&nbsp;</span>
+    <span>
+      <a href={routes.about} title="About">About</a>
+    </span>
+    <span>&nbsp;|&nbsp;</span>
+    <span>
+      <a href="/privacy_policy" target="_blank" rel="noopener noreferrer" title="Privacy Policy">
+        Privacy Policy
+      </a>
+    </span>
+    <span>&nbsp;|&nbsp;</span>
+    <span>
+      <a
+        href="/terms_and_conditions"
+        target="_blank"
+        rel="noopener noreferrer"
+        title="Terms and Conditions"
+      >
+        Terms and Conditions
+      </a>
+    </span>
+    <span>&nbsp;|&nbsp;</span>
+    <span>v{version}</span>
+  </small>
+</footer>
+
+{
+  analyticsCode.length > 0 && (
+    <assistant-apps-posthog-analytics-no-cookie analyticscode={analyticsCode} />
+  )
+}

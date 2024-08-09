@@ -1,5 +1,10 @@
-import { site } from 'constant/site';
-import { IBreadcrumb } from './breadcrumb';
+import { site } from 'constants/site';
+import type { IBreadcrumb } from './breadcrumb';
+
+export interface IAlternateUrl {
+  href: string;
+  lang: string;
+}
 
 export type PageData<T> = typeof site & {
   humansArray: Array<string>;
@@ -8,7 +13,7 @@ export type PageData<T> = typeof site & {
   relativePath?: string;
   documentTitle?: string;
   documentTitleUiKey?: string;
-  alternateUrls: Array<string>;
+  alternateUrls: Array<IAlternateUrl>;
   breadcrumbs: Array<IBreadcrumb>;
   translate: Record<string, string>;
   routes: Record<string, string>;

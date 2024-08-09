@@ -1,0 +1,191 @@
+---
+import Layout from 'components/layouts/Layout.astro';
+import Breadcrumb from 'components/Breadcrumb.astro';
+
+import languageJson from '../../../assets/json/language.json';
+
+import { readDataFromAssets } from 'helpers/fileHelper';
+import { IntermediateFile } from 'constants/intermediateFile';
+import { astroPaths } from 'constants/astro';
+import { breadcrumb } from 'constants/breadcrumb';
+import { routes } from 'constants/route';
+import { availableLanguages, UIKeys } from 'constants/localisation';
+import type { ILocalisation } from 'contracts/localisation';
+import type { IMoveEnhanced } from 'contracts/move';
+import { sortByStringProperty } from 'helpers/sortHelper';
+import { limitLengthWithEllipse } from 'helpers/stringHelper';
+import { translator } from 'helpers/translateHelper';
+import { imgUrl } from 'helpers/urlHelper';
+
+export async function getStaticPaths() {
+  const paths: any = [];
+  for (const locale of availableLanguages) {
+    const itemMap = await readDataFromAssets<Record<string, IMoveEnhanced>>({
+      pathFolders: [...astroPaths.intermediatePath, locale],
+      destFileName: IntermediateFile.moves,
+    });
+    const path = {
+      params: { locale: locale },
+      props: { list: Object.values(itemMap) },
+    };
+    paths.push(path as never);
+  }
+  return paths;
+}
+
+const { locale } = Astro.params;
+const unorderedList = (Astro.props as any).list as Array<IMoveEnhanced>;
+const list = unorderedList.sort(sortByStringProperty((l) => l.name_localised));
+const translationLookup = (languageJson as Record<string, ILocalisation>)[locale].messages;
+const { translate } = translator(translationLookup);
+---
+
+<Layout
+  locale={locale}
+  documentTitle={translate(UIKeys.viewStickers)}
+  translationLookup={translationLookup}
+>
+  <Breadcrumb
+    locale={locale}
+    translationLookup={translationLookup}
+    breadcrumbs={[breadcrumb.move(locale)]}
+  />
+
+  <section id="search">
+    <fieldset role="group">
+      <input
+        type="search"
+        name="search"
+        placeholder="Search for..."
+        class="search-input-border-radius"
+        oninput="onSearchChange(this.value)"
+      />
+      <button
+        id="list-mode"
+        class="secondary project-btn no-border-right hidden-in-mobile"
+        data-class="list"
+        onclick="applyClassToId('move-grid', '-mode', this.id); toggleClassToId(this.id, 'selected', true); toggleClassToId('grid-mode', 'selected', false)"
+        data-tooltip="List view">☰</button
+      >
+      <button
+        id="grid-mode"
+        class="secondary project-btn no-border-left hidden-in-mobile selected"
+        data-class="grid"
+        onclick="applyClassToId('move-grid', '-mode', this.id); toggleClassToId(this.id, 'selected', true); toggleClassToId('list-mode', 'selected', false)"
+        data-tooltip="Grid view">▦</button
+      >
+    </fieldset>
+  </section>
+
+  <section id="move-grid" class="item-grid-list grid-mode mb-3">
+    <div class="meta">
+      <h1>{translate(UIKeys.viewStickers)}</h1>
+    </div>
+
+    {
+      list.map((data, index) => (
+        <a
+          href={`/${locale}${routes.moves}/${data.id}.html`}
+          class="grid-list-item item animate__animated animate__fadeIn"
+          data-title={data.name_localised}
+          data-description={data.description_localised}
+          style={`animation-delay: ${Math.min(index * 30, 600)}ms;`}
+        >
+          <div class="header">
+            <div class="types">
+              {data.elemental_types_elements.length > 0 ? (
+                data.elemental_types_elements.map((elem) => (
+                  <img
+                    src={imgUrl(elem.icon?.path)}
+                    class="type"
+                    loading="lazy"
+                    alt={`element of ${elem.name_localised}`}
+                    draggable="false"
+                  />
+                ))
+              ) : (
+                <img
+                  src="/assets/img/typeless.png"
+                  class="type"
+                  loading="lazy"
+                  title="Typeless"
+                  alt="{this.name}"
+                  draggable="false"
+                />
+              )}
+            </div>
+            <div class="center-item">
+              <div class="heading">
+                <h3 class="Neu5Land">{data.name_localised}</h3>
+              </div>
+            </div>
+            <div class="ap-block">
+              {Array.from(Array(data.cost)).map(() => (
+                <img
+                  src="/assets/img/meta/ap.png"
+                  class="ap"
+                  title="Action Point"
+                  alt="an action point"
+                  loading="lazy"
+                  draggable="false"
+                />
+              ))}
+            </div>
+          </div>
+          <section
+            class={`grid-list-item-container ${data.status_effects_elements_max_3 ? '' : 'no-status'}`}
+          >
+            <small class="description">
+              {limitLengthWithEllipse(data.description_localised, 100)}
+            </small>
+
+            <div class="extra">
+              {data.power > 0 && (
+                <small>
+                  <b>{translate(UIKeys.power)}: </b>
+                  {data.power}
+                </small>
+              )}
+              {data.accuracy && (
+                <small>
+                  <b>{translate(UIKeys.accuracy)}: </b>
+                  {data.unavoidable ? translate('unavoidable') : `${data.accuracy}%`}
+                </small>
+              )}
+            </div>
+          </section>
+
+          {data.status_effects_elements_max_3?.length > 0 && (
+            <section class="status-card-container">
+              {(data.status_effects_elements_max_3 ?? []).map((elem) => (
+                <div class="status-group">
+                  <img
+                    src={imgUrl(elem.icon?.path)}
+                    class="status"
+                    loading="lazy"
+                    alt={`status of ${elem.name_localised}`}
+                    draggable="false"
+                  />
+                  <small>{elem.name_localised}</small>
+                </div>
+              ))}
+            </section>
+          )}
+
+          <div class="ap-block">
+            {Array.from(Array(data.cost)).map(() => (
+              <img
+                src="/assets/img/meta/ap.png"
+                class="ap"
+                title="Action Point"
+                alt="an action point"
+                loading="lazy"
+                draggable="false"
+              />
+            ))}
+          </div>
+        </a>
+      ))
+    }
+  </section>
+</Layout>

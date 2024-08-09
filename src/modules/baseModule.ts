@@ -2,19 +2,25 @@ import fs from 'fs';
 import path from 'path';
 import readline from 'readline';
 
-import { tresSeparator } from 'constant/tresSeparator';
-import { IExternalResource } from 'contracts/externalResource';
-import { INodeResource } from 'contracts/nodeResource';
-import { ISubAnimationResource } from 'contracts/subAnimationResource';
-import { ISubResource } from 'contracts/subResource';
+import { tresSeparator } from 'constants/tresSeparator';
+import type { IExternalResource } from 'contracts/externalResource';
+import { externalResourceMapper } from 'contracts/mapper/externalResourceMapper';
+import {
+  nodeResourceFromDetailList,
+  nodeResourceHeadMapper,
+} from 'contracts/mapper/nodeResourceMapper';
+import {
+  subAnimResourceFromDetailList,
+  subAnimResourceMapper,
+} from 'contracts/mapper/subAnimResourceMapper';
+import { subResourceFromDetailList, subResourceMapper } from 'contracts/mapper/subResourceMapper';
+import type { INodeResource } from 'contracts/nodeResource';
+import type { ISubAnimationResource } from 'contracts/subAnimationResource';
+import type { ISubResource } from 'contracts/subResource';
 import { stringStartsWith } from 'helpers/stringHelper';
-import { externalResourceMapper } from 'mapper/externalResourceMapper';
-import { nodeResourceFromDetailList, nodeResourceHeadMapper } from 'mapper/nodeResourceMapper';
-import { subAnimResourceFromDetailList, subAnimResourceMapper } from 'mapper/subAnimResourceMapper';
-import { subResourceFromDetailList, subResourceMapper } from 'mapper/subResourceMapper';
 
 export const getItemFromMapByIntId =
-  <T>(mapItemDetailMap: Record<number, T>) =>
+  <T>(mapItemDetailMap: Record<string, T>) =>
   (id: string) => {
     const idNum = parseInt(id);
     if (isNaN(idNum)) {

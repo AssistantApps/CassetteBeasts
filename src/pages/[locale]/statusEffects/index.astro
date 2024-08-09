@@ -1,0 +1,96 @@
+---
+import Layout from 'components/layouts/Layout.astro';
+import Breadcrumb from 'components/Breadcrumb.astro';
+
+import languageJson from '../../../assets/json/language.json';
+
+import { readDataFromAssets } from 'helpers/fileHelper';
+import { IntermediateFile } from 'constants/intermediateFile';
+import { astroPaths } from 'constants/astro';
+import { breadcrumb } from 'constants/breadcrumb';
+import { routes } from 'constants/route';
+import { availableLanguages, UIKeys } from 'constants/localisation';
+import type { ILocalisation } from 'contracts/localisation';
+import type { IStatusEffectEnhanced } from 'contracts/statusEffect';
+import { sortByStringProperty } from 'helpers/sortHelper';
+import { translator } from 'helpers/translateHelper';
+import { imgUrl } from 'helpers/urlHelper';
+
+export async function getStaticPaths() {
+  const paths: any = [];
+  for (const locale of availableLanguages) {
+    const itemMap = await readDataFromAssets<Array<IStatusEffectEnhanced>>({
+      pathFolders: [...astroPaths.intermediatePath, locale],
+      destFileName: IntermediateFile.statusEffects,
+    });
+    const path = {
+      params: { locale: locale },
+      props: { list: Object.values(itemMap) },
+    };
+    paths.push(path as never);
+  }
+  return paths;
+}
+
+const { locale } = Astro.params;
+const unorderedList = (Astro.props as any).list as Array<IStatusEffectEnhanced>;
+const list = unorderedList.sort(sortByStringProperty((l) => l.name_localised));
+const translationLookup = (languageJson as Record<string, ILocalisation>)[locale].messages;
+const { translate } = translator(translationLookup);
+---
+
+<Layout
+  locale={locale}
+  documentTitle={translate(UIKeys.statusEffect)}
+  translationLookup={translationLookup}
+>
+  <Breadcrumb
+    locale={locale}
+    translationLookup={translationLookup}
+    breadcrumbs={[breadcrumb.element(locale)]}
+  />
+
+  <section id="search">
+    <h2 class="hidden">Search</h2>
+    <input
+      type="search"
+      name="search"
+      placeholder="Search for..."
+      oninput="onSearchChange(this.value)"
+    />
+  </section>
+
+  <section id="status-effect-grid" class="item-grid-list mb-3">
+    <div class="meta">
+      <h1>{translate(UIKeys.statusEffect)}</h1>
+    </div>
+
+    {
+      list.map((data, index) => (
+        <a
+          href={`/${locale}${routes.statusEffect}/${data.id}.html`}
+          class="grid-list-item item animate__animated animate__fadeIn"
+          title={data.name_localised}
+          data-title={data.name_localised}
+          data-description={data.description_localised}
+          style={`animation-delay: ${Math.min(index * 30, 600)}ms;`}
+        >
+          <div class="grid-list-item-image">
+            <img
+              src={imgUrl(data.icon?.path)}
+              loading="lazy"
+              alt={`icon of ${data.name_localised}`}
+              draggable="false"
+            />
+          </div>
+          <section class="grid-list-item-container">
+            <h2 class="Neu5Land heading">{data.name_localised}</h2>
+            <small class="description">
+              {data.description_localised ? data.description_localised : '...'}
+            </small>
+          </section>
+        </a>
+      ))
+    }
+  </section>
+</Layout>

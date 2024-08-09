@@ -1,4 +1,4 @@
-import { IMonsterFormEnhanced, IMonsterFormSimplified } from 'contracts/monsterForm';
+import type { IMonsterFormEnhanced, IMonsterFormSimplified } from 'contracts/monsterForm';
 
 export const sortByStringProperty =
   <T>(getProp: (t: T) => string) =>

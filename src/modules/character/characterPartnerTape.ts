@@ -1,10 +1,10 @@
 import path from 'path';
 import sharp from 'sharp';
 
-import { AppImage } from 'constant/image';
-import { paths } from 'constant/paths';
+import { AppImage } from 'constants/image';
+import { paths } from 'constants/paths';
+import { getExternalResourcesImagePath } from 'contracts/mapper/externalResourceMapper';
 import { getBase64FromFile } from 'helpers/fileHelper';
-import { getExternalResourcesImagePath } from 'mapper/externalResourceMapper';
 
 interface IMetaImagesProps {
   spriteBase64: string;
@@ -19,7 +19,7 @@ export const getCharacterPartnerTapeImage = async (
   stickerFilePath: string,
   elementFilePath: string,
   isBootleg: boolean = false,
-): Promise<IMetaImagesProps> => {
+): Promise<IMetaImagesProps | undefined> => {
   const stickerPath = getExternalResourcesImagePath(stickerFilePath);
   if (stickerPath == null || stickerPath.length < 1) return;
   const spriteFullPath = path.join(paths().generatedImagesFolder, stickerPath);
@@ -39,6 +39,7 @@ export const getCharacterPartnerTapeImage = async (
 
   const metaStickerHeight = (256 / 5) * 2.5;
   const metaData = await sharp(spriteFullPath).metadata();
+  if (metaData.height == null || metaData.width == null) return;
   const metaStickerHeightRatio = metaStickerHeight / metaData.height;
   const metaStickerWidth = Math.round(metaData.width * metaStickerHeightRatio);
   const metaStickerY = 256 - metaStickerHeight - 2;

@@ -1,24 +1,26 @@
 import { AssistantAppsApiService } from '@assistantapps/assistantapps.api.client';
 
-import { IntermediateFile } from 'constant/intermediateFile';
-import { defaultLocale } from 'constant/localisation';
-import { ModuleType } from 'constant/module';
-import { site } from 'constant/site';
-import { ILocalisation } from 'contracts/localisation';
+import { IntermediateFile } from 'constants/intermediateFile';
+import { defaultLocale } from 'constants/localisation';
+import { ModuleType } from 'constants/module';
+import { site } from 'constants/site';
+import type { ILocalisation } from 'contracts/localisation';
 import { CommonModule } from 'modules/commonModule';
 
-export class AssistantAppsModule extends CommonModule<ILocalisation> {
+export class AssistantAppsModule extends CommonModule<unknown, ILocalisation> {
   constructor() {
     super({
       type: ModuleType.AssistantApps,
       intermediateFile: IntermediateFile.assistantAppsLanguage,
+      loadOnce: true,
       dependsOn: [],
     });
   }
 
   init = async () => {
     if (this.isReady) return;
-    const languageMap = {
+
+    const languageMap: Record<string, Array<string>> = {
       '023b02be-f341-40a5-aa91-0093f659894c': ['de_DE'],
       '11c7504c-2d93-4ade-9c43-1d5bcf25c87c': ['en'],
       '2b52205a-193c-4b4b-b0f5-09d71fdf2c56': ['es_ES', 'es_MX'],
@@ -47,6 +49,7 @@ export class AssistantAppsModule extends CommonModule<ILocalisation> {
         this._itemDetailMap[appLang] = localisationObj;
       }
     }
+    this.isReady = true;
   };
 
   getUITranslations = (locale: string): Record<string, string> => {
@@ -57,4 +60,7 @@ export class AssistantAppsModule extends CommonModule<ILocalisation> {
     }
     return this._itemDetailMap[localLocal].messages;
   };
+
+  initFromIntermediate = () => this.init();
+  writeIntermediate = () => {};
 }

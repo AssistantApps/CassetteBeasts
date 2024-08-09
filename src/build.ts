@@ -4,11 +4,9 @@ import path from 'path';
 import Container from 'typedi';
 import url from 'url';
 
+import { defaultLocale } from 'constants/localisation';
 import { generateFavicons } from 'misc/favicon';
 import { smartLoadingModules } from 'misc/moduleLoader';
-import { generateMainCss } from 'misc/sass';
-import { setupDirectories } from 'misc/setup';
-import { generateSiteMap } from 'misc/sitemap';
 import { getModules } from 'modules';
 import { BOT_PATH } from 'services/internal/configService';
 import { getHandlebar } from 'services/internal/handlebarService';
@@ -20,16 +18,13 @@ const rootDirectory = path.join(directory, '../');
 const main = async () => {
   Container.set(BOT_PATH, rootDirectory);
   console.log('Starting up');
-  setupDirectories({ delete: false });
 
   console.log('Initialising modules');
   const [localisationModule, modules] = await getModules({ loadFromJson: true });
-  getHandlebar().clearGitIgnore();
   getHandlebar().unregisterPartialsAndHelpers();
   getHandlebar().registerPartialsAndHelpers();
 
   await generateFavicons();
-  generateMainCss();
 
   const availableLanguages = localisationModule.getLanguageCodes();
   let langCode = availableLanguages[0];
@@ -43,12 +38,14 @@ const main = async () => {
       loadFromJson: true,
     });
 
-    for (const module of modules) {
-      await module.generateImages(false, modules);
+    if (langCode != defaultLocale) {
+      for (const module of modules) {
+        module.writeIntermediate(langCode);
+      }
     }
 
     for (const module of modules) {
-      await module.writePages(langCode, modules);
+      await module.generateImages(false, modules);
     }
 
     for (const module of modules) {
@@ -57,9 +54,6 @@ const main = async () => {
     console.log('');
   }
 
-  console.log('Generating sitemap');
-  await generateSiteMap();
-  getHandlebar().generateGitIgnore();
   console.log('✔ Done\r\n');
 };
 

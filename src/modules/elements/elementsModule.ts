@@ -1,16 +1,18 @@
 import fs from 'fs';
 
-import { IntermediateFile } from 'constant/intermediateFile';
-import { ModuleType } from 'constant/module';
-import { IElement, IElementEnhanced } from 'contracts/element';
-import { ILocalisation } from 'contracts/localisation';
+import { IntermediateFile } from 'constants/intermediateFile';
+import { ModuleType } from 'constants/module';
+import type { IElement, IElementEnhanced } from 'contracts/element';
+import type { ILocalisation } from 'contracts/localisation';
 import { FolderPathHelper } from 'helpers/folderPathHelper';
 import { copyImageFromRes, copyImageToGeneratedFolder } from 'helpers/imageHelper';
+import { pad } from 'helpers/stringHelper';
 import { readItemDetail } from 'modules/baseModule';
 import { CommonModule } from 'modules/commonModule';
+import type { LocalisationModule } from 'modules/localisation/localisationModule';
 import { elementMapFromDetailList } from './elementMapFromDetailList';
 
-export class ElementsModule extends CommonModule<IElement> {
+export class ElementsModule extends CommonModule<IElement, IElementEnhanced> {
   private _folder = FolderPathHelper.elements();
 
   constructor() {
@@ -34,17 +36,19 @@ export class ElementsModule extends CommonModule<IElement> {
       this._baseDetails.push(detail);
     }
 
-    return `${this._baseDetails.length}  elements`;
+    return `${pad(this._baseDetails.length, 3, ' ')} elements`;
   };
 
-  enrichData = async (langCode: string, modules: Array<CommonModule<unknown>>) => {
-    const localeModule = this.getModuleOfType<ILocalisation>(modules, ModuleType.Localisation);
-    const language = localeModule.get(langCode).messages;
+  enrichData = async (langCode: string, modules: Array<CommonModule<unknown, unknown>>) => {
+    const localeModule = this.getModuleOfType<ILocalisation>(
+      modules,
+      ModuleType.Localisation,
+    ) as LocalisationModule;
 
     for (const detail of this._baseDetails) {
       const detailEnhanced: IElementEnhanced = {
         ...detail,
-        name_localised: language[detail.name],
+        name_localised: localeModule.translate(langCode, detail.name),
       };
 
       this._itemDetailMap[detailEnhanced.id] = detailEnhanced;

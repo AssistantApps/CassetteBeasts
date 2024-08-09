@@ -48,15 +48,19 @@ jobs:
       - name: Build TS
         run: |
           npm ci
+          npm run data
           npm run build
+
+      - name: Generate service worker
+        run: |
           npm run service-worker
 
       - name: Remove gitignore
         run: |
           rm -f .gitignore
-          rm -f public/.gitignore
+          rm -f dist/.gitignore
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: public
+          folder: dist

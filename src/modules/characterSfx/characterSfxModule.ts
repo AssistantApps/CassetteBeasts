@@ -1,24 +1,25 @@
 import fs from 'fs';
 import path from 'path';
 
-import { IntermediateFile } from 'constant/intermediateFile';
-import { ModuleType } from 'constant/module';
-import { paths } from 'constant/paths';
-import {
+import { IntermediateFile } from 'constants/intermediateFile';
+import { ModuleType } from 'constants/module';
+import { paths } from 'constants/paths';
+import type {
   ICharacter,
   ICharacterSfx,
   ICharacterSfxFile,
   ICharacterSfxFiles,
 } from 'contracts/character';
-import { IExternalResource } from 'contracts/externalResource';
+import type { IExternalResource } from 'contracts/externalResource';
 import { scaffoldFolderAndDelFileIfOverwrite } from 'helpers/fileHelper';
 import { FolderPathHelper } from 'helpers/folderPathHelper';
+import { pad } from 'helpers/stringHelper';
 import { copyWavFile } from 'helpers/wavHelper';
 import { readItemDetail } from 'modules/baseModule';
 import { CommonModule } from 'modules/commonModule';
 import { characterSfxMapFromDetailList } from './characterSfxMapFromDetailList';
 
-export class CharacterSfxModule extends CommonModule<ICharacterSfx> {
+export class CharacterSfxModule extends CommonModule<ICharacterSfx, ICharacterSfx> {
   private _folder = FolderPathHelper.characterSfx();
 
   constructor() {
@@ -42,10 +43,10 @@ export class CharacterSfxModule extends CommonModule<ICharacterSfx> {
       this._baseDetails.push(detail);
     }
 
-    return `${this._baseDetails.length}  character sfx`;
+    return `${pad(this._baseDetails.length, 3, ' ')} character sfx`;
   };
 
-  enrichData = async (langCode: string, modules: Array<CommonModule<unknown>>) => {
+  enrichData = async (langCode: string, modules: Array<CommonModule<unknown, unknown>>) => {
     const characterModule = this.getModuleOfType<ICharacter>(modules, ModuleType.Characters);
     for (const detail of this._baseDetails) {
       const mapKey = detail.file.toLowerCase();
@@ -55,7 +56,7 @@ export class CharacterSfxModule extends CommonModule<ICharacterSfx> {
 
       const audioFiles: Array<ICharacterSfxFiles> = [];
       for (const charSfxProp of Object.keys(detail)) {
-        const charSfxValue = detail[charSfxProp];
+        const charSfxValue = (detail as Record<string, any>)[charSfxProp];
         if (charSfxProp == 'audioFiles') continue;
         if (Array.isArray(charSfxValue) != true) continue;
 

@@ -1,18 +1,20 @@
-import { ModuleType } from 'constant/module';
+import { ModuleType } from 'constants/module';
 import { CommonModule } from 'modules/commonModule';
 
 const debugModuleLoading = false;
 
 export const smartLoadingModules = async (props: {
   langCode: string;
-  modules: Array<CommonModule<unknown>>;
+  modules: Array<CommonModule<unknown, unknown>>;
   reInitialise?: boolean;
   loadFromJson?: boolean;
 }) => {
   const initTasks: Array<Promise<string | void>> = [];
   for (const module of props.modules) {
     if (props.reInitialise == true) {
-      module.isReady = false;
+      if (module.loadOnce != true) {
+        module.isReady = false;
+      }
     }
 
     if (props.loadFromJson == true) {
@@ -65,7 +67,7 @@ export const smartLoadingModules = async (props: {
       }
       if (requiredModulesAreLoaded) {
         try {
-          await module.enrichData(props.langCode, props.modules);
+          module.enrichData(props.langCode, props.modules);
           modulesLoaded.push(module.type);
         } catch (e) {
           console.error('Unable to load modules', e);
@@ -85,6 +87,6 @@ export const smartLoadingModules = async (props: {
 
   if (debugModuleLoading) console.log('combining data');
   for (const module of props.modules) {
-    await module.combineData(props.langCode, props.modules);
+    module.combineData(props.langCode, props.modules);
   }
 };

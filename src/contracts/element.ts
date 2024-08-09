@@ -1,4 +1,4 @@
-import { IExternalResource } from './externalResource';
+import type { IExternalResource } from './externalResource';
 
 export interface IElement {
   id: string;
@@ -7,7 +7,7 @@ export interface IElement {
   //   palette: string;
   //   vfx_palette: string;
   sparkle: boolean;
-  icon: IExternalResource;
+  icon?: IExternalResource;
   loot_table: string;
 }
 

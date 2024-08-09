@@ -1,21 +1,23 @@
 import fs from 'fs';
 import path from 'path';
 
-import { IntermediateFile } from 'constant/intermediateFile';
-import { ModuleType } from 'constant/module';
-import { paths } from 'constant/paths';
-import { IVersion } from 'contracts/version';
+import { IntermediateFile } from 'constants/intermediateFile';
+import { ModuleType } from 'constants/module';
+import { paths } from 'constants/paths';
+import type { IVersion } from 'contracts/version';
+import { pad } from 'helpers/stringHelper';
 import { readItemDetail } from 'modules/baseModule';
 import { CommonModule } from 'modules/commonModule';
 import { getConfig } from 'services/internal/configService';
 import { VersionMapFromDetailList } from './versionMapFromDetailList';
 
-export class VersionModule extends CommonModule<IVersion> {
+export class VersionModule extends CommonModule<IVersion, IVersion> {
   private _fileName = 'version.tres';
   constructor() {
     super({
       type: ModuleType.Version,
       intermediateFile: IntermediateFile.version,
+      loadOnce: true,
       dependsOn: [],
     });
   }
@@ -28,7 +30,7 @@ export class VersionModule extends CommonModule<IVersion> {
       mapFromDetailList: VersionMapFromDetailList,
     });
     this.isReady = true;
-    return `Version details\n`;
+    return `${pad(1, 3, ' ')} version loaded (${this._itemDetailMap[this._fileName].commit_tag})`;
   };
 
   get = (_: string) => this._itemDetailMap[this._fileName];

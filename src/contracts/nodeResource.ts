@@ -1,5 +1,5 @@
-import { IExternalResource } from './externalResource';
-import { IVector2D } from './vector';
+import type { IExternalResource } from './externalResource';
+import type { IVector2D } from './vector';
 
 export interface INodeResourceHead {
   name: string;

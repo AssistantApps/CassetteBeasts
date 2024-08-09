@@ -1,0 +1,122 @@
+---
+import Layout from 'components/layouts/Layout.astro';
+import Breadcrumb from 'components/Breadcrumb.astro';
+
+import languageJson from '../../../assets/json/language.json';
+
+import { readDataFromAssets } from 'helpers/fileHelper';
+import { IntermediateFile } from 'constants/intermediateFile';
+import { astroPaths } from 'constants/astro';
+import { breadcrumb } from 'constants/breadcrumb';
+import { routes } from 'constants/route';
+import { availableLanguages } from 'constants/localisation';
+import type { ILocalisation } from 'contracts/localisation';
+import type { ICharacterEnhanced } from 'contracts/character';
+import { sortByStringProperty } from 'helpers/sortHelper';
+import { translator } from 'helpers/translateHelper';
+import { imgUrl } from 'helpers/urlHelper';
+
+export async function getStaticPaths() {
+  const paths: any = [];
+  for (const locale of availableLanguages) {
+    const itemMap = await readDataFromAssets<Record<string, ICharacterEnhanced>>({
+      pathFolders: [...astroPaths.intermediatePath, locale],
+      destFileName: IntermediateFile.characters,
+    });
+    const path = {
+      params: { locale: locale },
+      props: { list: Object.values(itemMap) },
+    };
+    paths.push(path as never);
+  }
+  return paths;
+}
+
+const { locale } = Astro.params;
+const unorderedList = (Astro.props as any).list as Array<ICharacterEnhanced>;
+const list = unorderedList.sort(sortByStringProperty((l) => l.name_localised));
+const translationLookup = (languageJson as Record<string, ILocalisation>)[locale].messages;
+const { translate } = translator(translationLookup);
+---
+
+<Layout
+  locale={locale}
+  documentTitle={translate('characters')}
+  translationLookup={translationLookup}
+>
+  <div class="page-options-with-breadcrumbs">
+    <Breadcrumb
+      locale={locale}
+      translationLookup={translationLookup}
+      breadcrumbs={[breadcrumb.character(locale)]}
+    />
+
+    <div class="page-options">
+      <label>
+        <input
+          id="character-grid-checkbox"
+          type="checkbox"
+          role="switch"
+          name="animated images"
+          onchange="toggleClassToId('character-grid', 'useGif', this.checked); setSetting('useGif', this.checked)"
+        />
+        <span>Use gifs</span>
+      </label>
+    </div>
+  </div>
+
+  <section id="character-grid" class="item-grid-list">
+    <div class="meta">
+      <h1>{translate('characters')}</h1>
+    </div>
+    {
+      list.map((data, index) => (
+        <a
+          href={`/${locale}${routes.characters}/${data.resource_name}.html`}
+          class="grid-list-item animate__animated animate__fadeIn"
+          data-title={data.name_localised}
+          style={`animation-delay: ${Math.min(index * 30, 600)}ms;`}
+        >
+          <div class="grid-list-item-image">
+            <img
+              src={imgUrl(data.icon_url)}
+              class="sprite"
+              loading="lazy"
+              alt={`${data.name_localised}`}
+              draggable="false"
+            />
+
+            {data.animations.map((anim, index) => {
+              if (index != 0) return '';
+              return (
+                <img
+                  src={imgUrl(anim.imageUrl)}
+                  class="sprite-anim"
+                  alt={`gif #${anim.id} of ${data.name_localised}`}
+                  loading="lazy"
+                  draggable="false"
+                />
+              );
+            })}
+
+            {data.portraits.map((portrait, index) => {
+              if (index != 0) return '';
+              return (
+                <img
+                  src={imgUrl(portrait)}
+                  class="sticker animate__animated"
+                  alt={`portrait of ${data.name_localised}`}
+                  loading="lazy"
+                  draggable="false"
+                />
+              );
+            })}
+          </div>
+          <section class="grid-list-item-container">
+            <h2 class="Neu5Land heading">{data.name_localised}</h2>
+          </section>
+        </a>
+      ))
+    }
+  </section>
+</Layout>

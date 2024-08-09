@@ -1,14 +1,15 @@
 import fs from 'fs';
 
-import { IntermediateFile } from 'constant/intermediateFile';
-import { ModuleType } from 'constant/module';
-import { ISpriteAnim } from 'contracts/spriteAnim';
+import { IntermediateFile } from 'constants/intermediateFile';
+import { ModuleType } from 'constants/module';
+import type { ISpriteAnim } from 'contracts/spriteAnim';
 import { FolderPathHelper } from 'helpers/folderPathHelper';
+import { pad } from 'helpers/stringHelper';
 import { readItemDetail } from 'modules/baseModule';
 import { CommonModule } from 'modules/commonModule';
 import { spriteAnimMapFromDetailList } from '../../misc/spriteAnimMapFromDetailList';
 
-export class FusionSpriteAnimModule extends CommonModule<ISpriteAnim> {
+export class FusionSpriteAnimModule extends CommonModule<ISpriteAnim, ISpriteAnim> {
   private _folder = FolderPathHelper.fusionSpriteAnim();
 
   constructor() {
@@ -42,6 +43,6 @@ export class FusionSpriteAnimModule extends CommonModule<ISpriteAnim> {
     }
     this.isReady = true;
 
-    return `${this._baseDetails.length}  fusion sprites`;
+    return `${pad(this._baseDetails.length, 3, ' ')} fusion sprites`;
   };
 }

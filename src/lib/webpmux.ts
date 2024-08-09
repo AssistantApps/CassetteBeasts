@@ -1,7 +1,7 @@
 import { execFile } from 'node:child_process'; //get child_process module
 import path from 'path';
 
-import { paths } from 'constant/paths';
+import { paths } from 'constants/paths';
 
 export interface IFrameInstructions {
   path: string;
@@ -16,14 +16,14 @@ interface IAnimateWebpPromiseProps {
 }
 export const animateWebp = (props: IAnimateWebpPromiseProps): Promise<string> => {
   return new Promise((resolve, reject) => {
-    const queryOpts = [];
+    const queryOpts: Array<string> = [];
     for (const frameInstruction of props.frameInstructions) {
       queryOpts.push('-frame');
       queryOpts.push(frameInstruction.path);
       queryOpts.push(frameInstruction.opts);
     }
     queryOpts.push('-loop');
-    queryOpts.push(props.loopNum ?? 0);
+    queryOpts.push((props.loopNum ?? 0).toString());
     queryOpts.push('-bgcolor');
     queryOpts.push(props.bgColour ?? '0,0,0,0');
     queryOpts.push('-o');

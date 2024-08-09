@@ -1,20 +1,20 @@
-import { IElement } from './element';
-import { IExternalResource } from './externalResource';
-import { IMonsterSpawnHabitatDetails } from './monsterSpawn';
-import { IMove, IMoveSimplified } from './move';
-import { ISpriteAnimDetailsEnhanced } from './spriteAnim';
-import { ISubResource, ISubResourceMonsterEnhanced } from './subResource';
+import type { IElementEnhanced } from './element';
+import type { IExternalResource } from './externalResource';
+import type { IMonsterSpawnHabitatDetails } from './monsterSpawn';
+import type { IMoveEnhanced, IMoveSimplified } from './move';
+import type { ISpriteAnimDetailsEnhanced } from './spriteAnim';
+import type { ISubResource, ISubResourceMonsterEnhanced } from './subResource';
 
 export interface IMonsterForm {
   name: string;
   //   swap_colors: string;
   //   default_palette: string;
   //   emission_palette: string;
-  battle_cry: IExternalResource;
+  battle_cry?: IExternalResource;
   //   named_positions: string;
   folder: string;
-  elemental_types: Array<IExternalResource>;
-  tape_sticker_texture: IExternalResource;
+  elemental_types?: Array<IExternalResource>;
+  tape_sticker_texture?: IExternalResource;
   exp_yield: number;
   require_dlc: string;
   battle_sprite_path: string;
@@ -37,8 +37,8 @@ export interface IMonsterForm {
   exp_gradient: number;
   exp_base_level: number;
   move_tags: Array<string>;
-  initial_moves: Array<IExternalResource>;
-  tape_upgrades: Array<IExternalResource | ISubResource>;
+  initial_moves?: Array<IExternalResource>;
+  tape_upgrades?: Array<IExternalResource | ISubResource>;
   unlock_ability: string;
   fusion_name_prefix: string;
   fusion_name_suffix: string;
@@ -66,13 +66,13 @@ export interface IMonsterFormEnhanced extends IMonsterForm {
   fusion_name_prefix_localised: string;
   fusion_name_suffix_localised: string;
   bestiary_bios_localised: Array<string>;
-  elemental_types_elements: Array<IElement>;
-  initial_moves_moves: Array<IMove>;
-  tape_upgrades_moves: Array<IMove>;
+  elemental_types_elements: Array<IElementEnhanced>;
+  initial_moves_moves: Array<IMoveEnhanced>;
+  tape_upgrades_moves: Array<IMoveEnhanced>;
   animations: Array<ISpriteAnimDetailsEnhanced>;
   learnable_moves: Array<IMoveSimplified>;
   unlock_ability_localised: string;
-  battle_cry_audio_url: string;
+  battle_cry_audio_url?: string;
   isSecret: boolean;
   spawn_overworld_locations: Array<IMonsterSpawnHabitatDetails>;
   spawn_backup_locations: Array<IMonsterSpawnHabitatDetails>;
@@ -84,7 +84,7 @@ export interface IMonsterFormSimplified {
   name_localised: string;
   resource_name: string;
   icon_url: string;
-  source: string;
+  source?: string;
   isSecret: boolean;
   bestiary_index: number;
   bestiary_index_with_padding: string;

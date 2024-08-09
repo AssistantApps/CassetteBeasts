@@ -1,35 +1,7 @@
-import fs from 'fs';
-import path from 'path';
 import prompts from 'prompts';
 
-import { TemplateGenerationSpeed } from 'constant/handlebar';
 import { timeout } from 'helpers/asyncHelper';
 import { addSpacesForEnum, capitalizeFirstLetter } from 'helpers/stringHelper';
-import { getBotPath } from 'services/internal/configService';
-
-export const setupDirectories = (props: { delete?: boolean }) => {
-  const distFolder = path.join(getBotPath(), 'dist');
-  if (fs.existsSync(distFolder)) {
-    if (props.delete) {
-      fs.rmSync(distFolder, { recursive: true });
-      fs.mkdirSync(distFolder);
-    }
-  } else {
-    fs.mkdirSync(distFolder);
-  }
-
-  for (const distSubFolder of ['base', 'intermediate']) {
-    const distIntermediateFolder = path.join(distFolder, distSubFolder);
-    if (fs.existsSync(distIntermediateFolder)) {
-      if (props.delete) {
-        fs.rmSync(distIntermediateFolder, { recursive: true });
-        fs.mkdirSync(distIntermediateFolder);
-      }
-    } else {
-      fs.mkdirSync(distIntermediateFolder);
-    }
-  }
-};
 
 export const mainMenu = async (
   menuLookup: { [key: string]: () => Promise<void> },
@@ -92,22 +64,4 @@ export const yesOrNoPrompt = async (questionText: string): Promise<boolean> => {
   });
 
   return !!yesNoChoice.value;
-};
-
-export const templateGenerationSpeedPrompt = async (
-  questionText: string,
-): Promise<TemplateGenerationSpeed> => {
-  const yesNoChoice = await prompts({
-    type: 'select',
-    name: 'value',
-    message: questionText,
-    choices: Object.keys(TemplateGenerationSpeed)
-      .filter((e: any) => isNaN(e) == false)
-      .map((e) => ({
-        title: TemplateGenerationSpeed[e],
-        value: e,
-      })),
-  });
-
-  return yesNoChoice.value;
 };

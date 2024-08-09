@@ -1,0 +1,33 @@
+[
+  {
+    "uiKey": "UI_BESTIARY_LIST_MODE_VIEW_MONSTERS",
+    "url": "/monsters",
+    "gameUrl": "res://ui/monster_stickers/kittelly.png"
+  },
+  {
+    "uiKey": "UI_PARTY_VIEW_MOVES",
+    "url": "/moves",
+    "imageUrl": "/assets/img/moves.png"
+  },
+  {
+    "uiKey": "characters",
+    "url": "/characters",
+    "imageUrl": "/assets/img/characters.png"
+  },
+  {
+    "uiKey": "ITEM_TYPE_CHART_NAME",
+    "url": "/elementReactions",
+    "gameUrl": "res://ui/icons/types/element_astral.png"
+  },
+  {
+    "uiKey": "MOVE_CATEGORY_STATUS",
+    "url": "/statusEffects",
+    "gameUrl": "res://ui/icons/status_effects/gambit.png"
+  },
+  {
+    "uiKey": "UI_PAUSE_MAP_BTN",
+    "url": "/map",
+    "gameUrl": "res://data/map_metadata/overworld.png",
+    "hideInMobile": true
+  }
+]

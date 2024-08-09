@@ -1,11 +1,11 @@
 import path from 'path';
 import sharp from 'sharp';
 
-import { AppImage } from 'constant/image';
-import { paths } from 'constant/paths';
-import { site } from 'constant/site';
+import { AppImage } from 'constants/image';
+import { paths } from 'constants/paths';
+import { site } from 'constants/site';
+import { getExternalResourcesImagePath } from 'contracts/mapper/externalResourceMapper';
 import { getBase64FromFile } from 'helpers/fileHelper';
-import { getExternalResourcesImagePath } from 'mapper/externalResourceMapper';
 
 interface IMetaImagesProps {
   spriteBase64: string;
@@ -17,9 +17,10 @@ interface IMetaImagesProps {
   stickerY: number;
 }
 export const getMonsterFormMetaImage = async (
-  stickerFilePath: string,
-  elementFilePath: string,
-): Promise<IMetaImagesProps> => {
+  stickerFilePath?: string,
+  elementFilePath?: string,
+): Promise<IMetaImagesProps | undefined> => {
+  if (stickerFilePath == null) return;
   const stickerPath = getExternalResourcesImagePath(stickerFilePath);
   if (stickerPath == null || stickerPath.length < 1) return;
   const spriteFullPath = path.join(paths().generatedImagesFolder, stickerPath);
@@ -40,6 +41,7 @@ export const getMonsterFormMetaImage = async (
 
   const metaStickerHeight = (site.images.meta.height / 5) * 3;
   const metaData = await sharp(spriteFullPath).metadata();
+  if (metaData.height == null || metaData.width == null) return;
   const metaStickerHeightRatio = metaStickerHeight / metaData.height;
   const metaStickerWidth = Math.round(metaData.width * metaStickerHeightRatio);
   const metaStickerY = site.images.meta.height - metaStickerHeight - 2;

@@ -1,3 +1,4 @@
+import { astroPaths } from 'constants/astro';
 import fs from 'fs';
 import path from 'path';
 
@@ -82,4 +83,25 @@ export const removeLastFolder = (filepath: string) => {
   const destFolder = filepath.substring(0, indexOfLastSlash);
   const indexOfSecondLastSlash = destFolder.lastIndexOf('\\');
   return path.join(filepath.substring(0, indexOfSecondLastSlash), fileName);
+};
+
+interface IWriteProps<T> {
+  botPath: string;
+  destFileName: string;
+  data: T;
+}
+
+export const writeDataToAssets = async <T>(props: IWriteProps<T>) => {
+  const fullPath = path.join(props.botPath, 'assets', props.destFileName);
+  fs.writeFileSync(fullPath, JSON.stringify(props.data, null, 2), 'utf-8');
+};
+
+interface IReadProps {
+  pathFolders: Array<string>;
+  destFileName: string;
+}
+export const readDataFromAssets = async <T>(props: IReadProps): Promise<T> => {
+  const fullPath = path.join(...astroPaths.assetsPath, ...props.pathFolders, props.destFileName);
+  const content = fs.readFileSync(fullPath, 'utf-8');
+  return JSON.parse(content);
 };

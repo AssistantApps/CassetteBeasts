@@ -1,29 +1,31 @@
 import fs from 'fs';
 
-import { breadcrumb } from 'constant/breadcrumb';
-import { elementOrder } from 'constant/element';
-import { handlebarTemplate } from 'constant/handlebar';
-import { IntermediateFile } from 'constant/intermediateFile';
-import { ModuleType } from 'constant/module';
-import { routes } from 'constant/route';
-import { IElement, IElementEnhanced } from 'contracts/element';
-import {
+import { elementOrder } from 'constants/element';
+import { IntermediateFile } from 'constants/intermediateFile';
+import { ModuleType } from 'constants/module';
+import { paths } from 'constants/paths';
+import type { IElement, IElementEnhanced } from 'contracts/element';
+import type {
   IElementGridCell,
   IElementReaction,
   IElementReactionEnhanced,
 } from 'contracts/elementReaction';
-import { ILocalisation } from 'contracts/localisation';
-import { IStatusEffect } from 'contracts/statusEffect';
+import type { ILocalisation } from 'contracts/localisation';
+import type { IStatusEffect, IStatusEffectEnhanced } from 'contracts/statusEffect';
 import { FolderPathHelper } from 'helpers/folderPathHelper';
+import { pad } from 'helpers/stringHelper';
 import { getItemFromMapByIntId, readItemDetail } from 'modules/baseModule';
 import { CommonModule } from 'modules/commonModule';
-import { getHandlebar } from 'services/internal/handlebarService';
+import type { LocalisationModule } from 'modules/localisation/localisationModule';
+import path from 'path';
 import { elementReactionMapFromDetailList } from './elementReactionMapFromDetailList';
 
-export class ElementReactionModule extends CommonModule<IElementReaction> {
+export class ElementReactionModule extends CommonModule<
+  IElementReaction,
+  IElementReactionEnhanced
+> {
   private _folder = FolderPathHelper.elementReactions();
   private _effectGrid: Array<Array<IElementGridCell>> = [];
-  private _effectOptions: Array<IElementGridCell> = [];
 
   constructor() {
     super({
@@ -47,29 +49,30 @@ export class ElementReactionModule extends CommonModule<IElementReaction> {
       });
       this._baseDetails.push(detail);
     }
-    return `${this._baseDetails.length}  element reactions`;
+    return `${pad(this._baseDetails.length, 3, ' ')} element reactions`;
   };
 
-  enrichData = async (langCode: string, modules: Array<CommonModule<unknown>>) => {
-    const localeModule = this.getModuleOfType<ILocalisation>(modules, ModuleType.Localisation);
-    const language = localeModule.get(langCode).messages;
+  enrichData = async (langCode: string, modules: Array<CommonModule<unknown, unknown>>) => {
+    const localeModule = this.getModuleOfType<ILocalisation>(
+      modules,
+      ModuleType.Localisation,
+    ) as LocalisationModule;
     const elementModule = this.getModuleOfType<IElement>(modules, ModuleType.Elements);
     const statusModule = this.getModuleOfType<IStatusEffect>(modules, ModuleType.StatusEffect);
 
     this._effectGrid = [];
-    this._effectOptions = [];
     const pathToId = (path: string) =>
       path.replace('res://data/elemental_types/', '').replace('.tres', '');
 
     for (const detail of this._baseDetails) {
       const detailEnhanced: IElementReactionEnhanced = {
         ...detail,
-        attacker_element: elementModule.get(pathToId(detail.attacker.path)),
-        defender_element: elementModule.get(pathToId(detail.defender.path)),
+        attacker_element: elementModule.get(pathToId(detail.attacker?.path ?? '')),
+        defender_element: elementModule.get(pathToId(detail.defender?.path ?? '')),
         result_status_effect: detail.result.map((et) =>
           statusModule.get(et.path.replace('res://data/status_effects/', '').replace('.tres', '')),
         ),
-        toast_message_localised: language[detail.toast_message],
+        toast_message_localised: localeModule.translate(langCode, detail.toast_message),
       };
 
       this._itemDetailMap[detailEnhanced.id] = detailEnhanced;
@@ -82,14 +85,13 @@ export class ElementReactionModule extends CommonModule<IElementReaction> {
       const element = elementModule.get(elementId) as IElementEnhanced;
       const elementItem = {
         id: elementId,
-        iconUrl: element.icon.path,
+        iconUrl: element.icon?.path,
         name: element.name_localised,
         is_buff: false,
         is_debuff: false,
         buffs: [],
       };
       headingRow.push(elementItem);
-      this._effectOptions.push(elementItem);
     }
     this._effectGrid.push(headingRow);
 
@@ -98,7 +100,7 @@ export class ElementReactionModule extends CommonModule<IElementReaction> {
       const effectGridRow: Array<IElementGridCell> = [
         {
           id: attackerElementId,
-          iconUrl: attackerElement.icon.path,
+          iconUrl: attackerElement.icon?.path,
           name: attackerElement.name_localised,
           is_buff: false,
           is_debuff: false,
@@ -106,8 +108,6 @@ export class ElementReactionModule extends CommonModule<IElementReaction> {
         },
       ];
       for (const defenderElementId of elementOrder) {
-        // const defenderElement = elementModule.get(defenderElementId);
-
         const elementReactionId = `${attackerElementId}_on_${defenderElementId}`;
         const elementReaction: IElementReactionEnhanced = this._itemDetailMap[elementReactionId];
         if (elementReaction == null) {
@@ -125,7 +125,7 @@ export class ElementReactionModule extends CommonModule<IElementReaction> {
           is_buff: elementReaction.result_status_effect?.[0]?.is_buff ?? false,
           is_debuff: elementReaction.result_status_effect?.[0]?.is_debuff ?? false,
           message: elementReaction.toast_message_localised,
-          buffs: elementReaction.result_status_effect,
+          buffs: elementReaction.result_status_effect as Array<IStatusEffectEnhanced>,
         });
       }
       this._effectGrid.push(effectGridRow);
@@ -136,42 +136,12 @@ export class ElementReactionModule extends CommonModule<IElementReaction> {
 
   get = getItemFromMapByIntId(this._itemDetailMap);
 
-  writePages = async (langCode: string, modules: Array<CommonModule<unknown>>) => {
-    const mainBreadcrumb = breadcrumb.element(langCode);
-    const list: Array<IElementReaction> = [];
-    for (const mapKey of Object.keys(this._itemDetailMap)) {
-      const details: IElementReaction = this._itemDetailMap[mapKey];
-      list.push(details);
-      // const relativePath = `${langCode}${routes.characters}/${encodeURI(mapKey)}.html`;
-      // const detailPageData = this.getBasicPageData({
-      //   langCode,
-      //   localeModule,
-      //   documentTitle: details.name_localised,
-      //   breadcrumbs: [mainBreadcrumb, breadcrumb.characterDetail(langCode, details.name_localised)],
-      //   data: details,
-      //   relativePath,
-      // });
-      // detailPageData.images.twitter = details.meta_image_url;
-      // detailPageData.images.facebook = details.meta_image_url;
-      // await getHandlebar().compileTemplateToFile({
-      //   data: detailPageData,
-      //   outputFiles: [relativePath],
-      //   templateFile: handlebarTemplate.characterDetail,
-      // });
-    }
-    const relativePath = `${langCode}${routes.elementReactions}/index.html`;
-
-    await getHandlebar().compileTemplateToFile({
-      data: this.getBasicPageData({
-        langCode,
-        modules,
-        documentTitleUiKey: mainBreadcrumb.uiKey,
-        breadcrumbs: [mainBreadcrumb],
-        data: { grid: this._effectGrid, effectOptions: this._effectOptions },
-        relativePath,
-      }),
-      outputFiles: [relativePath],
-      templateFile: handlebarTemplate.elementReaction,
-    });
+  writeAdditionalIntermediate = (langCode: string) => {
+    const gridFile = path.join(
+      paths().intermediateFolder,
+      langCode,
+      IntermediateFile.elementReactionsGrid,
+    );
+    fs.writeFileSync(gridFile, JSON.stringify(this._effectGrid, null, 2), 'utf-8');
   };
 }

@@ -1,15 +1,15 @@
-import { IExternalResource } from 'contracts/externalResource';
-import { ISpriteAnim, ISpriteAnimDetails } from 'contracts/spriteAnim';
-import { ISubAnimationResource } from 'contracts/subAnimationResource';
-import { ISubResource } from 'contracts/subResource';
+import type { IExternalResource } from 'contracts/externalResource';
+import type { ISpriteAnim, ISpriteAnimDetails } from 'contracts/spriteAnim';
+import type { ISubAnimationResource } from 'contracts/subAnimationResource';
+import type { ISubResource } from 'contracts/subResource';
 
 export const spriteAnimMapFromDetailList =
   (name: string) =>
   (props: {
     resourceMap: Record<string, string>;
     subResourceMap: Record<string, ISubResource>;
-    externalResourcesMap: Record<number, IExternalResource>;
-    subAnimationResourceMap: Record<number, ISubAnimationResource>;
+    externalResourcesMap: Record<string, IExternalResource>;
+    subAnimationResourceMap: Record<string, ISubAnimationResource>;
   }): ISpriteAnim => {
     let animations: Array<ISpriteAnimDetails> = [];
     for (const subAnimResourceKey of Object.keys(props.subAnimationResourceMap)) {

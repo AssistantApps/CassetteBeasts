@@ -1,10 +1,10 @@
 import fs from 'fs';
 import path from 'path';
 
-import { paths } from 'constant/paths';
-import { ISpriteAnimDetailsEnhanced } from 'contracts/spriteAnim';
-import { animateWebp, IFrameInstructions } from 'lib/webpmux';
-import { getExternalResourcesImagePath } from 'mapper/externalResourceMapper';
+import { paths } from 'constants/paths';
+import { getExternalResourcesImagePath } from 'contracts/mapper/externalResourceMapper';
+import type { ISpriteAnimDetailsEnhanced } from 'contracts/spriteAnim';
+import { animateWebp, type IFrameInstructions } from 'lib/webpmux';
 import { getBotPath } from 'services/internal/configService';
 import sharp from 'sharp';
 import {
@@ -83,7 +83,7 @@ export const createWebpFromISpriteAnim = async (props: IProps) => {
       onError: (ex) => console.error(ex),
     });
 
-    for (const createdFile of createdFilesFromRetry) {
+    for (const createdFile of createdFilesFromRetry ?? []) {
       fs.unlinkSync(createdFile);
     }
   }

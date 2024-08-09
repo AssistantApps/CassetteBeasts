@@ -1,12 +1,13 @@
-import { IExternalResource } from 'contracts/externalResource';
-import { IMonsterFormEnhanced } from 'contracts/monsterForm';
-import { IMonsterSpawn, IMonsterSpawnDetails } from 'contracts/monsterSpawn';
-import { ISubAnimationResource } from 'contracts/subAnimationResource';
-import { ISubResource, ISubResourceMonsterEnhanced } from 'contracts/subResource';
+import type { IExternalResource } from 'contracts/externalResource';
+import { getExternalResource, getExternalResources } from 'contracts/mapper/externalResourceMapper';
+import type { IMonsterFormEnhanced } from 'contracts/monsterForm';
+import type { IMonsterSpawn, IMonsterSpawnDetails } from 'contracts/monsterSpawn';
+import type { IMove, IMoveEnhanced } from 'contracts/move';
+import type { ISubAnimationResource } from 'contracts/subAnimationResource';
+import type { ISubResource, ISubResourceMonsterEnhanced } from 'contracts/subResource';
 import { tryParseFloat, tryParseInt } from 'helpers/mathHelper';
 import { getCleanedString, resAndTresTrim, stringToBool } from 'helpers/stringHelper';
-import { getExternalResource, getExternalResources } from 'mapper/externalResourceMapper';
-import { MovesModule } from 'modules/moves/movesModule';
+import type { CommonModule } from 'modules/commonModule';
 
 export const monsterSpawnMapFromDetailList =
   (id: string) =>
@@ -17,7 +18,7 @@ export const monsterSpawnMapFromDetailList =
     subAnimationResourceMap: Record<number, ISubAnimationResource>;
   }): IMonsterSpawn => {
     const species: Array<IMonsterSpawnDetails> = [];
-    const num_species = tryParseInt(props.resourceMap['num_species']);
+    const num_species = tryParseInt(props.resourceMap['num_species']) ?? 0;
     for (let index = 0; index < num_species; index++) {
       species.push({
         hour_max: tryParseInt(props.resourceMap[`species_${index}/hour_max`]),
@@ -42,8 +43,8 @@ export const monsterSpawnMapFromDetailList =
         props.externalResourcesMap,
       ),
       habitat_endless: stringToBool(props.resourceMap['habitat_endless']),
-      min_team_size: tryParseInt(props.resourceMap['min_team_size']),
-      max_team_size: tryParseInt(props.resourceMap['max_team_size']),
+      min_team_size: tryParseInt(props.resourceMap['min_team_size']) ?? 0,
+      max_team_size: tryParseInt(props.resourceMap['max_team_size']) ?? 0,
       num_species,
       species,
     };
@@ -52,10 +53,10 @@ export const monsterSpawnMapFromDetailList =
 export const getEvolutionMonster = (
   language: Record<string, string>,
   resource: ISubResource,
-  moveModule: MovesModule,
+  moveModule: CommonModule<IMove, IMoveEnhanced>,
   monsterDetails: IMonsterFormEnhanced,
-): ISubResourceMonsterEnhanced => {
-  if (monsterDetails == null) return null;
+): ISubResourceMonsterEnhanced | undefined => {
+  if (monsterDetails == null) return;
   return {
     ...resource,
     icon_url: monsterDetails.icon_url,
@@ -63,6 +64,6 @@ export const getEvolutionMonster = (
     bestiary_index_with_padding: monsterDetails.bestiary_index_with_padding,
     elemental_types_elements: monsterDetails.elemental_types_elements,
     required_move_move: moveModule.get(resAndTresTrim(resource?.required_move?.path ?? '')),
-    specialization_localised: language[resource.specialization],
+    specialization_localised: language[resource.specialization ?? ''],
   };
 };

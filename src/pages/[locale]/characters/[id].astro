@@ -1,0 +1,248 @@
+---
+import Layout from 'components/layouts/Layout.astro';
+import Breadcrumb from 'components/Breadcrumb.astro';
+import StatHex from 'components/stat/StatHex.astro';
+
+import languageJson from 'assets/json/language.json';
+
+import { readDataFromAssets } from 'helpers/fileHelper';
+import { IntermediateFile } from 'constants/intermediateFile';
+import { astroPaths } from 'constants/astro';
+import { breadcrumb } from 'constants/breadcrumb';
+import { site } from 'constants/site';
+import { routes } from 'constants/route';
+import { availableLanguages, UIKeys } from 'constants/localisation';
+import type { ILocalisation } from 'contracts/localisation';
+import type { ICharacterEnhanced } from 'contracts/character';
+import { type IGuideSchema, AccessMode } from 'contracts/schema/guideScheme';
+import { isoDate } from 'helpers/dateHelper';
+import { toSchemaOrgProperty } from 'helpers/schemaHelper';
+import { translator } from 'helpers/translateHelper';
+import { imgUrl } from 'helpers/urlHelper';
+
+export async function getStaticPaths() {
+  const paths: any = [];
+  for (const locale of availableLanguages) {
+    const itemMap = await readDataFromAssets<Record<string, ICharacterEnhanced>>({
+      pathFolders: [...astroPaths.intermediatePath, locale],
+      destFileName: IntermediateFile.characters,
+    });
+    for (const item of Object.values(itemMap)) {
+      const path = {
+        params: { locale: locale, id: item.resource_name },
+        props: { item },
+      };
+      paths.push(path as never);
+    }
+  }
+  return paths;
+}
+
+const { locale } = Astro.params;
+const data = (Astro.props as any).item as ICharacterEnhanced;
+const translationLookup = (languageJson as Record<string, ILocalisation>)[locale].messages;
+const { translate } = translator(translationLookup);
+
+const additionalSchemaObj: IGuideSchema = {
+  name: data.name_localised,
+  headline: data.name_localised,
+  accessMode: AccessMode.textual,
+  dateModified: isoDate(),
+  thumbnailUrl: site.rootUrl + data.meta_image_url.slice(1),
+};
+---
+
+<Layout
+  locale={locale}
+  documentTitle={data.name_localised}
+  metaImageUrl={data.meta_image_url}
+  schemaExtra={toSchemaOrgProperty('mainEntity', 'Guide', additionalSchemaObj)}
+  translationLookup={translationLookup}
+>
+  <Breadcrumb
+    locale={locale}
+    translationLookup={translationLookup}
+    breadcrumbs={[
+      breadcrumb.character(locale),
+      breadcrumb.characterDetail(locale, data.name_localised),
+    ]}
+  />
+
+  <div class="grid character-detail-grid mb-3">
+    <div class="meta">
+      <h1>{translate('characters')} - {data.name_localised}</h1>
+    </div>
+
+    <article class="character-detail-card item-detail-card">
+      <div class="item-detail-card-heading primary">
+        <h2 class="Neu5Land animate__animated animate__fadeIn">{data.name_localised}</h2>
+      </div>
+      <div class="item-detail-card-body">
+        <div id="sprite-tab-container">
+          <div class="grid images noselect animate__animated animate__fadeIn">
+            <div class="sprites">
+              <img
+                src={data.icon_url}
+                class="char-image tab-content-0"
+                loading="lazy"
+                alt={`${data.name_localised}`}
+                draggable="false"
+              />
+
+              {
+                data.animations.map((anim, index) => (
+                  <img
+                    src={imgUrl(anim.imageUrl)}
+                    class={`char-image  tab-content-${index + 1}`}
+                    alt={`gif #${anim.id} of ${data.name_localised}`}
+                    draggable="false"
+                  />
+                ))
+              }
+            </div>
+
+            <div class="stats">
+              <StatHex
+                max_hp={data.max_hp}
+                ranged_attack={data.ranged_attack}
+                ranged_defense={data.ranged_defense}
+                speed={data.speed}
+                melee_defense={data.melee_defense}
+                melee_attack={data.melee_attack}
+                translationLookup={translationLookup}
+              />
+            </div>
+          </div>
+          <div class="controls noselect animate__animated animate__fadeIn">
+            <div
+              class="button-slanted cursor-pointer tab-button-0"
+              onclick="applyClassToId('sprite-tab-container', 'tab', 'tab0')"
+            >
+              <span class="button-slanted-content">{translate('static')}</span>
+            </div>
+
+            {
+              data.animations.map((_, index) => (
+                <div
+                  class={`button-slanted cursor-pointer tab-button-${index + 1}`}
+                  onclick={`applyClassToId('sprite-tab-container', 'tab', 'tab${index + 1}')`}
+                >
+                  <span class="button-slanted-content">
+                    {translate('gifNum', (index + 1).toString())}
+                  </span>
+                </div>
+              ))
+            }
+          </div>
+        </div>
+
+        {
+          data.audioFiles.length > 0 && (
+            <Fragment>
+              <br />
+              <section class="audio-section additional animate__animated animate__fadeIn">
+                <h3 class="section-heading Neu5Land">Audio</h3>
+                <div id="audio-tab-container">
+                  <div class="audio noselect animate__animated animate__fadeIn">
+                    {data.audioFiles.map((audio, audioIdx) => (
+                      <Fragment>
+                        {audio.files.map((file) => (
+                          <Fragment>
+                            <button onclick={`playAudioNode('${audio.name}-${audioIdx}')`}>
+                              <small>{audio.name} 🔉</small>
+                            </button>
+                            <audio
+                              id={`${audio.name}-${audioIdx}`}
+                              class={`hidden ${file.autoplay ? 'autoplay' : ''}`}
+                            >
+                              <track kind="captions" srclang="en" label="english_captions" />
+                              <source src={file.url} type="audio/wav" />
+                            </audio>
+                          </Fragment>
+                        ))}
+                      </Fragment>
+                    ))}
+                  </div>
+                </div>
+              </section>
+            </Fragment>
+          )
+        }
+
+        <br />
+
+        <section class="wiki-section animate__animated animate__fadeIn">
+          <a
+            href="https://wiki.cassettebeasts.com/wiki/{data.name_localised}"
+            rel="noopener noreferrer"
+            target="_blank"
+            title={`view ${data.name_localised} on the wiki`}
+            role="button"
+            class="btn-border-hover outline secondary"
+          >
+            <img src="/assets/img/wiki.png" alt="wiki logo" loading="lazy" />
+            <div class="text">
+              <h6>{translate('viewOn', 'wiki.cassettebeasts.com')}</h6>
+            </div>
+          </a>
+        </section>
+      </div>
+    </article>
+
+    <article class="character-detail-card item-detail-card">
+      <div class="item-detail-card-heading">
+        <h2 class="Neu5Land animate__animated animate__fadeIn">{translate(UIKeys.other)}</h2>
+        <div class="spacer"></div>
+      </div>
+      <div class="item-detail-card-body">
+        <div id="portrait-tab-container" class="grid tab0">
+          <div class="images noselect animate__animated animate__fadeIn">
+            <div class="sprites">
+              {
+                data.portraits.map((portrait, index) => (
+                  <img
+                    src={imgUrl(portrait)}
+                    class={`portrait-image ${data.resource_name} tab-content-${index}`}
+                    loading="lazy"
+                    alt={`portrait #${index + 1} of ${data.name_localised}`}
+                    draggable="false"
+                  />
+                ))
+              }
+            </div>
+          </div>
+          <div class="controls noselect animate__animated animate__fadeIn">
+            {
+              data.portraits.map((_, index) => (
+                <div
+                  class={`button-slanted cursor-pointer tab-button-${index}`}
+                  onclick={`applyClassToId('portrait-tab-container', 'tab', 'tab${index}')`}
+                >
+                  <span class="button-slanted-content">
+                    {translate('portraitNum', (index + 1).toString())}
+                  </span>
+                </div>
+              ))
+            }
+          </div>
+        </div>
+
+        <section class="additional-section additional animate__animated animate__fadeIn">
+          <h3 class="section-heading Neu5Land">{translate('partnerMonster')}</h3>
+          <a
+            href={`/${locale}${routes.monsters}/${encodeURI(data.partner_signature_species_monsters.resource_name)}.html`}
+            title={data.partner_signature_species_monsters.name_localised}
+          >
+            <img
+              src={data.partner_image_url}
+              class="tape-image animate__animated tada-hover"
+              loading="lazy"
+              alt={`tape ${data.partner_signature_species_monsters.name_localised}`}
+              draggable="false"
+            />
+          </a>
+        </section>
+      </div>
+    </article>
+  </div>
+</Layout>
