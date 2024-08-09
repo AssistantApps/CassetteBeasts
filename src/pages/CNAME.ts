@@ -1,9 +1,8 @@
 import type { APIRoute } from 'astro';
-
-const content = import.meta.env.SITE;
+import { site } from 'constants/site';
 
 export const GET: APIRoute = () => {
-  return new Response(content, {
+  return new Response(site.cname, {
     headers: {
       'Content-Type': 'text/plain; charset=utf-8',
     },
