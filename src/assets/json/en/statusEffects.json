@@ -23,7 +23,7 @@
     "stats_affected": [],
     "name_localised": "Abramacabra",
     "description_localised": "Walls absorb a certain number of incoming hits. Type-advantaged attacks immediately break walls. In addition to standard Wall behavior, Abramacabra automatically attacks one opponent each turn.",
-    "meta_image_url": "/assets/img/meta/en/statusEffect/abramacabra.png",
+    "meta_image_url": "/assets/img/meta/en/statusEffects/abramacabra.png",
     "moves_that_cause_this_effect": [
       {
         "id": "abramacabra",
@@ -76,7 +76,7 @@
     "stat_offset": 1,
     "name_localised": "AP Boost",
     "description_localised": "Characters with AP Boost gain 1 extra AP each round.",
-    "meta_image_url": "/assets/img/meta/en/statusEffect/ap_boost.png",
+    "meta_image_url": "/assets/img/meta/en/statusEffects/ap_boost.png",
     "moves_that_cause_this_effect": [
       {
         "id": "ap_boost",
@@ -181,7 +181,7 @@
     "stat_offset": -1,
     "name_localised": "AP Drain",
     "description_localised": "Characters with AP Drain gain 1 fewer AP each round.",
-    "meta_image_url": "/assets/img/meta/en/statusEffect/ap_drain.png",
+    "meta_image_url": "/assets/img/meta/en/statusEffects/ap_drain.png",
     "moves_that_cause_this_effect": [
       {
         "id": "ap_drain",
@@ -261,7 +261,7 @@
     "stats_affected": [],
     "name_localised": "Berserk",
     "description_localised": "Characters with Berserk can only use damaging moves.",
-    "meta_image_url": "/assets/img/meta/en/statusEffect/berserk.png",
+    "meta_image_url": "/assets/img/meta/en/statusEffects/berserk.png",
     "moves_that_cause_this_effect": [
       {
         "id": "berserker",
@@ -365,7 +365,7 @@
     "stats_affected": [],
     "name_localised": "Bomb",
     "description_localised": "A character with Bomb will blow up at the end of their next turn if it’s not passed on by a melee attack.",
-    "meta_image_url": "/assets/img/meta/en/statusEffect/bomb.png",
+    "meta_image_url": "/assets/img/meta/en/statusEffects/bomb.png",
     "moves_that_cause_this_effect": [
       {
         "id": "hot_potato",
@@ -423,7 +423,7 @@
     "stats_affected": [],
     "name_localised": "Booby Trapped",
     "description_localised": "Characters with Booby Trapped have some of their moves replaced.",
-    "meta_image_url": "/assets/img/meta/en/statusEffect/booby_trapped.png",
+    "meta_image_url": "/assets/img/meta/en/statusEffects/booby_trapped.png",
     "moves_that_cause_this_effect": [
       {
         "id": "sticker_trick",
@@ -473,7 +473,7 @@
     "stats_affected": [],
     "name_localised": "Burned",
     "description_localised": "Burned characters take damage at the end of their turn.",
-    "meta_image_url": "/assets/img/meta/en/statusEffect/burned.png",
+    "meta_image_url": "/assets/img/meta/en/statusEffects/burned.png",
     "moves_that_cause_this_effect": [
       {
         "id": "bushfire",
@@ -597,7 +597,7 @@
     "stats_affected": [],
     "name_localised": "Close Encounter",
     "description_localised": "Close Encounter reduces the range of a character’s ranged attacks, turning them into melee attacks.",
-    "meta_image_url": "/assets/img/meta/en/statusEffect/close_encounter.png",
+    "meta_image_url": "/assets/img/meta/en/statusEffects/close_encounter.png",
     "moves_that_cause_this_effect": [
       {
         "id": "close_encounter",
@@ -649,7 +649,7 @@
     "stats_affected": [],
     "name_localised": "Air Coating",
     "description_localised": "Coatings change the elemental type of a character for a certain number of turns.",
-    "meta_image_url": "/assets/img/meta/en/statusEffect/coating_air.png",
+    "meta_image_url": "/assets/img/meta/en/statusEffects/coating_air.png",
     "moves_that_cause_this_effect": [
       {
         "id": "camouflage_air",
@@ -723,7 +723,7 @@
     "stats_affected": [],
     "name_localised": "Astral Coating",
     "description_localised": "Coatings change the elemental type of a character for a certain number of turns.",
-    "meta_image_url": "/assets/img/meta/en/statusEffect/coating_astral.png",
+    "meta_image_url": "/assets/img/meta/en/statusEffects/coating_astral.png",
     "moves_that_cause_this_effect": [
       {
         "id": "camouflage_astral",
@@ -797,7 +797,7 @@
     "stats_affected": [],
     "name_localised": "Beast Coating",
     "description_localised": "Coatings change the elemental type of a character for a certain number of turns.",
-    "meta_image_url": "/assets/img/meta/en/statusEffect/coating_beast.png",
+    "meta_image_url": "/assets/img/meta/en/statusEffects/coating_beast.png",
     "moves_that_cause_this_effect": [
       {
         "id": "camouflage_beast",
@@ -871,7 +871,7 @@
     "stats_affected": [],
     "name_localised": "Earth Coating",
     "description_localised": "Coatings change the elemental type of a character for a certain number of turns.",
-    "meta_image_url": "/assets/img/meta/en/statusEffect/coating_earth.png",
+    "meta_image_url": "/assets/img/meta/en/statusEffects/coating_earth.png",
     "moves_that_cause_this_effect": [
       {
         "id": "camouflage_earth",
@@ -945,7 +945,7 @@
     "stats_affected": [],
     "name_localised": "Fire Coating",
     "description_localised": "Coatings change the elemental type of a character for a certain number of turns.",
-    "meta_image_url": "/assets/img/meta/en/statusEffect/coating_fire.png",
+    "meta_image_url": "/assets/img/meta/en/statusEffects/coating_fire.png",
     "moves_that_cause_this_effect": [
       {
         "id": "bushfire",
@@ -1041,7 +1041,7 @@
     "stats_affected": [],
     "name_localised": "Glass Coating",
     "description_localised": "Coatings change the elemental type of a character for a certain number of turns.",
-    "meta_image_url": "/assets/img/meta/en/statusEffect/coating_glass.png",
+    "meta_image_url": "/assets/img/meta/en/statusEffects/coating_glass.png",
     "moves_that_cause_this_effect": [
       {
         "id": "camouflage_glass",
@@ -1115,7 +1115,7 @@
     "stats_affected": [],
     "name_localised": "Glitter Coating",
     "description_localised": "Coatings change the elemental type of a character for a certain number of turns.",
-    "meta_image_url": "/assets/img/meta/en/statusEffect/coating_glitter.png",
+    "meta_image_url": "/assets/img/meta/en/statusEffects/coating_glitter.png",
     "moves_that_cause_this_effect": [
       {
         "id": "prismatic",
@@ -1205,7 +1205,7 @@
     "stats_affected": [],
     "name_localised": "Ice Coating",
     "description_localised": "Coatings change the elemental type of a character for a certain number of turns.",
-    "meta_image_url": "/assets/img/meta/en/statusEffect/coating_ice.png",
+    "meta_image_url": "/assets/img/meta/en/statusEffects/coating_ice.png",
     "moves_that_cause_this_effect": [
       {
         "id": "camouflage_ice",
@@ -1279,7 +1279,7 @@
     "stats_affected": [],
     "name_localised": "Lightning Coating",
     "description_localised": "Coatings change the elemental type of a character for a certain number of turns.",
-    "meta_image_url": "/assets/img/meta/en/statusEffect/coating_lightning.png",
+    "meta_image_url": "/assets/img/meta/en/statusEffects/coating_lightning.png",
     "moves_that_cause_this_effect": [
       {
         "id": "camouflage_lightning",
@@ -1353,7 +1353,7 @@
     "stats_affected": [],
     "name_localised": "Metal Coating",
     "description_localised": "Coatings change the elemental type of a character for a certain number of turns.",
-    "meta_image_url": "/assets/img/meta/en/statusEffect/coating_metal.png",
+    "meta_image_url": "/assets/img/meta/en/statusEffects/coating_metal.png",
     "moves_that_cause_this_effect": [
       {
         "id": "camouflage_metal",
@@ -1427,7 +1427,7 @@
     "stats_affected": [],
     "name_localised": "Plant Coating",
     "description_localised": "Coatings change the elemental type of a character for a certain number of turns.",
-    "meta_image_url": "/assets/img/meta/en/statusEffect/coating_plant.png",
+    "meta_image_url": "/assets/img/meta/en/statusEffects/coating_plant.png",
     "moves_that_cause_this_effect": [
       {
         "id": "camouflage_plant",
@@ -1501,7 +1501,7 @@
     "stats_affected": [],
     "name_localised": "Plastic Coating",
     "description_localised": "Coatings change the elemental type of a character for a certain number of turns.",
-    "meta_image_url": "/assets/img/meta/en/statusEffect/coating_plastic.png",
+    "meta_image_url": "/assets/img/meta/en/statusEffects/coating_plastic.png",
     "moves_that_cause_this_effect": [
       {
         "id": "camouflage_plastic",
@@ -1575,7 +1575,7 @@
     "stats_affected": [],
     "name_localised": "Poison Coating",
     "description_localised": "Coatings change the elemental type of a character for a certain number of turns.",
-    "meta_image_url": "/assets/img/meta/en/statusEffect/coating_poison.png",
+    "meta_image_url": "/assets/img/meta/en/statusEffects/coating_poison.png",
     "moves_that_cause_this_effect": [
       {
         "id": "camouflage_poison",
@@ -1649,7 +1649,7 @@
     "stats_affected": [],
     "name_localised": "Water Coating",
     "description_localised": "Coatings change the elemental type of a character for a certain number of turns.",
-    "meta_image_url": "/assets/img/meta/en/statusEffect/coating_water.png",
+    "meta_image_url": "/assets/img/meta/en/statusEffects/coating_water.png",
     "moves_that_cause_this_effect": [
       {
         "id": "camouflage_water",
@@ -1721,7 +1721,7 @@
     "stats_affected": [],
     "name_localised": "Conductive",
     "description_localised": "Conductive characters take damage whenever any Lightning-type attack is used.",
-    "meta_image_url": "/assets/img/meta/en/statusEffect/conductive.png",
+    "meta_image_url": "/assets/img/meta/en/statusEffects/conductive.png",
     "moves_that_cause_this_effect": [
       {
         "id": "ionised_air",
@@ -1825,7 +1825,7 @@
     "stats_affected": [],
     "name_localised": "Confused",
     "description_localised": "Confused characters may use the wrong move or target the wrong character.",
-    "meta_image_url": "/assets/img/meta/en/statusEffect/confused.png",
+    "meta_image_url": "/assets/img/meta/en/statusEffects/confused.png",
     "moves_that_cause_this_effect": [
       {
         "id": "trick",
@@ -1883,7 +1883,7 @@
     "stats_affected": [],
     "name_localised": "Contact Dmg",
     "description_localised": "Characters with Contact Damage deal a bit of elemental damage whenever they land or receive a melee attack.",
-    "meta_image_url": "/assets/img/meta/en/statusEffect/contactdmg_air.png",
+    "meta_image_url": "/assets/img/meta/en/statusEffects/contactdmg_air.png",
     "moves_that_cause_this_effect": []
   },
   "contactdmg_astral": {
@@ -1910,7 +1910,7 @@
     "stats_affected": [],
     "name_localised": "Contact Dmg",
     "description_localised": "Characters with Contact Damage deal a bit of elemental damage whenever they land or receive a melee attack.",
-    "meta_image_url": "/assets/img/meta/en/statusEffect/contactdmg_astral.png",
+    "meta_image_url": "/assets/img/meta/en/statusEffects/contactdmg_astral.png",
     "moves_that_cause_this_effect": []
   },
   "contactdmg_beast": {
@@ -1937,7 +1937,7 @@
     "stats_affected": [],
     "name_localised": "Contact Dmg",
     "description_localised": "Characters with Contact Damage deal a bit of elemental damage whenever they land or receive a melee attack.",
-    "meta_image_url": "/assets/img/meta/en/statusEffect/contactdmg_beast.png",
+    "meta_image_url": "/assets/img/meta/en/statusEffects/contactdmg_beast.png",
     "moves_that_cause_this_effect": []
   },
   "contactdmg_earth": {
@@ -1964,7 +1964,7 @@
     "stats_affected": [],
     "name_localised": "Contact Dmg",
     "description_localised": "Characters with Contact Damage deal a bit of elemental damage whenever they land or receive a melee attack.",
-    "meta_image_url": "/assets/img/meta/en/statusEffect/contactdmg_earth.png",
+    "meta_image_url": "/assets/img/meta/en/statusEffects/contactdmg_earth.png",
     "moves_that_cause_this_effect": []
   },
   "contactdmg_fire": {
@@ -1991,7 +1991,7 @@
     "stats_affected": [],
     "name_localised": "Contact Dmg",
     "description_localised": "Characters with Contact Damage deal a bit of elemental damage whenever they land or receive a melee attack.",
-    "meta_image_url": "/assets/img/meta/en/statusEffect/contactdmg_fire.png",
+    "meta_image_url": "/assets/img/meta/en/statusEffects/contactdmg_fire.png",
     "moves_that_cause_this_effect": [
       {
         "id": "bushfire",
@@ -2041,7 +2041,7 @@
     "stats_affected": [],
     "name_localised": "Contact Dmg",
     "description_localised": "Characters with Contact Damage deal a bit of elemental damage whenever they land or receive a melee attack.",
-    "meta_image_url": "/assets/img/meta/en/statusEffect/contactdmg_glass.png",
+    "meta_image_url": "/assets/img/meta/en/statusEffects/contactdmg_glass.png",
     "moves_that_cause_this_effect": []
   },
   "contactdmg_glitter": {
@@ -2068,7 +2068,7 @@
     "stats_affected": [],
     "name_localised": "Contact Dmg",
     "description_localised": "Characters with Contact Damage deal a bit of elemental damage whenever they land or receive a melee attack.",
-    "meta_image_url": "/assets/img/meta/en/statusEffect/contactdmg_glitter.png",
+    "meta_image_url": "/assets/img/meta/en/statusEffects/contactdmg_glitter.png",
     "moves_that_cause_this_effect": []
   },
   "contactdmg_ice": {
@@ -2095,7 +2095,7 @@
     "stats_affected": [],
     "name_localised": "Contact Dmg",
     "description_localised": "Characters with Contact Damage deal a bit of elemental damage whenever they land or receive a melee attack.",
-    "meta_image_url": "/assets/img/meta/en/statusEffect/contactdmg_ice.png",
+    "meta_image_url": "/assets/img/meta/en/statusEffects/contactdmg_ice.png",
     "moves_that_cause_this_effect": []
   },
   "contactdmg_lightning": {
@@ -2122,7 +2122,7 @@
     "stats_affected": [],
     "name_localised": "Contact Dmg",
     "description_localised": "Characters with Contact Damage deal a bit of elemental damage whenever they land or receive a melee attack.",
-    "meta_image_url": "/assets/img/meta/en/statusEffect/contactdmg_lightning.png",
+    "meta_image_url": "/assets/img/meta/en/statusEffects/contactdmg_lightning.png",
     "moves_that_cause_this_effect": []
   },
   "contactdmg_metal": {
@@ -2149,7 +2149,7 @@
     "stats_affected": [],
     "name_localised": "Contact Dmg",
     "description_localised": "Characters with Contact Damage deal a bit of elemental damage whenever they land or receive a melee attack.",
-    "meta_image_url": "/assets/img/meta/en/statusEffect/contactdmg_metal.png",
+    "meta_image_url": "/assets/img/meta/en/statusEffects/contactdmg_metal.png",
     "moves_that_cause_this_effect": []
   },
   "contactdmg_plant": {
@@ -2176,7 +2176,7 @@
     "stats_affected": [],
     "name_localised": "Contact Dmg",
     "description_localised": "Characters with Contact Damage deal a bit of elemental damage whenever they land or receive a melee attack.",
-    "meta_image_url": "/assets/img/meta/en/statusEffect/contactdmg_plant.png",
+    "meta_image_url": "/assets/img/meta/en/statusEffects/contactdmg_plant.png",
     "moves_that_cause_this_effect": []
   },
   "contactdmg_plastic": {
@@ -2203,7 +2203,7 @@
     "stats_affected": [],
     "name_localised": "Contact Dmg",
     "description_localised": "Characters with Contact Damage deal a bit of elemental damage whenever they land or receive a melee attack.",
-    "meta_image_url": "/assets/img/meta/en/statusEffect/contactdmg_plastic.png",
+    "meta_image_url": "/assets/img/meta/en/statusEffects/contactdmg_plastic.png",
     "moves_that_cause_this_effect": []
   },
   "contactdmg_poison": {
@@ -2230,7 +2230,7 @@
     "stats_affected": [],
     "name_localised": "Contact Dmg",
     "description_localised": "Characters with Contact Damage deal a bit of elemental damage whenever they land or receive a melee attack.",
-    "meta_image_url": "/assets/img/meta/en/statusEffect/contactdmg_poison.png",
+    "meta_image_url": "/assets/img/meta/en/statusEffects/contactdmg_poison.png",
     "moves_that_cause_this_effect": []
   },
   "contactdmg_water": {
@@ -2257,7 +2257,7 @@
     "stats_affected": [],
     "name_localised": "Contact Dmg",
     "description_localised": "Characters with Contact Damage deal a bit of elemental damage whenever they land or receive a melee attack.",
-    "meta_image_url": "/assets/img/meta/en/statusEffect/contactdmg_water.png",
+    "meta_image_url": "/assets/img/meta/en/statusEffects/contactdmg_water.png",
     "moves_that_cause_this_effect": []
   },
   "cottoned_on": {
@@ -2286,7 +2286,7 @@
     "stats_affected": [],
     "name_localised": "Cottoned On",
     "description_localised": "For the next round, moves that target a character who has Cottoned On are guaranteed to miss.",
-    "meta_image_url": "/assets/img/meta/en/statusEffect/cottoned_on.png",
+    "meta_image_url": "/assets/img/meta/en/statusEffects/cottoned_on.png",
     "moves_that_cause_this_effect": [
       {
         "id": "cotton_on",
@@ -2346,7 +2346,7 @@
     "stats_affected": [],
     "name_localised": "Deflated",
     "description_localised": "Deflated characters have significantly increased Evasion, but reduced Attack and Defence stats.",
-    "meta_image_url": "/assets/img/meta/en/statusEffect/deflated.png",
+    "meta_image_url": "/assets/img/meta/en/statusEffects/deflated.png",
     "moves_that_cause_this_effect": []
   },
   "effigy": {
@@ -2369,7 +2369,8 @@
     "sprite_animation_prefix_priority": "0",
     "stats_affected": [],
     "name_localised": "Effigy",
-    "meta_image_url": "/assets/img/meta/en/statusEffect/effigy.png",
+    "description_localised": "",
+    "meta_image_url": "/assets/img/meta/en/statusEffects/effigy.png",
     "moves_that_cause_this_effect": []
   },
   "fair_fight": {
@@ -2398,7 +2399,7 @@
     "stats_affected": [],
     "name_localised": "Fair Fight",
     "description_localised": "While it is in effect, Fair Fight prevents new status effects from being applied.",
-    "meta_image_url": "/assets/img/meta/en/statusEffect/fair_fight.png",
+    "meta_image_url": "/assets/img/meta/en/statusEffects/fair_fight.png",
     "moves_that_cause_this_effect": [
       {
         "id": "fair_fight",
@@ -2450,7 +2451,7 @@
     "stats_affected": [],
     "name_localised": "Flammable",
     "description_localised": "Flammable characters receive the Burned status whenever they are hit by Fire-type attacks. In addition, the damage received from Burned is increased.",
-    "meta_image_url": "/assets/img/meta/en/statusEffect/flammable.png",
+    "meta_image_url": "/assets/img/meta/en/statusEffects/flammable.png",
     "moves_that_cause_this_effect": [
       {
         "id": "gasoline_spray",
@@ -2502,7 +2503,7 @@
     "stats_affected": [],
     "name_localised": "Flinched",
     "description_localised": "A character that flinches skips its next turn.",
-    "meta_image_url": "/assets/img/meta/en/statusEffect/flinch.png",
+    "meta_image_url": "/assets/img/meta/en/statusEffects/flinch.png",
     "moves_that_cause_this_effect": [
       {
         "id": "trick",
@@ -2560,7 +2561,7 @@
     "stats_affected": [],
     "name_localised": "Fog",
     "description_localised": "Fog reduces the accuracy of ranged attacks that aren’t Water, Air, or Ice-type to 0%.",
-    "meta_image_url": "/assets/img/meta/en/statusEffect/fog.png",
+    "meta_image_url": "/assets/img/meta/en/statusEffects/fog.png",
     "moves_that_cause_this_effect": [
       {
         "id": "fog",
@@ -2619,7 +2620,7 @@
     ],
     "name_localised": "Gambit",
     "description_localised": "Characters with Gambit have massively increased stats, but are defeated when the timer on the Gambit status runs out.",
-    "meta_image_url": "/assets/img/meta/en/statusEffect/gambit.png",
+    "meta_image_url": "/assets/img/meta/en/statusEffects/gambit.png",
     "moves_that_cause_this_effect": [
       {
         "id": "gambit",
@@ -2657,7 +2658,7 @@
     "stats_affected": [],
     "name_localised": "Ghostly",
     "description_localised": "Ghostly characters cannot be hit by attacks, but are defeated when the timer on the Ghostly status runs out.",
-    "meta_image_url": "/assets/img/meta/en/statusEffect/ghostly.png",
+    "meta_image_url": "/assets/img/meta/en/statusEffects/ghostly.png",
     "moves_that_cause_this_effect": [
       {
         "id": "haunt",
@@ -2707,7 +2708,7 @@
     "stats_affected": [],
     "name_localised": "Glass Bonds",
     "description_localised": "Characters with Glass Bonds take damage each time they transform.",
-    "meta_image_url": "/assets/img/meta/en/statusEffect/glass_bonds.png",
+    "meta_image_url": "/assets/img/meta/en/statusEffects/glass_bonds.png",
     "moves_that_cause_this_effect": [
       {
         "id": "glass_bonds",
@@ -2787,7 +2788,7 @@
     "stats_affected": [],
     "name_localised": "Glass Shards",
     "description_localised": "While it is in effect, any characters that use a melee attack will take damage from the Glass Shards on the battlefield.",
-    "meta_image_url": "/assets/img/meta/en/statusEffect/glass_shards.png",
+    "meta_image_url": "/assets/img/meta/en/statusEffects/glass_shards.png",
     "moves_that_cause_this_effect": []
   },
   "healing_leaf": {
@@ -2814,7 +2815,7 @@
     "stats_affected": [],
     "name_localised": "Healing Leaf",
     "description_localised": "Characters with Healing Leaf regain some health at the start of each turn.",
-    "meta_image_url": "/assets/img/meta/en/statusEffect/healing_leaf.png",
+    "meta_image_url": "/assets/img/meta/en/statusEffects/healing_leaf.png",
     "moves_that_cause_this_effect": [
       {
         "id": "doc_leaf",
@@ -2872,7 +2873,7 @@
     "stats_affected": [],
     "name_localised": "Healing Steam",
     "description_localised": "Characters with Healing Steam regain some health at the start of each turn.",
-    "meta_image_url": "/assets/img/meta/en/statusEffect/healing_steam.png",
+    "meta_image_url": "/assets/img/meta/en/statusEffects/healing_steam.png",
     "moves_that_cause_this_effect": [
       {
         "id": "treat",
@@ -2908,7 +2909,7 @@
     "stats_affected": [],
     "name_localised": "Hibernating",
     "description_localised": "Hibernating characters heal each turn that they’re asleep.",
-    "meta_image_url": "/assets/img/meta/en/statusEffect/hibernating.png",
+    "meta_image_url": "/assets/img/meta/en/statusEffects/hibernating.png",
     "moves_that_cause_this_effect": [
       {
         "id": "hibernate",
@@ -2960,7 +2961,7 @@
     "stats_affected": [],
     "name_localised": "Inflated",
     "description_localised": "Inflated characters have increased Attack and Defence stats, but significantly reduced Evasion.",
-    "meta_image_url": "/assets/img/meta/en/statusEffect/inflated.png",
+    "meta_image_url": "/assets/img/meta/en/statusEffects/inflated.png",
     "moves_that_cause_this_effect": []
   },
   "intercepting": {
@@ -2989,7 +2990,7 @@
     "stats_affected": [],
     "name_localised": "Intercepting",
     "description_localised": "Characters with Intercepting intercept all attacks directed at their allies.",
-    "meta_image_url": "/assets/img/meta/en/statusEffect/intercepting.png",
+    "meta_image_url": "/assets/img/meta/en/statusEffects/intercepting.png",
     "moves_that_cause_this_effect": [
       {
         "id": "magnet",
@@ -3061,7 +3062,7 @@
     "stats_affected": [],
     "name_localised": "Leeched",
     "description_localised": "Leeched characters take damage at the end of their turn. Opponents are healed by the amount of health taken off.",
-    "meta_image_url": "/assets/img/meta/en/statusEffect/leeched.png",
+    "meta_image_url": "/assets/img/meta/en/statusEffects/leeched.png",
     "moves_that_cause_this_effect": [
       {
         "id": "leech",
@@ -3143,7 +3144,7 @@
     "stats_affected": [],
     "name_localised": "Locked On",
     "description_localised": "Characters with Locked On cannot miss.",
-    "meta_image_url": "/assets/img/meta/en/statusEffect/locked_on.png",
+    "meta_image_url": "/assets/img/meta/en/statusEffects/locked_on.png",
     "moves_that_cause_this_effect": [
       {
         "id": "sure_fire",
@@ -3206,7 +3207,7 @@
     ],
     "name_localised": "Meditating",
     "description_localised": "Meditating characters raise their stats each turn that they’re asleep.",
-    "meta_image_url": "/assets/img/meta/en/statusEffect/meditating.png",
+    "meta_image_url": "/assets/img/meta/en/statusEffects/meditating.png",
     "moves_that_cause_this_effect": [
       {
         "id": "meditate",
@@ -3258,7 +3259,7 @@
     "stats_affected": [],
     "name_localised": "Mind-Meld",
     "description_localised": "Characters with Mind-Meld share their moves with allies.",
-    "meta_image_url": "/assets/img/meta/en/statusEffect/mind_meld.png",
+    "meta_image_url": "/assets/img/meta/en/statusEffects/mind_meld.png",
     "moves_that_cause_this_effect": [
       {
         "id": "mind_meld",
@@ -3318,7 +3319,7 @@
     "stats_affected": [],
     "name_localised": "Multistrike",
     "description_localised": "Characters with Multistrike will use each move twice if they have enough AP for it.",
-    "meta_image_url": "/assets/img/meta/en/statusEffect/multistrike.png",
+    "meta_image_url": "/assets/img/meta/en/statusEffects/multistrike.png",
     "moves_that_cause_this_effect": [
       {
         "id": "dejavu",
@@ -3386,7 +3387,7 @@
     "stats_affected": [],
     "name_localised": "Multitarget",
     "description_localised": "Attacks from characters with Multitarget target the whole team.",
-    "meta_image_url": "/assets/img/meta/en/statusEffect/multitarget.png",
+    "meta_image_url": "/assets/img/meta/en/statusEffects/multitarget.png",
     "moves_that_cause_this_effect": [
       {
         "id": "broadcast",
@@ -3466,7 +3467,7 @@
     "stats_affected": [],
     "name_localised": "Parry Stance",
     "description_localised": "Characters with Parry Stance reflect damage from the next melee attack they receive back onto the attacker.",
-    "meta_image_url": "/assets/img/meta/en/statusEffect/parry_stance.png",
+    "meta_image_url": "/assets/img/meta/en/statusEffects/parry_stance.png",
     "moves_that_cause_this_effect": [
       {
         "id": "parry_stance",
@@ -3526,7 +3527,7 @@
     ],
     "name_localised": "Petrified",
     "description_localised": "Petrified characters become Earth type and can only use Defend and Raise Shields.",
-    "meta_image_url": "/assets/img/meta/en/statusEffect/petrified.png",
+    "meta_image_url": "/assets/img/meta/en/statusEffects/petrified.png",
     "moves_that_cause_this_effect": [
       {
         "id": "stony_look",
@@ -3606,7 +3607,7 @@
     "stats_affected": [],
     "name_localised": "Poisoned",
     "description_localised": "Poisoned characters take damage at the end of their turn.",
-    "meta_image_url": "/assets/img/meta/en/statusEffect/poisoned.png",
+    "meta_image_url": "/assets/img/meta/en/statusEffects/poisoned.png",
     "moves_that_cause_this_effect": [
       {
         "id": "acid_reflex",
@@ -3704,7 +3705,8 @@
     "sprite_animation_prefix_priority": "0",
     "stats_affected": [],
     "name_localised": "Recorded",
-    "meta_image_url": "/assets/img/meta/en/statusEffect/recorded.png",
+    "description_localised": "",
+    "meta_image_url": "/assets/img/meta/en/statusEffects/recorded.png",
     "moves_that_cause_this_effect": []
   },
   "resonance": {
@@ -3733,7 +3735,7 @@
     "stats_affected": [],
     "name_localised": "Resonance",
     "description_localised": "Each time Resonance is inflicted on a character it adds to a counter. When the counter reaches 3, the character is shaken apart and instantly defeated.",
-    "meta_image_url": "/assets/img/meta/en/statusEffect/resonance.png",
+    "meta_image_url": "/assets/img/meta/en/statusEffects/resonance.png",
     "moves_that_cause_this_effect": [
       {
         "id": "trick",
@@ -3793,7 +3795,7 @@
     "stats_affected": [],
     "name_localised": "Resurrected",
     "description_localised": "Resurrected characters can no longer be brought back by effects such as Ritual.",
-    "meta_image_url": "/assets/img/meta/en/statusEffect/resurrected.png",
+    "meta_image_url": "/assets/img/meta/en/statusEffects/resurrected.png",
     "moves_that_cause_this_effect": []
   },
   "shrapnel": {
@@ -3820,7 +3822,7 @@
     "stats_affected": [],
     "name_localised": "Shrapnel",
     "description_localised": "Characters with Shrapnel take damage each time they transform.",
-    "meta_image_url": "/assets/img/meta/en/statusEffect/shrapnel.png",
+    "meta_image_url": "/assets/img/meta/en/statusEffects/shrapnel.png",
     "moves_that_cause_this_effect": [
       {
         "id": "shrapnel",
@@ -3903,7 +3905,7 @@
     "name_localised": "Sleep",
     "description_localised": "Sleeping characters can’t use the moves they normally have.",
     "toast_on_remove_localised": "WOKE UP",
-    "meta_image_url": "/assets/img/meta/en/statusEffect/sleep.png",
+    "meta_image_url": "/assets/img/meta/en/statusEffects/sleep.png",
     "moves_that_cause_this_effect": [
       {
         "id": "hibernate",
@@ -4049,7 +4051,7 @@
     "stats_affected": [],
     "name_localised": "Snowed In",
     "description_localised": "Snowed In characters are stuck in place and cannot use melee attacks.",
-    "meta_image_url": "/assets/img/meta/en/statusEffect/snowed_in.png",
+    "meta_image_url": "/assets/img/meta/en/statusEffects/snowed_in.png",
     "moves_that_cause_this_effect": [
       {
         "id": "avalanche",
@@ -4099,7 +4101,7 @@
     "stats_affected": [],
     "name_localised": "Spring-Loaded",
     "description_localised": "Spring-Loaded extends the range of a character’s melee attacks, turning them into ranged attacks.",
-    "meta_image_url": "/assets/img/meta/en/statusEffect/spring_loaded.png",
+    "meta_image_url": "/assets/img/meta/en/statusEffects/spring_loaded.png",
     "moves_that_cause_this_effect": [
       {
         "id": "spring_load",
@@ -4151,7 +4153,7 @@
     "stats_affected": [],
     "name_localised": "Window",
     "description_localised": "Walls owned by characters with the Window status no longer block ranged attacks.",
-    "meta_image_url": "/assets/img/meta/en/statusEffect/status_window.png",
+    "meta_image_url": "/assets/img/meta/en/statusEffects/status_window.png",
     "moves_that_cause_this_effect": [
       {
         "id": "window",
@@ -4202,7 +4204,8 @@
       "accuracy"
     ],
     "name_localised": "Accuracy Down",
-    "meta_image_url": "/assets/img/meta/en/statusEffect/stat_accuracy_down.png",
+    "description_localised": "",
+    "meta_image_url": "/assets/img/meta/en/statusEffects/stat_accuracy_down.png",
     "moves_that_cause_this_effect": [
       {
         "id": "criticise",
@@ -4299,7 +4302,8 @@
       "accuracy"
     ],
     "name_localised": "Accuracy Up",
-    "meta_image_url": "/assets/img/meta/en/statusEffect/stat_accuracy_up.png",
+    "description_localised": "",
+    "meta_image_url": "/assets/img/meta/en/statusEffects/stat_accuracy_up.png",
     "moves_that_cause_this_effect": [
       {
         "id": "focus",
@@ -4344,7 +4348,8 @@
       "speed"
     ],
     "name_localised": "Double Speed",
-    "meta_image_url": "/assets/img/meta/en/statusEffect/stat_double_speed.png",
+    "description_localised": "",
+    "meta_image_url": "/assets/img/meta/en/statusEffects/stat_double_speed.png",
     "moves_that_cause_this_effect": [
       {
         "id": "frozen_ground",
@@ -4395,7 +4400,8 @@
       "evasion"
     ],
     "name_localised": "Evasion Down",
-    "meta_image_url": "/assets/img/meta/en/statusEffect/stat_evasion_down.png",
+    "description_localised": "",
+    "meta_image_url": "/assets/img/meta/en/statusEffects/stat_evasion_down.png",
     "moves_that_cause_this_effect": [
       {
         "id": "flirt",
@@ -4465,7 +4471,7 @@
     ],
     "name_localised": "Evasion Nullified",
     "description_localised": "Characters inflicted with Evasion Nullified have their Evasion stat reduced to 1%.",
-    "meta_image_url": "/assets/img/meta/en/statusEffect/stat_evasion_nullified.png",
+    "meta_image_url": "/assets/img/meta/en/statusEffects/stat_evasion_nullified.png",
     "moves_that_cause_this_effect": [
       {
         "id": "bad_forecast",
@@ -4560,7 +4566,8 @@
       "evasion"
     ],
     "name_localised": "Evasion Up",
-    "meta_image_url": "/assets/img/meta/en/statusEffect/stat_evasion_up.png",
+    "description_localised": "",
+    "meta_image_url": "/assets/img/meta/en/statusEffects/stat_evasion_up.png",
     "moves_that_cause_this_effect": [
       {
         "id": "dodge",
@@ -4605,7 +4612,8 @@
       "melee_attack"
     ],
     "name_localised": "Melee Attack Down",
-    "meta_image_url": "/assets/img/meta/en/statusEffect/stat_matk_down.png",
+    "description_localised": "",
+    "meta_image_url": "/assets/img/meta/en/statusEffects/stat_matk_down.png",
     "moves_that_cause_this_effect": [
       {
         "id": "trick",
@@ -4672,7 +4680,8 @@
       "melee_attack"
     ],
     "name_localised": "Melee Attack Up",
-    "meta_image_url": "/assets/img/meta/en/statusEffect/stat_matk_up.png",
+    "description_localised": "",
+    "meta_image_url": "/assets/img/meta/en/statusEffects/stat_matk_up.png",
     "moves_that_cause_this_effect": [
       {
         "id": "berserker",
@@ -4791,7 +4800,8 @@
       "melee_defense"
     ],
     "name_localised": "Melee Defence Down",
-    "meta_image_url": "/assets/img/meta/en/statusEffect/stat_mdef_down.png",
+    "description_localised": "",
+    "meta_image_url": "/assets/img/meta/en/statusEffects/stat_mdef_down.png",
     "moves_that_cause_this_effect": [
       {
         "id": "nod",
@@ -4858,7 +4868,8 @@
       "melee_defense"
     ],
     "name_localised": "Melee Defence Up",
-    "meta_image_url": "/assets/img/meta/en/statusEffect/stat_mdef_up.png",
+    "description_localised": "",
+    "meta_image_url": "/assets/img/meta/en/statusEffects/stat_mdef_up.png",
     "moves_that_cause_this_effect": [
       {
         "id": "clay_fired",
@@ -4933,7 +4944,8 @@
       "ranged_attack"
     ],
     "name_localised": "Ranged Attack Down",
-    "meta_image_url": "/assets/img/meta/en/statusEffect/stat_ratk_down.png",
+    "description_localised": "",
+    "meta_image_url": "/assets/img/meta/en/statusEffects/stat_ratk_down.png",
     "moves_that_cause_this_effect": [
       {
         "id": "criticize",
@@ -5000,7 +5012,8 @@
       "ranged_attack"
     ],
     "name_localised": "Ranged Attack Up",
-    "meta_image_url": "/assets/img/meta/en/statusEffect/stat_ratk_up.png",
+    "description_localised": "",
+    "meta_image_url": "/assets/img/meta/en/statusEffects/stat_ratk_up.png",
     "moves_that_cause_this_effect": [
       {
         "id": "bloodlust",
@@ -5097,7 +5110,8 @@
       "ranged_defense"
     ],
     "name_localised": "Ranged Defence Down",
-    "meta_image_url": "/assets/img/meta/en/statusEffect/stat_rdef_down.png",
+    "description_localised": "",
+    "meta_image_url": "/assets/img/meta/en/statusEffects/stat_rdef_down.png",
     "moves_that_cause_this_effect": [
       {
         "id": "compliment",
@@ -5164,7 +5178,8 @@
       "ranged_defense"
     ],
     "name_localised": "Ranged Defence Up",
-    "meta_image_url": "/assets/img/meta/en/statusEffect/stat_rdef_up.png",
+    "description_localised": "",
+    "meta_image_url": "/assets/img/meta/en/statusEffects/stat_rdef_up.png",
     "moves_that_cause_this_effect": [
       {
         "id": "clay_fired",
@@ -5239,7 +5254,8 @@
       "speed"
     ],
     "name_localised": "Speed Down",
-    "meta_image_url": "/assets/img/meta/en/statusEffect/stat_speed_down.png",
+    "description_localised": "",
+    "meta_image_url": "/assets/img/meta/en/statusEffects/stat_speed_down.png",
     "moves_that_cause_this_effect": [
       {
         "id": "traffic_jam",
@@ -5328,7 +5344,8 @@
       "speed"
     ],
     "name_localised": "Speed Up",
-    "meta_image_url": "/assets/img/meta/en/statusEffect/stat_speed_up.png",
+    "description_localised": "",
+    "meta_image_url": "/assets/img/meta/en/statusEffects/stat_speed_up.png",
     "moves_that_cause_this_effect": [
       {
         "id": "liftoff",
@@ -5418,7 +5435,7 @@
     "stats_affected": [],
     "name_localised": "Summoned",
     "description_localised": "Summoned characters are called away from combat after a certain number of turns.",
-    "meta_image_url": "/assets/img/meta/en/statusEffect/summoned.png",
+    "meta_image_url": "/assets/img/meta/en/statusEffects/summoned.png",
     "moves_that_cause_this_effect": [
       {
         "id": "summon_tulpa",
@@ -5470,7 +5487,7 @@
     "stats_affected": [],
     "name_localised": "Tape Jam",
     "description_localised": "Characters inflicted with Tape Jam are prevented from switching out their current tape until either Tape Jam is removed, or their tape breaks.",
-    "meta_image_url": "/assets/img/meta/en/statusEffect/tape_jam.png",
+    "meta_image_url": "/assets/img/meta/en/statusEffects/tape_jam.png",
     "moves_that_cause_this_effect": [
       {
         "id": "deep_freeze",
@@ -5545,7 +5562,7 @@
     ],
     "name_localised": "Tower Defence",
     "description_localised": "Characters with Tower Defence become Earth-type and have raised defence stats.",
-    "meta_image_url": "/assets/img/meta/en/statusEffect/tower_defense.png",
+    "meta_image_url": "/assets/img/meta/en/statusEffects/tower_defense.png",
     "moves_that_cause_this_effect": [
       {
         "id": "tower_defense",
@@ -5597,7 +5614,7 @@
     "stats_affected": [],
     "name_localised": "Ritual",
     "description_localised": "Characters with Ritual are brought back at 25% health when defeated.",
-    "meta_image_url": "/assets/img/meta/en/statusEffect/undying.png",
+    "meta_image_url": "/assets/img/meta/en/statusEffects/undying.png",
     "moves_that_cause_this_effect": [
       {
         "id": "ritual",
@@ -5647,7 +5664,7 @@
     "stats_affected": [],
     "name_localised": "Unitarget",
     "description_localised": "Attacks from characters with Unitarget that normally target a whole team only affect a single target, and attacks that are normally single-target have reduced accuracy.",
-    "meta_image_url": "/assets/img/meta/en/statusEffect/unitarget.png",
+    "meta_image_url": "/assets/img/meta/en/statusEffects/unitarget.png",
     "moves_that_cause_this_effect": [
       {
         "id": "trick",
@@ -5727,7 +5744,7 @@
     "stats_affected": [],
     "name_localised": "Air Wall",
     "description_localised": "Walls absorb a certain number of incoming hits. Type-advantaged attacks immediately break walls.",
-    "meta_image_url": "/assets/img/meta/en/statusEffect/wall_air.png",
+    "meta_image_url": "/assets/img/meta/en/statusEffects/wall_air.png",
     "moves_that_cause_this_effect": []
   },
   "wall_gemstone": {
@@ -5757,7 +5774,7 @@
     "stat_offset": 1,
     "name_localised": "Gemstone Wall",
     "description_localised": "Walls absorb a certain number of incoming hits. Type-advantaged attacks immediately break walls. In addition to standard Wall behavior, Gemstone Wall provides its owner with 1 extra AP each turn.",
-    "meta_image_url": "/assets/img/meta/en/statusEffect/wall_gemstone.png",
+    "meta_image_url": "/assets/img/meta/en/statusEffects/wall_gemstone.png",
     "moves_that_cause_this_effect": [
       {
         "id": "gemstone_wall",
@@ -5807,7 +5824,7 @@
     "stats_affected": [],
     "name_localised": "Apple Tree",
     "description_localised": "Walls absorb a certain number of incoming hits. Type-advantaged attacks immediately break walls.",
-    "meta_image_url": "/assets/img/meta/en/statusEffect/wall_temptation.png",
+    "meta_image_url": "/assets/img/meta/en/statusEffects/wall_temptation.png",
     "moves_that_cause_this_effect": []
   }
 }

@@ -76,7 +76,7 @@
         "stat_offset": 1,
         "name_localised": "AP Boost",
         "description_localised": "Characters with AP Boost gain 1 extra AP each round.",
-        "meta_image_url": "/assets/img/meta/en/statusEffect/ap_boost.png",
+        "meta_image_url": "/assets/img/meta/en/statusEffects/ap_boost.png",
         "moves_that_cause_this_effect": [
           {
             "id": "ap_boost",
@@ -237,7 +237,8 @@
           "melee_attack"
         ],
         "name_localised": "Melee Attack Down",
-        "meta_image_url": "/assets/img/meta/en/statusEffect/stat_matk_down.png",
+        "description_localised": "",
+        "meta_image_url": "/assets/img/meta/en/statusEffects/stat_matk_down.png",
         "moves_that_cause_this_effect": [
           {
             "id": "trick",
@@ -304,7 +305,8 @@
           "ranged_attack"
         ],
         "name_localised": "Ranged Attack Down",
-        "meta_image_url": "/assets/img/meta/en/statusEffect/stat_ratk_down.png",
+        "description_localised": "",
+        "meta_image_url": "/assets/img/meta/en/statusEffects/stat_ratk_down.png",
         "moves_that_cause_this_effect": [
           {
             "id": "criticize",
@@ -425,7 +427,7 @@
         "stats_affected": [],
         "name_localised": "Resonance",
         "description_localised": "Each time Resonance is inflicted on a character it adds to a counter. When the counter reaches 3, the character is shaken apart and instantly defeated.",
-        "meta_image_url": "/assets/img/meta/en/statusEffect/resonance.png",
+        "meta_image_url": "/assets/img/meta/en/statusEffects/resonance.png",
         "moves_that_cause_this_effect": [
           {
             "id": "trick",
@@ -538,7 +540,7 @@
         "stats_affected": [],
         "name_localised": "Air Coating",
         "description_localised": "Coatings change the elemental type of a character for a certain number of turns.",
-        "meta_image_url": "/assets/img/meta/en/statusEffect/coating_air.png",
+        "meta_image_url": "/assets/img/meta/en/statusEffects/coating_air.png",
         "moves_that_cause_this_effect": [
           {
             "id": "camouflage_air",
@@ -665,7 +667,7 @@
         "stats_affected": [],
         "name_localised": "Multitarget",
         "description_localised": "Attacks from characters with Multitarget target the whole team.",
-        "meta_image_url": "/assets/img/meta/en/statusEffect/multitarget.png",
+        "meta_image_url": "/assets/img/meta/en/statusEffects/multitarget.png",
         "moves_that_cause_this_effect": [
           {
             "id": "broadcast",
@@ -801,7 +803,7 @@
         "stat_offset": -1,
         "name_localised": "AP Drain",
         "description_localised": "Characters with AP Drain gain 1 fewer AP each round.",
-        "meta_image_url": "/assets/img/meta/en/statusEffect/ap_drain.png",
+        "meta_image_url": "/assets/img/meta/en/statusEffects/ap_drain.png",
         "moves_that_cause_this_effect": [
           {
             "id": "ap_drain",
@@ -937,7 +939,7 @@
         "stat_offset": -1,
         "name_localised": "AP Drain",
         "description_localised": "Characters with AP Drain gain 1 fewer AP each round.",
-        "meta_image_url": "/assets/img/meta/en/statusEffect/ap_drain.png",
+        "meta_image_url": "/assets/img/meta/en/statusEffects/ap_drain.png",
         "moves_that_cause_this_effect": [
           {
             "id": "ap_drain",
@@ -1073,7 +1075,7 @@
         "stat_offset": 1,
         "name_localised": "AP Boost",
         "description_localised": "Characters with AP Boost gain 1 extra AP each round.",
-        "meta_image_url": "/assets/img/meta/en/statusEffect/ap_boost.png",
+        "meta_image_url": "/assets/img/meta/en/statusEffects/ap_boost.png",
         "moves_that_cause_this_effect": [
           {
             "id": "ap_boost",
@@ -1231,7 +1233,7 @@
         "stat_offset": -1,
         "name_localised": "AP Drain",
         "description_localised": "Characters with AP Drain gain 1 fewer AP each round.",
-        "meta_image_url": "/assets/img/meta/en/statusEffect/ap_drain.png",
+        "meta_image_url": "/assets/img/meta/en/statusEffects/ap_drain.png",
         "moves_that_cause_this_effect": [
           {
             "id": "ap_drain",
@@ -1367,7 +1369,7 @@
         "stat_offset": -1,
         "name_localised": "AP Drain",
         "description_localised": "Characters with AP Drain gain 1 fewer AP each round.",
-        "meta_image_url": "/assets/img/meta/en/statusEffect/ap_drain.png",
+        "meta_image_url": "/assets/img/meta/en/statusEffects/ap_drain.png",
         "moves_that_cause_this_effect": [
           {
             "id": "ap_drain",
@@ -1502,7 +1504,7 @@
         "stats_affected": [],
         "name_localised": "Astral Coating",
         "description_localised": "Coatings change the elemental type of a character for a certain number of turns.",
-        "meta_image_url": "/assets/img/meta/en/statusEffect/coating_astral.png",
+        "meta_image_url": "/assets/img/meta/en/statusEffects/coating_astral.png",
         "moves_that_cause_this_effect": [
           {
             "id": "camouflage_astral",
@@ -1630,7 +1632,7 @@
         "stat_offset": -1,
         "name_localised": "AP Drain",
         "description_localised": "Characters with AP Drain gain 1 fewer AP each round.",
-        "meta_image_url": "/assets/img/meta/en/statusEffect/ap_drain.png",
+        "meta_image_url": "/assets/img/meta/en/statusEffects/ap_drain.png",
         "moves_that_cause_this_effect": [
           {
             "id": "ap_drain",
@@ -1763,7 +1765,7 @@
         "stats_affected": [],
         "name_localised": "Glass Shards",
         "description_localised": "While it is in effect, any characters that use a melee attack will take damage from the Glass Shards on the battlefield.",
-        "meta_image_url": "/assets/img/meta/en/statusEffect/glass_shards.png",
+        "meta_image_url": "/assets/img/meta/en/statusEffects/glass_shards.png",
         "moves_that_cause_this_effect": []
       }
     ],
@@ -1845,7 +1847,7 @@
         "stats_affected": [],
         "name_localised": "Beast Coating",
         "description_localised": "Coatings change the elemental type of a character for a certain number of turns.",
-        "meta_image_url": "/assets/img/meta/en/statusEffect/coating_beast.png",
+        "meta_image_url": "/assets/img/meta/en/statusEffects/coating_beast.png",
         "moves_that_cause_this_effect": [
           {
             "id": "camouflage_beast",
@@ -1973,7 +1975,7 @@
         "stat_offset": 1,
         "name_localised": "AP Boost",
         "description_localised": "Characters with AP Boost gain 1 extra AP each round.",
-        "meta_image_url": "/assets/img/meta/en/statusEffect/ap_boost.png",
+        "meta_image_url": "/assets/img/meta/en/statusEffects/ap_boost.png",
         "moves_that_cause_this_effect": [
           {
             "id": "ap_boost",
@@ -2134,7 +2136,8 @@
           "melee_attack"
         ],
         "name_localised": "Melee Attack Down",
-        "meta_image_url": "/assets/img/meta/en/statusEffect/stat_matk_down.png",
+        "description_localised": "",
+        "meta_image_url": "/assets/img/meta/en/statusEffects/stat_matk_down.png",
         "moves_that_cause_this_effect": [
           {
             "id": "trick",
@@ -2201,7 +2204,8 @@
           "ranged_attack"
         ],
         "name_localised": "Ranged Attack Down",
-        "meta_image_url": "/assets/img/meta/en/statusEffect/stat_ratk_down.png",
+        "description_localised": "",
+        "meta_image_url": "/assets/img/meta/en/statusEffects/stat_ratk_down.png",
         "moves_that_cause_this_effect": [
           {
             "id": "criticize",
@@ -2322,7 +2326,7 @@
         "stats_affected": [],
         "name_localised": "Earth Coating",
         "description_localised": "Coatings change the elemental type of a character for a certain number of turns.",
-        "meta_image_url": "/assets/img/meta/en/statusEffect/coating_earth.png",
+        "meta_image_url": "/assets/img/meta/en/statusEffects/coating_earth.png",
         "moves_that_cause_this_effect": [
           {
             "id": "camouflage_earth",
@@ -2447,7 +2451,7 @@
         "stats_affected": [],
         "name_localised": "Unitarget",
         "description_localised": "Attacks from characters with Unitarget that normally target a whole team only affect a single target, and attacks that are normally single-target have reduced accuracy.",
-        "meta_image_url": "/assets/img/meta/en/statusEffect/unitarget.png",
+        "meta_image_url": "/assets/img/meta/en/statusEffects/unitarget.png",
         "moves_that_cause_this_effect": [
           {
             "id": "trick",
@@ -2586,7 +2590,8 @@
           "evasion"
         ],
         "name_localised": "Evasion Down",
-        "meta_image_url": "/assets/img/meta/en/statusEffect/stat_evasion_down.png",
+        "description_localised": "",
+        "meta_image_url": "/assets/img/meta/en/statusEffects/stat_evasion_down.png",
         "moves_that_cause_this_effect": [
           {
             "id": "flirt",
@@ -2653,7 +2658,8 @@
           "speed"
         ],
         "name_localised": "Speed Down",
-        "meta_image_url": "/assets/img/meta/en/statusEffect/stat_speed_down.png",
+        "description_localised": "",
+        "meta_image_url": "/assets/img/meta/en/statusEffects/stat_speed_down.png",
         "moves_that_cause_this_effect": [
           {
             "id": "traffic_jam",
@@ -2794,7 +2800,7 @@
         "stats_affected": [],
         "name_localised": "Air Wall",
         "description_localised": "Walls absorb a certain number of incoming hits. Type-advantaged attacks immediately break walls.",
-        "meta_image_url": "/assets/img/meta/en/statusEffect/wall_air.png",
+        "meta_image_url": "/assets/img/meta/en/statusEffects/wall_air.png",
         "moves_that_cause_this_effect": []
       }
     ],
@@ -2877,7 +2883,7 @@
         "stat_offset": 1,
         "name_localised": "AP Boost",
         "description_localised": "Characters with AP Boost gain 1 extra AP each round.",
-        "meta_image_url": "/assets/img/meta/en/statusEffect/ap_boost.png",
+        "meta_image_url": "/assets/img/meta/en/statusEffects/ap_boost.png",
         "moves_that_cause_this_effect": [
           {
             "id": "ap_boost",
@@ -3034,7 +3040,7 @@
         "stats_affected": [],
         "name_localised": "Fire Coating",
         "description_localised": "Coatings change the elemental type of a character for a certain number of turns.",
-        "meta_image_url": "/assets/img/meta/en/statusEffect/coating_fire.png",
+        "meta_image_url": "/assets/img/meta/en/statusEffects/coating_fire.png",
         "moves_that_cause_this_effect": [
           {
             "id": "bushfire",
@@ -3183,7 +3189,7 @@
         "stats_affected": [],
         "name_localised": "Water Coating",
         "description_localised": "Coatings change the elemental type of a character for a certain number of turns.",
-        "meta_image_url": "/assets/img/meta/en/statusEffect/coating_water.png",
+        "meta_image_url": "/assets/img/meta/en/statusEffects/coating_water.png",
         "moves_that_cause_this_effect": [
           {
             "id": "camouflage_water",
@@ -3308,7 +3314,7 @@
         "stats_affected": [],
         "name_localised": "Burned",
         "description_localised": "Burned characters take damage at the end of their turn.",
-        "meta_image_url": "/assets/img/meta/en/statusEffect/burned.png",
+        "meta_image_url": "/assets/img/meta/en/statusEffects/burned.png",
         "moves_that_cause_this_effect": [
           {
             "id": "bushfire",
@@ -3485,7 +3491,7 @@
         "stats_affected": [],
         "name_localised": "Burned",
         "description_localised": "Burned characters take damage at the end of their turn.",
-        "meta_image_url": "/assets/img/meta/en/statusEffect/burned.png",
+        "meta_image_url": "/assets/img/meta/en/statusEffects/burned.png",
         "moves_that_cause_this_effect": [
           {
             "id": "bushfire",
@@ -3664,7 +3670,7 @@
         "stats_affected": [],
         "name_localised": "Poison Coating",
         "description_localised": "Coatings change the elemental type of a character for a certain number of turns.",
-        "meta_image_url": "/assets/img/meta/en/statusEffect/coating_poison.png",
+        "meta_image_url": "/assets/img/meta/en/statusEffects/coating_poison.png",
         "moves_that_cause_this_effect": [
           {
             "id": "camouflage_poison",
@@ -3789,7 +3795,7 @@
         "stats_affected": [],
         "name_localised": "Burned",
         "description_localised": "Burned characters take damage at the end of their turn.",
-        "meta_image_url": "/assets/img/meta/en/statusEffect/burned.png",
+        "meta_image_url": "/assets/img/meta/en/statusEffects/burned.png",
         "moves_that_cause_this_effect": [
           {
             "id": "bushfire",
@@ -3966,7 +3972,7 @@
         "stats_affected": [],
         "name_localised": "Healing Steam",
         "description_localised": "Characters with Healing Steam regain some health at the start of each turn.",
-        "meta_image_url": "/assets/img/meta/en/statusEffect/healing_steam.png",
+        "meta_image_url": "/assets/img/meta/en/statusEffects/healing_steam.png",
         "moves_that_cause_this_effect": [
           {
             "id": "treat",
@@ -4057,7 +4063,7 @@
         "stats_affected": [],
         "name_localised": "Glass Coating",
         "description_localised": "Coatings change the elemental type of a character for a certain number of turns.",
-        "meta_image_url": "/assets/img/meta/en/statusEffect/coating_glass.png",
+        "meta_image_url": "/assets/img/meta/en/statusEffects/coating_glass.png",
         "moves_that_cause_this_effect": [
           {
             "id": "camouflage_glass",
@@ -4182,7 +4188,7 @@
         "stats_affected": [],
         "name_localised": "Unitarget",
         "description_localised": "Attacks from characters with Unitarget that normally target a whole team only affect a single target, and attacks that are normally single-target have reduced accuracy.",
-        "meta_image_url": "/assets/img/meta/en/statusEffect/unitarget.png",
+        "meta_image_url": "/assets/img/meta/en/statusEffects/unitarget.png",
         "moves_that_cause_this_effect": [
           {
             "id": "trick",
@@ -4317,7 +4323,7 @@
         "stats_affected": [],
         "name_localised": "Glitter Coating",
         "description_localised": "Coatings change the elemental type of a character for a certain number of turns.",
-        "meta_image_url": "/assets/img/meta/en/statusEffect/coating_glitter.png",
+        "meta_image_url": "/assets/img/meta/en/statusEffects/coating_glitter.png",
         "moves_that_cause_this_effect": [
           {
             "id": "prismatic",
@@ -4460,7 +4466,7 @@
         "stats_affected": [],
         "name_localised": "Glitter Coating",
         "description_localised": "Coatings change the elemental type of a character for a certain number of turns.",
-        "meta_image_url": "/assets/img/meta/en/statusEffect/coating_glitter.png",
+        "meta_image_url": "/assets/img/meta/en/statusEffects/coating_glitter.png",
         "moves_that_cause_this_effect": [
           {
             "id": "prismatic",
@@ -4603,7 +4609,7 @@
         "stats_affected": [],
         "name_localised": "Glitter Coating",
         "description_localised": "Coatings change the elemental type of a character for a certain number of turns.",
-        "meta_image_url": "/assets/img/meta/en/statusEffect/coating_glitter.png",
+        "meta_image_url": "/assets/img/meta/en/statusEffects/coating_glitter.png",
         "moves_that_cause_this_effect": [
           {
             "id": "prismatic",
@@ -4746,7 +4752,7 @@
         "stats_affected": [],
         "name_localised": "Glitter Coating",
         "description_localised": "Coatings change the elemental type of a character for a certain number of turns.",
-        "meta_image_url": "/assets/img/meta/en/statusEffect/coating_glitter.png",
+        "meta_image_url": "/assets/img/meta/en/statusEffects/coating_glitter.png",
         "moves_that_cause_this_effect": [
           {
             "id": "prismatic",
@@ -4889,7 +4895,7 @@
         "stats_affected": [],
         "name_localised": "Glitter Coating",
         "description_localised": "Coatings change the elemental type of a character for a certain number of turns.",
-        "meta_image_url": "/assets/img/meta/en/statusEffect/coating_glitter.png",
+        "meta_image_url": "/assets/img/meta/en/statusEffects/coating_glitter.png",
         "moves_that_cause_this_effect": [
           {
             "id": "prismatic",
@@ -5032,7 +5038,7 @@
         "stats_affected": [],
         "name_localised": "Glitter Coating",
         "description_localised": "Coatings change the elemental type of a character for a certain number of turns.",
-        "meta_image_url": "/assets/img/meta/en/statusEffect/coating_glitter.png",
+        "meta_image_url": "/assets/img/meta/en/statusEffects/coating_glitter.png",
         "moves_that_cause_this_effect": [
           {
             "id": "prismatic",
@@ -5175,7 +5181,7 @@
         "stats_affected": [],
         "name_localised": "Glitter Coating",
         "description_localised": "Coatings change the elemental type of a character for a certain number of turns.",
-        "meta_image_url": "/assets/img/meta/en/statusEffect/coating_glitter.png",
+        "meta_image_url": "/assets/img/meta/en/statusEffects/coating_glitter.png",
         "moves_that_cause_this_effect": [
           {
             "id": "prismatic",
@@ -5318,7 +5324,7 @@
         "stats_affected": [],
         "name_localised": "Glitter Coating",
         "description_localised": "Coatings change the elemental type of a character for a certain number of turns.",
-        "meta_image_url": "/assets/img/meta/en/statusEffect/coating_glitter.png",
+        "meta_image_url": "/assets/img/meta/en/statusEffects/coating_glitter.png",
         "moves_that_cause_this_effect": [
           {
             "id": "prismatic",
@@ -5461,7 +5467,7 @@
         "stats_affected": [],
         "name_localised": "Glitter Coating",
         "description_localised": "Coatings change the elemental type of a character for a certain number of turns.",
-        "meta_image_url": "/assets/img/meta/en/statusEffect/coating_glitter.png",
+        "meta_image_url": "/assets/img/meta/en/statusEffects/coating_glitter.png",
         "moves_that_cause_this_effect": [
           {
             "id": "prismatic",
@@ -5604,7 +5610,7 @@
         "stats_affected": [],
         "name_localised": "Glitter Coating",
         "description_localised": "Coatings change the elemental type of a character for a certain number of turns.",
-        "meta_image_url": "/assets/img/meta/en/statusEffect/coating_glitter.png",
+        "meta_image_url": "/assets/img/meta/en/statusEffects/coating_glitter.png",
         "moves_that_cause_this_effect": [
           {
             "id": "prismatic",
@@ -5747,7 +5753,7 @@
         "stats_affected": [],
         "name_localised": "Glitter Coating",
         "description_localised": "Coatings change the elemental type of a character for a certain number of turns.",
-        "meta_image_url": "/assets/img/meta/en/statusEffect/coating_glitter.png",
+        "meta_image_url": "/assets/img/meta/en/statusEffects/coating_glitter.png",
         "moves_that_cause_this_effect": [
           {
             "id": "prismatic",
@@ -5890,7 +5896,7 @@
         "stats_affected": [],
         "name_localised": "Glitter Coating",
         "description_localised": "Coatings change the elemental type of a character for a certain number of turns.",
-        "meta_image_url": "/assets/img/meta/en/statusEffect/coating_glitter.png",
+        "meta_image_url": "/assets/img/meta/en/statusEffects/coating_glitter.png",
         "moves_that_cause_this_effect": [
           {
             "id": "prismatic",
@@ -6033,7 +6039,7 @@
         "stats_affected": [],
         "name_localised": "Glitter Coating",
         "description_localised": "Coatings change the elemental type of a character for a certain number of turns.",
-        "meta_image_url": "/assets/img/meta/en/statusEffect/coating_glitter.png",
+        "meta_image_url": "/assets/img/meta/en/statusEffects/coating_glitter.png",
         "moves_that_cause_this_effect": [
           {
             "id": "prismatic",
@@ -6175,7 +6181,8 @@
           "accuracy"
         ],
         "name_localised": "Accuracy Down",
-        "meta_image_url": "/assets/img/meta/en/statusEffect/stat_accuracy_down.png",
+        "description_localised": "",
+        "meta_image_url": "/assets/img/meta/en/statusEffects/stat_accuracy_down.png",
         "moves_that_cause_this_effect": [
           {
             "id": "criticise",
@@ -6326,7 +6333,7 @@
         "stats_affected": [],
         "name_localised": "Ice Coating",
         "description_localised": "Coatings change the elemental type of a character for a certain number of turns.",
-        "meta_image_url": "/assets/img/meta/en/statusEffect/coating_ice.png",
+        "meta_image_url": "/assets/img/meta/en/statusEffects/coating_ice.png",
         "moves_that_cause_this_effect": [
           {
             "id": "camouflage_ice",
@@ -6453,7 +6460,7 @@
         "stats_affected": [],
         "name_localised": "Multitarget",
         "description_localised": "Attacks from characters with Multitarget target the whole team.",
-        "meta_image_url": "/assets/img/meta/en/statusEffect/multitarget.png",
+        "meta_image_url": "/assets/img/meta/en/statusEffects/multitarget.png",
         "moves_that_cause_this_effect": [
           {
             "id": "broadcast",
@@ -6596,7 +6603,7 @@
         "stats_affected": [],
         "name_localised": "Ice Coating",
         "description_localised": "Coatings change the elemental type of a character for a certain number of turns.",
-        "meta_image_url": "/assets/img/meta/en/statusEffect/coating_ice.png",
+        "meta_image_url": "/assets/img/meta/en/statusEffects/coating_ice.png",
         "moves_that_cause_this_effect": [
           {
             "id": "camouflage_ice",
@@ -6670,7 +6677,7 @@
         "stats_affected": [],
         "name_localised": "Flinched",
         "description_localised": "A character that flinches skips its next turn.",
-        "meta_image_url": "/assets/img/meta/en/statusEffect/flinch.png",
+        "meta_image_url": "/assets/img/meta/en/statusEffects/flinch.png",
         "moves_that_cause_this_effect": [
           {
             "id": "trick",
@@ -6781,7 +6788,7 @@
         "stats_affected": [],
         "name_localised": "Conductive",
         "description_localised": "Conductive characters take damage whenever any Lightning-type attack is used.",
-        "meta_image_url": "/assets/img/meta/en/statusEffect/conductive.png",
+        "meta_image_url": "/assets/img/meta/en/statusEffects/conductive.png",
         "moves_that_cause_this_effect": [
           {
             "id": "ionised_air",
@@ -6938,7 +6945,7 @@
         "stats_affected": [],
         "name_localised": "Glass Coating",
         "description_localised": "Coatings change the elemental type of a character for a certain number of turns.",
-        "meta_image_url": "/assets/img/meta/en/statusEffect/coating_glass.png",
+        "meta_image_url": "/assets/img/meta/en/statusEffects/coating_glass.png",
         "moves_that_cause_this_effect": [
           {
             "id": "camouflage_glass",
@@ -7065,7 +7072,7 @@
         "stats_affected": [],
         "name_localised": "Lightning Coating",
         "description_localised": "Coatings change the elemental type of a character for a certain number of turns.",
-        "meta_image_url": "/assets/img/meta/en/statusEffect/coating_lightning.png",
+        "meta_image_url": "/assets/img/meta/en/statusEffects/coating_lightning.png",
         "moves_that_cause_this_effect": [
           {
             "id": "camouflage_lightning",
@@ -7190,7 +7197,7 @@
         "stats_affected": [],
         "name_localised": "Conductive",
         "description_localised": "Conductive characters take damage whenever any Lightning-type attack is used.",
-        "meta_image_url": "/assets/img/meta/en/statusEffect/conductive.png",
+        "meta_image_url": "/assets/img/meta/en/statusEffects/conductive.png",
         "moves_that_cause_this_effect": [
           {
             "id": "ionised_air",
@@ -7345,7 +7352,7 @@
         "stats_affected": [],
         "name_localised": "Conductive",
         "description_localised": "Conductive characters take damage whenever any Lightning-type attack is used.",
-        "meta_image_url": "/assets/img/meta/en/statusEffect/conductive.png",
+        "meta_image_url": "/assets/img/meta/en/statusEffects/conductive.png",
         "moves_that_cause_this_effect": [
           {
             "id": "ionised_air",
@@ -7500,7 +7507,7 @@
         "stats_affected": [],
         "name_localised": "Contact Dmg",
         "description_localised": "Characters with Contact Damage deal a bit of elemental damage whenever they land or receive a melee attack.",
-        "meta_image_url": "/assets/img/meta/en/statusEffect/contactdmg_lightning.png",
+        "meta_image_url": "/assets/img/meta/en/statusEffects/contactdmg_lightning.png",
         "moves_that_cause_this_effect": []
       }
     ],
@@ -7580,7 +7587,7 @@
         "stats_affected": [],
         "name_localised": "Conductive",
         "description_localised": "Conductive characters take damage whenever any Lightning-type attack is used.",
-        "meta_image_url": "/assets/img/meta/en/statusEffect/conductive.png",
+        "meta_image_url": "/assets/img/meta/en/statusEffects/conductive.png",
         "moves_that_cause_this_effect": [
           {
             "id": "ionised_air",
@@ -7735,7 +7742,7 @@
         "stats_affected": [],
         "name_localised": "Berserk",
         "description_localised": "Characters with Berserk can only use damaging moves.",
-        "meta_image_url": "/assets/img/meta/en/statusEffect/berserk.png",
+        "meta_image_url": "/assets/img/meta/en/statusEffects/berserk.png",
         "moves_that_cause_this_effect": [
           {
             "id": "berserker",
@@ -7896,7 +7903,8 @@
           "melee_defense"
         ],
         "name_localised": "Melee Defence Down",
-        "meta_image_url": "/assets/img/meta/en/statusEffect/stat_mdef_down.png",
+        "description_localised": "",
+        "meta_image_url": "/assets/img/meta/en/statusEffects/stat_mdef_down.png",
         "moves_that_cause_this_effect": [
           {
             "id": "nod",
@@ -7963,7 +7971,8 @@
           "ranged_defense"
         ],
         "name_localised": "Ranged Defence Down",
-        "meta_image_url": "/assets/img/meta/en/statusEffect/stat_rdef_down.png",
+        "description_localised": "",
+        "meta_image_url": "/assets/img/meta/en/statusEffects/stat_rdef_down.png",
         "moves_that_cause_this_effect": [
           {
             "id": "compliment",
@@ -8082,7 +8091,7 @@
         "stats_affected": [],
         "name_localised": "Glass Shards",
         "description_localised": "While it is in effect, any characters that use a melee attack will take damage from the Glass Shards on the battlefield.",
-        "meta_image_url": "/assets/img/meta/en/statusEffect/glass_shards.png",
+        "meta_image_url": "/assets/img/meta/en/statusEffects/glass_shards.png",
         "moves_that_cause_this_effect": []
       }
     ],
@@ -8164,7 +8173,7 @@
         "stats_affected": [],
         "name_localised": "Metal Coating",
         "description_localised": "Coatings change the elemental type of a character for a certain number of turns.",
-        "meta_image_url": "/assets/img/meta/en/statusEffect/coating_metal.png",
+        "meta_image_url": "/assets/img/meta/en/statusEffects/coating_metal.png",
         "moves_that_cause_this_effect": [
           {
             "id": "camouflage_metal",
@@ -8295,7 +8304,8 @@
           "melee_defense"
         ],
         "name_localised": "Melee Defence Down",
-        "meta_image_url": "/assets/img/meta/en/statusEffect/stat_mdef_down.png",
+        "description_localised": "",
+        "meta_image_url": "/assets/img/meta/en/statusEffects/stat_mdef_down.png",
         "moves_that_cause_this_effect": [
           {
             "id": "nod",
@@ -8362,7 +8372,8 @@
           "ranged_defense"
         ],
         "name_localised": "Ranged Defence Down",
-        "meta_image_url": "/assets/img/meta/en/statusEffect/stat_rdef_down.png",
+        "description_localised": "",
+        "meta_image_url": "/assets/img/meta/en/statusEffects/stat_rdef_down.png",
         "moves_that_cause_this_effect": [
           {
             "id": "compliment",
@@ -8483,7 +8494,7 @@
         "stats_affected": [],
         "name_localised": "Multitarget",
         "description_localised": "Attacks from characters with Multitarget target the whole team.",
-        "meta_image_url": "/assets/img/meta/en/statusEffect/multitarget.png",
+        "meta_image_url": "/assets/img/meta/en/statusEffects/multitarget.png",
         "moves_that_cause_this_effect": [
           {
             "id": "broadcast",
@@ -8616,7 +8627,7 @@
         "stats_affected": [],
         "name_localised": "Leeched",
         "description_localised": "Leeched characters take damage at the end of their turn. Opponents are healed by the amount of health taken off.",
-        "meta_image_url": "/assets/img/meta/en/statusEffect/leeched.png",
+        "meta_image_url": "/assets/img/meta/en/statusEffects/leeched.png",
         "moves_that_cause_this_effect": [
           {
             "id": "leech",
@@ -8750,7 +8761,8 @@
           "evasion"
         ],
         "name_localised": "Evasion Up",
-        "meta_image_url": "/assets/img/meta/en/statusEffect/stat_evasion_up.png",
+        "description_localised": "",
+        "meta_image_url": "/assets/img/meta/en/statusEffects/stat_evasion_up.png",
         "moves_that_cause_this_effect": [
           {
             "id": "dodge",
@@ -8849,7 +8861,7 @@
         "stats_affected": [],
         "name_localised": "Plant Coating",
         "description_localised": "Coatings change the elemental type of a character for a certain number of turns.",
-        "meta_image_url": "/assets/img/meta/en/statusEffect/coating_plant.png",
+        "meta_image_url": "/assets/img/meta/en/statusEffects/coating_plant.png",
         "moves_that_cause_this_effect": [
           {
             "id": "camouflage_plant",
@@ -8974,7 +8986,7 @@
         "stats_affected": [],
         "name_localised": "Unitarget",
         "description_localised": "Attacks from characters with Unitarget that normally target a whole team only affect a single target, and attacks that are normally single-target have reduced accuracy.",
-        "meta_image_url": "/assets/img/meta/en/statusEffect/unitarget.png",
+        "meta_image_url": "/assets/img/meta/en/statusEffects/unitarget.png",
         "moves_that_cause_this_effect": [
           {
             "id": "trick",
@@ -9113,7 +9125,8 @@
           "melee_attack"
         ],
         "name_localised": "Melee Attack Up",
-        "meta_image_url": "/assets/img/meta/en/statusEffect/stat_matk_up.png",
+        "description_localised": "",
+        "meta_image_url": "/assets/img/meta/en/statusEffects/stat_matk_up.png",
         "moves_that_cause_this_effect": [
           {
             "id": "berserker",
@@ -9232,7 +9245,8 @@
           "ranged_attack"
         ],
         "name_localised": "Ranged Attack Up",
-        "meta_image_url": "/assets/img/meta/en/statusEffect/stat_ratk_up.png",
+        "description_localised": "",
+        "meta_image_url": "/assets/img/meta/en/statusEffects/stat_ratk_up.png",
         "moves_that_cause_this_effect": [
           {
             "id": "bloodlust",
@@ -9381,7 +9395,7 @@
         "stats_affected": [],
         "name_localised": "Leeched",
         "description_localised": "Leeched characters take damage at the end of their turn. Opponents are healed by the amount of health taken off.",
-        "meta_image_url": "/assets/img/meta/en/statusEffect/leeched.png",
+        "meta_image_url": "/assets/img/meta/en/statusEffects/leeched.png",
         "moves_that_cause_this_effect": [
           {
             "id": "leech",
@@ -9517,7 +9531,7 @@
         "stat_offset": -1,
         "name_localised": "AP Drain",
         "description_localised": "Characters with AP Drain gain 1 fewer AP each round.",
-        "meta_image_url": "/assets/img/meta/en/statusEffect/ap_drain.png",
+        "meta_image_url": "/assets/img/meta/en/statusEffects/ap_drain.png",
         "moves_that_cause_this_effect": [
           {
             "id": "ap_drain",
@@ -9651,7 +9665,8 @@
           "evasion"
         ],
         "name_localised": "Evasion Up",
-        "meta_image_url": "/assets/img/meta/en/statusEffect/stat_evasion_up.png",
+        "description_localised": "",
+        "meta_image_url": "/assets/img/meta/en/statusEffects/stat_evasion_up.png",
         "moves_that_cause_this_effect": [
           {
             "id": "dodge",
@@ -9750,7 +9765,7 @@
         "stats_affected": [],
         "name_localised": "Plastic Coating",
         "description_localised": "Coatings change the elemental type of a character for a certain number of turns.",
-        "meta_image_url": "/assets/img/meta/en/statusEffect/coating_plastic.png",
+        "meta_image_url": "/assets/img/meta/en/statusEffects/coating_plastic.png",
         "moves_that_cause_this_effect": [
           {
             "id": "camouflage_plastic",
@@ -9875,7 +9890,7 @@
         "stats_affected": [],
         "name_localised": "Unitarget",
         "description_localised": "Attacks from characters with Unitarget that normally target a whole team only affect a single target, and attacks that are normally single-target have reduced accuracy.",
-        "meta_image_url": "/assets/img/meta/en/statusEffect/unitarget.png",
+        "meta_image_url": "/assets/img/meta/en/statusEffects/unitarget.png",
         "moves_that_cause_this_effect": [
           {
             "id": "trick",
@@ -10008,7 +10023,7 @@
         "stats_affected": [],
         "name_localised": "Berserk",
         "description_localised": "Characters with Berserk can only use damaging moves.",
-        "meta_image_url": "/assets/img/meta/en/statusEffect/berserk.png",
+        "meta_image_url": "/assets/img/meta/en/statusEffects/berserk.png",
         "moves_that_cause_this_effect": [
           {
             "id": "berserker",
@@ -10163,7 +10178,7 @@
         "stats_affected": [],
         "name_localised": "Contact Dmg",
         "description_localised": "Characters with Contact Damage deal a bit of elemental damage whenever they land or receive a melee attack.",
-        "meta_image_url": "/assets/img/meta/en/statusEffect/contactdmg_poison.png",
+        "meta_image_url": "/assets/img/meta/en/statusEffects/contactdmg_poison.png",
         "moves_that_cause_this_effect": []
       }
     ],
@@ -10246,7 +10261,7 @@
         "stat_offset": 1,
         "name_localised": "AP Boost",
         "description_localised": "Characters with AP Boost gain 1 extra AP each round.",
-        "meta_image_url": "/assets/img/meta/en/statusEffect/ap_boost.png",
+        "meta_image_url": "/assets/img/meta/en/statusEffects/ap_boost.png",
         "moves_that_cause_this_effect": [
           {
             "id": "ap_boost",
@@ -10403,7 +10418,7 @@
         "stats_affected": [],
         "name_localised": "Poison Coating",
         "description_localised": "Coatings change the elemental type of a character for a certain number of turns.",
-        "meta_image_url": "/assets/img/meta/en/statusEffect/coating_poison.png",
+        "meta_image_url": "/assets/img/meta/en/statusEffects/coating_poison.png",
         "moves_that_cause_this_effect": [
           {
             "id": "camouflage_poison",
@@ -10528,7 +10543,7 @@
         "stats_affected": [],
         "name_localised": "Contact Dmg",
         "description_localised": "Characters with Contact Damage deal a bit of elemental damage whenever they land or receive a melee attack.",
-        "meta_image_url": "/assets/img/meta/en/statusEffect/contactdmg_poison.png",
+        "meta_image_url": "/assets/img/meta/en/statusEffects/contactdmg_poison.png",
         "moves_that_cause_this_effect": []
       }
     ],
@@ -10608,7 +10623,7 @@
         "stats_affected": [],
         "name_localised": "Poisoned",
         "description_localised": "Poisoned characters take damage at the end of their turn.",
-        "meta_image_url": "/assets/img/meta/en/statusEffect/poisoned.png",
+        "meta_image_url": "/assets/img/meta/en/statusEffects/poisoned.png",
         "moves_that_cause_this_effect": [
           {
             "id": "acid_reflex",
@@ -10766,7 +10781,7 @@
         "stat_offset": 1,
         "name_localised": "AP Boost",
         "description_localised": "Characters with AP Boost gain 1 extra AP each round.",
-        "meta_image_url": "/assets/img/meta/en/statusEffect/ap_boost.png",
+        "meta_image_url": "/assets/img/meta/en/statusEffects/ap_boost.png",
         "moves_that_cause_this_effect": [
           {
             "id": "ap_boost",
@@ -10927,7 +10942,8 @@
           "melee_defense"
         ],
         "name_localised": "Melee Defence Down",
-        "meta_image_url": "/assets/img/meta/en/statusEffect/stat_mdef_down.png",
+        "description_localised": "",
+        "meta_image_url": "/assets/img/meta/en/statusEffects/stat_mdef_down.png",
         "moves_that_cause_this_effect": [
           {
             "id": "nod",
@@ -10994,7 +11010,8 @@
           "ranged_defense"
         ],
         "name_localised": "Ranged Defence Down",
-        "meta_image_url": "/assets/img/meta/en/statusEffect/stat_rdef_down.png",
+        "description_localised": "",
+        "meta_image_url": "/assets/img/meta/en/statusEffects/stat_rdef_down.png",
         "moves_that_cause_this_effect": [
           {
             "id": "compliment",
@@ -11119,7 +11136,8 @@
           "melee_attack"
         ],
         "name_localised": "Melee Attack Down",
-        "meta_image_url": "/assets/img/meta/en/statusEffect/stat_matk_down.png",
+        "description_localised": "",
+        "meta_image_url": "/assets/img/meta/en/statusEffects/stat_matk_down.png",
         "moves_that_cause_this_effect": [
           {
             "id": "trick",
@@ -11186,7 +11204,8 @@
           "ranged_attack"
         ],
         "name_localised": "Ranged Attack Down",
-        "meta_image_url": "/assets/img/meta/en/statusEffect/stat_ratk_down.png",
+        "description_localised": "",
+        "meta_image_url": "/assets/img/meta/en/statusEffects/stat_ratk_down.png",
         "moves_that_cause_this_effect": [
           {
             "id": "criticize",
@@ -11307,7 +11326,7 @@
         "stats_affected": [],
         "name_localised": "Water Coating",
         "description_localised": "Coatings change the elemental type of a character for a certain number of turns.",
-        "meta_image_url": "/assets/img/meta/en/statusEffect/coating_water.png",
+        "meta_image_url": "/assets/img/meta/en/statusEffects/coating_water.png",
         "moves_that_cause_this_effect": [
           {
             "id": "camouflage_water",
@@ -11438,7 +11457,8 @@
           "melee_defense"
         ],
         "name_localised": "Melee Defence Up",
-        "meta_image_url": "/assets/img/meta/en/statusEffect/stat_mdef_up.png",
+        "description_localised": "",
+        "meta_image_url": "/assets/img/meta/en/statusEffects/stat_mdef_up.png",
         "moves_that_cause_this_effect": [
           {
             "id": "clay_fired",
@@ -11513,7 +11533,8 @@
           "ranged_defense"
         ],
         "name_localised": "Ranged Defence Up",
-        "meta_image_url": "/assets/img/meta/en/statusEffect/stat_rdef_up.png",
+        "description_localised": "",
+        "meta_image_url": "/assets/img/meta/en/statusEffects/stat_rdef_up.png",
         "moves_that_cause_this_effect": [
           {
             "id": "clay_fired",
@@ -11642,7 +11663,7 @@
         "stats_affected": [],
         "name_localised": "Multitarget",
         "description_localised": "Attacks from characters with Multitarget target the whole team.",
-        "meta_image_url": "/assets/img/meta/en/statusEffect/multitarget.png",
+        "meta_image_url": "/assets/img/meta/en/statusEffects/multitarget.png",
         "moves_that_cause_this_effect": [
           {
             "id": "broadcast",
@@ -11781,7 +11802,8 @@
           "melee_defense"
         ],
         "name_localised": "Melee Defence Down",
-        "meta_image_url": "/assets/img/meta/en/statusEffect/stat_mdef_down.png",
+        "description_localised": "",
+        "meta_image_url": "/assets/img/meta/en/statusEffects/stat_mdef_down.png",
         "moves_that_cause_this_effect": [
           {
             "id": "nod",
@@ -11848,7 +11870,8 @@
           "ranged_defense"
         ],
         "name_localised": "Ranged Defence Down",
-        "meta_image_url": "/assets/img/meta/en/statusEffect/stat_rdef_down.png",
+        "description_localised": "",
+        "meta_image_url": "/assets/img/meta/en/statusEffects/stat_rdef_down.png",
         "moves_that_cause_this_effect": [
           {
             "id": "compliment",
@@ -11967,7 +11990,7 @@
         "stats_affected": [],
         "name_localised": "Healing Leaf",
         "description_localised": "Characters with Healing Leaf regain some health at the start of each turn.",
-        "meta_image_url": "/assets/img/meta/en/statusEffect/healing_leaf.png",
+        "meta_image_url": "/assets/img/meta/en/statusEffects/healing_leaf.png",
         "moves_that_cause_this_effect": [
           {
             "id": "doc_leaf",
