@@ -4,13 +4,19 @@ run-name: GithubPages
 on:
   push:
     branches: ['main']
+  workflow_dispatch:
 
 concurrency:
   group: 'githubPages'
   cancel-in-progress: true
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 jobs:
-  githubPages:
+  build:
     name: Github Pages
     environment: github-pages
     runs-on: ubuntu-latest
@@ -51,16 +57,25 @@ jobs:
           npm run data
           npm run build
 
-      - name: Generate service worker
-        run: |
-          npm run service-worker
-
       - name: Remove gitignore
         run: |
           rm -f .gitignore
           rm -f dist/.gitignore
 
+      # - name: Generate service worker
+      #   run: |
+      #     npm run service-worker
+
+      - name: Install, build, and upload your site
+        uses: withastro/action@v2
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
       - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          folder: dist
+        id: deployment
+        uses: actions/deploy-pages@v4
