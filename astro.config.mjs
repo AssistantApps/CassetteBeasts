@@ -27,6 +27,7 @@ export default defineConfig({
   },
   build: {
     format: 'preserve',
+    assets: 'astro',
   },
   integrations: [
     sitemap({
