@@ -52,6 +52,7 @@ export const UIKeys = {
   cassetteBeasts: 'MAIN_CREDITS_TITLE', // Cassette Beasts
   homePageLongText1: 'TUTORIAL_REMASTER', // long text for home page
   homePageLongText2: 'TUTORIAL_RUMORS_DESCRIPTION1', // long text for home page
+  fusion: 'ONLINE_REQUEST_UI_BATTLE_RULES_REL_LEVEL', // Fusion:
 } as const;
 
 export const UIKeysRemoveTrailingColon = [

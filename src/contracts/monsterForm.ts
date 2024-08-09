@@ -94,3 +94,11 @@ export interface IMonsterFormMoveSource {
   monster_id: string;
   source: string;
 }
+
+export interface IMonsterFormDropdown {
+  id: string;
+  name: string;
+  icon: string;
+  prefix: string;
+  suffix: string;
+}
