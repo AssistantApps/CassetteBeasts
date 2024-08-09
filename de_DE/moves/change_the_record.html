@@ -1,1685 +1,1419 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-astro-transition-scope="astro-zlh272wv-2">
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="application-name" content="Assistant for Cassette Beasts">
+  <title>Kassettenwechsler - Assistant for Cassette Beasts</title>
+  <link rel="index" href="https://cassettebeasts.assistantapps.com/">
+  <link rel="canonical" href="https://cassettebeasts.assistantapps.com/">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="author" href="/humans.txt">
+  <link rel="me" href="mailto:hi@kurtlourens.com">
+  <link rel="me" href="https://kurtlourens.com" type="text/html">
+  <meta name="designer" content="Kurt Lourens">
+  <meta name="owner" content="Kurt Lourens">
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="application-name" content="Assistant for Cassette Beasts">
-    <title>
-        Kassettenwechsler - 
-        Assistant for Cassette Beasts
-    </title>
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="author" href="/humans.txt">
-    <link rel="me" href="mailto:hi@kurtlourens.com">
-    <link rel="me" href="https://kurtlourens.com" type="text/html">
-    <meta name="designer" content="Kurt Lourens">
-    <meta name="owner" content="Kurt Lourens">
+  <link rel="alternate" href="https://cassettebeasts.assistantapps.com/en/moves/change_the_record.html" hreflang="en"><link rel="alternate" href="https://cassettebeasts.assistantapps.com/fr_FR/moves/change_the_record.html" hreflang="fr"><link rel="alternate" href="https://cassettebeasts.assistantapps.com/it_IT/moves/change_the_record.html" hreflang="it"><link rel="alternate" href="https://cassettebeasts.assistantapps.com/de_DE/moves/change_the_record.html" hreflang="de"><link rel="alternate" href="https://cassettebeasts.assistantapps.com/es_ES/moves/change_the_record.html" hreflang="es"><link rel="alternate" href="https://cassettebeasts.assistantapps.com/zh_CN/moves/change_the_record.html" hreflang="zh"><link rel="alternate" href="https://cassettebeasts.assistantapps.com/ja_JP/moves/change_the_record.html" hreflang="ja"><link rel="alternate" href="https://cassettebeasts.assistantapps.com/ko_KR/moves/change_the_record.html" hreflang="ko"><link rel="alternate" href="https://cassettebeasts.assistantapps.com/pt_BR/moves/change_the_record.html" hreflang="pt"><link rel="alternate" href="https://cassettebeasts.assistantapps.com/en/moves/change_the_record.html" hreflang="x-default">
+
+  <meta name="url" content="https://cassettebeasts.assistantapps.com/">
+  <meta name="identifier-URL" content="https://cassettebeasts.assistantapps.com/">
+  <meta name="theme-color" content="#1b1f22">
+  <meta name="subject" content="Zwingt das Ziel, zu einer zufälligen anderen seiner Kassetten zu wechseln.">
+  <meta name="description" content="Zwingt das Ziel, zu einer zufälligen anderen seiner Kassetten zu wechseln.">
+  <meta name="abstract" content="Zwingt das Ziel, zu einer zufälligen anderen seiner Kassetten zu wechseln.">
+  <meta name="copyright" content="Bytten Studio Ltd">
+  <meta name="keywords" content="cassette beasts, cassette, beasts, assistant apps, assistant">
+  <meta name="language" content="de_DE">
+  <meta name="referrer" content="no-referrer">
+  <meta name="topic" content="Gaming">
+  <meta name="robots" content="index,follow">
+  <meta name="rating" content="General">
+  <meta name="coverage" content="Worldwide">
+  <meta name="distribution" content="Global">
+  <meta name="generator" content="Astro & SolidJS">
+  <link rel="search" href="opensearch.xml" type="application/opensearchdescription+xml" title="Search Title">
+  <link rel="sitemap" href="/sitemap-index.xml">
+  <meta name="revised" content="Fri Aug 09 2024">
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon/favicon-48x48.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="manifest" href="/manifest.webmanifest">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="apple-touch-icon" sizes="57x57" href="/assets/favicon/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/assets/favicon/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/assets/favicon/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/assets/favicon/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/assets/favicon/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/assets/favicon/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/assets/favicon/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/assets/favicon/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="167x167" href="/assets/favicon/apple-touch-icon-167x167.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon-180x180.png">
+<link rel="apple-touch-icon" sizes="1024x1024" href="/assets/favicon/apple-touch-icon-1024x1024.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Assistant for Cassette Beasts">
+
+  <!-- Google -->
+  <meta name="googlebot" content="index,follow">
+  <meta name="google" content="nositelinkssearchbox">
+  <!-- <meta name="google-site-verification" content={site.google.verificationKey}> -->
+
+  <!-- Apple -->
+  <link rel="mask-icon" href="/assets/favicon/safari-pinned-tab.svg" color="#1b1f22">
+  <meta name="apple-mobile-web-app-title" content="Kassettenwechsler">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#1b1f22">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@AssistantNMS">
+  <meta name="twitter:creator" content="@KhaozTopsy">
+  <meta name="twitter:url" content="https://cassettebeasts.assistantapps.com/de_DE/moves/change_the_record.html">
+  <meta name="twitter:title" content="Kassettenwechsler">
+  <meta name="twitter:description" content="Zwingt das Ziel, zu einer zufälligen anderen seiner Kassetten zu wechseln.">
+  <meta name="twitter:image" content="https://cassettebeasts.assistantapps.com/assets/img/meta/de_DE/moves/change_the_record.png">
+  <meta name="twitter:image:alt" content="Zwingt das Ziel, zu einer zufälligen anderen seiner Kassetten zu wechseln.">
+
+  <!-- Facebook -->
+  <meta property="og:url" content="https://cassettebeasts.assistantapps.com/de_DE/moves/change_the_record.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Kassettenwechsler">
+  <meta property="og:image" content="https://cassettebeasts.assistantapps.com/assets/img/meta/de_DE/moves/change_the_record.png">
+  <meta property="og:image:alt" content="Zwingt das Ziel, zu einer zufälligen anderen seiner Kassetten zu wechseln.">
+  <meta property="og:description" content="Zwingt das Ziel, zu einer zufälligen anderen seiner Kassetten zu wechseln.">
+  <meta property="og:site_name" content="Assistant for Cassette Beasts">
+  <meta property="og:locale" content="de_DE">
+  <meta property="article:author" content="Kurt Lourens">
+
+  <!-- Microsoft -->
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="skype_toolbar" content="skype_toolbar_parser_compatible">
+  <meta name="msapplication-config" content="browserconfig.xml">
+  <meta name="msapplication-TileColor" content="#1b1f22">
+  <meta name="msapplication-starturl" content="/?pwa-app">
+
+  <script>
+    window.config = {
+      assistantAppsImgRoot: 'https://webcomp.assistantapps.com',
+    };
+  </script>
+
+  
+<meta name="astro-view-transitions-enabled" content="true">
+<meta name="astro-view-transitions-fallback" content="animate">
 
 
-    <meta name="url" content="https://cassettebeasts.assistantapps.com/">
-    <meta name="identifier-URL" content="https://cassettebeasts.assistantapps.com/">
-    <meta name="theme-color" content="#1b1f22">
-    <meta name="subject" content="Zwingt das Ziel, zu einer zufälligen anderen seiner Kassetten zu wechseln.">
-    <meta name="description" content="Zwingt das Ziel, zu einer zufälligen anderen seiner Kassetten zu wechseln.">
-    <meta name="abstract" content="Zwingt das Ziel, zu einer zufälligen anderen seiner Kassetten zu wechseln.">
-    <meta name="copyright" content="Bytten Studio Ltd">
-    <meta name="keywords" content="cassette beasts, cassette, beasts, assistant apps, assistant">
-    <meta name="language" content="de_DE">
-    <meta name="referrer" content="no-referrer">
-    <meta name="topic" content="Gaming">
-    <meta name="robots" content="index,follow">
-    <meta name="rating" content="General">
-    <meta name="coverage" content="Worldwide">
-    <meta name="distribution" content="Global">
-    <meta name="generator" content="custom scripts using HandlebarJS">
-    <link rel="search" href="opensearch.xml" type="application/opensearchdescription+xml" title="Search Title">
-    <meta name="revised" content="Mon Aug 05 2024">
+  
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "SoftwareApplication",
+  "name": "Kassettenwechsler - Assistant for Cassette Beasts",
+  "url": "https://cassettebeasts.assistantapps.com/",
+  "about": "Zwingt das Ziel, zu einer zufälligen anderen seiner Kassetten zu wechseln.",
+  "abstract": "Zwingt das Ziel, zu einer zufälligen anderen seiner Kassetten zu wechseln.",
+  "description": "Zwingt das Ziel, zu einer zufälligen anderen seiner Kassetten zu wechseln.",
+  "image": "/assets/favicon/android-chrome-192x192.png",
+  "keywords": "cassette beasts, cassette, beasts, assistant apps, assistant",
+  "applicationCategory": "Application",
+  "operatingSystem": "Android Lollipop, iOS, Chrome, Firefox, Opera, Internet Explorer, Edge",
+  "softwareVersion": "2.0.0",
+  "version": "2.0.0",
+  "mainEntity": {
+    "@type": "Guide",
+    "name": "Kassettenwechsler",
+    "headline": "Kassettenwechsler",
+    "about": "Zwingt das Ziel, zu einer zufälligen anderen seiner Kassetten zu wechseln.",
+    "abstract": "Zwingt das Ziel, zu einer zufälligen anderen seiner Kassetten zu wechseln.",
+    "description": "Zwingt das Ziel, zu einer zufälligen anderen seiner Kassetten zu wechseln.",
+    "accessMode": "textual",
+    "dateModified": "2024-08-09",
+    "thumbnailUrl": "https://cassettebeasts.assistantapps.com/assets/img/meta/de_DE/moves/change_the_record.png"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Kurt Lourens",
+    "givenName": "Kurt Lourens",
+    "familyName": "Kurt Lourens",
+    "additionalName": "KhaozTopsy",
+    "url": "https://kurtlourens.com",
+    "image": "https://kurtlourens.com/assets/images/KurtAvatar.svg",
+    "jobTitle": "Senior Software Engineer"
+  },
+  "creator": {
+    "@type": "Person",
+    "name": "Kurt Lourens",
+    "givenName": "Kurt Lourens",
+    "familyName": "Kurt Lourens",
+    "additionalName": "KhaozTopsy",
+    "url": "https://kurtlourens.com",
+    "image": "https://kurtlourens.com/assets/images/KurtAvatar.svg",
+    "jobTitle": "Senior Software Engineer"
+  },
+  "inLanguage": "de",
+  "dateCreated": "2024-08-09",
+  "dateModified": "2024-08-09",
+  "datePublished": "2024-08-09"
+}
+</script>
+<style>@keyframes astroFadeInOut{0%{opacity:1}to{opacity:0}}@keyframes astroFadeIn{0%{opacity:0}}@keyframes astroFadeOut{to{opacity:0}}@keyframes astroSlideFromRight{0%{transform:translate(100%)}}@keyframes astroSlideFromLeft{0%{transform:translate(-100%)}}@keyframes astroSlideToRight{to{transform:translate(100%)}}@keyframes astroSlideToLeft{to{transform:translate(-100%)}}@media (prefers-reduced-motion){::view-transition-group(*),::view-transition-old(*),::view-transition-new(*){animation:none!important}[data-astro-transition-scope]{animation:none!important}}
+</style>
+<link rel="stylesheet" href="/_astro/about.d2LDlOoh.css"><script type="module" src="/_astro/hoisted.XYQjTWMW.js"></script><style>[data-astro-transition-scope="astro-5w3tdn4u-1"] { view-transition-name: astro-5w3tdn4u-1; }@layer astro { ::view-transition-old(astro-5w3tdn4u-1) { animation: none; opacity: 0; mix-blend-mode: normal; }::view-transition-new(astro-5w3tdn4u-1) { animation: none; mix-blend-mode: normal; }::view-transition-group(astro-5w3tdn4u-1) { animation: none } }[data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-5w3tdn4u-1"],
+			[data-astro-transition-fallback="old"][data-astro-transition-scope="astro-5w3tdn4u-1"] { animation: none; mix-blend-mode: normal; }[data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-5w3tdn4u-1"],
+			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-5w3tdn4u-1"] { animation: none; mix-blend-mode: normal; }</style><style>[data-astro-transition-scope="astro-zlh272wv-2"] { view-transition-name: astro-zlh272wv-2; }@layer astro { ::view-transition-old(astro-zlh272wv-2) { animation: none; opacity: 0; mix-blend-mode: normal; }::view-transition-new(astro-zlh272wv-2) { animation: none; mix-blend-mode: normal; }::view-transition-group(astro-zlh272wv-2) { animation: none } }[data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-zlh272wv-2"],
+			[data-astro-transition-fallback="old"][data-astro-transition-scope="astro-zlh272wv-2"] { animation: none; mix-blend-mode: normal; }[data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-zlh272wv-2"],
+			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-zlh272wv-2"] { animation: none; mix-blend-mode: normal; }</style><style>[data-astro-transition-scope="astro-6vmaga7b-3"] { view-transition-name: astro-6vmaga7b-3; }@layer astro { ::view-transition-old(astro-6vmaga7b-3) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }::view-transition-new(astro-6vmaga7b-3) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back]::view-transition-old(astro-6vmaga7b-3) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back]::view-transition-new(astro-6vmaga7b-3) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; } }[data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-6vmaga7b-3"],
+			[data-astro-transition-fallback="old"][data-astro-transition-scope="astro-6vmaga7b-3"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-6vmaga7b-3"],
+			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-6vmaga7b-3"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-6vmaga7b-3"],
+			[data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-6vmaga7b-3"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-6vmaga7b-3"],
+			[data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-6vmaga7b-3"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }</style></head>
 
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon/favicon-48x48.png">
-    <link rel="manifest" href="/manifest.json">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="manifest" href="/manifest.webmanifest">
-    <meta name="mobile-web-app-capable" content="yes">
-    <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicon/apple-touch-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicon/apple-touch-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/assets/favicon/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/assets/favicon/apple-touch-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/assets/favicon/apple-touch-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/assets/favicon/apple-touch-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/assets/favicon/apple-touch-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/assets/favicon/apple-touch-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="167x167" href="/assets/favicon/apple-touch-icon-167x167.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon-180x180.png">
-    <link rel="apple-touch-icon" sizes="1024x1024" href="/assets/favicon/apple-touch-icon-1024x1024.png">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="Assistant for Cassette Beasts">
-    <!-- Google -->
-    <meta name="googlebot" content="index,follow">
-    <meta name="google" content="nositelinkssearchbox">
-    <!-- <meta name="google-site-verification" content=""> -->
-
-    <!-- Apple -->
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#1b1f22">
-    <meta name="apple-mobile-web-app-title" content="Assistant for Cassette Beasts">
-    <meta name="apple-mobile-web-app-status-bar-style" content="#1b1f22">
-
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@AssistantNMS">
-    <meta name="twitter:creator" content="@KhaozTopsy">
-    <meta name="twitter:url" content="https://cassettebeasts.assistantapps.com/">
-    <meta name="twitter:title" content="Assistant for Cassette Beasts">
-    <meta name="twitter:description" content="Zwingt das Ziel, zu einer zufälligen anderen seiner Kassetten zu wechseln.">
-    <meta name="twitter:image" content="/assets/img/meta/de_DE/moves/change_the_record.png">
-    <meta name="twitter:image:alt" content="Logo of the Assistant Apps">
-
-    <!-- Facebook -->
-    <meta property="og:url" content="https://cassettebeasts.assistantapps.com/">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Assistant for Cassette Beasts">
-    <meta property="og:image" content="/assets/img/meta/de_DE/moves/change_the_record.png">
-    <meta property="og:image:alt" content="Logo of the Assistant Apps">
-    <meta property="og:description" content="Zwingt das Ziel, zu einer zufälligen anderen seiner Kassetten zu wechseln.">
-    <meta property="og:site_name" content="Assistant for Cassette Beasts">
-    <meta property="og:locale" content="en_UK">
-    <meta property="article:author" content="Kurt Lourens">
-
-    <!-- Microsoft -->
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="skype_toolbar" content="skype_toolbar_parser_compatible">
-    <meta name="msapplication-config" content="browserconfig.xml">
-    <meta name="msapplication-TileColor" content="#1b1f22">
-    <meta name="msapplication-starturl" content="/?pwa-app">
-
-
-    <link rel="stylesheet" href="/assets/css/main.css?v=1.2.2">
-
-    <script>
-        window.config = {
-            assistantAppsImgRoot: 'https://webcomp.assistantapps.com'
-        }
-    </script>
-
-    <script type="application/ld+json">
-        {
-            "@context": "https://schema.org/",
-            "@type": "SoftwareApplication",
-            "name": "Kassettenwechsler - Assistant for Cassette Beasts",
-            "url": "https://cassettebeasts.assistantapps.com/",
-            "about": "Zwingt das Ziel, zu einer zufälligen anderen seiner Kassetten zu wechseln.",
-            "description": "Zwingt das Ziel, zu einer zufälligen anderen seiner Kassetten zu wechseln.",
-            "image": "/assets/favicon/android-chrome-192x192.png",
-            "applicationCategory": "Application",
-            "operatingSystem": "Android Lollipop, iOS, Chrome, Firefox, Opera, Internet Explorer, Edge",
-            "softwareVersion": "1.2.2",
-            "version": "1.2.2",
-            "author": {
-                "@type": "Person",
-                "name": "Kurt Lourens",
-                "givenName": "Kurt Lourens",
-                "familyName": "Kurt Lourens",
-                "additionalName": "KhaozTopsy",
-                "url": "https://kurtlourens.com",
-                "image": "https://kurtlourens.com/assets/images/KurtAvatar.svg",
-                "jobTitle": "Senior Software Engineer"
-            },
-            "creator": {
-                "@type": "Person",
-                "name": "Kurt Lourens",
-                "givenName": "Kurt Lourens",
-                "familyName": "Kurt Lourens",
-                "additionalName": "KhaozTopsy",
-                "url": "https://kurtlourens.com",
-                "image": "https://kurtlourens.com/assets/images/KurtAvatar.svg",
-                "jobTitle": "Senior Software Engineer"
-            },
-            "inLanguage": "en",
-            "dateCreated": "2024-08-05",
-            "dateModified": "2024-08-05",
-            "datePublished": "2024-08-05"
-        }
-    </script>
-</head>
-<body class="overflow-x-hidden">
-
+  <body class="overflow-x-hidden">
     <header class="header">
-        <div class="container noselect">
-            <nav>
-                <a aria-label="Home" href="/index.html">
-                    <ul class="branding">
-                        <li>
-                            <div class="logo animate__animated">
-                                <img src="/assets/img/logo.png" alt="splash">
-                            </div>
-                        </li>
-                        <li class="title hidden-in-mobile">
-                            <span style="--i:1">Assistant </span>
-                            <span style="--i:2">for </span>
-                            <span style="--i:3"><b>Cassette Beasts</b></span>
-                        </li>
-                    </ul>
-                </a>
-    
-                <ul class="icons">
-                    <li data-tooltip="Sprache" data-placement="bottom">
-                        <details id="language-dropdown" class="dropdown">
-                            <summary class="role-link">
-                                <img src="/assets/img/language.png"
-                                    alt="Sprache">
-                            </summary>
-                            <ul>
-                                <li id="lang_zh_CN" class="cursor-pointer" onclick="changeLanguage('zh_CN')">
-                                    Chinesisch (Kurzzeichen)</li>
-                                <li id="lang_de_DE" class="cursor-pointer" onclick="changeLanguage('de_DE')">
-                                    Deutsch</li>
-                                <li id="lang_en" class="cursor-pointer" onclick="changeLanguage('en')">
-                                    Englisch</li>
-                                <li id="lang_fr_FR" class="cursor-pointer" onclick="changeLanguage('fr_FR')">
-                                    Französisch</li>
-                                <li id="lang_it_IT" class="cursor-pointer" onclick="changeLanguage('it_IT')">
-                                    Italienisch</li>
-                                <li id="lang_ja_JP" class="cursor-pointer" onclick="changeLanguage('ja_JP')">
-                                    Japanisch</li>
-                                <li id="lang_ko_KR" class="cursor-pointer" onclick="changeLanguage('ko_KR')">
-                                    Koreanisch (Südkorea)</li>
-                                <li id="lang_pt_BR" class="cursor-pointer" onclick="changeLanguage('pt_BR')">
-                                    Portugiesisch (Brasilien)</li>
-                                <li id="lang_es_MX" class="cursor-pointer" onclick="changeLanguage('es_MX')">
-                                    Spanisch (Lateinamerika)</li>
-                                <li id="lang_es_ES" class="cursor-pointer" onclick="changeLanguage('es_ES')">
-                                    Spanisch (Spanien)</li>
-                            </ul>
-                        </details>
-                    </li>
-                    <li data-translate="TODO" data-tooltip="About" data-placement="bottom">
-                        <a class="contrast" aria-label="About" href="/about.html">
-                            <svg fill="#000000" height="24" width="24" viewBox="0 0 128 128" version="1.1"
-                                xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
-                                xmlns:xlink="http://www.w3.org/1999/xlink">
-                                <path
-                                    d="M64,1C29.3,1,1,29.3,1,64s28.3,63,63,63s63-28.3,63-63S98.7,1,64,1z M64,119C33.7,119,9,94.3,9,64S33.7,9,64,9   s55,24.7,55,55S94.3,119,64,119z"
-                                    stroke="white" fill="white" />
-                                <rect height="40" width="8" x="60" y="54.5" stroke="white" fill="white" />
-                                <rect height="8" width="8" x="60" y="35.5" stroke="white" fill="white" />
-                            </svg>
-                        </a>
-                    </li>
-                    <li data-tooltip="Github repository" data-placement="bottom">
-                        <a rel="noopener noreferrer" class="contrast" aria-label="GitHub repository"
-                            href="https://github.com/AssistantApps/CassetteBeasts?ref&#x3D;assistantCBS" target="_blank">
-                            <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24.25" viewBox="0 0 496 512"
-                                class="icon-github">
-                                <path
-                                    d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z">
-                                </path>
-                            </svg>
-                        </a>
-                    </li>
-                    <li data-tooltip="AssistantApps" data-placement="bottom">
-                        <a class="contrast" aria-label="Turn off dark mode" href="https://assistantapps.com">
-                            <img src="/assets/img/assistantApps-32.png" height="24" width="24" alt="assistant apps logo">
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <main class="container page-container">
-
-        <div class="full-page-app-notice">
-            <assistant-apps-app-notice-list appguid="343224c4-4d40-4ce1-68ad-08dcab0020d7"
-                langcode="de_DE"></assistant-apps-app-notice-list>
-        </div>
-
-        
-        <ul class="breadcrumb noselect">
-            
-            <li>
-                <a href="/de_DE" title="home" rel="noopener noreferrer">
-                    <img src="/assets/img/home.png" alt="home">
-                </a>
-            </li>
-            <li>››</li>
-            <li>
-                <a href="/de_DE/moves" title="" rel="noopener noreferrer">
-                    Sticker
-                </a>
-                    </li>
-            <li>››</li>
-            <li>
-                <span>
-                    Kassettenwechsler
-                </span>
-            </li>
+  <div class="container noselect">
+    <nav>
+      <a aria-label="Home" href="/de_DE/index.html" data-astro-transition-persist="astro-wif6pdce-6">
+        <ul class="branding">
+          <li data-astro-transition-persist="astro-d33afhci-7">
+            <div class="logo animate__animated">
+              <img src="/_astro/favicon.BsHapswR_Z1kBPe5.webp" alt="splash" loading="eager" width="63" height="63" decoding="async">
+            </div>
+          </li>
+          <li class="title hidden-in-mobile">
+            <span style="--i:1">Assistant&nbsp;</span><span style="--i:2">for&nbsp;</span><span style="--i:3">Cassette&nbsp;</span><span style="--i:4">Beasts&nbsp;</span>
+          </li>
         </ul>
-        <div class="grid move-detail-grid mb-3">
-          <div class="meta">
-            <h1>Sticker anzeigen &gt;&gt; Kassettenwechsler</h1>
+      </a>
+      <ul class="icons">
+        <li data-tooltip="Sprache" data-placement="bottom">
+          <details id="language-dropdown" class="dropdown">
+            <summary class="role-link">
+              <img src="/assets/img/language.png" alt="Sprache">
+            </summary>
+            <ul>
+              <li id="lang_zh_CN" class="cursor-pointer" role="presentation" onclick="changeLanguage('zh_CN')">
+                    Chinesisch (Kurzzeichen)
+                  </li><li id="lang_de_DE" class="cursor-pointer" role="presentation" onclick="changeLanguage('de_DE')">
+                    Deutsch
+                  </li><li id="lang_en" class="cursor-pointer" role="presentation" onclick="changeLanguage('en')">
+                    Englisch
+                  </li><li id="lang_fr_FR" class="cursor-pointer" role="presentation" onclick="changeLanguage('fr_FR')">
+                    Französisch
+                  </li><li id="lang_it_IT" class="cursor-pointer" role="presentation" onclick="changeLanguage('it_IT')">
+                    Italienisch
+                  </li><li id="lang_ja_JP" class="cursor-pointer" role="presentation" onclick="changeLanguage('ja_JP')">
+                    Japanisch
+                  </li><li id="lang_ko_KR" class="cursor-pointer" role="presentation" onclick="changeLanguage('ko_KR')">
+                    Koreanisch (Südkorea)
+                  </li><li id="lang_pt_BR" class="cursor-pointer" role="presentation" onclick="changeLanguage('pt_BR')">
+                    Portugiesisch (Brasilien)
+                  </li><li id="lang_es_MX" class="cursor-pointer" role="presentation" onclick="changeLanguage('es_MX')">
+                    Spanisch (Lateinamerika)
+                  </li><li id="lang_es_ES" class="cursor-pointer" role="presentation" onclick="changeLanguage('es_ES')">
+                    Spanisch (Spanien)
+                  </li>
+            </ul>
+          </details>
+        </li>
+        <li data-tooltip="Über" data-placement="bottom">
+          <a class="contrast" aria-label="Über" title="Über" href="/about.html">
+            <svg fill="#000000" height="24" width="24" viewBox="0 0 128 128" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <path d="M64,1C29.3,1,1,29.3,1,64s28.3,63,63,63s63-28.3,63-63S98.7,1,64,1z M64,119C33.7,119,9,94.3,9,64S33.7,9,64,9   s55,24.7,55,55S94.3,119,64,119z" stroke="white" fill="white"></path>
+              <rect height="40" width="8" x="60" y="54.5" stroke="white" fill="white"></rect>
+              <rect height="8" width="8" x="60" y="35.5" stroke="white" fill="white"></rect>
+            </svg>
+          </a>
+        </li>
+        <li data-tooltip="Github repository" data-placement="bottom" data-astro-transition-persist="astro-6ojicn2c-8">
+          <a rel="noopener noreferrer" class="contrast" aria-label="GitHub repository" href="https://github.com/AssistantApps/CassetteBeasts?ref=assistantCBS" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24.25" viewBox="0 0 496 512" class="icon-github">
+              <path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z">
+              </path>
+            </svg>
+          </a>
+        </li>
+        <li data-tooltip="AssistantApps" data-placement="bottom" data-astro-transition-persist="astro-rukdu5xt-9">
+          <a class="contrast" aria-label="AssistantApps" title="AssistantApps" href="https://assistantapps.com">
+            <img src="/assets/img/assistantApps-32.png" height="24" width="24" alt="assistant apps logo">
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+    <main class="container page-container" data-astro-transition-scope="astro-6vmaga7b-3">
+      <div class="full-page-app-notice" data-astro-transition-persist="astro-ylggt5tk-4">
+        <assistant-apps-app-notice-list appguid="343224c4-4d40-4ce1-68ad-08dcab0020d7" langcode="de_DE"></assistant-apps-app-notice-list>
+      </div>
+
+      
+  <ul class="breadcrumb noselect" data-astro-transition-scope="astro-5w3tdn4u-1">
+  <li>
+            <a href="/de_DE" title="home" rel="noopener noreferrer">
+              <img src="/assets/img/home.png" alt="home">
+            </a>
+          </li><li>››</li><li>
+              <a href="/de_DE/moves" title="Sticker" rel="noopener noreferrer">
+                Sticker
+              </a>
+            </li><li>››</li><li>
+              <span>
+                Kassettenwechsler
+              </span>
+            </li>
+</ul>
+
+  <div class="grid move-detail-grid mb-3">
+    <div class="meta">
+      <h1>Sticker anzeigen - Kassettenwechsler</h1>
+    </div>
+
+    <article class="move-detail-card item-detail-card">
+      <div class="move-detail-card-heading item-detail-card-heading primary">
+        
+
+        <img src="/assets/img/typeless.png" class="type" loading="lazy" title="Typeless" alt="{this.name}" draggable="false">
+
+        <h2 class="Neu5Land animate__animated animate__fadeIn">Kassettenwechsler</h2>
+
+        <h4 class="Neu5Land animate__animated animate__fadeIn">Verschiedene</h4>
+      </div>
+      <div class="move-detail-card-body item-detail-card-body">
+        <div class="sub-heading">
+          <p>Zwingt das Ziel, zu einer zufälligen anderen seiner Kassetten zu wechseln.</p>
+          <div class="spacer"></div>
+          <div class="ap-block">
+            <img src="/assets/img/meta/ap.png" class="ap" title="AP" alt="an action point" loading="lazy" draggable="false"><img src="/assets/img/meta/ap.png" class="ap" title="AP" alt="an action point" loading="lazy" draggable="false">
           </div>
-        
-          <article class="move-detail-card item-detail-card">
-            <div class="move-detail-card-heading item-detail-card-heading primary">
-              <img src="/assets/img/typeless.png" class="type" loading="lazy" title="Typeless" alt="image of "
-                draggable="false">
-              <h2 class="Neu5Land animate__animated animate__fadeIn">Kassettenwechsler</h2>
-        
-              <h4 class="Neu5Land animate__animated animate__fadeIn">Verschiedene</h4>
-            </div>
-            <div class="move-detail-card-body item-detail-card-body">
-              <div class="sub-heading">
-                <p>Zwingt das Ziel, zu einer zufälligen anderen seiner Kassetten zu wechseln.</p>
-                <div class="spacer"></div>
-                <div class="ap-block">
-                  <img src="/assets/img/meta/ap.png" class="ap" title="Action Point" alt="image of an action point"
-                    loading="lazy" draggable="false">
-                  <img src="/assets/img/meta/ap.png" class="ap" title="Action Point" alt="image of an action point"
-                    loading="lazy" draggable="false">
-                </div>
-              </div>
-        
-              <section class="additional-section animate__animated animate__fadeIn">
-                <h3 class="Neu5Land">Werte</h3>
-                <div class="table-container">
-                  <table class="additional highlight-cell animate__animated animate__fadeIn">
-                    <thead>
-                      <tr>
-                        <td class="ta-center">Kraft</td>
-                        <td class="ta-center">Präzision</td>
-                        <td class="ta-center">Kosten</td>
-                        <td class="ta-center">Prioritätschance</td>
-                        <td class="ta-center">Kann kopiert werden</td>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td class="ta-center">0</td>
-                        <td class="ta-center">
-                          Unvermeidlich
-                        </td>
-                        <td class="ta-center">
-                          2
-                        </td>
-                        <td class="ta-center">-10</td>
-                        <td class="ta-center">true</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </section>
-        
-              <section class="additional-section animate__animated animate__fadeIn">
-                <h3 class="tags">
-                  <span class="Neu5Land">Tags:</span>
-                  <small>deception<span class="">,&nbsp;</span></small><small>annoy<span class="">,&nbsp;</span></small><small>sound<span class="">,&nbsp;</span></small><small>support<span class="">,&nbsp;</span></small><small>captain_cybil<span class="hidden">,&nbsp;</span></small>
-                </h3>
-              </section>
-        
-              <section class="status-card-container">
-              </section>
-        
-            </div>
-          </article>
-        
-          <article class="move-detail-card item-detail-card">
-            <div class="move-detail-card-heading item-detail-card-heading">
-              <h2 class="Neu5Land animate__animated animate__fadeIn">Sticker anwenden</h2>
-              <div class="spacer"></div>
-            </div>
-            <div class="move-detail-card-body item-detail-card-body">
-              <div class="table-container">
-                <table class="additional-section highlight-row animate__animated animate__fadeIn">
-                  <tbody>
-                    <tr class="no-padding">
-                      <td class="sprite ta-center">
-                        <a href="/de_DE/monsters/springheel.html"
-                          title="Sprungfeder">
-                          <img src="/assets/img/generated/sprites/monsters/springheel.png" class="remaster-image" alt="image of Sprungfeder"
-                            loading="lazy" draggable="false">
-                        </a>
-                      </td>
-                      <td class="name">
-                        <a href="/de_DE/monsters/springheel.html"
-                          title="Sprungfeder">
-                          Sprungfeder
-                          (<small class="beast-id">#001</small>)
-                        </a>
-                      </td>
-                    </tr>
-                    <tr class="no-padding">
-                      <td class="sprite ta-center">
-                        <a href="/de_DE/monsters/hopskin.html"
-                          title="Hoppskin">
-                          <img src="/assets/img/generated/sprites/monsters/hopskin.png" class="remaster-image" alt="image of Hoppskin"
-                            loading="lazy" draggable="false">
-                        </a>
-                      </td>
-                      <td class="name">
-                        <a href="/de_DE/monsters/hopskin.html"
-                          title="Hoppskin">
-                          Hoppskin
-                          (<small class="beast-id">#002</small>)
-                        </a>
-                      </td>
-                    </tr>
-                    <tr class="no-padding">
-                      <td class="sprite ta-center">
-                        <a href="/de_DE/monsters/ripterra.html"
-                          title="Ripterra">
-                          <img src="/assets/img/generated/sprites/monsters/ripterra.png" class="remaster-image" alt="image of Ripterra"
-                            loading="lazy" draggable="false">
-                        </a>
-                      </td>
-                      <td class="name">
-                        <a href="/de_DE/monsters/ripterra.html"
-                          title="Ripterra">
-                          Ripterra
-                          (<small class="beast-id">#003</small>)
-                        </a>
-                      </td>
-                    </tr>
-                    <tr class="no-padding">
-                      <td class="sprite ta-center">
-                        <a href="/de_DE/monsters/snoopin.html"
-                          title="Raubling">
-                          <img src="/assets/img/generated/sprites/monsters/snoopin.png" class="remaster-image" alt="image of Raubling"
-                            loading="lazy" draggable="false">
-                        </a>
-                      </td>
-                      <td class="name">
-                        <a href="/de_DE/monsters/snoopin.html"
-                          title="Raubling">
-                          Raubling
-                          (<small class="beast-id">#004</small>)
-                        </a>
-                      </td>
-                    </tr>
-                    <tr class="no-padding">
-                      <td class="sprite ta-center">
-                        <a href="/de_DE/monsters/scampire.html"
-                          title="Gaunpir">
-                          <img src="/assets/img/generated/sprites/monsters/scampire.png" class="remaster-image" alt="image of Gaunpir"
-                            loading="lazy" draggable="false">
-                        </a>
-                      </td>
-                      <td class="name">
-                        <a href="/de_DE/monsters/scampire.html"
-                          title="Gaunpir">
-                          Gaunpir
-                          (<small class="beast-id">#005</small>)
-                        </a>
-                      </td>
-                    </tr>
-                    <tr class="no-padding">
-                      <td class="sprite ta-center">
-                        <a href="/de_DE/monsters/carniviper.html"
-                          title="Karniviper">
-                          <img src="/assets/img/generated/sprites/monsters/carniviper.png" class="remaster-image" alt="image of Karniviper"
-                            loading="lazy" draggable="false">
-                        </a>
-                      </td>
-                      <td class="name">
-                        <a href="/de_DE/monsters/carniviper.html"
-                          title="Karniviper">
-                          Karniviper
-                          (<small class="beast-id">#006</small>)
-                        </a>
-                      </td>
-                    </tr>
-                    <tr class="no-padding">
-                      <td class="sprite ta-center">
-                        <a href="/de_DE/monsters/masquerattle.html"
-                          title="Masklapper">
-                          <img src="/assets/img/generated/sprites/monsters/masquerattle.png" class="remaster-image" alt="image of Masklapper"
-                            loading="lazy" draggable="false">
-                        </a>
-                      </td>
-                      <td class="name">
-                        <a href="/de_DE/monsters/masquerattle.html"
-                          title="Masklapper">
-                          Masklapper
-                          (<small class="beast-id">#007</small>)
-                        </a>
-                      </td>
-                    </tr>
-                    <tr class="no-padding">
-                      <td class="sprite ta-center">
-                        <a href="/de_DE/monsters/jormungold.html"
-                          title="Jormungold">
-                          <img src="/assets/img/generated/sprites/monsters/jormungold.png" class="remaster-image" alt="image of Jormungold"
-                            loading="lazy" draggable="false">
-                        </a>
-                      </td>
-                      <td class="name">
-                        <a href="/de_DE/monsters/jormungold.html"
-                          title="Jormungold">
-                          Jormungold
-                          (<small class="beast-id">#008</small>)
-                        </a>
-                      </td>
-                    </tr>
-                    <tr class="no-padding">
-                      <td class="sprite ta-center">
-                        <a href="/de_DE/monsters/mardiusa.html"
-                          title="Mardiusa">
-                          <img src="/assets/img/generated/sprites/monsters/mardiusa.png" class="remaster-image" alt="image of Mardiusa"
-                            loading="lazy" draggable="false">
-                        </a>
-                      </td>
-                      <td class="name">
-                        <a href="/de_DE/monsters/mardiusa.html"
-                          title="Mardiusa">
-                          Mardiusa
-                          (<small class="beast-id">#009</small>)
-                        </a>
-                      </td>
-                    </tr>
-                    <tr class="no-padding">
-                      <td class="sprite ta-center">
-                        <a href="/de_DE/monsters/aeroboros.html"
-                          title="Aeroboros">
-                          <img src="/assets/img/generated/sprites/monsters/aeroboros.png" class="remaster-image" alt="image of Aeroboros"
-                            loading="lazy" draggable="false">
-                        </a>
-                      </td>
-                      <td class="name">
-                        <a href="/de_DE/monsters/aeroboros.html"
-                          title="Aeroboros">
-                          Aeroboros
-                          (<small class="beast-id">#010</small>)
-                        </a>
-                      </td>
-                    </tr>
-                    <tr class="no-padding">
-                      <td class="sprite ta-center">
-                        <a href="/de_DE/monsters/traffikrab.html"
-                          title="Verkehrskrabbe">
-                          <img src="/assets/img/generated/sprites/monsters/traffikrab.png" class="remaster-image" alt="image of Verkehrskrabbe"
-                            loading="lazy" draggable="false">
-                        </a>
-                      </td>
-                      <td class="name">
-                        <a href="/de_DE/monsters/traffikrab.html"
-                          title="Verkehrskrabbe">
-                          Verkehrskrabbe
-                          (<small class="beast-id">#011</small>)
-                        </a>
-                      </td>
-                    </tr>
-                    <tr class="no-padding">
-                      <td class="sprite ta-center">
-                        <a href="/de_DE/monsters/weevilite.html"
-                          title="Rüsselampel">
-                          <img src="/assets/img/generated/sprites/monsters/weevilite.png" class="remaster-image" alt="image of Rüsselampel"
-                            loading="lazy" draggable="false">
-                        </a>
-                      </td>
-                      <td class="name">
-                        <a href="/de_DE/monsters/weevilite.html"
-                          title="Rüsselampel">
-                          Rüsselampel
-                          (<small class="beast-id">#012</small>)
-                        </a>
-                      </td>
-                    </tr>
-                    <tr class="no-padding">
-                      <td class="sprite ta-center">
-                        <a href="/de_DE/monsters/lobstacle.html"
-                          title="Hummersperre">
-                          <img src="/assets/img/generated/sprites/monsters/lobstacle.png" class="remaster-image" alt="image of Hummersperre"
-                            loading="lazy" draggable="false">
-                        </a>
-                      </td>
-                      <td class="name">
-                        <a href="/de_DE/monsters/lobstacle.html"
-                          title="Hummersperre">
-                          Hummersperre
-                          (<small class="beast-id">#013</small>)
-                        </a>
-                      </td>
-                    </tr>
-                    <tr class="no-padding">
-                      <td class="sprite ta-center">
-                        <a href="/de_DE/monsters/candevil.html"
-                          title="Bonbonteufel">
-                          <img src="/assets/img/generated/sprites/monsters/candevil.png" class="remaster-image" alt="image of Bonbonteufel"
-                            loading="lazy" draggable="false">
-                        </a>
-                      </td>
-                      <td class="name">
-                        <a href="/de_DE/monsters/candevil.html"
-                          title="Bonbonteufel">
-                          Bonbonteufel
-                          (<small class="beast-id">#014</small>)
-                        </a>
-                      </td>
-                    </tr>
-                    <tr class="no-padding">
-                      <td class="sprite ta-center">
-                        <a href="/de_DE/monsters/malchemy.html"
-                          title="Malchemist">
-                          <img src="/assets/img/generated/sprites/monsters/malchemy.png" class="remaster-image" alt="image of Malchemist"
-                            loading="lazy" draggable="false">
-                        </a>
-                      </td>
-                      <td class="name">
-                        <a href="/de_DE/monsters/malchemy.html"
-                          title="Malchemist">
-                          Malchemist
-                          (<small class="beast-id">#015</small>)
-                        </a>
-                      </td>
-                    </tr>
-                    <tr class="no-padding">
-                      <td class="sprite ta-center">
-                        <a href="/de_DE/monsters/miasmodeus.html"
-                          title="Miasmodeus">
-                          <img src="/assets/img/generated/sprites/monsters/miasmodeus.png" class="remaster-image" alt="image of Miasmodeus"
-                            loading="lazy" draggable="false">
-                        </a>
-                      </td>
-                      <td class="name">
-                        <a href="/de_DE/monsters/miasmodeus.html"
-                          title="Miasmodeus">
-                          Miasmodeus
-                          (<small class="beast-id">#016</small>)
-                        </a>
-                      </td>
-                    </tr>
-                    <tr class="no-padding">
-                      <td class="sprite ta-center">
-                        <a href="/de_DE/monsters/vendemon.html"
-                          title="Venenudämon">
-                          <img src="/assets/img/generated/sprites/monsters/vendemon.png" class="remaster-image" alt="image of Venenudämon"
-                            loading="lazy" draggable="false">
-                        </a>
-                      </td>
-                      <td class="name">
-                        <a href="/de_DE/monsters/vendemon.html"
-                          title="Venenudämon">
-                          Venenudämon
-                          (<small class="beast-id">#017</small>)
-                        </a>
-                      </td>
-                    </tr>
-                    <tr class="no-padding">
-                      <td class="sprite ta-center">
-                        <a href="/de_DE/monsters/gumbaal.html"
-                          title="Kaugummibaal">
-                          <img src="/assets/img/generated/sprites/monsters/gumbaal.png" class="remaster-image" alt="image of Kaugummibaal"
-                            loading="lazy" draggable="false">
-                        </a>
-                      </td>
-                      <td class="name">
-                        <a href="/de_DE/monsters/gumbaal.html"
-                          title="Kaugummibaal">
-                          Kaugummibaal
-                          (<small class="beast-id">#018</small>)
-                        </a>
-                      </td>
-                    </tr>
-                    <tr class="no-padding">
-                      <td class="sprite ta-center">
-                        <a href="/de_DE/monsters/sirenade.html"
-                          title="Sirenade">
-                          <img src="/assets/img/generated/sprites/monsters/sirenade.png" class="remaster-image" alt="image of Sirenade"
-                            loading="lazy" draggable="false">
-                        </a>
-                      </td>
-                      <td class="name">
-                        <a href="/de_DE/monsters/sirenade.html"
-                          title="Sirenade">
-                          Sirenade
-                          (<small class="beast-id">#024</small>)
-                        </a>
-                      </td>
-                    </tr>
-                    <tr class="no-padding">
-                      <td class="sprite ta-center">
-                        <a href="/de_DE/monsters/decibelle.html"
-                          title="Dezibelle">
-                          <img src="/assets/img/generated/sprites/monsters/decibelle.png" class="remaster-image" alt="image of Dezibelle"
-                            loading="lazy" draggable="false">
-                        </a>
-                      </td>
-                      <td class="name">
-                        <a href="/de_DE/monsters/decibelle.html"
-                          title="Dezibelle">
-                          Dezibelle
-                          (<small class="beast-id">#025</small>)
-                        </a>
-                      </td>
-                    </tr>
-                    <tr class="no-padding">
-                      <td class="sprite ta-center">
-                        <a href="/de_DE/monsters/dominoth.html"
-                          title="Dominotte">
-                          <img src="/assets/img/generated/sprites/monsters/dominoth.png" class="remaster-image" alt="image of Dominotte"
-                            loading="lazy" draggable="false">
-                        </a>
-                      </td>
-                      <td class="name">
-                        <a href="/de_DE/monsters/dominoth.html"
-                          title="Dominotte">
-                          Dominotte
-                          (<small class="beast-id">#030</small>)
-                        </a>
-                      </td>
-                    </tr>
-                    <tr class="no-padding">
-                      <td class="sprite ta-center">
-                        <a href="/de_DE/monsters/wingloom.html"
-                          title="Düsterflügler">
-                          <img src="/assets/img/generated/sprites/monsters/wingloom.png" class="remaster-image" alt="image of Düsterflügler"
-                            loading="lazy" draggable="false">
-                        </a>
-                      </td>
-                      <td class="name">
-                        <a href="/de_DE/monsters/wingloom.html"
-                          title="Düsterflügler">
-                          Düsterflügler
-                          (<small class="beast-id">#031</small>)
-                        </a>
-                      </td>
-                    </tr>
-                    <tr class="no-padding">
-                      <td class="sprite ta-center">
-                        <a href="/de_DE/monsters/mothmanic.html"
-                          title="Mottenmaniker">
-                          <img src="/assets/img/generated/sprites/monsters/mothmanic.png" class="remaster-image" alt="image of Mottenmaniker"
-                            loading="lazy" draggable="false">
-                        </a>
-                      </td>
-                      <td class="name">
-                        <a href="/de_DE/monsters/mothmanic.html"
-                          title="Mottenmaniker">
-                          Mottenmaniker
-                          (<small class="beast-id">#032</small>)
-                        </a>
-                      </td>
-                    </tr>
-                    <tr class="no-padding">
-                      <td class="sprite ta-center">
-                        <a href="/de_DE/monsters/tokusect.html"
-                          title="Tokusekt">
-                          <img src="/assets/img/generated/sprites/monsters/tokusect.png" class="remaster-image" alt="image of Tokusekt"
-                            loading="lazy" draggable="false">
-                        </a>
-                      </td>
-                      <td class="name">
-                        <a href="/de_DE/monsters/tokusect.html"
-                          title="Tokusekt">
-                          Tokusekt
-                          (<small class="beast-id">#033</small>)
-                        </a>
-                      </td>
-                    </tr>
-                    <tr class="no-padding">
-                      <td class="sprite ta-center">
-                        <a href="/de_DE/monsters/manispear.html"
-                          title="Manispeer">
-                          <img src="/assets/img/generated/sprites/monsters/manispear.png" class="remaster-image" alt="image of Manispeer"
-                            loading="lazy" draggable="false">
-                        </a>
-                      </td>
-                      <td class="name">
-                        <a href="/de_DE/monsters/manispear.html"
-                          title="Manispeer">
-                          Manispeer
-                          (<small class="beast-id">#035</small>)
-                        </a>
-                      </td>
-                    </tr>
-                    <tr class="no-padding">
-                      <td class="sprite ta-center">
-                        <a href="/de_DE/monsters/kittelly.html"
-                          title="Glotzenmieze">
-                          <img src="/assets/img/generated/sprites/monsters/kittelly.png" class="remaster-image" alt="image of Glotzenmieze"
-                            loading="lazy" draggable="false">
-                        </a>
-                      </td>
-                      <td class="name">
-                        <a href="/de_DE/monsters/kittelly.html"
-                          title="Glotzenmieze">
-                          Glotzenmieze
-                          (<small class="beast-id">#037</small>)
-                        </a>
-                      </td>
-                    </tr>
-                    <tr class="no-padding">
-                      <td class="sprite ta-center">
-                        <a href="/de_DE/monsters/cat-5.html"
-                          title="Cat-5">
-                          <img src="/assets/img/generated/sprites/monsters/cat-5.png" class="remaster-image" alt="image of Cat-5"
-                            loading="lazy" draggable="false">
-                        </a>
-                      </td>
-                      <td class="name">
-                        <a href="/de_DE/monsters/cat-5.html"
-                          title="Cat-5">
-                          Cat-5
-                          (<small class="beast-id">#038</small>)
-                        </a>
-                      </td>
-                    </tr>
-                    <tr class="no-padding">
-                      <td class="sprite ta-center">
-                        <a href="/de_DE/monsters/nevermort.html"
-                          title="Nimmertod">
-                          <img src="/assets/img/generated/sprites/monsters/nevermort.png" class="remaster-image" alt="image of Nimmertod"
-                            loading="lazy" draggable="false">
-                        </a>
-                      </td>
-                      <td class="name">
-                        <a href="/de_DE/monsters/nevermort.html"
-                          title="Nimmertod">
-                          Nimmertod
-                          (<small class="beast-id">#047</small>)
-                        </a>
-                      </td>
-                    </tr>
-                    <tr class="no-padding">
-                      <td class="sprite ta-center">
-                        <a href="/de_DE/monsters/apocrowlypse.html"
-                          title="Apokrählypse">
-                          <img src="/assets/img/generated/sprites/monsters/apocrowlypse.png" class="remaster-image" alt="image of Apokrählypse"
-                            loading="lazy" draggable="false">
-                        </a>
-                      </td>
-                      <td class="name">
-                        <a href="/de_DE/monsters/apocrowlypse.html"
-                          title="Apokrählypse">
-                          Apokrählypse
-                          (<small class="beast-id">#048</small>)
-                        </a>
-                      </td>
-                    </tr>
-                    <tr class="no-padding">
-                      <td class="sprite ta-center">
-                        <a href="/de_DE/monsters/clocksley.html"
-                          title="Aufziehrobin">
-                          <img src="/assets/img/generated/sprites/monsters/clocksley.png" class="remaster-image" alt="image of Aufziehrobin"
-                            loading="lazy" draggable="false">
-                        </a>
-                      </td>
-                      <td class="name">
-                        <a href="/de_DE/monsters/clocksley.html"
-                          title="Aufziehrobin">
-                          Aufziehrobin
-                          (<small class="beast-id">#049</small>)
-                        </a>
-                      </td>
-                    </tr>
-                    <tr class="no-padding">
-                      <td class="sprite ta-center">
-                        <a href="/de_DE/monsters/robindam.html"
-                          title="Robindam">
-                          <img src="/assets/img/generated/sprites/monsters/robindam.png" class="remaster-image" alt="image of Robindam"
-                            loading="lazy" draggable="false">
-                        </a>
-                      </td>
-                      <td class="name">
-                        <a href="/de_DE/monsters/robindam.html"
-                          title="Robindam">
-                          Robindam
-                          (<small class="beast-id">#050</small>)
-                        </a>
-                      </td>
-                    </tr>
-                    <tr class="no-padding">
-                      <td class="sprite ta-center">
-                        <a href="/de_DE/monsters/allseer.html"
-                          title="Allseher">
-                          <img src="/assets/img/generated/sprites/monsters/allseer.png" class="remaster-image" alt="image of Allseher"
-                            loading="lazy" draggable="false">
-                        </a>
-                      </td>
-                      <td class="name">
-                        <a href="/de_DE/monsters/allseer.html"
-                          title="Allseher">
-                          Allseher
-                          (<small class="beast-id">#052</small>)
-                        </a>
-                      </td>
-                    </tr>
-                    <tr class="no-padding">
-                      <td class="sprite ta-center">
-                        <a href="/de_DE/monsters/khufo.html"
-                          title="Khufo">
-                          <img src="/assets/img/generated/sprites/monsters/khufo.png" class="remaster-image" alt="image of Khufo"
-                            loading="lazy" draggable="false">
-                        </a>
-                      </td>
-                      <td class="name">
-                        <a href="/de_DE/monsters/khufo.html"
-                          title="Khufo">
-                          Khufo
-                          (<small class="beast-id">#053</small>)
-                        </a>
-                      </td>
-                    </tr>
-                    <tr class="no-padding">
-                      <td class="sprite ta-center">
-                        <a href="/de_DE/monsters/triphinx.html"
-                          title="Dreiphinx">
-                          <img src="/assets/img/generated/sprites/monsters/triphinx.png" class="remaster-image" alt="image of Dreiphinx"
-                            loading="lazy" draggable="false">
-                        </a>
-                      </td>
-                      <td class="name">
-                        <a href="/de_DE/monsters/triphinx.html"
-                          title="Dreiphinx">
-                          Dreiphinx
-                          (<small class="beast-id">#054</small>)
-                        </a>
-                      </td>
-                    </tr>
-                    <tr class="no-padding">
-                      <td class="sprite ta-center">
-                        <a href="/de_DE/monsters/salamagus.html"
-                          title="Salamagus">
-                          <img src="/assets/img/generated/sprites/monsters/salamagus.png" class="remaster-image" alt="image of Salamagus"
-                            loading="lazy" draggable="false">
-                        </a>
-                      </td>
-                      <td class="name">
-                        <a href="/de_DE/monsters/salamagus.html"
-                          title="Salamagus">
-                          Salamagus
-                          (<small class="beast-id">#059</small>)
-                        </a>
-                      </td>
-                    </tr>
-                    <tr class="no-padding">
-                      <td class="sprite ta-center">
-                        <a href="/de_DE/monsters/pyromeleon.html"
-                          title="Pyromeleon">
-                          <img src="/assets/img/generated/sprites/monsters/pyromeleon.png" class="remaster-image" alt="image of Pyromeleon"
-                            loading="lazy" draggable="false">
-                        </a>
-                      </td>
-                      <td class="name">
-                        <a href="/de_DE/monsters/pyromeleon.html"
-                          title="Pyromeleon">
-                          Pyromeleon
-                          (<small class="beast-id">#060</small>)
-                        </a>
-                      </td>
-                    </tr>
-                    <tr class="no-padding">
-                      <td class="sprite ta-center">
-                        <a href="/de_DE/monsters/muskrateer.html"
-                          title="Moschketier">
-                          <img src="/assets/img/generated/sprites/monsters/muskrateer.png" class="remaster-image" alt="image of Moschketier"
-                            loading="lazy" draggable="false">
-                        </a>
-                      </td>
-                      <td class="name">
-                        <a href="/de_DE/monsters/muskrateer.html"
-                          title="Moschketier">
-                          Moschketier
-                          (<small class="beast-id">#061</small>)
-                        </a>
-                      </td>
-                    </tr>
-                    <tr class="no-padding">
-                      <td class="sprite ta-center">
-                        <a href="/de_DE/monsters/ratcousel.html"
-                          title="Rattkussell">
-                          <img src="/assets/img/generated/sprites/monsters/ratcousel.png" class="remaster-image" alt="image of Rattkussell"
-                            loading="lazy" draggable="false">
-                        </a>
-                      </td>
-                      <td class="name">
-                        <a href="/de_DE/monsters/ratcousel.html"
-                          title="Rattkussell">
-                          Rattkussell
-                          (<small class="beast-id">#062</small>)
-                        </a>
-                      </td>
-                    </tr>
-                    <tr class="no-padding">
-                      <td class="sprite ta-center">
-                        <a href="/de_DE/monsters/padpole.html"
-                          title="Kaulblatt">
-                          <img src="/assets/img/generated/sprites/monsters/padpole.png" class="remaster-image" alt="image of Kaulblatt"
-                            loading="lazy" draggable="false">
-                        </a>
-                      </td>
-                      <td class="name">
-                        <a href="/de_DE/monsters/padpole.html"
-                          title="Kaulblatt">
-                          Kaulblatt
-                          (<small class="beast-id">#063</small>)
-                        </a>
-                      </td>
-                    </tr>
-                    <tr class="no-padding">
-                      <td class="sprite ta-center">
-                        <a href="/de_DE/monsters/frillypad.html"
-                          title="Rüschblatt">
-                          <img src="/assets/img/generated/sprites/monsters/frillypad.png" class="remaster-image" alt="image of Rüschblatt"
-                            loading="lazy" draggable="false">
-                        </a>
-                      </td>
-                      <td class="name">
-                        <a href="/de_DE/monsters/frillypad.html"
-                          title="Rüschblatt">
-                          Rüschblatt
-                          (<small class="beast-id">#064</small>)
-                        </a>
-                      </td>
-                    </tr>
-                    <tr class="no-padding">
-                      <td class="sprite ta-center">
-                        <a href="/de_DE/monsters/liligator.html"
-                          title="Liligator">
-                          <img src="/assets/img/generated/sprites/monsters/liligator.png" class="remaster-image" alt="image of Liligator"
-                            loading="lazy" draggable="false">
-                        </a>
-                      </td>
-                      <td class="name">
-                        <a href="/de_DE/monsters/liligator.html"
-                          title="Liligator">
-                          Liligator
-                          (<small class="beast-id">#065</small>)
-                        </a>
-                      </td>
-                    </tr>
-                    <tr class="no-padding">
-                      <td class="sprite ta-center">
-                        <a href="/de_DE/monsters/elfless.html"
-                          title="Elflos">
-                          <img src="/assets/img/generated/sprites/monsters/elfless.png" class="remaster-image" alt="image of Elflos"
-                            loading="lazy" draggable="false">
-                        </a>
-                      </td>
-                      <td class="name">
-                        <a href="/de_DE/monsters/elfless.html"
-                          title="Elflos">
-                          Elflos
-                          (<small class="beast-id">#066</small>)
-                        </a>
-                      </td>
-                    </tr>
-                    <tr class="no-padding">
-                      <td class="sprite ta-center">
-                        <a href="/de_DE/monsters/grampus.html"
-                          title="Grantpus">
-                          <img src="/assets/img/generated/sprites/monsters/grampus.png" class="remaster-image" alt="image of Grantpus"
-                            loading="lazy" draggable="false">
-                        </a>
-                      </td>
-                      <td class="name">
-                        <a href="/de_DE/monsters/grampus.html"
-                          title="Grantpus">
-                          Grantpus
-                          (<small class="beast-id">#067</small>)
-                        </a>
-                      </td>
-                    </tr>
-                    <tr class="no-padding">
-                      <td class="sprite ta-center">
-                        <a href="/de_DE/monsters/faerious.html"
-                          title="Wutfee">
-                          <img src="/assets/img/generated/sprites/monsters/faerious.png" class="remaster-image" alt="image of Wutfee"
-                            loading="lazy" draggable="false">
-                        </a>
-                      </td>
-                      <td class="name">
-                        <a href="/de_DE/monsters/faerious.html"
-                          title="Wutfee">
-                          Wutfee
-                          (<small class="beast-id">#068</small>)
-                        </a>
-                      </td>
-                    </tr>
-                    <tr class="no-padding">
-                      <td class="sprite ta-center">
-                        <a href="/de_DE/monsters/brushroom.html"
-                          title="Pinselpilz">
-                          <img src="/assets/img/generated/sprites/monsters/brushroom.png" class="remaster-image" alt="image of Pinselpilz"
-                            loading="lazy" draggable="false">
-                        </a>
-                      </td>
-                      <td class="name">
-                        <a href="/de_DE/monsters/brushroom.html"
-                          title="Pinselpilz">
-                          Pinselpilz
-                          (<small class="beast-id">#069</small>)
-                        </a>
-                      </td>
-                    </tr>
-                    <tr class="no-padding">
-                      <td class="sprite ta-center">
-                        <a href="/de_DE/monsters/fungogh.html"
-                          title="Fungogh">
-                          <img src="/assets/img/generated/sprites/monsters/fungogh.png" class="remaster-image" alt="image of Fungogh"
-                            loading="lazy" draggable="false">
-                        </a>
-                      </td>
-                      <td class="name">
-                        <a href="/de_DE/monsters/fungogh.html"
-                          title="Fungogh">
-                          Fungogh
-                          (<small class="beast-id">#070</small>)
-                        </a>
-                      </td>
-                    </tr>
-                    <tr class="no-padding">
-                      <td class="sprite ta-center">
-                        <a href="/de_DE/monsters/busheye.html"
-                          title="Buschauge">
-                          <img src="/assets/img/generated/sprites/monsters/busheye.png" class="remaster-image" alt="image of Buschauge"
-                            loading="lazy" draggable="false">
-                        </a>
-                      </td>
-                      <td class="name">
-                        <a href="/de_DE/monsters/busheye.html"
-                          title="Buschauge">
-                          Buschauge
-                          (<small class="beast-id">#073</small>)
-                        </a>
-                      </td>
-                    </tr>
-                    <tr class="no-padding">
-                      <td class="sprite ta-center">
-                        <a href="/de_DE/monsters/huntorch.html"
-                          title="Jägerfackel">
-                          <img src="/assets/img/generated/sprites/monsters/huntorch.png" class="remaster-image" alt="image of Jägerfackel"
-                            loading="lazy" draggable="false">
-                        </a>
-                      </td>
-                      <td class="name">
-                        <a href="/de_DE/monsters/huntorch.html"
-                          title="Jägerfackel">
-                          Jägerfackel
-                          (<small class="beast-id">#074</small>)
-                        </a>
-                      </td>
-                    </tr>
-                    <tr class="no-padding">
-                      <td class="sprite ta-center">
-                        <a href="/de_DE/monsters/hedgeherne.html"
-                          title="Heckenherne">
-                          <img src="/assets/img/generated/sprites/monsters/hedgeherne.png" class="remaster-image" alt="image of Heckenherne"
-                            loading="lazy" draggable="false">
-                        </a>
-                      </td>
-                      <td class="name">
-                        <a href="/de_DE/monsters/hedgeherne.html"
-                          title="Heckenherne">
-                          Heckenherne
-                          (<small class="beast-id">#075</small>)
-                        </a>
-                      </td>
-                    </tr>
-                    <tr class="no-padding">
-                      <td class="sprite ta-center">
-                        <a href="/de_DE/monsters/galagor.html"
-                          title="Galagor">
-                          <img src="/assets/img/generated/sprites/monsters/galagor.png" class="remaster-image" alt="image of Galagor"
-                            loading="lazy" draggable="false">
-                        </a>
-                      </td>
-                      <td class="name">
-                        <a href="/de_DE/monsters/galagor.html"
-                          title="Galagor">
-                          Galagor
-                          (<small class="beast-id">#079</small>)
-                        </a>
-                      </td>
-                    </tr>
-                    <tr class="no-padding">
-                      <td class="sprite ta-center">
-                        <a href="/de_DE/monsters/mascotoy.html"
-                          title="Maskottier">
-                          <img src="/assets/img/generated/sprites/monsters/mascotoy.png" class="remaster-image" alt="image of Maskottier"
-                            loading="lazy" draggable="false">
-                        </a>
-                      </td>
-                      <td class="name">
-                        <a href="/de_DE/monsters/mascotoy.html"
-                          title="Maskottier">
-                          Maskottier
-                          (<small class="beast-id">#080</small>)
-                        </a>
-                      </td>
-                    </tr>
-                    <tr class="no-padding">
-                      <td class="sprite ta-center">
-                        <a href="/de_DE/monsters/mascotorn.html"
-                          title="Platzketier">
-                          <img src="/assets/img/generated/sprites/monsters/mascotorn.png" class="remaster-image" alt="image of Platzketier"
-                            loading="lazy" draggable="false">
-                        </a>
-                      </td>
-                      <td class="name">
-                        <a href="/de_DE/monsters/mascotorn.html"
-                          title="Platzketier">
-                          Platzketier
-                          (<small class="beast-id">#081</small>)
-                        </a>
-                      </td>
-                    </tr>
-                    <tr class="no-padding">
-                      <td class="sprite ta-center">
-                        <a href="/de_DE/monsters/jellyton.html"
-                          title="Schleimlett">
-                          <img src="/assets/img/generated/sprites/monsters/jellyton.png" class="remaster-image" alt="image of Schleimlett"
-                            loading="lazy" draggable="false">
-                        </a>
-                      </td>
-                      <td class="name">
-                        <a href="/de_DE/monsters/jellyton.html"
-                          title="Schleimlett">
-                          Schleimlett
-                          (<small class="beast-id">#086</small>)
-                        </a>
-                      </td>
-                    </tr>
-                    <tr class="no-padding">
-                      <td class="sprite ta-center">
-                        <a href="/de_DE/monsters/skelevangelist.html"
-                          title="Skelevangelist">
-                          <img src="/assets/img/generated/sprites/monsters/skelevangelist.png" class="remaster-image" alt="image of Skelevangelist"
-                            loading="lazy" draggable="false">
-                        </a>
-                      </td>
-                      <td class="name">
-                        <a href="/de_DE/monsters/skelevangelist.html"
-                          title="Skelevangelist">
-                          Skelevangelist
-                          (<small class="beast-id">#093</small>)
-                        </a>
-                      </td>
-                    </tr>
-                    <tr class="no-padding">
-                      <td class="sprite ta-center">
-                        <a href="/de_DE/monsters/kingrave.html"
-                          title="Königsskelett">
-                          <img src="/assets/img/generated/sprites/monsters/kingrave.png" class="remaster-image" alt="image of Königsskelett"
-                            loading="lazy" draggable="false">
-                        </a>
-                      </td>
-                      <td class="name">
-                        <a href="/de_DE/monsters/kingrave.html"
-                          title="Königsskelett">
-                          Königsskelett
-                          (<small class="beast-id">#094</small>)
-                        </a>
-                      </td>
-                    </tr>
-                    <tr class="no-padding">
-                      <td class="sprite ta-center">
-                        <a href="/de_DE/monsters/queenyx.html"
-                          title="Damenskelett">
-                          <img src="/assets/img/generated/sprites/monsters/queenyx.png" class="remaster-image" alt="image of Damenskelett"
-                            loading="lazy" draggable="false">
-                        </a>
-                      </td>
-                      <td class="name">
-                        <a href="/de_DE/monsters/queenyx.html"
-                          title="Damenskelett">
-                          Damenskelett
-                          (<small class="beast-id">#095</small>)
-                        </a>
-                      </td>
-                    </tr>
-                    <tr class="no-padding">
-                      <td class="sprite ta-center">
-                        <a href="/de_DE/monsters/burnace.html"
-                          title="Brennofen">
-                          <img src="/assets/img/generated/sprites/monsters/burnace.png" class="remaster-image" alt="image of Brennofen"
-                            loading="lazy" draggable="false">
-                        </a>
-                      </td>
-                      <td class="name">
-                        <a href="/de_DE/monsters/burnace.html"
-                          title="Brennofen">
-                          Brennofen
-                          (<small class="beast-id">#096</small>)
-                        </a>
-                      </td>
-                    </tr>
-                    <tr class="no-padding">
-                      <td class="sprite ta-center">
-                        <a href="/de_DE/monsters/smogmagog.html"
-                          title="Smogmagog">
-                          <img src="/assets/img/generated/sprites/monsters/smogmagog.png" class="remaster-image" alt="image of Smogmagog"
-                            loading="lazy" draggable="false">
-                        </a>
-                      </td>
-                      <td class="name">
-                        <a href="/de_DE/monsters/smogmagog.html"
-                          title="Smogmagog">
-                          Smogmagog
-                          (<small class="beast-id">#097</small>)
-                        </a>
-                      </td>
-                    </tr>
-                    <tr class="no-padding">
-                      <td class="sprite ta-center">
-                        <a href="/de_DE/monsters/cluckabilly.html"
-                          title="Gackerbilly">
-                          <img src="/assets/img/generated/sprites/monsters/cluckabilly.png" class="remaster-image" alt="image of Gackerbilly"
-                            loading="lazy" draggable="false">
-                        </a>
-                      </td>
-                      <td class="name">
-                        <a href="/de_DE/monsters/cluckabilly.html"
-                          title="Gackerbilly">
-                          Gackerbilly
-                          (<small class="beast-id">#100</small>)
-                        </a>
-                      </td>
-                    </tr>
-                    <tr class="no-padding">
-                      <td class="sprite ta-center">
-                        <a href="/de_DE/monsters/rockertrice.html"
-                          title="Rockilisk">
-                          <img src="/assets/img/generated/sprites/monsters/rockertrice.png" class="remaster-image" alt="image of Rockilisk"
-                            loading="lazy" draggable="false">
-                        </a>
-                      </td>
-                      <td class="name">
-                        <a href="/de_DE/monsters/rockertrice.html"
-                          title="Rockilisk">
-                          Rockilisk
-                          (<small class="beast-id">#101</small>)
-                        </a>
-                      </td>
-                    </tr>
-                    <tr class="no-padding">
-                      <td class="sprite ta-center">
-                        <a href="/de_DE/monsters/pombomb.html"
-                          title="Pombombe">
-                          <img src="/assets/img/generated/sprites/monsters/pombomb.png" class="remaster-image" alt="image of Pombombe"
-                            loading="lazy" draggable="false">
-                        </a>
-                      </td>
-                      <td class="name">
-                        <a href="/de_DE/monsters/pombomb.html"
-                          title="Pombombe">
-                          Pombombe
-                          (<small class="beast-id">#104</small>)
-                        </a>
-                      </td>
-                    </tr>
-                    <tr class="no-padding">
-                      <td class="sprite ta-center">
-                        <a href="/de_DE/monsters/spitzfyre.html"
-                          title="Feuerspitz">
-                          <img src="/assets/img/generated/sprites/monsters/spitzfyre.png" class="remaster-image" alt="image of Feuerspitz"
-                            loading="lazy" draggable="false">
-                        </a>
-                      </td>
-                      <td class="name">
-                        <a href="/de_DE/monsters/spitzfyre.html"
-                          title="Feuerspitz">
-                          Feuerspitz
-                          (<small class="beast-id">#105</small>)
-                        </a>
-                      </td>
-                    </tr>
-                    <tr class="no-padding">
-                      <td class="sprite ta-center">
-                        <a href="/de_DE/monsters/zeustrike.html"
-                          title="Zeusschlag">
-                          <img src="/assets/img/generated/sprites/monsters/zeustrike.png" class="remaster-image" alt="image of Zeusschlag"
-                            loading="lazy" draggable="false">
-                        </a>
-                      </td>
-                      <td class="name">
-                        <a href="/de_DE/monsters/zeustrike.html"
-                          title="Zeusschlag">
-                          Zeusschlag
-                          (<small class="beast-id">#109</small>)
-                        </a>
-                      </td>
-                    </tr>
-                    <tr class="no-padding">
-                      <td class="sprite ta-center">
-                        <a href="/de_DE/monsters/kuneko.html"
-                          title="Kuneko">
-                          <img src="/assets/img/generated/sprites/monsters/kuneko.png" class="remaster-image" alt="image of Kuneko"
-                            loading="lazy" draggable="false">
-                        </a>
-                      </td>
-                      <td class="name">
-                        <a href="/de_DE/monsters/kuneko.html"
-                          title="Kuneko">
-                          Kuneko
-                          (<small class="beast-id">#110</small>)
-                        </a>
-                      </td>
-                    </tr>
-                    <tr class="no-padding">
-                      <td class="sprite ta-center">
-                        <a href="/de_DE/monsters/shining_kuneko.html"
-                          title="Strahlende Kuneko">
-                          <img src="/assets/img/generated/sprites/monsters/shining_kuneko.png" class="remaster-image" alt="image of Strahlende Kuneko"
-                            loading="lazy" draggable="false">
-                        </a>
-                      </td>
-                      <td class="name">
-                        <a href="/de_DE/monsters/shining_kuneko.html"
-                          title="Strahlende Kuneko">
-                          Strahlende Kuneko
-                          (<small class="beast-id">#111</small>)
-                        </a>
-                      </td>
-                    </tr>
-                    <tr class="no-padding">
-                      <td class="sprite ta-center">
-                        <a href="/de_DE/monsters/djinn_entonic.html"
-                          title="Dschinn Tonic">
-                          <img src="/assets/img/generated/sprites/monsters/djinn_entonic.png" class="remaster-image" alt="image of Dschinn Tonic"
-                            loading="lazy" draggable="false">
-                        </a>
-                      </td>
-                      <td class="name">
-                        <a href="/de_DE/monsters/djinn_entonic.html"
-                          title="Dschinn Tonic">
-                          Dschinn Tonic
-                          (<small class="beast-id">#112</small>)
-                        </a>
-                      </td>
-                    </tr>
-                    <tr class="no-padding">
-                      <td class="sprite ta-center">
-                        <a href="/de_DE/monsters/glaistain.html"
-                          title="Glaiglas">
-                          <img src="/assets/img/generated/sprites/monsters/glaistain.png" class="remaster-image" alt="image of Glaiglas"
-                            loading="lazy" draggable="false">
-                        </a>
-                      </td>
-                      <td class="name">
-                        <a href="/de_DE/monsters/glaistain.html"
-                          title="Glaiglas">
-                          Glaiglas
-                          (<small class="beast-id">#118</small>)
-                        </a>
-                      </td>
-                    </tr>
-                    <tr class="no-padding">
-                      <td class="sprite ta-center">
-                        <a href="/de_DE/monsters/miss_mimic.html"
-                          title="Truhentäuscherin">
-                          <img src="/assets/img/generated/sprites/monsters/miss_mimic.png" class="remaster-image" alt="image of Truhentäuscherin"
-                            loading="lazy" draggable="false">
-                        </a>
-                      </td>
-                      <td class="name">
-                        <a href="/de_DE/monsters/miss_mimic.html"
-                          title="Truhentäuscherin">
-                          Truhentäuscherin
-                          (<small class="beast-id">#119</small>)
-                        </a>
-                      </td>
-                    </tr>
-                    <tr class="no-padding">
-                      <td class="sprite ta-center">
-                        <a href="/de_DE/monsters/anathema.html"
-                          title="Anathema">
-                          <img src="/assets/img/generated/sprites/monsters/anathema.png" class="remaster-image" alt="image of Anathema"
-                            loading="lazy" draggable="false">
-                        </a>
-                      </td>
-                      <td class="name">
-                        <a href="/de_DE/monsters/anathema.html"
-                          title="Anathema">
-                          Anathema
-                          (<small class="beast-id">#120</small>)
-                        </a>
-                      </td>
-                    </tr>
-                    <tr class="no-padding">
-                      <td class="sprite ta-center">
-                        <a href="/de_DE/monsters/adeptile.html"
-                          title="Adeptil">
-                          <img src="/assets/img/generated/sprites/monsters/adeptile.png" class="remaster-image" alt="image of Adeptil"
-                            loading="lazy" draggable="false">
-                        </a>
-                      </td>
-                      <td class="name">
-                        <a href="/de_DE/monsters/adeptile.html"
-                          title="Adeptil">
-                          Adeptil
-                          (<small class="beast-id">#123</small>)
-                        </a>
-                      </td>
-                    </tr>
-                    <tr class="no-padding">
-                      <td class="sprite ta-center">
-                        <a href="/de_DE/monsters/trapwurm.html"
-                          title="Fallenwurm">
-                          <img src="/assets/img/generated/sprites/monsters/trapwurm.png" class="remaster-image" alt="image of Fallenwurm"
-                            loading="lazy" draggable="false">
-                        </a>
-                      </td>
-                      <td class="name">
-                        <a href="/de_DE/monsters/trapwurm.html"
-                          title="Fallenwurm">
-                          Fallenwurm
-                          (<small class="beast-id">#124</small>)
-                        </a>
-                      </td>
-                    </tr>
-                    <tr class="no-padding">
-                      <td class="sprite ta-center">
-                        <a href="/de_DE/monsters/wyrmaw.html"
-                          title="Wyrmaul">
-                          <img src="/assets/img/generated/sprites/monsters/wyrmaw.png" class="remaster-image" alt="image of Wyrmaul"
-                            loading="lazy" draggable="false">
-                        </a>
-                      </td>
-                      <td class="name">
-                        <a href="/de_DE/monsters/wyrmaw.html"
-                          title="Wyrmaul">
-                          Wyrmaul
-                          (<small class="beast-id">#125</small>)
-                        </a>
-                      </td>
-                    </tr>
-                    <tr class="no-padding">
-                      <td class="sprite ta-center">
-                        <a href="/de_DE/monsters/ferriclaw.html"
-                          title="Ferroklaue">
-                          <img src="/assets/img/generated/sprites/monsters/ferriclaw.png" class="remaster-image" alt="image of Ferroklaue"
-                            loading="lazy" draggable="false">
-                        </a>
-                      </td>
-                      <td class="name">
-                        <a href="/de_DE/monsters/ferriclaw.html"
-                          title="Ferroklaue">
-                          Ferroklaue
-                          (<small class="beast-id">#126</small>)
-                        </a>
-                      </td>
-                    </tr>
-                    <tr class="no-padding">
-                      <td class="sprite ta-center">
-                        <a href="/de_DE/monsters/auriclaw.html"
-                          title="Aurumklaue">
-                          <img src="/assets/img/generated/sprites/monsters/auriclaw.png" class="remaster-image" alt="image of Aurumklaue"
-                            loading="lazy" draggable="false">
-                        </a>
-                      </td>
-                      <td class="name">
-                        <a href="/de_DE/monsters/auriclaw.html"
-                          title="Aurumklaue">
-                          Aurumklaue
-                          (<small class="beast-id">#127</small>)
-                        </a>
-                      </td>
-                    </tr>
-                    <tr class="no-padding">
-                      <td class="sprite ta-center">
-                        <a href="/de_DE/monsters/picksie.html"
-                          title="Spitzie">
-                          <img src="/assets/img/generated/sprites/monsters/picksie.png" class="remaster-image" alt="image of Spitzie"
-                            loading="lazy" draggable="false">
-                        </a>
-                      </td>
-                      <td class="name">
-                        <a href="/de_DE/monsters/picksie.html"
-                          title="Spitzie">
-                          Spitzie
-                          (<small class="beast-id">#128</small>)
-                        </a>
-                      </td>
-                    </tr>
-                    <tr class="no-padding">
-                      <td class="sprite ta-center">
-                        <a href="/de_DE/monsters/blunderbusk.html"
-                          title="Pistolenclown">
-                          <img src="/assets/img/generated/sprites/monsters/blunderbusk.png" class="remaster-image" alt="image of Pistolenclown"
-                            loading="lazy" draggable="false">
-                        </a>
-                      </td>
-                      <td class="name">
-                        <a href="/de_DE/monsters/blunderbusk.html"
-                          title="Pistolenclown">
-                          Pistolenclown
-                          (<small class="beast-id">#???</small>)
-                        </a>
-                      </td>
-                    </tr>
-                    <tr class="no-padding">
-                      <td class="sprite ta-center">
-                        <a href="/de_DE/monsters/charlequin.html"
-                          title="Kohlekin">
-                          <img src="/assets/img/generated/sprites/monsters/charlequin.png" class="remaster-image" alt="image of Kohlekin"
-                            loading="lazy" draggable="false">
-                        </a>
-                      </td>
-                      <td class="name">
-                        <a href="/de_DE/monsters/charlequin.html"
-                          title="Kohlekin">
-                          Kohlekin
-                          (<small class="beast-id">#???</small>)
-                        </a>
-                      </td>
-                    </tr>
-                    <tr class="no-padding">
-                      <td class="sprite ta-center">
-                        <a href="/de_DE/monsters/fragliacci.html"
-                          title="Kanonazzo">
-                          <img src="/assets/img/generated/sprites/monsters/fragliacci.png" class="remaster-image" alt="image of Kanonazzo"
-                            loading="lazy" draggable="false">
-                        </a>
-                      </td>
-                      <td class="name">
-                        <a href="/de_DE/monsters/fragliacci.html"
-                          title="Kanonazzo">
-                          Kanonazzo
-                          (<small class="beast-id">#???</small>)
-                        </a>
-                      </td>
-                    </tr>
-                    <tr class="no-padding">
-                      <td class="sprite ta-center">
-                        <a href="/de_DE/monsters/scarleteeth.html"
-                          title="Scharlachzahn">
-                          <img src="/assets/img/generated/sprites/monsters/scarleteeth.png" class="remaster-image" alt="image of Scharlachzahn"
-                            loading="lazy" draggable="false">
-                        </a>
-                      </td>
-                      <td class="name">
-                        <a href="/de_DE/monsters/scarleteeth.html"
-                          title="Scharlachzahn">
-                          Scharlachzahn
-                          (<small class="beast-id">#???</small>)
-                        </a>
-                      </td>
-                    </tr>
-                    <tr class="no-padding">
-                      <td class="sprite ta-center">
-                        <a href="/de_DE/monsters/umbrahella.html"
-                          title="Schirmhölla">
-                          <img src="/assets/img/generated/sprites/monsters/umbrahella.png" class="remaster-image" alt="image of Schirmhölla"
-                            loading="lazy" draggable="false">
-                        </a>
-                      </td>
-                      <td class="name">
-                        <a href="/de_DE/monsters/umbrahella.html"
-                          title="Schirmhölla">
-                          Schirmhölla
-                          (<small class="beast-id">#???</small>)
-                        </a>
-                      </td>
-                    </tr>
-                    <tr class="no-padding">
-                      <td class="sprite ta-center">
-                        <a href="/de_DE/monsters/magikrab.html"
-                          title="Magikrabbe">
-                          <img src="/assets/img/generated/sprites/monsters/magikrab.png" class="remaster-image" alt="image of Magikrabbe"
-                            loading="lazy" draggable="false">
-                        </a>
-                      </td>
-                      <td class="name">
-                        <a href="/de_DE/monsters/magikrab.html"
-                          title="Magikrabbe">
-                          Magikrabbe
-                          (<small class="beast-id">#000</small>)
-                        </a>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </article>
         </div>
+
+        <section class="additional-section animate__animated animate__fadeIn">
+          <h3 class="Neu5Land">Werte</h3>
+          <div class="table-container">
+            <table class="additional highlight-cell animate__animated animate__fadeIn">
+              <thead>
+                <tr>
+                  <td class="ta-center">Kraft</td>
+                  <td class="ta-center">Präzision</td>
+                  <td class="ta-center">Kosten</td>
+                  <td class="ta-center">Prioritätschance</td>
+                  <td class="ta-center">Kann kopiert werden</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="ta-center">0</td>
+                  <td class="ta-center">
+                    Unvermeidlich
+                  </td>
+                  <td class="ta-center">
+                    2
+                  </td>
+                  <td class="ta-center">-10</td>
+                  <td class="ta-center">true</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="additional-section animate__animated animate__fadeIn">
+          <h3 class="tags">
+            <span class="Neu5Land">Etikett:</span>&nbsp;
+            <small>
+                  <span>deception</span>
+                  <span class="">,&nbsp;</span>
+                </small><small>
+                  <span>annoy</span>
+                  <span class="">,&nbsp;</span>
+                </small><small>
+                  <span>sound</span>
+                  <span class="">,&nbsp;</span>
+                </small><small>
+                  <span>support</span>
+                  <span class="">,&nbsp;</span>
+                </small><small>
+                  <span>captain_cybil</span>
+                  <span class="hidden">,&nbsp;</span>
+                </small>
+          </h3>
+        </section>
+
+        <section class="status-card-container">
+          
+        </section>
+      </div>
+    </article>
+
+    <article class="move-detail-card item-detail-card">
+      <div class="move-detail-card-heading item-detail-card-heading">
+        <h2 class="Neu5Land animate__animated animate__fadeIn">Sticker anwenden</h2>
+        <div class="spacer"></div>
+      </div>
+      <div class="move-detail-card-body item-detail-card-body">
+        <div class="table-container">
+          <table class="additional-section highlight-row animate__animated animate__fadeIn">
+            <tbody>
+              <tr class="no-padding">
+                    <td class="sprite ta-center">
+                      <a href="/de_DE/monsters/springheel.html" title="Sprungfeder">
+                        <img src="/assets/img/generated/sprites/monsters/springheel.png" class="remaster-image" alt="Sprungfeder" loading="lazy" draggable="false">
+                      </a>
+                    </td>
+                    <td class="name">
+                      <a href="/de_DE/monsters/springheel.html" title="Sprungfeder">
+                        Sprungfeder(
+                        <small class="beast-id">#001</small>)
+                      </a>
+                    </td>
+                  </tr><tr class="no-padding">
+                    <td class="sprite ta-center">
+                      <a href="/de_DE/monsters/hopskin.html" title="Hoppskin">
+                        <img src="/assets/img/generated/sprites/monsters/hopskin.png" class="remaster-image" alt="Hoppskin" loading="lazy" draggable="false">
+                      </a>
+                    </td>
+                    <td class="name">
+                      <a href="/de_DE/monsters/hopskin.html" title="Hoppskin">
+                        Hoppskin(
+                        <small class="beast-id">#002</small>)
+                      </a>
+                    </td>
+                  </tr><tr class="no-padding">
+                    <td class="sprite ta-center">
+                      <a href="/de_DE/monsters/ripterra.html" title="Ripterra">
+                        <img src="/assets/img/generated/sprites/monsters/ripterra.png" class="remaster-image" alt="Ripterra" loading="lazy" draggable="false">
+                      </a>
+                    </td>
+                    <td class="name">
+                      <a href="/de_DE/monsters/ripterra.html" title="Ripterra">
+                        Ripterra(
+                        <small class="beast-id">#003</small>)
+                      </a>
+                    </td>
+                  </tr><tr class="no-padding">
+                    <td class="sprite ta-center">
+                      <a href="/de_DE/monsters/snoopin.html" title="Raubling">
+                        <img src="/assets/img/generated/sprites/monsters/snoopin.png" class="remaster-image" alt="Raubling" loading="lazy" draggable="false">
+                      </a>
+                    </td>
+                    <td class="name">
+                      <a href="/de_DE/monsters/snoopin.html" title="Raubling">
+                        Raubling(
+                        <small class="beast-id">#004</small>)
+                      </a>
+                    </td>
+                  </tr><tr class="no-padding">
+                    <td class="sprite ta-center">
+                      <a href="/de_DE/monsters/scampire.html" title="Gaunpir">
+                        <img src="/assets/img/generated/sprites/monsters/scampire.png" class="remaster-image" alt="Gaunpir" loading="lazy" draggable="false">
+                      </a>
+                    </td>
+                    <td class="name">
+                      <a href="/de_DE/monsters/scampire.html" title="Gaunpir">
+                        Gaunpir(
+                        <small class="beast-id">#005</small>)
+                      </a>
+                    </td>
+                  </tr><tr class="no-padding">
+                    <td class="sprite ta-center">
+                      <a href="/de_DE/monsters/carniviper.html" title="Karniviper">
+                        <img src="/assets/img/generated/sprites/monsters/carniviper.png" class="remaster-image" alt="Karniviper" loading="lazy" draggable="false">
+                      </a>
+                    </td>
+                    <td class="name">
+                      <a href="/de_DE/monsters/carniviper.html" title="Karniviper">
+                        Karniviper(
+                        <small class="beast-id">#006</small>)
+                      </a>
+                    </td>
+                  </tr><tr class="no-padding">
+                    <td class="sprite ta-center">
+                      <a href="/de_DE/monsters/masquerattle.html" title="Masklapper">
+                        <img src="/assets/img/generated/sprites/monsters/masquerattle.png" class="remaster-image" alt="Masklapper" loading="lazy" draggable="false">
+                      </a>
+                    </td>
+                    <td class="name">
+                      <a href="/de_DE/monsters/masquerattle.html" title="Masklapper">
+                        Masklapper(
+                        <small class="beast-id">#007</small>)
+                      </a>
+                    </td>
+                  </tr><tr class="no-padding">
+                    <td class="sprite ta-center">
+                      <a href="/de_DE/monsters/jormungold.html" title="Jormungold">
+                        <img src="/assets/img/generated/sprites/monsters/jormungold.png" class="remaster-image" alt="Jormungold" loading="lazy" draggable="false">
+                      </a>
+                    </td>
+                    <td class="name">
+                      <a href="/de_DE/monsters/jormungold.html" title="Jormungold">
+                        Jormungold(
+                        <small class="beast-id">#008</small>)
+                      </a>
+                    </td>
+                  </tr><tr class="no-padding">
+                    <td class="sprite ta-center">
+                      <a href="/de_DE/monsters/mardiusa.html" title="Mardiusa">
+                        <img src="/assets/img/generated/sprites/monsters/mardiusa.png" class="remaster-image" alt="Mardiusa" loading="lazy" draggable="false">
+                      </a>
+                    </td>
+                    <td class="name">
+                      <a href="/de_DE/monsters/mardiusa.html" title="Mardiusa">
+                        Mardiusa(
+                        <small class="beast-id">#009</small>)
+                      </a>
+                    </td>
+                  </tr><tr class="no-padding">
+                    <td class="sprite ta-center">
+                      <a href="/de_DE/monsters/aeroboros.html" title="Aeroboros">
+                        <img src="/assets/img/generated/sprites/monsters/aeroboros.png" class="remaster-image" alt="Aeroboros" loading="lazy" draggable="false">
+                      </a>
+                    </td>
+                    <td class="name">
+                      <a href="/de_DE/monsters/aeroboros.html" title="Aeroboros">
+                        Aeroboros(
+                        <small class="beast-id">#010</small>)
+                      </a>
+                    </td>
+                  </tr><tr class="no-padding">
+                    <td class="sprite ta-center">
+                      <a href="/de_DE/monsters/traffikrab.html" title="Verkehrskrabbe">
+                        <img src="/assets/img/generated/sprites/monsters/traffikrab.png" class="remaster-image" alt="Verkehrskrabbe" loading="lazy" draggable="false">
+                      </a>
+                    </td>
+                    <td class="name">
+                      <a href="/de_DE/monsters/traffikrab.html" title="Verkehrskrabbe">
+                        Verkehrskrabbe(
+                        <small class="beast-id">#011</small>)
+                      </a>
+                    </td>
+                  </tr><tr class="no-padding">
+                    <td class="sprite ta-center">
+                      <a href="/de_DE/monsters/weevilite.html" title="Rüsselampel">
+                        <img src="/assets/img/generated/sprites/monsters/weevilite.png" class="remaster-image" alt="Rüsselampel" loading="lazy" draggable="false">
+                      </a>
+                    </td>
+                    <td class="name">
+                      <a href="/de_DE/monsters/weevilite.html" title="Rüsselampel">
+                        Rüsselampel(
+                        <small class="beast-id">#012</small>)
+                      </a>
+                    </td>
+                  </tr><tr class="no-padding">
+                    <td class="sprite ta-center">
+                      <a href="/de_DE/monsters/lobstacle.html" title="Hummersperre">
+                        <img src="/assets/img/generated/sprites/monsters/lobstacle.png" class="remaster-image" alt="Hummersperre" loading="lazy" draggable="false">
+                      </a>
+                    </td>
+                    <td class="name">
+                      <a href="/de_DE/monsters/lobstacle.html" title="Hummersperre">
+                        Hummersperre(
+                        <small class="beast-id">#013</small>)
+                      </a>
+                    </td>
+                  </tr><tr class="no-padding">
+                    <td class="sprite ta-center">
+                      <a href="/de_DE/monsters/candevil.html" title="Bonbonteufel">
+                        <img src="/assets/img/generated/sprites/monsters/candevil.png" class="remaster-image" alt="Bonbonteufel" loading="lazy" draggable="false">
+                      </a>
+                    </td>
+                    <td class="name">
+                      <a href="/de_DE/monsters/candevil.html" title="Bonbonteufel">
+                        Bonbonteufel(
+                        <small class="beast-id">#014</small>)
+                      </a>
+                    </td>
+                  </tr><tr class="no-padding">
+                    <td class="sprite ta-center">
+                      <a href="/de_DE/monsters/malchemy.html" title="Malchemist">
+                        <img src="/assets/img/generated/sprites/monsters/malchemy.png" class="remaster-image" alt="Malchemist" loading="lazy" draggable="false">
+                      </a>
+                    </td>
+                    <td class="name">
+                      <a href="/de_DE/monsters/malchemy.html" title="Malchemist">
+                        Malchemist(
+                        <small class="beast-id">#015</small>)
+                      </a>
+                    </td>
+                  </tr><tr class="no-padding">
+                    <td class="sprite ta-center">
+                      <a href="/de_DE/monsters/miasmodeus.html" title="Miasmodeus">
+                        <img src="/assets/img/generated/sprites/monsters/miasmodeus.png" class="remaster-image" alt="Miasmodeus" loading="lazy" draggable="false">
+                      </a>
+                    </td>
+                    <td class="name">
+                      <a href="/de_DE/monsters/miasmodeus.html" title="Miasmodeus">
+                        Miasmodeus(
+                        <small class="beast-id">#016</small>)
+                      </a>
+                    </td>
+                  </tr><tr class="no-padding">
+                    <td class="sprite ta-center">
+                      <a href="/de_DE/monsters/vendemon.html" title="Venenudämon">
+                        <img src="/assets/img/generated/sprites/monsters/vendemon.png" class="remaster-image" alt="Venenudämon" loading="lazy" draggable="false">
+                      </a>
+                    </td>
+                    <td class="name">
+                      <a href="/de_DE/monsters/vendemon.html" title="Venenudämon">
+                        Venenudämon(
+                        <small class="beast-id">#017</small>)
+                      </a>
+                    </td>
+                  </tr><tr class="no-padding">
+                    <td class="sprite ta-center">
+                      <a href="/de_DE/monsters/gumbaal.html" title="Kaugummibaal">
+                        <img src="/assets/img/generated/sprites/monsters/gumbaal.png" class="remaster-image" alt="Kaugummibaal" loading="lazy" draggable="false">
+                      </a>
+                    </td>
+                    <td class="name">
+                      <a href="/de_DE/monsters/gumbaal.html" title="Kaugummibaal">
+                        Kaugummibaal(
+                        <small class="beast-id">#018</small>)
+                      </a>
+                    </td>
+                  </tr><tr class="no-padding">
+                    <td class="sprite ta-center">
+                      <a href="/de_DE/monsters/sirenade.html" title="Sirenade">
+                        <img src="/assets/img/generated/sprites/monsters/sirenade.png" class="remaster-image" alt="Sirenade" loading="lazy" draggable="false">
+                      </a>
+                    </td>
+                    <td class="name">
+                      <a href="/de_DE/monsters/sirenade.html" title="Sirenade">
+                        Sirenade(
+                        <small class="beast-id">#024</small>)
+                      </a>
+                    </td>
+                  </tr><tr class="no-padding">
+                    <td class="sprite ta-center">
+                      <a href="/de_DE/monsters/decibelle.html" title="Dezibelle">
+                        <img src="/assets/img/generated/sprites/monsters/decibelle.png" class="remaster-image" alt="Dezibelle" loading="lazy" draggable="false">
+                      </a>
+                    </td>
+                    <td class="name">
+                      <a href="/de_DE/monsters/decibelle.html" title="Dezibelle">
+                        Dezibelle(
+                        <small class="beast-id">#025</small>)
+                      </a>
+                    </td>
+                  </tr><tr class="no-padding">
+                    <td class="sprite ta-center">
+                      <a href="/de_DE/monsters/dominoth.html" title="Dominotte">
+                        <img src="/assets/img/generated/sprites/monsters/dominoth.png" class="remaster-image" alt="Dominotte" loading="lazy" draggable="false">
+                      </a>
+                    </td>
+                    <td class="name">
+                      <a href="/de_DE/monsters/dominoth.html" title="Dominotte">
+                        Dominotte(
+                        <small class="beast-id">#030</small>)
+                      </a>
+                    </td>
+                  </tr><tr class="no-padding">
+                    <td class="sprite ta-center">
+                      <a href="/de_DE/monsters/wingloom.html" title="Düsterflügler">
+                        <img src="/assets/img/generated/sprites/monsters/wingloom.png" class="remaster-image" alt="Düsterflügler" loading="lazy" draggable="false">
+                      </a>
+                    </td>
+                    <td class="name">
+                      <a href="/de_DE/monsters/wingloom.html" title="Düsterflügler">
+                        Düsterflügler(
+                        <small class="beast-id">#031</small>)
+                      </a>
+                    </td>
+                  </tr><tr class="no-padding">
+                    <td class="sprite ta-center">
+                      <a href="/de_DE/monsters/mothmanic.html" title="Mottenmaniker">
+                        <img src="/assets/img/generated/sprites/monsters/mothmanic.png" class="remaster-image" alt="Mottenmaniker" loading="lazy" draggable="false">
+                      </a>
+                    </td>
+                    <td class="name">
+                      <a href="/de_DE/monsters/mothmanic.html" title="Mottenmaniker">
+                        Mottenmaniker(
+                        <small class="beast-id">#032</small>)
+                      </a>
+                    </td>
+                  </tr><tr class="no-padding">
+                    <td class="sprite ta-center">
+                      <a href="/de_DE/monsters/tokusect.html" title="Tokusekt">
+                        <img src="/assets/img/generated/sprites/monsters/tokusect.png" class="remaster-image" alt="Tokusekt" loading="lazy" draggable="false">
+                      </a>
+                    </td>
+                    <td class="name">
+                      <a href="/de_DE/monsters/tokusect.html" title="Tokusekt">
+                        Tokusekt(
+                        <small class="beast-id">#033</small>)
+                      </a>
+                    </td>
+                  </tr><tr class="no-padding">
+                    <td class="sprite ta-center">
+                      <a href="/de_DE/monsters/manispear.html" title="Manispeer">
+                        <img src="/assets/img/generated/sprites/monsters/manispear.png" class="remaster-image" alt="Manispeer" loading="lazy" draggable="false">
+                      </a>
+                    </td>
+                    <td class="name">
+                      <a href="/de_DE/monsters/manispear.html" title="Manispeer">
+                        Manispeer(
+                        <small class="beast-id">#035</small>)
+                      </a>
+                    </td>
+                  </tr><tr class="no-padding">
+                    <td class="sprite ta-center">
+                      <a href="/de_DE/monsters/kittelly.html" title="Glotzenmieze">
+                        <img src="/assets/img/generated/sprites/monsters/kittelly.png" class="remaster-image" alt="Glotzenmieze" loading="lazy" draggable="false">
+                      </a>
+                    </td>
+                    <td class="name">
+                      <a href="/de_DE/monsters/kittelly.html" title="Glotzenmieze">
+                        Glotzenmieze(
+                        <small class="beast-id">#037</small>)
+                      </a>
+                    </td>
+                  </tr><tr class="no-padding">
+                    <td class="sprite ta-center">
+                      <a href="/de_DE/monsters/cat-5.html" title="Cat-5">
+                        <img src="/assets/img/generated/sprites/monsters/cat-5.png" class="remaster-image" alt="Cat-5" loading="lazy" draggable="false">
+                      </a>
+                    </td>
+                    <td class="name">
+                      <a href="/de_DE/monsters/cat-5.html" title="Cat-5">
+                        Cat-5(
+                        <small class="beast-id">#038</small>)
+                      </a>
+                    </td>
+                  </tr><tr class="no-padding">
+                    <td class="sprite ta-center">
+                      <a href="/de_DE/monsters/nevermort.html" title="Nimmertod">
+                        <img src="/assets/img/generated/sprites/monsters/nevermort.png" class="remaster-image" alt="Nimmertod" loading="lazy" draggable="false">
+                      </a>
+                    </td>
+                    <td class="name">
+                      <a href="/de_DE/monsters/nevermort.html" title="Nimmertod">
+                        Nimmertod(
+                        <small class="beast-id">#047</small>)
+                      </a>
+                    </td>
+                  </tr><tr class="no-padding">
+                    <td class="sprite ta-center">
+                      <a href="/de_DE/monsters/apocrowlypse.html" title="Apokrählypse">
+                        <img src="/assets/img/generated/sprites/monsters/apocrowlypse.png" class="remaster-image" alt="Apokrählypse" loading="lazy" draggable="false">
+                      </a>
+                    </td>
+                    <td class="name">
+                      <a href="/de_DE/monsters/apocrowlypse.html" title="Apokrählypse">
+                        Apokrählypse(
+                        <small class="beast-id">#048</small>)
+                      </a>
+                    </td>
+                  </tr><tr class="no-padding">
+                    <td class="sprite ta-center">
+                      <a href="/de_DE/monsters/clocksley.html" title="Aufziehrobin">
+                        <img src="/assets/img/generated/sprites/monsters/clocksley.png" class="remaster-image" alt="Aufziehrobin" loading="lazy" draggable="false">
+                      </a>
+                    </td>
+                    <td class="name">
+                      <a href="/de_DE/monsters/clocksley.html" title="Aufziehrobin">
+                        Aufziehrobin(
+                        <small class="beast-id">#049</small>)
+                      </a>
+                    </td>
+                  </tr><tr class="no-padding">
+                    <td class="sprite ta-center">
+                      <a href="/de_DE/monsters/robindam.html" title="Robindam">
+                        <img src="/assets/img/generated/sprites/monsters/robindam.png" class="remaster-image" alt="Robindam" loading="lazy" draggable="false">
+                      </a>
+                    </td>
+                    <td class="name">
+                      <a href="/de_DE/monsters/robindam.html" title="Robindam">
+                        Robindam(
+                        <small class="beast-id">#050</small>)
+                      </a>
+                    </td>
+                  </tr><tr class="no-padding">
+                    <td class="sprite ta-center">
+                      <a href="/de_DE/monsters/allseer.html" title="Allseher">
+                        <img src="/assets/img/generated/sprites/monsters/allseer.png" class="remaster-image" alt="Allseher" loading="lazy" draggable="false">
+                      </a>
+                    </td>
+                    <td class="name">
+                      <a href="/de_DE/monsters/allseer.html" title="Allseher">
+                        Allseher(
+                        <small class="beast-id">#052</small>)
+                      </a>
+                    </td>
+                  </tr><tr class="no-padding">
+                    <td class="sprite ta-center">
+                      <a href="/de_DE/monsters/khufo.html" title="Khufo">
+                        <img src="/assets/img/generated/sprites/monsters/khufo.png" class="remaster-image" alt="Khufo" loading="lazy" draggable="false">
+                      </a>
+                    </td>
+                    <td class="name">
+                      <a href="/de_DE/monsters/khufo.html" title="Khufo">
+                        Khufo(
+                        <small class="beast-id">#053</small>)
+                      </a>
+                    </td>
+                  </tr><tr class="no-padding">
+                    <td class="sprite ta-center">
+                      <a href="/de_DE/monsters/triphinx.html" title="Dreiphinx">
+                        <img src="/assets/img/generated/sprites/monsters/triphinx.png" class="remaster-image" alt="Dreiphinx" loading="lazy" draggable="false">
+                      </a>
+                    </td>
+                    <td class="name">
+                      <a href="/de_DE/monsters/triphinx.html" title="Dreiphinx">
+                        Dreiphinx(
+                        <small class="beast-id">#054</small>)
+                      </a>
+                    </td>
+                  </tr><tr class="no-padding">
+                    <td class="sprite ta-center">
+                      <a href="/de_DE/monsters/salamagus.html" title="Salamagus">
+                        <img src="/assets/img/generated/sprites/monsters/salamagus.png" class="remaster-image" alt="Salamagus" loading="lazy" draggable="false">
+                      </a>
+                    </td>
+                    <td class="name">
+                      <a href="/de_DE/monsters/salamagus.html" title="Salamagus">
+                        Salamagus(
+                        <small class="beast-id">#059</small>)
+                      </a>
+                    </td>
+                  </tr><tr class="no-padding">
+                    <td class="sprite ta-center">
+                      <a href="/de_DE/monsters/pyromeleon.html" title="Pyromeleon">
+                        <img src="/assets/img/generated/sprites/monsters/pyromeleon.png" class="remaster-image" alt="Pyromeleon" loading="lazy" draggable="false">
+                      </a>
+                    </td>
+                    <td class="name">
+                      <a href="/de_DE/monsters/pyromeleon.html" title="Pyromeleon">
+                        Pyromeleon(
+                        <small class="beast-id">#060</small>)
+                      </a>
+                    </td>
+                  </tr><tr class="no-padding">
+                    <td class="sprite ta-center">
+                      <a href="/de_DE/monsters/muskrateer.html" title="Moschketier">
+                        <img src="/assets/img/generated/sprites/monsters/muskrateer.png" class="remaster-image" alt="Moschketier" loading="lazy" draggable="false">
+                      </a>
+                    </td>
+                    <td class="name">
+                      <a href="/de_DE/monsters/muskrateer.html" title="Moschketier">
+                        Moschketier(
+                        <small class="beast-id">#061</small>)
+                      </a>
+                    </td>
+                  </tr><tr class="no-padding">
+                    <td class="sprite ta-center">
+                      <a href="/de_DE/monsters/ratcousel.html" title="Rattkussell">
+                        <img src="/assets/img/generated/sprites/monsters/ratcousel.png" class="remaster-image" alt="Rattkussell" loading="lazy" draggable="false">
+                      </a>
+                    </td>
+                    <td class="name">
+                      <a href="/de_DE/monsters/ratcousel.html" title="Rattkussell">
+                        Rattkussell(
+                        <small class="beast-id">#062</small>)
+                      </a>
+                    </td>
+                  </tr><tr class="no-padding">
+                    <td class="sprite ta-center">
+                      <a href="/de_DE/monsters/padpole.html" title="Kaulblatt">
+                        <img src="/assets/img/generated/sprites/monsters/padpole.png" class="remaster-image" alt="Kaulblatt" loading="lazy" draggable="false">
+                      </a>
+                    </td>
+                    <td class="name">
+                      <a href="/de_DE/monsters/padpole.html" title="Kaulblatt">
+                        Kaulblatt(
+                        <small class="beast-id">#063</small>)
+                      </a>
+                    </td>
+                  </tr><tr class="no-padding">
+                    <td class="sprite ta-center">
+                      <a href="/de_DE/monsters/frillypad.html" title="Rüschblatt">
+                        <img src="/assets/img/generated/sprites/monsters/frillypad.png" class="remaster-image" alt="Rüschblatt" loading="lazy" draggable="false">
+                      </a>
+                    </td>
+                    <td class="name">
+                      <a href="/de_DE/monsters/frillypad.html" title="Rüschblatt">
+                        Rüschblatt(
+                        <small class="beast-id">#064</small>)
+                      </a>
+                    </td>
+                  </tr><tr class="no-padding">
+                    <td class="sprite ta-center">
+                      <a href="/de_DE/monsters/liligator.html" title="Liligator">
+                        <img src="/assets/img/generated/sprites/monsters/liligator.png" class="remaster-image" alt="Liligator" loading="lazy" draggable="false">
+                      </a>
+                    </td>
+                    <td class="name">
+                      <a href="/de_DE/monsters/liligator.html" title="Liligator">
+                        Liligator(
+                        <small class="beast-id">#065</small>)
+                      </a>
+                    </td>
+                  </tr><tr class="no-padding">
+                    <td class="sprite ta-center">
+                      <a href="/de_DE/monsters/elfless.html" title="Elflos">
+                        <img src="/assets/img/generated/sprites/monsters/elfless.png" class="remaster-image" alt="Elflos" loading="lazy" draggable="false">
+                      </a>
+                    </td>
+                    <td class="name">
+                      <a href="/de_DE/monsters/elfless.html" title="Elflos">
+                        Elflos(
+                        <small class="beast-id">#066</small>)
+                      </a>
+                    </td>
+                  </tr><tr class="no-padding">
+                    <td class="sprite ta-center">
+                      <a href="/de_DE/monsters/grampus.html" title="Grantpus">
+                        <img src="/assets/img/generated/sprites/monsters/grampus.png" class="remaster-image" alt="Grantpus" loading="lazy" draggable="false">
+                      </a>
+                    </td>
+                    <td class="name">
+                      <a href="/de_DE/monsters/grampus.html" title="Grantpus">
+                        Grantpus(
+                        <small class="beast-id">#067</small>)
+                      </a>
+                    </td>
+                  </tr><tr class="no-padding">
+                    <td class="sprite ta-center">
+                      <a href="/de_DE/monsters/faerious.html" title="Wutfee">
+                        <img src="/assets/img/generated/sprites/monsters/faerious.png" class="remaster-image" alt="Wutfee" loading="lazy" draggable="false">
+                      </a>
+                    </td>
+                    <td class="name">
+                      <a href="/de_DE/monsters/faerious.html" title="Wutfee">
+                        Wutfee(
+                        <small class="beast-id">#068</small>)
+                      </a>
+                    </td>
+                  </tr><tr class="no-padding">
+                    <td class="sprite ta-center">
+                      <a href="/de_DE/monsters/brushroom.html" title="Pinselpilz">
+                        <img src="/assets/img/generated/sprites/monsters/brushroom.png" class="remaster-image" alt="Pinselpilz" loading="lazy" draggable="false">
+                      </a>
+                    </td>
+                    <td class="name">
+                      <a href="/de_DE/monsters/brushroom.html" title="Pinselpilz">
+                        Pinselpilz(
+                        <small class="beast-id">#069</small>)
+                      </a>
+                    </td>
+                  </tr><tr class="no-padding">
+                    <td class="sprite ta-center">
+                      <a href="/de_DE/monsters/fungogh.html" title="Fungogh">
+                        <img src="/assets/img/generated/sprites/monsters/fungogh.png" class="remaster-image" alt="Fungogh" loading="lazy" draggable="false">
+                      </a>
+                    </td>
+                    <td class="name">
+                      <a href="/de_DE/monsters/fungogh.html" title="Fungogh">
+                        Fungogh(
+                        <small class="beast-id">#070</small>)
+                      </a>
+                    </td>
+                  </tr><tr class="no-padding">
+                    <td class="sprite ta-center">
+                      <a href="/de_DE/monsters/busheye.html" title="Buschauge">
+                        <img src="/assets/img/generated/sprites/monsters/busheye.png" class="remaster-image" alt="Buschauge" loading="lazy" draggable="false">
+                      </a>
+                    </td>
+                    <td class="name">
+                      <a href="/de_DE/monsters/busheye.html" title="Buschauge">
+                        Buschauge(
+                        <small class="beast-id">#073</small>)
+                      </a>
+                    </td>
+                  </tr><tr class="no-padding">
+                    <td class="sprite ta-center">
+                      <a href="/de_DE/monsters/huntorch.html" title="Jägerfackel">
+                        <img src="/assets/img/generated/sprites/monsters/huntorch.png" class="remaster-image" alt="Jägerfackel" loading="lazy" draggable="false">
+                      </a>
+                    </td>
+                    <td class="name">
+                      <a href="/de_DE/monsters/huntorch.html" title="Jägerfackel">
+                        Jägerfackel(
+                        <small class="beast-id">#074</small>)
+                      </a>
+                    </td>
+                  </tr><tr class="no-padding">
+                    <td class="sprite ta-center">
+                      <a href="/de_DE/monsters/hedgeherne.html" title="Heckenherne">
+                        <img src="/assets/img/generated/sprites/monsters/hedgeherne.png" class="remaster-image" alt="Heckenherne" loading="lazy" draggable="false">
+                      </a>
+                    </td>
+                    <td class="name">
+                      <a href="/de_DE/monsters/hedgeherne.html" title="Heckenherne">
+                        Heckenherne(
+                        <small class="beast-id">#075</small>)
+                      </a>
+                    </td>
+                  </tr><tr class="no-padding">
+                    <td class="sprite ta-center">
+                      <a href="/de_DE/monsters/galagor.html" title="Galagor">
+                        <img src="/assets/img/generated/sprites/monsters/galagor.png" class="remaster-image" alt="Galagor" loading="lazy" draggable="false">
+                      </a>
+                    </td>
+                    <td class="name">
+                      <a href="/de_DE/monsters/galagor.html" title="Galagor">
+                        Galagor(
+                        <small class="beast-id">#079</small>)
+                      </a>
+                    </td>
+                  </tr><tr class="no-padding">
+                    <td class="sprite ta-center">
+                      <a href="/de_DE/monsters/mascotoy.html" title="Maskottier">
+                        <img src="/assets/img/generated/sprites/monsters/mascotoy.png" class="remaster-image" alt="Maskottier" loading="lazy" draggable="false">
+                      </a>
+                    </td>
+                    <td class="name">
+                      <a href="/de_DE/monsters/mascotoy.html" title="Maskottier">
+                        Maskottier(
+                        <small class="beast-id">#080</small>)
+                      </a>
+                    </td>
+                  </tr><tr class="no-padding">
+                    <td class="sprite ta-center">
+                      <a href="/de_DE/monsters/mascotorn.html" title="Platzketier">
+                        <img src="/assets/img/generated/sprites/monsters/mascotorn.png" class="remaster-image" alt="Platzketier" loading="lazy" draggable="false">
+                      </a>
+                    </td>
+                    <td class="name">
+                      <a href="/de_DE/monsters/mascotorn.html" title="Platzketier">
+                        Platzketier(
+                        <small class="beast-id">#081</small>)
+                      </a>
+                    </td>
+                  </tr><tr class="no-padding">
+                    <td class="sprite ta-center">
+                      <a href="/de_DE/monsters/jellyton.html" title="Schleimlett">
+                        <img src="/assets/img/generated/sprites/monsters/jellyton.png" class="remaster-image" alt="Schleimlett" loading="lazy" draggable="false">
+                      </a>
+                    </td>
+                    <td class="name">
+                      <a href="/de_DE/monsters/jellyton.html" title="Schleimlett">
+                        Schleimlett(
+                        <small class="beast-id">#086</small>)
+                      </a>
+                    </td>
+                  </tr><tr class="no-padding">
+                    <td class="sprite ta-center">
+                      <a href="/de_DE/monsters/skelevangelist.html" title="Skelevangelist">
+                        <img src="/assets/img/generated/sprites/monsters/skelevangelist.png" class="remaster-image" alt="Skelevangelist" loading="lazy" draggable="false">
+                      </a>
+                    </td>
+                    <td class="name">
+                      <a href="/de_DE/monsters/skelevangelist.html" title="Skelevangelist">
+                        Skelevangelist(
+                        <small class="beast-id">#093</small>)
+                      </a>
+                    </td>
+                  </tr><tr class="no-padding">
+                    <td class="sprite ta-center">
+                      <a href="/de_DE/monsters/kingrave.html" title="Königsskelett">
+                        <img src="/assets/img/generated/sprites/monsters/kingrave.png" class="remaster-image" alt="Königsskelett" loading="lazy" draggable="false">
+                      </a>
+                    </td>
+                    <td class="name">
+                      <a href="/de_DE/monsters/kingrave.html" title="Königsskelett">
+                        Königsskelett(
+                        <small class="beast-id">#094</small>)
+                      </a>
+                    </td>
+                  </tr><tr class="no-padding">
+                    <td class="sprite ta-center">
+                      <a href="/de_DE/monsters/queenyx.html" title="Damenskelett">
+                        <img src="/assets/img/generated/sprites/monsters/queenyx.png" class="remaster-image" alt="Damenskelett" loading="lazy" draggable="false">
+                      </a>
+                    </td>
+                    <td class="name">
+                      <a href="/de_DE/monsters/queenyx.html" title="Damenskelett">
+                        Damenskelett(
+                        <small class="beast-id">#095</small>)
+                      </a>
+                    </td>
+                  </tr><tr class="no-padding">
+                    <td class="sprite ta-center">
+                      <a href="/de_DE/monsters/burnace.html" title="Brennofen">
+                        <img src="/assets/img/generated/sprites/monsters/burnace.png" class="remaster-image" alt="Brennofen" loading="lazy" draggable="false">
+                      </a>
+                    </td>
+                    <td class="name">
+                      <a href="/de_DE/monsters/burnace.html" title="Brennofen">
+                        Brennofen(
+                        <small class="beast-id">#096</small>)
+                      </a>
+                    </td>
+                  </tr><tr class="no-padding">
+                    <td class="sprite ta-center">
+                      <a href="/de_DE/monsters/smogmagog.html" title="Smogmagog">
+                        <img src="/assets/img/generated/sprites/monsters/smogmagog.png" class="remaster-image" alt="Smogmagog" loading="lazy" draggable="false">
+                      </a>
+                    </td>
+                    <td class="name">
+                      <a href="/de_DE/monsters/smogmagog.html" title="Smogmagog">
+                        Smogmagog(
+                        <small class="beast-id">#097</small>)
+                      </a>
+                    </td>
+                  </tr><tr class="no-padding">
+                    <td class="sprite ta-center">
+                      <a href="/de_DE/monsters/cluckabilly.html" title="Gackerbilly">
+                        <img src="/assets/img/generated/sprites/monsters/cluckabilly.png" class="remaster-image" alt="Gackerbilly" loading="lazy" draggable="false">
+                      </a>
+                    </td>
+                    <td class="name">
+                      <a href="/de_DE/monsters/cluckabilly.html" title="Gackerbilly">
+                        Gackerbilly(
+                        <small class="beast-id">#100</small>)
+                      </a>
+                    </td>
+                  </tr><tr class="no-padding">
+                    <td class="sprite ta-center">
+                      <a href="/de_DE/monsters/rockertrice.html" title="Rockilisk">
+                        <img src="/assets/img/generated/sprites/monsters/rockertrice.png" class="remaster-image" alt="Rockilisk" loading="lazy" draggable="false">
+                      </a>
+                    </td>
+                    <td class="name">
+                      <a href="/de_DE/monsters/rockertrice.html" title="Rockilisk">
+                        Rockilisk(
+                        <small class="beast-id">#101</small>)
+                      </a>
+                    </td>
+                  </tr><tr class="no-padding">
+                    <td class="sprite ta-center">
+                      <a href="/de_DE/monsters/pombomb.html" title="Pombombe">
+                        <img src="/assets/img/generated/sprites/monsters/pombomb.png" class="remaster-image" alt="Pombombe" loading="lazy" draggable="false">
+                      </a>
+                    </td>
+                    <td class="name">
+                      <a href="/de_DE/monsters/pombomb.html" title="Pombombe">
+                        Pombombe(
+                        <small class="beast-id">#104</small>)
+                      </a>
+                    </td>
+                  </tr><tr class="no-padding">
+                    <td class="sprite ta-center">
+                      <a href="/de_DE/monsters/spitzfyre.html" title="Feuerspitz">
+                        <img src="/assets/img/generated/sprites/monsters/spitzfyre.png" class="remaster-image" alt="Feuerspitz" loading="lazy" draggable="false">
+                      </a>
+                    </td>
+                    <td class="name">
+                      <a href="/de_DE/monsters/spitzfyre.html" title="Feuerspitz">
+                        Feuerspitz(
+                        <small class="beast-id">#105</small>)
+                      </a>
+                    </td>
+                  </tr><tr class="no-padding">
+                    <td class="sprite ta-center">
+                      <a href="/de_DE/monsters/zeustrike.html" title="Zeusschlag">
+                        <img src="/assets/img/generated/sprites/monsters/zeustrike.png" class="remaster-image" alt="Zeusschlag" loading="lazy" draggable="false">
+                      </a>
+                    </td>
+                    <td class="name">
+                      <a href="/de_DE/monsters/zeustrike.html" title="Zeusschlag">
+                        Zeusschlag(
+                        <small class="beast-id">#109</small>)
+                      </a>
+                    </td>
+                  </tr><tr class="no-padding">
+                    <td class="sprite ta-center">
+                      <a href="/de_DE/monsters/kuneko.html" title="Kuneko">
+                        <img src="/assets/img/generated/sprites/monsters/kuneko.png" class="remaster-image" alt="Kuneko" loading="lazy" draggable="false">
+                      </a>
+                    </td>
+                    <td class="name">
+                      <a href="/de_DE/monsters/kuneko.html" title="Kuneko">
+                        Kuneko(
+                        <small class="beast-id">#110</small>)
+                      </a>
+                    </td>
+                  </tr><tr class="no-padding">
+                    <td class="sprite ta-center">
+                      <a href="/de_DE/monsters/shining_kuneko.html" title="Strahlende Kuneko">
+                        <img src="/assets/img/generated/sprites/monsters/shining_kuneko.png" class="remaster-image" alt="Strahlende Kuneko" loading="lazy" draggable="false">
+                      </a>
+                    </td>
+                    <td class="name">
+                      <a href="/de_DE/monsters/shining_kuneko.html" title="Strahlende Kuneko">
+                        Strahlende Kuneko(
+                        <small class="beast-id">#111</small>)
+                      </a>
+                    </td>
+                  </tr><tr class="no-padding">
+                    <td class="sprite ta-center">
+                      <a href="/de_DE/monsters/djinn_entonic.html" title="Dschinn Tonic">
+                        <img src="/assets/img/generated/sprites/monsters/djinn_entonic.png" class="remaster-image" alt="Dschinn Tonic" loading="lazy" draggable="false">
+                      </a>
+                    </td>
+                    <td class="name">
+                      <a href="/de_DE/monsters/djinn_entonic.html" title="Dschinn Tonic">
+                        Dschinn Tonic(
+                        <small class="beast-id">#112</small>)
+                      </a>
+                    </td>
+                  </tr><tr class="no-padding">
+                    <td class="sprite ta-center">
+                      <a href="/de_DE/monsters/glaistain.html" title="Glaiglas">
+                        <img src="/assets/img/generated/sprites/monsters/glaistain.png" class="remaster-image" alt="Glaiglas" loading="lazy" draggable="false">
+                      </a>
+                    </td>
+                    <td class="name">
+                      <a href="/de_DE/monsters/glaistain.html" title="Glaiglas">
+                        Glaiglas(
+                        <small class="beast-id">#118</small>)
+                      </a>
+                    </td>
+                  </tr><tr class="no-padding">
+                    <td class="sprite ta-center">
+                      <a href="/de_DE/monsters/miss_mimic.html" title="Truhentäuscherin">
+                        <img src="/assets/img/generated/sprites/monsters/miss_mimic.png" class="remaster-image" alt="Truhentäuscherin" loading="lazy" draggable="false">
+                      </a>
+                    </td>
+                    <td class="name">
+                      <a href="/de_DE/monsters/miss_mimic.html" title="Truhentäuscherin">
+                        Truhentäuscherin(
+                        <small class="beast-id">#119</small>)
+                      </a>
+                    </td>
+                  </tr><tr class="no-padding">
+                    <td class="sprite ta-center">
+                      <a href="/de_DE/monsters/anathema.html" title="Anathema">
+                        <img src="/assets/img/generated/sprites/monsters/anathema.png" class="remaster-image" alt="Anathema" loading="lazy" draggable="false">
+                      </a>
+                    </td>
+                    <td class="name">
+                      <a href="/de_DE/monsters/anathema.html" title="Anathema">
+                        Anathema(
+                        <small class="beast-id">#120</small>)
+                      </a>
+                    </td>
+                  </tr><tr class="no-padding">
+                    <td class="sprite ta-center">
+                      <a href="/de_DE/monsters/adeptile.html" title="Adeptil">
+                        <img src="/assets/img/generated/sprites/monsters/adeptile.png" class="remaster-image" alt="Adeptil" loading="lazy" draggable="false">
+                      </a>
+                    </td>
+                    <td class="name">
+                      <a href="/de_DE/monsters/adeptile.html" title="Adeptil">
+                        Adeptil(
+                        <small class="beast-id">#123</small>)
+                      </a>
+                    </td>
+                  </tr><tr class="no-padding">
+                    <td class="sprite ta-center">
+                      <a href="/de_DE/monsters/trapwurm.html" title="Fallenwurm">
+                        <img src="/assets/img/generated/sprites/monsters/trapwurm.png" class="remaster-image" alt="Fallenwurm" loading="lazy" draggable="false">
+                      </a>
+                    </td>
+                    <td class="name">
+                      <a href="/de_DE/monsters/trapwurm.html" title="Fallenwurm">
+                        Fallenwurm(
+                        <small class="beast-id">#124</small>)
+                      </a>
+                    </td>
+                  </tr><tr class="no-padding">
+                    <td class="sprite ta-center">
+                      <a href="/de_DE/monsters/wyrmaw.html" title="Wyrmaul">
+                        <img src="/assets/img/generated/sprites/monsters/wyrmaw.png" class="remaster-image" alt="Wyrmaul" loading="lazy" draggable="false">
+                      </a>
+                    </td>
+                    <td class="name">
+                      <a href="/de_DE/monsters/wyrmaw.html" title="Wyrmaul">
+                        Wyrmaul(
+                        <small class="beast-id">#125</small>)
+                      </a>
+                    </td>
+                  </tr><tr class="no-padding">
+                    <td class="sprite ta-center">
+                      <a href="/de_DE/monsters/ferriclaw.html" title="Ferroklaue">
+                        <img src="/assets/img/generated/sprites/monsters/ferriclaw.png" class="remaster-image" alt="Ferroklaue" loading="lazy" draggable="false">
+                      </a>
+                    </td>
+                    <td class="name">
+                      <a href="/de_DE/monsters/ferriclaw.html" title="Ferroklaue">
+                        Ferroklaue(
+                        <small class="beast-id">#126</small>)
+                      </a>
+                    </td>
+                  </tr><tr class="no-padding">
+                    <td class="sprite ta-center">
+                      <a href="/de_DE/monsters/auriclaw.html" title="Aurumklaue">
+                        <img src="/assets/img/generated/sprites/monsters/auriclaw.png" class="remaster-image" alt="Aurumklaue" loading="lazy" draggable="false">
+                      </a>
+                    </td>
+                    <td class="name">
+                      <a href="/de_DE/monsters/auriclaw.html" title="Aurumklaue">
+                        Aurumklaue(
+                        <small class="beast-id">#127</small>)
+                      </a>
+                    </td>
+                  </tr><tr class="no-padding">
+                    <td class="sprite ta-center">
+                      <a href="/de_DE/monsters/picksie.html" title="Spitzie">
+                        <img src="/assets/img/generated/sprites/monsters/picksie.png" class="remaster-image" alt="Spitzie" loading="lazy" draggable="false">
+                      </a>
+                    </td>
+                    <td class="name">
+                      <a href="/de_DE/monsters/picksie.html" title="Spitzie">
+                        Spitzie(
+                        <small class="beast-id">#128</small>)
+                      </a>
+                    </td>
+                  </tr><tr class="no-padding">
+                    <td class="sprite ta-center">
+                      <a href="/de_DE/monsters/blunderbusk.html" title="Pistolenclown">
+                        <img src="/assets/img/generated/sprites/monsters/blunderbusk.png" class="remaster-image" alt="Pistolenclown" loading="lazy" draggable="false">
+                      </a>
+                    </td>
+                    <td class="name">
+                      <a href="/de_DE/monsters/blunderbusk.html" title="Pistolenclown">
+                        Pistolenclown(
+                        <small class="beast-id">#???</small>)
+                      </a>
+                    </td>
+                  </tr><tr class="no-padding">
+                    <td class="sprite ta-center">
+                      <a href="/de_DE/monsters/charlequin.html" title="Kohlekin">
+                        <img src="/assets/img/generated/sprites/monsters/charlequin.png" class="remaster-image" alt="Kohlekin" loading="lazy" draggable="false">
+                      </a>
+                    </td>
+                    <td class="name">
+                      <a href="/de_DE/monsters/charlequin.html" title="Kohlekin">
+                        Kohlekin(
+                        <small class="beast-id">#???</small>)
+                      </a>
+                    </td>
+                  </tr><tr class="no-padding">
+                    <td class="sprite ta-center">
+                      <a href="/de_DE/monsters/fragliacci.html" title="Kanonazzo">
+                        <img src="/assets/img/generated/sprites/monsters/fragliacci.png" class="remaster-image" alt="Kanonazzo" loading="lazy" draggable="false">
+                      </a>
+                    </td>
+                    <td class="name">
+                      <a href="/de_DE/monsters/fragliacci.html" title="Kanonazzo">
+                        Kanonazzo(
+                        <small class="beast-id">#???</small>)
+                      </a>
+                    </td>
+                  </tr><tr class="no-padding">
+                    <td class="sprite ta-center">
+                      <a href="/de_DE/monsters/scarleteeth.html" title="Scharlachzahn">
+                        <img src="/assets/img/generated/sprites/monsters/scarleteeth.png" class="remaster-image" alt="Scharlachzahn" loading="lazy" draggable="false">
+                      </a>
+                    </td>
+                    <td class="name">
+                      <a href="/de_DE/monsters/scarleteeth.html" title="Scharlachzahn">
+                        Scharlachzahn(
+                        <small class="beast-id">#???</small>)
+                      </a>
+                    </td>
+                  </tr><tr class="no-padding">
+                    <td class="sprite ta-center">
+                      <a href="/de_DE/monsters/umbrahella.html" title="Schirmhölla">
+                        <img src="/assets/img/generated/sprites/monsters/umbrahella.png" class="remaster-image" alt="Schirmhölla" loading="lazy" draggable="false">
+                      </a>
+                    </td>
+                    <td class="name">
+                      <a href="/de_DE/monsters/umbrahella.html" title="Schirmhölla">
+                        Schirmhölla(
+                        <small class="beast-id">#???</small>)
+                      </a>
+                    </td>
+                  </tr><tr class="no-padding">
+                    <td class="sprite ta-center">
+                      <a href="/de_DE/monsters/magikrab.html" title="Magikrabbe">
+                        <img src="/assets/img/generated/sprites/monsters/magikrab.png" class="remaster-image" alt="Magikrabbe" loading="lazy" draggable="false">
+                      </a>
+                    </td>
+                    <td class="name">
+                      <a href="/de_DE/monsters/magikrab.html" title="Magikrabbe">
+                        Magikrabbe(
+                        <small class="beast-id">#000</small>)
+                      </a>
+                    </td>
+                  </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </article>
+  </div>
 
     </main>
 
-    <footer class="ta-center">
-        <small class="legal">Diese App ist nicht mit <span class="tertiary">Bytten Studio
-                Ltd</span>, dessen Tochtergesellschaften oder Muttergesellschaften, deren Namen, Logos und Produkten, die in dieser App angezeigt werden, verbunden oder von ihnen autorisiert. Die Namen Cassette Beasts, <span class="tertiary">Bytten Studio
-                Ltd</span> sowie verwandte Namen und Bilder sind eingetragene Warenzeichen ihrer jeweiligen Eigentümer. Diese App wird von Fans für Fans gemacht. Bitte wende dich nicht an <span class="tertiary">Bytten Studio
-                Ltd</span> wegen Fehlern in dieser App..</small>
-        <br>
-        <small class="assistantApps ta-center">
-            <span>© Assistant Apps. All rights reserved.</span>
-            <span>&nbsp;|&nbsp;</span>
-            <span>
-                <a href="/about.html" title="Über">Über</a>
-            </span>
-            <span>&nbsp;|&nbsp;</span>
-            <span>
-                <a href="/privacy_policy.html" target="_blank" rel="noopener noreferrer"
-                    title="Datenschutz-Bestimmungen">
-                    Datenschutz-Bestimmungen
-                </a>
-            </span>
-            <span>&nbsp;|&nbsp;</span>
-            <span>
-                <a href="/terms_and_conditions.html" target="_blank" rel="noopener noreferrer"
-                    title="Allgemeine Geschäftsbedingungen">
-                    Allgemeine Geschäftsbedingungen</a>
-            </span>
-            <span>&nbsp;|&nbsp;</span>
-            <span>v1.2.2</span>
-        </small>
-    </footer>
-    
-    <assistant-apps-posthog-analytics-no-cookie
-        analyticscode="phc_pCp48gthK67GEa2LB27jpP0X4BRU7TLcdQjeRi3gWXk"></assistant-apps-posthog-analytics-no-cookie>    <script src="/assets/js/main.js?v=1.2.2"></script>
-    <script defer src="https://webcomp.assistantapps.com/build/bundle.js"></script>
-    
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/sw.js');
-            });
-        }
-    </script>
-</body>
+    <footer class="ta-center" data-astro-transition-persist="astro-tvayyljk-10">
+  <small class="legal">Diese App ist nicht mit <span class="tertiary">Bytten Studio Ltd</span>, dessen Tochtergesellschaften oder Muttergesellschaften, deren Namen, Logos und Produkten, die in dieser App angezeigt werden, verbunden oder von ihnen autorisiert. Die Namen <span class="tertiary">Cassette Beasts</span>, <span class="tertiary">Bytten Studio Ltd</span> sowie verwandte Namen und Bilder sind eingetragene Warenzeichen ihrer jeweiligen Eigentümer. Diese App wird von Fans für Fans gemacht. Bitte wende dich nicht an <span class="tertiary">Bytten Studio Ltd</span> wegen Fehlern in dieser App.</small>
+  <br>
+  <small class="ta-center">
+    <span>© AssistantApps. All rights reserved.</span>
+    <span>&nbsp;|&nbsp;</span>
+    <span>
+      <a href="/about.html" title="About">About</a>
+    </span>
+    <span>&nbsp;|&nbsp;</span>
+    <span>
+      <a href="/privacy_policy" target="_blank" rel="noopener noreferrer" title="Privacy Policy">
+        Privacy Policy
+      </a>
+    </span>
+    <span>&nbsp;|&nbsp;</span>
+    <span>
+      <a href="/terms_and_conditions" target="_blank" rel="noopener noreferrer" title="Terms and Conditions">
+        Terms and Conditions
+      </a>
+    </span>
+    <span>&nbsp;|&nbsp;</span>
+    <span>v2.0.0</span>
+  </small>
+</footer>
 
+<assistant-apps-posthog-analytics-no-cookie analyticscode="phc_pCp48gthK67GEa2LB27jpP0X4BRU7TLcdQjeRi3gWXk"></assistant-apps-posthog-analytics-no-cookie>
+
+    <script src="/assets/js/main.js?v=2.0.0"></script>
+    <script defer src="https://webcomp.assistantapps.com/build/bundle.js"></script>
+
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js');
+        });
+      }
+      document.addEventListener('astro:page-load', () => {
+        window.onPageLoad();
+      });
+    </script>
+  </body>
 </html>

@@ -1,4 +1,4 @@
 User-agent: *
-Disallow:
-Disallow: /cgi-bin/
-Sitemap: https://cassettebeasts.assistantapps.com/sitemap.xml
+Allow: /
+
+Sitemap: https://cassettebeasts.assistantapps.com/sitemap-index.xml
