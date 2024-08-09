@@ -47,7 +47,7 @@ jobs:
 
       - name: Build TS
         run: |
-          npm ci
+          npm ci --force
           npm run data
           npm run build
 
