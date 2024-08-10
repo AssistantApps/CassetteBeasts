@@ -1,10 +1,16 @@
 ---
 import Layout from 'components/layouts/Layout.astro';
 
+import languageJson from '../assets/json/language.json';
+
 import { site } from 'constants/site';
+import { defaultLocale } from '../constants/localisation';
+import type { ILocalisation } from '../contracts/localisation';
+
+const translationLookup = (languageJson as Record<string, ILocalisation>)[defaultLocale].messages;
 ---
 
-<Layout locale="en" translationLookup={{}} documentTitle="Terms & Conditions">
+<Layout locale="en" translationLookup={translationLookup} documentTitle="Terms & Conditions">
   <h1>Terms &amp; Conditions</h1>
   <p>
     By downloading or using the app, these terms will automatically apply to you – you should make
