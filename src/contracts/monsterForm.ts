@@ -99,6 +99,7 @@ export interface IMonsterFormDropdown {
   id: string;
   name: string;
   icon: string;
+  bestiary_index: number;
   prefix: string;
   suffix: string;
 }

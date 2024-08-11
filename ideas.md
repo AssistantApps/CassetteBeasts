@@ -14,3 +14,9 @@
 ## Fusions
 
 - `res\data\fusions`
+- Reduce how much data is passed to the solidJS component
+
+## Partytown for analytics
+
+- https://docs.astro.build/en/guides/integrations-guide/partytown/
+- Add Hotjar

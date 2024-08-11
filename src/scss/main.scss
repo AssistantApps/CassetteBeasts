@@ -23,6 +23,7 @@
 @import 'characterDetail';
 @import 'elementReaction';
 @import 'statusEffect';
+@import 'fusion';
 @import 'world';
 
 :root {
@@ -110,6 +111,13 @@
     transparent 75%,
     transparent
   );
+}
+
+.scrollbar-contain::-webkit-scrollbar-track {
+  margin-top: 0;
+  margin-bottom: 0;
+  box-shadow: none;
+  -webkit-box-shadow: none;
 }
 
 img,

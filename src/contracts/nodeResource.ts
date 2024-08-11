@@ -17,7 +17,8 @@ export interface INodeResource extends INodeResourceHead {
   inverse_match: boolean;
   position: IVector2D;
   match_part: string;
-  child?: Record<string, INodeResource>;
+  child?: Record<string, INodeResourceEnhanced>;
+  index?: number;
 }
 
 export interface INodeResourceEnhanced extends INodeResource {
