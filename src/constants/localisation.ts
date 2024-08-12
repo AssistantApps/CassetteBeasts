@@ -62,6 +62,9 @@ export const UIKeys = {
   sameFusion7: 'SAME_FUSION_NAME_7', // Hyper {0}
   sameFusion8: 'SAME_FUSION_NAME_8', // Giga {0}
   sameFusion9: 'SAME_FUSION_NAME_9', // {0} 2.0
+  fusionDescription1: 'TUTORIAL4_PART3C_KAYLEIGH2',
+  fusionDescription2: 'TUTORIAL_BOSS_1.m',
+  fusionDescription3: 'TUTORIAL_FUSION1.m',
 } as const;
 
 export const UIKeysRemoveTrailingColon = [
@@ -69,6 +72,7 @@ export const UIKeysRemoveTrailingColon = [
   'UI_INVENTORY_FILTER_NAME',
   'UI_INVENTORY_FILTER_CATEGORY',
   'MOVE_DESCRIPTION_POWER',
+  'ONLINE_REQUEST_UI_BATTLE_RULES_REL_LEVEL',
 ];
 
 export const UIKeysReplace0Param = [

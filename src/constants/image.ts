@@ -1,5 +1,6 @@
 export const AppImage = {
   logoSplash: '/assets/img/evo_splash_04.png',
+  loader: '/assets/img/loader.svg',
   moreStatusEffects: '/assets/img/passive_quest_icon.png',
   moves: '/assets/img/moves.png',
   characters: '/assets/img/characters.png',

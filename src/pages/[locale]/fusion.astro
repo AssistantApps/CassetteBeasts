@@ -4,42 +4,16 @@ import { FusionPanel } from 'components/pages/fusion/FusionPanel';
 
 import languageJson from '../../assets/json/language.json';
 
-import { readDataFromAssets } from 'helpers/fileHelper';
-import { IntermediateFile } from 'constants/intermediateFile';
-import { astroPaths } from 'constants/astro';
 import { availableLanguages, UIKeys } from 'constants/localisation';
 import type { ILocalisation } from 'contracts/localisation';
-import type { IFusionEnhanced } from 'contracts/fusion';
-import type { IMonsterFormEnhanced, IMonsterFormDropdown } from 'contracts/monsterForm';
-import type { ISpriteAnim } from 'contracts/spriteAnim';
 import { translator } from 'helpers/translateHelper';
 
 export async function getStaticPaths() {
   const paths: any = [];
   for (const locale of availableLanguages) {
-    const itemMap = await readDataFromAssets<Record<string, IFusionEnhanced>>({
-      pathFolders: [...astroPaths.intermediatePath, locale],
-      destFileName: IntermediateFile.fusion,
-    });
-    const monsterMap = await readDataFromAssets<Record<string, IMonsterFormEnhanced>>({
-      pathFolders: [...astroPaths.intermediatePath, locale],
-      destFileName: IntermediateFile.monsterForms,
-    });
-    const fusionSpriteMap = await readDataFromAssets<Record<string, ISpriteAnim>>({
-      pathFolders: [...astroPaths.intermediatePath, locale],
-      destFileName: IntermediateFile.fusionSpriteAnim,
-    });
-    const monsterDropdown = Object.values(monsterMap).map((monster) => ({
-      id: monster.id,
-      name: monster.name_localised,
-      icon: monster.icon_url,
-      bestiary_index: monster.bestiary_index,
-      prefix: monster.fusion_name_prefix_localised,
-      suffix: monster.fusion_name_suffix_localised,
-    }));
     const path = {
       params: { locale: locale },
-      props: { itemMap, fusionSpriteMap, monsterDropdown },
+      props: {},
     };
     paths.push(path as never);
   }
@@ -47,26 +21,30 @@ export async function getStaticPaths() {
 }
 
 const { locale } = Astro.params;
-const itemMap = (Astro.props as any).itemMap as Record<string, IFusionEnhanced>;
-const fusionSpriteMap = (Astro.props as any).fusionSpriteMap as Record<string, ISpriteAnim>;
-const monsterDropdown = (Astro.props as any).monsterDropdown as Array<IMonsterFormDropdown>;
 const translationLookup = (languageJson as Record<string, ILocalisation>)[locale].messages;
 const { translate } = translator(translationLookup);
 const title = translate(UIKeys.fusion);
+
+const reducedTranslationLookup: Record<string, string> = {};
+const keysToKeep = [
+  UIKeys.fusion,
+  UIKeys.viewMonsters,
+  ...Object.keys(translationLookup).filter((t) => t.includes('SAME_FUSION_NAME_')),
+];
+for (const key of keysToKeep) {
+  reducedTranslationLookup[key] = translationLookup[key];
+}
 ---
 
 <Layout locale={locale} documentTitle={title} translationLookup={translationLookup}>
   <section class="mb-1">
     <h1 class="Neu5Land ta-center">{title}</h1>
+    <div class="meta">
+      {translate(UIKeys.fusionDescription1)}
+      {translate(UIKeys.fusionDescription2)}
+      {translate(UIKeys.fusionDescription3)}
+    </div>
 
-    <article class="mb-1">
-      <FusionPanel
-        client:load
-        translate={translationLookup}
-        itemMap={itemMap}
-        fusionSpriteMap={fusionSpriteMap}
-        monsterDropdown={monsterDropdown}
-      />
-    </article>
+    <FusionPanel client:load translate={reducedTranslationLookup} locale={locale} />
   </section>
 </Layout>
