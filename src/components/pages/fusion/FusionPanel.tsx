@@ -7,7 +7,6 @@ import { MonsterFusionDisplay } from 'components/monster/MonsterFusionDisplay';
 import type { ISpriteAnim } from 'contracts/spriteAnim';
 import { NetworkState } from 'constants/networkState';
 import { LoadingSpinner } from 'components/common/Loading';
-import { timeout } from 'helpers/asyncHelper';
 import { defaultLocale } from 'constants/localisation';
 
 interface IProps {

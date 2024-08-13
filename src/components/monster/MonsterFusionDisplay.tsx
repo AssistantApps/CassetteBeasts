@@ -73,26 +73,26 @@ export const MonsterFusionDisplay: Component<IProps> = (props: IProps) => {
       nodes.push(nodeA);
     }
 
-    for (const nodeB of Object.values(b ?? {})) {
-      // if (nodeB.inverse_match) {
-      //   const nameIndex = nodes.findIndex((n) => n.name == nodeB.match_part);
-      //   if (nameIndex > -1) {
-      //     console.log(nodes[nameIndex].name);
-      //     nodes.splice(nameIndex, 1);
-      //   }
-      //   const parentIndex = nodes.findIndex((n) => n.parent == nodeB.match_part);
-      //   if (parentIndex > -1) {
-      //     console.log(nodes[parentIndex].name);
-      //     nodes.splice(parentIndex, 1);
-      //   }
-      // }
-      // if ((b.parent?.length ?? 0) != 0) {
-      //   const parentB = props.fusionBPartsList[b.parent];
-      //   if (parentB != null && b.inverse_match) {
-      //     return b;
-      //   }
-      // }
-    }
+    // for (const nodeB of Object.values(b ?? {})) {
+    //   // if (nodeB.inverse_match) {
+    //   //   const nameIndex = nodes.findIndex((n) => n.name == nodeB.match_part);
+    //   //   if (nameIndex > -1) {
+    //   //     console.log(nodes[nameIndex].name);
+    //   //     nodes.splice(nameIndex, 1);
+    //   //   }
+    //   //   const parentIndex = nodes.findIndex((n) => n.parent == nodeB.match_part);
+    //   //   if (parentIndex > -1) {
+    //   //     console.log(nodes[parentIndex].name);
+    //   //     nodes.splice(parentIndex, 1);
+    //   //   }
+    //   // }
+    //   // if ((b.parent?.length ?? 0) != 0) {
+    //   //   const parentB = props.fusionBPartsList[b.parent];
+    //   //   if (parentB != null && b.inverse_match) {
+    //   //     return b;
+    //   //   }
+    //   // }
+    // }
     // for (const bKey of Object.keys(b ?? {})) {
     //   distinctList.add(bKey);
     // }

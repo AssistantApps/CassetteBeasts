@@ -10,7 +10,6 @@ interface Props {
 }
 
 const { version, translationLookup } = Astro.props;
-const analyticsCode = import.meta.env.POSTHOG_ANALYTICS_CODE;
 const { translate } = translator(translationLookup);
 ---
 
@@ -50,10 +49,4 @@ const { translate } = translator(translationLookup);
     <span>&nbsp;|&nbsp;</span>
     <span>v{version}</span>
   </small>
-
-  {
-    analyticsCode.length > 0 && (
-      <assistant-apps-posthog-analytics-no-cookie analyticscode={analyticsCode} />
-    )
-  }
 </footer>

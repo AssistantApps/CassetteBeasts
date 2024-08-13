@@ -1,6 +1,6 @@
 {
   "name": "cassette-beasts-extract",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Website generated from data & images extracted from the Cassette Beasts",
   "scripts": {
     "dev": "astro dev",
@@ -15,9 +15,11 @@
   "license": "GPL-3.0-only",
   "dependencies": {
     "@astrojs/check": "^0.8.3",
+    "@astrojs/partytown": "^2.1.1",
     "@astrojs/sitemap": "^3.1.6",
     "@astrojs/solid-js": "^4.4.0",
     "astro": "^4.12.2",
+    "astro-robots-txt": "^1.0.0",
     "solid-js": "^1.8.19"
   },
   "devDependencies": {
@@ -30,7 +32,6 @@
     "dotenv-cli": "^7.4.2",
     "eslint": "^9.8.0",
     "eslint-plugin-astro": "^1.2.3",
-    "eslint-plugin-jsx-a11y": "^6.9.0",
     "favicons": "^7.2.0",
     "handlebars": "^4.7.8",
     "node-watch": "^0.7.4",
