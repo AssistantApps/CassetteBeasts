@@ -52,9 +52,8 @@ body.overflow-x-hidden {
   }
 
   .page-options {
-
-    >label,
-    >select {
+    > label,
+    > select {
       margin: 0;
     }
   }
@@ -70,12 +69,12 @@ body.overflow-x-hidden {
   --pico-box-shadow: none !important;
   --pico-switch-checked-background-color: var(--brand-tertiary) !important;
 
-  >* {
+  > * {
     max-width: 250px;
     z-index: 1;
   }
 
-  >label {
+  > label {
     display: flex;
     flex-direction: row;
     padding: 0.25em 0.75em;
@@ -94,7 +93,7 @@ body.overflow-x-hidden {
     }
   }
 
-  >select {
+  > select {
     padding: 0.25em 0.75em;
     height: unset;
   }
@@ -108,7 +107,7 @@ body.overflow-x-hidden {
     box-shadow: none;
   }
 
-  >input {
+  > input {
     --pico-border-radius: 0.25rem;
   }
 
@@ -152,6 +151,10 @@ body.overflow-x-hidden {
 
 main {
   min-height: calc(100vh - 11em);
+}
+
+article.warning {
+  border: 3px solid #bb972c;
 }
 
 footer {

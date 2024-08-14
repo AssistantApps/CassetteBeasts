@@ -1,7 +1,7 @@
 import type { IExternalResource } from 'contracts/externalResource';
 import type { IFusion } from 'contracts/fusion';
 import { getExternalResource } from 'contracts/mapper/externalResourceMapper';
-import type { INodeResource } from 'contracts/nodeResource';
+import type { INodeResource, INodeResourceEnhanced } from 'contracts/nodeResource';
 import type { ISubAnimationResource } from 'contracts/subAnimationResource';
 import type { ISubResource } from 'contracts/subResource';
 
@@ -37,7 +37,7 @@ const mapNodes = (props: {
       child: mapNodes({
         externalResourcesMap: props.externalResourcesMap,
         nodeResourceMap: node.child ?? result,
-      }),
+      }) as Record<number, INodeResourceEnhanced>,
     };
     result[nodeKey] = newNode;
   }

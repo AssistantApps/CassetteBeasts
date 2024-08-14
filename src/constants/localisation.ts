@@ -52,6 +52,19 @@ export const UIKeys = {
   cassetteBeasts: 'MAIN_CREDITS_TITLE', // Cassette Beasts
   homePageLongText1: 'TUTORIAL_REMASTER', // long text for home page
   homePageLongText2: 'TUTORIAL_RUMORS_DESCRIPTION1', // long text for home page
+  fusion: 'ONLINE_REQUEST_UI_BATTLE_RULES_REL_LEVEL', // Fusion:
+  sameFusion1: 'SAME_FUSION_NAME_1', // Meta {0}
+  sameFusion2: 'SAME_FUSION_NAME_2', // Super {0}
+  sameFusion3: 'SAME_FUSION_NAME_3', // Ultra {0}
+  sameFusion4: 'SAME_FUSION_NAME_4', // Double {0}
+  sameFusion5: 'SAME_FUSION_NAME_5', // Jumbo {0}
+  sameFusion6: 'SAME_FUSION_NAME_6', // Mutant {0}
+  sameFusion7: 'SAME_FUSION_NAME_7', // Hyper {0}
+  sameFusion8: 'SAME_FUSION_NAME_8', // Giga {0}
+  sameFusion9: 'SAME_FUSION_NAME_9', // {0} 2.0
+  fusionDescription1: 'TUTORIAL4_PART3C_KAYLEIGH2',
+  fusionDescription2: 'TUTORIAL_BOSS_1.m',
+  fusionDescription3: 'TUTORIAL_FUSION1.m',
 } as const;
 
 export const UIKeysRemoveTrailingColon = [
@@ -59,6 +72,7 @@ export const UIKeysRemoveTrailingColon = [
   'UI_INVENTORY_FILTER_NAME',
   'UI_INVENTORY_FILTER_CATEGORY',
   'MOVE_DESCRIPTION_POWER',
+  'ONLINE_REQUEST_UI_BATTLE_RULES_REL_LEVEL',
 ];
 
 export const UIKeysReplace0Param = [

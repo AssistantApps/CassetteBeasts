@@ -3,7 +3,6 @@ import fs from 'fs';
 import { IntermediateFile } from 'constants/intermediateFile';
 import { ModuleType } from 'constants/module';
 import type { IFusion, IFusionEnhanced } from 'contracts/fusion';
-import { mapNodeResourceFromFlatMap } from 'contracts/mapper/nodeResourceMapper';
 import type { INodeResource, INodeResourceEnhanced } from 'contracts/nodeResource';
 import type { ISpriteAnim } from 'contracts/spriteAnim';
 import { getAnimFileName, getFileFromFilePath } from 'helpers/fileHelper';
@@ -17,7 +16,6 @@ import { fusionMapFromDetailList } from './fusionMapFromDetailList';
 
 export class FusionModule extends CommonModule<IFusion, IFusionEnhanced> {
   private _folder = FolderPathHelper.fusions();
-  private _enhanced_nodes: Array<IFusionEnhanced> = [];
 
   constructor() {
     super({
@@ -46,7 +44,6 @@ export class FusionModule extends CommonModule<IFusion, IFusionEnhanced> {
   };
 
   enrichData = async (langCode: string, modules: Array<CommonModule<unknown, unknown>>) => {
-    this._enhanced_nodes = [];
     for (const detail of this._baseDetails) {
       const nodes_enhanced: Record<string, INodeResourceEnhanced> = {};
       const detailNodes = detail.nodes ?? {};
@@ -61,20 +58,20 @@ export class FusionModule extends CommonModule<IFusion, IFusionEnhanced> {
         nodes_enhanced[mapKey] = node_enhanced;
       }
 
-      const sorted_nodes_enhanced = mapNodeResourceFromFlatMap(nodes_enhanced);
+      // const sorted_nodes_enhanced = mapNodeResourceFromFlatMap(nodes_enhanced);
       const detailEnhanced: IFusionEnhanced = {
         ...detail,
         nodes: undefined,
-        nodes_enhanced: sorted_nodes_enhanced,
+        // nodes_enhanced: sorted_nodes_enhanced,
+        nodes_enhanced: nodes_enhanced,
       };
       this._itemDetailMap[detail.id] = detailEnhanced;
-      this._enhanced_nodes.push(detailEnhanced);
     }
     this.isReady = true;
   };
 
   getImagesFromGameFiles = async (overwrite: boolean) => {
-    for (const detail of this._enhanced_nodes) {
+    for (const detail of Object.values(this._itemDetailMap)) {
       for (const mapKey of Object.keys(detail.nodes_enhanced)) {
         const node: INodeResourceEnhanced = detail.nodes_enhanced[mapKey];
         await this._getNodeImagesFromGameFiles(overwrite, node);
@@ -88,7 +85,7 @@ export class FusionModule extends CommonModule<IFusion, IFusionEnhanced> {
       ModuleType.FusionSpriteAnim,
     );
 
-    for (const detail of this._enhanced_nodes) {
+    for (const detail of Object.values(this._itemDetailMap)) {
       for (const mapKey of Object.keys(detail.nodes_enhanced)) {
         const node: INodeResourceEnhanced = detail.nodes_enhanced[mapKey];
         await this._generateNodeImages(overwrite, spriteAnimModule, node);

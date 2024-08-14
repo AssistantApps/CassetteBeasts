@@ -158,6 +158,7 @@ export const readItemDetail = async <T>(props: ItemDetailType<T>): Promise<T> =>
           if (mappedNodeResource.type == 'sub') {
             key = mappedNodeResource.name + '_' + mappedNodeResource.parent;
           }
+          mappedNodeResource.index = Object.keys(nodeResourceMap).length;
           nodeResourceMap[key] = mappedNodeResource;
         }
         mode = 'none';

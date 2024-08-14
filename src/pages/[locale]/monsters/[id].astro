@@ -59,9 +59,9 @@ const additionalSchemaObj: IGuideSchema = {
 
 <Layout
   locale={locale}
-  documentTitle={data.name_localised}
-  description={data.description_localised}
   metaImageUrl={data.meta_image_url}
+  documentTitle={data.name_localised}
+  description={data.description_localised + ' - ' + data.description_localised}
   schemaExtra={toSchemaOrgProperty('mainEntity', 'Guide', additionalSchemaObj)}
   translationLookup={translationLookup}
 >
@@ -114,7 +114,7 @@ const additionalSchemaObj: IGuideSchema = {
           <div class="grid images noselect animate__animated animate__fadeIn">
             <div class="sprites">
               <img
-                src={data.icon_url}
+                src={imgUrl(data.icon_url)}
                 class="char-image tab-content-0"
                 loading="lazy"
                 alt={`${data.name_localised}`}

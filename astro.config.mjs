@@ -1,12 +1,14 @@
 import { defineConfig } from 'astro/config';
 import solidJs from '@astrojs/solid-js';
 import sitemap from '@astrojs/sitemap';
+import robotsTxt from 'astro-robots-txt';
+import partytown from '@astrojs/partytown';
+
 import { site } from './src/constants/site';
 
 // https://astro.build/config
 export default defineConfig({
   site: site.rootUrl,
-  compressHTML: false, // TODO replace after comparison with handlebarJS version
   i18n: {
     defaultLocale: 'en',
     locales: [
@@ -36,5 +38,7 @@ export default defineConfig({
       lastmod: new Date(),
     }),
     solidJs(),
+    partytown(),
+    robotsTxt(),
   ],
 });

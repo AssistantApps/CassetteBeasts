@@ -52,12 +52,9 @@
     padding-bottom: 1em;
     border-bottom-left-radius: var(--card-border-radius);
     border-bottom-right-radius: var(--card-border-radius);
+    @extend .scrollbar-contain;
 
     &::-webkit-scrollbar-track {
-      margin-top: 0;
-      margin-bottom: 0;
-      box-shadow: none;
-      -webkit-box-shadow: none;
       background: var(--card-background);
     }
 

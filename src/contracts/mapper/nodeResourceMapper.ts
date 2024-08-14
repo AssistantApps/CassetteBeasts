@@ -39,8 +39,8 @@ export const nodeResourceFromDetailList = (props: {
     parent: props.nodeResourceMapItem['parent'],
 
     instance: props.nodeResourceMapItem['instance'],
-    force_usage: stringToBoolWithDefault(props.nodeResourceMapItem['force_usage'], true),
-    inverse_match: stringToBoolWithDefault(props.nodeResourceMapItem['inverse_match'], true),
+    force_usage: stringToBoolWithDefault(props.nodeResourceMapItem['force_usage'], false),
+    inverse_match: stringToBoolWithDefault(props.nodeResourceMapItem['inverse_match'], false),
     visible: stringToBoolWithDefault(props.nodeResourceMapItem['visible'], true),
     position: tryParseVector2D(props.nodeResourceMapItem['position'])!,
     match_part: stringToParent(props.nodeResourceMapItem['match_part']),
