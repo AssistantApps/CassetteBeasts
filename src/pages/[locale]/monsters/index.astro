@@ -92,7 +92,7 @@ const { translate } = translator(translationLookup);
       list.map((data, index) => (
         <a
           href={`/${locale}${routes.monsters}/${data.resource_name}.html`}
-          class={`grid-list-item item ${data.isSecret ? 'secret' : ''} animate__animated animate__fadeIn`}
+          class={`grid-list-item item no-hover-mobile ${data.isSecret ? 'secret' : ''} animate__animated animate__fadeIn`}
           data-id={data.bestiary_index_with_padding}
           data-title={data.name_localised}
           data-description={data.description_localised}

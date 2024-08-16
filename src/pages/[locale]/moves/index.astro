@@ -86,7 +86,7 @@ const { translate } = translator(translationLookup);
       list.map((data, index) => (
         <a
           href={`/${locale}${routes.moves}/${data.id}.html`}
-          class="grid-list-item item animate__animated animate__fadeIn"
+          class="grid-list-item item no-hover-mobile animate__animated animate__fadeIn"
           data-title={data.name_localised}
           data-description={data.description_localised}
           style={`animation-delay: ${Math.min(index * 30, 600)}ms;`}
