@@ -1,5 +1,6 @@
 import type { IExternalResource } from './externalResource';
 import type { IMonsterFormSimplified } from './monsterForm';
+import type { IMonsterSpawnDetailsEnhanced } from './monsterSpawn';
 import type { ISubResource, ISubResourceMapEnhanced } from './subResource';
 import type { IRect2, IVector2D } from './vector';
 
@@ -34,4 +35,5 @@ export interface IWorldMetaDataEnhanced extends IWorldMetaData {
   title_localised: string;
   features_localised: Array<ISubResourceMapEnhanced>;
   monster_in_habitat: Array<IMonsterFormSimplified>;
+  species_in_this_zone: Array<IMonsterSpawnDetailsEnhanced>;
 }

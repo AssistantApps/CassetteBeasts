@@ -1,5 +1,4 @@
 .monster-detail-card {
-
   .monster-detail-sticker-container {
     position: absolute;
     top: 5em;
@@ -225,7 +224,7 @@
         margin-top: var(--pico-spacing);
         margin-bottom: 0;
 
-        &[open]>summary {
+        &[open] > summary {
           margin-bottom: 0;
         }
 
@@ -242,6 +241,11 @@
       }
     }
 
+    .table-container a {
+      text-decoration: none;
+      color: var(--card-foreground);
+    }
+
     code {
       padding: 0.25rem;
       margin-left: 0.25rem;
@@ -255,7 +259,6 @@
 // animation delays
 .monster-detail-card {
   .monster-detail-card-body {
-
     .id,
     .descrip,
     .images {

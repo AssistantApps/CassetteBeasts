@@ -9,7 +9,7 @@ import type { IBoxSelection } from 'contracts/boxSelection';
 import type { IExternalResource } from 'contracts/externalResource';
 import { getExternalResourcesImagePath } from 'contracts/mapper/externalResourceMapper';
 import { getConfig } from 'services/internal/configService';
-import { createFoldersOfDestFilePath } from './fileHelper';
+import { createFoldersOfDestFilePath, getIndexOfFolderSlash } from './fileHelper';
 import { retryAsync } from './retryHelper';
 import { anyObject } from './typescriptHacks';
 
@@ -48,19 +48,25 @@ export const copyImageFromRes = async (
 
 interface ICutImageFromSpriteSheetProps {
   overwrite: boolean;
-  spriteFilePath: string;
+  spriteFilePath?: string;
+  destFileName?: string;
   boxSelection: IBoxSelection;
 }
 export const cutImageFromSpriteSheet = async (props: ICutImageFromSpriteSheetProps) => {
   const sprite = getExternalResourcesImagePath(props.spriteFilePath);
   if (sprite == null || sprite.length < 1) return;
 
+  const srcSpriteSheet = path.join(paths().gameImagesFolder, sprite);
+  let destSprite = path.join(paths().generatedImagesFolder, sprite);
+
+  if (props.destFileName != null) {
+    const lastSlashIndex = getIndexOfFolderSlash(destSprite);
+    destSprite = path.join(destSprite.slice(0, lastSlashIndex), props.destFileName);
+  }
+
   await retryAsync({
     attempts: 3,
     func: async () => {
-      const srcSpriteSheet = path.join(paths().gameImagesFolder, sprite);
-      const destSprite = path.join(paths().generatedImagesFolder, sprite);
-
       createFoldersOfDestFilePath(destSprite);
       if (fs.existsSync(destSprite)) {
         if (props.overwrite) {
@@ -82,6 +88,28 @@ export const cutImageFromSpriteSheet = async (props: ICutImageFromSpriteSheetPro
     },
     onError: (ex) => console.error(ex),
   });
+};
+
+interface IMeta {
+  width: number;
+  height: number;
+}
+export const getImageMeta = async (
+  folder: string,
+  filePath?: string,
+): Promise<IMeta | undefined> => {
+  const filePathSafe = getExternalResourcesImagePath(filePath);
+  if (filePathSafe == null || filePathSafe.length < 1) return;
+
+  const fullPath = path.join(folder, filePathSafe);
+
+  const metaData = await sharp(fullPath).metadata();
+  if (metaData.height == null || metaData.width == null) return;
+
+  return {
+    height: metaData.height,
+    width: metaData.width,
+  };
 };
 
 export const copyImageToGeneratedFolder = async (

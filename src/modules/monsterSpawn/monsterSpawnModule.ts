@@ -107,6 +107,7 @@ export class MonsterSpawnModule extends CommonModule<IMonsterSpawn, IMonsterSpaw
             percent: percentWorld,
             percentStr: percentWorld.toFixed(2),
           });
+          continue;
         }
         species_enhanced.push(baseItem);
       }

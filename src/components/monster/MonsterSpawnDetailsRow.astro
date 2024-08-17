@@ -1,0 +1,66 @@
+---
+import { routes } from 'constants/route';
+import type { IMonsterFormSimplified } from 'contracts/monsterForm';
+import type { IMonsterSpawnDetailsEnhanced } from 'contracts/monsterSpawn';
+import { imgUrl } from 'helpers/urlHelper';
+
+interface Props {
+  locale: string;
+  monster: IMonsterFormSimplified;
+  monsterOverworld?: IMonsterFormSimplified;
+  monsterSpawn: IMonsterSpawnDetailsEnhanced;
+}
+
+const { locale, monster, monsterOverworld, monsterSpawn } = Astro.props;
+
+const linkToOverworld = `/${locale}${routes.monsters}/${encodeURI(monsterOverworld?.id ?? '')}.html`;
+const linkToMonster = `/${locale}${routes.monsters}/${encodeURI(monster.id)}.html`;
+---
+
+<tr>
+  <td>
+    {
+      monsterOverworld != null ? (
+        <div class="grid">
+          <a href={linkToOverworld} title={monster.name_localised} class="ta-center">
+            <img
+              src={imgUrl(monsterOverworld?.icon_url)}
+              class="overworld"
+              alt="overworld"
+              loading="lazy"
+              draggable="false"
+            />
+          </a>
+          <a href={linkToMonster} title={monster.name_localised} class="ta-center">
+            <img
+              src={imgUrl(monster.icon_url)}
+              class="overworld"
+              alt="overworld"
+              loading="lazy"
+              draggable="false"
+            />
+          </a>
+        </div>
+      ) : (
+        <a href={linkToMonster} title={monster.name_localised} class="grid">
+          <div />
+          <img
+            src={imgUrl(monster.icon_url)}
+            class="overworld"
+            alt="overworld"
+            loading="lazy"
+            draggable="false"
+          />
+        </a>
+      )
+    }
+  </td>
+  <td>
+    <a href={linkToMonster} title={monster.name_localised}>
+      {monster.name_localised}
+    </a>
+  </td>
+  <td class="percent">
+    <a href={linkToMonster} title={monster.name_localised}>{monsterSpawn.percentStr}%</a>
+  </td>
+</tr>

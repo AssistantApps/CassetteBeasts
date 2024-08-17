@@ -241,6 +241,7 @@ export class MonsterFormsModule extends CommonModule<IMonsterForm, IMonsterFormE
               hour_min: species.hour_min,
               hour_max: species.hour_max,
               available_specific_time: species.available_specific_time,
+              habitat_coords: monsterSpawn.habitat_coords,
             };
             if (species.overworldMonsterId != null) {
               const overworldMon = this._itemDetailMap[species.overworldMonsterId];

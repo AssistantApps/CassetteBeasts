@@ -58,6 +58,11 @@ export const breadcrumb = {
     link: `/${langCode}${routes.map}`,
     disabled,
   }),
+  worldDetail: (langCode: string, item: string): IBreadcrumb => ({
+    name: item,
+    link: `/${langCode}${routes.map}/${encodeURI(item)}.html`,
+    disabled: true,
+  }),
   fusion: (langCode: string, disabled: boolean = false): IBreadcrumb => ({
     uiKey: UIKeys.viewMonsters,
     link: `/${langCode}${routes.fusion}`,

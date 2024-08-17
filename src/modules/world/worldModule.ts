@@ -2,6 +2,7 @@ import fs from 'fs';
 
 import { IntermediateFile } from 'constants/intermediateFile';
 import { ModuleType } from 'constants/module';
+import { paths } from 'constants/paths';
 import type { ILocalisation } from 'contracts/localisation';
 import { getExternalResourcesImagePath } from 'contracts/mapper/externalResourceMapper';
 import { monsterToSimplified } from 'contracts/mapper/monsterMapper';
@@ -9,7 +10,12 @@ import type { IMonsterFormEnhanced, IMonsterFormSimplified } from 'contracts/mon
 import type { IMonsterSpawn } from 'contracts/monsterSpawn';
 import type { IWorld, IWorldEnhanced, IWorldMetaDataEnhanced } from 'contracts/world';
 import { FolderPathHelper } from 'helpers/folderPathHelper';
-import { copyImageFromRes, copyImageToGeneratedFolder } from 'helpers/imageHelper';
+import {
+  copyImageFromRes,
+  copyImageToGeneratedFolder,
+  cutImageFromSpriteSheet,
+  getImageMeta,
+} from 'helpers/imageHelper';
 import { pad } from 'helpers/stringHelper';
 import { readItemDetail } from 'modules/baseModule';
 import { CommonModule } from 'modules/commonModule';
@@ -156,6 +162,7 @@ export class WorldModule extends CommonModule<IWorld, IWorldEnhanced> {
               icon_url: feat.icon?.path ?? '',
             })),
           monster_in_habitat: monster_in_habitat,
+          species_in_this_zone: speciesInThisZone ?? [],
         };
       }
 
@@ -198,9 +205,33 @@ export class WorldModule extends CommonModule<IWorld, IWorldEnhanced> {
     for (const mapKey of Object.keys(this._itemDetailMap)) {
       const detailEnhanced: IWorldEnhanced = this._itemDetailMap[mapKey];
       await copyImageToGeneratedFolder(overwrite, detailEnhanced.map_texture);
+      const metaData = await getImageMeta(
+        paths().gameImagesFolder,
+        detailEnhanced.map_texture?.path,
+      );
+      if (metaData == null) continue;
+
+      const offsetX = Math.abs(detailEnhanced.chunk_layout?.x ?? 0);
+      const offsetY = Math.abs(detailEnhanced.chunk_layout?.y ?? 0);
+      const cellWidth = Math.round(metaData.width / detailEnhanced.numOfColumns);
+      const cellHeight = Math.round(metaData.height / detailEnhanced.numOfRows);
 
       for (const row of detailEnhanced.chunk_meta_data_localised) {
         for (const col of row) {
+          if (col?.id != null) {
+            const coords = col.id.split(' ');
+            await cutImageFromSpriteSheet({
+              overwrite,
+              boxSelection: {
+                x: (parseInt(coords[0]) + offsetX) * cellWidth,
+                y: (parseInt(coords[1]) + offsetY) * cellHeight,
+                width: cellWidth,
+                height: cellHeight,
+              },
+              spriteFilePath: detailEnhanced.map_texture?.path,
+              destFileName: `${mapKey}${col.id}.png`,
+            });
+          }
           for (const feature of col?.features_localised ?? []) {
             if (feature.icon?.path == null) continue;
             await copyImageToGeneratedFolder(overwrite, feature.icon);
