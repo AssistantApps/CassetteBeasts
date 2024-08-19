@@ -12,5 +12,5 @@ export interface IGuideSchema {
   abstract?: string;
   accessMode: string;
   dateModified: string;
-  thumbnailUrl: string;
+  thumbnailUrl?: string;
 }
