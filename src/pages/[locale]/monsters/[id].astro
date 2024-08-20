@@ -12,6 +12,7 @@ import { IntermediateFile } from 'constants/intermediateFile';
 import { astroPaths } from 'constants/astro';
 import { breadcrumb } from 'constants/breadcrumb';
 import { availableLanguages, UIKeys } from 'constants/localisation';
+import { routes } from 'constants/route';
 import { site } from 'constants/site';
 import type { ILocalisation } from 'contracts/localisation';
 import type { IMonsterFormEnhanced } from 'contracts/monsterForm';
@@ -373,68 +374,83 @@ const additionalSchemaObj: IGuideSchema = {
           </table>
         </div>
 
-        {
-          data.has_locations && (
-            <section class="additional-section habitat animate__animated animate__fadeIn">
-              <details open>
-                <summary>
-                  <h3 class="section-heading Neu5Land noselect">{translate('overworld')}</h3>
-                </summary>
-                <div class="table-container">
-                  <table class="moves last-td-padding highlight-row">
-                    <thead>
-                      <tr>
-                        <td class="sprite">{translate('habitat')}</td>
-                        <td class="name">{translate(UIKeys.name)}</td>
-                        <td class="percent">{translate('percentTitle')}</td>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {data.spawn_overworld_locations.map((loc) => (
-                        <Fragment>
-                          <tr>
-                            <td class="overworld ta-center">
-                              <img
-                                src={imgUrl(loc.overworldSprite)}
-                                class="remaster-image"
-                                alt="overworld"
-                                loading="lazy"
-                                draggable="false"
-                              />
-                            </td>
-                            <td class="name">
-                              {loc.habitat_name_localised} <code>({loc.id})</code>
-                            </td>
-                            <td class="percent">{loc.percentStr}%</td>
-                          </tr>
-                        </Fragment>
-                      ))}
-
-                      {data.spawn_backup_locations.length > 0 &&
-                        data.spawn_overworld_locations.length > 0 && (
-                          <tr>
-                            <td colspan="3" class="ta-center">
-                              {translate('backup')}
-                            </td>
-                          </tr>
-                        )}
-
-                      {data.spawn_backup_locations.map((backupLoc) => (
+        <Fragment>
+          {
+            data.has_locations && (
+              <section class="additional-section habitat animate__animated animate__fadeIn">
+                <details open>
+                  <summary>
+                    <h3 class="section-heading Neu5Land noselect">{translate('overworld')}</h3>
+                  </summary>
+                  <div class="table-container">
+                    <table class="moves last-td-padding highlight-row">
+                      <thead>
                         <tr>
-                          <td class="overworld" />
-                          <td class="name">
-                            {backupLoc.habitat_name_localised} <code>({backupLoc.id})</code>
+                          <td class="sprite" style={{ opacity: '0' }}>
+                            {translate('habitat')}
                           </td>
-                          <td class="percent">{backupLoc.percentStr}%</td>
+                          <td class="name">{translate(UIKeys.habitat)}</td>
+                          <td class="percent">{translate('percentTitle')}</td>
                         </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-              </details>
-            </section>
-          )
-        }
+                      </thead>
+                      <tbody>
+                        {data.spawn_overworld_locations.map((loc) => (
+                          <Fragment>
+                            <tr>
+                              <td class="overworld ta-center">
+                                <img
+                                  src={imgUrl(loc.overworldSprite)}
+                                  class="remaster-image"
+                                  alt="overworld"
+                                  loading="lazy"
+                                  draggable="false"
+                                />
+                              </td>
+                              <td class="name">
+                                {loc.habitat_coords.length > 0 ? (
+                                  <a
+                                    href={`/${locale}${routes.map}/${loc.habitat_coords[0].split('_')[0]}/${loc.habitat_coords[0].split('_').slice(1).join(' ')}.html`}
+                                    title={loc.habitat_name_localised}
+                                  >
+                                    {loc.habitat_name_localised} <code>({loc.id})</code>
+                                  </a>
+                                ) : (
+                                  <span>
+                                    {loc.habitat_name_localised} <code>({loc.id})</code>
+                                  </span>
+                                )}
+                              </td>
+                              <td class="percent">{loc.percentStr}%</td>
+                            </tr>
+                          </Fragment>
+                        ))}
+
+                        {data.spawn_backup_locations.length > 0 &&
+                          data.spawn_overworld_locations.length > 0 && (
+                            <tr class="no-hover">
+                              <td colspan="3" class="ta-center">
+                                {translate('backup')}
+                              </td>
+                            </tr>
+                          )}
+
+                        {data.spawn_backup_locations.map((backupLoc) => (
+                          <tr>
+                            <td class="overworld" />
+                            <td class="name">
+                              {backupLoc.habitat_name_localised} <code>({backupLoc.id})</code>
+                            </td>
+                            <td class="percent">{backupLoc.percentStr}%</td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                </details>
+              </section>
+            )
+          }
+        </Fragment>
       </div>
     </article>
   </div>

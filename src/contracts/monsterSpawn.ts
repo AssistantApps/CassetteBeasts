@@ -43,4 +43,5 @@ export interface IMonsterSpawnHabitatDetails {
   hour_min?: number;
   hour_max?: number;
   available_specific_time?: boolean;
+  habitat_coords: Array<string>;
 }

@@ -40,6 +40,7 @@ body {
         }
       }
     }
+
     .monster-detail-sticker-container {
       display: none;
     }
@@ -98,6 +99,15 @@ body {
       }
     }
 
+    .monster-detail-card .monster-detail-card-body {
+      div.images {
+        margin-top: 1em;
+      }
+      .id {
+        top: 2rem;
+      }
+    }
+
     .wiki-section {
       [role='button'] {
         flex-direction: column;
@@ -126,5 +136,12 @@ body {
 .hidden-in-mobile {
   @media screen and (max-width: $smallDesktopWidth) {
     display: none !important;
+  }
+}
+
+.no-hover-mobile {
+  @media screen and (max-width: $tabletWidth) {
+    transform: none !important;
+    box-shadow: none !important;
   }
 }

@@ -35,6 +35,9 @@ table {
     tbody tr:hover td {
       background-color: var(--card-background-hover) !important;
     }
+    tbody tr.no-hover:hover td {
+      background-color: unset !important;
+    }
   }
 
   &.highlight-cell {

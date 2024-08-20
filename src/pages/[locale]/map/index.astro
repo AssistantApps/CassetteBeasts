@@ -8,6 +8,7 @@ import { readDataFromAssets } from 'helpers/fileHelper';
 import { IntermediateFile } from 'constants/intermediateFile';
 import { astroPaths } from 'constants/astro';
 import { breadcrumb } from 'constants/breadcrumb';
+import { routes } from 'constants/route';
 import { availableLanguages, UIKeys } from 'constants/localisation';
 import type { ILocalisation } from 'contracts/localisation';
 import type { IWorldEnhanced } from 'contracts/world';
@@ -81,9 +82,12 @@ const { translate } = translator(translationLookup);
                   >
                     {map.chunk_meta_data_localised.map((chunkMeta, rowIdx) => (
                       <Fragment>
-                        {chunkMeta.map((cell, colIdx) => (
-                          <div class={`cell x-${colIdx} y-${rowIdx}`}>
-                            {cell != null && (
+                        {chunkMeta.map((cell, colIdx) =>
+                          cell != null ? (
+                            <a
+                              href={`/${locale}${routes.map}/${map.id}/${cell.id}.html`}
+                              class={`cell x-${colIdx} y-${rowIdx}`}
+                            >
                               <div class="popup">
                                 <h5>
                                   {cell.title_localised} <small>({cell.id})</small>
@@ -116,9 +120,11 @@ const { translate } = translator(translationLookup);
                                   </div>
                                 )}
                               </div>
-                            )}
-                          </div>
-                        ))}
+                            </a>
+                          ) : (
+                            <div class={`cell x-${colIdx} y-${rowIdx}`} />
+                          ),
+                        )}
                       </Fragment>
                     ))}
                   </div>

@@ -40,7 +40,7 @@ export const MonsterFusionDisplay: Component<IProps> = (props: IProps) => {
 
     let maxH = 0;
     let maxW = 0;
-    for (const sprite of Object.values(props.fusionSpriteMap)) {
+    for (const sprite of Object.values(props.fusionSpriteMap ?? {})) {
       const firstFrame = sprite.animations[0].frames[0];
       if (firstFrame.height > maxH) {
         maxH = firstFrame.height;
@@ -51,7 +51,7 @@ export const MonsterFusionDisplay: Component<IProps> = (props: IProps) => {
     }
 
     let maxTop = 0;
-    for (const node of Object.values(fusionA.nodes_enhanced)) {
+    for (const node of Object.values(fusionA.nodes_enhanced ?? {})) {
       if (node.position.y < maxTop) {
         maxTop = node.position.y;
       }

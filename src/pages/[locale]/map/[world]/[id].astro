@@ -1,0 +1,263 @@
+---
+import Layout from 'components/layouts/Layout.astro';
+import Breadcrumb from 'components/Breadcrumb.astro';
+import MonsterSpawnDetailsRow from 'components/monster/MonsterSpawnDetailsRow.astro';
+
+import languageJson from 'assets/json/language.json';
+
+import { readDataFromAssets } from 'helpers/fileHelper';
+import { IntermediateFile } from 'constants/intermediateFile';
+import { astroPaths } from 'constants/astro';
+import { breadcrumb } from 'constants/breadcrumb';
+import { availableLanguages, UIKeys } from 'constants/localisation';
+import { routes } from 'constants/route';
+import { site } from 'constants/site';
+import type { ILocalisation } from 'contracts/localisation';
+import type { IMonsterSpawnDetailsEnhanced } from 'contracts/monsterSpawn';
+import type { IWorldEnhanced, IWorldMetaDataEnhanced } from 'contracts/world';
+import { type IGuideSchema, AccessMode } from 'contracts/schema/guideScheme';
+import { isoDate } from 'helpers/dateHelper';
+import { toSchemaOrgProperty } from 'helpers/schemaHelper';
+import { limitLengthWithEllipse } from 'helpers/stringHelper';
+import { translator } from 'helpers/translateHelper';
+import { imgUrl } from 'helpers/urlHelper';
+
+export async function getStaticPaths() {
+  const paths: any = [];
+  for (const locale of availableLanguages) {
+    const itemMap = await readDataFromAssets<Record<string, IWorldEnhanced>>({
+      pathFolders: [...astroPaths.intermediatePath, locale],
+      destFileName: IntermediateFile.world,
+    });
+    for (const item of Object.values(itemMap)) {
+      for (const chunkRow of Object.values(item.chunk_meta_data_localised)) {
+        for (const chunkCol of chunkRow) {
+          if (chunkCol?.id == null) continue;
+          const path = {
+            params: { locale: locale, world: item.id, id: chunkCol.id },
+            props: { item },
+          };
+          paths.push(path as never);
+        }
+      }
+    }
+  }
+  return paths;
+}
+
+const { locale, world, id } = Astro.params;
+const worldMap = (Astro.props as any).item as IWorldEnhanced;
+const translationLookup = (languageJson as Record<string, ILocalisation>)[locale].messages;
+const { translate } = translator(translationLookup);
+
+const flatChunks = worldMap.chunk_meta_data_localised.flat();
+const data = flatChunks.find((c) => c?.id == id)!;
+const coords = data?.id.split(' ');
+if (data == null || coords?.length != 2) {
+  return Astro.redirect(routes.map);
+}
+
+const surroundingChunks: Array<IWorldMetaDataEnhanced | undefined> = [];
+for (let yIndex = 0; yIndex < 3; yIndex++) {
+  for (let xIndex = 0; xIndex < 3; xIndex++) {
+    const xOffset = xIndex - 1;
+    const yOffset = yIndex - 1;
+    const targetId = `${parseInt(coords[0]) + xOffset} ${parseInt(coords[1]) + yOffset}`;
+    const item = flatChunks.find((c) => c?.id == targetId);
+    surroundingChunks.push(item);
+  }
+}
+
+const overworldMonstersUnordered: Array<IMonsterSpawnDetailsEnhanced> = [];
+const backupMonstersUnordered: Array<IMonsterSpawnDetailsEnhanced> = [];
+for (const monster of data.species_in_this_zone) {
+  if (monster.overworldMonsterId != null) {
+    overworldMonstersUnordered.push(monster);
+    continue;
+  }
+  backupMonstersUnordered.push(monster);
+}
+const overworldMonsters = overworldMonstersUnordered.sort((a, b) => b.percent - a.percent);
+const backupMonsters = backupMonstersUnordered.sort((a, b) => b.percent - a.percent);
+const hasMonsters = overworldMonsters.length + backupMonsters.length > 0;
+
+const meta_image_url = site.images.meta.url;
+const description = data.title_localised + ' - ' + data.features_localised.join('. ');
+const additionalSchemaObj: IGuideSchema = {
+  name: data.title_localised,
+  headline: data.title_localised,
+  about: description,
+  abstract: description,
+  description: limitLengthWithEllipse(description, 200),
+  accessMode: AccessMode.textual,
+  dateModified: isoDate(),
+  // thumbnailUrl: site.rootUrl + meta_image_url.slice(1),
+};
+---
+
+<Layout
+  locale={locale}
+  metaImageUrl={meta_image_url}
+  documentTitle={data.title_localised}
+  description={description}
+  schemaExtra={toSchemaOrgProperty('mainEntity', 'Guide', additionalSchemaObj)}
+  translationLookup={translationLookup}
+>
+  <Breadcrumb
+    locale={locale}
+    translationLookup={translationLookup}
+    breadcrumbs={[
+      breadcrumb.world(locale), //
+      breadcrumb.worldDetail(locale, data.title_localised),
+    ]}
+  />
+
+  <div id="world-chunk" class="grid masonry min-card-width mb-3">
+    <div class="meta">
+      <h1>{translate(UIKeys.viewMonsters)} - {data.title_localised}</h1>
+    </div>
+
+    <article class="item-detail-card">
+      <div class="item-detail-card-heading primary">
+        <h2 class="Neu5Land animate__animated animate__fadeIn">{data.title_localised}</h2>
+      </div>
+      <div class="item-detail-card-body">
+        <h2 class="meta">Images for {data.title_localised}</h2>
+        <div class="grid images noselect animate__animated animate__fadeIn">
+          <div class="sprites">
+            <div class="map-chunk">
+              <img
+                src={`/assets/img/generated/data/map_metadata/${world}${data.id}.png`}
+                alt={`${data.title_localised}`}
+                draggable="false"
+              />
+              <p class="ta-center">{coords[0]} {coords[1]}</p>
+            </div>
+          </div>
+
+          <div class="overworld-map">
+            <div class="map-parts">
+              {
+                surroundingChunks.map((chunk) =>
+                  chunk == null ? (
+                    <img
+                      src={`/assets/img/overworld_bg.png`}
+                      alt="overworld_bg"
+                      draggable="false"
+                    />
+                  ) : (
+                    <img
+                      id={chunk.id}
+                      src={`/assets/img/generated/data/map_metadata/${world}${chunk.id}.png`}
+                      alt={`${chunk.title_localised}`}
+                      draggable="false"
+                    />
+                  ),
+                )
+              }
+            </div>
+            <div class="map-parts overlay">
+              {
+                surroundingChunks.map((chunk) =>
+                  chunk == null ? (
+                    <div class="chunk" />
+                  ) : (
+                    <a
+                      href={`/${locale}${routes.map}/${world}/${chunk.id}.html`}
+                      title={chunk.title_localised}
+                      class={`chunk ${chunk.id == data.id ? 'selected' : 'available'}`}
+                    />
+                  ),
+                )
+              }
+            </div>
+          </div>
+        </div>
+
+        <div class="bio mt-1 animate__animated animate__fadeIn">
+          <h2 class="meta">features for {data.title_localised}</h2>
+          {
+            data.features_localised.map((feat) => (
+              <div class="details">
+                {feat.icon_url && (
+                  <img
+                    src={imgUrl(feat.icon_url)}
+                    class="status"
+                    alt={`${feat.title_localised}`}
+                    loading="lazy"
+                    draggable="false"
+                  />
+                )}
+                <div class="text">
+                  <p class="name">{feat.title_localised}</p>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </article>
+
+    <article class="item-detail-card">
+    <Fragment>
+      {
+        hasMonsters && (
+            <div class="item-detail-card-heading">
+              <h2 class="Neu5Land animate__animated animate__fadeIn">
+                {translate(UIKeys.viewMonsters)}
+              </h2>
+              <div class="spacer" />
+            </div>
+            <div class="item-detail-card-body table-container">
+              <section class="additional-section habitat animate__animated animate__fadeIn">
+                <div class="table-container">
+                  <table class="last-td-padding highlight-row">
+                    <thead>
+                      <tr>
+                        <td class="sprite" />
+                        <td class="name">{translate(UIKeys.name)}</td>
+                        <td class="percent">{translate('percentTitle')}</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {overworldMonsters.map((monsterSpawn) => (
+                        <MonsterSpawnDetailsRow
+                          locale={locale}
+                          monsterSpawn={monsterSpawn}
+                          monsterOverworld={data.monster_in_habitat.find(
+                            (m) => m.id == monsterSpawn.overworldMonsterId,
+                          )}
+                          monster={
+                            data.monster_in_habitat.find((m) => m.id == monsterSpawn.monsterId)!
+                          }
+                        />
+                      ))}
+
+                      {backupMonsters.length > 0 && overworldMonsters.length > 0 && (
+                        <tr class="no-hover">
+                          <td colspan="3" class="ta-center">
+                            {translate('backup')}
+                          </td>
+                        </tr>
+                      )}
+
+                      {backupMonsters.map((monsterSpawn) => (
+                        <MonsterSpawnDetailsRow
+                          locale={locale}
+                          monsterSpawn={monsterSpawn}
+                          monster={
+                            data.monster_in_habitat.find((m) => m.id == monsterSpawn.monsterId)!
+                          }
+                        />
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </section>
+            </div>
+        )
+      }
+    </Fragment>
+          </article>
+  </div>
+</Layout>
