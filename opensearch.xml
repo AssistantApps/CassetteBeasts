@@ -4,6 +4,14 @@
   <ShortName>Assistant for Cassette Beasts</ShortName>
   <Description>Data from the game Cassette Beasts, automatically generated</Description>
   <InputEncoding>UTF-8</InputEncoding>
+  <OutputEncoding>UTF-8</OutputEncoding>
+  <AdultContent>false</AdultContent>
+  <Developer>Kurt Lourens</Developer>
+  <Contact>support@assistantapps.com</Contact>
+  <Description>Data from the game Cassette Beasts, automatically generated</Description>
+  <Tags>cassette beasts cassette beasts assistant apps assistant</Tags>
+  <Attribution>Search data from AssistantApps, https://assistantapps.com</Attribution>
+  <Query role="example" searchTerms="Springheel"/>
   <Image width="16" height="16" type="image/x-icon">https://cassettebeasts.assistantapps.com//favicon.ico</Image>
   <Url type="text/html" template="https://cassettebeasts.assistantapps.com/?q={searchTerms}">
     <Param name="searchTerms" value="{searchTerms}" />
