@@ -1,8 +1,6 @@
 import sitemap from '@astrojs/sitemap';
 import solidJs from '@astrojs/solid-js';
-import compressor from 'astro-compressor';
 import metaTags from 'astro-meta-tags';
-import purgecss from 'astro-purgecss';
 import robotsTxt from 'astro-robots-txt';
 import { defineConfig } from 'astro/config';
 
@@ -42,7 +40,5 @@ export default defineConfig({
     solidJs(),
     metaTags(),
     robotsTxt(),
-    purgecss(),
-    compressor(),
   ],
 });
