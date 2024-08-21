@@ -56,9 +56,12 @@ const allLangCodes = Object.keys(languageJson).filter((lang) => !excludeLangCode
     />
 
     <script is:inline src={`/assets/js/main.js?v=${versionJson.app_version}`}></script>
-    <script is:inline defer src="https://webcomp.assistantapps.com/build/bundle.js"></script>
-    <script is:inline type="text/partytown" src={`/analytics.js?v=${versionJson.app_version}`}
-    ></script>
+    <script is:inline defer src={`/analytics.js?v=${versionJson.app_version}`}></script>
+    <script
+      transition:persist
+      is:inline
+      defer
+      src="https://webcomp.assistantapps.com/build/bundle.js"></script>
 
     <script is:inline>
       if ('serviceWorker' in navigator) {

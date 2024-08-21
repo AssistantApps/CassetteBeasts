@@ -15,6 +15,8 @@
 
 ## More meta images
 
-## Minify html, CSS & JS
+- Try https://github.com/patrick91/astro-meta-tags#readme
 
-- Try PureCSS
+## Fun
+
+- https://www.emojiblast.dev

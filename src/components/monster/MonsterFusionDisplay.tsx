@@ -51,7 +51,7 @@ export const MonsterFusionDisplay: Component<IProps> = (props: IProps) => {
     }
 
     let maxTop = 0;
-    for (const node of Object.values(fusionA.nodes_enhanced ?? {})) {
+    for (const node of Object.values(fusionA?.nodes_enhanced ?? {})) {
       if (node.position.y < maxTop) {
         maxTop = node.position.y;
       }
