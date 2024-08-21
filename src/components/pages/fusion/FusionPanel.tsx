@@ -18,8 +18,8 @@ export const FusionPanel: Component<IProps> = (props: IProps) => {
   const [monsterA, setMonsterA] = createSignal<IMonsterFormDropdown>();
   const [monsterB, setMonsterB] = createSignal<IMonsterFormDropdown>();
 
-  const [itemMap, setItemMap] = createSignal<Record<string, IFusionEnhanced>>();
-  const [fusionSpriteMap, setFusionSpriteMap] = createSignal<Record<string, ISpriteAnim>>();
+  const [itemMap, setItemMap] = createSignal<Record<string, IFusionEnhanced>>({});
+  const [fusionSpriteMap, setFusionSpriteMap] = createSignal<Record<string, ISpriteAnim>>({});
   const [monsterDropdown, setMonsterDropdown] = createSignal<Array<IMonsterFormDropdown>>([]);
 
   const [networkState, setNetworkState] = createSignal<NetworkState>(NetworkState.loading);
@@ -98,8 +98,8 @@ export const FusionPanel: Component<IProps> = (props: IProps) => {
             <Match when={networkState() === NetworkState.success}>
               <MonsterFusionDisplay
                 translate={props.translate}
-                itemMap={itemMap()!}
-                fusionSpriteMap={fusionSpriteMap()!}
+                itemMap={itemMap()}
+                fusionSpriteMap={fusionSpriteMap()}
                 monsterA={monsterA()}
                 monsterB={monsterB()}
               />

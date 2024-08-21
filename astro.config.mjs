@@ -1,8 +1,10 @@
-import { defineConfig } from 'astro/config';
-import solidJs from '@astrojs/solid-js';
 import sitemap from '@astrojs/sitemap';
+import solidJs from '@astrojs/solid-js';
+import compressor from 'astro-compressor';
+import metaTags from 'astro-meta-tags';
+import purgecss from 'astro-purgecss';
 import robotsTxt from 'astro-robots-txt';
-import partytown from '@astrojs/partytown';
+import { defineConfig } from 'astro/config';
 
 import { site } from './src/constants/site';
 
@@ -38,7 +40,9 @@ export default defineConfig({
       lastmod: new Date(),
     }),
     solidJs(),
-    partytown(),
+    metaTags(),
     robotsTxt(),
+    purgecss(),
+    compressor(),
   ],
 });

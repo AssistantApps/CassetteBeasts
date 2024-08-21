@@ -131,6 +131,12 @@ alternateUrls.push({
   <meta name="msapplication-TileColor" content={site.theme.maskColour} />
   <meta name="msapplication-starturl" content="/?pwa-app" />
 
+  {
+    site.preconnectLinks.map((link) => (
+      <link rel="preconnect" href={link.url} crossorigin={link.crossOrigin} />
+    ))
+  }
+
   <script is:inline>
     window.config = {
       assistantAppsImgRoot: 'https://webcomp.assistantapps.com',
