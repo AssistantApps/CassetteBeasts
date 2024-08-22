@@ -1,13 +1,13 @@
-import { createEffect, createSignal, Match, Switch, type Component } from 'solid-js';
+import { createSignal, Match, onMount, Switch, type Component } from 'solid-js';
 
-import type { IFusionEnhanced } from 'contracts/fusion';
-import type { IMonsterFormDropdown } from 'contracts/monsterForm';
+import { LoadingSpinner } from 'components/common/Loading';
 import { MonsterDropdown } from 'components/monster/MonsterDropdown';
 import { MonsterFusionDisplay } from 'components/monster/MonsterFusionDisplay';
-import type { ISpriteAnim } from 'contracts/spriteAnim';
-import { NetworkState } from 'constants/networkState';
-import { LoadingSpinner } from 'components/common/Loading';
 import { defaultLocale } from 'constants/localisation';
+import { NetworkState } from 'constants/networkState';
+import type { IFusionEnhanced } from 'contracts/fusion';
+import type { IMonsterFormDropdown } from 'contracts/monsterForm';
+import type { ISpriteAnim } from 'contracts/spriteAnim';
 
 interface IProps {
   locale: string;
@@ -51,10 +51,9 @@ export const FusionPanel: Component<IProps> = (props: IProps) => {
     setNetworkState(NetworkState.success);
   };
 
-  createEffect(() => {
-    setNetworkState(NetworkState.loading);
+  onMount(() => {
     loadData();
-  }, []);
+  });
 
   return (
     <>

@@ -45,4 +45,9 @@ export class VersionModule extends CommonModule<IVersion, IVersion> {
     const destFile = path.join(paths().intermediateFolder, this.intermediateFile);
     fs.writeFileSync(destFile, JSON.stringify(this._itemDetailMap[this._fileName], null, 2));
   };
+
+  updatePackageVersionNumber = () => {
+    this._itemDetailMap[this._fileName].app_version = getConfig().packageVersion();
+    this.writeIntermediate();
+  };
 }
