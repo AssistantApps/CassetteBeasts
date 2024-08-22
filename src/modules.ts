@@ -21,17 +21,21 @@ export const getModules = async (props: {
   loadFromJson?: boolean;
 }): Promise<[LocalisationModule, Array<CommonModule<unknown, unknown>>]> => {
   const localisationModule = new LocalisationModule();
+  const versionModule = new VersionModule();
   if (props.loadFromJson == true) {
     await localisationModule.initFromIntermediate();
+    await versionModule.initFromIntermediate();
   } else {
     const message = await localisationModule.init();
     console.log(`\t${message}`);
   }
+  versionModule.updatePackageVersionNumber();
+
   const modules: Array<CommonModule<unknown, unknown>> = [
     localisationModule,
+    versionModule,
     new MiscModule(),
     new WorldModule(),
-    new VersionModule(),
     new AssistantAppsModule(),
 
     // Element
