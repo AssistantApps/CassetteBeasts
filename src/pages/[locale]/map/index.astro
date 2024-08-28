@@ -1,17 +1,23 @@
 ---
-import Layout from 'components/layouts/Layout.astro';
 import Breadcrumb from 'components/Breadcrumb.astro';
+import Layout from 'components/layouts/Layout.astro';
 
 import languageJson from '../../../assets/json/language.json';
 
-import { readDataFromAssets } from 'helpers/fileHelper';
-import { IntermediateFile } from 'constants/intermediateFile';
 import { astroPaths } from 'constants/astro';
 import { breadcrumb } from 'constants/breadcrumb';
-import { routes } from 'constants/route';
+import { AppImage } from 'constants/image';
+import { IntermediateFile } from 'constants/intermediateFile';
 import { availableLanguages, UIKeys } from 'constants/localisation';
+import { routes } from 'constants/route';
+import { site } from 'constants/site';
 import type { ILocalisation } from 'contracts/localisation';
+import { AccessMode, type IGuideSchema } from 'contracts/schema/guideScheme';
 import type { IWorldEnhanced } from 'contracts/world';
+import { isoDate } from 'helpers/dateHelper';
+import { readDataFromAssets } from 'helpers/fileHelper';
+import { toSchemaOrgProperty } from 'helpers/schemaHelper';
+import { limitLengthWithEllipse } from 'helpers/stringHelper';
 import { translator } from 'helpers/translateHelper';
 import { imgUrl } from 'helpers/urlHelper';
 
@@ -35,9 +41,32 @@ const { locale } = Astro.params;
 const list = (Astro.props as any).list as Array<IWorldEnhanced>;
 const translationLookup = (languageJson as Record<string, ILocalisation>)[locale].messages;
 const { translate } = translator(translationLookup);
+
+const descriptionMessages = list
+  .map((g) => g.title_localised)
+  .filter((m) => m != null)
+  .join('. ');
+const description = limitLengthWithEllipse(descriptionMessages, 120);
+const schemaOverride: IGuideSchema = {
+  name: translate(UIKeys.map),
+  headline: translate(UIKeys.map),
+  about: description,
+  abstract: description,
+  description: description,
+  accessMode: AccessMode.textual,
+  dateModified: isoDate(),
+  thumbnailUrl: site.rootUrl + AppImage.meta.slice(1),
+  // thumbnailUrl: site.rootUrl + data.meta_image_url.slice(1),
+};
 ---
 
-<Layout locale={locale} documentTitle={translate(UIKeys.map)} translationLookup={translationLookup}>
+<Layout
+  locale={locale}
+  documentTitle={translate(UIKeys.map)}
+  additionalKeywords={[translate(UIKeys.map)]}
+  schemaOverride={toSchemaOrgProperty('Guide', schemaOverride)}
+  translationLookup={translationLookup}
+>
   <Breadcrumb
     locale={locale}
     translationLookup={translationLookup}

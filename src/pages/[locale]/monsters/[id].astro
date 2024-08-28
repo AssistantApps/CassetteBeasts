@@ -1,16 +1,15 @@
 ---
-import Layout from 'components/layouts/Layout.astro';
 import Breadcrumb from 'components/Breadcrumb.astro';
-import StatHex from 'components/stat/StatHex.astro';
-import MonsterRemaster from 'components/monster/MonsterRemaster.astro';
+import Layout from 'components/layouts/Layout.astro';
 import MonsterMoveRow from 'components/monster/MonsterMoveRow.astro';
+import MonsterRemaster from 'components/monster/MonsterRemaster.astro';
+import StatHex from 'components/stat/StatHex.astro';
 
 import languageJson from 'assets/json/language.json';
 
-import { readDataFromAssets } from 'helpers/fileHelper';
-import { IntermediateFile } from 'constants/intermediateFile';
 import { astroPaths } from 'constants/astro';
 import { breadcrumb } from 'constants/breadcrumb';
+import { IntermediateFile } from 'constants/intermediateFile';
 import { availableLanguages, UIKeys } from 'constants/localisation';
 import { routes } from 'constants/route';
 import { site } from 'constants/site';
@@ -18,6 +17,7 @@ import type { ILocalisation } from 'contracts/localisation';
 import type { IMonsterFormEnhanced } from 'contracts/monsterForm';
 import { type IGuideSchema, AccessMode } from 'contracts/schema/guideScheme';
 import { isoDate } from 'helpers/dateHelper';
+import { readDataFromAssets } from 'helpers/fileHelper';
 import { toSchemaOrgProperty } from 'helpers/schemaHelper';
 import { limitLengthWithEllipse, stars } from 'helpers/stringHelper';
 import { translator } from 'helpers/translateHelper';
@@ -46,7 +46,7 @@ const data = (Astro.props as any).item as IMonsterFormEnhanced;
 const translationLookup = (languageJson as Record<string, ILocalisation>)[locale].messages;
 const { translate } = translator(translationLookup);
 
-const additionalSchemaObj: IGuideSchema = {
+const schemaOverride: IGuideSchema = {
   name: data.name_localised,
   headline: data.name_localised,
   about: data.description_localised,
@@ -62,8 +62,9 @@ const additionalSchemaObj: IGuideSchema = {
   locale={locale}
   metaImageUrl={data.meta_image_url}
   documentTitle={data.name_localised}
-  description={data.description_localised + ' - ' + data.description_localised}
-  schemaExtra={toSchemaOrgProperty('mainEntity', 'Guide', additionalSchemaObj)}
+  additionalKeywords={[data.name_localised]}
+  description={data.description_localised + ' - ' + schemaOverride.description}
+  schemaOverride={toSchemaOrgProperty('Guide', schemaOverride)}
   translationLookup={translationLookup}
 >
   <Breadcrumb

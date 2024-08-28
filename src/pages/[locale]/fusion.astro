@@ -36,7 +36,12 @@ for (const key of keysToKeep) {
 }
 ---
 
-<Layout locale={locale} documentTitle={title} translationLookup={translationLookup}>
+<Layout
+  locale={locale}
+  documentTitle={title}
+  additionalKeywords={[translate(UIKeys.fusion)]}
+  translationLookup={translationLookup}
+>
   <section class="mb-1">
     <h1 class="Neu5Land ta-center">{title}</h1>
     <div class="meta">

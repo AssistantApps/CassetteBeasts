@@ -8,17 +8,19 @@ interface Props {
   documentTitle?: string;
   description: string;
   metaImageUrl?: string;
-  schemaExtra?: string;
+  schemaOverride?: string;
   version?: string;
 }
 
-const { locale, documentTitle, description, metaImageUrl, schemaExtra, version } = Astro.props;
+const { locale, documentTitle, description, metaImageUrl, schemaOverride, version } = Astro.props;
 const date = isoDate();
 
 const indexOfDivider = locale.indexOf('_');
 const langCode = indexOfDivider > 0 ? locale.substring(0, indexOfDivider) : locale;
 
-let jsonStr = `{
+let jsonStr =
+  schemaOverride ??
+  `{
     "@context": "https://schema.org/",
     "@type": "SoftwareApplication",
     "name": "${documentTitle != null ? `${documentTitle} - ` : ''}${site.meta.appName}",
@@ -32,7 +34,6 @@ let jsonStr = `{
     "operatingSystem": "Android Lollipop, iOS, Chrome, Firefox, Opera, Internet Explorer, Edge",
     "softwareVersion": "${version}",
     "version": "${version}",
-    ${schemaExtra ?? ''}
     "author": {
       "@type": "Person",
       "name": "${site.humans.kurt.name}",
