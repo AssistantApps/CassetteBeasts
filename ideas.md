@@ -15,7 +15,8 @@
 
 ## More meta images
 
-- Try https://github.com/patrick91/astro-meta-tags#readme
+- For the list pages (monsters, moves, etc)
+- Meta images for the world chunks
 
 ## Fun
 

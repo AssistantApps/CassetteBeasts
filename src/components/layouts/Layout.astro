@@ -16,8 +16,8 @@ interface Props {
   documentTitle: string;
   description?: string;
   metaImageUrl?: string;
-  schemaOverride?: string;
   additionalKeywords?: Array<string>;
+  schemaOverride?: Record<string, string | unknown>;
   translationLookup: Record<string, string>;
 }
 

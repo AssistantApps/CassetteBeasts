@@ -8,7 +8,7 @@ interface Props {
   documentTitle?: string;
   description: string;
   metaImageUrl?: string;
-  schemaOverride?: string;
+  schemaOverride?: Record<string, string | unknown>;
   version?: string;
 }
 
@@ -18,9 +18,19 @@ const date = isoDate();
 const indexOfDivider = locale.indexOf('_');
 const langCode = indexOfDivider > 0 ? locale.substring(0, indexOfDivider) : locale;
 
-let jsonStr =
-  schemaOverride ??
-  `{
+let jsonStr = '';
+if (schemaOverride != null) {
+  const enhancedObj = {
+    ...schemaOverride,
+    version: version,
+    inLanguage: langCode,
+    dateCreated: date,
+    dateModified: date,
+    datePublished: date,
+  };
+  jsonStr = JSON.stringify(enhancedObj, null, 2);
+} else {
+  jsonStr = `{
     "@context": "https://schema.org/",
     "@type": "SoftwareApplication",
     "name": "${documentTitle != null ? `${documentTitle} - ` : ''}${site.meta.appName}",
@@ -59,6 +69,7 @@ let jsonStr =
     "dateModified": "${date}",
     "datePublished": "${date}"
   }`;
+}
 
 const jsonObj = JSON.parse(jsonStr);
 const htmlString = `

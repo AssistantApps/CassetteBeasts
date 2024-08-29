@@ -43,7 +43,12 @@ const effectOptions = grid[0].filter(e => e.id.length > 0);
 const translationLookup = (languageJson as Record<string, ILocalisation>)[locale].messages;
 const { translate } = translator(translationLookup);
 
-const descriptionMessages = grid.flatMap(g => g).map(g => g.message).filter(m => m != null).join('. ');
+const descriptionMessages = grid
+  .flatMap(g => g)
+  .slice(0, 5)
+  .map(g => g.message)
+  .filter(m => m != null)
+  .join('. ');
 const description = limitLengthWithEllipse(descriptionMessages, 120);
 const schemaOverride: IGuideSchema = {
   name: translate(UIKeys.elementalTypeChart),

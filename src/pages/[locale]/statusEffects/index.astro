@@ -45,6 +45,7 @@ const translationLookup = (languageJson as Record<string, ILocalisation>)[locale
 const { translate } = translator(translationLookup);
 
 const descriptionMessages = list
+  .slice(0, 5)
   .map((g) => g.description_localised)
   .filter((m) => m != null)
   .join('. ');
