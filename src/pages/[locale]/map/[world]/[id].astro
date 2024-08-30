@@ -83,7 +83,7 @@ const hasMonsters = overworldMonsters.length + backupMonsters.length > 0;
 
 const meta_image_url = site.images.meta.url;
 const description = data.title_localised + ' - ' + data.features_localised.join('. ');
-const additionalSchemaObj: IGuideSchema = {
+const schemaOverride: IGuideSchema = {
   name: data.title_localised,
   headline: data.title_localised,
   about: description,
@@ -100,7 +100,7 @@ const additionalSchemaObj: IGuideSchema = {
   metaImageUrl={meta_image_url}
   documentTitle={data.title_localised}
   description={description}
-  schemaExtra={toSchemaOrgProperty('mainEntity', 'Guide', additionalSchemaObj)}
+  schemaOverride={toSchemaOrgProperty('Guide', schemaOverride)}
   translationLookup={translationLookup}
 >
   <Breadcrumb
