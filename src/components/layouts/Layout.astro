@@ -16,12 +16,13 @@ interface Props {
   documentTitle: string;
   description?: string;
   metaImageUrl?: string;
-  schemaExtra?: string;
+  additionalKeywords?: Array<string>;
+  schemaOverride?: Record<string, string | unknown>;
   translationLookup: Record<string, string>;
 }
 
-const { locale, documentTitle, description, metaImageUrl, schemaExtra, translationLookup } =
-  Astro.props;
+const { locale, documentTitle, description, translationLookup } = Astro.props;
+const { metaImageUrl, additionalKeywords, schemaOverride } = Astro.props;
 
 const allLangCodes = Object.keys(languageJson).filter((lang) => !excludeLangCodes.includes(lang));
 ---
@@ -32,8 +33,9 @@ const allLangCodes = Object.keys(languageJson).filter((lang) => !excludeLangCode
     allLangCodes={allLangCodes}
     documentTitle={documentTitle}
     description={description}
+    additionalKeywords={additionalKeywords}
     metaImageUrl={metaImageUrl}
-    schemaExtra={schemaExtra}
+    schemaOverride={schemaOverride}
     version={versionJson.app_version}
   />
 

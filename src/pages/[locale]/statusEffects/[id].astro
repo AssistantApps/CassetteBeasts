@@ -42,7 +42,7 @@ const data = (Astro.props as any).item as IStatusEffectEnhanced;
 const translationLookup = (languageJson as Record<string, ILocalisation>)[locale].messages;
 const { translate } = translator(translationLookup);
 
-const additionalSchemaObj: IGuideSchema = {
+const schemaOverride: IGuideSchema = {
   name: data.name_localised,
   headline: data.name_localised,
   about: data.description_localised,
@@ -59,7 +59,8 @@ const additionalSchemaObj: IGuideSchema = {
   documentTitle={data.name_localised}
   description={data.description_localised}
   metaImageUrl={data.meta_image_url}
-  schemaExtra={toSchemaOrgProperty('mainEntity', 'Guide', additionalSchemaObj)}
+  additionalKeywords={[data.name_localised]}
+  schemaOverride={toSchemaOrgProperty('Guide', schemaOverride)}
   translationLookup={translationLookup}
 >
   <Breadcrumb

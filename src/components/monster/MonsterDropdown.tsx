@@ -36,7 +36,8 @@ export const MonsterDropdown: Component<IProps> = (props: IProps) => {
       <Switch
         fallback={
           <summary data-TODO="translate">
-            <LoadingSpinner size="sm" /> Loading
+            <LoadingSpinner size="sm" />
+            Loading
           </summary>
         }
       >

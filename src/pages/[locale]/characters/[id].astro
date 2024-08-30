@@ -14,11 +14,10 @@ import { routes } from 'constants/route';
 import { availableLanguages, UIKeys } from 'constants/localisation';
 import type { ILocalisation } from 'contracts/localisation';
 import type { ICharacterEnhanced } from 'contracts/character';
-import { type IGuideSchema, AccessMode } from 'contracts/schema/guideScheme';
-import { isoDate } from 'helpers/dateHelper';
-import { toSchemaOrgProperty } from 'helpers/schemaHelper';
 import { translator } from 'helpers/translateHelper';
 import { imgUrl } from 'helpers/urlHelper';
+import type { IPersonSchema } from 'contracts/schema/personSchema';
+import { toSchemaOrgProperty } from 'helpers/schemaHelper';
 
 export async function getStaticPaths() {
   const paths: any = [];
@@ -43,12 +42,12 @@ const data = (Astro.props as any).item as ICharacterEnhanced;
 const translationLookup = (languageJson as Record<string, ILocalisation>)[locale].messages;
 const { translate } = translator(translationLookup);
 
-const additionalSchemaObj: IGuideSchema = {
+const schemaOverride: IPersonSchema = {
   name: data.name_localised,
-  headline: data.name_localised,
-  accessMode: AccessMode.textual,
-  dateModified: isoDate(),
-  thumbnailUrl: site.rootUrl + data.meta_image_url.slice(1),
+  givenName: data.name_localised,
+  additionalName: data.name_localised,
+  image: site.rootUrl + data.meta_image_url.slice(1),
+  url: `${site.rootUrl}${locale}/${data.id}`,
 };
 ---
 
@@ -56,7 +55,8 @@ const additionalSchemaObj: IGuideSchema = {
   locale={locale}
   documentTitle={data.name_localised}
   metaImageUrl={data.meta_image_url}
-  schemaExtra={toSchemaOrgProperty('mainEntity', 'Guide', additionalSchemaObj)}
+  additionalKeywords={[data.name_localised]}
+  schemaOverride={toSchemaOrgProperty('Person', schemaOverride)}
   translationLookup={translationLookup}
 >
   <Breadcrumb

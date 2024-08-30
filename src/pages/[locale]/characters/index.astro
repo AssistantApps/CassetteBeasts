@@ -15,6 +15,12 @@ import type { ICharacterEnhanced } from 'contracts/character';
 import { sortByStringProperty } from 'helpers/sortHelper';
 import { translator } from 'helpers/translateHelper';
 import { imgUrl } from 'helpers/urlHelper';
+import { limitLengthWithEllipse } from 'helpers/stringHelper';
+import { AccessMode, type IGuideSchema } from 'contracts/schema/guideScheme';
+import { toSchemaOrgProperty } from 'helpers/schemaHelper';
+import { isoDate } from 'helpers/dateHelper';
+import { site } from 'constants/site';
+import { AppImage } from 'constants/image';
 
 export async function getStaticPaths() {
   const paths: any = [];
@@ -37,11 +43,31 @@ const unorderedList = (Astro.props as any).list as Array<ICharacterEnhanced>;
 const list = unorderedList.sort(sortByStringProperty((l) => l.name_localised));
 const translationLookup = (languageJson as Record<string, ILocalisation>)[locale].messages;
 const { translate } = translator(translationLookup);
+
+const descriptionMessages = list
+  .slice(0, 5)
+  .map((g) => g.name_localised)
+  .filter((m) => m != null)
+  .join('. ');
+const description = limitLengthWithEllipse(descriptionMessages, 120);
+const schemaOverride: IGuideSchema = {
+  name: translate('characters'),
+  headline: translate('characters'),
+  about: description,
+  abstract: description,
+  description: description,
+  accessMode: AccessMode.textual,
+  dateModified: isoDate(),
+  thumbnailUrl: site.rootUrl + AppImage.meta.slice(1),
+  // thumbnailUrl: site.rootUrl + data.meta_image_url.slice(1),
+};
 ---
 
 <Layout
   locale={locale}
   documentTitle={translate('characters')}
+  additionalKeywords={[translate('characters')]}
+  schemaOverride={toSchemaOrgProperty('Guide', schemaOverride)}
   translationLookup={translationLookup}
 >
   <div class="page-options-with-breadcrumbs">

@@ -42,7 +42,10 @@
     img.sprite-anim {
       height: 5em;
       object-fit: contain;
-      transition: transform 250ms ease-in-out, opacity 250ms ease-in-out;
+      transition:
+        transform 250ms ease-in-out,
+        opacity 250ms ease-in-out;
+      image-rendering: pixelated;
       transform: translateY(0);
       opacity: 1;
       z-index: 1;
