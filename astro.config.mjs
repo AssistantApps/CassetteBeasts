@@ -3,6 +3,7 @@ import solidJs from '@astrojs/solid-js';
 import metaTags from 'astro-meta-tags';
 import robotsTxt from 'astro-robots-txt';
 import { defineConfig } from 'astro/config';
+import { minify } from '@zokki/astro-minify';
 
 import { site } from './src/constants/site';
 
@@ -40,5 +41,22 @@ export default defineConfig({
     solidJs(),
     metaTags(),
     robotsTxt(),
+    minify({
+      html: {
+        drop_console: true,
+        drop_debugger: true,
+        removeComments: true,
+        noNewlinesBeforeTagClose: true,
+        preserveLineBreaks: false,
+        keep_closing_tags: true,
+      },
+      js: {
+        minify: true,
+        minifyWhitespace: true,
+      },
+      css: {
+        minify: true,
+      },
+    }),
   ],
 });

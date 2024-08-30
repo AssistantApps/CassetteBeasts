@@ -18,9 +18,9 @@ const date = isoDate();
 const indexOfDivider = locale.indexOf('_');
 const langCode = indexOfDivider > 0 ? locale.substring(0, indexOfDivider) : locale;
 
-let jsonStr = '';
+let jsonObj = {};
 if (schemaOverride != null) {
-  const enhancedObj = {
+  jsonObj = {
     ...schemaOverride,
     version: version,
     inLanguage: langCode,
@@ -28,9 +28,8 @@ if (schemaOverride != null) {
     dateModified: date,
     datePublished: date,
   };
-  jsonStr = JSON.stringify(enhancedObj, null, 2);
 } else {
-  jsonStr = `{
+  const jsonStr = `{
     "@context": "https://schema.org/",
     "@type": "SoftwareApplication",
     "name": "${documentTitle != null ? `${documentTitle} - ` : ''}${site.meta.appName}",
@@ -69,12 +68,12 @@ if (schemaOverride != null) {
     "dateModified": "${date}",
     "datePublished": "${date}"
   }`;
+  jsonObj = JSON.parse(jsonStr);
 }
 
-const jsonObj = JSON.parse(jsonStr);
 const htmlString = `
 <script type="application/ld+json">
-${JSON.stringify(jsonObj, null, 2)}
+${JSON.stringify(jsonObj)}
 </script>`;
 ---
 
