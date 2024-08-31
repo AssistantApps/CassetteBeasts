@@ -1,0 +1,68 @@
+---
+import path from 'path';
+import imageSize from 'image-size';
+
+import { imgUrl } from 'helpers/urlHelper';
+import { AppImage } from 'constants/image';
+
+interface Props {
+  src?: string;
+  classes?: string;
+  alt: string;
+  width?: string;
+  height?: string;
+  loadingImage?: string;
+  loadingStrat?: 'lazy' | 'defer' | 'eager';
+  draggable?: boolean;
+}
+
+const { src, classes, alt, width, height } = Astro.props;
+const loadingStrat = Astro.props.loadingStrat ?? 'defer';
+const loadingImage = Astro.props.loadingImage ?? AppImage.cardLoader;
+const draggable = Astro.props.draggable ?? false;
+const imgSource = imgUrl(src);
+
+let imgWidth;
+let imgHeight;
+
+try {
+  if (src != null) {
+    const imgFullPath = path.join('public', imgSource);
+    const dimensions = imageSize(imgFullPath);
+    imgWidth = dimensions.width;
+    imgHeight = dimensions.height;
+  }
+} catch (ex) {
+  console.error(ex);
+  // unused
+}
+
+if (width != null) imgWidth = width;
+if (height != null) imgHeight = height;
+---
+
+<img
+  src={loadingStrat == 'defer' ? loadingImage : imgSource}
+  data-src={loadingStrat == 'defer' ? imgSource : ''}
+  data-lazy={loadingStrat}
+  class={classes}
+  alt={alt}
+  width={imgWidth}
+  height={imgHeight}
+  loading={loadingStrat == 'eager' ? 'eager' : 'lazy'}
+  draggable={draggable}
+/>
+
+<script>
+  function loadImages(newDocument: Document) {
+    const images = newDocument.querySelectorAll('img[loading="lazy"][data-lazy="defer"]');
+    images.forEach((img: any) => {
+      img.src = img.dataset.src;
+      img.dataset.lazy = 'done';
+    });
+  }
+
+  document.addEventListener('astro:page-load', () => {
+    loadImages(document);
+  });
+</script>

@@ -30,6 +30,10 @@ export const site = {
       url: 'https://api.assistantapps.com',
       crossOrigin: 'anonymous',
     },
+    {
+      url: 'https://eu.i.posthog.com',
+      crossOrigin: 'anonymous',
+    },
   ],
   legalNotice:
     'This app is not affiliated with, authorised by Bytten Studio Ltd, its subsidiaries, or its parent companies, whose names, logos and products are displayed in this app. The names Cassette Beasts, Bytten Studio Ltd as well as related names and images are registered trademarks of their respective owners. This app is made by fan(s) for fans. Please do not reach out to Bytten Studio Ltd about bugs within this app',

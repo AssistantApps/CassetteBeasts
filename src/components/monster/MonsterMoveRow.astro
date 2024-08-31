@@ -1,7 +1,9 @@
 ---
+import LazyImage from 'components/common/LazyImage.astro';
+
+import { AppImage } from 'constants/image';
 import { routes } from 'constants/route';
 import type { IMoveEnhanced } from 'contracts/move';
-import { imgUrl } from 'helpers/urlHelper';
 
 interface Props {
   locale: string;
@@ -21,21 +23,15 @@ const linkToMove = `/${locale}${routes.moves}/${encodeURI(data.id.toString())}.h
       {
         data.elemental_types_elements.length > 0 ? (
           data.elemental_types_elements.map((elem) => (
-            <img
-              src={imgUrl(elem.icon?.path)}
-              class="move-image"
+            <LazyImage
+              src={elem.icon?.path}
+              classes="move-image"
               alt={`${elem.name_localised}`}
-              draggable="false"
+              loadingImage={AppImage.typeless}
             />
           ))
         ) : (
-          <img
-            src="/assets/img/typeless.png"
-            class="move-image"
-            title="Typeless"
-            alt="typeless"
-            draggable="false"
-          />
+          <LazyImage src={AppImage.typeless} classes="move-image" alt="typeless" />
         )
       }
     </a>

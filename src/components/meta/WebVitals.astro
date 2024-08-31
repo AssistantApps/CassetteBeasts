@@ -1,0 +1,22 @@
+---
+const isProd = import.meta.env.PROD;
+---
+
+<script is:inline define:vars={{ isProd }}>
+  if (isProd) {
+    document.addEventListener(
+      'astro:page-load',
+      () => {
+        const script = document.createElement('script');
+        script.src = 'https://unpkg.com/web-vitals@4/dist/web-vitals.attribution.iife.js';
+        script.onload = function () {
+          webVitals.onCLS(console.log);
+          webVitals.onINP(console.log);
+          webVitals.onLCP(console.log);
+        };
+        document.head.appendChild(script);
+      },
+      { once: true },
+    );
+  }
+</script>
