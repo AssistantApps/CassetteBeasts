@@ -1,0 +1,94 @@
+.move-detail-grid {
+  grid-template-columns: minmax(500px, 2fr) minmax(250px, 1fr);
+
+  .move-detail-card {
+    .move-detail-card-heading {
+      &:hover {
+        .type {
+          animation: tada;
+          animation-duration: 2s;
+        }
+      }
+
+      img {
+        width: 2rem;
+        height: 2rem;
+      }
+
+      h2 {
+        flex: 1;
+      }
+    }
+  }
+
+  .move-detail-card-body {
+    position: relative;
+    padding: 0.5em 1em 1em 1em;
+    overflow-x: auto;
+    max-height: 100vh;
+
+    p,
+    span {
+      color: var(--card-foreground);
+    }
+
+    .sub-heading {
+      display: flex;
+      flex-direction: row;
+
+      .ap-block img {
+        min-width: 0.85em;
+      }
+    }
+
+    .tags small {
+      font-weight: 400;
+    }
+
+    .status-card-container {
+      margin-top: 1.5em;
+
+      .status-group {
+        text-decoration: none;
+
+        &:hover {
+          background-color: var(--card-background-darken-2);
+        }
+      }
+    }
+
+    .additional-section {
+      .sprite img {
+        height: 2em;
+        width: auto;
+      }
+    }
+  }
+}
+
+// animation delays
+// .monster-detail-card {
+//   .monster-detail-card-body {
+//     .id,
+//     .descrip,
+//     .images {
+//       animation-delay: 100ms;
+//     }
+
+//     .controls {
+//       animation-delay: 200ms;
+//     }
+
+//     .bio {
+//       animation-delay: 300ms;
+//     }
+
+//     .remasters {
+//       animation-delay: 400ms;
+//     }
+
+//     .moves {
+//       animation-delay: 500ms;
+//     }
+//   }
+// }

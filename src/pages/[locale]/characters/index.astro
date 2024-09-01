@@ -1,8 +1,10 @@
 ---
 import Layout from 'components/layouts/Layout.astro';
 import Breadcrumb from 'components/Breadcrumb.astro';
+import LazyImage from 'components/common/LazyImage.astro';
 
 import languageJson from '../../../assets/json/language.json';
+import './_list.scss';
 
 import { readDataFromAssets } from 'helpers/fileHelper';
 import { IntermediateFile } from 'constants/intermediateFile';
@@ -14,7 +16,6 @@ import type { ILocalisation } from 'contracts/localisation';
 import type { ICharacterEnhanced } from 'contracts/character';
 import { sortByStringProperty } from 'helpers/sortHelper';
 import { translator } from 'helpers/translateHelper';
-import { imgUrl } from 'helpers/urlHelper';
 import { limitLengthWithEllipse } from 'helpers/stringHelper';
 import { AccessMode, type IGuideSchema } from 'contracts/schema/guideScheme';
 import { toSchemaOrgProperty } from 'helpers/schemaHelper';
@@ -105,23 +106,20 @@ const schemaOverride: IGuideSchema = {
           draggable="false"
         >
           <div class="grid-list-item-image">
-            <img
-              src={imgUrl(data.icon_url)}
-              class="sprite"
-              loading="lazy"
+            <LazyImage
+              src={data.icon_url}
+              classes="sprite"
               alt={`${data.name_localised}`}
-              draggable="false"
+              loadingStrat="eager"
             />
 
             {data.animations.map((anim, index) => {
               if (index != 0) return '';
               return (
-                <img
-                  src={imgUrl(anim.imageUrl)}
-                  class="sprite-anim"
+                <LazyImage
+                  src={anim.imageUrl}
+                  classes="sprite-anim"
                   alt={`gif #${anim.id} of ${data.name_localised}`}
-                  loading="lazy"
-                  draggable="false"
                 />
               );
             })}
@@ -129,12 +127,10 @@ const schemaOverride: IGuideSchema = {
             {data.portraits.map((portrait, index) => {
               if (index != 0) return '';
               return (
-                <img
-                  src={imgUrl(portrait)}
-                  class="sticker animate__animated"
+                <LazyImage
+                  src={portrait}
+                  classes="sticker animate__animated"
                   alt={`portrait of ${data.name_localised}`}
-                  loading="lazy"
-                  draggable="false"
                 />
               );
             })}

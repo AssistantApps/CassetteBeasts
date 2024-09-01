@@ -4,6 +4,7 @@ import Layout from 'components/layouts/Layout.astro';
 
 import languageJson from '../../../assets/json/language.json';
 import versionJson from '../../../assets/json/version.json';
+import './_list.scss';
 
 import { astroPaths } from 'constants/astro';
 import { breadcrumb } from 'constants/breadcrumb';
@@ -19,7 +20,7 @@ import { readDataFromAssets } from 'helpers/fileHelper';
 import { toSchemaOrgProperty } from 'helpers/schemaHelper';
 import { limitLengthWithEllipse } from 'helpers/stringHelper';
 import { translator } from 'helpers/translateHelper';
-import { imgUrl } from 'helpers/urlHelper';
+import LazyImage from 'components/common/LazyImage.astro';
 
 export async function getStaticPaths() {
   const paths: any = [];
@@ -93,12 +94,11 @@ const schemaOverride: IGuideSchema = {
                     class={`${cell.id} cell x-${colIdx} y-${rowIdx} ${cell.buffs.length > 0 ? 'hasBuffs' : ''} ${cell.is_buff ? 'buff' : ''} ${cell.is_debuff ? 'debuff' : ''}`}
                   >
                     {cell.iconUrl != null && (
-                      <img
-                        src={imgUrl(cell.iconUrl)}
-                        class="element"
-                        loading="lazy"
+                      <LazyImage
+                        src={cell.iconUrl}
+                        classes="element"
                         alt={`${cell.name}`}
-                        draggable="false"
+                        loadingImage={AppImage.noLoader}
                       />
                     )}
 
@@ -106,12 +106,11 @@ const schemaOverride: IGuideSchema = {
                       <div class="buffs">
                         {cell.buffs.map((buff) => (
                           <div class="effect">
-                            <img
-                              src={imgUrl(buff.icon?.path)}
-                              class="status"
+                            <LazyImage
+                              src={buff.icon?.path}
+                              classes="status"
                               alt={`${buff.name_localised}`}
-                              loading="lazy"
-                              draggable="false"
+                              loadingImage={AppImage.loader}
                             />
                           </div>
                         ))}
@@ -125,12 +124,10 @@ const schemaOverride: IGuideSchema = {
 
                       {cell.buffs.map((buff) => (
                         <div class="details">
-                          <img
-                            src={imgUrl(buff.icon?.path)}
-                            class="status"
+                          <LazyImage
+                            src={buff.icon?.path}
+                            classes="status"
                             alt={`${buff.name_localised}`}
-                            loading="lazy"
-                            draggable="false"
                           />
                           <div class="text">
                             <h4 class="name">{buff.name_localised}</h4>
@@ -174,7 +171,7 @@ const schemaOverride: IGuideSchema = {
             {
             effectOptions.map(effect => <li data-id={effect.id} class="effect-option cursor-pointer"
                 onclick="onElementSelect(this, 'element-reaction-list')">
-                <img src={imgUrl(effect.iconUrl)} alt={effect.name} loading="lazy" />
+                <LazyImage src={effect.iconUrl} alt={effect.name ?? ''} />
                 <div class="text">
                     {effect.name}
                 </div>
@@ -206,7 +203,7 @@ const schemaOverride: IGuideSchema = {
             {
             effectOptions.map(effect => <li data-id={effect.id} class="effect-option cursor-pointer"
                 onclick="onElementSelect(this, 'element-reaction-list')">
-                <img src={imgUrl(effect.iconUrl)} alt={effect.name} loading="lazy" />
+                <LazyImage src={effect.iconUrl} alt={effect.name ?? ''}/>
                 <div class="text">
                     {effect.name}
                 </div>
@@ -236,12 +233,10 @@ const schemaOverride: IGuideSchema = {
 
                               {cell.buffs.map((buff) => (
                                 <div class="details">
-                                  <img
-                                    src={imgUrl(buff.icon?.path)}
-                                    class="status"
+                                  <LazyImage
+                                    src={buff.icon?.path}
+                                    classes="status"
                                     alt={`${buff.name_localised}`}
-                                    loading="lazy"
-                                    draggable="false"
                                   />
                                   <div class="text">
                                     <h4 class="name">{buff.name_localised}</h4>

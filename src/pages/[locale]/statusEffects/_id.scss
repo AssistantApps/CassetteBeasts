@@ -1,0 +1,72 @@
+.status-effect-detail-grid {
+  grid-template-columns: minmax(500px, 2fr) minmax(250px, 1fr);
+
+  .item-detail-card-heading {
+    &:hover {
+      .icon {
+        animation: tada;
+        animation-duration: 2s;
+      }
+    }
+
+    .icon {
+      height: 2rem;
+      width: 2rem;
+    }
+  }
+
+  .item-detail-card-body {
+    padding: 0.5em 1em;
+
+    .additional-section.negative-margin {
+      margin-left: -1em;
+      margin-right: -1em;
+    }
+
+    .section-heading.custom-padding {
+      padding: 0 0 0.5em 0;
+    }
+
+    .statuses {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.25em;
+    }
+
+    code,
+    kbd,
+    pre {
+      color: var(--card-foreground);
+      background-color: var(--card-background-darken-1);
+    }
+
+    .reverse-padding {
+      margin-inline: -1em;
+    }
+
+    .moves {
+      .type img {
+        margin-left: 1em;
+      }
+
+      td {
+        color: var(--card-foreground);
+        background: var(--card-background);
+        border-bottom-color: rgba(0, 0, 0, 0.1);
+        border-bottom-width: 2px;
+        font-size: 0.9rem;
+        transition: background-color 250ms ease-in-out;
+      }
+
+      .move {
+        color: var(--card-foreground);
+
+        .type img {
+          width: 2rem;
+          min-width: 1.5rem;
+          border-radius: 3px;
+        }
+      }
+    }
+  }
+}

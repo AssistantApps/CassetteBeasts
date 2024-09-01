@@ -1,6 +1,7 @@
 import { createSignal, Match, onMount, Switch, type Component } from 'solid-js';
 
 import { LoadingSpinner } from 'components/common/Loading';
+import { MonsterDropdown } from 'components/monster/MonsterDropdown';
 import { MonsterFusionDisplay } from 'components/monster/MonsterFusionDisplay';
 import { defaultLocale } from 'constants/localisation';
 import { NetworkState } from 'constants/networkState';
@@ -62,14 +63,14 @@ export const FusionPanel: Component<IProps> = (props: IProps) => {
       <article class="mb-1">
         <div class="fusion">
           <div class="grid">
-            {/* <MonsterDropdown
+            <MonsterDropdown
               networkState={networkState()}
               translate={props.translate}
               monsters={monsterDropdown()}
               selectedMonster={monsterA()}
               selectMonster={setMonsterA}
             />
-            <MonsterDropdown
+            {/* <MonsterDropdown
               networkState={networkState()}
               translate={props.translate}
               monsters={monsterDropdown()}

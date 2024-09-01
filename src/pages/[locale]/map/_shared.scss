@@ -1,0 +1,11 @@
+.details {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5em;
+  justify-content: center;
+
+  img {
+    height: 1.5em;
+    width: auto;
+  }
+}

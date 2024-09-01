@@ -1,0 +1,128 @@
+#world-display {
+  .map-body {
+    padding: 1em;
+  }
+
+  .item-detail-card-heading {
+    .button-slanted {
+      color: white;
+
+      &:hover {
+        // background-color: var(--brand-tertiary);
+        border: 3px solid var(--brand-tertiary);
+      }
+    }
+  }
+
+  .map-grid-container {
+    display: inline-block;
+    position: relative;
+
+    img.map {
+      height: 50vh;
+      width: 100vh;
+      border-radius: var(--card-border-radius);
+    }
+
+    .map-grid {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: grid;
+      grid-template-columns: repeat(var(--num-col), 1fr);
+      grid-template-rows: repeat(var(--num-row), 1fr);
+      border: 2px solid rgb(0, 0, 0);
+      margin: -2px;
+      border-radius: calc(var(--card-border-radius) * 1.5);
+
+      .cell {
+        position: relative;
+        border: 3px dashed transparent;
+        border-radius: var(--card-border-radius);
+        margin: -2px -2px -1px -1px;
+        transition: border-color 100ms ease-in-out;
+
+        // &.y-0 {
+        //   margin-top: -1px;
+        // }
+        // &.x-15 {
+        //   margin-right: -1px;
+        // }
+        // &.x-0 {
+        //   margin-left: -1px;
+        // }
+
+        &:hover {
+          border-color: rgba(0, 0, 0, 0.5);
+
+          .popup {
+            opacity: 1;
+          }
+        }
+
+        &.x-8,
+        &.x-9,
+        &.x-10,
+        &.x-11,
+        &.x-12,
+        &.x-13,
+        &.x-14,
+        &.x-15,
+        &.x-16 {
+          .popup {
+            left: unset;
+            right: calc(100% + 0.5em);
+          }
+        }
+
+        &.y-4,
+        &.y-5,
+        &.y-6,
+        &.y-7,
+        &.y-8,
+        &.y-9,
+        &.y-10 {
+          .popup {
+            top: unset;
+            bottom: calc(100% + 0.5em);
+          }
+        }
+      }
+
+      .popup {
+        position: absolute;
+        top: 0.5em;
+        left: calc(100% + 0.5em);
+        padding: 1em;
+        min-width: 450px;
+        max-width: 600px;
+        border-radius: var(--card-border-radius);
+        border: 3px solid var(--card-foreground);
+        background-color: var(--card-background);
+        opacity: 0;
+        transition: opacity 150ms ease-in-out;
+        z-index: 10;
+        pointer-events: none;
+
+        * {
+          color: var(--card-foreground);
+        }
+
+        .monster-spawns {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: center;
+
+          img {
+            height: 2.5em;
+            width: 3em;
+            object-fit: contain;
+          }
+        }
+      }
+    }
+  }
+}

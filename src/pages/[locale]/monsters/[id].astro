@@ -3,12 +3,15 @@ import Breadcrumb from 'components/Breadcrumb.astro';
 import Layout from 'components/layouts/Layout.astro';
 import MonsterMoveRow from 'components/monster/MonsterMoveRow.astro';
 import MonsterRemaster from 'components/monster/MonsterRemaster.astro';
+import LazyImage from 'components/common/LazyImage.astro';
 import StatHex from 'components/stat/StatHex.astro';
 
 import languageJson from 'assets/json/language.json';
+import './_id.scss';
 
 import { astroPaths } from 'constants/astro';
 import { breadcrumb } from 'constants/breadcrumb';
+import { AppImage } from 'constants/image';
 import { IntermediateFile } from 'constants/intermediateFile';
 import { availableLanguages, UIKeys } from 'constants/localisation';
 import { routes } from 'constants/route';
@@ -21,7 +24,6 @@ import { readDataFromAssets } from 'helpers/fileHelper';
 import { toSchemaOrgProperty } from 'helpers/schemaHelper';
 import { limitLengthWithEllipse, stars } from 'helpers/stringHelper';
 import { translator } from 'helpers/translateHelper';
-import { imgUrl } from 'helpers/urlHelper';
 
 export async function getStaticPaths() {
   const paths: any = [];
@@ -100,13 +102,7 @@ const schemaOverride: IGuideSchema = {
         <div class="spacer"></div>
         {
           data.elemental_types_elements.map((element) => (
-            <img
-              src={imgUrl(element.icon?.path)}
-              class="element-image"
-              loading="lazy"
-              alt={`${element.name}`}
-              draggable="false"
-            />
+            <LazyImage src={element.icon?.path} classes="element-image" alt={`${element.name}`} />
           ))
         }
       </div>
@@ -115,21 +111,18 @@ const schemaOverride: IGuideSchema = {
           <h2 class="meta">Images for {data.name_localised}</h2>
           <div class="grid images noselect animate__animated animate__fadeIn">
             <div class="sprites">
-              <img
-                src={imgUrl(data.icon_url)}
-                class="char-image tab-content-0"
-                loading="lazy"
+              <LazyImage
+                src={data.icon_url}
+                classes="char-image tab-content-0"
                 alt={`${data.name_localised}`}
-                draggable="false"
               />
 
               {
                 data.animations.map((anim, index) => (
-                  <img
-                    src={imgUrl(anim.imageUrl)}
-                    class={`char-image  tab-content-${index + 1}`}
+                  <LazyImage
+                    src={anim.imageUrl}
+                    classes={`char-image tab-content-${index + 1}`}
                     alt={`gif #${anim.id} of ${data.name_localised}`}
-                    draggable="false"
                   />
                 ))
               }
@@ -176,12 +169,10 @@ const schemaOverride: IGuideSchema = {
           {
             data.unlock_ability.length > 0 && (
               <div class="ability animate__animated animate__fadeIn">
-                <img
+                <LazyImage
                   src={`/assets/img/ability/${data.unlock_ability}.png`}
-                  class="ability-image"
-                  loading="lazy"
+                  classes="ability-image"
                   alt={`${data.unlock_ability}`}
-                  draggable="false"
                 />
                 <div>
                   <span>{data.unlock_ability_localised}</span>
@@ -232,12 +223,10 @@ const schemaOverride: IGuideSchema = {
               <section class="dlc-section animate__animated animate__fadeIn">
                 <h3 class="section-heading Neu5Land">DLC</h3>
                 <div class="dlc">
-                  <img
+                  <LazyImage
                     src={`/assets/img/dlc/${data.require_dlc}.png`}
-                    class="ability-image"
+                    classes="ability-image"
                     alt={`${data.require_dlc}`}
-                    loading="lazy"
-                    draggable="false"
                   />
                   <div>
                     <span>{translate(UIKeys.dlcPierOfTheUnknown)}</span>
@@ -312,7 +301,7 @@ const schemaOverride: IGuideSchema = {
             role="button"
             class="btn-border-hover outline secondary"
           >
-            <img src="/assets/img/wiki.png" alt="wiki logo" loading="lazy" />
+            <LazyImage src="/assets/img/wiki.png" alt="wiki logo" />
             <div class="text">
               <h6>{translate('viewOn', 'wiki.cassettebeasts.com')}</h6>
             </div>
@@ -322,11 +311,11 @@ const schemaOverride: IGuideSchema = {
 
       <div class="monster-detail-sticker-container hidden-in-mobile animate__animated">
         <div class="animate__animated bounce-on-hover">
-          <img
-            src={imgUrl(data.tape_sticker_texture?.path)}
-            loading="lazy"
-            class="monster-detail-sticker animate__animated animate__delay-1s animate__rollIn animate__tada"
+          <LazyImage
+            src={data.tape_sticker_texture?.path}
+            classes="monster-detail-sticker animate__animated animate__delay-1s animate__rollIn animate__tada"
             alt={`sticker of ${data.name}`}
+            loadingImage={AppImage.noLoader}
           />
         </div>
       </div>
@@ -340,7 +329,11 @@ const schemaOverride: IGuideSchema = {
 
       <div class="monster-detail-tape-container animate__animated hidden-in-mobile noselect">
         <div class="animate__animated swing-hover Neu5Land">
-          <img src="/assets/img/meta/tape.png" alt="monster tape" loading="lazy" />
+          <LazyImage
+            src="/assets/img/meta/tape.png"
+            alt="monster tape"
+            loadingImage={AppImage.noLoader}
+          />
           <p>{data.name_localised}</p>
         </div>
       </div>
@@ -399,12 +392,10 @@ const schemaOverride: IGuideSchema = {
                           <Fragment>
                             <tr>
                               <td class="overworld ta-center">
-                                <img
-                                  src={imgUrl(loc.overworldSprite)}
-                                  class="remaster-image"
+                                <LazyImage
+                                  src={loc.overworldSprite}
+                                  classes="remaster-image"
                                   alt="overworld"
-                                  loading="lazy"
-                                  draggable="false"
                                 />
                               </td>
                               <td class="name">

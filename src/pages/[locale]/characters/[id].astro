@@ -4,6 +4,7 @@ import Breadcrumb from 'components/Breadcrumb.astro';
 import StatHex from 'components/stat/StatHex.astro';
 
 import languageJson from 'assets/json/language.json';
+import './_id.scss';
 
 import { readDataFromAssets } from 'helpers/fileHelper';
 import { IntermediateFile } from 'constants/intermediateFile';
@@ -18,6 +19,7 @@ import { translator } from 'helpers/translateHelper';
 import { imgUrl } from 'helpers/urlHelper';
 import type { IPersonSchema } from 'contracts/schema/personSchema';
 import { toSchemaOrgProperty } from 'helpers/schemaHelper';
+import LazyImage from 'components/common/LazyImage.astro';
 
 export async function getStaticPaths() {
   const paths: any = [];
@@ -81,21 +83,18 @@ const schemaOverride: IPersonSchema = {
         <div id="sprite-tab-container">
           <div class="grid images noselect animate__animated animate__fadeIn">
             <div class="sprites">
-              <img
-                src={imgUrl(data.icon_url)}
-                class="char-image tab-content-0"
-                loading="lazy"
+              <LazyImage
+                src={data.icon_url}
+                classes="char-image tab-content-0"
                 alt={`${data.name_localised}`}
-                draggable="false"
               />
 
               {
                 data.animations.map((anim, index) => (
-                  <img
-                    src={imgUrl(anim.imageUrl)}
-                    class={`char-image  tab-content-${index + 1}`}
+                  <LazyImage
+                    src={anim.imageUrl}
+                    classes={`char-image  tab-content-${index + 1}`}
                     alt={`gif #${anim.id} of ${data.name_localised}`}
-                    draggable="false"
                   />
                 ))
               }
@@ -180,7 +179,7 @@ const schemaOverride: IPersonSchema = {
             role="button"
             class="btn-border-hover outline secondary"
           >
-            <img src="/assets/img/wiki.png" alt="wiki logo" loading="lazy" />
+            <LazyImage src="/assets/img/wiki.png" alt="wiki logo" />
             <div class="text">
               <h6>{translate('viewOn', 'wiki.cassettebeasts.com')}</h6>
             </div>
@@ -200,12 +199,10 @@ const schemaOverride: IPersonSchema = {
             <div class="sprites">
               {
                 data.portraits.map((portrait, index) => (
-                  <img
-                    src={imgUrl(portrait)}
-                    class={`portrait-image ${data.resource_name} tab-content-${index}`}
-                    loading="lazy"
+                  <LazyImage
+                    src={portrait}
+                    classes={`portrait-image ${data.resource_name} tab-content-${index}`}
                     alt={`portrait #${index + 1} of ${data.name_localised}`}
-                    draggable="false"
                   />
                 ))
               }
@@ -233,12 +230,10 @@ const schemaOverride: IPersonSchema = {
             href={`/${locale}${routes.monsters}/${encodeURI(data.partner_signature_species_monsters.resource_name)}.html`}
             title={data.partner_signature_species_monsters.name_localised}
           >
-            <img
+            <LazyImage
               src={data.partner_image_url}
-              class="tape-image animate__animated tada-hover"
-              loading="lazy"
+              classes="tape-image animate__animated tada-hover"
               alt={`tape ${data.partner_signature_species_monsters.name_localised}`}
-              draggable="false"
             />
           </a>
         </section>

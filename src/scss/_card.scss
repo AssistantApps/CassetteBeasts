@@ -101,7 +101,7 @@
 
         &:hover {
           td {
-            background-color: var(--card-background-hover);
+            background-color: var(--card-background-darken-1);
           }
         }
 
@@ -227,15 +227,16 @@
     margin-right: auto;
     width: calc(100% - 2em);
     min-width: 300px;
-    background-color: darken($gameCardBackground, 5%);
+    background-color: var(--card-background);
     gap: 1em;
 
     &:hover {
-      background-color: darken($gameCardBackground, 10%);
+      background-color: var(--card-background-darken-1);
     }
 
     img {
       height: 4em;
+      width: 4em;
     }
 
     .text {

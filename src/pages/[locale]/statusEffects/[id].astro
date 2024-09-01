@@ -1,8 +1,10 @@
 ---
 import Layout from 'components/layouts/Layout.astro';
 import Breadcrumb from 'components/Breadcrumb.astro';
+import LazyImage from 'components/common/LazyImage.astro';
 
 import languageJson from 'assets/json/language.json';
+import './_id.scss';
 
 import { readDataFromAssets } from 'helpers/fileHelper';
 import { IntermediateFile } from 'constants/intermediateFile';
@@ -17,7 +19,6 @@ import { type IGuideSchema, AccessMode } from 'contracts/schema/guideScheme';
 import { isoDate } from 'helpers/dateHelper';
 import { toSchemaOrgProperty } from 'helpers/schemaHelper';
 import { translator } from 'helpers/translateHelper';
-import { imgUrl } from 'helpers/urlHelper';
 
 export async function getStaticPaths() {
   const paths: any = [];
@@ -79,13 +80,7 @@ const schemaOverride: IGuideSchema = {
 
     <article class="item-detail-card">
       <div class="item-detail-card-heading primary">
-        <img
-          src={imgUrl(data.icon?.path)}
-          class="icon"
-          loading="lazy"
-          alt={`icon of ${data.name_localised}`}
-          draggable="false"
-        />
+        <LazyImage src={data.icon?.path} classes="icon" alt={`icon of ${data.name_localised}`} />
         <h2 class="Neu5Land animate__animated animate__fadeIn">{data.name_localised}</h2>
       </div>
       <div class="item-detail-card-body">
@@ -171,12 +166,10 @@ const schemaOverride: IGuideSchema = {
                           {move.elemental_types_elements.length > 0 ? (
                             <Fragment>
                               {move.elemental_types_elements.map((elem) => (
-                                <img
-                                  src={imgUrl(elem.icon?.path)}
-                                  class="move-image"
+                                <LazyImage
+                                  src={elem.icon?.path}
+                                  classes="move-image"
                                   alt={`${elem.name_localised}`}
-                                  loading="lazy"
-                                  draggable="false"
                                 />
                               ))}
                             </Fragment>

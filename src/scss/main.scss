@@ -1,10 +1,8 @@
 @import 'lib/animate.min';
 @import 'lib/pico.violet.min';
 
-@import 'colour';
 @import 'font';
 @import 'page';
-@import 'home';
 @import 'card';
 @import 'grid';
 @import 'tabs';
@@ -15,16 +13,13 @@
 @import 'responsive';
 @import 'assistantApps';
 
-@import 'move';
-@import 'moveDetail';
-@import 'monster';
-@import 'monsterDetail';
-@import 'character';
-@import 'characterDetail';
-@import 'elementReaction';
-@import 'statusEffect';
-@import 'fusion';
-@import 'world';
+$brand-primary-background: #242424;
+$brand-primary: #ab75e8;
+$brand-secondary: #ab75e8;
+$brand-tertiary: #3fbb9f;
+
+$gameCardBackground: #f3edd8;
+$gameCardForeground: #1f1f1f;
 
 :root {
   --pico-primary-background: #{$brand-primary} !important;
@@ -33,7 +28,8 @@
   --brand-tertiary: #{$brand-tertiary};
 
   --card-background: #{$gameCardBackground};
-  --card-background-hover: #{darken($gameCardBackground, 10%)};
+  --card-background-darken-1: #{darken($gameCardBackground, 10%)};
+  --card-background-darken-2: #{darken($gameCardBackground, 20%)};
   --card-foreground: #{$gameCardForeground};
   --card-border-radius: 5px;
 

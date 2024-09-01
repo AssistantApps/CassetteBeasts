@@ -33,7 +33,7 @@
 table {
   &.highlight-row {
     tbody tr:hover td {
-      background-color: var(--card-background-hover) !important;
+      background-color: var(--card-background-darken-1) !important;
     }
     tbody tr.no-hover:hover td {
       background-color: unset !important;
@@ -42,7 +42,7 @@ table {
 
   &.highlight-cell {
     tbody td:hover {
-      background-color: var(--card-background-hover) !important;
+      background-color: var(--card-background-darken-1) !important;
     }
   }
 }

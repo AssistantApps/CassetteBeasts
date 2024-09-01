@@ -1,8 +1,10 @@
 ---
 import Layout from 'components/layouts/Layout.astro';
 import Breadcrumb from 'components/Breadcrumb.astro';
+import LazyImage from 'components/common/LazyImage.astro';
 
 import languageJson from 'assets/json/language.json';
+import './_id.scss';
 
 import { readDataFromAssets } from 'helpers/fileHelper';
 import { IntermediateFile } from 'constants/intermediateFile';
@@ -17,7 +19,6 @@ import { type IGuideSchema, AccessMode } from 'contracts/schema/guideScheme';
 import { isoDate } from 'helpers/dateHelper';
 import { toSchemaOrgProperty } from 'helpers/schemaHelper';
 import { translator } from 'helpers/translateHelper';
-import { imgUrl } from 'helpers/urlHelper';
 
 export async function getStaticPaths() {
   const paths: any = [];
@@ -78,26 +79,13 @@ const schemaOverride: IGuideSchema = {
       <div class="move-detail-card-heading item-detail-card-heading primary">
         {
           data.elemental_types_elements.map((element) => (
-            <img
-              src={imgUrl(element.icon?.path)}
-              class="type"
-              loading="lazy"
-              alt={`${element.name}`}
-              draggable="false"
-            />
+            <LazyImage src={element.icon?.path} classes="type" alt={`${element.name}`} />
           ))
         }
 
         {
           data.elemental_types_elements.length == 0 && (
-            <img
-              src="/assets/img/typeless.png"
-              class="type"
-              loading="lazy"
-              title="Typeless"
-              alt="typless"
-              draggable="false"
-            />
+            <LazyImage src="/assets/img/typeless.png" classes="type" alt="typless" />
           )
         }
 
@@ -112,14 +100,7 @@ const schemaOverride: IGuideSchema = {
           <div class="ap-block">
             {
               Array.from(Array(data.cost)).map(() => (
-                <img
-                  src="/assets/img/meta/ap.png"
-                  class="ap"
-                  title={translate(UIKeys.ap)}
-                  alt="an action point"
-                  loading="lazy"
-                  draggable="false"
-                />
+                <LazyImage src="/assets/img/meta/ap.png" classes="ap" alt={translate(UIKeys.ap)} />
               ))
             }
           </div>
@@ -176,12 +157,10 @@ const schemaOverride: IGuideSchema = {
                 href={`/${locale}${routes.statusEffect}/${elem.id}.html`}
                 class="status-group animate__animated animate__fadeIn"
               >
-                <img
-                  src={imgUrl(elem.icon?.path)}
-                  class="status"
+                <LazyImage
+                  src={elem.icon?.path}
+                  classes="status"
                   alt={`status of ${elem.name_localised}`}
-                  loading="lazy"
-                  draggable="false"
                 />
                 <small>{elem.name_localised}</small>
               </a>
@@ -208,12 +187,10 @@ const schemaOverride: IGuideSchema = {
                         href={`/${locale}${routes.monsters}/${encodeURI(mon.resource_name)}.html`}
                         title={mon.name_localised}
                       >
-                        <img
-                          src={imgUrl(mon.icon_url)}
-                          class="remaster-image"
+                        <LazyImage
+                          src={mon.icon_url}
+                          classes="remaster-image"
                           alt={`${mon.name_localised}`}
-                          loading="lazy"
-                          draggable="false"
                         />
                       </a>
                     </td>

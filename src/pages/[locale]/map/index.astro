@@ -1,8 +1,11 @@
 ---
 import Breadcrumb from 'components/Breadcrumb.astro';
 import Layout from 'components/layouts/Layout.astro';
+import LazyImage from 'components/common/LazyImage.astro';
 
 import languageJson from '../../../assets/json/language.json';
+import './_list.scss';
+import './_shared.scss';
 
 import { astroPaths } from 'constants/astro';
 import { breadcrumb } from 'constants/breadcrumb';
@@ -19,7 +22,6 @@ import { readDataFromAssets } from 'helpers/fileHelper';
 import { toSchemaOrgProperty } from 'helpers/schemaHelper';
 import { limitLengthWithEllipse } from 'helpers/stringHelper';
 import { translator } from 'helpers/translateHelper';
-import { imgUrl } from 'helpers/urlHelper';
 
 export async function getStaticPaths() {
   const paths: any = [];
@@ -99,12 +101,11 @@ const schemaOverride: IGuideSchema = {
             list.map((map, index) => (
               <div class={`tab-content-${index} ta-center`}>
                 <div class="map-grid-container">
-                  <img
-                    src={imgUrl(map.map_texture?.path)}
-                    class="map"
+                  <LazyImage
+                    src={map.map_texture?.path}
+                    classes="map"
                     alt={`${map.title_localised}`}
-                    loading="lazy"
-                    draggable="false"
+                    loadingImage={AppImage.cardLoader}
                   />
                   <div
                     class="map-grid"
@@ -125,12 +126,10 @@ const schemaOverride: IGuideSchema = {
                                 {cell.features_localised.map((feat) => (
                                   <div class="details">
                                     {feat.icon_url && (
-                                      <img
-                                        src={imgUrl(feat.icon_url)}
-                                        class="status"
+                                      <LazyImage
+                                        src={feat.icon_url}
+                                        classes="status"
                                         alt={`${feat.title_localised}`}
-                                        loading="lazy"
-                                        draggable="false"
                                       />
                                     )}
                                     <div class="text">
@@ -141,10 +140,9 @@ const schemaOverride: IGuideSchema = {
                                 {cell.monster_in_habitat.length > 0 && (
                                   <div class="monster-spawns">
                                     {cell.monster_in_habitat.map((monster) => (
-                                      <img
-                                        src={imgUrl(monster.icon_url)}
+                                      <LazyImage
+                                        src={monster.icon_url}
                                         alt={monster.name_localised}
-                                        data-tooltip={monster.name_localised}
                                       />
                                     ))}
                                   </div>

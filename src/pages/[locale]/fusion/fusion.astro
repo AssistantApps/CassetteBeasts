@@ -1,0 +1,56 @@
+---
+import Layout from 'components/layouts/Layout.astro';
+import { FusionPanel } from 'components/pages/fusion/FusionPanel';
+
+import languageJson from '../../../assets/json/language.json';
+import './_fusion.scss';
+
+import { availableLanguages, UIKeys } from 'constants/localisation';
+import type { ILocalisation } from 'contracts/localisation';
+import { translator } from 'helpers/translateHelper';
+
+export async function getStaticPaths() {
+  const paths: any = [];
+  for (const locale of availableLanguages) {
+    const path = {
+      params: { locale: locale },
+      props: {},
+    };
+    paths.push(path as never);
+  }
+  return paths;
+}
+
+const { locale } = Astro.params;
+const translationLookup = (languageJson as Record<string, ILocalisation>)[locale].messages;
+const { translate } = translator(translationLookup);
+const title = translate(UIKeys.fusion);
+
+const reducedTranslationLookup: Record<string, string> = {};
+const keysToKeep = [
+  UIKeys.fusion,
+  UIKeys.viewMonsters,
+  ...Object.keys(translationLookup).filter((t) => t.includes('SAME_FUSION_NAME_')),
+];
+for (const key of keysToKeep) {
+  reducedTranslationLookup[key] = translationLookup[key];
+}
+---
+
+<Layout
+  locale={locale}
+  documentTitle={title}
+  additionalKeywords={[translate(UIKeys.fusion)]}
+  translationLookup={translationLookup}
+>
+  <section class="mb-1">
+    <h1 class="Neu5Land ta-center">{title}</h1>
+    <div class="meta">
+      {translate(UIKeys.fusionDescription1)}
+      {translate(UIKeys.fusionDescription2)}
+      {translate(UIKeys.fusionDescription3)}
+    </div>
+
+    <FusionPanel client:load translate={reducedTranslationLookup} locale={locale} />
+  </section>
+</Layout>
