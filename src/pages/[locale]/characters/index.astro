@@ -1,27 +1,27 @@
 ---
-import Layout from 'components/layouts/Layout.astro';
 import Breadcrumb from 'components/Breadcrumb.astro';
 import LazyImage from 'components/common/LazyImage.astro';
+import Layout from 'components/layouts/Layout.astro';
 
 import languageJson from '../../../assets/json/language.json';
 import './_list.scss';
 
-import { readDataFromAssets } from 'helpers/fileHelper';
-import { IntermediateFile } from 'constants/intermediateFile';
 import { astroPaths } from 'constants/astro';
 import { breadcrumb } from 'constants/breadcrumb';
-import { routes } from 'constants/route';
-import { availableLanguages } from 'constants/localisation';
-import type { ILocalisation } from 'contracts/localisation';
-import type { ICharacterEnhanced } from 'contracts/character';
-import { sortByStringProperty } from 'helpers/sortHelper';
-import { translator } from 'helpers/translateHelper';
-import { limitLengthWithEllipse } from 'helpers/stringHelper';
-import { AccessMode, type IGuideSchema } from 'contracts/schema/guideScheme';
-import { toSchemaOrgProperty } from 'helpers/schemaHelper';
-import { isoDate } from 'helpers/dateHelper';
-import { site } from 'constants/site';
 import { AppImage } from 'constants/image';
+import { IntermediateFile } from 'constants/intermediateFile';
+import { availableLanguages } from 'constants/localisation';
+import { routes } from 'constants/route';
+import { site } from 'constants/site';
+import type { ICharacterEnhanced } from 'contracts/character';
+import type { ILocalisation } from 'contracts/localisation';
+import { AccessMode, type IGuideSchema } from 'contracts/schema/guideScheme';
+import { isoDate } from 'helpers/dateHelper';
+import { readDataFromAssets } from 'helpers/fileHelper';
+import { toSchemaOrgProperty } from 'helpers/schemaHelper';
+import { sortByStringProperty } from 'helpers/sortHelper';
+import { limitLengthWithEllipse } from 'helpers/stringHelper';
+import { translator } from 'helpers/translateHelper';
 
 export async function getStaticPaths() {
   const paths: any = [];

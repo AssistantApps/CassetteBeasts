@@ -26,6 +26,7 @@
     .header {
       display: flex;
       flex-direction: row;
+      position: relative;
       gap: 0.5em;
 
       .types {
@@ -146,7 +147,8 @@
         }
       }
 
-      .ap-block {
+      .ap-block,
+      .ap-vertical {
         display: none;
       }
     }

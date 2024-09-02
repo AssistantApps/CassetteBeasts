@@ -175,7 +175,8 @@
   }
 }
 
-.ap-block {
+.ap-block,
+.ap-vertical {
   display: flex;
   flex-direction: row;
   justify-content: end;
@@ -189,6 +190,7 @@
 
   .ap {
     height: 1em;
+    width: 1em;
   }
 
   &:hover {
@@ -196,6 +198,18 @@
       animation: tada;
       animation-duration: 1s;
     }
+  }
+}
+
+.ap-vertical {
+  position: absolute;
+  top: 0;
+  right: 0.25em;
+  flex-direction: column;
+
+  .ap {
+    height: 0.6em;
+    width: 0.6em;
   }
 }
 

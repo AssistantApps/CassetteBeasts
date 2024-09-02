@@ -6,6 +6,7 @@ import languageJson from '../../../assets/json/language.json';
 import versionJson from '../../../assets/json/version.json';
 import './_list.scss';
 
+import LazyImage from 'components/common/LazyImage.astro';
 import { astroPaths } from 'constants/astro';
 import { breadcrumb } from 'constants/breadcrumb';
 import { AppImage } from 'constants/image';
@@ -20,7 +21,6 @@ import { readDataFromAssets } from 'helpers/fileHelper';
 import { toSchemaOrgProperty } from 'helpers/schemaHelper';
 import { limitLengthWithEllipse } from 'helpers/stringHelper';
 import { translator } from 'helpers/translateHelper';
-import LazyImage from 'components/common/LazyImage.astro';
 
 export async function getStaticPaths() {
   const paths: any = [];

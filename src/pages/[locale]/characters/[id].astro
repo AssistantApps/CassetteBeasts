@@ -1,25 +1,24 @@
 ---
-import Layout from 'components/layouts/Layout.astro';
 import Breadcrumb from 'components/Breadcrumb.astro';
+import Layout from 'components/layouts/Layout.astro';
 import StatHex from 'components/stat/StatHex.astro';
 
 import languageJson from 'assets/json/language.json';
 import './_id.scss';
 
-import { readDataFromAssets } from 'helpers/fileHelper';
-import { IntermediateFile } from 'constants/intermediateFile';
+import LazyImage from 'components/common/LazyImage.astro';
 import { astroPaths } from 'constants/astro';
 import { breadcrumb } from 'constants/breadcrumb';
-import { site } from 'constants/site';
-import { routes } from 'constants/route';
+import { IntermediateFile } from 'constants/intermediateFile';
 import { availableLanguages, UIKeys } from 'constants/localisation';
-import type { ILocalisation } from 'contracts/localisation';
+import { routes } from 'constants/route';
+import { site } from 'constants/site';
 import type { ICharacterEnhanced } from 'contracts/character';
-import { translator } from 'helpers/translateHelper';
-import { imgUrl } from 'helpers/urlHelper';
+import type { ILocalisation } from 'contracts/localisation';
 import type { IPersonSchema } from 'contracts/schema/personSchema';
+import { readDataFromAssets } from 'helpers/fileHelper';
 import { toSchemaOrgProperty } from 'helpers/schemaHelper';
-import LazyImage from 'components/common/LazyImage.astro';
+import { translator } from 'helpers/translateHelper';
 
 export async function getStaticPaths() {
   const paths: any = [];
