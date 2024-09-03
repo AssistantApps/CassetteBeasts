@@ -1,6 +1,10 @@
 export const AppImage = {
   logoSplash: '/assets/img/evo_splash_04.png',
+  cardLoader: '/assets/img/cardLoader.svg',
   loader: '/assets/img/loader.svg',
+  noLoader: '/assets/img/noLoader.svg',
+  typeless: '/assets/img/typeless.png',
+
   moreStatusEffects: '/assets/img/passive_quest_icon.png',
   moves: '/assets/img/moves.png',
   characters: '/assets/img/characters.png',

@@ -4,6 +4,8 @@ import Breadcrumb from 'components/Breadcrumb.astro';
 import MonsterSpawnDetailsRow from 'components/monster/MonsterSpawnDetailsRow.astro';
 
 import languageJson from 'assets/json/language.json';
+import './_id.scss';
+import '../_shared.scss';
 
 import { readDataFromAssets } from 'helpers/fileHelper';
 import { IntermediateFile } from 'constants/intermediateFile';
@@ -20,7 +22,8 @@ import { isoDate } from 'helpers/dateHelper';
 import { toSchemaOrgProperty } from 'helpers/schemaHelper';
 import { limitLengthWithEllipse } from 'helpers/stringHelper';
 import { translator } from 'helpers/translateHelper';
-import { imgUrl } from 'helpers/urlHelper';
+import LazyImage from 'components/common/LazyImage.astro';
+import { AppImage } from 'constants/image';
 
 export async function getStaticPaths() {
   const paths: any = [];
@@ -126,10 +129,10 @@ const schemaOverride: IGuideSchema = {
         <div class="grid images noselect animate__animated animate__fadeIn">
           <div class="sprites">
             <div class="map-chunk">
-              <img
+              <LazyImage
                 src={`/assets/img/generated/data/map_metadata/${world}${data.id}.png`}
                 alt={`${data.title_localised}`}
-                draggable="false"
+                loadingImage={AppImage.cardLoader}
               />
               <p class="ta-center">{coords[0]} {coords[1]}</p>
             </div>
@@ -140,17 +143,15 @@ const schemaOverride: IGuideSchema = {
               {
                 surroundingChunks.map((chunk) =>
                   chunk == null ? (
-                    <img
+                    <LazyImage
                       src={`/assets/img/overworld_bg.png`}
                       alt="overworld_bg"
-                      draggable="false"
                     />
                   ) : (
-                    <img
-                      id={chunk.id}
+                    <LazyImage
                       src={`/assets/img/generated/data/map_metadata/${world}${chunk.id}.png`}
                       alt={`${chunk.title_localised}`}
-                      draggable="false"
+                      loadingImage={AppImage.noLoader}
                     />
                   ),
                 )
@@ -180,12 +181,10 @@ const schemaOverride: IGuideSchema = {
             data.features_localised.map((feat) => (
               <div class="details">
                 {feat.icon_url && (
-                  <img
-                    src={imgUrl(feat.icon_url)}
-                    class="status"
+                  <LazyImage
+                    src={feat.icon_url}
+                    classes="status"
                     alt={`${feat.title_localised}`}
-                    loading="lazy"
-                    draggable="false"
                   />
                 )}
                 <div class="text">

@@ -1,8 +1,10 @@
 ---
 import Breadcrumb from 'components/Breadcrumb.astro';
 import Layout from 'components/layouts/Layout.astro';
+import LazyImage from 'components/common/LazyImage.astro';
 
 import languageJson from '../../../assets/json/language.json';
+import './_list.scss';
 
 import { astroPaths } from 'constants/astro';
 import { breadcrumb } from 'constants/breadcrumb';
@@ -20,7 +22,6 @@ import { toSchemaOrgProperty } from 'helpers/schemaHelper';
 import { sortByStringProperty } from 'helpers/sortHelper';
 import { limitLengthWithEllipse } from 'helpers/stringHelper';
 import { translator } from 'helpers/translateHelper';
-import { imgUrl } from 'helpers/urlHelper';
 
 export async function getStaticPaths() {
   const paths: any = [];
@@ -121,23 +122,14 @@ const schemaOverride: IGuideSchema = {
             <div class="types">
               {data.elemental_types_elements.length > 0 ? (
                 data.elemental_types_elements.map((elem) => (
-                  <img
-                    src={imgUrl(elem.icon?.path)}
-                    class="type"
-                    loading="lazy"
+                  <LazyImage
+                    src={elem.icon?.path}
+                    classes="type"
                     alt={`element of ${elem.name_localised}`}
-                    draggable="false"
                   />
                 ))
               ) : (
-                <img
-                  src="/assets/img/typeless.png"
-                  class="type"
-                  loading="lazy"
-                  title="Typeless"
-                  alt="{this.name}"
-                  draggable="false"
-                />
+                <LazyImage src="/assets/img/typeless.png" classes="type" alt="Typeless" />
               )}
             </div>
             <div class="center-item">
@@ -145,7 +137,7 @@ const schemaOverride: IGuideSchema = {
                 <h3 class="Neu5Land">{data.name_localised}</h3>
               </div>
             </div>
-            <div class="ap-block">
+            <div class="ap-vertical">
               {Array.from(Array(data.cost)).map(() => (
                 <img
                   src="/assets/img/meta/ap.png"
@@ -185,12 +177,10 @@ const schemaOverride: IGuideSchema = {
             <section class="status-card-container">
               {(data.status_effects_elements_max_3 ?? []).map((elem) => (
                 <div class="status-group">
-                  <img
-                    src={imgUrl(elem.icon?.path)}
-                    class="status"
-                    loading="lazy"
+                  <LazyImage
+                    src={elem.icon?.path}
+                    classes="status"
                     alt={`status of ${elem.name_localised}`}
-                    draggable="false"
                   />
                   <small>{elem.name_localised}</small>
                 </div>
@@ -200,14 +190,7 @@ const schemaOverride: IGuideSchema = {
 
           <div class="ap-block">
             {Array.from(Array(data.cost)).map(() => (
-              <img
-                src="/assets/img/meta/ap.png"
-                class="ap"
-                title="Action Point"
-                alt="an action point"
-                loading="lazy"
-                draggable="false"
-              />
+              <LazyImage src="/assets/img/meta/ap.png" classes="ap" alt="Action Point" />
             ))}
           </div>
         </a>

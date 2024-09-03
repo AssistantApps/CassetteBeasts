@@ -1,8 +1,10 @@
 ---
 import Breadcrumb from 'components/Breadcrumb.astro';
 import Layout from 'components/layouts/Layout.astro';
+import LazyImage from 'components/common/LazyImage.astro';
 
 import languageJson from '../../../assets/json/language.json';
+import './_list.scss';
 
 import { astroPaths } from 'constants/astro';
 import { breadcrumb } from 'constants/breadcrumb';
@@ -20,7 +22,6 @@ import { toSchemaOrgProperty } from 'helpers/schemaHelper';
 import { sortByStringProperty } from 'helpers/sortHelper';
 import { limitLengthWithEllipse } from 'helpers/stringHelper';
 import { translator } from 'helpers/translateHelper';
-import { imgUrl } from 'helpers/urlHelper';
 
 export async function getStaticPaths() {
   const paths: any = [];
@@ -73,7 +74,7 @@ const schemaOverride: IGuideSchema = {
   <Breadcrumb
     locale={locale}
     translationLookup={translationLookup}
-    breadcrumbs={[breadcrumb.element(locale)]}
+    breadcrumbs={[breadcrumb.statusEffect(locale)]}
   />
 
   <section id="search">
@@ -103,12 +104,7 @@ const schemaOverride: IGuideSchema = {
           draggable="false"
         >
           <div class="grid-list-item-image">
-            <img
-              src={imgUrl(data.icon?.path)}
-              loading="lazy"
-              alt={`icon of ${data.name_localised}`}
-              draggable="false"
-            />
+            <LazyImage src={data.icon?.path} alt={`icon of ${data.name_localised}`} />
           </div>
           <section class="grid-list-item-container">
             <h2 class="Neu5Land heading">{data.name_localised}</h2>

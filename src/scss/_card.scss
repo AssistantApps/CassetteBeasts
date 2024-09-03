@@ -101,7 +101,7 @@
 
         &:hover {
           td {
-            background-color: var(--card-background-hover);
+            background-color: var(--card-background-darken-1);
           }
         }
 
@@ -175,7 +175,8 @@
   }
 }
 
-.ap-block {
+.ap-block,
+.ap-vertical {
   display: flex;
   flex-direction: row;
   justify-content: end;
@@ -189,6 +190,7 @@
 
   .ap {
     height: 1em;
+    width: 1em;
   }
 
   &:hover {
@@ -196,6 +198,18 @@
       animation: tada;
       animation-duration: 1s;
     }
+  }
+}
+
+.ap-vertical {
+  position: absolute;
+  top: 0;
+  right: 0.25em;
+  flex-direction: column;
+
+  .ap {
+    height: 0.6em;
+    width: 0.6em;
   }
 }
 
@@ -227,15 +241,16 @@
     margin-right: auto;
     width: calc(100% - 2em);
     min-width: 300px;
-    background-color: darken($gameCardBackground, 5%);
+    background-color: var(--card-background);
     gap: 1em;
 
     &:hover {
-      background-color: darken($gameCardBackground, 10%);
+      background-color: var(--card-background-darken-1);
     }
 
     img {
       height: 4em;
+      width: 4em;
     }
 
     .text {

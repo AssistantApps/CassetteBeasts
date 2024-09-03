@@ -24,7 +24,7 @@ if (schemaOverride != null) {
     ...schemaOverride,
     version: version,
     inLanguage: langCode,
-    dateCreated: date,
+    dateCreated: site.projectStartDate,
     dateModified: date,
     datePublished: date,
   };
@@ -64,7 +64,7 @@ if (schemaOverride != null) {
       "jobTitle": "${site.humans.kurt.jobTitle}"
     },
     "inLanguage": "${langCode}",
-    "dateCreated": "${date}",
+    "dateCreated": "${site.projectStartDate}",
     "dateModified": "${date}",
     "datePublished": "${date}"
   }`;

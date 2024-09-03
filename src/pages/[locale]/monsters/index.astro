@@ -1,8 +1,10 @@
 ---
 import Layout from 'components/layouts/Layout.astro';
 import Breadcrumb from '../../../components/Breadcrumb.astro';
+import LazyImage from 'components/common/LazyImage.astro';
 
 import languageJson from '../../../assets/json/language.json';
+import './_list.scss';
 
 import { astroPaths } from 'constants/astro';
 import { breadcrumb } from 'constants/breadcrumb';
@@ -20,7 +22,6 @@ import { toSchemaOrgProperty } from 'helpers/schemaHelper';
 import { monsterSort } from 'helpers/sortHelper';
 import { limitLengthWithEllipse } from 'helpers/stringHelper';
 import { translator } from 'helpers/translateHelper';
-import { imgUrl } from 'helpers/urlHelper';
 
 export async function getStaticPaths() {
   const paths: any = [];
@@ -126,42 +127,30 @@ const schemaOverride: IGuideSchema = {
           draggable="false"
         >
           <div class="grid-list-item-image">
-            <img
-              src={imgUrl(data.icon_url)}
-              class="sprite"
-              loading="lazy"
-              alt={`${data.name_localised}`}
-              draggable="false"
-            />
+            <LazyImage src={data.icon_url} classes="sprite" alt={`${data.name_localised}`} />
 
             {data.animations.map((anim, index) => {
               if (index != 0) return '';
               return (
-                <img
-                  src={imgUrl(anim.imageUrl)}
-                  class="sprite-anim"
-                  loading="lazy"
+                <LazyImage
+                  src={anim.imageUrl}
+                  classes="sprite-anim"
                   alt={`gif #${anim.id} of ${data.name_localised}`}
-                  draggable="false"
                 />
               );
             })}
 
-            <img
-              src={imgUrl(data.tape_sticker_texture?.path)}
-              class="sticker animate__animated"
-              loading="lazy"
+            <LazyImage
+              src={data.tape_sticker_texture?.path}
+              classes="sticker animate__animated"
               alt={`${data.name_localised}`}
-              draggable="false"
             />
 
             {data.elemental_types_elements.map((elem) => (
-              <img
-                src={imgUrl(elem.icon?.path)}
-                class="type animate__animated"
+              <LazyImage
+                src={elem.icon?.path}
+                classes="type animate__animated"
                 alt={`element of ${elem.name_localised}`}
-                loading="lazy"
-                draggable="false"
               />
             ))}
           </div>

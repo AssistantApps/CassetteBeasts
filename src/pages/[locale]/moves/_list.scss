@@ -26,6 +26,7 @@
     .header {
       display: flex;
       flex-direction: row;
+      position: relative;
       gap: 0.5em;
 
       .types {
@@ -96,7 +97,7 @@
       }
 
       &:hover {
-        background-color: var(--card-background-hover);
+        background-color: var(--card-background-darken-1);
       }
 
       .status-card-container,
@@ -146,7 +147,8 @@
         }
       }
 
-      .ap-block {
+      .ap-block,
+      .ap-vertical {
         display: none;
       }
     }

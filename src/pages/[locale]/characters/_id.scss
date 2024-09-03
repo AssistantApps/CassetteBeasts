@@ -25,6 +25,7 @@
 
         .portrait-image {
           height: 15em;
+          width: 15em;
           margin: 0 auto;
           object-fit: contain;
           transition: transform 250ms ease-in-out;
@@ -55,6 +56,7 @@
         .char-image,
         .stats,
         .stats svg {
+          width: 15em;
           height: 15em;
           margin: 0 auto;
         }

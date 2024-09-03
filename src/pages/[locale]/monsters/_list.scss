@@ -1,9 +1,8 @@
-#character-grid {
-  margin-top: 1em;
+#monster-grid {
   grid-template-columns: repeat(auto-fit, minmax(8em, 1fr));
 
   .grid-list-item {
-    background: transparent;
+    position: relative;
 
     &:hover {
       z-index: 4;
@@ -30,18 +29,24 @@
       }
     }
 
+    &.secret img,
+    &.secret .grid-list-item-container > * {
+      filter: blur(0.5em);
+    }
+
     .grid-list-item-image {
-      height: 8em;
-      padding-bottom: 0.5em;
-      background: var(--card-background);
+      height: 5.5em;
     }
 
     img.sprite,
     img.sprite-anim {
-      height: 7.5em;
+      height: 5em;
+      width: 7em;
       object-fit: contain;
+      transition:
+        transform 250ms ease-in-out,
+        opacity 250ms ease-in-out;
       image-rendering: pixelated;
-      transition: transform 250ms ease-in-out, opacity 250ms ease-in-out;
       transform: translateY(0);
       opacity: 1;
       z-index: 1;
@@ -53,9 +58,10 @@
 
     img.sticker {
       position: absolute;
-      top: 80%;
+      top: 50%;
       left: 50%;
-      height: 12em;
+      max-height: 5em;
+      max-width: 5em;
       opacity: 0;
       transition: all 250ms ease-in-out;
       transform: translate(-50%, 5em);
@@ -67,6 +73,7 @@
       left: 0;
       bottom: 0;
       height: 1.5em;
+      width: 1.5em;
       transition: transform 250ms ease-in-out;
       transform-origin: bottom left;
     }
@@ -85,10 +92,17 @@
         text-align: center;
       }
     }
+
+    .bestiary {
+      position: absolute;
+      top: 0;
+      left: 0.25em;
+      font-size: 0.6em;
+    }
   }
 }
 
-#character-grid.useGif {
+#monster-grid.useGif {
   .grid-list-item {
     .grid-list-item-image {
       img.sprite {

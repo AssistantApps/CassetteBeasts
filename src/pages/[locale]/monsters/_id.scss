@@ -82,6 +82,7 @@
       .stats,
       .stats svg {
         height: 15em;
+        width: 15em;
         margin: 0 auto;
       }
     }
@@ -209,13 +210,14 @@
       }
 
       tr:hover code {
-        border: 2px solid darken($gameCardBackground, 20%);
+        border: 2px solid var(--card-background-darken-2);
       }
 
       .overworld {
         padding: 0;
 
         img {
+          width: 2em;
           height: 2em;
         }
       }
@@ -250,8 +252,8 @@
       padding: 0.25rem;
       margin-left: 0.25rem;
       color: var(--card-foreground);
-      background-color: darken($gameCardBackground, 10%);
-      border: 2px solid darken($gameCardBackground, 10%);
+      background-color: var(--card-background-darken-1);
+      border: 2px solid var(--card-background-darken-1);
     }
   }
 }
