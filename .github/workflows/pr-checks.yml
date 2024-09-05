@@ -1,0 +1,102 @@
+name: Check Pull Request
+run-name: CheckPullRequest
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+    branches: main
+
+concurrency:
+  group: 'pull_request'
+  cancel-in-progress: true
+
+permissions:
+  pull-requests: write
+  contents: write
+  pages: write
+
+jobs:
+  paths-filter:
+    name: Filter out non code changes
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    outputs:
+      code-changed: ${{ steps.filter.outputs.src }}
+
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+
+      - name: Filter Changed Files
+        uses: AurorNZ/paths-filter@v4
+        id: filter
+        with:
+          filters: |
+            src:
+              - 'src/**/*'
+              - '!src/**/*.test.*'
+
+  check-version:
+    needs: paths-filter
+    if: needs.paths-filter.outputs.code-changed == 'true'
+    name: Version number was bumped
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+
+      - name: Get New Version
+        run: |
+          new_version=$(npm pkg get version | xargs)
+          echo "NEW=${new_version}" >> $GITHUB_ENV
+
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Get Main Version
+        run: |
+          main_version=$(npm pkg get version | xargs)
+          echo "MAIN=${main_version}" >> $GITHUB_ENV
+
+      - name: Compare Versions
+        run: |
+          if [[ ${{ env.NEW }} == ${{ env.MAIN }} ]]; then
+            exit 1
+          fi
+
+      - name: Post PR Comment
+        if: failure()
+        uses: mshick/add-pr-comment@v2
+        with:
+          message: Please bump the version in package.json!
+          refresh-message-position: true
+          allow-repeats: true
+
+  test-build:
+    needs: paths-filter
+    if: needs.paths-filter.outputs.code-changed == 'true'
+    name: Build pages step is successful
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    permissions:
+      contents: write
+      pull-requests: write
+      
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          cache: 'npm'
+
+      - name: Install packages
+        run: npm ci --force
+
+      - name: Build Pages
+        run: npm run build

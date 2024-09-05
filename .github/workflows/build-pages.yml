@@ -1,5 +1,5 @@
-name: Github Pages
-run-name: GithubPages
+name: Build Pages
+run-name: BuildPages
 
 on:
   push:
@@ -7,17 +7,17 @@ on:
   workflow_dispatch:
 
 concurrency:
-  group: 'githubPages'
+  group: 'buildPages'
   cancel-in-progress: true
 
 permissions:
-  contents: read
+  pull-requests: write
+  contents: write
   pages: write
-  id-token: write
 
 jobs:
-  githubPages:
-    name: Github Pages
+  buildPages:
+    name: Build Pages
     environment: github-pages
     runs-on: ubuntu-latest
     timeout-minutes: 20
@@ -26,18 +26,13 @@ jobs:
       pull-requests: write
       contents: write
 
-    strategy:
-      matrix:
-        node-version: [21.x]
-
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v4
 
-      - name: Use Node.js ${{ matrix.node-version }}
+      - name: Use Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: ${{ matrix.node-version }}
           cache: 'npm'
 
       - name: Setup variables
@@ -46,16 +41,18 @@ jobs:
           echo POSTHOG_ANALYTICS_CODE="${{ secrets.POSTHOG_ANALYTICS_CODE }}" >> .env
           echo ENABLE_SERVICE_WORKER="${{ secrets.ENABLE_SERVICE_WORKER }}" >> .env
 
-      - name: Allow webpmux to execute
-        run: |
-          chmod +x ./lib/webpmux
-          chmod +x ./lib/webpmux.exe
+      - name: Install packages
+        run: npm ci --force
 
-      - name: Build TS
+      - name: Generate Data and Images for each language
         run: |
-          npm ci --force
+          # Allow webpmux to execute
+          chmod +x ./lib/webpmux
+          # Start the data script
           npm run data
-          npm run build
+
+      - name: Build Pages
+        run: npm run build
 
       - name: Generate service worker
         run: |

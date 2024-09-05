@@ -10,6 +10,7 @@
 @import 'button';
 @import 'animate';
 @import 'breadcrumb';
+@import 'scrollbar';
 @import 'responsive';
 @import 'assistantApps';
 
@@ -23,6 +24,7 @@ $gameCardForeground: #1f1f1f;
 
 :root {
   --pico-primary-background: #{$brand-primary} !important;
+  --brand-primary-background: #{$brand-primary-background};
   --brand-primary: #{$brand-primary};
   --brand-secondary: #{$brand-secondary};
   --brand-tertiary: #{$brand-tertiary};
@@ -75,45 +77,6 @@ $gameCardForeground: #1f1f1f;
 
 ::-moz-selection {
   background: $brand-tertiary;
-}
-
-*::-webkit-scrollbar {
-  width: 10px;
-  background-color: $brand-primary-background;
-
-  @media screen and (max-width: 800px) {
-    width: 5px;
-  }
-}
-
-*::-webkit-scrollbar-track {
-  margin-top: -5px;
-  margin-bottom: -5px;
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  background-color: $brand-primary-background;
-}
-
-*::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  background-color: $brand-secondary;
-  background-image: -webkit-linear-gradient(
-    45deg,
-    rgba(255, 255, 255, 0.2) 25%,
-    transparent 25%,
-    transparent 50%,
-    rgba(255, 255, 255, 0.2) 50%,
-    rgba(255, 255, 255, 0.2) 75%,
-    transparent 75%,
-    transparent
-  );
-}
-
-.scrollbar-contain::-webkit-scrollbar-track {
-  margin-top: 0;
-  margin-bottom: 0;
-  box-shadow: none;
-  -webkit-box-shadow: none;
 }
 
 img,
