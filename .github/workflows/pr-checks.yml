@@ -79,7 +79,7 @@ jobs:
   test-build:
     needs: paths-filter
     if: needs.paths-filter.outputs.code-changed == 'true'
-    name: Changelog was updated
+    name: Build pages step is successful
     runs-on: ubuntu-latest
     timeout-minutes: 5
 

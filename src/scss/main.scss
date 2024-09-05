@@ -24,6 +24,7 @@ $gameCardForeground: #1f1f1f;
 
 :root {
   --pico-primary-background: #{$brand-primary} !important;
+  --brand-primary-background: #{$brand-primary-background};
   --brand-primary: #{$brand-primary};
   --brand-secondary: #{$brand-secondary};
   --brand-tertiary: #{$brand-tertiary};
