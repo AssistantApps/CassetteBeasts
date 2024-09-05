@@ -1,0 +1,1 @@
+import"./hoisted.CmkSwYHY.js";function t(e){e.querySelectorAll('img[loading="lazy"][data-lazy="defer"]').forEach(a=>{a.src=a.dataset.src,a.dataset.lazy="done"})}document.addEventListener("astro:page-load",()=>{t(document)});
