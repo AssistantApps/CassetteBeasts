@@ -1,0 +1,55 @@
+---
+import FacebookShareButton from 'components/social/Facebook.astro';
+import TwitterShareButton from 'components/social/Twitter.astro';
+import RedditShareButton from 'components/social/Reddit.astro';
+import ClipboardShareButton from 'components/social/Clipboard.astro';
+
+import { site } from 'constants/site';
+
+import type { ISocialShare } from 'contracts/socialShare';
+
+interface Props extends ISocialShare {}
+
+const DEFAULT_COMPONENTS = [
+  FacebookShareButton, //
+  TwitterShareButton,
+  RedditShareButton,
+  ClipboardShareButton,
+];
+
+const { title, description, via } = Astro.props;
+const url = site.rootUrl + Astro.url.pathname.slice(1);
+---
+
+<slot name="astro-social-share-css">
+  <style is:global lang="scss">
+    .astro-social-share {
+      margin: 3em 0 2em 0;
+      display: flex;
+      justify-content: center;
+      gap: 2em;
+
+      a {
+        text-decoration: none;
+      }
+
+      svg {
+        height: 2em;
+      }
+
+      .social-share-btn {
+        transition: 250ms transform ease-in-out;
+        &:hover {
+          transform: scale(120%);
+        }
+      }
+    }
+  </style>
+</slot>
+<div class="astro-social-share">
+  {
+    DEFAULT_COMPONENTS.map((Button) => (
+      <Button url={url} description={description} via={via} title={title} />
+    ))
+  }
+</div>

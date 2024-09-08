@@ -62,22 +62,6 @@ export const FusionPanel: Component<IProps> = (props: IProps) => {
       </article>
       <article class="mb-1">
         <div class="fusion">
-          <div class="grid">
-            <MonsterDropdown
-              networkState={networkState()}
-              translate={props.translate}
-              monsters={monsterDropdown()}
-              selectedMonster={monsterA()}
-              selectMonster={setMonsterA}
-            />
-            {/* <MonsterDropdown
-              networkState={networkState()}
-              translate={props.translate}
-              monsters={monsterDropdown()}
-              selectedMonster={monsterB()}
-              selectMonster={setMonsterB}
-            /> */}
-          </div>
           <Switch
             fallback={
               <div class="fusion-container">
@@ -95,6 +79,20 @@ export const FusionPanel: Component<IProps> = (props: IProps) => {
               <summary data-TODO="translate">❌ Something went wrong</summary>
             </Match>
             <Match when={networkState() === NetworkState.success}>
+              <div class="grid">
+                <MonsterDropdown
+                  translate={props.translate}
+                  monsters={monsterDropdown()}
+                  selectedMonster={monsterA()}
+                  selectMonster={setMonsterA}
+                />
+                <MonsterDropdown
+                  translate={props.translate}
+                  monsters={monsterDropdown()}
+                  selectedMonster={monsterB()}
+                  selectMonster={setMonsterB}
+                />
+              </div>
               <MonsterFusionDisplay
                 translate={props.translate}
                 itemMap={itemMap()}

@@ -10,7 +10,7 @@ import { astroPaths } from 'constants/astro';
 import { breadcrumb } from 'constants/breadcrumb';
 import { AppImage } from 'constants/image';
 import { IntermediateFile } from 'constants/intermediateFile';
-import { availableLanguages } from 'constants/localisation';
+import { availableLanguages, UIKeys } from 'constants/localisation';
 import { routes } from 'constants/route';
 import { site } from 'constants/site';
 import type { ICharacterEnhanced } from 'contracts/character';
@@ -95,7 +95,9 @@ const schemaOverride: IGuideSchema = {
   <section id="character-grid" class="item-grid-list">
     <div class="meta">
       <h1>{translate('characters')}</h1>
+      <h2>Assistant for {translate(UIKeys.cassetteBeasts)}</h2>
     </div>
+
     {
       list.map((data, index) => (
         <a

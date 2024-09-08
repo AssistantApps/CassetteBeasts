@@ -11,6 +11,7 @@ interface Props {
 
 const { version, translationLookup } = Astro.props;
 const { translate } = translator(translationLookup);
+const versionString = import.meta.env.PROD ? `v${version}` : 'dev';
 ---
 
 <footer class="ta-center" transition:persist>
@@ -47,6 +48,6 @@ const { translate } = translator(translationLookup);
       </a>
     </span>
     <span>&nbsp;|&nbsp;</span>
-    <span>v{version}</span>
+    <span>{versionString}</span>
   </small>
 </footer>

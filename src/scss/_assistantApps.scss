@@ -1,5 +1,7 @@
 .full-page-app-notice {
   --aa-app-notice-grid-columns: 1;
-  margin-top: 1em;
+  // It looks better with the margin, but when there is no
+  // notice it looks better without the margin top
+  // margin-top: 1em;
   margin-bottom: 1em;
 }

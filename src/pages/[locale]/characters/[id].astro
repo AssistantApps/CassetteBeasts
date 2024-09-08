@@ -2,6 +2,7 @@
 import Breadcrumb from 'components/Breadcrumb.astro';
 import Layout from 'components/layouts/Layout.astro';
 import StatHex from 'components/stat/StatHex.astro';
+import ShareRow from 'components/social/ShareRow.astro';
 
 import languageJson from 'assets/json/language.json';
 import './_id.scss';
@@ -43,10 +44,21 @@ const data = (Astro.props as any).item as ICharacterEnhanced;
 const translationLookup = (languageJson as Record<string, ILocalisation>)[locale].messages;
 const { translate } = translator(translationLookup);
 
+const lines: Array<string> = [];
+for (const suffix of ['', '_PLATONIC', '_DATING']) {
+  for (let index = 0; index < 4; index++) {
+    const langKey = `RESTING_${data.partner_id.toUpperCase()}${suffix}_${index + 1}`;
+    const translateValue = translate(langKey);
+    if (translateValue == langKey) break;
+    lines.push(translateValue);
+  }
+}
+
 const schemaOverride: IPersonSchema = {
   name: data.name_localised,
   givenName: data.name_localised,
   additionalName: data.name_localised,
+  description: lines.length > 0 ? lines[0] : '',
   image: site.rootUrl + data.meta_image_url.slice(1),
   url: `${site.rootUrl}${locale}/${data.id}`,
 };
@@ -69,9 +81,10 @@ const schemaOverride: IPersonSchema = {
     ]}
   />
 
-  <div class="grid character-detail-grid mb-3">
+  <div class="grid masonry character-detail-grid mb-3">
     <div class="meta">
       <h1>{translate('characters')} - {data.name_localised}</h1>
+      <h2>Assistant for {translate(UIKeys.cassetteBeasts)}</h2>
     </div>
 
     <article class="character-detail-card item-detail-card">
@@ -135,6 +148,19 @@ const schemaOverride: IPersonSchema = {
         </div>
 
         {
+          lines.length > 0 && (
+            <div class="bio animate__animated animate__fadeIn">
+              <h2 class="meta">bios for Cassette Beast character {data.name_localised}</h2>
+              <ul>
+                {lines.map((line) => (
+                  <li>{line}</li>
+                ))}
+              </ul>
+            </div>
+          )
+        }
+
+        {
           data.audioFiles.length > 0 && (
             <Fragment>
               <br />
@@ -166,8 +192,6 @@ const schemaOverride: IPersonSchema = {
             </Fragment>
           )
         }
-
-        <br />
 
         <section class="wiki-section animate__animated animate__fadeIn">
           <a
@@ -232,6 +256,7 @@ const schemaOverride: IPersonSchema = {
             <LazyImage
               src={data.partner_image_url}
               classes="tape-image animate__animated tada-hover"
+              style="max-height: 200px;"
               alt={`tape ${data.partner_signature_species_monsters.name_localised}`}
             />
           </a>
@@ -239,4 +264,6 @@ const schemaOverride: IPersonSchema = {
       </div>
     </article>
   </div>
+
+  <ShareRow title={schemaOverride.name} description={lines[0]} />
 </Layout>

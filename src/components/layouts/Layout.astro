@@ -59,7 +59,6 @@ const allLangCodes = Object.keys(languageJson).filter((lang) => !excludeLangCode
     />
 
     <WebVitals transition:persist />
-
     <script is:inline src={`/assets/js/main.js?v=${versionJson.app_version}`}></script>
     <script is:inline defer src={`/analytics.js?v=${versionJson.app_version}`}></script>
     <script

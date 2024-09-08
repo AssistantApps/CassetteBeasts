@@ -8,6 +8,7 @@ import { UIKeys } from 'constants/localisation';
 import { translator } from 'helpers/translateHelper';
 import { urlRef } from 'helpers/urlHelper';
 import { sortByStringProperty } from 'helpers/sortHelper';
+import LazyImage from './common/LazyImage.astro';
 
 interface Props {
   locale: string;
@@ -50,7 +51,11 @@ const availableLanguages = allLangCodes
         <li data-tooltip={translate(UIKeys.language)} data-placement="bottom">
           <details id="language-dropdown" class="dropdown">
             <summary class="role-link">
-              <img src="/assets/img/language.png" alt={translate(UIKeys.language)} />
+              <LazyImage
+                src="/assets/img/language.png"
+                loadingStrat="lazy"
+                alt={translate(UIKeys.language)}
+              />
             </summary>
             <ul>
               {

@@ -1,29 +1,30 @@
 ---
-import Layout from 'components/layouts/Layout.astro';
 import Breadcrumb from 'components/Breadcrumb.astro';
+import Layout from 'components/layouts/Layout.astro';
 import MonsterSpawnDetailsRow from 'components/monster/MonsterSpawnDetailsRow.astro';
+import ShareRow from 'components/social/ShareRow.astro';
 
 import languageJson from 'assets/json/language.json';
-import './_id.scss';
 import '../_shared.scss';
+import './_id.scss';
 
-import { readDataFromAssets } from 'helpers/fileHelper';
-import { IntermediateFile } from 'constants/intermediateFile';
+import LazyImage from 'components/common/LazyImage.astro';
 import { astroPaths } from 'constants/astro';
 import { breadcrumb } from 'constants/breadcrumb';
+import { AppImage } from 'constants/image';
+import { IntermediateFile } from 'constants/intermediateFile';
 import { availableLanguages, UIKeys } from 'constants/localisation';
 import { routes } from 'constants/route';
 import { site } from 'constants/site';
 import type { ILocalisation } from 'contracts/localisation';
 import type { IMonsterSpawnDetailsEnhanced } from 'contracts/monsterSpawn';
-import type { IWorldEnhanced, IWorldMetaDataEnhanced } from 'contracts/world';
 import { type IGuideSchema, AccessMode } from 'contracts/schema/guideScheme';
+import type { IWorldEnhanced, IWorldMetaDataEnhanced } from 'contracts/world';
 import { isoDate } from 'helpers/dateHelper';
+import { readDataFromAssets } from 'helpers/fileHelper';
 import { toSchemaOrgProperty } from 'helpers/schemaHelper';
 import { limitLengthWithEllipse } from 'helpers/stringHelper';
 import { translator } from 'helpers/translateHelper';
-import LazyImage from 'components/common/LazyImage.astro';
-import { AppImage } from 'constants/image';
 
 export async function getStaticPaths() {
   const paths: any = [];
@@ -118,6 +119,7 @@ const schemaOverride: IGuideSchema = {
   <div id="world-chunk" class="grid masonry min-card-width mb-3">
     <div class="meta">
       <h1>{translate(UIKeys.viewMonsters)} - {data.title_localised}</h1>
+      <h2>Assistant for {translate(UIKeys.cassetteBeasts)}</h2>
     </div>
 
     <article class="item-detail-card">
@@ -257,6 +259,8 @@ const schemaOverride: IGuideSchema = {
         )
       }
     </Fragment>
-          </article>
+    </article>
   </div>
+
+  <ShareRow title={schemaOverride.name} description={schemaOverride.description} />
 </Layout>
