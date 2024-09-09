@@ -1,4 +1,4 @@
-import { type Component, type JSX } from 'solid-js';
+import React, { createRef } from 'react';
 
 import { UIKeys } from 'constants/localisation';
 import type { IMonsterFormDropdown } from 'contracts/monsterForm';
@@ -11,8 +11,8 @@ interface IProps {
   monsters: Array<IMonsterFormDropdown>;
 }
 
-export const MonsterDropdown: Component<IProps> = (props: IProps) => {
-  let detailRef: HTMLDetailsElement | undefined;
+export const MonsterDropdown: React.FC<IProps> = (props: IProps) => {
+  let detailRef = createRef<HTMLDetailsElement>();
   const renderMonster = (monster: IMonsterFormDropdown): JSX.Element => (
     <>
       <img src={imgUrl(monster.icon)} alt={monster.name} loading="lazy" />
@@ -21,25 +21,29 @@ export const MonsterDropdown: Component<IProps> = (props: IProps) => {
   );
 
   const onMonsterClick = (monster: IMonsterFormDropdown) => {
-    if (detailRef != null) {
-      detailRef.removeAttribute('open');
+    if (detailRef != null && detailRef.current != null) {
+      detailRef.current.removeAttribute('open');
     }
 
     props.selectMonster(monster);
   };
 
   return (
-    <details ref={detailRef} class="monster dropdown">
+    <details ref={detailRef} className="monster dropdown">
       <summary>
         {props.selectedMonster != null ? (
-          <div class="monster-option selected">{renderMonster(props.selectedMonster)}</div>
+          <div className="monster-option selected">{renderMonster(props.selectedMonster)}</div>
         ) : (
           props.translate[UIKeys.viewMonsters]
         )}
       </summary>
       <ul>
         {props.monsters.map((monster) => (
-          <li class="monster-option noselect" onClick={() => onMonsterClick(monster)}>
+          <li
+            key={monster.id}
+            className="monster-option noselect"
+            onClick={() => onMonsterClick(monster)}
+          >
             {renderMonster(monster)}
           </li>
         ))}

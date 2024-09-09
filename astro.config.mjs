@@ -1,9 +1,9 @@
+import react from '@astrojs/react';
 import sitemap from '@astrojs/sitemap';
-import solidJs from '@astrojs/solid-js';
+import { minify } from '@zokki/astro-minify';
 import metaTags from 'astro-meta-tags';
 import robotsTxt from 'astro-robots-txt';
 import { defineConfig } from 'astro/config';
-import { minify } from '@zokki/astro-minify';
 
 import { site } from './src/constants/site';
 
@@ -33,14 +33,14 @@ export default defineConfig({
     assets: 'astro',
   },
   integrations: [
+    react(),
+    metaTags(),
+    robotsTxt(),
     sitemap({
       changefreq: 'monthly',
       priority: 0.5,
       lastmod: new Date(),
     }),
-    solidJs(),
-    metaTags(),
-    robotsTxt(),
     minify({
       html: {
         drop_console: true,

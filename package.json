@@ -14,9 +14,12 @@
   "author": "Kurt Lourens",
   "license": "GPL-3.0-only",
   "dependencies": {
-    "@astrojs/solid-js": "^4.4.1",
+    "@astrojs/react": "^3.6.2",
+    "@types/react": "^18.3.5",
+    "@types/react-dom": "^18.3.0",
     "astro": "^4.15.1",
-    "solid-js": "^1.8.19"
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
     "@assistantapps/assistantapps.api.client": "^0.0.26",
