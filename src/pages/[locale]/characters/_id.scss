@@ -2,8 +2,6 @@
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 
   .character-detail-card {
-    background: var(--card-background);
-
     // .item-detail-card-heading {}
 
     .item-detail-card-body {
@@ -59,6 +57,13 @@
           width: 15em;
           height: 15em;
           margin: 0 auto;
+        }
+      }
+
+      .bio {
+        padding: 1.5em 1em 0 1em;
+        * {
+          color: var(--card-foreground);
         }
       }
 

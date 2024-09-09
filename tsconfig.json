@@ -1,9 +1,9 @@
 {
   "extends": "astro/tsconfigs/strict",
   "compilerOptions": {
-    "jsx": "preserve",
-    "jsxImportSource": "solid-js",
-    "baseUrl": "src",
+    "jsx": "react-jsx",
+    "jsxImportSource": "react",
+    "baseUrl": "src"
   },
   "exclude": [
     "lib",
@@ -14,5 +14,5 @@
     "src/modules/**/*",
     "src/templates/helpers/*",
     "workbox-config.js"
-    ]
+  ]
 }

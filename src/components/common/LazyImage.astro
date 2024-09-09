@@ -9,6 +9,7 @@ interface Props {
   src?: string;
   classes?: string;
   alt: string;
+  style?: string;
   width?: string;
   height?: string;
   loadingImage?: string;
@@ -16,7 +17,7 @@ interface Props {
   draggable?: boolean;
 }
 
-const { src, classes, alt, width, height } = Astro.props;
+const { src, classes, style, alt, width, height } = Astro.props;
 const loadingStrat = Astro.props.loadingStrat ?? 'defer';
 const loadingImage = Astro.props.loadingImage ?? AppImage.cardLoader;
 const draggable = Astro.props.draggable ?? false;
@@ -46,6 +47,7 @@ if (height != null) imgHeight = height;
   data-src={loadingStrat == 'defer' ? imgSource : ''}
   data-lazy={loadingStrat}
   class={classes}
+  style={style}
   alt={alt}
   width={imgWidth}
   height={imgHeight}

@@ -1,4 +1,4 @@
-import { type Component } from 'solid-js';
+import React from 'react';
 
 import type { INodeResourceEnhanced } from 'contracts/nodeResource';
 import type { ISpriteAnim } from 'contracts/spriteAnim';
@@ -12,7 +12,7 @@ interface IProps {
   sizeMultiplier?: number;
 }
 
-export const MonsterFusionNodeItem: Component<IProps> = (props: IProps) => {
+export const MonsterFusionNodeItem: React.FC<IProps> = (props: IProps) => {
   const sizeMultiplier = props.sizeMultiplier ?? 3;
   const fusion = props.fusion ?? ({} as INodeResourceEnhanced);
 
@@ -75,13 +75,13 @@ export const MonsterFusionNodeItem: Component<IProps> = (props: IProps) => {
       id={resultFusion.name}
       src={resultFusionImg}
       alt={resultFusion.name}
-      class="fusion-node"
+      className="fusion-node"
       style={{
         top: getAdjustedCoord(resultFusion.position.y),
         left: getAdjustedCoord(resultFusion.position.x),
         width: getSize(props.fusionSpriteMap, resultFusion).width,
         height: getSize(props.fusionSpriteMap, resultFusion).height,
-        'z-index': resultFusion.index ?? 0,
+        zIndex: resultFusion.index ?? 0,
       }}
     />
   );

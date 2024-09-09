@@ -1,4 +1,4 @@
-import { createEffect, createSignal, Show, type Component } from 'solid-js';
+import React, { useEffect, useState } from 'react';
 
 import type { IFusionEnhanced } from 'contracts/fusion';
 import type { IMonsterFormDropdown } from 'contracts/monsterForm';
@@ -15,16 +15,16 @@ interface IProps {
   monsterB?: IMonsterFormDropdown;
 }
 
-export const MonsterFusionDisplay: Component<IProps> = (props: IProps) => {
+export const MonsterFusionDisplay: React.FC<IProps> = (props: IProps) => {
   const [monsterAFusionMap, setMonsterAFusionMap] =
-    createSignal<Record<string, INodeResourceEnhanced>>();
+    useState<Record<string, INodeResourceEnhanced>>();
   const [monsterBFusionMap, setMonsterBFusionMap] =
-    createSignal<Record<string, INodeResourceEnhanced>>();
-  const [maxImgHeight, setMaxImgHeight] = createSignal<number>(0);
-  const [maxTopN, setMaxTopN] = createSignal<number>(0);
-  const [sizeMultiplier, setSizeMultiplier] = createSignal<number>(1);
+    useState<Record<string, INodeResourceEnhanced>>();
+  const [maxImgHeight, setMaxImgHeight] = useState<number>(0);
+  const [maxTopN, setMaxTopN] = useState<number>(0);
+  const [sizeMultiplier, setSizeMultiplier] = useState<number>(1);
 
-  createEffect(() => {
+  useEffect(() => {
     if (props.fusionSpriteMap == null) return;
     if (props.itemMap == null) return;
 
@@ -106,26 +106,27 @@ export const MonsterFusionDisplay: Component<IProps> = (props: IProps) => {
         monsterA={props.monsterA}
         monsterB={props.monsterB}
       />
-      <div class="fusion-container mb-1">
-        <Show when={monsterAFusionMap() != null && monsterBFusionMap() != null}>
+      <div className="fusion-container mb-1">
+        {monsterAFusionMap != null && monsterBFusionMap != null && (
           <div
-            class="fusion-item"
+            className="fusion-item"
             style={{
-              'margin-top': `${maxTopN()}px`,
-              height: sizeMultiplier() * maxImgHeight() + 'px',
-              width: sizeMultiplier() * maxImgHeight() + 'px',
+              marginTop: `${maxTopN}px`,
+              height: sizeMultiplier * maxImgHeight + 'px',
+              width: sizeMultiplier * maxImgHeight + 'px',
             }}
           >
-            {getNodesA(monsterAFusionMap(), monsterBFusionMap()).map((node) => (
+            {getNodesA(monsterAFusionMap, monsterBFusionMap).map((node) => (
               <MonsterFusionNodeItem
+                key={node.name}
                 fusion={node}
                 fusionSpriteMap={props.fusionSpriteMap}
-                fusionPartsList={monsterAFusionMap() ?? {}}
-                sizeMultiplier={sizeMultiplier()}
+                fusionPartsList={monsterAFusionMap ?? {}}
+                sizeMultiplier={sizeMultiplier}
               />
             ))}
           </div>
-        </Show>
+        )}
       </div>
     </>
   );

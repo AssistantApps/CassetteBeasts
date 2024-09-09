@@ -1,21 +1,18 @@
-import { Match, Switch, type Component, type JSX } from 'solid-js';
+import React, { createRef } from 'react';
 
-import { LoadingSpinner } from 'components/common/Loading';
 import { UIKeys } from 'constants/localisation';
-import { NetworkState } from 'constants/networkState';
 import type { IMonsterFormDropdown } from 'contracts/monsterForm';
 import { imgUrl } from 'helpers/urlHelper';
 
 interface IProps {
-  networkState: NetworkState;
   translate: Record<string, string>;
   selectedMonster?: IMonsterFormDropdown;
   selectMonster: (mon: IMonsterFormDropdown) => void;
   monsters: Array<IMonsterFormDropdown>;
 }
 
-export const MonsterDropdown: Component<IProps> = (props: IProps) => {
-  let detailRef: HTMLDetailsElement | undefined;
+export const MonsterDropdown: React.FC<IProps> = (props: IProps) => {
+  let detailRef = createRef<HTMLDetailsElement>();
   const renderMonster = (monster: IMonsterFormDropdown): JSX.Element => (
     <>
       <img src={imgUrl(monster.icon)} alt={monster.name} loading="lazy" />
@@ -24,39 +21,29 @@ export const MonsterDropdown: Component<IProps> = (props: IProps) => {
   );
 
   const onMonsterClick = (monster: IMonsterFormDropdown) => {
-    if (detailRef != null) {
-      detailRef.removeAttribute('open');
+    if (detailRef != null && detailRef.current != null) {
+      detailRef.current.removeAttribute('open');
     }
 
     props.selectMonster(monster);
   };
 
   return (
-    <details ref={detailRef} class="monster dropdown">
-      <Switch
-        fallback={
-          <summary data-TODO="translate">
-            <LoadingSpinner size="sm" />
-            Loading
-          </summary>
-        }
-      >
-        <Match when={props.networkState === NetworkState.error}>
-          <summary data-TODO="translate">❌ Something went wrong</summary>
-        </Match>
-        <Match when={props.networkState === NetworkState.success}>
-          <summary>
-            {props.selectedMonster != null ? (
-              <div class="monster-option selected">{renderMonster(props.selectedMonster)}</div>
-            ) : (
-              props.translate[UIKeys.viewMonsters]
-            )}
-          </summary>
-        </Match>
-      </Switch>
+    <details ref={detailRef} className="monster dropdown">
+      <summary>
+        {props.selectedMonster != null ? (
+          <div className="monster-option selected">{renderMonster(props.selectedMonster)}</div>
+        ) : (
+          props.translate[UIKeys.viewMonsters]
+        )}
+      </summary>
       <ul>
         {props.monsters.map((monster) => (
-          <li class="monster-option noselect" onClick={() => onMonsterClick(monster)}>
+          <li
+            key={monster.id}
+            className="monster-option noselect"
+            onClick={() => onMonsterClick(monster)}
+          >
             {renderMonster(monster)}
           </li>
         ))}

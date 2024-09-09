@@ -1,22 +1,23 @@
 ---
-import Layout from 'components/layouts/Layout.astro';
 import Breadcrumb from 'components/Breadcrumb.astro';
 import LazyImage from 'components/common/LazyImage.astro';
+import Layout from 'components/layouts/Layout.astro';
+import ShareRow from 'components/social/ShareRow.astro';
 
 import languageJson from 'assets/json/language.json';
 import './_id.scss';
 
-import { readDataFromAssets } from 'helpers/fileHelper';
-import { IntermediateFile } from 'constants/intermediateFile';
 import { astroPaths } from 'constants/astro';
 import { breadcrumb } from 'constants/breadcrumb';
-import { routes } from 'constants/route';
+import { IntermediateFile } from 'constants/intermediateFile';
 import { availableLanguages, UIKeys } from 'constants/localisation';
+import { routes } from 'constants/route';
 import { site } from 'constants/site';
 import type { ILocalisation } from 'contracts/localisation';
-import type { IStatusEffectEnhanced } from 'contracts/statusEffect';
 import { type IGuideSchema, AccessMode } from 'contracts/schema/guideScheme';
+import type { IStatusEffectEnhanced } from 'contracts/statusEffect';
 import { isoDate } from 'helpers/dateHelper';
+import { readDataFromAssets } from 'helpers/fileHelper';
 import { toSchemaOrgProperty } from 'helpers/schemaHelper';
 import { translator } from 'helpers/translateHelper';
 
@@ -76,6 +77,7 @@ const schemaOverride: IGuideSchema = {
   <div class="grid status-effect-detail-grid mb-3">
     <div class="meta">
       <h1>{translate(UIKeys.statusEffect)} - {data.name_localised}</h1>
+      <h2>Assistant for {translate(UIKeys.cassetteBeasts)}</h2>
     </div>
 
     <article class="item-detail-card">
@@ -212,4 +214,6 @@ const schemaOverride: IGuideSchema = {
       )
     }
   </div>
+
+  <ShareRow title={schemaOverride.name} description={schemaOverride.description} />
 </Layout>

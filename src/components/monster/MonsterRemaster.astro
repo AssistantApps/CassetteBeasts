@@ -1,4 +1,6 @@
 ---
+import LazyImage from 'components/common/LazyImage.astro';
+
 import { routes } from 'constants/route';
 import type { ISubResourceMonsterEnhanced } from 'contracts/subResource';
 import { imgUrl } from 'helpers/urlHelper';
@@ -18,11 +20,10 @@ const linkToMonster = `/${locale}${routes.monsters}/${encodeURI(data.resource_na
   <td class="from-to">{fromOrTo ?? ''}</td>
   <td class="sprite">
     <a href={linkToMonster} title={data.name_localised}>
-      <img
+      <LazyImage
         src={imgUrl(data.icon_url)}
-        class="remaster-image"
+        classes="remaster-image"
         alt={`${data.name_localised}`}
-        draggable="false"
       />
     </a>
   </td>
@@ -36,23 +37,20 @@ const linkToMonster = `/${locale}${routes.monsters}/${encodeURI(data.resource_na
     <a href={linkToMonster} title={data.name_localised}>
       {
         data.elemental_types_elements.map((elem) => (
-          <img
+          <LazyImage
             src={imgUrl(elem.icon?.path)}
-            class="move-image"
+            classes="move-image"
             alt={`${elem.name_localised}`}
-            draggable="false"
           />
         ))
       }
 
       {
         data.elemental_types_elements.length == 0 && (
-          <img
+          <LazyImage
             src="/assets/img/typeless.png"
-            class="move-image"
-            title="Typeless"
+            classes="move-image"
             alt={`${data.name_localised}`}
-            draggable="false"
           />
         )
       }

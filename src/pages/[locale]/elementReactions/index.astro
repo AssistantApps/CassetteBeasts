@@ -1,6 +1,7 @@
 ---
 import Breadcrumb from 'components/Breadcrumb.astro';
 import Layout from 'components/layouts/Layout.astro';
+import ShareRow from 'components/social/ShareRow.astro';
 
 import languageJson from '../../../assets/json/language.json';
 import versionJson from '../../../assets/json/version.json';
@@ -80,7 +81,9 @@ const schemaOverride: IGuideSchema = {
   <div class="hidden-in-mobile mb-3">
     <div class="meta">
       <h1>{translate(UIKeys.elementalTypeChart)}</h1>
+      <h2>Assistant for {translate(UIKeys.cassetteBeasts)}</h2>
     </div>
+    
     <div class="attacker">
       <h3>{translate(UIKeys.attacker)}</h3>
       <div class="defender">
@@ -264,4 +267,6 @@ const schemaOverride: IGuideSchema = {
   </section>
 
   <script is:inline defer src={`/assets/js/highlightGrid.js?v=${versionJson.app_version}`}></script>
+
+  <ShareRow title={schemaOverride.name} description={schemaOverride.description} />
 </Layout>

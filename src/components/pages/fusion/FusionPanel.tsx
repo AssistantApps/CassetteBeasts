@@ -1,4 +1,4 @@
-import { createSignal, Match, onMount, Switch, type Component } from 'solid-js';
+import React, { useEffect, useState } from 'react';
 
 import { LoadingSpinner } from 'components/common/Loading';
 import { MonsterDropdown } from 'components/monster/MonsterDropdown';
@@ -14,15 +14,15 @@ interface IProps {
   translate: Record<string, string>;
 }
 
-export const FusionPanel: Component<IProps> = (props: IProps) => {
-  const [monsterA, setMonsterA] = createSignal<IMonsterFormDropdown>();
-  const [monsterB, setMonsterB] = createSignal<IMonsterFormDropdown>();
+export const FusionPanel: React.FC<IProps> = (props: IProps) => {
+  const [monsterA, setMonsterA] = useState<IMonsterFormDropdown>();
+  const [monsterB, setMonsterB] = useState<IMonsterFormDropdown>();
 
-  const [itemMap, setItemMap] = createSignal<Record<string, IFusionEnhanced>>({});
-  const [fusionSpriteMap, setFusionSpriteMap] = createSignal<Record<string, ISpriteAnim>>({});
-  const [monsterDropdown, setMonsterDropdown] = createSignal<Array<IMonsterFormDropdown>>([]);
+  const [itemMap, setItemMap] = useState<Record<string, IFusionEnhanced>>({});
+  const [fusionSpriteMap, setFusionSpriteMap] = useState<Record<string, ISpriteAnim>>({});
+  const [monsterDropdown, setMonsterDropdown] = useState<Array<IMonsterFormDropdown>>([]);
 
-  const [networkState, setNetworkState] = createSignal<NetworkState>(NetworkState.loading);
+  const [networkState, setNetworkState] = useState<NetworkState>(NetworkState.loading);
 
   const loadData = async () => {
     const fusionTask = fetch(`/${defaultLocale}/data/fusion.json`);
@@ -51,59 +51,56 @@ export const FusionPanel: Component<IProps> = (props: IProps) => {
     setNetworkState(NetworkState.success);
   };
 
-  onMount(() => {
+  useEffect(() => {
     loadData();
-  });
+  }, []);
 
   return (
     <>
-      <article class="mb-1 warning">
-        <div class="card ta-center">⚠️ This is a work in progress</div>
+      <article className="mb-1 warning">
+        <div className="card ta-center">⚠️ This is a work in progress</div>
       </article>
-      <article class="mb-1">
-        <div class="fusion">
-          <div class="grid">
-            <MonsterDropdown
-              networkState={networkState()}
-              translate={props.translate}
-              monsters={monsterDropdown()}
-              selectedMonster={monsterA()}
-              selectMonster={setMonsterA}
-            />
-            {/* <MonsterDropdown
-              networkState={networkState()}
-              translate={props.translate}
-              monsters={monsterDropdown()}
-              selectedMonster={monsterB()}
-              selectMonster={setMonsterB}
-            /> */}
-          </div>
-          <Switch
-            fallback={
-              <div class="fusion-container">
-                <div
-                  style={{
-                    margin: '5vh auto',
-                  }}
-                >
-                  <LoadingSpinner size="xl" />
-                </div>
+      <article className="mb-1">
+        <div className="fusion">
+          {(networkState === NetworkState.loading || networkState === NetworkState.pending) && (
+            <div className="fusion-container">
+              <div
+                style={{
+                  margin: '5vh auto',
+                }}
+              >
+                <LoadingSpinner size="xl" />
               </div>
-            }
-          >
-            <Match when={networkState() === NetworkState.error}>
-              <summary data-TODO="translate">❌ Something went wrong</summary>
-            </Match>
-            <Match when={networkState() === NetworkState.success}>
+            </div>
+          )}
+          {networkState === NetworkState.error && (
+            <summary data-TODO="translate">❌ Something went wrong</summary>
+          )}
+          {networkState === NetworkState.success && (
+            <>
+              <div className="grid">
+                <MonsterDropdown
+                  translate={props.translate}
+                  monsters={monsterDropdown}
+                  selectedMonster={monsterA}
+                  selectMonster={setMonsterA}
+                />
+                <MonsterDropdown
+                  translate={props.translate}
+                  monsters={monsterDropdown}
+                  selectedMonster={monsterB}
+                  selectMonster={setMonsterB}
+                />
+              </div>
               <MonsterFusionDisplay
                 translate={props.translate}
-                itemMap={itemMap()}
-                fusionSpriteMap={fusionSpriteMap()}
-                monsterA={monsterA()}
-                monsterB={monsterB()}
+                itemMap={itemMap}
+                fusionSpriteMap={fusionSpriteMap}
+                monsterA={monsterA}
+                monsterB={monsterB}
               />
-            </Match>
-          </Switch>
+            </>
+          )}
         </div>
       </article>
     </>

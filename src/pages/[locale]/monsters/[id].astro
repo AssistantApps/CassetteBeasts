@@ -1,9 +1,10 @@
 ---
 import Breadcrumb from 'components/Breadcrumb.astro';
+import LazyImage from 'components/common/LazyImage.astro';
 import Layout from 'components/layouts/Layout.astro';
 import MonsterMoveRow from 'components/monster/MonsterMoveRow.astro';
 import MonsterRemaster from 'components/monster/MonsterRemaster.astro';
-import LazyImage from 'components/common/LazyImage.astro';
+import ShareRow from 'components/social/ShareRow.astro';
 import StatHex from 'components/stat/StatHex.astro';
 
 import languageJson from 'assets/json/language.json';
@@ -81,6 +82,7 @@ const schemaOverride: IGuideSchema = {
   <div class="grid masonry min-card-width mb-3">
     <div class="meta">
       <h1>{translate(UIKeys.viewMonsters)} - {data.name_localised}</h1>
+      <h2>Assistant for {translate(UIKeys.cassetteBeasts)}</h2>
     </div>
 
     <article class="monster-detail-card item-detail-card">
@@ -446,4 +448,6 @@ const schemaOverride: IGuideSchema = {
       </div>
     </article>
   </div>
+
+  <ShareRow title={schemaOverride.name} description={schemaOverride.description} />
 </Layout>

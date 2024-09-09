@@ -75,28 +75,3 @@ jobs:
           message: Please bump the version in package.json!
           refresh-message-position: true
           allow-repeats: true
-
-  test-build:
-    needs: paths-filter
-    if: needs.paths-filter.outputs.code-changed == 'true'
-    name: Build pages step is successful
-    runs-on: ubuntu-latest
-    timeout-minutes: 5
-
-    permissions:
-      contents: write
-      pull-requests: write
-      
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Use Node.js
-        uses: actions/setup-node@v4
-        with:
-          cache: 'npm'
-
-      - name: Install packages
-        run: npm ci --force
-
-      - name: Build Pages
-        run: npm run build

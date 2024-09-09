@@ -65,12 +65,12 @@ export const breadcrumb = {
   }),
   fusion: (langCode: string, disabled: boolean = false): IBreadcrumb => ({
     uiKey: UIKeys.viewMonsters,
-    link: `/${langCode}${routes.fusion}`,
+    link: `/${langCode}${routes.fusions}`,
     disabled,
   }),
   fusionDetail: (langCode: string, item: string): IBreadcrumb => ({
     uiKey: UIKeys.viewMonsters,
-    link: `/${langCode}${routes.fusion}/${encodeURI(item)}.html`,
+    link: `/${langCode}${routes.fusions}/${encodeURI(item)}.html`,
     disabled: true,
   }),
 };

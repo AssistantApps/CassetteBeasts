@@ -1,4 +1,4 @@
-import { createEffect, createSignal, type Component } from 'solid-js';
+import React, { useEffect, useState } from 'react';
 
 import type { IMonsterFormDropdown } from 'contracts/monsterForm';
 
@@ -8,10 +8,10 @@ interface IProps {
   monsterB?: IMonsterFormDropdown;
 }
 
-export const MonsterFusionDisplayHeading: Component<IProps> = (props: IProps) => {
-  const [title, setTitle] = createSignal<string>('');
+export const MonsterFusionDisplayHeading: React.FC<IProps> = (props: IProps) => {
+  const [title, setTitle] = useState<string>('');
 
-  createEffect(() => {
+  useEffect(() => {
     if (props.monsterA == null && props.monsterB == null) {
       setTitle('...');
       return;
@@ -25,5 +25,5 @@ export const MonsterFusionDisplayHeading: Component<IProps> = (props: IProps) =>
     setTitle(`${props.monsterA?.prefix ?? '...'}${props.monsterB?.suffix ?? '...'}`);
   }, [props.monsterA?.id, props.monsterB?.id]);
 
-  return <h2 class="ta-center mt-1">{title()}</h2>;
+  return <h2 className="ta-center mt-1">{title}</h2>;
 };

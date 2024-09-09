@@ -1,11 +1,12 @@
+import React from 'react';
+
 import { AppImage } from 'constants/image';
-import { type Component } from 'solid-js';
 
 interface IProps {
   size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
 }
 
-export const LoadingSpinner: Component<IProps> = (props: IProps) => {
+export const LoadingSpinner: React.FC<IProps> = (props: IProps) => {
   let sizeInUnits = 3;
   switch (props.size) {
     case 'xs':
@@ -28,7 +29,7 @@ export const LoadingSpinner: Component<IProps> = (props: IProps) => {
   return (
     <img
       src={AppImage.loader}
-      class="noselect"
+      className="noselect"
       style={{
         width: sizeInPx,
         height: sizeInPx,
