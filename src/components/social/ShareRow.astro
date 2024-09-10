@@ -18,7 +18,12 @@ const DEFAULT_COMPONENTS = [
 ];
 
 const { title, description, via } = Astro.props;
-const url = site.rootUrl + Astro.url.pathname.slice(1);
+let url = Astro.props.url;
+
+if (url == null || url.length < 1) {
+  const relativePath = Astro.url.pathname.slice(1);
+  url = site.rootUrl + relativePath.slice(0, -1) + '.html';
+}
 ---
 
 <slot name="astro-social-share-css">
