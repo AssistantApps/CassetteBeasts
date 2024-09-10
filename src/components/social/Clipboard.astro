@@ -3,8 +3,7 @@ import { type ISocialShare } from 'contracts/socialShare';
 
 interface Props extends ISocialShare {}
 
-const { title } = Astro.props;
-const url = Astro.props.url ?? Astro.request.url;
+const { title, url } = Astro.props;
 
 const copyToClipSvg = `
 <svg role="img" viewBox="0 0 28 28" fill="none" stroke="currentcolor" stroke-width="2" xmlns="http://www.w3.org/2000/svg">
@@ -49,10 +48,18 @@ const copyToClipSuccessSvg = `
     navigator.clipboard.writeText(url).then(
       () => {
         const svgElem = document.querySelector('#copyToClipboard svg');
-        svgElem.innerHTML = copyToClipSuccessSvg;
+
+        // The minification step messes with the JS
+        const badChars = atob('XCI=');
+        const slightlyBetterChars = atob('Ig==');
+        let svgInnerTick = copyToClipSuccessSvg.replaceAll(badChars, slightlyBetterChars);
+        let svgInnerOrig = copyToClipSvg.replaceAll(badChars, slightlyBetterChars);
+        // end of hack
+
+        svgElem.innerHTML = svgInnerTick;
 
         setTimeout(() => {
-          svgElem.innerHTML = copyToClipSvg;
+          svgElem.innerHTML = svgInnerOrig;
         }, 1000);
       },
       (err) => {
