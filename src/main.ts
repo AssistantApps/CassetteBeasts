@@ -60,7 +60,7 @@ const main = async () => {
       getHandlebar().registerPartialsAndHelpers();
       for (const module of modules) {
         await module.generateImages(false, modules);
-        await module.generateMetaImages(langCode, localisationModule, false);
+        await module.generateMetaImages(langCode, localisationModule, modules, false);
       }
     },
     generateFavicons,
@@ -82,7 +82,7 @@ const main = async () => {
           reInitialise: true,
         });
         for (const module of modules) {
-          await module.generateMetaImages(langCode, localisationModule, overwrite);
+          await module.generateMetaImages(langCode, localisationModule, modules, overwrite);
         }
         console.log('');
       }

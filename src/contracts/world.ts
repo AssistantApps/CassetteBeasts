@@ -32,6 +32,7 @@ export interface IWorldMetaData {
 
 export interface IWorldMetaDataEnhanced extends IWorldMetaData {
   id: string;
+  meta_image_url: string;
   title_localised: string;
   features_localised: Array<ISubResourceMapEnhanced>;
   monster_in_habitat: Array<IMonsterFormSimplified>;

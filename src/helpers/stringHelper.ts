@@ -109,6 +109,14 @@ export const encodeEmail = (email: string) => {
   return encodeURI(btoa(chars.map((c) => `<${c}>`).join('')));
 };
 
+export const getEstimatedCharWidth = (langCode: string) => {
+  let estimatedCharWidth = 50;
+  if (langCode == chineseLocale) estimatedCharWidth = 120;
+  if (langCode == japaneseLocale) estimatedCharWidth = 120;
+  if (langCode == koreanLocale) estimatedCharWidth = 120;
+  return estimatedCharWidth;
+};
+
 export const getDescripLines = (langCode: string, description: string) => {
   let charsPerLine = 80;
   let wordSplitChar = ' ';

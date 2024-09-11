@@ -58,6 +58,7 @@ export class CommonModule<T, TE> {
   generateMetaImages = async (
     langCode: string,
     localeModule: LocalisationModule,
+    modules: Array<CommonModule<unknown, unknown>>,
     overwrite: boolean,
   ) => promiseFromResult(anyObject);
   copyWav = async (overwrite: boolean) => promiseFromResult(anyObject);

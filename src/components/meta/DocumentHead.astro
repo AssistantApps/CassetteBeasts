@@ -25,6 +25,7 @@ const locale = Astro.props.locale ?? defaultLocale;
 const description = Astro.props.description ?? site.meta.description;
 const metaImageUrl = Astro.props.metaImageUrl ?? site.images.meta.url;
 const keywords = [...(additionalKeywords ?? []), site.meta.keywords].join(', ');
+const fullMetaImageUrl = import.meta.env.DEV ? metaImageUrl : site.rootUrl + metaImageUrl.slice(1);
 
 const relativePath = Astro.url.pathname.slice(1);
 const canonical = site.rootUrl + relativePath.slice(0, -1) + '.html';
@@ -112,14 +113,14 @@ alternateUrls.push({
   <meta name="twitter:url" content={canonical} />
   <meta name="twitter:title" content={documentTitle ?? site.meta.title} />
   <meta name="twitter:description" content={metaDescription} />
-  <meta name="twitter:image" content={site.rootUrl + metaImageUrl.slice(1)} />
+  <meta name="twitter:image" content={fullMetaImageUrl} />
   <meta name="twitter:image:alt" content={metaDescription} />
 
   <!-- Facebook -->
   <meta property="og:url" content={canonical} />
   <meta property="og:type" content="website" />
   <meta property="og:title" content={documentTitle ?? site.meta.title} />
-  <meta property="og:image" content={site.rootUrl + metaImageUrl.slice(1)} />
+  <meta property="og:image" content={fullMetaImageUrl} />
   <meta property="og:image:alt" content={metaDescription} />
   <meta property="og:description" content={metaDescription} />
   <meta property="og:site_name" content={site.meta.title} />

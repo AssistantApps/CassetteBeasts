@@ -24,12 +24,13 @@ import {
 } from 'helpers/imageHelper';
 import { pad } from 'helpers/stringHelper';
 import { createWebpFromISpriteAnim } from 'helpers/webpHelper';
+import type { AssistantAppsModule } from 'modules/assistantApps/assistantAppsModule';
 import { readItemDetail } from 'modules/baseModule';
 import { CommonModule } from 'modules/commonModule';
 import { LocalisationModule } from 'modules/localisation/localisationModule';
 import { getHandlebar } from 'services/internal/handlebarService';
 import { characterMapFromDetailList } from './characterMapFromDetailList';
-import { getCharacterMetaImage } from './characterMeta';
+import { getCharacterListMetaImage, getCharacterMetaImage } from './characterMeta';
 import { getCharacterPartnerTapeImage } from './characterPartnerTape';
 
 export class CharacterModule extends CommonModule<ICharacter, ICharacterEnhanced> {
@@ -40,7 +41,8 @@ export class CharacterModule extends CommonModule<ICharacter, ICharacterEnhanced
       type: ModuleType.Characters,
       intermediateFile: IntermediateFile.characters,
       dependsOn: [
-        ModuleType.Localisation, //
+        ModuleType.Localisation,
+        ModuleType.AssistantApps,
         ModuleType.MonsterForms,
         ModuleType.CharacterSpriteAnim,
         ModuleType.Elements,
@@ -204,8 +206,15 @@ export class CharacterModule extends CommonModule<ICharacter, ICharacterEnhanced
   generateMetaImages = async (
     langCode: string,
     localeModule: LocalisationModule,
+    modules: Array<CommonModule<unknown, unknown>>,
     overwrite: boolean,
   ) => {
+    const assistantAppsModule = this.getModuleOfType<ILocalisation>(
+      modules,
+      ModuleType.AssistantApps,
+    ) as AssistantAppsModule;
+    await this._getCharacterListMetaImage(langCode, overwrite, assistantAppsModule);
+
     for (const mapKey of Object.keys(this._itemDetailMap)) {
       const detailEnhanced: ICharacterEnhanced = this._itemDetailMap[mapKey];
 
@@ -232,6 +241,33 @@ export class CharacterModule extends CommonModule<ICharacter, ICharacterEnhanced
     const template = getHandlebar().getCompiledTemplate<unknown>(
       handlebarTemplate.characterMetaImage,
       { ...site, data: detailEnhanced, ...extraData } as any,
+    );
+
+    generateMetaImage({ overwrite, template, langCode, outputFullPath });
+  };
+
+  private _getCharacterListMetaImage = async (
+    langCode: string,
+    overwrite: boolean,
+    assistantAppsModule: AssistantAppsModule,
+  ) => {
+    const outputFile = `/assets/img/meta/${langCode}${routes.characters}-meta.png`;
+    const outputFullPath = path.join(paths().destinationFolder, outputFile);
+    const exists = scaffoldFolderAndDelFileIfOverwrite(outputFullPath, overwrite);
+    if (exists) return;
+
+    const characters = [
+      this._itemDetailMap['kayleigh'],
+      this._itemDetailMap['dog'],
+      this._itemDetailMap['eugene'],
+    ];
+
+    const extraData = await getCharacterListMetaImage(characters.map((m) => m.portraits[0]));
+    const forLocale = assistantAppsModule.getUITranslations(langCode);
+    const title = forLocale['characters'];
+    const template = getHandlebar().getCompiledTemplate<unknown>(
+      handlebarTemplate.characterListMetaImage,
+      { ...extraData, title },
     );
 
     generateMetaImage({ overwrite, template, langCode, outputFullPath });

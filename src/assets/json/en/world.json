@@ -142,7 +142,8 @@
               "percent": 14.285714285714285,
               "percentStr": "14.29"
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/-7%20-7.png"
         },
         {
           "title": "REGION_NAME_BROKENHEAD",
@@ -252,7 +253,8 @@
               "percent": 14.285714285714285,
               "percentStr": "14.29"
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/-6%20-7.png"
         },
         {
           "title": "REGION_NAME_MT_WIRRAL",
@@ -364,7 +366,8 @@
               "percent": 5.2631578947368425,
               "percentStr": "5.26"
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/-5%20-7.png"
         },
         {
           "title": "REGION_NAME_MT_WIRRAL",
@@ -476,7 +479,8 @@
               "percent": 5.2631578947368425,
               "percentStr": "5.26"
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/-4%20-7.png"
         },
         {
           "title": "REGION_NAME_MT_WIRRAL",
@@ -717,7 +721,8 @@
               "percent": 5.113636363636365,
               "percentStr": "5.11"
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/-3%20-7.png"
         },
         {
           "title": "REGION_NAME_MT_WIRRAL",
@@ -871,7 +876,8 @@
               "percent": 50,
               "percentStr": "50.00"
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/-2%20-7.png"
         },
         {
           "title": "REGION_NAME_HAM",
@@ -1003,7 +1009,8 @@
               "percentStr": "12.50",
               "available_specific_time": true
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/-1%20-7.png"
         },
         {
           "title": "REGION_NAME_EASTHAM_WOODS",
@@ -1131,7 +1138,8 @@
               "percentStr": "33.33",
               "available_specific_time": true
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/0%20-7.png"
         },
         {
           "title": "REGION_NAME_EASTHAM_WOODS",
@@ -1259,7 +1267,8 @@
               "percentStr": "33.33",
               "available_specific_time": true
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/1%20-7.png"
         },
         {
           "title": "REGION_NAME_EASTHAM_WOODS",
@@ -1403,7 +1412,8 @@
               "percentStr": "33.33",
               "available_specific_time": true
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/2%20-7.png"
         },
         {
           "title": "REGION_NAME_EASTHAM_WOODS",
@@ -1585,7 +1595,8 @@
               "percent": 8.771929824561402,
               "percentStr": "8.77"
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/3%20-7.png"
         },
         {
           "title": "REGION_NAME_EASTHAM_WOODS",
@@ -1713,7 +1724,8 @@
               "percentStr": "33.33",
               "available_specific_time": true
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/4%20-7.png"
         },
         {
           "title": "REGION_NAME_EASTHAM_WOODS",
@@ -1814,7 +1826,8 @@
               "percent": 5.88235294117647,
               "percentStr": "5.88"
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/5%20-7.png"
         },
         {
           "title": "REGION_NAME_MIRE_SEA",
@@ -1880,7 +1893,8 @@
               "percent": 5.555555555555555,
               "percentStr": "5.56"
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/6%20-7.png"
         },
         {
           "title": "REGION_NAME_MIRE_SEA",
@@ -1962,7 +1976,8 @@
               "percent": 5.555555555555555,
               "percentStr": "5.56"
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/7%20-7.png"
         },
         {
           "title": "REGION_NAME_MIRE_SEA",
@@ -2028,7 +2043,8 @@
               "percent": 5.555555555555555,
               "percentStr": "5.56"
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/8%20-7.png"
         }
       ],
       [
@@ -2138,7 +2154,8 @@
               "percent": 20,
               "percentStr": "20.00"
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/-7%20-6.png"
         },
         {
           "title": "REGION_NAME_CAST_IRON_SHORE",
@@ -2242,7 +2259,8 @@
               "percent": 50,
               "percentStr": "50.00"
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/-6%20-6.png"
         },
         {
           "title": "REGION_NAME_MT_WIRRAL",
@@ -2354,7 +2372,8 @@
               "percent": 5.2631578947368425,
               "percentStr": "5.26"
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/-5%20-6.png"
         },
         {
           "title": "REGION_NAME_MT_WIRRAL",
@@ -2482,7 +2501,8 @@
               "percent": 5.2631578947368425,
               "percentStr": "5.26"
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/-4%20-6.png"
         },
         {
           "title": "REGION_NAME_MT_WIRRAL",
@@ -2683,7 +2703,8 @@
               "percent": 5.113636363636365,
               "percentStr": "5.11"
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/-3%20-6.png"
         },
         {
           "title": "REGION_NAME_MT_WIRRAL",
@@ -2811,7 +2832,8 @@
               "percent": 5.2631578947368425,
               "percentStr": "5.26"
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/-2%20-6.png"
         },
         {
           "title": "REGION_NAME_LAKESIDE",
@@ -2954,7 +2976,8 @@
               "percentStr": "11.11",
               "available_specific_time": true
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/-1%20-6.png"
         },
         {
           "title": "REGION_NAME_EASTHAM_WOODS",
@@ -3082,7 +3105,8 @@
               "percentStr": "33.33",
               "available_specific_time": true
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/0%20-6.png"
         },
         {
           "title": "REGION_NAME_EASTHAM_WOODS",
@@ -3210,7 +3234,8 @@
               "percentStr": "33.33",
               "available_specific_time": true
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/1%20-6.png"
         },
         {
           "title": "REGION_NAME_EASTHAM_WOODS",
@@ -3338,7 +3363,8 @@
               "percentStr": "33.33",
               "available_specific_time": true
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/2%20-6.png"
         },
         {
           "title": "REGION_NAME_EASTHAM_WOODS",
@@ -3482,7 +3508,8 @@
               "percentStr": "33.33",
               "available_specific_time": true
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/3%20-6.png"
         },
         {
           "title": "REGION_NAME_EASTHAM_WOODS",
@@ -3610,7 +3637,8 @@
               "percentStr": "33.33",
               "available_specific_time": true
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/4%20-6.png"
         },
         {
           "title": "REGION_NAME_EASTHAM_WOODS",
@@ -3711,7 +3739,8 @@
               "percent": 5.88235294117647,
               "percentStr": "5.88"
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/5%20-6.png"
         },
         {
           "title": "REGION_NAME_AUTUMN_HILL",
@@ -3837,7 +3866,8 @@
               "percent": 5.175983436853001,
               "percentStr": "5.18"
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/6%20-6.png"
         },
         {
           "title": "REGION_NAME_AUTUMN_HILL",
@@ -3979,7 +4009,8 @@
               "percent": 5.175983436853001,
               "percentStr": "5.18"
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/7%20-6.png"
         },
         {
           "title": "REGION_NAME_AUTUMN_HILL",
@@ -4105,7 +4136,8 @@
               "percent": 5.175983436853001,
               "percentStr": "5.18"
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/8%20-6.png"
         }
       ],
       [
@@ -4231,7 +4263,8 @@
               "percent": 20,
               "percentStr": "20.00"
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/-7%20-5.png"
         },
         {
           "title": "REGION_NAME_CAST_IRON_SHORE",
@@ -4256,7 +4289,8 @@
               "percent": 100,
               "percentStr": "100.00"
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/-6%20-5.png"
         },
         {
           "title": "REGION_NAME_MEADOW",
@@ -4441,7 +4475,8 @@
               "percent": 50,
               "percentStr": "50.00"
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/-5%20-5.png"
         },
         {
           "title": "REGION_NAME_MEADOW",
@@ -4586,7 +4621,8 @@
               "percent": 5.084745762711865,
               "percentStr": "5.08"
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/-4%20-5.png"
         },
         {
           "title": "REGION_NAME_MEADOW",
@@ -4594,7 +4630,8 @@
           "title_localised": "Cherry Meadow",
           "features_localised": [],
           "monster_in_habitat": [],
-          "species_in_this_zone": []
+          "species_in_this_zone": [],
+          "meta_image_url": "/assets/img/meta/en/map/-3%20-5.png"
         },
         {
           "title": "REGION_NAME_LAKESIDE",
@@ -4696,7 +4733,8 @@
               "percentStr": "15.63",
               "available_specific_time": true
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/-2%20-5.png"
         },
         {
           "title": "REGION_NAME_LAKESIDE",
@@ -4844,7 +4882,8 @@
               "percent": 28.57142857142857,
               "percentStr": "28.57"
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/-1%20-5.png"
         },
         {
           "title": "REGION_NAME_LAKESIDE",
@@ -4946,7 +4985,8 @@
               "percentStr": "15.63",
               "available_specific_time": true
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/0%20-5.png"
         },
         {
           "title": "REGION_NAME_LAKESIDE",
@@ -5048,7 +5088,8 @@
               "percentStr": "15.63",
               "available_specific_time": true
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/1%20-5.png"
         },
         {
           "title": "REGION_NAME_NEW_WIRRAL_PARK",
@@ -5163,7 +5204,8 @@
               "percentStr": "8.33",
               "available_specific_time": true
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/2%20-5.png"
         },
         {
           "title": "REGION_NAME_NEW_WIRRAL_PARK",
@@ -5305,7 +5347,8 @@
               "percent": 25,
               "percentStr": "25.00"
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/3%20-5.png"
         },
         {
           "title": "REGION_NAME_NEW_WIRRAL_PARK",
@@ -5420,7 +5463,8 @@
               "percentStr": "8.33",
               "available_specific_time": true
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/4%20-5.png"
         },
         {
           "title": "REGION_NAME_EASTHAM_WOODS",
@@ -5542,7 +5586,8 @@
               "percent": 5.88235294117647,
               "percentStr": "5.88"
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/5%20-5.png"
         },
         {
           "title": "REGION_NAME_AUTUMN_HILL",
@@ -5668,7 +5713,8 @@
               "percent": 5.175983436853001,
               "percentStr": "5.18"
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/6%20-5.png"
         },
         {
           "title": "REGION_NAME_AUTUMN_HILL",
@@ -5830,7 +5876,8 @@
               "percent": 5.175983436853001,
               "percentStr": "5.18"
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/7%20-5.png"
         },
         {
           "title": "REGION_NAME_AUTUMN_HILL",
@@ -5925,7 +5972,8 @@
               "percent": 5.089820359281438,
               "percentStr": "5.09"
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/8%20-5.png"
         }
       ],
       [
@@ -6035,7 +6083,8 @@
               "percent": 20,
               "percentStr": "20.00"
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/-7%20-4.png"
         },
         {
           "title": "REGION_NAME_CAST_IRON_SHORE",
@@ -6060,7 +6109,8 @@
               "percent": 100,
               "percentStr": "100.00"
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/-6%20-4.png"
         },
         {
           "title": "REGION_NAME_MEADOW",
@@ -6205,7 +6255,8 @@
               "percent": 5.084745762711865,
               "percentStr": "5.08"
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/-5%20-4.png"
         },
         {
           "title": "REGION_NAME_MEADOW",
@@ -6391,7 +6442,8 @@
               "percent": 5.084745762711865,
               "percentStr": "5.08"
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/-4%20-4.png"
         },
         {
           "title": "REGION_NAME_MEADOW",
@@ -6552,7 +6604,8 @@
               "percent": 5.084745762711865,
               "percentStr": "5.08"
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/-3%20-4.png"
         },
         {
           "title": "REGION_NAME_LAKE",
@@ -6710,7 +6763,8 @@
               "percent": 15.822784810126581,
               "percentStr": "15.82"
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/-2%20-4.png"
         },
         {
           "title": "REGION_NAME_LAKE",
@@ -6852,7 +6906,8 @@
               "percent": 15.822784810126581,
               "percentStr": "15.82"
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/-1%20-4.png"
         },
         {
           "title": "REGION_NAME_LAKE",
@@ -6994,7 +7049,8 @@
               "percent": 15.822784810126581,
               "percentStr": "15.82"
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/0%20-4.png"
         },
         {
           "title": "REGION_NAME_LAKE",
@@ -7157,7 +7213,8 @@
               "percent": 15.822784810126581,
               "percentStr": "15.82"
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/1%20-4.png"
         },
         {
           "title": "REGION_NAME_NEW_WIRRAL_PARK",
@@ -7293,7 +7350,8 @@
               "percentStr": "8.33",
               "available_specific_time": true
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/2%20-4.png"
         },
         {
           "title": "REGION_NAME_NEW_WIRRAL_PARK",
@@ -7417,7 +7475,8 @@
               "percent": 5.681818181818182,
               "percentStr": "5.68"
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/3%20-4.png"
         },
         {
           "title": "REGION_NAME_NEW_WIRRAL_PARK",
@@ -7532,7 +7591,8 @@
               "percentStr": "8.33",
               "available_specific_time": true
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/4%20-4.png"
         },
         {
           "title": "REGION_NAME_NEW_WIRRAL_PARK",
@@ -7668,7 +7728,8 @@
               "percentStr": "8.33",
               "available_specific_time": true
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/5%20-4.png"
         },
         {
           "title": "REGION_NAME_AUTUMN_HILL",
@@ -7794,7 +7855,8 @@
               "percent": 5.357142857142858,
               "percentStr": "5.36"
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/6%20-4.png"
         },
         {
           "title": "REGION_NAME_AUTUMN_HILL",
@@ -7941,7 +8003,8 @@
               "percent": 5.175983436853001,
               "percentStr": "5.18"
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/7%20-4.png"
         },
         {
           "title": "REGION_NAME_AUTUMN_HILL",
@@ -8109,7 +8172,8 @@
               "percent": 5.2215189873417724,
               "percentStr": "5.22"
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/8%20-4.png"
         }
       ],
       [
@@ -8219,7 +8283,8 @@
               "percent": 20,
               "percentStr": "20.00"
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/-7%20-3.png"
         },
         {
           "title": "REGION_NAME_MARSH",
@@ -8351,7 +8416,8 @@
               "percent": 46.15384615384615,
               "percentStr": "46.15"
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/-6%20-3.png"
         },
         {
           "title": "REGION_NAME_MEADOW",
@@ -8496,7 +8562,8 @@
               "percent": 5.084745762711865,
               "percentStr": "5.08"
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/-5%20-3.png"
         },
         {
           "title": "REGION_NAME_MEADOW",
@@ -8641,7 +8708,8 @@
               "percent": 5.084745762711865,
               "percentStr": "5.08"
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/-4%20-3.png"
         },
         {
           "title": "REGION_NAME_MEADOW",
@@ -8810,7 +8878,8 @@
               "percent": 50,
               "percentStr": "50.00"
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/-3%20-3.png"
         },
         {
           "title": "REGION_NAME_LAKE",
@@ -8952,7 +9021,8 @@
               "percent": 15.822784810126581,
               "percentStr": "15.82"
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/-2%20-3.png"
         },
         {
           "title": "REGION_NAME_LAKE",
@@ -9094,7 +9164,8 @@
               "percent": 15.822784810126581,
               "percentStr": "15.82"
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/-1%20-3.png"
         },
         {
           "title": "REGION_NAME_LAKE",
@@ -9236,7 +9307,8 @@
               "percent": 15.822784810126581,
               "percentStr": "15.82"
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/0%20-3.png"
         },
         {
           "title": "REGION_NAME_LAKE",
@@ -9378,7 +9450,8 @@
               "percent": 15.822784810126581,
               "percentStr": "15.82"
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/1%20-3.png"
         },
         {
           "title": "REGION_NAME_NEW_WIRRAL_PARK",
@@ -9509,7 +9582,8 @@
               "percentStr": "8.33",
               "available_specific_time": true
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/2%20-3.png"
         },
         {
           "title": "REGION_NAME_NEW_WIRRAL_PARK",
@@ -9645,7 +9719,8 @@
               "percentStr": "8.33",
               "available_specific_time": true
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/3%20-3.png"
         },
         {
           "title": "REGION_NAME_NEW_WIRRAL_PARK",
@@ -9760,7 +9835,8 @@
               "percentStr": "8.33",
               "available_specific_time": true
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/4%20-3.png"
         },
         {
           "title": "REGION_NAME_NEW_WIRRAL_PARK",
@@ -9875,7 +9951,8 @@
               "percentStr": "8.33",
               "available_specific_time": true
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/5%20-3.png"
         },
         {
           "title": "REGION_NAME_AUTUMN_HILL",
@@ -9957,7 +10034,8 @@
               "percent": 5.88235294117647,
               "percentStr": "5.88"
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/6%20-3.png"
         },
         {
           "title": "REGION_NAME_AUTUMN_HILL",
@@ -10083,7 +10161,8 @@
               "percent": 5.357142857142858,
               "percentStr": "5.36"
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/7%20-3.png"
         },
         {
           "title": "REGION_NAME_AUTUMN_HILL",
@@ -10178,7 +10257,8 @@
               "percent": 5.089820359281438,
               "percentStr": "5.09"
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/8%20-3.png"
         }
       ],
       [
@@ -10309,7 +10389,8 @@
               "percent": 20,
               "percentStr": "20.00"
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/-7%20-2.png"
         },
         {
           "title": "REGION_NAME_MARSH",
@@ -10425,7 +10506,8 @@
               "percent": 46.15384615384615,
               "percentStr": "46.15"
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/-6%20-2.png"
         },
         {
           "title": "REGION_NAME_MARSH",
@@ -10582,7 +10664,8 @@
               "percent": 50,
               "percentStr": "50.00"
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/-5%20-2.png"
         },
         {
           "title": "REGION_NAME_MARSH",
@@ -10719,7 +10802,8 @@
               "percent": 46.15384615384615,
               "percentStr": "46.15"
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/-4%20-2.png"
         },
         {
           "title": "REGION_NAME_MARSH",
@@ -10835,7 +10919,8 @@
               "percent": 46.15384615384615,
               "percentStr": "46.15"
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/-3%20-2.png"
         },
         {
           "title": "REGION_NAME_LAKE",
@@ -10843,7 +10928,8 @@
           "title_localised": "Thirstaton Lake",
           "features_localised": [],
           "monster_in_habitat": [],
-          "species_in_this_zone": []
+          "species_in_this_zone": [],
+          "meta_image_url": "/assets/img/meta/en/map/-2%20-2.png"
         },
         {
           "title": "REGION_NAME_LAKE",
@@ -11046,7 +11132,8 @@
               "percent": 10,
               "percentStr": "10.00"
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/-1%20-2.png"
         },
         {
           "title": "REGION_NAME_UPPER_PATH",
@@ -11054,7 +11141,8 @@
           "title_localised": "Upper Path",
           "features_localised": [],
           "monster_in_habitat": [],
-          "species_in_this_zone": []
+          "species_in_this_zone": [],
+          "meta_image_url": "/assets/img/meta/en/map/0%20-2.png"
         },
         {
           "title": "REGION_NAME_UPPER_PATH",
@@ -11083,7 +11171,8 @@
             }
           ],
           "monster_in_habitat": [],
-          "species_in_this_zone": []
+          "species_in_this_zone": [],
+          "meta_image_url": "/assets/img/meta/en/map/1%20-2.png"
         },
         {
           "title": "REGION_NAME_TOWN_OUTSKIRTS",
@@ -11166,7 +11255,8 @@
               "percent": 9.090909090909092,
               "percentStr": "9.09"
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/2%20-2.png"
         },
         {
           "title": "REGION_NAME_TOWN_OUTSKIRTS",
@@ -11249,7 +11339,8 @@
               "percent": 9.090909090909092,
               "percentStr": "9.09"
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/3%20-2.png"
         },
         {
           "title": "REGION_NAME_DEADLANDS",
@@ -11349,7 +11440,8 @@
               "percent": 21.052631578947366,
               "percentStr": "21.05"
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/4%20-2.png"
         },
         {
           "title": "REGION_NAME_DEADLANDS",
@@ -11478,7 +11570,8 @@
               "percent": 23.094688221709006,
               "percentStr": "23.09"
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/5%20-2.png"
         },
         {
           "title": "REGION_NAME_OLD_VILLAGE",
@@ -11622,7 +11715,8 @@
               "percent": 23.094688221709006,
               "percentStr": "23.09"
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/6%20-2.png"
         },
         {
           "title": "REGION_NAME_DEADLANDS",
@@ -11751,7 +11845,8 @@
               "percent": 23.094688221709006,
               "percentStr": "23.09"
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/7%20-2.png"
         },
         {
           "title": "REGION_NAME_DINO_QUARRY",
@@ -11804,7 +11899,8 @@
               "percent": 100,
               "percentStr": "100.00"
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/8%20-2.png"
         }
       ],
       [
@@ -11930,7 +12026,8 @@
               "percent": 20,
               "percentStr": "20.00"
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/-7%20-1.png"
         },
         {
           "title": "REGION_NAME_MARSH",
@@ -11985,7 +12082,8 @@
               "percent": 14.285714285714288,
               "percentStr": "14.29"
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/-6%20-1.png"
         },
         {
           "title": "REGION_NAME_MARSH",
@@ -12132,7 +12230,8 @@
               "percent": 13.333333333333334,
               "percentStr": "13.33"
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/-5%20-1.png"
         },
         {
           "title": "REGION_NAME_MARSH",
@@ -12264,7 +12363,8 @@
               "percent": 46.15384615384615,
               "percentStr": "46.15"
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/-4%20-1.png"
         },
         {
           "title": "REGION_NAME_FARM",
@@ -12348,7 +12448,8 @@
               "percent": 44.44444444444444,
               "percentStr": "44.44"
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/-3%20-1.png"
         },
         {
           "title": "REGION_NAME_TOWN_WEST",
@@ -12372,7 +12473,8 @@
             }
           ],
           "monster_in_habitat": [],
-          "species_in_this_zone": []
+          "species_in_this_zone": [],
+          "meta_image_url": "/assets/img/meta/en/map/-2%20-1.png"
         },
         {
           "title": "REGION_NAME_TOWN_WEST",
@@ -12411,7 +12513,8 @@
             }
           ],
           "monster_in_habitat": [],
-          "species_in_this_zone": []
+          "species_in_this_zone": [],
+          "meta_image_url": "/assets/img/meta/en/map/-1%20-1.png"
         },
         {
           "title": "REGION_NAME_TOWN",
@@ -12435,7 +12538,8 @@
             }
           ],
           "monster_in_habitat": [],
-          "species_in_this_zone": []
+          "species_in_this_zone": [],
+          "meta_image_url": "/assets/img/meta/en/map/0%20-1.png"
         },
         {
           "title": "REGION_NAME_TOWN",
@@ -12443,7 +12547,8 @@
           "title_localised": "Harbourtown",
           "features_localised": [],
           "monster_in_habitat": [],
-          "species_in_this_zone": []
+          "species_in_this_zone": [],
+          "meta_image_url": "/assets/img/meta/en/map/1%20-1.png"
         },
         {
           "title": "REGION_NAME_TOWN_OUTSKIRTS",
@@ -12540,7 +12645,8 @@
               "percent": 5.88235294117647,
               "percentStr": "5.88"
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/2%20-1.png"
         },
         {
           "title": "REGION_NAME_TOWN_OUTSKIRTS",
@@ -12642,7 +12748,8 @@
               "percent": 5.88235294117647,
               "percentStr": "5.88"
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/3%20-1.png"
         },
         {
           "title": "REGION_NAME_TOWN_OUTSKIRTS",
@@ -12741,7 +12848,8 @@
               "percent": 9.090909090909092,
               "percentStr": "9.09"
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/4%20-1.png"
         },
         {
           "title": "REGION_NAME_DEADLANDS",
@@ -12825,7 +12933,8 @@
               "percent": 21.052631578947366,
               "percentStr": "21.05"
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/5%20-1.png"
         },
         {
           "title": "REGION_NAME_DEADLANDS",
@@ -12954,7 +13063,8 @@
               "percent": 22.22222222222222,
               "percentStr": "22.22"
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/6%20-1.png"
         },
         {
           "title": "REGION_NAME_DEADLANDS",
@@ -13059,7 +13169,8 @@
               "percent": 21.052631578947366,
               "percentStr": "21.05"
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/7%20-1.png"
         },
         {
           "title": "REGION_NAME_DEADLANDS",
@@ -13188,7 +13299,8 @@
               "percent": 22.22222222222222,
               "percentStr": "22.22"
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/8%20-1.png"
         }
       ],
       [
@@ -13314,7 +13426,8 @@
               "percent": 20,
               "percentStr": "20.00"
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/-7%200.png"
         },
         {
           "title": "REGION_NAME_MIRE_SEA",
@@ -13422,7 +13535,8 @@
               "percent": 20,
               "percentStr": "20.00"
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/-6%200.png"
         },
         {
           "title": "REGION_NAME_GRAVEYARD",
@@ -13614,7 +13728,8 @@
               "percentStr": "33.33",
               "available_specific_time": true
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/-5%200.png"
         },
         {
           "title": "REGION_NAME_GRAVEYARD",
@@ -13750,7 +13865,8 @@
               "percentStr": "13.51",
               "available_specific_time": true
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/-4%200.png"
         },
         {
           "title": "REGION_NAME_GRAVEYARD",
@@ -13859,7 +13975,8 @@
               "percentStr": "23.53",
               "available_specific_time": true
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/-3%200.png"
         },
         {
           "title": "REGION_NAME_TOWN_WEST",
@@ -13928,7 +14045,8 @@
               "percent": 33.33333333333333,
               "percentStr": "33.33"
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/-2%200.png"
         },
         {
           "title": "REGION_NAME_TOWN_WEST",
@@ -13952,7 +14070,8 @@
             }
           ],
           "monster_in_habitat": [],
-          "species_in_this_zone": []
+          "species_in_this_zone": [],
+          "meta_image_url": "/assets/img/meta/en/map/-1%200.png"
         },
         {
           "title": "REGION_NAME_TOWN",
@@ -13991,7 +14110,8 @@
             }
           ],
           "monster_in_habitat": [],
-          "species_in_this_zone": []
+          "species_in_this_zone": [],
+          "meta_image_url": "/assets/img/meta/en/map/0%200.png"
         },
         {
           "title": "REGION_NAME_TOWN",
@@ -14020,7 +14140,8 @@
             }
           ],
           "monster_in_habitat": [],
-          "species_in_this_zone": []
+          "species_in_this_zone": [],
+          "meta_image_url": "/assets/img/meta/en/map/1%200.png"
         },
         {
           "title": "REGION_NAME_TOWN_BEACH",
@@ -14109,7 +14230,8 @@
               "percent": 33.33333333333333,
               "percentStr": "33.33"
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/2%200.png"
         },
         {
           "title": "REGION_NAME_TOWN_BEACH",
@@ -14162,7 +14284,8 @@
               "percent": 33.33333333333333,
               "percentStr": "33.33"
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/3%200.png"
         },
         {
           "title": "REGION_NAME_TOWN_BEACH",
@@ -14231,7 +14354,8 @@
               "percent": 33.33333333333333,
               "percentStr": "33.33"
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/4%200.png"
         },
         {
           "title": "REGION_NAME_SOUTHERN_ISLES",
@@ -14319,7 +14443,8 @@
               "percentStr": "29.41",
               "available_specific_time": true
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/5%200.png"
         },
         {
           "title": "REGION_NAME_SOUTHERN_ISLES",
@@ -14407,7 +14532,8 @@
               "percentStr": "29.41",
               "available_specific_time": true
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/6%200.png"
         },
         {
           "title": "REGION_NAME_SOUTHERN_ISLES",
@@ -14495,7 +14621,8 @@
               "percentStr": "29.41",
               "available_specific_time": true
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/7%200.png"
         },
         {
           "title": "REGION_NAME_SOUTHERN_ISLES",
@@ -14599,7 +14726,8 @@
               "percentStr": "29.41",
               "available_specific_time": true
             }
-          ]
+          ],
+          "meta_image_url": "/assets/img/meta/en/map/8%200.png"
         }
       ]
     ],
@@ -14681,7 +14809,8 @@
             }
           ],
           "monster_in_habitat": [],
-          "species_in_this_zone": []
+          "species_in_this_zone": [],
+          "meta_image_url": "/assets/img/meta/en/map/pier/-1%20-1.png"
         },
         {
           "title": "REGION_NAME_PIER",
@@ -14705,7 +14834,8 @@
             }
           ],
           "monster_in_habitat": [],
-          "species_in_this_zone": []
+          "species_in_this_zone": [],
+          "meta_image_url": "/assets/img/meta/en/map/pier/0%20-1.png"
         },
         null,
         null,
@@ -14753,7 +14883,8 @@
             }
           ],
           "monster_in_habitat": [],
-          "species_in_this_zone": []
+          "species_in_this_zone": [],
+          "meta_image_url": "/assets/img/meta/en/map/pier/-1%200.png"
         },
         {
           "title": "REGION_NAME_PIER",
@@ -14782,7 +14913,8 @@
             }
           ],
           "monster_in_habitat": [],
-          "species_in_this_zone": []
+          "species_in_this_zone": [],
+          "meta_image_url": "/assets/img/meta/en/map/pier/0%200.png"
         },
         {
           "title": "REGION_NAME_PIER",
@@ -14806,7 +14938,8 @@
             }
           ],
           "monster_in_habitat": [],
-          "species_in_this_zone": []
+          "species_in_this_zone": [],
+          "meta_image_url": "/assets/img/meta/en/map/pier/1%200.png"
         },
         null,
         null,
@@ -14850,7 +14983,8 @@
             }
           ],
           "monster_in_habitat": [],
-          "species_in_this_zone": []
+          "species_in_this_zone": [],
+          "meta_image_url": "/assets/img/meta/en/map/pier/0%202.png"
         },
         null,
         null,

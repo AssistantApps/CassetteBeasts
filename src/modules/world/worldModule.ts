@@ -1,19 +1,26 @@
 import fs from 'fs';
+import path from 'path';
 
+import { handlebarTemplate } from 'constants/handlebar';
 import { IntermediateFile } from 'constants/intermediateFile';
+import { UIKeys } from 'constants/localisation';
 import { ModuleType } from 'constants/module';
 import { paths } from 'constants/paths';
+import { routes } from 'constants/route';
+import { site } from 'constants/site';
 import type { ILocalisation } from 'contracts/localisation';
 import { getExternalResourcesImagePath } from 'contracts/mapper/externalResourceMapper';
 import { monsterToSimplified } from 'contracts/mapper/monsterMapper';
 import type { IMonsterFormEnhanced, IMonsterFormSimplified } from 'contracts/monsterForm';
 import type { IMonsterSpawn } from 'contracts/monsterSpawn';
 import type { IWorld, IWorldEnhanced, IWorldMetaDataEnhanced } from 'contracts/world';
+import { scaffoldFolderAndDelFileIfOverwrite } from 'helpers/fileHelper';
 import { FolderPathHelper } from 'helpers/folderPathHelper';
 import {
   copyImageFromRes,
   copyImageToGeneratedFolder,
   cutImageFromSpriteSheet,
+  generateMetaImage,
   getImageMeta,
 } from 'helpers/imageHelper';
 import { pad } from 'helpers/stringHelper';
@@ -21,7 +28,9 @@ import { readItemDetail } from 'modules/baseModule';
 import { CommonModule } from 'modules/commonModule';
 import { LocalisationModule } from 'modules/localisation/localisationModule';
 import { MonsterSpawnModule } from 'modules/monsterSpawn/monsterSpawnModule';
+import { getHandlebar } from 'services/internal/handlebarService';
 import { worldMapFromDetailList, worldMetaDataMapFromDetailList } from './worldMapFromDetailList';
+import { getChunkMetaImage, getWorldListMetaImage } from './worldMeta';
 
 export class WorldModule extends CommonModule<IWorld, IWorldEnhanced> {
   private _folders = [
@@ -106,6 +115,8 @@ export class WorldModule extends CommonModule<IWorld, IWorldEnhanced> {
 
     for (const detail of this._baseDetails) {
       const mapKey = detail.id.toLowerCase();
+      let worldFolder = '';
+      if (mapKey == 'pier_map_metadata') worldFolder = 'pier/';
 
       const allXValues: Array<number> = [];
       const allYValues: Array<number> = [];
@@ -149,9 +160,10 @@ export class WorldModule extends CommonModule<IWorld, IWorldEnhanced> {
           }
         }
 
+        const chunkId = chunkKey.replace('_', ' ');
         chunk_meta_data_localised[y][x] = {
           ...chunk,
-          id: chunkKey.replace('_', ' '),
+          id: chunkId,
           features: undefined,
           title_localised: localeModule.translate(langCode, chunk.title),
           features_localised: (chunk.features ?? [])
@@ -163,6 +175,7 @@ export class WorldModule extends CommonModule<IWorld, IWorldEnhanced> {
             })),
           monster_in_habitat: monster_in_habitat,
           species_in_this_zone: speciesInThisZone ?? [],
+          meta_image_url: `/assets/img/meta/${langCode}${routes.map}/${worldFolder}${encodeURI(chunkId)}.png`,
         };
       }
 
@@ -244,12 +257,79 @@ export class WorldModule extends CommonModule<IWorld, IWorldEnhanced> {
   generateMetaImages = async (
     langCode: string,
     localeModule: LocalisationModule,
+    modules: Array<CommonModule<unknown, unknown>>,
     overwrite: boolean,
   ) => {
-    // for (const mapKey of Object.keys(this._itemDetailMap)) {
-    //   const detailEnhanced: ICharacterEnhanced = this._itemDetailMap[mapKey];
-    //   await this._generateCharacterMetaImage(langCode, overwrite, detailEnhanced);
-    //   await this._generatePartnerMetaImage(langCode, overwrite, detailEnhanced);
-    // }
+    await this._getMapListMetaImage(langCode, overwrite, localeModule);
+
+    for (const worldKey of Object.keys(this._itemDetailMap)) {
+      let worldFolder = '';
+      if (worldKey == 'pier_map_metadata') worldFolder = 'pier';
+
+      const chunksGrid = this._itemDetailMap[worldKey].chunk_meta_data_localised;
+      const flatChunks = chunksGrid.flat();
+      for (let rowIndex = 0; rowIndex < chunksGrid.length; rowIndex++) {
+        const chunkRow = chunksGrid[rowIndex];
+        for (let colIndex = 0; colIndex < chunkRow.length; colIndex++) {
+          const chunk = chunkRow[colIndex];
+          if (chunk?.id == null) continue;
+          const coords = chunk.id.split(' ');
+
+          const outputFullPath = path.join(
+            paths().destinationFolder,
+            decodeURI(chunk.meta_image_url),
+          );
+          const exists = scaffoldFolderAndDelFileIfOverwrite(outputFullPath, overwrite);
+          if (exists) continue;
+
+          const surroundingChunks: Array<Array<string | undefined>> = [];
+          for (let yIndex = 0; yIndex < 3; yIndex++) {
+            const surroundingChunkRow: Array<string | undefined> = [];
+            for (let xIndex = 0; xIndex < 3; xIndex++) {
+              const yOffset = yIndex - 1;
+              const xOffset = xIndex - 1;
+              const targetId = `${parseInt(coords[0]) + xOffset} ${parseInt(coords[1]) + yOffset}`;
+              const item = flatChunks.find((c) => c?.id == targetId);
+              surroundingChunkRow.push(item?.id);
+            }
+            surroundingChunks.push(surroundingChunkRow);
+          }
+
+          const extraData = await getChunkMetaImage(
+            langCode,
+            worldKey,
+            worldFolder,
+            chunk.title_localised,
+            surroundingChunks,
+          );
+          const template = getHandlebar().getCompiledTemplate<unknown>(
+            handlebarTemplate.mapChunkMetaImage,
+            { ...site, ...chunk, title: chunk.title_localised, ...extraData } as any,
+          );
+
+          generateMetaImage({ overwrite, template, langCode, outputFullPath });
+        }
+      }
+    }
+  };
+
+  private _getMapListMetaImage = async (
+    langCode: string,
+    overwrite: boolean,
+    localeModule: LocalisationModule,
+  ) => {
+    const outputFile = `/assets/img/meta/${langCode}${routes.map}-meta.png`;
+    const outputFullPath = path.join(paths().destinationFolder, outputFile);
+    const exists = scaffoldFolderAndDelFileIfOverwrite(outputFullPath, overwrite);
+    if (exists) return;
+
+    const extraData = await getWorldListMetaImage();
+    const title = localeModule.translate(langCode, UIKeys.map);
+    const template = getHandlebar().getCompiledTemplate<unknown>(
+      handlebarTemplate.mapListMetaImage,
+      { ...extraData, title },
+    );
+
+    generateMetaImage({ overwrite, template, langCode, outputFullPath });
   };
 }

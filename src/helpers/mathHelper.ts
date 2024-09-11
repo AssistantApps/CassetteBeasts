@@ -67,3 +67,22 @@ export const statsCoord = (value: number, section: string) => {
 
   return '100,100';
 };
+
+export const randomNumber = (min: number, max: number) => {
+  const value = Math.random() * (max - min);
+  return value + min;
+};
+
+export const randomNumbers = (numberOfRandoms: number, min: number, max: number) => {
+  const result: Array<number> = [];
+
+  for (let index = 0; index < numberOfRandoms * 3; index++) {
+    const value = Math.random() * (max - min);
+    if (result.includes(value)) continue;
+
+    result.push(Math.round(value + min));
+    if (result.length >= numberOfRandoms) break;
+  }
+
+  return result;
+};

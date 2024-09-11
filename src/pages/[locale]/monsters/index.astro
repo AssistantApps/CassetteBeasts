@@ -8,7 +8,6 @@ import './_list.scss';
 
 import { astroPaths } from 'constants/astro';
 import { breadcrumb } from 'constants/breadcrumb';
-import { AppImage } from 'constants/image';
 import { IntermediateFile } from 'constants/intermediateFile';
 import { availableLanguages, UIKeys } from 'constants/localisation';
 import { routes } from 'constants/route';
@@ -45,6 +44,7 @@ const list = unorderedList.sort(monsterSort);
 const translationLookup = (languageJson as Record<string, ILocalisation>)[locale].messages;
 const { translate } = translator(translationLookup);
 
+const metaImage = `assets/img/meta/${locale}${routes.monsters}-meta.png`;
 const descriptionMessages = list
   .slice(0, 5)
   .map((g) => g.description_localised)
@@ -59,13 +59,13 @@ const schemaOverride: IGuideSchema = {
   description: description,
   accessMode: AccessMode.textual,
   dateModified: isoDate(),
-  thumbnailUrl: site.rootUrl + AppImage.meta.slice(1),
-  // thumbnailUrl: site.rootUrl + data.meta_image_url.slice(1),
+  thumbnailUrl: site.rootUrl + metaImage,
 };
 ---
 
 <Layout
   locale={locale}
+  metaImageUrl={'/' + metaImage}
   documentTitle={translate(UIKeys.viewMonsters)}
   additionalKeywords={[translate(UIKeys.viewMonsters)]}
   schemaOverride={toSchemaOrgProperty('Guide', schemaOverride)}

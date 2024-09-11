@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 1200 627" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <clipPath id="cut-off-corners">
+            <path
+                d="M20,20 h500 a20,20 0 0 1 20,20 v500 a20,20 0 0 1 -20,20 h-500 a20,20 0 0 1 -20,-20 v-500 a20,20 0 0 1 20,-20 z" />
+        </clipPath>
+    </defs>
+
+    <image x="0" y="0" width="1200" height="627" href="{{backgroundBase64}}" />
+
+    <g clip-path="url(#cut-off-corners)" transform="translate(55, 30)">
+        {{#each chunkGrid}}
+        {{#each this}}
+        <image x="{{spacing 0 @index 180}}" y="{{spacing 20 @../index 180}}" width="180" height="180" href="{{this}}" />
+        {{/each}}
+        {{/each}}
+    </g>
+
+    <path stroke="red" stroke-width="6" fill="none"
+        d="M238,228 h175 a5,5 0 0 1 5,5 v175 a5,5 0 0 1 -5,5 h-175 a5,5 0 0 1 -5,-5 v-175 a5,5 0 0 1 5,-5 z" />
+
+    <g transform="translate({{nameOffset}}, 0)">
+        <polygon points="0,0 2400,0 2400,120 80,120" fill="{{theme.brandTertiary}}" stroke="{{theme.brandTertiary}}" />
+    </g>
+    <text x="1150" y="90" width="600" font-size="90" fill="white" text-anchor="end">{{title}}</text>
+</svg>

@@ -96,6 +96,7 @@ export class FusionModule extends CommonModule<IFusion, IFusionEnhanced> {
   generateMetaImages = async (
     langCode: string,
     localeModule: LocalisationModule,
+    modules: Array<CommonModule<unknown, unknown>>,
     overwrite: boolean,
   ) => {};
 
