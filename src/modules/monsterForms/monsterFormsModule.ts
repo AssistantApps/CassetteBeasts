@@ -38,7 +38,7 @@ import { MonsterSpawnModule } from 'modules/monsterSpawn/monsterSpawnModule';
 import { MovesModule } from 'modules/moves/movesModule';
 import { getHandlebar } from '../../services/internal/handlebarService';
 import { getEvolutionMonster, monsterFormMapFromDetailList } from './monsterFormMapFromDetailList';
-import { getMonsterFormMetaImage } from './monsterFormMeta';
+import { getMonsterFormListMetaImage, getMonsterFormMetaImage } from './monsterFormMeta';
 
 export class MonsterFormsModule extends CommonModule<IMonsterForm, IMonsterFormEnhanced> {
   private _folders = [
@@ -317,11 +317,14 @@ export class MonsterFormsModule extends CommonModule<IMonsterForm, IMonsterFormE
   generateMetaImages = async (
     langCode: string,
     localeModule: LocalisationModule,
+    modules: Array<CommonModule<unknown, unknown>>,
     overwrite: boolean,
   ) => {
+    const elementModule = this.getModuleOfType<IElementEnhanced>(modules, ModuleType.Elements);
+    await this._generateMonsterListMetaImage(langCode, overwrite, localeModule, elementModule);
+
     for (const mapKey of Object.keys(this._itemDetailMap)) {
       const detailEnhanced: IMonsterFormEnhanced = this._itemDetailMap[mapKey];
-
       await this._generateMonsterMetaImage(langCode, overwrite, detailEnhanced);
     }
   };
@@ -409,6 +412,42 @@ export class MonsterFormsModule extends CommonModule<IMonsterForm, IMonsterFormE
     const template = getHandlebar().getCompiledTemplate<unknown>(
       handlebarTemplate.monsterMetaImage,
       { data: detailEnhanced, ...extraData } as any,
+    );
+
+    generateMetaImage({ overwrite, template, langCode, outputFullPath });
+  };
+
+  private _generateMonsterListMetaImage = async (
+    langCode: string,
+    overwrite: boolean,
+    localeModule: LocalisationModule,
+    elementModule: CommonModule<IElementEnhanced, IElementEnhanced>,
+  ) => {
+    const outputFile = `/assets/img/meta/${langCode}${routes.monsters}-meta.png`;
+    const outputFullPath = path.join(paths().destinationFolder, outputFile);
+    const exists = scaffoldFolderAndDelFileIfOverwrite(outputFullPath, overwrite);
+    if (exists) return;
+
+    const monsters = [
+      this._itemDetailMap['traffikrab'],
+      this._itemDetailMap['velocirifle'],
+      this._itemDetailMap['busheye'],
+    ];
+
+    const elements = [
+      elementModule.get('plastic'),
+      elementModule.get('fire'),
+      elementModule.get('plant'),
+    ];
+
+    const extraData = await getMonsterFormListMetaImage(
+      monsters.map((m) => m.tape_sticker_texture?.path),
+      elements.map((e) => e.icon?.path),
+    );
+    const title = localeModule.translate(langCode, UIKeys.viewMonsters);
+    const template = getHandlebar().getCompiledTemplate<unknown>(
+      handlebarTemplate.monsterListMetaImage,
+      { ...extraData, title },
     );
 
     generateMetaImage({ overwrite, template, langCode, outputFullPath });

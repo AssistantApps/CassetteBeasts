@@ -93,7 +93,7 @@ export const site = {
     repo: 'https://github.com/AssistantApps/CassetteBeasts',
   },
   assistantApps: {
-    appGuid: 'fbf64506-284a-d570-813d-e7d71e6d455d',
+    appGuid: '343224c4-4d40-4ce1-68ad-08dcab0020d7',
     name: 'AssistantApps',
     email: 'mailto:support@assistantapps.com',
     website: 'https://assistantapps.com',

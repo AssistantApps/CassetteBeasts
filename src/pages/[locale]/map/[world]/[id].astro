@@ -54,6 +54,8 @@ const worldMap = (Astro.props as any).item as IWorldEnhanced;
 const translationLookup = (languageJson as Record<string, ILocalisation>)[locale].messages;
 const { translate } = translator(translationLookup);
 
+let worldFolder = '';
+if (world == 'pier_map_metadata') worldFolder = 'pier/';
 const flatChunks = worldMap.chunk_meta_data_localised.flat();
 const data = flatChunks.find((c) => c?.id == id)!;
 const coords = data?.id.split(' ');
@@ -95,7 +97,7 @@ const schemaOverride: IGuideSchema = {
   description: limitLengthWithEllipse(description, 200),
   accessMode: AccessMode.textual,
   dateModified: isoDate(),
-  // thumbnailUrl: site.rootUrl + meta_image_url.slice(1),
+  thumbnailUrl: site.rootUrl + data.meta_image_url.slice(1),
 };
 ---
 
@@ -104,6 +106,7 @@ const schemaOverride: IGuideSchema = {
   metaImageUrl={meta_image_url}
   documentTitle={data.title_localised}
   description={description}
+  metaImageUrl={schemaOverride.thumbnailUrl}
   schemaOverride={toSchemaOrgProperty('Guide', schemaOverride)}
   translationLookup={translationLookup}
 >
@@ -132,7 +135,7 @@ const schemaOverride: IGuideSchema = {
           <div class="sprites hidden-in-mobile">
             <div class="map-chunk">
               <LazyImage
-                src={`/assets/img/generated/data/map_metadata/${world}${data.id}.png`}
+                src={`/assets/img/generated/data/map_metadata/${worldFolder}${world}${data.id}.png`}
                 alt={`${data.title_localised}`}
                 loadingImage={AppImage.cardLoader}
               />
@@ -151,7 +154,7 @@ const schemaOverride: IGuideSchema = {
                     />
                   ) : (
                     <LazyImage
-                      src={`/assets/img/generated/data/map_metadata/${world}${chunk.id}.png`}
+                      src={`/assets/img/generated/data/map_metadata/${worldFolder}${world}${chunk.id}.png`}
                       alt={`${chunk.title_localised}`}
                       loadingImage={AppImage.noLoader}
                     />

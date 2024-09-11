@@ -44,6 +44,7 @@ const list = (Astro.props as any).list as Array<IWorldEnhanced>;
 const translationLookup = (languageJson as Record<string, ILocalisation>)[locale].messages;
 const { translate } = translator(translationLookup);
 
+const metaImage = `assets/img/meta/${locale}${routes.map}-meta.png`;
 const descriptionMessages = list
   .slice(0, 5)
   .map((g) => g.title_localised)
@@ -58,13 +59,13 @@ const schemaOverride: IGuideSchema = {
   description: description,
   accessMode: AccessMode.textual,
   dateModified: isoDate(),
-  thumbnailUrl: site.rootUrl + AppImage.meta.slice(1),
-  // thumbnailUrl: site.rootUrl + data.meta_image_url.slice(1),
+  thumbnailUrl: site.rootUrl + metaImage,
 };
 ---
 
 <Layout
   locale={locale}
+  metaImageUrl={'/' + metaImage}
   documentTitle={translate(UIKeys.map)}
   additionalKeywords={[translate(UIKeys.map)]}
   schemaOverride={toSchemaOrgProperty('Guide', schemaOverride)}

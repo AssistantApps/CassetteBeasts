@@ -6,6 +6,7 @@ import { ModuleType } from 'constants/module';
 import { paths } from 'constants/paths';
 import type { IVersion } from 'contracts/version';
 import { pad } from 'helpers/stringHelper';
+import { anyObject } from 'helpers/typescriptHacks';
 import { readItemDetail } from 'modules/baseModule';
 import { CommonModule } from 'modules/commonModule';
 import { getConfig } from 'services/internal/configService';
@@ -47,6 +48,9 @@ export class VersionModule extends CommonModule<IVersion, IVersion> {
   };
 
   updatePackageVersionNumber = () => {
+    if (this._itemDetailMap[this._fileName] == null) {
+      this._itemDetailMap[this._fileName] = anyObject;
+    }
     this._itemDetailMap[this._fileName].app_version = getConfig().packageVersion();
     this.writeIntermediate();
   };

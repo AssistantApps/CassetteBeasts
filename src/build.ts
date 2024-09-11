@@ -49,7 +49,7 @@ const main = async () => {
     }
 
     for (const module of modules) {
-      await module.generateMetaImages(langCode, localisationModule, false);
+      await module.generateMetaImages(langCode, localisationModule, modules, false);
     }
     console.log('');
   }

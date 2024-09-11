@@ -2,13 +2,13 @@ import path from 'path';
 import sharp from 'sharp';
 
 import { AppImage } from 'constants/image';
-import { chineseLocale, japaneseLocale, koreanLocale } from 'constants/localisation';
 import { paths } from 'constants/paths';
 import { site } from 'constants/site';
 import { getExternalResourcesImagePath } from 'contracts/mapper/externalResourceMapper';
 import { getBase64FromFile } from 'helpers/fileHelper';
+import { getEstimatedCharWidth } from 'helpers/stringHelper';
 
-interface IMetaImagesProps {
+interface ICharacterMetaImagesProps {
   portraitBase64: string;
   portraitWidth: number;
   nameOffset: number;
@@ -23,11 +23,8 @@ export const getCharacterMetaImage = async (
   name_localised: string,
   portraitFilePath: string,
   personalTapeFilePath: string,
-): Promise<IMetaImagesProps | undefined> => {
-  let estimatedCharWidth = 50;
-  if (langCode == chineseLocale) estimatedCharWidth = 120;
-  if (langCode == japaneseLocale) estimatedCharWidth = 120;
-  if (langCode == koreanLocale) estimatedCharWidth = 120;
+): Promise<ICharacterMetaImagesProps | undefined> => {
+  let estimatedCharWidth = getEstimatedCharWidth(langCode);
 
   const portraitPath = getExternalResourcesImagePath(portraitFilePath);
   if (portraitPath == null || portraitPath.length < 1) return;
@@ -66,5 +63,38 @@ export const getCharacterMetaImage = async (
     personalTapeWidth,
     personalTapeHeight,
     personalTapeX,
+  };
+};
+
+interface ICharacterListMetaImagesProps {
+  character0Base64?: string;
+  character1Base64?: string;
+  character2Base64?: string;
+  element0Base64?: string;
+  element1Base64?: string;
+  element2Base64?: string;
+  backgroundBase64: string;
+}
+export const getCharacterListMetaImage = async (
+  characters: Array<string | undefined>,
+): Promise<ICharacterListMetaImagesProps | undefined> => {
+  const charactersBase64: Array<string> = [];
+  for (const characterUrl of characters) {
+    const characterPath = getExternalResourcesImagePath(characterUrl);
+    if (characterPath == null || characterPath.length < 1) return;
+    const spriteFullPath = path.join(paths().generatedImagesFolder, characterPath);
+    const spriteBase64 = getBase64FromFile(spriteFullPath);
+    charactersBase64.push(spriteBase64);
+  }
+
+  const backgroundBase64 = getBase64FromFile(
+    path.join(paths().destinationFolder, AppImage.characterBg),
+  );
+
+  return {
+    character0Base64: charactersBase64[0],
+    character1Base64: charactersBase64[1],
+    character2Base64: charactersBase64[2],
+    backgroundBase64,
   };
 };

@@ -3,6 +3,7 @@ import path from 'path';
 
 import { handlebarTemplate } from 'constants/handlebar';
 import { IntermediateFile } from 'constants/intermediateFile';
+import { UIKeys } from 'constants/localisation';
 import { ModuleType } from 'constants/module';
 import { paths } from 'constants/paths';
 import { routes } from 'constants/route';
@@ -19,6 +20,7 @@ import {
   copyImageToGeneratedFolder,
   generateMetaImage,
 } from 'helpers/imageHelper';
+import { randomNumbers } from 'helpers/mathHelper';
 import { pad } from 'helpers/stringHelper';
 import { readItemDetail } from 'modules/baseModule';
 import { CommonModule } from 'modules/commonModule';
@@ -26,7 +28,7 @@ import { LocalisationModule } from 'modules/localisation/localisationModule';
 import { MovesModule } from 'modules/moves/movesModule';
 import { getHandlebar } from 'services/internal/handlebarService';
 import { statusEffectMapFromDetailList } from './statusEffectMapFromDetailList';
-import { getStatusMetaImage } from './statusEffectMeta';
+import { getStatusListMetaImage, getStatusMetaImage } from './statusEffectMeta';
 
 export class StatusEffectModule extends CommonModule<IStatusEffect, IStatusEffectEnhanced> {
   private _folder = FolderPathHelper.statusEffects();
@@ -124,8 +126,11 @@ export class StatusEffectModule extends CommonModule<IStatusEffect, IStatusEffec
   generateMetaImages = async (
     langCode: string,
     localeModule: LocalisationModule,
+    modules: Array<CommonModule<unknown, unknown>>,
     overwrite: boolean,
   ) => {
+    await this._getStatusEffectListMetaImage(langCode, overwrite, localeModule);
+
     for (const mapKey of Object.keys(this._itemDetailMap)) {
       const detailEnhanced: IStatusEffectEnhanced = this._itemDetailMap[mapKey];
 
@@ -145,5 +150,36 @@ export class StatusEffectModule extends CommonModule<IStatusEffect, IStatusEffec
 
       generateMetaImage({ overwrite, template, langCode, outputFullPath });
     }
+  };
+
+  private _getStatusEffectListMetaImage = async (
+    langCode: string,
+    overwrite: boolean,
+    localeModule: LocalisationModule,
+  ) => {
+    const outputFile = `/assets/img/meta/${langCode}${routes.statusEffect}-meta.png`;
+    const outputFullPath = path.join(paths().destinationFolder, outputFile);
+    const exists = scaffoldFolderAndDelFileIfOverwrite(outputFullPath, overwrite);
+    if (exists) return;
+
+    const allKeys = Object.keys(this._itemDetailMap);
+    const [first, second, third] = randomNumbers(3, 0, allKeys.length - 1);
+    const list = [
+      this._itemDetailMap[allKeys[first]],
+      this._itemDetailMap[allKeys[second]],
+      this._itemDetailMap[allKeys[third]],
+    ];
+
+    const extraData = await getStatusListMetaImage(
+      list.map((m) => m.name_localised),
+      list.map((m) => m.icon?.path),
+    );
+    const title = localeModule.translate(langCode, UIKeys.statusEffect);
+    const template = getHandlebar().getCompiledTemplate<unknown>(
+      handlebarTemplate.statusEffectListMetaImage,
+      { ...extraData, title },
+    );
+
+    generateMetaImage({ overwrite, template, langCode, outputFullPath });
   };
 }

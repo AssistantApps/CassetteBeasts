@@ -15,7 +15,9 @@ export const AppImage = {
   metaTapeOverlay: '/assets/img/meta/meta_tape_overlay.png',
   metaAp: '/assets/img/meta/ap.png',
   metaApx: '/assets/img/meta/ap-x.png',
+
   characterBg: '/assets/img/meta/character_bg.png',
+  overworldBg: '/assets/img/game/data/map_metadata/overworld.png',
 
   tapeBg: '/assets/img/meta/tape.png',
   tapeBootlegBg: '/assets/img/meta/tape_bootleg.png',

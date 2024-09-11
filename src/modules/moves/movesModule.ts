@@ -21,6 +21,7 @@ import type { IStatusEffect, IStatusEffectEnhanced } from 'contracts/statusEffec
 import { scaffoldFolderAndDelFileIfOverwrite } from 'helpers/fileHelper';
 import { FolderPathHelper } from 'helpers/folderPathHelper';
 import { generateMetaImage } from 'helpers/imageHelper';
+import { randomNumbers } from 'helpers/mathHelper';
 import { monsterSimplifiedSort } from 'helpers/sortHelper';
 import { pad, resAndTresTrim } from 'helpers/stringHelper';
 import { readItemDetail } from 'modules/baseModule';
@@ -30,7 +31,7 @@ import { MonsterFormsModule } from 'modules/monsterForms/monsterFormsModule';
 import path from 'path';
 import { getHandlebar } from 'services/internal/handlebarService';
 import { moveMapFromDetailList } from './moveMapFromDetailList';
-import { getMoveMetaImage } from './moveMeta';
+import { getMoveListMetaImage, getMoveMetaImage } from './moveMeta';
 
 export class MovesModule extends CommonModule<IMove, IMoveEnhanced> {
   private _folder = FolderPathHelper.moves();
@@ -204,8 +205,11 @@ export class MovesModule extends CommonModule<IMove, IMoveEnhanced> {
   generateMetaImages = async (
     langCode: string,
     localeModule: LocalisationModule,
+    modules: Array<CommonModule<unknown, unknown>>,
     overwrite: boolean,
   ) => {
+    await this._getMoveListMetaImage(langCode, overwrite, localeModule);
+
     for (const mapKey of Object.keys(this._itemDetailMap)) {
       const detailEnhanced: IMoveEnhanced = this._itemDetailMap[mapKey];
 
@@ -226,5 +230,36 @@ export class MovesModule extends CommonModule<IMove, IMoveEnhanced> {
 
       generateMetaImage({ overwrite, template, langCode, outputFullPath });
     }
+  };
+
+  private _getMoveListMetaImage = async (
+    langCode: string,
+    overwrite: boolean,
+    localeModule: LocalisationModule,
+  ) => {
+    const outputFile = `/assets/img/meta/${langCode}${routes.moves}-meta.png`;
+    const outputFullPath = path.join(paths().destinationFolder, outputFile);
+    const exists = scaffoldFolderAndDelFileIfOverwrite(outputFullPath, overwrite);
+    if (exists) return;
+
+    const allKeys = Object.keys(this._itemDetailMap);
+    const [first, second, third] = randomNumbers(3, 0, allKeys.length - 1);
+    const moves = [
+      this._itemDetailMap[allKeys[first]],
+      this._itemDetailMap[allKeys[second]],
+      this._itemDetailMap[allKeys[third]],
+    ];
+
+    const extraData = await getMoveListMetaImage(
+      moves.map((m) => m.name_localised),
+      moves.map((m) => m.elemental_types_elements[0]?.icon?.path),
+    );
+    const title = localeModule.translate(langCode, UIKeys.stickers);
+    const template = getHandlebar().getCompiledTemplate<unknown>(
+      handlebarTemplate.moveListMetaImage,
+      { ...extraData, title },
+    );
+
+    generateMetaImage({ overwrite, template, langCode, outputFullPath });
   };
 }
