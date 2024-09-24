@@ -88,7 +88,7 @@ const backupMonsters = backupMonstersUnordered.sort((a, b) => b.percent - a.perc
 const hasMonsters = overworldMonsters.length + backupMonsters.length > 0;
 
 const meta_image_url = site.images.meta.url;
-const description = data.title_localised + ' - ' + data.features_localised.join('. ');
+const description = data.title_localised + ' - ' + data.features_localised.map(f => f.title_localised).join('. ');
 const schemaOverride: IGuideSchema = {
   name: data.title_localised,
   headline: data.title_localised,
@@ -106,7 +106,7 @@ const schemaOverride: IGuideSchema = {
   metaImageUrl={meta_image_url}
   documentTitle={data.title_localised}
   description={description}
-  metaImageUrl={schemaOverride.thumbnailUrl}
+  metaImageUrl={data.meta_image_url}
   schemaOverride={toSchemaOrgProperty('Guide', schemaOverride)}
   translationLookup={translationLookup}
 >

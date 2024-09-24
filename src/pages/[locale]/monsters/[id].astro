@@ -432,7 +432,18 @@ const schemaOverride: IGuideSchema = {
                           <tr>
                             <td class="overworld" />
                             <td class="name">
-                              {backupLoc.habitat_name_localised} <code>({backupLoc.id})</code>
+                              {backupLoc.habitat_coords.length > 0 ? (
+                                <a
+                                  href={`/${locale}${routes.map}/${backupLoc.habitat_coords[0].split('_')[0]}/${backupLoc.habitat_coords[0].split('_').slice(1).join(' ')}.html`}
+                                  title={backupLoc.habitat_name_localised}
+                                >
+                                  {backupLoc.habitat_name_localised} <code>({backupLoc.id})</code>
+                                </a>
+                              ) : (
+                                <span>
+                                  {backupLoc.habitat_name_localised} <code>({backupLoc.id})</code>
+                                </span>
+                              )}
                             </td>
                             <td class="percent">{backupLoc.percentStr}%</td>
                           </tr>

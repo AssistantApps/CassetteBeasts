@@ -129,7 +129,12 @@ const schemaOverride: IGuideSchema = {
           draggable="false"
         >
           <div class="grid-list-item-image">
-            <LazyImage src={data.icon_url} classes="sprite" alt={`${data.name_localised}`} />
+            <LazyImage
+              src={data.icon_url}
+              classes="sprite"
+              loadingStrat="lazy"
+              alt={`${data.name_localised}`}
+            />
 
             {data.animations.map((anim, index) => {
               if (index != 0) return '';
@@ -137,6 +142,7 @@ const schemaOverride: IGuideSchema = {
                 <LazyImage
                   src={anim.imageUrl}
                   classes="sprite-anim"
+                  loadingStrat="lazy"
                   alt={`gif #${anim.id} of ${data.name_localised}`}
                 />
               );

@@ -26,6 +26,11 @@ export const AppImage = {
   unknown: '/assets/img/passive_quest_icon.png',
 };
 
+export const CssSheetImage = {
+  monsterSticker: 'spriteSheet-monster-sticker.png',
+  monsterForm: 'spriteSheet-monster-form.png',
+};
+
 export const cutBarkleyPortrait = {
   top: 0,
   left: 0,

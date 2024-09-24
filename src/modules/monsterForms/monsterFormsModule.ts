@@ -100,6 +100,7 @@ export class MonsterFormsModule extends CommonModule<IMonsterForm, IMonsterFormE
     this._moveToMonsterIdsMap = {};
     this._buildEvolutionFromMap();
 
+    let imageId = -1;
     for (const detail of this._baseDetails) {
       const mapKey = detail.name.replace('_NAME', '').toLowerCase();
       const icon_url = detail.battle_sprite_path.replace('.json', '.png');
@@ -110,9 +111,11 @@ export class MonsterFormsModule extends CommonModule<IMonsterForm, IMonsterFormE
       const moveTagToMoveIdsMap = (moveModule as unknown as MovesModule).getMoveTagToMoveIdsMap();
       const moveIds = moveTagToMoveIdsMap?.[mapKey] ?? [];
 
+      imageId++;
       const detailEnhanced: IMonsterFormEnhanced = {
         ...detail,
         id: mapKey,
+        imageId,
         resource_name: mapKey,
         bestiary_index_with_padding:
           detail.bestiary_index >= 0 ? pad(detail.bestiary_index, 3) : '???',
@@ -294,24 +297,45 @@ export class MonsterFormsModule extends CommonModule<IMonsterForm, IMonsterFormE
   };
 
   generateImages = async (overwrite: boolean, modules: Array<CommonModule<unknown, unknown>>) => {
+    const stickerFilesCreated: Record<number, IImageFilePathWithDimensions | undefined> = {};
+    const spriteFilesCreated: Record<number, IImageFilePathWithDimensions | undefined> = {};
+
     for (const mapKey of Object.keys(this._itemDetailMap)) {
       const detailEnhanced: IMonsterFormEnhanced = this._itemDetailMap[mapKey];
 
-      await copyImageToGeneratedFolder(overwrite, detailEnhanced.tape_sticker_texture);
+      const destSticker = await copyImageToGeneratedFolder(
+        overwrite,
+        detailEnhanced.tape_sticker_texture,
+      );
+      stickerFilesCreated[detailEnhanced.imageId] = destSticker;
 
       if (detailEnhanced.animations == null || detailEnhanced.animations.length < 1) continue;
       const firstFrame = detailEnhanced.animations[0].frames[0];
-      await cutImageFromSpriteSheet({
+      const destFile = await cutImageFromSpriteSheet({
         overwrite,
         spriteFilePath: detailEnhanced.icon_url,
         boxSelection: firstFrame,
       });
+      spriteFilesCreated[detailEnhanced.imageId] = destFile;
+
       await createWebpFromISpriteAnim({
         overwrite,
         spriteFilePath: detailEnhanced.icon_url,
         animations: detailEnhanced?.animations ?? [],
       });
     }
+
+    // await createSheetFromFileList({
+    //   destSpriteSheetName: CssSheetImage.monsterSticker,
+    //   files: stickerFilesCreated,
+    //   overwrite,
+    // });
+
+    // await createSheetFromFileList({
+    //   destSpriteSheetName: CssSheetImage.monsterForm,
+    //   files: spriteFilesCreated,
+    //   overwrite,
+    // });
   };
 
   generateMetaImages = async (

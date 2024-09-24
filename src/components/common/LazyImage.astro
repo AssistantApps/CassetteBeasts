@@ -13,22 +13,33 @@ interface Props {
   width?: string;
   height?: string;
   loadingImage?: string;
-  loadingStrat?: 'lazy' | 'defer' | 'eager';
+  loadingStrat?: 'lazy' | 'viewport' | 'defer' | 'eager';
   draggable?: boolean;
 }
 
 const { src, classes, style, alt, width, height } = Astro.props;
-const loadingStrat = Astro.props.loadingStrat ?? 'defer';
+const loadingStrat = Astro.props.loadingStrat ?? 'viewport';
 const loadingImage = Astro.props.loadingImage ?? AppImage.cardLoader;
 const draggable = Astro.props.draggable ?? false;
-const imgSource = imgUrl(src);
+let imgSource = imgUrl(src);
+let imgDataSource: string | undefined;
+
+if (loadingStrat == 'viewport') {
+  imgDataSource = imgUrl(src);
+  imgSource = loadingImage;
+}
+
+if (loadingStrat == 'defer') {
+  imgDataSource = undefined;
+  imgSource = loadingImage;
+}
 
 let imgWidth;
 let imgHeight;
 
 try {
   if (src != null) {
-    const imgFullPath = path.join('public', imgSource);
+    const imgFullPath = path.join('public', imgUrl(src));
     const dimensions = imageSize(imgFullPath);
     imgWidth = dimensions.width;
     imgHeight = dimensions.height;
@@ -43,8 +54,8 @@ if (height != null) imgHeight = height;
 ---
 
 <img
-  src={loadingStrat == 'defer' ? loadingImage : imgSource}
-  data-src={loadingStrat == 'defer' ? imgSource : ''}
+  src={imgSource}
+  data-src={imgDataSource}
   data-lazy={loadingStrat}
   class={classes}
   style={style}
@@ -56,15 +67,49 @@ if (height != null) imgHeight = height;
 />
 
 <script>
+  function setImgSrcFromDataSrc(img: any) {
+    img.src = img.dataset.src;
+    img.dataset.lazy = 'done';
+  }
+
   function loadImages(newDocument: Document) {
     const images = newDocument.querySelectorAll('img[loading="lazy"][data-lazy="defer"]');
-    images.forEach((img: any) => {
-      img.src = img.dataset.src;
-      img.dataset.lazy = 'done';
-    });
+    images.forEach(setImgSrcFromDataSrc);
+  }
+
+  function loadImagesWithIntersectionObserver(newDocument: Document) {
+    const images = newDocument.querySelectorAll('img[loading="lazy"][data-lazy="viewport"]');
+    if (images == null || images.length < 1) return;
+
+    const intersectionExists = 'IntersectionObserver' in window;
+    if (!intersectionExists) {
+      images.forEach(setImgSrcFromDataSrc);
+      return;
+    }
+    const intersectionObserver = new IntersectionObserver(
+      (entries: Array<IntersectionObserverEntry>, observer: IntersectionObserver) => {
+        entries.map((entry) => {
+          if (entry.isIntersecting) {
+            const img: any = entry.target;
+            img.src = img.dataset.src;
+            img.dataset.lazy = 'observed';
+            observer.unobserve(img);
+          }
+        });
+      },
+    );
+    images.forEach((image) => intersectionObserver.observe(image));
+    setTimeout(() => {
+      images.forEach((img: any) => {
+        intersectionObserver.unobserve(img);
+        img.src = img.dataset.src;
+        img.dataset.lazy = 'timeout-over';
+      });
+    }, 5_000);
   }
 
   document.addEventListener('astro:page-load', () => {
+    loadImagesWithIntersectionObserver(document);
     loadImages(document);
   });
 </script>
