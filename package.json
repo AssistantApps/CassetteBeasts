@@ -6,6 +6,7 @@
     "dev": "astro dev",
     "build": "astro check && astro build",
     "lint": "npx eslint src",
+    "build:scss": "sass ./src/scss/responsive:./public/assets/css",
     "data": "dotenv -- tsx --tsconfig ./tsconfig.data.json src/build.ts",
     "data:dev": "dotenv -- tsx --tsconfig ./tsconfig.data.json src/main.ts",
     "service-worker": "npx workbox-cli generateSW ./workbox-config.js",

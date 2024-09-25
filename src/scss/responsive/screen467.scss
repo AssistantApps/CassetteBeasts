@@ -1,0 +1,40 @@
+@import 'responsive';
+
+body {
+  @media screen and (max-width: $phoneWidth) {
+    header.header {
+
+      [data-tooltip][data-placement='bottom']::after,
+      [data-tooltip][data-placement='bottom']::before {
+        content: unset;
+      }
+    }
+
+    .monster-detail-card .monster-detail-card-body {
+      div.images {
+        margin-top: 1em;
+      }
+
+      .id {
+        top: 2rem;
+      }
+    }
+
+    .wiki-section {
+      [role='button'] {
+        flex-direction: column;
+        width: unset;
+
+        img {
+          width: 4em;
+          margin: 0 auto;
+        }
+      }
+
+      a {
+        min-width: unset;
+        margin: 0 1em;
+      }
+    }
+  }
+}

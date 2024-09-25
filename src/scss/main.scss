@@ -12,8 +12,8 @@
 @import 'dropdown';
 @import 'breadcrumb';
 @import 'scrollbar';
-@import 'responsive';
 @import 'assistantApps';
+@import 'responsive/responsive';
 
 $brand-primary-background: #242424;
 $brand-primary: #ab75e8;
@@ -127,4 +127,23 @@ img {
 
 [data-tooltip]:not(a, button, input) {
   border-bottom: none;
+}
+
+.hidden-in-desktop {
+  @media screen and (min-width: $smallDesktopWidth) {
+    display: none;
+  }
+}
+
+.hidden-in-mobile {
+  @media screen and (max-width: $smallDesktopWidth) {
+    display: none !important;
+  }
+}
+
+.no-hover-mobile {
+  @media screen and (max-width: $tabletWidth) {
+    transform: none !important;
+    box-shadow: none !important;
+  }
 }

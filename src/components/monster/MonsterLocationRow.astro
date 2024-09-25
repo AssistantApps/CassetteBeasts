@@ -1,0 +1,39 @@
+---
+import LazyImage from 'components/common/LazyImage.astro';
+
+import { routes } from 'constants/route';
+import type { IMonsterSpawnHabitatDetails } from 'contracts/monsterSpawn';
+
+interface Props {
+  locale: string;
+  data: IMonsterSpawnHabitatDetails;
+}
+
+const { locale, data } = Astro.props;
+
+let linkToLocation = '';
+if (data.habitat_coords.length > 0) {
+  const coords = data.habitat_coords[0].split('_');
+  linkToLocation = `/${locale}${routes.map}/${coords[0]}/${coords.slice(1).join(' ')}.html`;
+}
+---
+
+<tr>
+  <td class="overworld ta-center">
+    <LazyImage src={data.overworldSprite} classes="remaster-image" alt="overworld" />
+  </td>
+  <td class="name">
+    {
+      data.habitat_coords.length > 0 ? (
+        <a href={linkToLocation} title={data.habitat_name_localised}>
+          {data.habitat_name_localised} <code>({data.id}) ↗</code>
+        </a>
+      ) : (
+        <span>
+          {data.habitat_name_localised} <code>({data.id})</code>
+        </span>
+      )
+    }
+  </td>
+  <td class="percent">{data.percentStr}%</td>
+</tr>
