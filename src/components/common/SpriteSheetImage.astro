@@ -1,0 +1,25 @@
+---
+import type { IBoxSelection } from 'contracts/boxSelection';
+
+interface Props {
+  src: string;
+  boxSelection: IBoxSelection;
+  classes?: string;
+  draggable?: boolean;
+}
+
+const { src, classes, boxSelection } = Astro.props;
+const draggable = Astro.props.draggable ?? false;
+---
+
+<div
+  class={classes}
+  style={{
+    'background-image': `url(/${src})`,
+    'background-position': `-${boxSelection.x}px -${boxSelection.y}px`,
+    width: `${boxSelection.width}px`,
+    height: `${boxSelection.height}px`,
+  }}
+  draggable={draggable}
+>
+</div>

@@ -4,6 +4,7 @@ import LazyImage from 'components/common/LazyImage.astro';
 import Layout from 'components/layouts/Layout.astro';
 import MonsterMoveRow from 'components/monster/MonsterMoveRow.astro';
 import MonsterRemaster from 'components/monster/MonsterRemaster.astro';
+import MonsterLocationRow from 'components/monster/MonsterLocationRow.astro';
 import ShareRow from 'components/social/ShareRow.astro';
 import StatHex from 'components/stat/StatHex.astro';
 
@@ -15,7 +16,6 @@ import { breadcrumb } from 'constants/breadcrumb';
 import { AppImage } from 'constants/image';
 import { IntermediateFile } from 'constants/intermediateFile';
 import { availableLanguages, UIKeys } from 'constants/localisation';
-import { routes } from 'constants/route';
 import { site } from 'constants/site';
 import type { ILocalisation } from 'contracts/localisation';
 import type { IMonsterFormEnhanced } from 'contracts/monsterForm';
@@ -391,32 +391,7 @@ const schemaOverride: IGuideSchema = {
                       </thead>
                       <tbody>
                         {data.spawn_overworld_locations.map((loc) => (
-                          <Fragment>
-                            <tr>
-                              <td class="overworld ta-center">
-                                <LazyImage
-                                  src={loc.overworldSprite}
-                                  classes="remaster-image"
-                                  alt="overworld"
-                                />
-                              </td>
-                              <td class="name">
-                                {loc.habitat_coords.length > 0 ? (
-                                  <a
-                                    href={`/${locale}${routes.map}/${loc.habitat_coords[0].split('_')[0]}/${loc.habitat_coords[0].split('_').slice(1).join(' ')}.html`}
-                                    title={loc.habitat_name_localised}
-                                  >
-                                    {loc.habitat_name_localised} <code>({loc.id})</code>
-                                  </a>
-                                ) : (
-                                  <span>
-                                    {loc.habitat_name_localised} <code>({loc.id})</code>
-                                  </span>
-                                )}
-                              </td>
-                              <td class="percent">{loc.percentStr}%</td>
-                            </tr>
-                          </Fragment>
+                          <MonsterLocationRow locale={locale} data={loc} />
                         ))}
 
                         {data.spawn_backup_locations.length > 0 &&
@@ -429,13 +404,7 @@ const schemaOverride: IGuideSchema = {
                           )}
 
                         {data.spawn_backup_locations.map((backupLoc) => (
-                          <tr>
-                            <td class="overworld" />
-                            <td class="name">
-                              {backupLoc.habitat_name_localised} <code>({backupLoc.id})</code>
-                            </td>
-                            <td class="percent">{backupLoc.percentStr}%</td>
-                          </tr>
+                          <MonsterLocationRow locale={locale} data={backupLoc} />
                         ))}
                       </tbody>
                     </table>

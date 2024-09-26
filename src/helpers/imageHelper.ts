@@ -52,7 +52,9 @@ interface ICutImageFromSpriteSheetProps {
   destFileName?: string;
   boxSelection: IBoxSelection;
 }
-export const cutImageFromSpriteSheet = async (props: ICutImageFromSpriteSheetProps) => {
+export const cutImageFromSpriteSheet = async (
+  props: ICutImageFromSpriteSheetProps,
+): Promise<IImageFilePathWithDimensions | undefined> => {
   const sprite = getExternalResourcesImagePath(props.spriteFilePath);
   if (sprite == null || sprite.length < 1) return;
 
@@ -64,7 +66,7 @@ export const cutImageFromSpriteSheet = async (props: ICutImageFromSpriteSheetPro
     destSprite = path.join(destSprite.slice(0, lastSlashIndex), props.destFileName);
   }
 
-  await retryAsync({
+  return retryAsync({
     attempts: 3,
     func: async () => {
       createFoldersOfDestFilePath(destSprite);
@@ -72,7 +74,12 @@ export const cutImageFromSpriteSheet = async (props: ICutImageFromSpriteSheetPro
         if (props.overwrite) {
           fs.unlinkSync(destSprite);
         } else {
-          return;
+          const existingFileMeta = await sharp(destSprite).metadata();
+          return {
+            filePath: destSprite,
+            height: existingFileMeta.height!,
+            width: existingFileMeta.width!,
+          };
         }
       }
 
@@ -85,6 +92,11 @@ export const cutImageFromSpriteSheet = async (props: ICutImageFromSpriteSheetPro
         })
         .toFile(destSprite);
       process.stdout.write('✔');
+      return {
+        filePath: destSprite,
+        width: props.boxSelection.width,
+        height: props.boxSelection.height,
+      };
     },
     onError: (ex) => console.error(ex),
   });
@@ -116,7 +128,7 @@ export const copyImageToGeneratedFolder = async (
   overwrite: boolean,
   externalResource?: IExternalResource,
   cutImageWhenCopying: ICutImageWhenCopying | null = null,
-) => {
+): Promise<IImageFilePathWithDimensions | undefined> => {
   const imagePath = getExternalResourcesImagePath(externalResource?.path);
   if (imagePath == null || imagePath.length < 1) return;
 
@@ -129,7 +141,12 @@ export const copyImageToGeneratedFolder = async (
       if (overwrite) {
         fs.unlinkSync(destFilePath);
       } else {
-        return;
+        const existingFileMeta = await sharp(destFilePath).metadata();
+        return {
+          filePath: destFilePath,
+          height: existingFileMeta.height!,
+          width: existingFileMeta.width!,
+        };
       }
     }
     let imageTask = sharp(srcFilePath);
@@ -138,6 +155,12 @@ export const copyImageToGeneratedFolder = async (
     }
     await imageTask.png().toFile(destFilePath);
     process.stdout.write('✔');
+    const existingFileMeta = await sharp(destFilePath).metadata();
+    return {
+      filePath: destFilePath,
+      height: existingFileMeta.height!,
+      width: existingFileMeta.width!,
+    };
   } catch (ex) {
     console.error(ex);
   }

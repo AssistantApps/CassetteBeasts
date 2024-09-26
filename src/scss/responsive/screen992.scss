@@ -1,0 +1,15 @@
+@import 'responsive';
+
+body {
+  @media screen and (max-width: $smallDesktopWidth) {
+    .search-input-border-radius {
+      border-radius: var(--pico-border-radius) !important;
+    }
+
+    .move-detail-grid,
+    .character-detail-grid,
+    .status-effect-detail-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+}

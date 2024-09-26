@@ -108,6 +108,7 @@
 
       img {
         height: 2rem;
+        width: auto;
       }
 
       div {
@@ -217,8 +218,9 @@
         padding: 0;
 
         img {
-          width: 2em;
-          height: 2em;
+          max-width: 2em;
+          max-height: 2em;
+          width: auto;
         }
       }
 
@@ -226,7 +228,7 @@
         margin-top: var(--pico-spacing);
         margin-bottom: 0;
 
-        &[open] > summary {
+        &[open]>summary {
           margin-bottom: 0;
         }
 
@@ -261,6 +263,7 @@
 // animation delays
 .monster-detail-card {
   .monster-detail-card-body {
+
     .id,
     .descrip,
     .images {

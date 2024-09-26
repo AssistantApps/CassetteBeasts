@@ -52,6 +52,7 @@ export interface IMonsterForm {
 
 export interface IMonsterFormEnhanced extends IMonsterForm {
   id: string;
+  imageId: number;
   resource_name: string;
   name_localised: string;
   description_localised: string;
