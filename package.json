@@ -33,6 +33,7 @@
     "@zokki/astro-minify": "^1.1.0",
     "astro-meta-tags": "^0.3.0",
     "astro-robots-txt": "^1.0.0",
+    "canvas": "^2.11.2",
     "dotenv-cli": "^7.4.2",
     "eslint": "^9.8.0",
     "eslint-plugin-astro": "^1.2.3",
