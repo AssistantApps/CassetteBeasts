@@ -13,17 +13,6 @@
 
 - `res\data\fusions`
 
-## More meta images
-
-- For the list pages (monsters, moves, etc)
-- Meta images for the world chunks
-
 ## Fun
 
 - https://www.emojiblast.dev
-
-## CSS optimization
-
-e.g.
-
-<link rel="stylesheet" href="mobile.css" media="screen and (max-width: 480px)" />
