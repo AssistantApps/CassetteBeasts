@@ -1,6 +1,6 @@
 {
   "name": "cassette-beasts-extract",
-  "version": "2.0.15",
+  "version": "2.0.16",
   "description": "Website generated from data & images extracted from the Cassette Beasts",
   "scripts": {
     "dev": "astro dev",
