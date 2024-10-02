@@ -20,7 +20,11 @@ if (data.habitat_coords.length > 0) {
 
 <tr>
   <td class="overworld ta-center">
-    <LazyImage src={data.overworldSprite} classes="remaster-image" alt="overworld" />
+    {
+      data.overworldSprite != null && (
+        <LazyImage src={data.overworldSprite} classes="remaster-image" alt="overworld" />
+      )
+    }
   </td>
   <td class="name">
     {
