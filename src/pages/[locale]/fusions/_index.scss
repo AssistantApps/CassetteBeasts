@@ -4,22 +4,72 @@ $listItemHeight: 2rem;
 
 .fusion {
   .monster.dropdown {
+    position: relative;
+
+    .dropdown-backdrop {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.35);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity var(--pico-transition), transform 0s ease-in-out 1s;
+    }
+
+    .dropdown-input {
+      margin-bottom: 0;
+      position: relative;
+      z-index: 99;
+    }
+
     ul {
+      position: absolute;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      min-width: fit-content;
+      width: 100%;
       max-height: 50vh;
       overflow-y: auto;
+      padding: 0.5em 0 0.25em 0;
+      margin: 0;
+      margin-top: var(--pico-outline-width);
+      border: var(--pico-border-width) solid var(--pico-dropdown-border-color);
+      border-radius: var(--pico-border-radius);
+      background-color: var(--pico-dropdown-background-color);
+      box-shadow: var(--pico-dropdown-box-shadow);
+      color: var(--pico-dropdown-color);
+      white-space: nowrap;
+      opacity: 0;
+      transition: opacity var(--pico-transition), transform 0s ease-in-out 1s;
+      pointer-events: none;
+      z-index: 98;
       @extend .scrollbar-contain;
+    }
+
+    &.open {
+
+      .dropdown-backdrop,
+      ul {
+        opacity: 1;
+        pointer-events: unset;
+      }
     }
 
     .monster-option {
       display: inline-flex;
       flex-direction: row;
       gap: 0.5em;
+      width: 100%;
       padding-left: 0.5em;
       cursor: pointer;
 
       &.selected {
-        margin-top: -0.25em;
+        margin-top: -0.3em;
         margin-left: -1em;
+        margin-bottom: 0.4em;
       }
 
       img {
@@ -35,7 +85,23 @@ $listItemHeight: 2rem;
       }
     }
 
-    li.monster-option {
+    .fake-input {
+      --pico-background-color: var(--pico-form-element-background-color);
+      --pico-border-color: var(--pico-form-element-border-color);
+      --pico-color: var(--pico-form-element-color);
+      --pico-box-shadow: none;
+      padding: var(--pico-form-element-spacing-vertical) var(--pico-form-element-spacing-horizontal) 0 var(--pico-form-element-spacing-horizontal);
+      border: var(--pico-border-width) solid var(--pico-border-color);
+      border-radius: var(--pico-border-radius);
+      outline: 0;
+      background-color: var(--pico-background-color);
+      box-shadow: var(--pico-box-shadow);
+      color: var(--pico-color);
+      font-weight: var(--pico-font-weight);
+      transition: background-color var(--pico-transition), border-color var(--pico-transition), color var(--pico-transition), box-shadow var(--pico-transition);
+    }
+
+    li.monster-option:not(.disabled) {
       transition: background-color 250ms ease-in-out;
 
       &:hover {
