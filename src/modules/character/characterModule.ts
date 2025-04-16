@@ -8,7 +8,12 @@ import { ModuleType } from 'constants/module';
 import { paths } from 'constants/paths';
 import { routes } from 'constants/route';
 import { site } from 'constants/site';
-import type { ICharacter, ICharacterEnhanced, ICharacterSfx } from 'contracts/character';
+import type {
+  ICharacter,
+  ICharacterEnhanced,
+  ICharacterSfx,
+  ICharacterSfxFiles,
+} from 'contracts/character';
 import type { IElement } from 'contracts/element';
 import type { ILocalisation } from 'contracts/localisation';
 import { monsterToSimplified } from 'contracts/mapper/monsterMapper';
@@ -57,6 +62,7 @@ export class CharacterModule extends CommonModule<ICharacter, ICharacterEnhanced
       .readdirSync(FolderPathHelper.characterPortraits())
       .filter((file) => file.endsWith('.png'));
 
+    const portraitsToExclude = ['sunny_outfit_1.png', 'sunny_outfit_2.png'];
     for (const file of list) {
       const detail = await readItemDetail({
         fileName: file,
@@ -67,6 +73,7 @@ export class CharacterModule extends CommonModule<ICharacter, ICharacterEnhanced
       const portraitName = detail.resource_name.replace('.tres', '');
       detail.portraits = portraitFiles
         .filter((file) => file.includes(portraitName))
+        .filter((file) => portraitsToExclude.includes(file) == false)
         .map((file) => `res://sprites/portraits/${file}`);
       this._baseDetails.push(detail);
     }
@@ -159,8 +166,16 @@ export class CharacterModule extends CommonModule<ICharacter, ICharacterEnhanced
     );
 
     for (const mapKey of Object.keys(this._itemDetailMap)) {
-      const charSfx = characterSfxModule.get(mapKey);
-      this._itemDetailMap[mapKey].audioFiles = charSfx?.audioFiles ?? [];
+      const allFiles: Array<ICharacterSfxFiles> = [];
+      for (const extraMapKey of [mapKey, `${mapKey}_partner`]) {
+        const charSfx = characterSfxModule.get(extraMapKey);
+        if (charSfx == null) continue;
+
+        for (const audioFile of charSfx?.audioFiles ?? []) {
+          allFiles.push(audioFile);
+        }
+      }
+      this._itemDetailMap[mapKey].audioFiles = allFiles;
     }
   };
 

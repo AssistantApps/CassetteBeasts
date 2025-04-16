@@ -169,6 +169,31 @@
     "stats_affected": []
   },
   {
+    "id": "channeled_power",
+    "name": "STATUS_CHANNELED_POWER_NAME",
+    "description": "STATUS_CHANNELED_POWER_DESCRIPTION",
+    "has_duration": false,
+    "reduce_duration_at": 0,
+    "icon": {
+      "id": 3,
+      "path": "res://ui/icons/status_effects/channeled_power.png",
+      "type": "Texture"
+    },
+    "is_removable": false,
+    "is_buff": true,
+    "is_debuff": false,
+    "is_decoy": false,
+    "always_hidden_from_display": false,
+    "tags": [
+      "archangel"
+    ],
+    "toast_on_remove": "",
+    "name_modifier": "",
+    "sprite_animation_prefix": "",
+    "sprite_animation_prefix_priority": "0",
+    "stats_affected": []
+  },
+  {
     "id": "close_encounter",
     "name": "STATUS_CLOSE_ENCOUNTER_NAME",
     "description": "STATUS_CLOSE_ENCOUNTER_DESCRIPTION",
@@ -517,6 +542,26 @@
     "stats_affected": []
   },
   {
+    "id": "coating_typeless",
+    "name": "STATUS_COATING_TYPELESS_NAME",
+    "description": "STATUS_COATING_DESCRIPTION",
+    "has_duration": false,
+    "reduce_duration_at": 2,
+    "is_removable": false,
+    "is_buff": true,
+    "is_debuff": false,
+    "is_decoy": false,
+    "always_hidden_from_display": true,
+    "tags": [
+      "coating_typeless"
+    ],
+    "toast_on_remove": "",
+    "name_modifier": "",
+    "sprite_animation_prefix": "",
+    "sprite_animation_prefix_priority": "0",
+    "stats_affected": []
+  },
+  {
     "id": "coating_water",
     "name": "STATUS_COATING_WATER_NAME",
     "description": "STATUS_COATING_DESCRIPTION",
@@ -557,7 +602,9 @@
     "is_debuff": true,
     "is_decoy": false,
     "always_hidden_from_display": false,
-    "tags": [],
+    "tags": [
+      "conductive"
+    ],
     "toast_on_remove": "",
     "name_modifier": "",
     "sprite_animation_prefix": "",
@@ -1072,7 +1119,9 @@
     "is_debuff": true,
     "is_decoy": false,
     "always_hidden_from_display": false,
-    "tags": [],
+    "tags": [
+      "fog"
+    ],
     "toast_on_remove": "",
     "name_modifier": "",
     "sprite_animation_prefix": "",

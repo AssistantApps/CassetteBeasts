@@ -680,15 +680,15 @@
         "name": "hurt",
         "files": [
           {
-            "url": "/assets/audio/voices/eugene/eugene_hurt_1.wav",
+            "url": "res://sfx/voices/eugene/eugene_hurt_1.wav",
             "autoplay": false
           },
           {
-            "url": "/assets/audio/voices/eugene/eugene_hurt_2.wav",
+            "url": "res://sfx/voices/eugene/eugene_hurt_2.wav",
             "autoplay": false
           },
           {
-            "url": "/assets/audio/voices/eugene/eugene_hurt_3.wav",
+            "url": "res://sfx/voices/eugene/eugene_hurt_3.wav",
             "autoplay": false
           }
         ]
@@ -697,7 +697,7 @@
         "name": "recording",
         "files": [
           {
-            "url": "/assets/audio/voices/eugene/eugene_recording.wav",
+            "url": "res://sfx/voices/eugene/eugene_recording.wav",
             "autoplay": false
           }
         ]
@@ -706,7 +706,7 @@
         "name": "recording success",
         "files": [
           {
-            "url": "/assets/audio/voices/eugene/eugene_recording_success.wav",
+            "url": "res://sfx/voices/eugene/eugene_recording_success.wav",
             "autoplay": true
           }
         ]
@@ -715,7 +715,7 @@
         "name": "recording failure",
         "files": [
           {
-            "url": "/assets/audio/voices/eugene/eugene_recording_failure.wav",
+            "url": "res://sfx/voices/eugene/eugene_recording_failure.wav",
             "autoplay": false
           }
         ]
@@ -724,7 +724,7 @@
         "name": "defeat",
         "files": [
           {
-            "url": "/assets/audio/voices/eugene/eugene_defeat.wav",
+            "url": "res://sfx/voices/eugene/eugene_defeat.wav",
             "autoplay": false
           }
         ]
@@ -1146,15 +1146,15 @@
         "name": "hurt",
         "files": [
           {
-            "url": "/assets/audio/voices/felix/felix_hurt_1.wav",
+            "url": "res://sfx/voices/felix/felix_hurt_1.wav",
             "autoplay": false
           },
           {
-            "url": "/assets/audio/voices/felix/felix_hurt_2.wav",
+            "url": "res://sfx/voices/felix/felix_hurt_2.wav",
             "autoplay": false
           },
           {
-            "url": "/assets/audio/voices/felix/felix_hurt_3.wav",
+            "url": "res://sfx/voices/felix/felix_hurt_3.wav",
             "autoplay": false
           }
         ]
@@ -1163,7 +1163,7 @@
         "name": "recording",
         "files": [
           {
-            "url": "/assets/audio/voices/felix/felix_recording.wav",
+            "url": "res://sfx/voices/felix/felix_recording.wav",
             "autoplay": false
           }
         ]
@@ -1172,7 +1172,7 @@
         "name": "recording success",
         "files": [
           {
-            "url": "/assets/audio/voices/felix/felix_recording_success.wav",
+            "url": "res://sfx/voices/felix/felix_recording_success.wav",
             "autoplay": true
           }
         ]
@@ -1181,7 +1181,7 @@
         "name": "recording failure",
         "files": [
           {
-            "url": "/assets/audio/voices/felix/felix_recording_failure.wav",
+            "url": "res://sfx/voices/felix/felix_recording_failure.wav",
             "autoplay": false
           }
         ]
@@ -1190,7 +1190,7 @@
         "name": "defeat",
         "files": [
           {
-            "url": "/assets/audio/voices/felix/felix_defeat.wav",
+            "url": "res://sfx/voices/felix/felix_defeat.wav",
             "autoplay": false
           }
         ]
@@ -1526,15 +1526,15 @@
         "name": "hurt",
         "files": [
           {
-            "url": "/assets/audio/voices/kayleigh/kayleigh_hurt_1.wav",
+            "url": "res://sfx/voices/kayleigh/kayleigh_hurt_1.wav",
             "autoplay": false
           },
           {
-            "url": "/assets/audio/voices/kayleigh/kayleigh_hurt_2.wav",
+            "url": "res://sfx/voices/kayleigh/kayleigh_hurt_2.wav",
             "autoplay": false
           },
           {
-            "url": "/assets/audio/voices/kayleigh/kayleigh_hurt_3.wav",
+            "url": "res://sfx/voices/kayleigh/kayleigh_hurt_3.wav",
             "autoplay": false
           }
         ]
@@ -1543,7 +1543,7 @@
         "name": "recording",
         "files": [
           {
-            "url": "/assets/audio/voices/kayleigh/kayleigh_recording.wav",
+            "url": "res://sfx/voices/kayleigh/kayleigh_recording.wav",
             "autoplay": false
           }
         ]
@@ -1552,7 +1552,7 @@
         "name": "recording success",
         "files": [
           {
-            "url": "/assets/audio/voices/kayleigh/kayleigh_recording_success.wav",
+            "url": "res://sfx/voices/kayleigh/kayleigh_recording_success.wav",
             "autoplay": true
           }
         ]
@@ -1561,7 +1561,7 @@
         "name": "recording failure",
         "files": [
           {
-            "url": "/assets/audio/voices/kayleigh/kayleigh_recording_failure.wav",
+            "url": "res://sfx/voices/kayleigh/kayleigh_recording_failure.wav",
             "autoplay": false
           }
         ]
@@ -1570,7 +1570,7 @@
         "name": "defeat",
         "files": [
           {
-            "url": "/assets/audio/voices/kayleigh/kayleigh_defeat.wav",
+            "url": "res://sfx/voices/kayleigh/kayleigh_defeat.wav",
             "autoplay": false
           }
         ]
@@ -1906,15 +1906,15 @@
         "name": "hurt",
         "files": [
           {
-            "url": "/assets/audio/voices/meredith/meredith_hurt_1.wav",
+            "url": "res://sfx/voices/meredith/meredith_hurt_1.wav",
             "autoplay": false
           },
           {
-            "url": "/assets/audio/voices/meredith/meredith_hurt_2.wav",
+            "url": "res://sfx/voices/meredith/meredith_hurt_2.wav",
             "autoplay": false
           },
           {
-            "url": "/assets/audio/voices/meredith/meredith_hurt_3.wav",
+            "url": "res://sfx/voices/meredith/meredith_hurt_3.wav",
             "autoplay": false
           }
         ]
@@ -1923,7 +1923,7 @@
         "name": "recording",
         "files": [
           {
-            "url": "/assets/audio/voices/meredith/meredith_recording.wav",
+            "url": "res://sfx/voices/meredith/meredith_recording.wav",
             "autoplay": false
           }
         ]
@@ -1932,7 +1932,7 @@
         "name": "recording success",
         "files": [
           {
-            "url": "/assets/audio/voices/meredith/meredith_recording_success.wav",
+            "url": "res://sfx/voices/meredith/meredith_recording_success.wav",
             "autoplay": true
           }
         ]
@@ -1941,7 +1941,7 @@
         "name": "recording failure",
         "files": [
           {
-            "url": "/assets/audio/voices/meredith/meredith_recording_failure.wav",
+            "url": "res://sfx/voices/meredith/meredith_recording_failure.wav",
             "autoplay": false
           }
         ]
@@ -1950,7 +1950,407 @@
         "name": "defeat",
         "files": [
           {
-            "url": "/assets/audio/voices/meredith/meredith_defeat.wav",
+            "url": "res://sfx/voices/meredith/meredith_defeat.wav",
+            "autoplay": false
+          }
+        ]
+      }
+    ]
+  },
+  "sunny": {
+    "id": "",
+    "name": "SUNNY_NAME",
+    "resource_name": "sunny",
+    "exp_yield": 40,
+    "require_dlc": false,
+    "battle_sprite": {
+      "id": 4,
+      "path": "res://sprites/characters/battle/sunny.json",
+      "type": "PackedScene"
+    },
+    "character_kind": 1,
+    "force_unrecordable": false,
+    "human_colors": "\"body_color_1\": 6,\"body_color_2\": 2,\"eye_color\": 12,\"face_accessory_color\": 4,\"favorite_color\": 9,\"hair_accessory_color\": 16,\"hair_color\": 12,\"legs_color\": 2,\"shoe_color\": 12,\"skin_color\": 14",
+    "level": 100,
+    "max_ap": 5,
+    "ap_regen": 2,
+    "max_hp": 110,
+    "melee_attack": 115,
+    "melee_defense": 110,
+    "ranged_attack": 105,
+    "ranged_defense": 95,
+    "speed": 105,
+    "accuracy": 100,
+    "tapes": [
+      {
+        "id": 1,
+        "type": "Resource",
+        "title": "",
+        "resource_name": "bear1 Gr0",
+        "required_location": "",
+        "specialization": "",
+        "is_secret": false,
+        "add_slot": false,
+        "form": {
+          "id": 7,
+          "path": "res://data/monster_forms/bear1.tres",
+          "type": "Resource"
+        },
+        "grade": 0,
+        "seed_value": 0,
+        "stickers": [
+          {
+            "id": 3,
+            "path": "res://data/battle_moves/smack.tres",
+            "type": "Resource"
+          },
+          {
+            "id": 5,
+            "path": "res://data/battle_moves/berserker.tres",
+            "type": "Resource"
+          },
+          {
+            "id": 8,
+            "path": "res://data/battle_moves/bear_hug.tres",
+            "type": "Resource"
+          }
+        ],
+        "type_override": [],
+        "exp_points": 0,
+        "favorite": true
+      }
+    ],
+    "evasion": 100,
+    "team_name_override": "",
+    "exp_gradient": 5,
+    "exp_base_level": 0,
+    "partner_id": "sunny",
+    "partner_signature_species": {
+      "id": 7,
+      "path": "res://data/monster_forms/bear1.tres",
+      "type": "Resource"
+    },
+    "sfx": {
+      "id": 6,
+      "path": "res://data/character_sfx/sunny_partner_sfx.tres",
+      "type": "Resource"
+    },
+    "portraits": [
+      "res://sprites/portraits/sunny.png",
+      "res://sprites/portraits/sunny_confused.png",
+      "res://sprites/portraits/sunny_new_angry.png",
+      "res://sprites/portraits/sunny_new_awkward.png",
+      "res://sprites/portraits/sunny_new_blushing.png",
+      "res://sprites/portraits/sunny_new_default.png",
+      "res://sprites/portraits/sunny_new_happy.png",
+      "res://sprites/portraits/sunny_new_possessed.png",
+      "res://sprites/portraits/sunny_new_sad.png",
+      "res://sprites/portraits/sunny_new_shocked.png",
+      "res://sprites/portraits/sunny_new_thinking.png"
+    ],
+    "name_localised": "Sunny",
+    "icon_url": "res://sprites/characters/battle/sunny.png",
+    "sprite_sheet_path": "res://sprites/characters/battle/sunny.sheet.png",
+    "battle_sprite_path": "res://sprites/characters/battle/sunny.json",
+    "animations": [
+      {
+        "id": 4,
+        "loop": true,
+        "length": 0.6,
+        "frames": [
+          {
+            "x": 246,
+            "y": 99,
+            "width": 48,
+            "height": 48
+          },
+          {
+            "x": 1,
+            "y": 148,
+            "width": 48,
+            "height": 48
+          },
+          {
+            "x": 50,
+            "y": 148,
+            "width": 48,
+            "height": 48
+          },
+          {
+            "x": 99,
+            "y": 148,
+            "width": 48,
+            "height": 48
+          },
+          {
+            "x": 148,
+            "y": 148,
+            "width": 48,
+            "height": 48
+          },
+          {
+            "x": 197,
+            "y": 99,
+            "width": 48,
+            "height": 48
+          }
+        ],
+        "imageUrl": "res://sprites/characters/battle/sunny.anim3.webp"
+      },
+      {
+        "id": 3,
+        "loop": true,
+        "length": 0.3,
+        "frames": [
+          {
+            "x": 197,
+            "y": 148,
+            "width": 48,
+            "height": 48
+          },
+          {
+            "x": 246,
+            "y": 148,
+            "width": 48,
+            "height": 48
+          },
+          {
+            "x": 1,
+            "y": 197,
+            "width": 48,
+            "height": 48
+          }
+        ],
+        "imageUrl": "res://sprites/characters/battle/sunny.anim2.webp"
+      },
+      {
+        "id": 2,
+        "loop": true,
+        "length": 0.1,
+        "frames": [
+          {
+            "x": 50,
+            "y": 197,
+            "width": 48,
+            "height": 48
+          }
+        ],
+        "imageUrl": "res://sprites/characters/battle/sunny.anim1.webp"
+      },
+      {
+        "id": 5,
+        "loop": true,
+        "length": 0.6,
+        "frames": [
+          {
+            "x": 1,
+            "y": 1,
+            "width": 48,
+            "height": 48
+          },
+          {
+            "x": 50,
+            "y": 1,
+            "width": 48,
+            "height": 48
+          },
+          {
+            "x": 99,
+            "y": 1,
+            "width": 48,
+            "height": 48
+          },
+          {
+            "x": 148,
+            "y": 1,
+            "width": 48,
+            "height": 48
+          },
+          {
+            "x": 197,
+            "y": 1,
+            "width": 48,
+            "height": 48
+          },
+          {
+            "x": 246,
+            "y": 1,
+            "width": 48,
+            "height": 48
+          }
+        ],
+        "imageUrl": "res://sprites/characters/battle/sunny.anim4.webp"
+      },
+      {
+        "id": 6,
+        "loop": true,
+        "length": 0.6,
+        "frames": [
+          {
+            "x": 1,
+            "y": 50,
+            "width": 48,
+            "height": 48
+          },
+          {
+            "x": 50,
+            "y": 50,
+            "width": 48,
+            "height": 48
+          },
+          {
+            "x": 99,
+            "y": 50,
+            "width": 48,
+            "height": 48
+          },
+          {
+            "x": 148,
+            "y": 50,
+            "width": 48,
+            "height": 48
+          },
+          {
+            "x": 197,
+            "y": 50,
+            "width": 48,
+            "height": 48
+          },
+          {
+            "x": 246,
+            "y": 50,
+            "width": 48,
+            "height": 48
+          }
+        ],
+        "imageUrl": "res://sprites/characters/battle/sunny.anim5.webp"
+      },
+      {
+        "id": 7,
+        "loop": true,
+        "length": 0.6,
+        "frames": [
+          {
+            "x": 1,
+            "y": 1,
+            "width": 48,
+            "height": 48
+          },
+          {
+            "x": 1,
+            "y": 99,
+            "width": 48,
+            "height": 48
+          },
+          {
+            "x": 50,
+            "y": 99,
+            "width": 48,
+            "height": 48
+          },
+          {
+            "x": 99,
+            "y": 99,
+            "width": 48,
+            "height": 48
+          },
+          {
+            "x": 148,
+            "y": 99,
+            "width": 48,
+            "height": 48
+          },
+          {
+            "x": 197,
+            "y": 99,
+            "width": 48,
+            "height": 48
+          }
+        ],
+        "imageUrl": "res://sprites/characters/battle/sunny.anim6.webp"
+      }
+    ],
+    "partner_signature_species_monsters": {
+      "id": "bear1",
+      "name_localised": "Pawper",
+      "resource_name": "bear1",
+      "icon_url": "res://sprites/monsters/bear1.png",
+      "isSecret": false,
+      "bestiary_index": 129,
+      "bestiary_index_with_padding": "129"
+    },
+    "partner_signature_species_tape_sticker_texture": "res://ui/monster_stickers/bear1.png",
+    "partner_signature_species_elemental_types_elements": "res://ui/icons/types/element_beast.png",
+    "meta_image_url": "/assets/img/meta/en/characters/sunny.png",
+    "partner_image_url": "/assets/img/meta/en/characters/sunny-partner.png",
+    "audioFiles": [
+      {
+        "name": "transform",
+        "files": [
+          {
+            "url": "res://sfx/voices/sunny/sunny_accept.wav",
+            "autoplay": false
+          }
+        ]
+      },
+      {
+        "name": "defeat",
+        "files": [
+          {
+            "url": "res://sfx/voices/sunny/sunny_surprise_1.wav",
+            "autoplay": false
+          }
+        ]
+      },
+      {
+        "name": "hurt",
+        "files": [
+          {
+            "url": "res://sfx/voices/sunny/sunny_hurt_1.wav",
+            "autoplay": false
+          },
+          {
+            "url": "res://sfx/voices/sunny/sunny_hurt_2.wav",
+            "autoplay": false
+          },
+          {
+            "url": "res://sfx/voices/sunny/sunny_hurt_3.wav",
+            "autoplay": false
+          }
+        ]
+      },
+      {
+        "name": "recording",
+        "files": [
+          {
+            "url": "res://sfx/voices/sunny/sunny_recording.wav",
+            "autoplay": false
+          }
+        ]
+      },
+      {
+        "name": "recording success",
+        "files": [
+          {
+            "url": "res://sfx/voices/sunny/sunny_success.wav",
+            "autoplay": false
+          }
+        ]
+      },
+      {
+        "name": "recording failure",
+        "files": [
+          {
+            "url": "res://sfx/voices/sunny/sunny_failure.wav",
+            "autoplay": false
+          }
+        ]
+      },
+      {
+        "name": "defeat",
+        "files": [
+          {
+            "url": "res://sfx/voices/sunny/sunny_defeat.wav",
             "autoplay": false
           }
         ]
@@ -2273,15 +2673,15 @@
         "name": "hurt",
         "files": [
           {
-            "url": "/assets/audio/voices/viola/viola_hurt_1.wav",
+            "url": "res://sfx/voices/viola/viola_hurt_1.wav",
             "autoplay": false
           },
           {
-            "url": "/assets/audio/voices/viola/viola_hurt_2.wav",
+            "url": "res://sfx/voices/viola/viola_hurt_2.wav",
             "autoplay": false
           },
           {
-            "url": "/assets/audio/voices/viola/viola_hurt_3.wav",
+            "url": "res://sfx/voices/viola/viola_hurt_3.wav",
             "autoplay": false
           }
         ]
@@ -2290,7 +2690,7 @@
         "name": "recording",
         "files": [
           {
-            "url": "/assets/audio/voices/viola/viola_recording.wav",
+            "url": "res://sfx/voices/viola/viola_recording.wav",
             "autoplay": false
           }
         ]
@@ -2299,7 +2699,7 @@
         "name": "recording success",
         "files": [
           {
-            "url": "/assets/audio/voices/viola/viola_recording_success.wav",
+            "url": "res://sfx/voices/viola/viola_recording_success.wav",
             "autoplay": true
           }
         ]
@@ -2308,7 +2708,7 @@
         "name": "recording failure",
         "files": [
           {
-            "url": "/assets/audio/voices/viola/viola_recording_failure.wav",
+            "url": "res://sfx/voices/viola/viola_recording_failure.wav",
             "autoplay": false
           }
         ]
@@ -2317,7 +2717,7 @@
         "name": "defeat",
         "files": [
           {
-            "url": "/assets/audio/voices/viola/viola_defeat.wav",
+            "url": "res://sfx/voices/viola/viola_defeat.wav",
             "autoplay": false
           }
         ]

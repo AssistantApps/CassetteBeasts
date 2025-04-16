@@ -1256,6 +1256,79 @@
     ],
     "habitat_coords": []
   },
+  "dungeon_landkeeper2": {
+    "id": "dungeon_landkeeper2",
+    "habitat_name": "REGION_NAME_LANDKEEPER_HIDEOUT",
+    "habitat_overworld_chunks": [
+      {
+        "id": 15,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-4_-1.tres",
+        "type": "Resource"
+      }
+    ],
+    "habitat_endless": true,
+    "min_team_size": 1,
+    "max_team_size": 2,
+    "num_species": 9,
+    "habitat_name_localised": "New Landkeeper Hideout",
+    "species_enhanced": [
+      {
+        "overworldMonsterId": "pawndead",
+        "monsterId": "kingrave",
+        "percent": 12.5,
+        "percentStr": "12.50"
+      },
+      {
+        "overworldMonsterId": "pawndead",
+        "monsterId": "queenyx",
+        "percent": 12.5,
+        "percentStr": "12.50"
+      },
+      {
+        "overworldMonsterId": "springheel",
+        "monsterId": "ripterra",
+        "percent": 12.5,
+        "percentStr": "12.50"
+      },
+      {
+        "overworldMonsterId": "springheel",
+        "monsterId": "scampire",
+        "percent": 12.5,
+        "percentStr": "12.50"
+      },
+      {
+        "monsterId": "bear1",
+        "percent": 5.263157894736842,
+        "percentStr": "5.26"
+      },
+      {
+        "overworldMonsterId": "nevermort",
+        "monsterId": "apocrowlypse",
+        "percent": 12.5,
+        "percentStr": "12.50"
+      },
+      {
+        "overworldMonsterId": "trapwurm",
+        "monsterId": "wyrmaw",
+        "percent": 25,
+        "percentStr": "25.00"
+      },
+      {
+        "monsterId": "smogmagog",
+        "percent": 10.526315789473683,
+        "percentStr": "10.53"
+      },
+      {
+        "overworldMonsterId": "jellyton",
+        "monsterId": "jellyton",
+        "percent": 12.5,
+        "percentStr": "12.50"
+      }
+    ],
+    "habitat_coords": [
+      "overworld_-4_-1"
+    ]
+  },
   "dungeon_meadow_dominoth": {
     "id": "dungeon_meadow_dominoth",
     "habitat_name": "REGION_NAME_DUNGEON_MEADOW",
@@ -3796,6 +3869,38 @@
     ],
     "habitat_coords": []
   },
+  "lenna_whistle_for_help_gauntlet": {
+    "id": "lenna_whistle_for_help_gauntlet",
+    "habitat_name": "",
+    "habitat_overworld_chunks": [],
+    "habitat_endless": false,
+    "min_team_size": 1,
+    "max_team_size": 2,
+    "num_species": 4,
+    "species_enhanced": [
+      {
+        "monsterId": "draculeaf",
+        "percent": 25,
+        "percentStr": "25.00"
+      },
+      {
+        "monsterId": "beanstalker",
+        "percent": 25,
+        "percentStr": "25.00"
+      },
+      {
+        "monsterId": "scampire",
+        "percent": 25,
+        "percentStr": "25.00"
+      },
+      {
+        "monsterId": "rockertrice",
+        "percent": 25,
+        "percentStr": "25.00"
+      }
+    ],
+    "habitat_coords": []
+  },
   "mall": {
     "id": "mall",
     "habitat_name": "REGION_NAME_MALL",
@@ -4801,6 +4906,48 @@
       "overworld_-7_-6"
     ]
   },
+  "morgante_spirits_of_rebellion_gauntlet": {
+    "id": "morgante_spirits_of_rebellion_gauntlet",
+    "habitat_name": "",
+    "habitat_overworld_chunks": [],
+    "habitat_endless": false,
+    "min_team_size": 1,
+    "max_team_size": 2,
+    "num_species": 6,
+    "species_enhanced": [
+      {
+        "monsterId": "res://data/monster_forms_unlisted/gauntlet_morgante_dog",
+        "percent": 16.666666666666664,
+        "percentStr": "16.67"
+      },
+      {
+        "monsterId": "res://data/monster_forms_unlisted/gauntlet_morgante_eugene",
+        "percent": 16.666666666666664,
+        "percentStr": "16.67"
+      },
+      {
+        "monsterId": "res://data/monster_forms_unlisted/gauntlet_morgante_felix",
+        "percent": 16.666666666666664,
+        "percentStr": "16.67"
+      },
+      {
+        "monsterId": "res://data/monster_forms_unlisted/gauntlet_morgante_kayleigh",
+        "percent": 16.666666666666664,
+        "percentStr": "16.67"
+      },
+      {
+        "monsterId": "res://data/monster_forms_unlisted/gauntlet_morgante_meredith",
+        "percent": 16.666666666666664,
+        "percentStr": "16.67"
+      },
+      {
+        "monsterId": "res://data/monster_forms_unlisted/gauntlet_morgante_viola",
+        "percent": 16.666666666666664,
+        "percentStr": "16.67"
+      }
+    ],
+    "habitat_coords": []
+  },
   "mt_wirral": {
     "id": "mt_wirral",
     "habitat_name": "REGION_NAME_MT_WIRRAL",
@@ -5440,6 +5587,23 @@
         "monsterId": "snoopin",
         "percent": 25,
         "percentStr": "25.00"
+      }
+    ],
+    "habitat_coords": []
+  },
+  "pier_clown_battle": {
+    "id": "pier_clown_battle",
+    "habitat_name": "",
+    "habitat_overworld_chunks": [],
+    "habitat_endless": false,
+    "min_team_size": 1,
+    "max_team_size": 2,
+    "num_species": 1,
+    "species_enhanced": [
+      {
+        "monsterId": "charlequin",
+        "percent": 100,
+        "percentStr": "100.00"
       }
     ],
     "habitat_coords": []

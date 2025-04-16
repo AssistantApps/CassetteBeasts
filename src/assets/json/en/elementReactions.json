@@ -101,6 +101,28 @@
             ]
           },
           {
+            "id": "fuel_injection",
+            "name_localised": "Fuel Injection",
+            "category_name_localised": "Status Effect",
+            "power": 0,
+            "accuracy": 100,
+            "elemental_types_elements": [
+              {
+                "id": "fire",
+                "name": "ELEMENTAL_TYPE_FIRE",
+                "sort_order": 0,
+                "sparkle": false,
+                "icon": {
+                  "id": 1,
+                  "path": "res://ui/icons/types/element_fire.png",
+                  "type": "Texture"
+                },
+                "loot_table": "",
+                "name_localised": "Fire"
+              }
+            ]
+          },
+          {
             "id": "liftoff",
             "name_localised": "Liftoff",
             "category_name_localised": "Status Effect",
@@ -1100,6 +1122,28 @@
             ]
           },
           {
+            "id": "fuel_injection",
+            "name_localised": "Fuel Injection",
+            "category_name_localised": "Status Effect",
+            "power": 0,
+            "accuracy": 100,
+            "elemental_types_elements": [
+              {
+                "id": "fire",
+                "name": "ELEMENTAL_TYPE_FIRE",
+                "sort_order": 0,
+                "sparkle": false,
+                "icon": {
+                  "id": 1,
+                  "path": "res://ui/icons/types/element_fire.png",
+                  "type": "Texture"
+                },
+                "loot_table": "",
+                "name_localised": "Fire"
+              }
+            ]
+          },
+          {
             "id": "liftoff",
             "name_localised": "Liftoff",
             "category_name_localised": "Status Effect",
@@ -1996,6 +2040,28 @@
                 },
                 "loot_table": "",
                 "name_localised": "Astral"
+              }
+            ]
+          },
+          {
+            "id": "fuel_injection",
+            "name_localised": "Fuel Injection",
+            "category_name_localised": "Status Effect",
+            "power": 0,
+            "accuracy": 100,
+            "elemental_types_elements": [
+              {
+                "id": "fire",
+                "name": "ELEMENTAL_TYPE_FIRE",
+                "sort_order": 0,
+                "sparkle": false,
+                "icon": {
+                  "id": 1,
+                  "path": "res://ui/icons/types/element_fire.png",
+                  "type": "Texture"
+                },
+                "loot_table": "",
+                "name_localised": "Fire"
               }
             ]
           },
@@ -2904,6 +2970,28 @@
                 },
                 "loot_table": "",
                 "name_localised": "Astral"
+              }
+            ]
+          },
+          {
+            "id": "fuel_injection",
+            "name_localised": "Fuel Injection",
+            "category_name_localised": "Status Effect",
+            "power": 0,
+            "accuracy": 100,
+            "elemental_types_elements": [
+              {
+                "id": "fire",
+                "name": "ELEMENTAL_TYPE_FIRE",
+                "sort_order": 0,
+                "sparkle": false,
+                "icon": {
+                  "id": 1,
+                  "path": "res://ui/icons/types/element_fire.png",
+                  "type": "Texture"
+                },
+                "loot_table": "",
+                "name_localised": "Fire"
               }
             ]
           },
@@ -6185,14 +6273,6 @@
         "meta_image_url": "/assets/img/meta/en/statusEffects/stat_accuracy_down.png",
         "moves_that_cause_this_effect": [
           {
-            "id": "criticise",
-            "name_localised": "Peekaboo",
-            "category_name_localised": "Status Effect",
-            "power": 0,
-            "accuracy": 100,
-            "elemental_types_elements": []
-          },
-          {
             "id": "frozen_ground",
             "name_localised": "Frozen Ground",
             "category_name_localised": "Status Effect",
@@ -6780,7 +6860,9 @@
         "is_debuff": true,
         "is_decoy": false,
         "always_hidden_from_display": false,
-        "tags": [],
+        "tags": [
+          "conductive"
+        ],
         "toast_on_remove": "",
         "name_modifier": "",
         "sprite_animation_prefix": "",
@@ -7189,7 +7271,9 @@
         "is_debuff": true,
         "is_decoy": false,
         "always_hidden_from_display": false,
-        "tags": [],
+        "tags": [
+          "conductive"
+        ],
         "toast_on_remove": "",
         "name_modifier": "",
         "sprite_animation_prefix": "",
@@ -7344,7 +7428,9 @@
         "is_debuff": true,
         "is_decoy": false,
         "always_hidden_from_display": false,
-        "tags": [],
+        "tags": [
+          "conductive"
+        ],
         "toast_on_remove": "",
         "name_modifier": "",
         "sprite_animation_prefix": "",
@@ -7579,7 +7665,9 @@
         "is_debuff": true,
         "is_decoy": false,
         "always_hidden_from_display": false,
-        "tags": [],
+        "tags": [
+          "conductive"
+        ],
         "toast_on_remove": "",
         "name_modifier": "",
         "sprite_animation_prefix": "",
@@ -10286,6 +10374,28 @@
             ]
           },
           {
+            "id": "fuel_injection",
+            "name_localised": "Fuel Injection",
+            "category_name_localised": "Status Effect",
+            "power": 0,
+            "accuracy": 100,
+            "elemental_types_elements": [
+              {
+                "id": "fire",
+                "name": "ELEMENTAL_TYPE_FIRE",
+                "sort_order": 0,
+                "sparkle": false,
+                "icon": {
+                  "id": 1,
+                  "path": "res://ui/icons/types/element_fire.png",
+                  "type": "Texture"
+                },
+                "loot_table": "",
+                "name_localised": "Fire"
+              }
+            ]
+          },
+          {
             "id": "liftoff",
             "name_localised": "Liftoff",
             "category_name_localised": "Status Effect",
@@ -10802,6 +10912,28 @@
                 },
                 "loot_table": "",
                 "name_localised": "Astral"
+              }
+            ]
+          },
+          {
+            "id": "fuel_injection",
+            "name_localised": "Fuel Injection",
+            "category_name_localised": "Status Effect",
+            "power": 0,
+            "accuracy": 100,
+            "elemental_types_elements": [
+              {
+                "id": "fire",
+                "name": "ELEMENTAL_TYPE_FIRE",
+                "sort_order": 0,
+                "sparkle": false,
+                "icon": {
+                  "id": 1,
+                  "path": "res://ui/icons/types/element_fire.png",
+                  "type": "Texture"
+                },
+                "loot_table": "",
+                "name_localised": "Fire"
               }
             ]
           },

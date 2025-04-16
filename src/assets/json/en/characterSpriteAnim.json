@@ -1611,6 +1611,221 @@
       }
     ]
   },
+  "sunny": {
+    "name": "sunny",
+    "animations": [
+      {
+        "id": 2,
+        "loop": true,
+        "length": 0.1,
+        "frames": [
+          {
+            "x": 50,
+            "y": 197,
+            "width": 48,
+            "height": 48
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "loop": true,
+        "length": 0.3,
+        "frames": [
+          {
+            "x": 197,
+            "y": 148,
+            "width": 48,
+            "height": 48
+          },
+          {
+            "x": 246,
+            "y": 148,
+            "width": 48,
+            "height": 48
+          },
+          {
+            "x": 1,
+            "y": 197,
+            "width": 48,
+            "height": 48
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "loop": true,
+        "length": 0.6,
+        "frames": [
+          {
+            "x": 246,
+            "y": 99,
+            "width": 48,
+            "height": 48
+          },
+          {
+            "x": 1,
+            "y": 148,
+            "width": 48,
+            "height": 48
+          },
+          {
+            "x": 50,
+            "y": 148,
+            "width": 48,
+            "height": 48
+          },
+          {
+            "x": 99,
+            "y": 148,
+            "width": 48,
+            "height": 48
+          },
+          {
+            "x": 148,
+            "y": 148,
+            "width": 48,
+            "height": 48
+          },
+          {
+            "x": 197,
+            "y": 99,
+            "width": 48,
+            "height": 48
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "loop": true,
+        "length": 0.6,
+        "frames": [
+          {
+            "x": 1,
+            "y": 1,
+            "width": 48,
+            "height": 48
+          },
+          {
+            "x": 50,
+            "y": 1,
+            "width": 48,
+            "height": 48
+          },
+          {
+            "x": 99,
+            "y": 1,
+            "width": 48,
+            "height": 48
+          },
+          {
+            "x": 148,
+            "y": 1,
+            "width": 48,
+            "height": 48
+          },
+          {
+            "x": 197,
+            "y": 1,
+            "width": 48,
+            "height": 48
+          },
+          {
+            "x": 246,
+            "y": 1,
+            "width": 48,
+            "height": 48
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "loop": true,
+        "length": 0.6,
+        "frames": [
+          {
+            "x": 1,
+            "y": 50,
+            "width": 48,
+            "height": 48
+          },
+          {
+            "x": 50,
+            "y": 50,
+            "width": 48,
+            "height": 48
+          },
+          {
+            "x": 99,
+            "y": 50,
+            "width": 48,
+            "height": 48
+          },
+          {
+            "x": 148,
+            "y": 50,
+            "width": 48,
+            "height": 48
+          },
+          {
+            "x": 197,
+            "y": 50,
+            "width": 48,
+            "height": 48
+          },
+          {
+            "x": 246,
+            "y": 50,
+            "width": 48,
+            "height": 48
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "loop": true,
+        "length": 0.6,
+        "frames": [
+          {
+            "x": 1,
+            "y": 1,
+            "width": 48,
+            "height": 48
+          },
+          {
+            "x": 1,
+            "y": 99,
+            "width": 48,
+            "height": 48
+          },
+          {
+            "x": 50,
+            "y": 99,
+            "width": 48,
+            "height": 48
+          },
+          {
+            "x": 99,
+            "y": 99,
+            "width": 48,
+            "height": 48
+          },
+          {
+            "x": 148,
+            "y": 99,
+            "width": 48,
+            "height": 48
+          },
+          {
+            "x": 197,
+            "y": 99,
+            "width": 48,
+            "height": 48
+          }
+        ]
+      }
+    ]
+  },
   "viola": {
     "name": "viola",
     "animations": [

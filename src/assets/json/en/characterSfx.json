@@ -76,15 +76,15 @@
         "name": "hurt",
         "files": [
           {
-            "url": "/assets/audio/voices/eugene/eugene_hurt_1.wav",
+            "url": "res://sfx/voices/eugene/eugene_hurt_1.wav",
             "autoplay": false
           },
           {
-            "url": "/assets/audio/voices/eugene/eugene_hurt_2.wav",
+            "url": "res://sfx/voices/eugene/eugene_hurt_2.wav",
             "autoplay": false
           },
           {
-            "url": "/assets/audio/voices/eugene/eugene_hurt_3.wav",
+            "url": "res://sfx/voices/eugene/eugene_hurt_3.wav",
             "autoplay": false
           }
         ]
@@ -93,7 +93,7 @@
         "name": "recording",
         "files": [
           {
-            "url": "/assets/audio/voices/eugene/eugene_recording.wav",
+            "url": "res://sfx/voices/eugene/eugene_recording.wav",
             "autoplay": false
           }
         ]
@@ -102,7 +102,7 @@
         "name": "recording success",
         "files": [
           {
-            "url": "/assets/audio/voices/eugene/eugene_recording_success.wav",
+            "url": "res://sfx/voices/eugene/eugene_recording_success.wav",
             "autoplay": true
           }
         ]
@@ -111,7 +111,7 @@
         "name": "recording failure",
         "files": [
           {
-            "url": "/assets/audio/voices/eugene/eugene_recording_failure.wav",
+            "url": "res://sfx/voices/eugene/eugene_recording_failure.wav",
             "autoplay": false
           }
         ]
@@ -120,7 +120,7 @@
         "name": "defeat",
         "files": [
           {
-            "url": "/assets/audio/voices/eugene/eugene_defeat.wav",
+            "url": "res://sfx/voices/eugene/eugene_defeat.wav",
             "autoplay": false
           }
         ]
@@ -187,15 +187,15 @@
         "name": "hurt",
         "files": [
           {
-            "url": "/assets/audio/voices/felix/felix_hurt_1.wav",
+            "url": "res://sfx/voices/felix/felix_hurt_1.wav",
             "autoplay": false
           },
           {
-            "url": "/assets/audio/voices/felix/felix_hurt_2.wav",
+            "url": "res://sfx/voices/felix/felix_hurt_2.wav",
             "autoplay": false
           },
           {
-            "url": "/assets/audio/voices/felix/felix_hurt_3.wav",
+            "url": "res://sfx/voices/felix/felix_hurt_3.wav",
             "autoplay": false
           }
         ]
@@ -204,7 +204,7 @@
         "name": "recording",
         "files": [
           {
-            "url": "/assets/audio/voices/felix/felix_recording.wav",
+            "url": "res://sfx/voices/felix/felix_recording.wav",
             "autoplay": false
           }
         ]
@@ -213,7 +213,7 @@
         "name": "recording success",
         "files": [
           {
-            "url": "/assets/audio/voices/felix/felix_recording_success.wav",
+            "url": "res://sfx/voices/felix/felix_recording_success.wav",
             "autoplay": true
           }
         ]
@@ -222,7 +222,7 @@
         "name": "recording failure",
         "files": [
           {
-            "url": "/assets/audio/voices/felix/felix_recording_failure.wav",
+            "url": "res://sfx/voices/felix/felix_recording_failure.wav",
             "autoplay": false
           }
         ]
@@ -231,7 +231,7 @@
         "name": "defeat",
         "files": [
           {
-            "url": "/assets/audio/voices/felix/felix_defeat.wav",
+            "url": "res://sfx/voices/felix/felix_defeat.wav",
             "autoplay": false
           }
         ]
@@ -298,15 +298,15 @@
         "name": "hurt",
         "files": [
           {
-            "url": "/assets/audio/voices/kayleigh/kayleigh_hurt_1.wav",
+            "url": "res://sfx/voices/kayleigh/kayleigh_hurt_1.wav",
             "autoplay": false
           },
           {
-            "url": "/assets/audio/voices/kayleigh/kayleigh_hurt_2.wav",
+            "url": "res://sfx/voices/kayleigh/kayleigh_hurt_2.wav",
             "autoplay": false
           },
           {
-            "url": "/assets/audio/voices/kayleigh/kayleigh_hurt_3.wav",
+            "url": "res://sfx/voices/kayleigh/kayleigh_hurt_3.wav",
             "autoplay": false
           }
         ]
@@ -315,7 +315,7 @@
         "name": "recording",
         "files": [
           {
-            "url": "/assets/audio/voices/kayleigh/kayleigh_recording.wav",
+            "url": "res://sfx/voices/kayleigh/kayleigh_recording.wav",
             "autoplay": false
           }
         ]
@@ -324,7 +324,7 @@
         "name": "recording success",
         "files": [
           {
-            "url": "/assets/audio/voices/kayleigh/kayleigh_recording_success.wav",
+            "url": "res://sfx/voices/kayleigh/kayleigh_recording_success.wav",
             "autoplay": true
           }
         ]
@@ -333,7 +333,7 @@
         "name": "recording failure",
         "files": [
           {
-            "url": "/assets/audio/voices/kayleigh/kayleigh_recording_failure.wav",
+            "url": "res://sfx/voices/kayleigh/kayleigh_recording_failure.wav",
             "autoplay": false
           }
         ]
@@ -342,7 +342,7 @@
         "name": "defeat",
         "files": [
           {
-            "url": "/assets/audio/voices/kayleigh/kayleigh_defeat.wav",
+            "url": "res://sfx/voices/kayleigh/kayleigh_defeat.wav",
             "autoplay": false
           }
         ]
@@ -409,15 +409,15 @@
         "name": "hurt",
         "files": [
           {
-            "url": "/assets/audio/voices/meredith/meredith_hurt_1.wav",
+            "url": "res://sfx/voices/meredith/meredith_hurt_1.wav",
             "autoplay": false
           },
           {
-            "url": "/assets/audio/voices/meredith/meredith_hurt_2.wav",
+            "url": "res://sfx/voices/meredith/meredith_hurt_2.wav",
             "autoplay": false
           },
           {
-            "url": "/assets/audio/voices/meredith/meredith_hurt_3.wav",
+            "url": "res://sfx/voices/meredith/meredith_hurt_3.wav",
             "autoplay": false
           }
         ]
@@ -426,7 +426,7 @@
         "name": "recording",
         "files": [
           {
-            "url": "/assets/audio/voices/meredith/meredith_recording.wav",
+            "url": "res://sfx/voices/meredith/meredith_recording.wav",
             "autoplay": false
           }
         ]
@@ -435,7 +435,7 @@
         "name": "recording success",
         "files": [
           {
-            "url": "/assets/audio/voices/meredith/meredith_recording_success.wav",
+            "url": "res://sfx/voices/meredith/meredith_recording_success.wav",
             "autoplay": true
           }
         ]
@@ -444,7 +444,7 @@
         "name": "recording failure",
         "files": [
           {
-            "url": "/assets/audio/voices/meredith/meredith_recording_failure.wav",
+            "url": "res://sfx/voices/meredith/meredith_recording_failure.wav",
             "autoplay": false
           }
         ]
@@ -453,7 +453,166 @@
         "name": "defeat",
         "files": [
           {
-            "url": "/assets/audio/voices/meredith/meredith_defeat.wav",
+            "url": "res://sfx/voices/meredith/meredith_defeat.wav",
+            "autoplay": false
+          }
+        ]
+      }
+    ]
+  },
+  "sunny_partner": {
+    "file": "sunny_partner",
+    "windup": [],
+    "hurt": [
+      {
+        "id": 2,
+        "path": "res://sfx/voices/sunny/sunny_hurt_1.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 7,
+        "path": "res://sfx/voices/sunny/sunny_hurt_2.wav",
+        "type": "AudioStream"
+      },
+      {
+        "id": 3,
+        "path": "res://sfx/voices/sunny/sunny_hurt_3.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "recording": [
+      {
+        "id": 8,
+        "path": "res://sfx/voices/sunny/sunny_recording.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "recording_success": [
+      {
+        "id": 6,
+        "path": "res://sfx/voices/sunny/sunny_success.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "recording_failure": [
+      {
+        "id": 4,
+        "path": "res://sfx/voices/sunny/sunny_failure.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "transform": [],
+    "defeat": [
+      {
+        "id": 5,
+        "path": "res://sfx/voices/sunny/sunny_defeat.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "greeting": [],
+    "farewell": [],
+    "thanks": [],
+    "sigh_2": [],
+    "surprise_2": [],
+    "thinking": [],
+    "audioFiles": [
+      {
+        "name": "hurt",
+        "files": [
+          {
+            "url": "res://sfx/voices/sunny/sunny_hurt_1.wav",
+            "autoplay": false
+          },
+          {
+            "url": "res://sfx/voices/sunny/sunny_hurt_2.wav",
+            "autoplay": false
+          },
+          {
+            "url": "res://sfx/voices/sunny/sunny_hurt_3.wav",
+            "autoplay": false
+          }
+        ]
+      },
+      {
+        "name": "recording",
+        "files": [
+          {
+            "url": "res://sfx/voices/sunny/sunny_recording.wav",
+            "autoplay": false
+          }
+        ]
+      },
+      {
+        "name": "recording success",
+        "files": [
+          {
+            "url": "res://sfx/voices/sunny/sunny_success.wav",
+            "autoplay": false
+          }
+        ]
+      },
+      {
+        "name": "recording failure",
+        "files": [
+          {
+            "url": "res://sfx/voices/sunny/sunny_failure.wav",
+            "autoplay": false
+          }
+        ]
+      },
+      {
+        "name": "defeat",
+        "files": [
+          {
+            "url": "res://sfx/voices/sunny/sunny_defeat.wav",
+            "autoplay": false
+          }
+        ]
+      }
+    ]
+  },
+  "sunny": {
+    "file": "sunny",
+    "windup": [],
+    "hurt": [],
+    "recording": [],
+    "recording_success": [],
+    "recording_failure": [],
+    "transform": [
+      {
+        "id": 3,
+        "path": "res://sfx/voices/sunny/sunny_accept.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "defeat": [
+      {
+        "id": 2,
+        "path": "res://sfx/voices/sunny/sunny_surprise_1.wav",
+        "type": "AudioStream"
+      }
+    ],
+    "greeting": [],
+    "farewell": [],
+    "thanks": [],
+    "sigh_2": [],
+    "surprise_2": [],
+    "thinking": [],
+    "audioFiles": [
+      {
+        "name": "transform",
+        "files": [
+          {
+            "url": "res://sfx/voices/sunny/sunny_accept.wav",
+            "autoplay": false
+          }
+        ]
+      },
+      {
+        "name": "defeat",
+        "files": [
+          {
+            "url": "res://sfx/voices/sunny/sunny_surprise_1.wav",
             "autoplay": false
           }
         ]
@@ -520,15 +679,15 @@
         "name": "hurt",
         "files": [
           {
-            "url": "/assets/audio/voices/viola/viola_hurt_1.wav",
+            "url": "res://sfx/voices/viola/viola_hurt_1.wav",
             "autoplay": false
           },
           {
-            "url": "/assets/audio/voices/viola/viola_hurt_2.wav",
+            "url": "res://sfx/voices/viola/viola_hurt_2.wav",
             "autoplay": false
           },
           {
-            "url": "/assets/audio/voices/viola/viola_hurt_3.wav",
+            "url": "res://sfx/voices/viola/viola_hurt_3.wav",
             "autoplay": false
           }
         ]
@@ -537,7 +696,7 @@
         "name": "recording",
         "files": [
           {
-            "url": "/assets/audio/voices/viola/viola_recording.wav",
+            "url": "res://sfx/voices/viola/viola_recording.wav",
             "autoplay": false
           }
         ]
@@ -546,7 +705,7 @@
         "name": "recording success",
         "files": [
           {
-            "url": "/assets/audio/voices/viola/viola_recording_success.wav",
+            "url": "res://sfx/voices/viola/viola_recording_success.wav",
             "autoplay": true
           }
         ]
@@ -555,7 +714,7 @@
         "name": "recording failure",
         "files": [
           {
-            "url": "/assets/audio/voices/viola/viola_recording_failure.wav",
+            "url": "res://sfx/voices/viola/viola_recording_failure.wav",
             "autoplay": false
           }
         ]
@@ -564,7 +723,7 @@
         "name": "defeat",
         "files": [
           {
-            "url": "/assets/audio/voices/viola/viola_defeat.wav",
+            "url": "res://sfx/voices/viola/viola_defeat.wav",
             "autoplay": false
           }
         ]

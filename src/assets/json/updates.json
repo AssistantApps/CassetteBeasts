@@ -1,0 +1,28 @@
+[
+    {
+        "id": "543351239572719530",
+        "name": "Sunshine Update",
+        "image": "sunshine.jpg",
+        "date": "2025-04-07",
+        "version": "1.8",
+        "monsters": [
+            "bear1",
+            "bear2",
+            "minosteam"
+        ],
+        "characters": [
+            "sunny"
+        ],
+        "moves": [
+            "fuel_injection",
+            "royal_flush"
+        ],
+        "statusEffects": [
+            "channeled_power",
+            "coating_typeless"
+        ],
+        "world": [
+            "gauntlet"
+        ]
+    }
+]
