@@ -101,6 +101,28 @@
         ]
       },
       {
+        "id": "fuel_injection",
+        "name_localised": "Fuel Injection",
+        "category_name_localised": "Status Effect",
+        "power": 0,
+        "accuracy": 100,
+        "elemental_types_elements": [
+          {
+            "id": "fire",
+            "name": "ELEMENTAL_TYPE_FIRE",
+            "sort_order": 0,
+            "sparkle": false,
+            "icon": {
+              "id": 1,
+              "path": "res://ui/icons/types/element_fire.png",
+              "type": "Texture"
+            },
+            "loot_table": "",
+            "name_localised": "Fire"
+          }
+        ]
+      },
+      {
         "id": "liftoff",
         "name_localised": "Liftoff",
         "category_name_localised": "Status Effect",
@@ -572,6 +594,35 @@
         ]
       }
     ]
+  },
+  "channeled_power": {
+    "id": "channeled_power",
+    "name": "STATUS_CHANNELED_POWER_NAME",
+    "description": "STATUS_CHANNELED_POWER_DESCRIPTION",
+    "has_duration": false,
+    "reduce_duration_at": 0,
+    "icon": {
+      "id": 3,
+      "path": "res://ui/icons/status_effects/channeled_power.png",
+      "type": "Texture"
+    },
+    "is_removable": false,
+    "is_buff": true,
+    "is_debuff": false,
+    "is_decoy": false,
+    "always_hidden_from_display": false,
+    "tags": [
+      "archangel"
+    ],
+    "toast_on_remove": "",
+    "name_modifier": "",
+    "sprite_animation_prefix": "",
+    "sprite_animation_prefix_priority": "0",
+    "stats_affected": [],
+    "name_localised": "Channelled Power",
+    "description_localised": "Characters with the Channelled Power status borrow the power of an Archangel. They do not lose AP when they use it, and they gain their patron’s Angelic Attack.",
+    "meta_image_url": "/assets/img/meta/en/statusEffects/channeled_power.png",
+    "moves_that_cause_this_effect": []
   },
   "close_encounter": {
     "id": "close_encounter",
@@ -1623,6 +1674,30 @@
       }
     ]
   },
+  "coating_typeless": {
+    "id": "coating_typeless",
+    "name": "STATUS_COATING_TYPELESS_NAME",
+    "description": "STATUS_COATING_DESCRIPTION",
+    "has_duration": false,
+    "reduce_duration_at": 2,
+    "is_removable": false,
+    "is_buff": true,
+    "is_debuff": false,
+    "is_decoy": false,
+    "always_hidden_from_display": true,
+    "tags": [
+      "coating_typeless"
+    ],
+    "toast_on_remove": "",
+    "name_modifier": "",
+    "sprite_animation_prefix": "",
+    "sprite_animation_prefix_priority": "0",
+    "stats_affected": [],
+    "name_localised": "Typeless Coating",
+    "description_localised": "Coatings change the elemental type of a character for a certain number of turns.",
+    "meta_image_url": "/assets/img/meta/en/statusEffects/coating_typeless.png",
+    "moves_that_cause_this_effect": []
+  },
   "coating_water": {
     "id": "coating_water",
     "name": "STATUS_COATING_WATER_NAME",
@@ -1713,7 +1788,9 @@
     "is_debuff": true,
     "is_decoy": false,
     "always_hidden_from_display": false,
-    "tags": [],
+    "tags": [
+      "conductive"
+    ],
     "toast_on_remove": "",
     "name_modifier": "",
     "sprite_animation_prefix": "",
@@ -2553,7 +2630,9 @@
     "is_debuff": true,
     "is_decoy": false,
     "always_hidden_from_display": false,
-    "tags": [],
+    "tags": [
+      "fog"
+    ],
     "toast_on_remove": "",
     "name_modifier": "",
     "sprite_animation_prefix": "",
@@ -4208,14 +4287,6 @@
     "meta_image_url": "/assets/img/meta/en/statusEffects/stat_accuracy_down.png",
     "moves_that_cause_this_effect": [
       {
-        "id": "criticise",
-        "name_localised": "Peekaboo",
-        "category_name_localised": "Status Effect",
-        "power": 0,
-        "accuracy": 100,
-        "elemental_types_elements": []
-      },
-      {
         "id": "frozen_ground",
         "name_localised": "Frozen Ground",
         "category_name_localised": "Status Effect",
@@ -5347,6 +5418,28 @@
     "description_localised": "",
     "meta_image_url": "/assets/img/meta/en/statusEffects/stat_speed_up.png",
     "moves_that_cause_this_effect": [
+      {
+        "id": "fuel_injection",
+        "name_localised": "Fuel Injection",
+        "category_name_localised": "Status Effect",
+        "power": 0,
+        "accuracy": 100,
+        "elemental_types_elements": [
+          {
+            "id": "fire",
+            "name": "ELEMENTAL_TYPE_FIRE",
+            "sort_order": 0,
+            "sparkle": false,
+            "icon": {
+              "id": 1,
+              "path": "res://ui/icons/types/element_fire.png",
+              "type": "Texture"
+            },
+            "loot_table": "",
+            "name_localised": "Fire"
+          }
+        ]
+      },
       {
         "id": "liftoff",
         "name_localised": "Liftoff",

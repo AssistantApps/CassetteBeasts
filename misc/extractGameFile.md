@@ -18,7 +18,6 @@ Use [Godot RE Tools](https://github.com/bruvzg/gdsdecomp/releases) to convert so
   - This will create `.txt` files
 - All json files in:
   - `sprites/monsters`
-  - `sprites/monsters`
   - `sprites/characters/battle`
   - `sprites/monsters/world`
   - Each folder in `sprites/fusions`

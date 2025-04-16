@@ -180,7 +180,10 @@ const schemaOverride: IPersonSchema = {
                               class={`hidden ${file.autoplay ? 'autoplay' : ''}`}
                             >
                               <track kind="captions" srclang="en" label="english_captions" />
-                              <source src={file.url} type="audio/wav" />
+                              <source
+                                src={file.url.replace('res://sfx/', '/assets/audio/')}
+                                type="audio/wav"
+                              />
                             </audio>
                           </Fragment>
                         ))}
@@ -195,7 +198,7 @@ const schemaOverride: IPersonSchema = {
 
         <section class="wiki-section animate__animated animate__fadeIn">
           <a
-            href="https://wiki.cassettebeasts.com/wiki/{data.name_localised}"
+            href={`https://wiki.cassettebeasts.com/wiki/${data.name_localised}`}
             rel="noopener noreferrer"
             target="_blank"
             title={`view ${data.name_localised} on the wiki`}

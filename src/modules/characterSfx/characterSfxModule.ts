@@ -51,7 +51,7 @@ export class CharacterSfxModule extends CommonModule<ICharacterSfx, ICharacterSf
     for (const detail of this._baseDetails) {
       const mapKey = detail.file.toLowerCase();
 
-      const characterData = characterModule.get(mapKey);
+      const characterData = characterModule.get(mapKey.replace('_partner', ''));
       if (characterData == null) continue;
 
       const audioFiles: Array<ICharacterSfxFiles> = [];
@@ -62,7 +62,7 @@ export class CharacterSfxModule extends CommonModule<ICharacterSfx, ICharacterSf
 
         const outputFiles: Array<ICharacterSfxFile> = [];
         for (const extResource of charSfxValue as Array<IExternalResource>) {
-          const outputFile = extResource.path.replace('res://sfx/', '/assets/audio/');
+          const outputFile = extResource.path;
           outputFiles.push({
             url: outputFile,
             autoplay: outputFile.includes('recording_success'),

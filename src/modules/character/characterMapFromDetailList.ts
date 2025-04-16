@@ -17,7 +17,7 @@ export const characterMapFromDetailList = (props: {
   return {
     id: getCleanedString(props.resourceMap['id']),
     name: getCleanedString(props.resourceMap['name']),
-    resource_name: getCleanedString(props.resourceMap['resource_name']),
+    resource_name: fixCharacterResourceName(getCleanedString(props.resourceMap['resource_name'])),
     exp_yield: tryParseInt(props.resourceMap['exp_yield']) ?? 0,
     require_dlc: stringToBool(props.resourceMap['require_dlc']),
     battle_sprite: getExternalResource(
@@ -54,4 +54,10 @@ export const characterMapFromDetailList = (props: {
     sfx: getExternalResource(props.resourceMap['sfx'], props.externalResourcesMap),
     portraits: [],
   };
+};
+
+const fixCharacterResourceName = (name: string): string => {
+  if (name == 'KAYLEIGH_NAME Lv100') return 'kayleigh.tres';
+  if (name == 'SUNNY_NAME Lv100') return 'sunny.tres';
+  return name;
 };

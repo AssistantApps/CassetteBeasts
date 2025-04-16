@@ -5063,6 +5063,850 @@
       }
     }
   },
+  "bear1": {
+    "id": "bear1",
+    "nodes_enhanced": {
+      "Arm_Back": {
+        "name": "Arm_Back",
+        "type": "Node2D",
+        "parent": ".",
+        "force_usage": false,
+        "inverse_match": false,
+        "visible": true,
+        "position": {
+          "x": 27,
+          "y": -17
+        },
+        "match_part": "",
+        "child": {},
+        "index": 0,
+        "instance_external_path": ""
+      },
+      "bear1_arm_back_Arm_Back": {
+        "name": "bear1_arm_back",
+        "type": "sub",
+        "parent": "Arm_Back",
+        "instance": "ExtResource( 9 )",
+        "force_usage": false,
+        "inverse_match": false,
+        "visible": true,
+        "position": {},
+        "match_part": "",
+        "child": {},
+        "index": 1,
+        "instance_external": {
+          "id": 9,
+          "path": "res://sprites/fusions/arms/bear1_arm_back.json",
+          "type": "PackedScene"
+        },
+        "instance_external_path": "res://sprites/fusions/arms/bear1_arm_back.json"
+      },
+      "Tail": {
+        "name": "Tail",
+        "type": "Node2D",
+        "parent": ".",
+        "force_usage": false,
+        "inverse_match": false,
+        "visible": true,
+        "position": {
+          "x": 10,
+          "y": 19
+        },
+        "match_part": "",
+        "child": {},
+        "index": 2,
+        "instance_external_path": ""
+      },
+      "bear1_tail_Tail": {
+        "name": "bear1_tail",
+        "type": "sub",
+        "parent": "Tail",
+        "instance": "ExtResource( 7 )",
+        "force_usage": false,
+        "inverse_match": false,
+        "visible": true,
+        "position": {},
+        "match_part": "",
+        "child": {},
+        "index": 3,
+        "instance_external": {
+          "id": 7,
+          "path": "res://sprites/fusions/tail/bear1_tail.json",
+          "type": "PackedScene"
+        },
+        "instance_external_path": "res://sprites/fusions/tail/bear1_tail.json"
+      },
+      "FrontLeg_Back": {
+        "name": "FrontLeg_Back",
+        "type": "Node2D",
+        "parent": ".",
+        "force_usage": false,
+        "inverse_match": false,
+        "visible": false,
+        "position": {
+          "x": 25,
+          "y": 37
+        },
+        "match_part": "",
+        "child": {},
+        "index": 4,
+        "instance_external_path": ""
+      },
+      "bear1_leg_back_FrontLeg_Back": {
+        "name": "bear1_leg_back",
+        "type": "sub",
+        "parent": "FrontLeg_Back",
+        "instance": "ExtResource( 8 )",
+        "force_usage": false,
+        "inverse_match": false,
+        "visible": true,
+        "position": {},
+        "match_part": "",
+        "child": {},
+        "index": 5,
+        "instance_external": {
+          "id": 8,
+          "path": "res://sprites/fusions/legs/bear1_leg_back.json",
+          "type": "PackedScene"
+        },
+        "instance_external_path": "res://sprites/fusions/legs/bear1_leg_back.json"
+      },
+      "BackLeg_Back": {
+        "name": "BackLeg_Back",
+        "type": "Node2D",
+        "parent": ".",
+        "force_usage": false,
+        "inverse_match": false,
+        "visible": true,
+        "position": {
+          "x": 59,
+          "y": 41
+        },
+        "match_part": "",
+        "child": {},
+        "index": 6,
+        "instance_external_path": ""
+      },
+      "bear1_leg_back_BackLeg_Back": {
+        "name": "bear1_leg_back",
+        "type": "sub",
+        "parent": "BackLeg_Back",
+        "instance": "ExtResource( 8 )",
+        "force_usage": false,
+        "inverse_match": false,
+        "visible": true,
+        "position": {},
+        "match_part": "",
+        "child": {},
+        "index": 7,
+        "instance_external": {
+          "id": 8,
+          "path": "res://sprites/fusions/legs/bear1_leg_back.json",
+          "type": "PackedScene"
+        },
+        "instance_external_path": "res://sprites/fusions/legs/bear1_leg_back.json"
+      },
+      "FrontLeg_Front": {
+        "name": "FrontLeg_Front",
+        "type": "Node2D",
+        "parent": ".",
+        "force_usage": false,
+        "inverse_match": false,
+        "visible": false,
+        "position": {
+          "x": 23,
+          "y": 40
+        },
+        "match_part": "FrontLeg_Back",
+        "child": {},
+        "index": 8,
+        "instance_external_path": ""
+      },
+      "bear1_leg_front_FrontLeg_Front": {
+        "name": "bear1_leg_front",
+        "type": "sub",
+        "parent": "FrontLeg_Front",
+        "instance": "ExtResource( 10 )",
+        "force_usage": false,
+        "inverse_match": false,
+        "visible": true,
+        "position": {},
+        "match_part": "",
+        "child": {},
+        "index": 9,
+        "instance_external": {
+          "id": 10,
+          "path": "res://sprites/fusions/legs/bear1_leg_front.json",
+          "type": "PackedScene"
+        },
+        "instance_external_path": "res://sprites/fusions/legs/bear1_leg_front.json"
+      },
+      "Body": {
+        "name": "Body",
+        "type": "Node2D",
+        "parent": ".",
+        "force_usage": true,
+        "inverse_match": false,
+        "visible": true,
+        "position": {
+          "x": 30,
+          "y": 9
+        },
+        "match_part": "",
+        "child": {},
+        "index": 10,
+        "instance_external_path": ""
+      },
+      "bear1_body_Body": {
+        "name": "bear1_body",
+        "type": "sub",
+        "parent": "Body",
+        "instance": "ExtResource( 4 )",
+        "force_usage": false,
+        "inverse_match": false,
+        "visible": true,
+        "position": {},
+        "match_part": "",
+        "child": {},
+        "index": 11,
+        "instance_external": {
+          "id": 4,
+          "path": "res://sprites/fusions/body/bear1_body.json",
+          "type": "PackedScene"
+        },
+        "instance_external_path": "res://sprites/fusions/body/bear1_body.json"
+      },
+      "BackLeg_Front": {
+        "name": "BackLeg_Front",
+        "type": "Node2D",
+        "parent": ".",
+        "force_usage": false,
+        "inverse_match": false,
+        "visible": true,
+        "position": {
+          "x": 37,
+          "y": 43
+        },
+        "match_part": "BackLeg_Back",
+        "child": {},
+        "index": 12,
+        "instance_external_path": ""
+      },
+      "bear1_leg_front_BackLeg_Front": {
+        "name": "bear1_leg_front",
+        "type": "sub",
+        "parent": "BackLeg_Front",
+        "instance": "ExtResource( 10 )",
+        "force_usage": false,
+        "inverse_match": false,
+        "visible": true,
+        "position": {},
+        "match_part": "",
+        "child": {},
+        "index": 13,
+        "instance_external": {
+          "id": 10,
+          "path": "res://sprites/fusions/legs/bear1_leg_front.json",
+          "type": "PackedScene"
+        },
+        "instance_external_path": "res://sprites/fusions/legs/bear1_leg_front.json"
+      },
+      "HelmetBack": {
+        "name": "HelmetBack",
+        "type": "Node2D",
+        "parent": ".",
+        "force_usage": false,
+        "inverse_match": false,
+        "visible": true,
+        "position": {
+          "x": 29,
+          "y": -29
+        },
+        "match_part": "",
+        "child": {},
+        "index": 14,
+        "instance_external_path": ""
+      },
+      "bear1_helmet_back_HelmetBack": {
+        "name": "bear1_helmet_back",
+        "type": "sub",
+        "parent": "HelmetBack",
+        "instance": "ExtResource( 3 )",
+        "force_usage": false,
+        "inverse_match": false,
+        "visible": true,
+        "position": {},
+        "match_part": "",
+        "child": {},
+        "index": 15,
+        "instance_external": {
+          "id": 3,
+          "path": "res://sprites/fusions/helmet/bear1_helmet_back.json",
+          "type": "PackedScene"
+        },
+        "instance_external_path": "res://sprites/fusions/helmet/bear1_helmet_back.json"
+      },
+      "Head": {
+        "name": "Head",
+        "type": "Node2D",
+        "parent": ".",
+        "force_usage": false,
+        "inverse_match": true,
+        "visible": true,
+        "position": {
+          "x": 29,
+          "y": -29
+        },
+        "match_part": "HelmetBack",
+        "child": {},
+        "index": 16,
+        "instance_external_path": ""
+      },
+      "bear1_head_Head": {
+        "name": "bear1_head",
+        "type": "sub",
+        "parent": "Head",
+        "instance": "ExtResource( 5 )",
+        "force_usage": false,
+        "inverse_match": false,
+        "visible": true,
+        "position": {},
+        "match_part": "",
+        "child": {},
+        "index": 17,
+        "instance_external": {
+          "id": 5,
+          "path": "res://sprites/fusions/head/bear1_head.json",
+          "type": "PackedScene"
+        },
+        "instance_external_path": "res://sprites/fusions/head/bear1_head.json"
+      },
+      "HelmetFront": {
+        "name": "HelmetFront",
+        "type": "Node2D",
+        "parent": ".",
+        "force_usage": false,
+        "inverse_match": false,
+        "visible": true,
+        "position": {
+          "x": 29,
+          "y": -29
+        },
+        "match_part": "HelmetBack",
+        "child": {},
+        "index": 18,
+        "instance_external_path": ""
+      },
+      "bear1_helmet_front_HelmetFront": {
+        "name": "bear1_helmet_front",
+        "type": "sub",
+        "parent": "HelmetFront",
+        "instance": "ExtResource( 6 )",
+        "force_usage": false,
+        "inverse_match": false,
+        "visible": true,
+        "position": {},
+        "match_part": "",
+        "child": {},
+        "index": 19,
+        "instance_external": {
+          "id": 6,
+          "path": "res://sprites/fusions/helmet/bear1_helmet_front.json",
+          "type": "PackedScene"
+        },
+        "instance_external_path": "res://sprites/fusions/helmet/bear1_helmet_front.json"
+      },
+      "Arm_Front": {
+        "name": "Arm_Front",
+        "type": "Node2D",
+        "parent": ".",
+        "force_usage": false,
+        "inverse_match": false,
+        "visible": true,
+        "position": {
+          "x": 5,
+          "y": -18
+        },
+        "match_part": "Arm_Back",
+        "child": {},
+        "index": 20,
+        "instance_external_path": ""
+      },
+      "bear1_arm_front_Arm_Front": {
+        "name": "bear1_arm_front",
+        "type": "sub",
+        "parent": "Arm_Front",
+        "instance": "ExtResource( 11 )",
+        "force_usage": false,
+        "inverse_match": false,
+        "visible": true,
+        "position": {},
+        "match_part": "",
+        "child": {},
+        "index": 21,
+        "instance_external": {
+          "id": 11,
+          "path": "res://sprites/fusions/arms/bear1_arm_front.json",
+          "type": "PackedScene"
+        },
+        "instance_external_path": "res://sprites/fusions/arms/bear1_arm_front.json"
+      },
+      "attack": {
+        "name": "attack",
+        "type": "Node2D",
+        "parent": ".",
+        "force_usage": false,
+        "inverse_match": false,
+        "visible": true,
+        "position": {
+          "x": 108,
+          "y": 24
+        },
+        "match_part": "",
+        "child": {},
+        "index": 22,
+        "instance_external_path": ""
+      },
+      "hit": {
+        "name": "hit",
+        "type": "Node2D",
+        "parent": ".",
+        "force_usage": false,
+        "inverse_match": false,
+        "visible": true,
+        "position": {
+          "x": 67,
+          "y": 29
+        },
+        "match_part": "",
+        "child": {},
+        "index": 23,
+        "instance_external_path": ""
+      }
+    }
+  },
+  "bear2": {
+    "id": "bear2",
+    "nodes_enhanced": {
+      "Arm_Back": {
+        "name": "Arm_Back",
+        "type": "Node2D",
+        "parent": ".",
+        "force_usage": false,
+        "inverse_match": false,
+        "visible": true,
+        "position": {
+          "x": 24,
+          "y": -13
+        },
+        "match_part": "",
+        "child": {},
+        "index": 0,
+        "instance_external_path": ""
+      },
+      "bear1_arm_back_Arm_Back": {
+        "name": "bear1_arm_back",
+        "type": "sub",
+        "parent": "Arm_Back",
+        "instance": "ExtResource( 9 )",
+        "force_usage": false,
+        "inverse_match": false,
+        "visible": true,
+        "position": {},
+        "match_part": "",
+        "child": {},
+        "index": 1,
+        "instance_external": {
+          "id": 9,
+          "path": "res://sprites/fusions/arms/bear1_arm_back.json",
+          "type": "PackedScene"
+        },
+        "instance_external_path": "res://sprites/fusions/arms/bear1_arm_back.json"
+      },
+      "Tail": {
+        "name": "Tail",
+        "type": "Node2D",
+        "parent": ".",
+        "force_usage": false,
+        "inverse_match": false,
+        "visible": true,
+        "position": {
+          "x": 4,
+          "y": 29
+        },
+        "match_part": "",
+        "child": {},
+        "index": 2,
+        "instance_external_path": ""
+      },
+      "bear1_tail_Tail": {
+        "name": "bear1_tail",
+        "type": "sub",
+        "parent": "Tail",
+        "instance": "ExtResource( 7 )",
+        "force_usage": false,
+        "inverse_match": false,
+        "visible": true,
+        "position": {},
+        "match_part": "",
+        "child": {},
+        "index": 3,
+        "instance_external": {
+          "id": 7,
+          "path": "res://sprites/fusions/tail/bear1_tail.json",
+          "type": "PackedScene"
+        },
+        "instance_external_path": "res://sprites/fusions/tail/bear1_tail.json"
+      },
+      "FrontLeg_Back": {
+        "name": "FrontLeg_Back",
+        "type": "Node2D",
+        "parent": ".",
+        "force_usage": false,
+        "inverse_match": false,
+        "visible": false,
+        "position": {
+          "x": 25,
+          "y": 37
+        },
+        "match_part": "",
+        "child": {},
+        "index": 4,
+        "instance_external_path": ""
+      },
+      "bear1_leg_back_FrontLeg_Back": {
+        "name": "bear1_leg_back",
+        "type": "sub",
+        "parent": "FrontLeg_Back",
+        "instance": "ExtResource( 8 )",
+        "force_usage": false,
+        "inverse_match": false,
+        "visible": true,
+        "position": {},
+        "match_part": "",
+        "child": {},
+        "index": 5,
+        "instance_external": {
+          "id": 8,
+          "path": "res://sprites/fusions/legs/bear1_leg_back.json",
+          "type": "PackedScene"
+        },
+        "instance_external_path": "res://sprites/fusions/legs/bear1_leg_back.json"
+      },
+      "BackLeg_Back": {
+        "name": "BackLeg_Back",
+        "type": "Node2D",
+        "parent": ".",
+        "force_usage": false,
+        "inverse_match": false,
+        "visible": true,
+        "position": {
+          "x": 56,
+          "y": 53
+        },
+        "match_part": "",
+        "child": {},
+        "index": 6,
+        "instance_external_path": ""
+      },
+      "bear1_leg_back_BackLeg_Back": {
+        "name": "bear1_leg_back",
+        "type": "sub",
+        "parent": "BackLeg_Back",
+        "instance": "ExtResource( 8 )",
+        "force_usage": false,
+        "inverse_match": false,
+        "visible": true,
+        "position": {},
+        "match_part": "",
+        "child": {},
+        "index": 7,
+        "instance_external": {
+          "id": 8,
+          "path": "res://sprites/fusions/legs/bear1_leg_back.json",
+          "type": "PackedScene"
+        },
+        "instance_external_path": "res://sprites/fusions/legs/bear1_leg_back.json"
+      },
+      "FrontLeg_Front": {
+        "name": "FrontLeg_Front",
+        "type": "Node2D",
+        "parent": ".",
+        "force_usage": false,
+        "inverse_match": false,
+        "visible": false,
+        "position": {
+          "x": 23,
+          "y": 40
+        },
+        "match_part": "FrontLeg_Back",
+        "child": {},
+        "index": 8,
+        "instance_external_path": ""
+      },
+      "bear1_leg_front_FrontLeg_Front": {
+        "name": "bear1_leg_front",
+        "type": "sub",
+        "parent": "FrontLeg_Front",
+        "instance": "ExtResource( 10 )",
+        "force_usage": false,
+        "inverse_match": false,
+        "visible": true,
+        "position": {},
+        "match_part": "",
+        "child": {},
+        "index": 9,
+        "instance_external": {
+          "id": 10,
+          "path": "res://sprites/fusions/legs/bear1_leg_front.json",
+          "type": "PackedScene"
+        },
+        "instance_external_path": "res://sprites/fusions/legs/bear1_leg_front.json"
+      },
+      "BackLeg_Front": {
+        "name": "BackLeg_Front",
+        "type": "Node2D",
+        "parent": ".",
+        "force_usage": false,
+        "inverse_match": false,
+        "visible": true,
+        "position": {
+          "x": 34,
+          "y": 55
+        },
+        "match_part": "BackLeg_Back",
+        "child": {},
+        "index": 10,
+        "instance_external_path": ""
+      },
+      "bear1_leg_front_BackLeg_Front": {
+        "name": "bear1_leg_front",
+        "type": "sub",
+        "parent": "BackLeg_Front",
+        "instance": "ExtResource( 10 )",
+        "force_usage": false,
+        "inverse_match": false,
+        "visible": true,
+        "position": {},
+        "match_part": "",
+        "child": {},
+        "index": 11,
+        "instance_external": {
+          "id": 10,
+          "path": "res://sprites/fusions/legs/bear1_leg_front.json",
+          "type": "PackedScene"
+        },
+        "instance_external_path": "res://sprites/fusions/legs/bear1_leg_front.json"
+      },
+      "Body": {
+        "name": "Body",
+        "type": "Node2D",
+        "parent": ".",
+        "force_usage": true,
+        "inverse_match": false,
+        "visible": true,
+        "position": {
+          "x": 30,
+          "y": 9
+        },
+        "match_part": "",
+        "child": {},
+        "index": 12,
+        "instance_external_path": ""
+      },
+      "bear2_body_Body": {
+        "name": "bear2_body",
+        "type": "sub",
+        "parent": "Body",
+        "instance": "ExtResource( 3 )",
+        "force_usage": false,
+        "inverse_match": false,
+        "visible": true,
+        "position": {},
+        "match_part": "",
+        "child": {},
+        "index": 13,
+        "instance_external": {
+          "id": 3,
+          "path": "res://sprites/fusions/body/bear2_body.json",
+          "type": "PackedScene"
+        },
+        "instance_external_path": "res://sprites/fusions/body/bear2_body.json"
+      },
+      "HelmetBack": {
+        "name": "HelmetBack",
+        "type": "Node2D",
+        "parent": ".",
+        "force_usage": false,
+        "inverse_match": false,
+        "visible": true,
+        "position": {
+          "x": 26,
+          "y": -32
+        },
+        "match_part": "",
+        "child": {},
+        "index": 14,
+        "instance_external_path": ""
+      },
+      "bear2_helmet_back_HelmetBack": {
+        "name": "bear2_helmet_back",
+        "type": "sub",
+        "parent": "HelmetBack",
+        "instance": "ExtResource( 6 )",
+        "force_usage": false,
+        "inverse_match": false,
+        "visible": true,
+        "position": {},
+        "match_part": "",
+        "child": {},
+        "index": 15,
+        "instance_external": {
+          "id": 6,
+          "path": "res://sprites/fusions/helmet/bear2_helmet_back.json",
+          "type": "PackedScene"
+        },
+        "instance_external_path": "res://sprites/fusions/helmet/bear2_helmet_back.json"
+      },
+      "Head": {
+        "name": "Head",
+        "type": "Node2D",
+        "parent": ".",
+        "force_usage": false,
+        "inverse_match": true,
+        "visible": true,
+        "position": {
+          "x": 26,
+          "y": -32
+        },
+        "match_part": "HelmetBack",
+        "child": {},
+        "index": 16,
+        "instance_external_path": ""
+      },
+      "bear2_head_Head": {
+        "name": "bear2_head",
+        "type": "sub",
+        "parent": "Head",
+        "instance": "ExtResource( 5 )",
+        "force_usage": false,
+        "inverse_match": false,
+        "visible": true,
+        "position": {},
+        "match_part": "",
+        "child": {},
+        "index": 17,
+        "instance_external": {
+          "id": 5,
+          "path": "res://sprites/fusions/head/bear2_head.json",
+          "type": "PackedScene"
+        },
+        "instance_external_path": "res://sprites/fusions/head/bear2_head.json"
+      },
+      "HelmetFront": {
+        "name": "HelmetFront",
+        "type": "Node2D",
+        "parent": ".",
+        "force_usage": false,
+        "inverse_match": false,
+        "visible": true,
+        "position": {
+          "x": 26,
+          "y": -32
+        },
+        "match_part": "HelmetBack",
+        "child": {},
+        "index": 18,
+        "instance_external_path": ""
+      },
+      "bear2_helmet_front_HelmetFront": {
+        "name": "bear2_helmet_front",
+        "type": "sub",
+        "parent": "HelmetFront",
+        "instance": "ExtResource( 4 )",
+        "force_usage": false,
+        "inverse_match": false,
+        "visible": true,
+        "position": {},
+        "match_part": "",
+        "child": {},
+        "index": 19,
+        "instance_external": {
+          "id": 4,
+          "path": "res://sprites/fusions/helmet/bear2_helmet_front.json",
+          "type": "PackedScene"
+        },
+        "instance_external_path": "res://sprites/fusions/helmet/bear2_helmet_front.json"
+      },
+      "Arm_Front": {
+        "name": "Arm_Front",
+        "type": "Node2D",
+        "parent": ".",
+        "force_usage": false,
+        "inverse_match": false,
+        "visible": true,
+        "position": {
+          "x": 5,
+          "y": -13
+        },
+        "match_part": "Arm_Back",
+        "child": {},
+        "index": 20,
+        "instance_external_path": ""
+      },
+      "bear1_arm_front_Arm_Front": {
+        "name": "bear1_arm_front",
+        "type": "sub",
+        "parent": "Arm_Front",
+        "instance": "ExtResource( 11 )",
+        "force_usage": false,
+        "inverse_match": false,
+        "visible": true,
+        "position": {},
+        "match_part": "",
+        "child": {},
+        "index": 21,
+        "instance_external": {
+          "id": 11,
+          "path": "res://sprites/fusions/arms/bear1_arm_front.json",
+          "type": "PackedScene"
+        },
+        "instance_external_path": "res://sprites/fusions/arms/bear1_arm_front.json"
+      },
+      "attack": {
+        "name": "attack",
+        "type": "Node2D",
+        "parent": ".",
+        "force_usage": false,
+        "inverse_match": false,
+        "visible": true,
+        "position": {
+          "x": 108,
+          "y": 29
+        },
+        "match_part": "",
+        "child": {},
+        "index": 22,
+        "instance_external_path": ""
+      },
+      "hit": {
+        "name": "hit",
+        "type": "Node2D",
+        "parent": ".",
+        "force_usage": false,
+        "inverse_match": false,
+        "visible": true,
+        "position": {
+          "x": 67,
+          "y": 29
+        },
+        "match_part": "",
+        "child": {},
+        "index": 23,
+        "instance_external_path": ""
+      }
+    }
+  },
   "binterloper": {
     "id": "binterloper",
     "nodes_enhanced": {
@@ -34861,6 +35705,428 @@
         "position": {
           "x": 66,
           "y": 50
+        },
+        "match_part": "",
+        "child": {},
+        "index": 23,
+        "instance_external_path": ""
+      }
+    }
+  },
+  "minosteam": {
+    "id": "minosteam",
+    "nodes_enhanced": {
+      "Arm_Back": {
+        "name": "Arm_Back",
+        "type": "Node2D",
+        "parent": ".",
+        "force_usage": false,
+        "inverse_match": false,
+        "visible": true,
+        "position": {
+          "x": 38,
+          "y": -17
+        },
+        "match_part": "",
+        "child": {},
+        "index": 0,
+        "instance_external_path": ""
+      },
+      "minosteam_arm_back_Arm_Back": {
+        "name": "minosteam_arm_back",
+        "type": "sub",
+        "parent": "Arm_Back",
+        "instance": "ExtResource( 3 )",
+        "force_usage": false,
+        "inverse_match": false,
+        "visible": true,
+        "position": {},
+        "match_part": "",
+        "child": {},
+        "index": 1,
+        "instance_external": {
+          "id": 3,
+          "path": "res://sprites/fusions/arms/minosteam_arm_back.json",
+          "type": "PackedScene"
+        },
+        "instance_external_path": "res://sprites/fusions/arms/minosteam_arm_back.json"
+      },
+      "Tail": {
+        "name": "Tail",
+        "type": "Node2D",
+        "parent": ".",
+        "force_usage": false,
+        "inverse_match": false,
+        "visible": true,
+        "position": {
+          "x": 24,
+          "y": 24
+        },
+        "match_part": "",
+        "child": {},
+        "index": 2,
+        "instance_external_path": ""
+      },
+      "steam_tail_Tail": {
+        "name": "steam_tail",
+        "type": "sub",
+        "parent": "Tail",
+        "instance": "ExtResource( 4 )",
+        "force_usage": false,
+        "inverse_match": false,
+        "visible": true,
+        "position": {},
+        "match_part": "",
+        "child": {},
+        "index": 3,
+        "instance_external": {
+          "id": 4,
+          "path": "res://sprites/fusions/tail/steam_tail.json",
+          "type": "PackedScene"
+        },
+        "instance_external_path": "res://sprites/fusions/tail/steam_tail.json"
+      },
+      "FrontLeg_Back": {
+        "name": "FrontLeg_Back",
+        "type": "Node2D",
+        "parent": ".",
+        "force_usage": false,
+        "inverse_match": false,
+        "visible": false,
+        "position": {
+          "x": 47,
+          "y": 40
+        },
+        "match_part": "",
+        "child": {},
+        "index": 4,
+        "instance_external_path": ""
+      },
+      "Sprite_FrontLeg_Back": {
+        "name": "Sprite",
+        "type": "sub",
+        "parent": "FrontLeg_Back",
+        "instance": "ExtResource( 8 )",
+        "force_usage": false,
+        "inverse_match": false,
+        "visible": true,
+        "position": {},
+        "match_part": "",
+        "child": {},
+        "index": 5,
+        "instance_external": {
+          "id": 8,
+          "path": "res://sprites/fusions/legs/robot1_leg_back.json",
+          "type": "PackedScene"
+        },
+        "instance_external_path": "res://sprites/fusions/legs/robot1_leg_back.json"
+      },
+      "BackLeg_Back": {
+        "name": "BackLeg_Back",
+        "type": "Node2D",
+        "parent": ".",
+        "force_usage": false,
+        "inverse_match": false,
+        "visible": true,
+        "position": {
+          "x": 63,
+          "y": 42
+        },
+        "match_part": "",
+        "child": {},
+        "index": 6,
+        "instance_external_path": ""
+      },
+      "hoof3_leg_back_BackLeg_Back": {
+        "name": "hoof3_leg_back",
+        "type": "sub",
+        "parent": "BackLeg_Back",
+        "instance": "ExtResource( 9 )",
+        "force_usage": false,
+        "inverse_match": false,
+        "visible": true,
+        "position": {},
+        "match_part": "",
+        "child": {},
+        "index": 7,
+        "instance_external": {
+          "id": 9,
+          "path": "res://sprites/fusions/legs/hoof3_leg_back.json",
+          "type": "PackedScene"
+        },
+        "instance_external_path": "res://sprites/fusions/legs/hoof3_leg_back.json"
+      },
+      "FrontLeg_Front": {
+        "name": "FrontLeg_Front",
+        "type": "Node2D",
+        "parent": ".",
+        "force_usage": false,
+        "inverse_match": false,
+        "visible": false,
+        "position": {
+          "x": 23,
+          "y": 40
+        },
+        "match_part": "FrontLeg_Back",
+        "child": {},
+        "index": 8,
+        "instance_external_path": ""
+      },
+      "Sprite_FrontLeg_Front": {
+        "name": "Sprite",
+        "type": "sub",
+        "parent": "FrontLeg_Front",
+        "instance": "ExtResource( 6 )",
+        "force_usage": false,
+        "inverse_match": false,
+        "visible": true,
+        "position": {},
+        "match_part": "",
+        "child": {},
+        "index": 9,
+        "instance_external": {
+          "id": 6,
+          "path": "res://sprites/fusions/legs/robot1_leg_front.json",
+          "type": "PackedScene"
+        },
+        "instance_external_path": "res://sprites/fusions/legs/robot1_leg_front.json"
+      },
+      "Body": {
+        "name": "Body",
+        "type": "Node2D",
+        "parent": ".",
+        "force_usage": true,
+        "inverse_match": false,
+        "visible": true,
+        "position": {
+          "x": 30,
+          "y": 9
+        },
+        "match_part": "",
+        "child": {},
+        "index": 10,
+        "instance_external_path": ""
+      },
+      "minosteam_body_Body": {
+        "name": "minosteam_body",
+        "type": "sub",
+        "parent": "Body",
+        "instance": "ExtResource( 5 )",
+        "force_usage": false,
+        "inverse_match": false,
+        "visible": true,
+        "position": {},
+        "match_part": "",
+        "child": {},
+        "index": 11,
+        "instance_external": {
+          "id": 5,
+          "path": "res://sprites/fusions/body/minosteam_body.json",
+          "type": "PackedScene"
+        },
+        "instance_external_path": "res://sprites/fusions/body/minosteam_body.json"
+      },
+      "BackLeg_Front": {
+        "name": "BackLeg_Front",
+        "type": "Node2D",
+        "parent": ".",
+        "force_usage": false,
+        "inverse_match": false,
+        "visible": true,
+        "position": {
+          "x": 45,
+          "y": 43
+        },
+        "match_part": "BackLeg_Back",
+        "child": {},
+        "index": 12,
+        "instance_external_path": ""
+      },
+      "hoof3_leg_front_BackLeg_Front": {
+        "name": "hoof3_leg_front",
+        "type": "sub",
+        "parent": "BackLeg_Front",
+        "instance": "ExtResource( 11 )",
+        "force_usage": false,
+        "inverse_match": false,
+        "visible": true,
+        "position": {},
+        "match_part": "",
+        "child": {},
+        "index": 13,
+        "instance_external": {
+          "id": 11,
+          "path": "res://sprites/fusions/legs/hoof3_leg_front.json",
+          "type": "PackedScene"
+        },
+        "instance_external_path": "res://sprites/fusions/legs/hoof3_leg_front.json"
+      },
+      "HelmetBack": {
+        "name": "HelmetBack",
+        "type": "Node2D",
+        "parent": ".",
+        "force_usage": false,
+        "inverse_match": false,
+        "visible": true,
+        "position": {
+          "x": 41,
+          "y": -24
+        },
+        "match_part": "",
+        "child": {},
+        "index": 14,
+        "instance_external_path": ""
+      },
+      "minosteam_helmet_back_HelmetBack": {
+        "name": "minosteam_helmet_back",
+        "type": "sub",
+        "parent": "HelmetBack",
+        "instance": "ExtResource( 12 )",
+        "force_usage": false,
+        "inverse_match": false,
+        "visible": true,
+        "position": {},
+        "match_part": "",
+        "child": {},
+        "index": 15,
+        "instance_external": {
+          "id": 12,
+          "path": "res://sprites/fusions/helmet/minosteam_helmet_back.json",
+          "type": "PackedScene"
+        },
+        "instance_external_path": "res://sprites/fusions/helmet/minosteam_helmet_back.json"
+      },
+      "Head": {
+        "name": "Head",
+        "type": "Node2D",
+        "parent": ".",
+        "force_usage": false,
+        "inverse_match": true,
+        "visible": true,
+        "position": {
+          "x": 41,
+          "y": -24
+        },
+        "match_part": "HelmetBack",
+        "child": {},
+        "index": 16,
+        "instance_external_path": ""
+      },
+      "minosteam_head_Head": {
+        "name": "minosteam_head",
+        "type": "sub",
+        "parent": "Head",
+        "instance": "ExtResource( 7 )",
+        "force_usage": false,
+        "inverse_match": false,
+        "visible": true,
+        "position": {},
+        "match_part": "",
+        "child": {},
+        "index": 17,
+        "instance_external": {
+          "id": 7,
+          "path": "res://sprites/fusions/head/minosteam_head.json",
+          "type": "PackedScene"
+        },
+        "instance_external_path": "res://sprites/fusions/head/minosteam_head.json"
+      },
+      "HelmetFront": {
+        "name": "HelmetFront",
+        "type": "Node2D",
+        "parent": ".",
+        "force_usage": false,
+        "inverse_match": false,
+        "visible": true,
+        "position": {
+          "x": 41,
+          "y": -24
+        },
+        "match_part": "HelmetBack",
+        "child": {},
+        "index": 18,
+        "instance_external_path": ""
+      },
+      "minosteam_helmet_front_HelmetFront": {
+        "name": "minosteam_helmet_front",
+        "type": "sub",
+        "parent": "HelmetFront",
+        "instance": "ExtResource( 10 )",
+        "force_usage": false,
+        "inverse_match": false,
+        "visible": true,
+        "position": {},
+        "match_part": "",
+        "child": {},
+        "index": 19,
+        "instance_external": {
+          "id": 10,
+          "path": "res://sprites/fusions/helmet/minosteam_helmet_front.json",
+          "type": "PackedScene"
+        },
+        "instance_external_path": "res://sprites/fusions/helmet/minosteam_helmet_front.json"
+      },
+      "Arm_Front": {
+        "name": "Arm_Front",
+        "type": "Node2D",
+        "parent": ".",
+        "force_usage": false,
+        "inverse_match": false,
+        "visible": true,
+        "position": {
+          "x": 16,
+          "y": -18
+        },
+        "match_part": "Arm_Back",
+        "child": {},
+        "index": 20,
+        "instance_external_path": ""
+      },
+      "minosteam_arm_front_Arm_Front": {
+        "name": "minosteam_arm_front",
+        "type": "sub",
+        "parent": "Arm_Front",
+        "instance": "ExtResource( 13 )",
+        "force_usage": false,
+        "inverse_match": false,
+        "visible": true,
+        "position": {},
+        "match_part": "",
+        "child": {},
+        "index": 21,
+        "instance_external": {
+          "id": 13,
+          "path": "res://sprites/fusions/arms/minosteam_arm_front.json",
+          "type": "PackedScene"
+        },
+        "instance_external_path": "res://sprites/fusions/arms/minosteam_arm_front.json"
+      },
+      "attack": {
+        "name": "attack",
+        "type": "Node2D",
+        "parent": ".",
+        "force_usage": false,
+        "inverse_match": false,
+        "visible": true,
+        "position": {
+          "x": 119,
+          "y": 24
+        },
+        "match_part": "",
+        "child": {},
+        "index": 22,
+        "instance_external_path": ""
+      },
+      "hit": {
+        "name": "hit",
+        "type": "Node2D",
+        "parent": ".",
+        "force_usage": false,
+        "inverse_match": false,
+        "visible": true,
+        "position": {
+          "x": 67,
+          "y": 29
         },
         "match_part": "",
         "child": {},

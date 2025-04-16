@@ -2018,6 +2018,148 @@
     ]
   },
   {
+    "id": "dungeon_landkeeper2",
+    "habitat_name": "REGION_NAME_LANDKEEPER_HIDEOUT",
+    "habitat_overworld_chunks": [
+      {
+        "id": 15,
+        "path": "res://data/map_metadata/overworld_chunk_metadata/overworld_-4_-1.tres",
+        "type": "Resource"
+      }
+    ],
+    "habitat_endless": true,
+    "min_team_size": 1,
+    "max_team_size": 2,
+    "num_species": 9,
+    "species": [
+      {
+        "hour_max": 24,
+        "hour_min": 0,
+        "weight": 1,
+        "world_monster": {
+          "id": 4,
+          "path": "res://world/monsters/Pawndead.tscn",
+          "type": "PackedScene"
+        },
+        "monster_form": {
+          "id": 11,
+          "path": "res://data/monster_forms/kingrave.tres",
+          "type": "Resource"
+        }
+      },
+      {
+        "hour_max": 24,
+        "hour_min": 0,
+        "weight": 1,
+        "world_monster": {
+          "id": 4,
+          "path": "res://world/monsters/Pawndead.tscn",
+          "type": "PackedScene"
+        },
+        "monster_form": {
+          "id": 13,
+          "path": "res://data/monster_forms/queenyx.tres",
+          "type": "Resource"
+        }
+      },
+      {
+        "hour_max": 24,
+        "hour_min": 0,
+        "weight": 1,
+        "world_monster": {
+          "id": 8,
+          "path": "res://world/monsters/Springheel.tscn",
+          "type": "PackedScene"
+        },
+        "monster_form": {
+          "id": 3,
+          "path": "res://data/monster_forms/ripterra.tres",
+          "type": "Resource"
+        }
+      },
+      {
+        "hour_max": 24,
+        "hour_min": 0,
+        "weight": 1,
+        "world_monster": {
+          "id": 8,
+          "path": "res://world/monsters/Springheel.tscn",
+          "type": "PackedScene"
+        },
+        "monster_form": {
+          "id": 5,
+          "path": "res://data/monster_forms/scampire.tres",
+          "type": "Resource"
+        }
+      },
+      {
+        "hour_max": 24,
+        "hour_min": 0,
+        "weight": 0.5,
+        "monster_form": {
+          "id": 14,
+          "path": "res://data/monster_forms/bear1.tres",
+          "type": "Resource"
+        }
+      },
+      {
+        "hour_max": 24,
+        "hour_min": 0,
+        "weight": 1,
+        "world_monster": {
+          "id": 16,
+          "path": "res://world/monsters/Nevermort.tscn",
+          "type": "PackedScene"
+        },
+        "monster_form": {
+          "id": 10,
+          "path": "res://data/monster_forms/apocrowlypse.tres",
+          "type": "Resource"
+        }
+      },
+      {
+        "hour_max": 24,
+        "hour_min": 0,
+        "weight": 2,
+        "world_monster": {
+          "id": 7,
+          "path": "res://world/monsters/Trapwurm.tscn",
+          "type": "PackedScene"
+        },
+        "monster_form": {
+          "id": 9,
+          "path": "res://data/monster_forms/wyrmaw.tres",
+          "type": "Resource"
+        }
+      },
+      {
+        "hour_max": 24,
+        "hour_min": 0,
+        "weight": 1,
+        "monster_form": {
+          "id": 12,
+          "path": "res://data/monster_forms/smogmagog.tres",
+          "type": "Resource"
+        }
+      },
+      {
+        "hour_max": 24,
+        "hour_min": 0,
+        "weight": 1,
+        "world_monster": {
+          "id": 6,
+          "path": "res://world/monsters/Jellyton.tscn",
+          "type": "PackedScene"
+        },
+        "monster_form": {
+          "id": 2,
+          "path": "res://data/monster_forms/jellyton.tres",
+          "type": "Resource"
+        }
+      }
+    ]
+  },
+  {
     "id": "dungeon_meadow_dominoth",
     "habitat_name": "REGION_NAME_DUNGEON_MEADOW",
     "habitat_overworld_chunks": [
@@ -6029,6 +6171,57 @@
     ]
   },
   {
+    "id": "lenna_whistle_for_help_gauntlet",
+    "habitat_name": "",
+    "habitat_overworld_chunks": [],
+    "habitat_endless": false,
+    "min_team_size": 1,
+    "max_team_size": 2,
+    "num_species": 4,
+    "species": [
+      {
+        "hour_max": 24,
+        "hour_min": 0,
+        "weight": 1,
+        "monster_form": {
+          "id": 3,
+          "path": "res://data/monster_forms/draculeaf.tres",
+          "type": "Resource"
+        }
+      },
+      {
+        "hour_max": 24,
+        "hour_min": 0,
+        "weight": 1,
+        "monster_form": {
+          "id": 2,
+          "path": "res://data/monster_forms/beanstalker.tres",
+          "type": "Resource"
+        }
+      },
+      {
+        "hour_max": 24,
+        "hour_min": 0,
+        "weight": 1,
+        "monster_form": {
+          "id": 1,
+          "path": "res://data/monster_forms/scampire.tres",
+          "type": "Resource"
+        }
+      },
+      {
+        "hour_max": 24,
+        "hour_min": 0,
+        "weight": 1,
+        "monster_form": {
+          "id": 4,
+          "path": "res://data/monster_forms/rockertrice.tres",
+          "type": "Resource"
+        }
+      }
+    ]
+  },
+  {
     "id": "mall",
     "habitat_name": "REGION_NAME_MALL",
     "habitat_overworld_chunks": [
@@ -7713,6 +7906,77 @@
     ]
   },
   {
+    "id": "morgante_spirits_of_rebellion_gauntlet",
+    "habitat_name": "",
+    "habitat_overworld_chunks": [],
+    "habitat_endless": false,
+    "min_team_size": 1,
+    "max_team_size": 2,
+    "num_species": 6,
+    "species": [
+      {
+        "hour_max": 24,
+        "hour_min": 0,
+        "weight": 1,
+        "monster_form": {
+          "id": 3,
+          "path": "res://data/monster_forms_unlisted/gauntlet_morgante_dog.tres",
+          "type": "Resource"
+        }
+      },
+      {
+        "hour_max": 24,
+        "hour_min": 0,
+        "weight": 1,
+        "monster_form": {
+          "id": 2,
+          "path": "res://data/monster_forms_unlisted/gauntlet_morgante_eugene.tres",
+          "type": "Resource"
+        }
+      },
+      {
+        "hour_max": 24,
+        "hour_min": 0,
+        "weight": 1,
+        "monster_form": {
+          "id": 4,
+          "path": "res://data/monster_forms_unlisted/gauntlet_morgante_felix.tres",
+          "type": "Resource"
+        }
+      },
+      {
+        "hour_max": 24,
+        "hour_min": 0,
+        "weight": 1,
+        "monster_form": {
+          "id": 5,
+          "path": "res://data/monster_forms_unlisted/gauntlet_morgante_kayleigh.tres",
+          "type": "Resource"
+        }
+      },
+      {
+        "hour_max": 24,
+        "hour_min": 0,
+        "weight": 1,
+        "monster_form": {
+          "id": 7,
+          "path": "res://data/monster_forms_unlisted/gauntlet_morgante_meredith.tres",
+          "type": "Resource"
+        }
+      },
+      {
+        "hour_max": 24,
+        "hour_min": 0,
+        "weight": 1,
+        "monster_form": {
+          "id": 6,
+          "path": "res://data/monster_forms_unlisted/gauntlet_morgante_viola.tres",
+          "type": "Resource"
+        }
+      }
+    ]
+  },
+  {
     "id": "mt_wirral",
     "habitat_name": "REGION_NAME_MT_WIRRAL",
     "habitat_overworld_chunks": [
@@ -8767,6 +9031,27 @@
         "monster_form": {
           "id": 6,
           "path": "res://data/monster_forms/snoopin.tres",
+          "type": "Resource"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pier_clown_battle",
+    "habitat_name": "",
+    "habitat_overworld_chunks": [],
+    "habitat_endless": false,
+    "min_team_size": 1,
+    "max_team_size": 2,
+    "num_species": 1,
+    "species": [
+      {
+        "hour_max": 24,
+        "hour_min": 0,
+        "weight": 1,
+        "monster_form": {
+          "id": 2,
+          "path": "res://data/monster_forms/charlequin.tres",
           "type": "Resource"
         }
       }

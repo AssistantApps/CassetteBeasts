@@ -1215,7 +1215,8 @@
       "fast",
       "undead",
       "parasite",
-      "knife"
+      "knife",
+      "royal"
     ],
     "initial_moves": [
       {
@@ -1751,6 +1752,307 @@
     "bestiary_bios": [
       "BEANSTALKER_LORE_1",
       "BEANSTALKER_LORE_2"
+    ],
+    "bestiary_data_requirement": 0,
+    "loot_table": ""
+  },
+  {
+    "folder": "monster_forms",
+    "name": "BEAR1_NAME",
+    "battle_cry": {
+      "id": 15,
+      "path": "res://sfx/cries/bear1_cry.wav",
+      "type": "AudioStream"
+    },
+    "elemental_types": [
+      {
+        "id": 2,
+        "path": "res://data/elemental_types/beast.tres",
+        "type": "Resource"
+      }
+    ],
+    "tape_sticker_texture": {
+      "id": 13,
+      "path": "res://ui/monster_stickers/bear1.png",
+      "type": "Texture"
+    },
+    "exp_yield": 40,
+    "require_dlc": "",
+    "battle_sprite_path": "res://sprites/monsters/bear1.json",
+    "ui_sprite_path": "",
+    "pronouns": false,
+    "description": "BEAR1_DESCRIPTION",
+    "max_hp": 120,
+    "melee_attack": 130,
+    "melee_defense": 100,
+    "ranged_attack": 100,
+    "ranged_defense": 120,
+    "speed": 130,
+    "accuracy": 100,
+    "evasion": 100,
+    "max_ap": 8,
+    "move_slots": 6,
+    "evolutions": [
+      {
+        "id": 4,
+        "type": "Resource",
+        "title": "",
+        "resource_name": "bear2",
+        "evolved_form": {
+          "id": 12,
+          "path": "res://data/monster_forms/bear2.tres",
+          "type": "Resource"
+        },
+        "required_tape_grade": 5,
+        "min_hour": 0,
+        "max_hour": 24,
+        "required_location": "",
+        "specialization": "",
+        "is_secret": false,
+        "add_slot": false,
+        "stickers": [],
+        "type_override": [],
+        "favorite": false
+      }
+    ],
+    "evolution_specialization_question": "",
+    "capture_rate": 15,
+    "exp_gradient": 21,
+    "exp_base_level": 0,
+    "move_tags": [
+      "bear1",
+      "animal",
+      "annoy",
+      "twoheads",
+      "bone",
+      "deception",
+      "eat",
+      "fast",
+      "hands",
+      "jump",
+      "toy",
+      "teeth",
+      "bear"
+    ],
+    "initial_moves": [
+      {
+        "id": 6,
+        "path": "res://data/battle_moves/smack.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 7,
+        "path": "res://data/battle_moves/berserker.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 3,
+        "path": "res://data/battle_moves/bear_hug.tres",
+        "type": "Resource"
+      }
+    ],
+    "tape_upgrades": [
+      {
+        "id": 2,
+        "type": "Resource",
+        "title": "",
+        "resource_name": "Slot + jump_scare",
+        "required_location": "",
+        "specialization": "",
+        "is_secret": false,
+        "add_slot": true,
+        "sticker": {
+          "id": 5,
+          "path": "res://data/battle_moves/jump_scare.tres",
+          "type": "Resource"
+        },
+        "stickers": [],
+        "type_override": [],
+        "favorite": false
+      },
+      {
+        "id": 3,
+        "type": "Resource",
+        "title": "",
+        "resource_name": "Slot + bite",
+        "required_location": "",
+        "specialization": "",
+        "is_secret": false,
+        "add_slot": true,
+        "sticker": {
+          "id": 9,
+          "path": "res://data/battle_moves/bite.tres",
+          "type": "Resource"
+        },
+        "stickers": [],
+        "type_override": [],
+        "favorite": false
+      },
+      {
+        "id": 4,
+        "path": "res://data/battle_moves/carnivore.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 11,
+        "path": "res://data/battle_moves/two_heads.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 8,
+        "path": "res://data/battle_moves/hibernate.tres",
+        "type": "Resource"
+      }
+    ],
+    "unlock_ability": "",
+    "fusion_name_prefix": "BEAR1_NAME_PREFIX",
+    "fusion_name_suffix": "BEAR1_NAME_SUFFIX",
+    "fusion_generator_path": "res://data/fusions/bear1.tscn",
+    "bestiary_index": 129,
+    "bestiary_category": 0,
+    "bestiary_bios": [
+      "BEAR1_LORE_1",
+      "BEAR1_LORE_2"
+    ],
+    "bestiary_data_requirement": 0,
+    "loot_table": ""
+  },
+  {
+    "folder": "monster_forms",
+    "name": "BEAR2_NAME",
+    "battle_cry": {
+      "id": 17,
+      "path": "res://sfx/cries/bear2_cry.wav",
+      "type": "AudioStream"
+    },
+    "elemental_types": [
+      {
+        "id": 3,
+        "path": "res://data/elemental_types/beast.tres",
+        "type": "Resource"
+      }
+    ],
+    "tape_sticker_texture": {
+      "id": 16,
+      "path": "res://ui/monster_stickers/bear2.png",
+      "type": "Texture"
+    },
+    "exp_yield": 40,
+    "require_dlc": "",
+    "battle_sprite_path": "res://sprites/monsters/bear2.json",
+    "ui_sprite_path": "",
+    "pronouns": false,
+    "description": "BEAR2_DESCRIPTION",
+    "max_hp": 140,
+    "melee_attack": 160,
+    "melee_defense": 110,
+    "ranged_attack": 110,
+    "ranged_defense": 140,
+    "speed": 140,
+    "accuracy": 100,
+    "evasion": 100,
+    "max_ap": 10,
+    "move_slots": 8,
+    "evolutions": [],
+    "evolution_specialization_question": "",
+    "capture_rate": 3,
+    "exp_gradient": 21,
+    "exp_base_level": 21,
+    "move_tags": [
+      "bear1",
+      "animal",
+      "annoy",
+      "twoheads",
+      "bone",
+      "deception",
+      "eat",
+      "fast",
+      "hands",
+      "jump",
+      "toy",
+      "teeth",
+      "bear",
+      "royal",
+      "tongue"
+    ],
+    "initial_moves": [
+      {
+        "id": 2,
+        "path": "res://data/battle_moves/smack.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 13,
+        "path": "res://data/battle_moves/berserker.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 9,
+        "path": "res://data/battle_moves/bear_hug.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 12,
+        "path": "res://data/battle_moves/jump_scare.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 8,
+        "path": "res://data/battle_moves/bite.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 11,
+        "path": "res://data/battle_moves/carnivore.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 15,
+        "path": "res://data/battle_moves/two_heads.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 14,
+        "path": "res://data/battle_moves/hibernate.tres",
+        "type": "Resource"
+      }
+    ],
+    "tape_upgrades": [
+      {
+        "id": 6,
+        "path": "res://data/battle_moves/provoke.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 10,
+        "path": "res://data/battle_moves/bloodlust.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 7,
+        "path": "res://data/battle_moves/dual_wield.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 4,
+        "path": "res://data/battle_moves/the_old_1_2.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 5,
+        "path": "res://data/battle_moves/royal_flush.tres",
+        "type": "Resource"
+      }
+    ],
+    "unlock_ability": "",
+    "fusion_name_prefix": "BEAR2_NAME_PREFIX",
+    "fusion_name_suffix": "BEAR2_NAME_SUFFIX",
+    "fusion_generator_path": "res://data/fusions/bear2.tscn",
+    "bestiary_index": 130,
+    "bestiary_category": 0,
+    "bestiary_bios": [
+      "BEAR2_LORE_1",
+      "BEAR2_LORE_2"
     ],
     "bestiary_data_requirement": 0,
     "loot_table": ""
@@ -6986,7 +7288,8 @@
       "cute",
       "cold",
       "hot",
-      "elegant"
+      "elegant",
+      "royal"
     ],
     "initial_moves": [
       {
@@ -9699,7 +10002,8 @@
       "flight",
       "machine",
       "mountain",
-      "butterfly"
+      "butterfly",
+      "radiation"
     ],
     "initial_moves": [
       {
@@ -9980,7 +10284,8 @@
       "gamble",
       "undead",
       "righteous",
-      "deception"
+      "deception",
+      "royal"
     ],
     "initial_moves": [
       {
@@ -10152,7 +10457,8 @@
       "fast",
       "elegant",
       "hands",
-      "righteous"
+      "righteous",
+      "tough"
     ],
     "initial_moves": [
       {
@@ -12844,6 +13150,120 @@
   },
   {
     "folder": "monster_forms",
+    "name": "MINOSTEAM_NAME",
+    "battle_cry": {
+      "id": 13,
+      "path": "res://sfx/cries/minosteam_cry.wav",
+      "type": "AudioStream"
+    },
+    "elemental_types": [
+      {
+        "id": 1,
+        "path": "res://data/elemental_types/metal.tres",
+        "type": "Resource"
+      }
+    ],
+    "tape_sticker_texture": {
+      "id": 12,
+      "path": "res://ui/monster_stickers/minosteam.png",
+      "type": "Texture"
+    },
+    "exp_yield": 40,
+    "require_dlc": "",
+    "battle_sprite_path": "res://sprites/monsters/minosteam.json",
+    "ui_sprite_path": "",
+    "pronouns": false,
+    "description": "MINOSTEAM_DESCRIPTION",
+    "max_hp": 150,
+    "melee_attack": 180,
+    "melee_defense": 180,
+    "ranged_attack": 120,
+    "ranged_defense": 120,
+    "speed": 90,
+    "accuracy": 100,
+    "evasion": 100,
+    "max_ap": 10,
+    "move_slots": 8,
+    "evolutions": [],
+    "evolution_specialization_question": "",
+    "capture_rate": 3,
+    "exp_gradient": 42,
+    "exp_base_level": 0,
+    "move_tags": [
+      "minosteam",
+      "machine",
+      "deception",
+      "building",
+      "fuel",
+      "hands",
+      "junk",
+      "slow",
+      "tough"
+    ],
+    "initial_moves": [
+      {
+        "id": 2,
+        "path": "res://data/battle_moves/smack.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 7,
+        "path": "res://data/battle_moves/machine_curse.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 10,
+        "path": "res://data/battle_moves/guzzle_fuel.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 5,
+        "path": "res://data/battle_moves/fuel_injection.tres",
+        "type": "Resource"
+      }
+    ],
+    "tape_upgrades": [
+      {
+        "id": 11,
+        "path": "res://data/battle_moves/copper_chop.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 3,
+        "path": "res://data/battle_moves/superheated_fist.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 8,
+        "path": "res://data/battle_moves/crumble.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 6,
+        "path": "res://data/battle_moves/shield_bash.tres",
+        "type": "Resource"
+      },
+      {
+        "id": 9,
+        "path": "res://data/battle_moves/gear_shear.tres",
+        "type": "Resource"
+      }
+    ],
+    "unlock_ability": "",
+    "fusion_name_prefix": "MINOSTEAM_NAME_PREFIX",
+    "fusion_name_suffix": "MINOSTEAM_NAME_SUFFIX",
+    "fusion_generator_path": "res://data/fusions/minosteam.tscn",
+    "bestiary_index": -1,
+    "bestiary_category": 0,
+    "bestiary_bios": [
+      "MINOSTEAM_LORE_1",
+      "MINOSTEAM_LORE_2"
+    ],
+    "bestiary_data_requirement": 0,
+    "loot_table": ""
+  },
+  {
+    "folder": "monster_forms",
     "name": "MISS_MIMIC_NAME",
     "battle_cry": {
       "id": 15,
@@ -12894,7 +13314,8 @@
       "junk",
       "knife",
       "machine",
-      "sword"
+      "sword",
+      "teeth"
     ],
     "initial_moves": [
       {
@@ -15061,7 +15482,8 @@
       "undead",
       "fast",
       "elegant",
-      "deception"
+      "deception",
+      "royal"
     ],
     "initial_moves": [
       {
@@ -15373,7 +15795,8 @@
       "annoy",
       "tough",
       "slow",
-      "beast"
+      "beast",
+      "royal"
     ],
     "initial_moves": [
       {
@@ -15492,7 +15915,9 @@
       "spirouette",
       "elegant",
       "charming",
-      "fast"
+      "fast",
+      "royal",
+      "love"
     ],
     "initial_moves": [
       {
@@ -16530,7 +16955,8 @@
       "blood",
       "teeth",
       "psychic",
-      "jump"
+      "jump",
+      "loud"
     ],
     "initial_moves": [
       {
@@ -18321,12 +18747,12 @@
     "ui_sprite_path": "",
     "pronouns": false,
     "description": "SPITZFYRE_DESCRIPTION",
-    "max_hp": 120,
-    "melee_attack": 100,
-    "melee_defense": 100,
-    "ranged_attack": 150,
-    "ranged_defense": 140,
-    "speed": 120,
+    "max_hp": 140,
+    "melee_attack": 110,
+    "melee_defense": 110,
+    "ranged_attack": 160,
+    "ranged_defense": 150,
+    "speed": 130,
     "accuracy": 100,
     "evasion": 100,
     "max_ap": 10,

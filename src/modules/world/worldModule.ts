@@ -53,7 +53,7 @@ export class WorldModule extends CommonModule<IWorld, IWorldEnhanced> {
   init = async () => {
     if (this.isReady) return;
 
-    const hiddenWorlds = ['deadworld'];
+    const hiddenWorlds = ['deadworld', 'gauntlet'];
     for (const folder of this._folders) {
       const list = fs.readdirSync(folder);
       for (const file of list) {
